@@ -1,0 +1,9 @@
+{
+  "name": "rare-earth-supply-chain-audit",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node scripts/qa.mjs && node scripts/audit.mjs"
+  }
+}
