@@ -4,6 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node scripts/qa.mjs && node scripts/audit.mjs"
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs --check",
+    "test": "node scripts/build.mjs --check && node scripts/qa.mjs && node scripts/audit.mjs"
   }
 }
