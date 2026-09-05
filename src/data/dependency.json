@@ -1,0 +1,132 @@
+[
+  {
+    "id": "Y",
+    "tag": "Y",
+    "label": "Y",
+    "quality": "元素別実績",
+    "china": 94,
+    "metric": "日本の酸化イットリウム輸入・2023年",
+    "segments": [
+      {
+        "name": "中国",
+        "value": 94,
+        "color": "A"
+      },
+      {
+        "name": "豪州",
+        "value": 3,
+        "color": "Y"
+      },
+      {
+        "name": "米国",
+        "value": 2,
+        "color": "Sc"
+      },
+      {
+        "name": "その他",
+        "value": 1,
+        "color": "line"
+      }
+    ],
+    "evidence": "財務省貿易統計を基にした純分数量。中国961t／合計1,019t。",
+    "source": "JOGMEC 鉱物資源マテリアルフロー2024（表3-2-4-2）",
+    "url": "https://journal.jogmec.go.jp/content/300601767.pdf"
+  },
+  {
+    "id": "Dy",
+    "tag": "DyTb",
+    "label": "Dy",
+    "quality": "重希土類実績",
+    "china": 100,
+    "metric": "日本の重希土類輸入・2024年公表",
+    "segments": [
+      {
+        "name": "中国",
+        "value": 100,
+        "color": "A"
+      }
+    ],
+    "evidence": "経済産業省は重希土類の輸入について中国依存度100%と整理。元素別通関値ではなくDy・Tbを含む重希土類区分。",
+    "source": "経済産業省 鉱物政策を巡る状況について（2024年10月）",
+    "url": "https://www.meti.go.jp/shingikai/sankoshin/seizo_sangyo/mining/pdf/001_03_00.pdf"
+  },
+  {
+    "id": "Tb",
+    "tag": "DyTb",
+    "label": "Tb",
+    "quality": "重希土類実績",
+    "china": 100,
+    "metric": "日本の重希土類輸入・2024年公表",
+    "segments": [
+      {
+        "name": "中国",
+        "value": 100,
+        "color": "A"
+      }
+    ],
+    "evidence": "経済産業省は重希土類の輸入について中国依存度100%と整理。元素別通関値ではなくDy・Tbを含む重希土類区分。",
+    "source": "経済産業省 鉱物政策を巡る状況について（2024年10月）",
+    "url": "https://www.meti.go.jp/shingikai/sankoshin/seizo_sangyo/mining/pdf/001_03_00.pdf"
+  },
+  {
+    "id": "Sm",
+    "tag": "Sm",
+    "label": "Sm",
+    "quality": "品目代理",
+    "china": 73,
+    "metric": "希土類金属の日本輸入構成・2023年",
+    "segments": [
+      {
+        "name": "中国",
+        "value": 73,
+        "color": "A"
+      },
+      {
+        "name": "ベトナム",
+        "value": 21,
+        "color": "Y"
+      },
+      {
+        "name": "タイ",
+        "value": 6,
+        "color": "Sm"
+      }
+    ],
+    "evidence": "Smは日本の通関コードで元素別分離できないため、希土類金属（Sc・Yを含む）の輸入構成を代理使用。",
+    "source": "JOGMEC 鉱物資源マテリアルフロー2024（表3-2-2）",
+    "url": "https://journal.jogmec.go.jp/content/300601767.pdf"
+  },
+  {
+    "id": "Sc",
+    "tag": "Sc",
+    "label": "Sc",
+    "quality": "品目代理",
+    "china": 70,
+    "metric": "その他希土類化合物の日本輸入・2023年",
+    "segments": [
+      {
+        "name": "中国",
+        "value": 70,
+        "color": "A"
+      },
+      {
+        "name": "ベトナム",
+        "value": 16,
+        "color": "Y"
+      },
+      {
+        "name": "エストニア",
+        "value": 10,
+        "color": "DyTb"
+      },
+      {
+        "name": "その他",
+        "value": 4,
+        "color": "line"
+      }
+    ],
+    "evidence": "Scは日本の通関コードで元素別分離できないため、Ce・Y・La以外の希土類化合物の輸入構成を代理使用。",
+    "source": "JOGMEC 鉱物資源マテリアルフロー2024（表3-2-5）",
+    "url": "https://journal.jogmec.go.jp/content/300601767.pdf"
+  }
+]

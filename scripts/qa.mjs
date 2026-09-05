@@ -1,224 +1,117 @@
+// 静的QA。src/data/*.json の内容そのものと、生成物（index.html / JSX）が
+// JSONと一致しているかを検査する。文字列やインデックス位置に依存した抽出は行わない。
 import fs from "node:fs/promises";
+import { loadDataset, fatal, ELEMENTS, normalizeEv } from "./lib/dataset.mjs";
+import { readGeneratedRegion, evaluateHtmlData, evaluateJsxData } from "./lib/generated.mjs";
 
-const htmlUrl = new URL("../index.html", import.meta.url);
-const html = await fs.readFile(htmlUrl, "utf8");
-const script = html.match(/<script>([\s\S]*?)<\/script>/)?.[1];
-if (!script) throw new Error("アプリ本体のscriptが見つかりません。");
-new Function(script);
+const failures = [];
+const report = {};
 
-const seedJson = script.match(/var seed=(\[[\s\S]*?\]);\n  seed=seed\.map/)?.[1];
-const integratedJson = script.match(/var integratedStage05=(\[[\s\S]*?\])\.map\(function\(company\)/)?.[1];
-const laserAdoptionsJson = script.match(/var solidStateLaserAdoptions=(\[[\s\S]*?\]);\n  seed=mergeCompanyRows\(seed,solidStateLaserAdoptions\)/)?.[1];
-if (!seedJson || !integratedJson || !laserAdoptionsJson) throw new Error("埋め込みデータを抽出できません。");
-
-const seed = JSON.parse(seedJson);
-const integrated = JSON.parse(integratedJson);
-const laserAdoptions = JSON.parse(laserAdoptionsJson);
-const initStart = script.indexOf("(function(){") + "(function(){".length;
-const initEnd = script.indexOf("  var dependencyRows=");
-const mergeStart = script.indexOf("  function mergeCompanyRows(");
-const mergeEnd = script.indexOf("  function inSelection(", mergeStart);
-const evStart = script.indexOf("  function ev(");
-const evEnd = script.indexOf("\n", evStart);
-const finalSeed = new Function(
-  "document",
-  `${script.slice(initStart, initEnd)}\n${script.slice(evStart, evEnd)}\n${script.slice(mergeStart, mergeEnd)}\nreturn seed;`,
-)({ getElementById() { return {}; } });
-const deviceElements = {
-  "05_laser": ["Y"],
-  "05_engine": ["Y"],
-  "05_energy": ["Y", "Sc"],
-  "05_nuclear": ["Y"],
-  "05_guid": ["DyTb", "Sm"],
-  "05_sat": ["Y", "DyTb", "Sm", "Sc"],
-  "05_flight": ["DyTb", "Sm", "Sc"],
-  "05_robot": ["DyTb", "Sm"],
-  "05_rf_sensor": ["Sc"],
-  "05_defense_electronics": ["Y", "Sc"],
-  "05_airframe_support": ["Y", "DyTb", "Sm", "Sc"],
-};
-
-const inherited = (subs) => [...new Set(subs.flatMap((sub) => deviceElements[sub] ?? []))];
-const invalidSubs = integrated.flatMap((company) => company.subs.filter((sub) => !deviceElements[sub]).map((sub) => `${company.name}:${sub}`));
-const withoutTags = integrated.filter((company) => inherited(company.subs).length === 0).map((company) => company.name);
-const duplicates = integrated.map((company) => company.name).filter((name, index, all) => all.indexOf(name) !== index);
-const excluded = ["沖電気工業（OKI）", "ダイキン工業", "村田製作所", "富士通", "セイコーエプソン", "NTN", "SUBARU"];
-const seedAfterExclusion = seed.filter((company) => !excluded.includes(company.name));
-const mergedNames = new Set(seedAfterExclusion.map((company) => company.name));
-integrated.forEach((company) => mergedNames.add(company.name));
-mergedNames.add("豊港（豊港化学）");
-laserAdoptions.forEach((company) => mergedNames.add(company.name));
-
-const expectedJapanAvionicsTags = inherited(["05_defense_electronics", "05_sat", "05_rf_sensor"])
-  .filter((tag) => tag !== "DyTb");
-const japanAvionicsRuntimeTags = finalSeed.find((company) => company.name === "日本アビオニクス")?.tags ?? [];
-const japanAvionicsTagsValid =
-  japanAvionicsRuntimeTags.length === expectedJapanAvionicsTags.length &&
-  expectedJapanAvionicsTags.every((tag) => japanAvionicsRuntimeTags.includes(tag));
-const defenseElectronicsDyTbCompanies = finalSeed
-  .filter((company) => company.subs?.includes("05_defense_electronics") && company.tags?.includes("DyTb"))
-  .map((company) => company.name);
-const robotCompanies = finalSeed.filter((company) => company.subs?.includes("05_robot"));
-const robotCompaniesMissingSm = robotCompanies
-  .filter((company) => !company.tags?.includes("Sm"))
-  .map((company) => company.name);
-const hasPowderLabel = script.includes('label:"高機能粉末（YSZ・ScSZ）",header:"03 高機能粉末（YSZ・ScSZ）"');
-const hasCrystalLabel = script.includes('label:"結晶（YAG・SAM）・セラミックス・前駆体",header:"03 結晶（YAG・SAM）・セラミックス・前駆体"');
-const hasSamLabel = script.includes('label:"SAMウェハ・テンプレート",header:"04 SAMウェハ・テンプレート"');
-const hasAlScMasterAlloyLabel = script.includes('label:"Al-Sc母合金（構造材・半導体）",header:"03 Al-Sc母合金（構造材・半導体）"');
-const hasMetalAmFeedstockLabel = script.includes('label:"金属AM・結合用原料",header:"03 金属AM・結合用原料"');
-const hasYagOscillatorLabel = script.includes('label:"固体レーザー発振器（YAG）",header:"04 固体レーザー発振器（YAG）"');
-const hasSofcSoecLabel = script.includes('label:"固体酸化物形燃料電池（SOFC）／固体酸化物形電解（SOEC）",els:["Y","Sc"],forceEls:["Y"],src:["04_elec"]');
-const hasCoatLabel = script.includes('label:"耐熱（TBC）／耐プラズマコーティング",header:"04 耐熱（TBC）／耐プラズマコーティング"');
-const hasForcedNodeElementSupport = script.includes('var forced=item.forceEls||[]') &&
-  script.includes('forced.indexOf(element)>=0||subElementCount(item.id,element)>0');
-const mostImportantOverridesValid = [
-  "AGC／AGCセイミケミカル",
-  "日本ファインセラミックス",
-].every((name) => finalSeed.find((company) => company.name === name)?.ev === "A");
-const expectedLaserAdoptionNames = [
-  "オキサイド",
-  "京セラSOC株式会社",
-  "TOWAレーザーフロント株式会社",
-  "株式会社オプトクエスト",
-  "エスシーティー株式会社（SCT）",
-];
-const laserAdoptionNames = laserAdoptions.map((company) => company.name);
-const validLaserAdoptions =
-  laserAdoptions.length === 5 &&
-  expectedLaserAdoptionNames.every((name) => laserAdoptionNames.includes(name)) &&
-  laserAdoptions.every((company) => company.id && company.formal === true && company.subs.includes("04_opt") && company.tags.includes("Y"));
-const hasSctAtlaResearch = script.includes("防衛装備庁・安全保障技術研究推進制度の代表機関") &&
-  script.includes("結晶設計・格子操作技術による固体レーザーの高速探索と機能開発") &&
-  script.includes("1,955,394千円") &&
-  script.includes("発振器量産メーカーではなくR&Dノード");
-const stage04LaserNames = finalSeed.filter((company) => company.subs.includes("04_opt")).map((company) => company.name);
-const materialMakersRemovedFromStage04 = !stage04LaserNames.includes("神島化学工業") && !stage04LaserNames.includes("信光社");
-const missingCompanyIds = finalSeed.filter((company) => !company.id).map((company) => company.name);
-const duplicateCompanyIds = finalSeed.map((company) => company.id).filter((id, index, ids) => ids.indexOf(id) !== index);
-const detailDataComplete = [
-  "京セラSOC株式会社",
-  "TOWAレーザーフロント株式会社",
-  "株式会社オプトクエスト",
-  "エスシーティー株式会社（SCT）",
-].every((name) => {
-  const company = finalSeed.find((item) => item.name === name);
-  return company && company.id && company.rev && company.prod && company.pos && company.def && company.chn && company.bom && company.gap && company.src;
-});
-const hasToyokou = script.includes('name:"豊港（豊港化学）"') &&
-  script.includes('subs:["04_sc_crystal"]') &&
-  script.includes('2～4インチScAlMgO₄（SAM）ウェハ・インゴット');
-const hasJxCrossStagePatch = script.includes('if(company.name==="JX金属")') &&
-  script.includes('stages:[3,4],\n        subs:["03_precursor","03_light_alloy","04_opt","04_target"]') &&
-  script.includes('連結売上高8,846億円（2026年3月期）／YAGセラミックス事業売上は非開示（開発品）');
-const hasFuruyaUpstreamPatch = script.includes('stages:[2,3,4],\n        subs:["02_metal","03_light_alloy","04_target"]');
-const hasToyamaCrossCategoryPatch = script.includes('if(company.name==="富山住友電工")') &&
-  script.includes('subs:["03_light_alloy","03_am_feedstock"]');
-const hasStage02OrderSwap = script.includes('s2:["02_compound","02_metal","02_trade","02_recycle"]');
-const hasMetalToAmEdge = script.includes('"02_metal":["03_magnet","03_light_alloy","03_am_feedstock"]');
-const hasCompanyBackedElementNodes =
-  script.includes("function subElementCount(id,element)") &&
-  script.includes("els:activeEls(s)");
-const hasElementEdgeDedup =
-  script.includes("var edgeKeys=new Set()") &&
-  script.includes('var edgeKey=a.id+"|"+b.id+"|"+e;') &&
-  script.includes("if(edgeKeys.has(edgeKey))return;");
-const hasEmptyPrimeGuard = script.includes("if(s5map[d.id].els.length>0)svg+=path");
-const hasActualElementTagDisplay = script.includes("tagsHtml(pos.els)");
-const hasNodeAndSourceDedup =
-  script.includes("Array.from(new Set(activeOrders.s2))") &&
-  script.includes("Array.from(new Set(d.src))");
-const checks = {
-  syntax: "ok",
-  integratedRows: integrated.length,
-  uniqueIntegratedCompanies: new Set(integrated.map((company) => company.name)).size,
-  invalidSubs,
-  withoutTags,
-  duplicateIntegratedNames: duplicates,
-  runtimeCompanyCount: finalSeed.length,
-  airframeCompanies: integrated.filter((company) => company.subs.includes("05_airframe_support")).map((company) => company.name),
-  japanAvionicsExpectedTags: expectedJapanAvionicsTags,
-  japanAvionicsRuntimeTags,
-  japanAvionicsTagsValid,
-  defenseElectronicsDyTbCompanies,
-  robotCompanyCount: robotCompanies.length,
-  robotCompaniesMissingSm,
-  powderLabelUpdated: hasPowderLabel,
-  crystalLabelUpdated: hasCrystalLabel,
-  samLabelUpdated: hasSamLabel,
-  alScMasterAlloyLabelUpdated: hasAlScMasterAlloyLabel,
-  metalAmFeedstockLabelUpdated: hasMetalAmFeedstockLabel,
-  yagOscillatorLabelUpdated: hasYagOscillatorLabel,
-  sofcSoecLabelUpdated: hasSofcSoecLabel,
-  coatLabelUpdated: hasCoatLabel,
-  forcedNodeElementSupport: hasForcedNodeElementSupport,
-  mostImportantOverridesValid,
-  laserAdoptionNames,
-  solidStateLaserAdoptionsValid: validLaserAdoptions,
-  sctAtlaResearchPresent: hasSctAtlaResearch,
-  stage04LaserNames,
-  materialMakersRemovedFromStage04,
-  missingCompanyIds,
-  duplicateCompanyIds,
-  laserDetailDataComplete: detailDataComplete,
-  toyokouAdded: hasToyokou,
-  jxCrossStagePatchPresent: hasJxCrossStagePatch,
-  furuyaUpstreamPatchPresent: hasFuruyaUpstreamPatch,
-  toyamaCrossCategoryPatchPresent: hasToyamaCrossCategoryPatch,
-  stage02OrderSwapped: hasStage02OrderSwap,
-  metalToAmEdgePresent: hasMetalToAmEdge,
-  companyBackedElementNodes: hasCompanyBackedElementNodes,
-  elementEdgeDedup: hasElementEdgeDedup,
-  emptyPrimeGuard: hasEmptyPrimeGuard,
-  actualElementTagDisplay: hasActualElementTagDisplay,
-  nodeAndSourceDedup: hasNodeAndSourceDedup,
-  noIframe: !/<iframe\b/i.test(html),
-  canvasHeight900: html.includes(".re-flow-canvas{position:relative;width:1400px;height:900px"),
-};
-
-if (
-  checks.integratedRows !== 49 ||
-  checks.uniqueIntegratedCompanies !== 49 ||
-  checks.runtimeCompanyCount !== 123 ||
-  invalidSubs.length ||
-  withoutTags.length ||
-  duplicates.length ||
-  !japanAvionicsTagsValid ||
-  defenseElectronicsDyTbCompanies.length ||
-  robotCompanies.length !== 8 ||
-  robotCompaniesMissingSm.length ||
-  !hasPowderLabel ||
-  !hasCrystalLabel ||
-  !hasSamLabel ||
-  !hasAlScMasterAlloyLabel ||
-  !hasMetalAmFeedstockLabel ||
-  !hasYagOscillatorLabel ||
-  !hasSofcSoecLabel ||
-  !hasCoatLabel ||
-  !hasForcedNodeElementSupport ||
-  !mostImportantOverridesValid ||
-  !validLaserAdoptions ||
-  !hasSctAtlaResearch ||
-  stage04LaserNames.length !== 7 ||
-  !materialMakersRemovedFromStage04 ||
-  missingCompanyIds.length ||
-  duplicateCompanyIds.length ||
-  !detailDataComplete ||
-  !hasToyokou ||
-  !hasJxCrossStagePatch ||
-  !hasFuruyaUpstreamPatch ||
-  !hasToyamaCrossCategoryPatch ||
-  !hasStage02OrderSwap ||
-  !hasMetalToAmEdge ||
-  !hasCompanyBackedElementNodes ||
-  !hasElementEdgeDedup ||
-  !hasEmptyPrimeGuard ||
-  !hasActualElementTagDisplay ||
-  !hasNodeAndSourceDedup ||
-  !checks.noIframe ||
-  !checks.canvasHeight900
-) {
-  throw new Error(JSON.stringify(checks));
+function check(name, condition, detail) {
+  report[name] = condition ? "ok" : detail ?? "不一致";
+  if (!condition) failures.push(`${name}: ${detail ?? "不一致"}`);
 }
 
-console.log(JSON.stringify(checks));
+function sameJson(a, b) {
+  return JSON.stringify(a) === JSON.stringify(b);
+}
+
+const dataset = await loadDataset().catch(fatal);
+const html = await fs.readFile(new URL("../index.html", import.meta.url), "utf8");
+const jsx = await fs.readFile(new URL("../src/希土類サプライチェーン.jsx", import.meta.url), "utf8");
+
+// --- データ側の不変条件 ---------------------------------------------------
+report.companies = dataset.companies.length;
+report.subcategories = dataset.subcategories.length;
+report.stages = dataset.stages.length;
+
+const taglessCompanies = dataset.companies.filter((company) => !company.tags.length).map((company) => company.name);
+check("全企業に希土類タグがある", taglessCompanies.length === 0, taglessCompanies.join(", "));
+
+const overTagged = dataset.companies
+  .filter((company) => {
+    const declared = new Set(company.subs.flatMap((id) => dataset.bySub.get(id).els));
+    return company.tags.some((tag) => !declared.has(tag));
+  })
+  .map((company) => company.name);
+check("企業タグが所属サブカテゴリーの宣言元素に収まる", overTagged.length === 0, overTagged.join(", "));
+
+// 公開BOM未確認のため Dy/Tb を落としている工程（データ側で確定済みであることを保つ）。
+const defenseDyTb = dataset.companiesInSub("05_defense_electronics").filter((company) => company.tags.includes("DyTb")).map((company) => company.name);
+check("05_defense_electronics に Dy/Tb タグがない", defenseDyTb.length === 0, defenseDyTb.join(", "));
+
+const robotMissingSm = dataset.companiesInSub("05_robot").filter((company) => !company.tags.includes("Sm")).map((company) => company.name);
+check("05_robot 所属企業はすべて Sm を持つ", robotMissingSm.length === 0, robotMissingSm.join(", "));
+
+const unknownEv = dataset.companies.filter((company) => !["A", "B", "X"].includes(normalizeEv(company.ev))).map((company) => company.name);
+check("評価が A/B/X に正規化できる", unknownEv.length === 0, unknownEv.join(", "));
+report.evaluationCounts = dataset.companies.reduce((counts, company) => {
+  const rank = normalizeEv(company.ev);
+  counts[rank] = (counts[rank] ?? 0) + 1;
+  return counts;
+}, {});
+
+// 宣言だけあって企業が1社もない元素は、画面側で線が消える（forceEls 指定分を除く）。
+report.unbackedElements = dataset.subcategories.flatMap((sub) =>
+  sub.els
+    .filter((element) => !(sub.forceEls ?? []).includes(element) && dataset.elementCount(sub.id, element) === 0)
+    .map((element) => `${sub.id}:${element}`),
+);
+
+// --- 生成物がJSONと一致しているか -----------------------------------------
+const htmlData = evaluateHtmlData(html);
+const jsxData = evaluateJsxData(jsx);
+
+check("index.html の企業データがJSONと一致", sameJson(htmlData.seed, dataset.companies), `埋め込み ${htmlData.seed.length} 件`);
+check("JSX の企業データがJSONと一致", sameJson(jsxData.SEED, dataset.companies), `埋め込み ${jsxData.SEED.length} 件`);
+
+const htmlSubs = [...htmlData.commerceSubs, ...htmlData.mats, ...htmlData.devices];
+check("index.html のサブカテゴリーがJSONと一致", sameJson(htmlSubs, dataset.subcategories), `埋め込み ${htmlSubs.length} 件`);
+check("JSX のサブカテゴリーがJSONと一致", sameJson(jsxData.SUBCATS, dataset.subcategories), `埋め込み ${jsxData.SUBCATS.length} 件`);
+check("JSX の工程がJSONと一致", sameJson(jsxData.STAGES, dataset.stages));
+check(
+  "index.html の工程見出しがJSONと一致",
+  sameJson(htmlData.stages, dataset.stages.filter((stage) => stage.id <= 3).map((stage) => ({ id: stage.id, label: stage.label, sub: stage.short }))),
+);
+
+const dependencyShape = (rows) => rows.map((row) => ({ id: row.id, china: row.china, values: row.segments.map((segment) => segment.value) }));
+check("index.html の中国依存データがJSONと一致", sameJson(dependencyShape(htmlData.dependencyRows), dependencyShape(dataset.dependency)));
+check("JSX の中国依存データがJSONと一致", sameJson(dependencyShape(jsxData.DEPENDENCY_ROWS), dependencyShape(dataset.dependency)));
+check(
+  "中国依存データの色が解決済み",
+  htmlData.dependencyRows.every((row) => row.segments.every((segment) => String(segment.color).startsWith("var(--"))) &&
+    jsxData.DEPENDENCY_ROWS.every((row) => row.segments.every((segment) => String(segment.color).startsWith("var(--"))),
+);
+
+// --- 生成物の構造 ---------------------------------------------------------
+check("index.html に iframe がない", !/<iframe/i.test(html));
+check("フロー図の高さが900", /viewBox="0 0 \d+ 900"/.test(html) || html.includes("var W=1400,H=900"));
+check("SheetJS の読み込みタグがある", html.includes("xlsx.full.min.js"));
+
+// データ定義が生成領域の外に散らばっていないこと（手書きのコピーが復活していないかの検出）。
+const htmlRegion = readGeneratedRegion(html, "index.html");
+for (const declaration of ["var seed=", "var commerceSubs=", "var mats=", "var devices=", "var dependencyRows="]) {
+  const inWhole = html.split(declaration).length - 1;
+  const inRegion = htmlRegion.split(declaration).length - 1;
+  check(`index.html の ${declaration} が生成領域内に1つだけ`, inWhole === 1 && inRegion === 1, `全体 ${inWhole} 箇所 / 生成領域 ${inRegion} 箇所`);
+}
+const jsxRegion = readGeneratedRegion(jsx, "src/希土類サプライチェーン.jsx");
+for (const declaration of ["const SEED =", "const SUBCATS =", "const STAGES =", "const DEPENDENCY_ROWS ="]) {
+  const inWhole = jsx.split(declaration).length - 1;
+  const inRegion = jsxRegion.split(declaration).length - 1;
+  check(`JSX の ${declaration} が生成領域内に1つだけ`, inWhole === 1 && inRegion === 1, `全体 ${inWhole} 箇所 / 生成領域 ${inRegion} 箇所`);
+}
+check("JSX に旧 SEED_ROWS が残っていない", !jsx.includes("SEED_ROWS"));
+
+// 画面側のハードコードされた接続表が復活していないこと（接続は src/data 側が持つ）。
+check("フロー図の接続表がデータ由来", !html.includes("var s2to3=") && !html.includes("var s3to4="));
+
+// 元素の集合が全ファイルで一致していること。
+check("元素の一覧が index.html と一致", ELEMENTS.every((element) => html.includes(`"${element}"`)));
+
+console.log(JSON.stringify(report, null, 2));
+if (failures.length) {
+  console.error(`\nQA失敗 ${failures.length} 件:`);
+  failures.forEach((failure) => console.error(` - ${failure}`));
+  process.exit(1);
+}
