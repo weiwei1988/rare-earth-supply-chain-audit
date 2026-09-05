@@ -1,0 +1,369 @@
+[
+  {
+    "id": "02_compound",
+    "stage": 2,
+    "label": "高純度酸化物・化合物",
+    "header": "02 高純度酸化物・化合物",
+    "els": [
+      "Y",
+      "DyTb",
+      "Sm",
+      "Sc"
+    ]
+  },
+  {
+    "id": "02_metal",
+    "stage": 2,
+    "label": "金属化・還元／一次金属",
+    "header": "02 金属化・還元／一次金属",
+    "els": [
+      "DyTb",
+      "Sm",
+      "Sc"
+    ]
+  },
+  {
+    "id": "02_recycle",
+    "stage": 2,
+    "label": "回収・再精製",
+    "header": "02 回収・再精製",
+    "els": [
+      "Y",
+      "DyTb",
+      "Sm",
+      "Sc"
+    ]
+  },
+  {
+    "id": "02_trade",
+    "stage": 2,
+    "label": "原料輸入・販売・品質保証",
+    "header": "02 原料輸入・販売・品質保証",
+    "els": [
+      "Y",
+      "DyTb",
+      "Sm",
+      "Sc"
+    ]
+  },
+  {
+    "id": "03_ceramic",
+    "stage": 3,
+    "label": "高機能粉末（YSZ・ScSZ）",
+    "header": "03 高機能粉末（YSZ・ScSZ）",
+    "els": [
+      "Y",
+      "Sc"
+    ],
+    "src": [
+      "02_compound",
+      "02_recycle",
+      "02_trade"
+    ]
+  },
+  {
+    "id": "03_magnet",
+    "stage": 3,
+    "label": "磁石合金・磁粉・コンパウンド",
+    "header": "03 磁石合金・磁粉・コンパウンド",
+    "els": [
+      "DyTb",
+      "Sm"
+    ],
+    "src": [
+      "02_compound",
+      "02_metal",
+      "02_recycle",
+      "02_trade"
+    ]
+  },
+  {
+    "id": "03_light_alloy",
+    "stage": 3,
+    "label": "Al-Sc母合金（構造材・半導体）",
+    "header": "03 Al-Sc母合金（構造材・半導体）",
+    "els": [
+      "Sc"
+    ],
+    "src": [
+      "02_compound",
+      "02_metal",
+      "02_recycle",
+      "02_trade"
+    ]
+  },
+  {
+    "id": "03_am_feedstock",
+    "stage": 3,
+    "label": "金属AM・結合用原料",
+    "header": "03 金属AM・結合用原料",
+    "els": [
+      "Sc"
+    ],
+    "src": [
+      "02_metal",
+      "02_trade"
+    ]
+  },
+  {
+    "id": "03_precursor",
+    "stage": 3,
+    "label": "結晶（YAG・SAM）・セラミックス・前駆体",
+    "header": "03 結晶（YAG・SAM）・セラミックス・前駆体",
+    "els": [
+      "Y",
+      "Sc"
+    ],
+    "src": [
+      "02_compound",
+      "02_trade"
+    ]
+  },
+  {
+    "id": "04_opt",
+    "stage": 4,
+    "label": "固体レーザー発振器（YAG）",
+    "header": "04 固体レーザー発振器（YAG）",
+    "els": [
+      "Y"
+    ],
+    "src": [
+      "03_precursor"
+    ]
+  },
+  {
+    "id": "04_coat",
+    "stage": 4,
+    "label": "耐熱（TBC）／耐プラズマコーティング",
+    "header": "04 耐熱（TBC）／耐プラズマコーティング",
+    "els": [
+      "Y"
+    ],
+    "src": [
+      "03_ceramic",
+      "03_precursor"
+    ]
+  },
+  {
+    "id": "04_elec",
+    "stage": 4,
+    "label": "電解質・センサ基板",
+    "header": "04 電解質・センサ基板",
+    "els": [
+      "Y",
+      "Sc"
+    ],
+    "src": [
+      "03_ceramic"
+    ]
+  },
+  {
+    "id": "04_mag",
+    "stage": 4,
+    "label": "磁石（焼結・ボンド）",
+    "header": "04 磁石（焼結・ボンド）",
+    "els": [
+      "DyTb",
+      "Sm"
+    ],
+    "src": [
+      "03_magnet"
+    ]
+  },
+  {
+    "id": "04_target",
+    "stage": 4,
+    "label": "薄膜・スパッタリングターゲット",
+    "header": "04 薄膜・スパッタリングターゲット",
+    "els": [
+      "Y",
+      "Sc"
+    ],
+    "src": [
+      "03_light_alloy",
+      "03_precursor"
+    ]
+  },
+  {
+    "id": "04_sc_crystal",
+    "stage": 4,
+    "label": "SAMウェハ・テンプレート",
+    "header": "04 SAMウェハ・テンプレート",
+    "els": [
+      "Sc"
+    ],
+    "src": [
+      "03_precursor"
+    ]
+  },
+  {
+    "id": "04_am",
+    "stage": 4,
+    "label": "金属AM造形・加工",
+    "header": "04 金属AM造形・加工",
+    "els": [
+      "Sc"
+    ],
+    "src": [
+      "03_light_alloy",
+      "03_am_feedstock"
+    ]
+  },
+  {
+    "id": "05_laser",
+    "stage": 5,
+    "label": "高出力レーザー",
+    "header": "05 高出力レーザー",
+    "els": [
+      "Y"
+    ],
+    "src": [
+      "04_opt"
+    ]
+  },
+  {
+    "id": "05_engine",
+    "stage": 5,
+    "label": "航空エンジン・ガスタービン",
+    "header": "05 航空エンジン・ガスタービン",
+    "els": [
+      "Y"
+    ],
+    "src": [
+      "04_coat"
+    ]
+  },
+  {
+    "id": "05_energy",
+    "stage": 5,
+    "label": "固体酸化物形燃料電池（SOFC）／固体酸化物形電解（SOEC）",
+    "header": "05 固体酸化物形燃料電池（SOFC）／固体酸化物形電解（SOEC）",
+    "els": [
+      "Y",
+      "Sc"
+    ],
+    "forceEls": [
+      "Y"
+    ],
+    "src": [
+      "04_elec"
+    ]
+  },
+  {
+    "id": "05_nuclear",
+    "stage": 5,
+    "label": "原子力・核燃料被覆材",
+    "header": "05 原子力・核燃料被覆材",
+    "els": [
+      "Y"
+    ],
+    "src": [
+      "04_coat"
+    ]
+  },
+  {
+    "id": "05_guid",
+    "stage": 5,
+    "label": "誘導・慣性・航法",
+    "header": "05 誘導・慣性・航法",
+    "els": [
+      "DyTb",
+      "Sm"
+    ],
+    "src": [
+      "04_mag"
+    ]
+  },
+  {
+    "id": "05_sat",
+    "stage": 5,
+    "label": "衛星・宇宙機・ロケット",
+    "header": "05 衛星・宇宙機・ロケット",
+    "els": [
+      "Y",
+      "DyTb",
+      "Sm",
+      "Sc"
+    ],
+    "src": [
+      "04_mag",
+      "04_sc_crystal",
+      "04_am",
+      "04_elec"
+    ]
+  },
+  {
+    "id": "05_flight",
+    "stage": 5,
+    "label": "飛行制御・電動化",
+    "header": "05 飛行制御・電動化",
+    "els": [
+      "DyTb",
+      "Sm",
+      "Sc"
+    ],
+    "src": [
+      "04_mag",
+      "04_am"
+    ]
+  },
+  {
+    "id": "05_robot",
+    "stage": 5,
+    "label": "ロボティクス・精密",
+    "header": "05 ロボティクス・精密",
+    "els": [
+      "DyTb",
+      "Sm"
+    ],
+    "src": [
+      "04_mag"
+    ]
+  },
+  {
+    "id": "05_rf_sensor",
+    "stage": 5,
+    "label": "RF・圧電・高温センサ",
+    "header": "05 RF・圧電・高温センサー",
+    "els": [
+      "Sc"
+    ],
+    "src": [
+      "04_target",
+      "04_sc_crystal"
+    ]
+  },
+  {
+    "id": "05_defense_electronics",
+    "stage": 5,
+    "label": "防衛半導体・電子回路・通信",
+    "header": "05 防衛半導体・電子回路・通信",
+    "els": [
+      "Y",
+      "Sc"
+    ],
+    "src": [
+      "04_coat",
+      "04_elec",
+      "04_target",
+      "04_sc_crystal"
+    ]
+  },
+  {
+    "id": "05_airframe_support",
+    "stage": 5,
+    "label": "航空機構造・整備",
+    "header": "05 航空機構造・整備",
+    "els": [
+      "Y",
+      "DyTb",
+      "Sm",
+      "Sc"
+    ],
+    "src": [
+      "04_coat",
+      "04_mag",
+      "04_am"
+    ]
+  }
+]
