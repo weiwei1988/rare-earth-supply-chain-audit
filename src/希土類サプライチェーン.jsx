@@ -281,7 +281,15 @@ const SUBCATS = [
     ],
     "src": [
       "04_opt"
-    ]
+    ],
+    "srcEls": {
+      "04_opt": [
+        "Y"
+      ]
+    },
+    "srcNotes": {
+      "04_opt": "YAGレーザー発振器はYを結晶母材に含み、高出力固体レーザーの発振部へ直接接続。"
+    }
   },
   {
     "id": "05_engine",
@@ -293,7 +301,15 @@ const SUBCATS = [
     ],
     "src": [
       "04_coat"
-    ]
+    ],
+    "srcEls": {
+      "04_coat": [
+        "Y"
+      ]
+    },
+    "srcNotes": {
+      "04_coat": "YSZ系TBCは航空エンジン・ガスタービン高温部の遮熱皮膜として直接使用。"
+    }
   },
   {
     "id": "05_energy",
@@ -309,7 +325,16 @@ const SUBCATS = [
     ],
     "src": [
       "04_elec"
-    ]
+    ],
+    "srcEls": {
+      "04_elec": [
+        "Y",
+        "Sc"
+      ]
+    },
+    "srcNotes": {
+      "04_elec": "YSZ／ScSZはSOFC・SOECの固体電解質として直接使用。"
+    }
   },
   {
     "id": "05_nuclear",
@@ -321,7 +346,15 @@ const SUBCATS = [
     ],
     "src": [
       "04_coat"
-    ]
+    ],
+    "srcEls": {
+      "04_coat": [
+        "Y"
+      ]
+    },
+    "srcNotes": {
+      "04_coat": "Y₂O₃／YSZ皮膜は核燃料製造用るつぼや原子力向け透過障壁で研究・使用。量産被覆管の主流材を意味しない。"
+    }
   },
   {
     "id": "05_guid",
@@ -329,12 +362,38 @@ const SUBCATS = [
     "label": "誘導・慣性・航法",
     "header": "05 誘導・慣性・航法",
     "els": [
+      "Y",
       "DyTb",
-      "Sm"
+      "Sm",
+      "Sc"
     ],
     "src": [
-      "04_mag"
-    ]
+      "04_opt",
+      "04_mag",
+      "04_target",
+      "04_sc_crystal"
+    ],
+    "srcEls": {
+      "04_opt": [
+        "Y"
+      ],
+      "04_mag": [
+        "DyTb",
+        "Sm"
+      ],
+      "04_target": [
+        "Sc"
+      ],
+      "04_sc_crystal": [
+        "Sc"
+      ]
+    },
+    "srcNotes": {
+      "04_opt": "YAGレーザーは測距・目標指示・レーザー誘導の光源へ直接接続。",
+      "04_mag": "Dy・Tb添加NdFeB／SmCo磁石は誘導制御用モータ・アクチュエータ・ジャイロへ直接接続。",
+      "04_target": "ScAlN等のSc系圧電薄膜はMEMS慣性・航法センサへ直接接続。",
+      "04_sc_crystal": "SAM基板・テンプレートはScAlN系圧電／MEMSセンサの下地へ直接接続。"
+    }
   },
   {
     "id": "05_sat",
@@ -348,11 +407,32 @@ const SUBCATS = [
       "Sc"
     ],
     "src": [
+      "04_opt",
       "04_mag",
       "04_sc_crystal",
-      "04_am",
-      "04_elec"
-    ]
+      "04_am"
+    ],
+    "srcEls": {
+      "04_opt": [
+        "Y"
+      ],
+      "04_mag": [
+        "DyTb",
+        "Sm"
+      ],
+      "04_sc_crystal": [
+        "Sc"
+      ],
+      "04_am": [
+        "Sc"
+      ]
+    },
+    "srcNotes": {
+      "04_opt": "Nd:YAGレーザーは宇宙搭載LiDAR・レーザー測距の光源へ直接接続。",
+      "04_mag": "SmCo／高保磁力NdFeB磁石は衛星のリアクションホイール・モータ・アクチュエータへ直接接続。",
+      "04_sc_crystal": "SAM基板・テンプレートは衛星通信向けScAlN系RF／圧電デバイスの下地へ接続。",
+      "04_am": "Sc含有Al合金の金属AM部品は宇宙機・ロケットの軽量構造／熱流体部品に実装例あり。"
+    }
   },
   {
     "id": "05_flight",
@@ -361,13 +441,20 @@ const SUBCATS = [
     "header": "05 飛行制御・電動化",
     "els": [
       "DyTb",
-      "Sm",
-      "Sc"
+      "Sm"
     ],
     "src": [
-      "04_mag",
-      "04_am"
-    ]
+      "04_mag"
+    ],
+    "srcEls": {
+      "04_mag": [
+        "DyTb",
+        "Sm"
+      ]
+    },
+    "srcNotes": {
+      "04_mag": "高保磁力NdFeB／SmCo磁石は飛行制御アクチュエータと電動推進モータへ直接接続。"
+    }
   },
   {
     "id": "05_robot",
@@ -380,7 +467,16 @@ const SUBCATS = [
     ],
     "src": [
       "04_mag"
-    ]
+    ],
+    "srcEls": {
+      "04_mag": [
+        "DyTb",
+        "Sm"
+      ]
+    },
+    "srcNotes": {
+      "04_mag": "高性能永久磁石は小型・高トルクのロボット用モータと精密アクチュエータへ直接接続。"
+    }
   },
   {
     "id": "05_rf_sensor",
@@ -388,12 +484,31 @@ const SUBCATS = [
     "label": "RF・圧電・高温センサ",
     "header": "05 RF・圧電・高温センサー",
     "els": [
+      "Y",
       "Sc"
     ],
     "src": [
+      "04_elec",
       "04_target",
       "04_sc_crystal"
-    ]
+    ],
+    "srcEls": {
+      "04_elec": [
+        "Y",
+        "Sc"
+      ],
+      "04_target": [
+        "Sc"
+      ],
+      "04_sc_crystal": [
+        "Sc"
+      ]
+    },
+    "srcNotes": {
+      "04_elec": "YSZ／ScSZ電解質は高温酸素・ガスセンサへ直接接続。",
+      "04_target": "ScAlN薄膜のスパッタ成膜はRFフィルタ・圧電センサへ直接接続。",
+      "04_sc_crystal": "SAM基板・テンプレートはScAlN系RF／圧電デバイスの下地へ直接接続。"
+    }
   },
   {
     "id": "05_defense_electronics",
@@ -405,11 +520,71 @@ const SUBCATS = [
       "Sc"
     ],
     "src": [
-      "04_coat",
-      "04_elec",
       "04_target",
       "04_sc_crystal"
-    ]
+    ],
+    "srcEls": {
+      "04_target": [
+        "Y",
+        "Sc"
+      ],
+      "04_sc_crystal": [
+        "Sc"
+      ]
+    },
+    "srcNotes": {
+      "04_target": "YIG系マイクロ波部品とScAlN系RF部品の薄膜形成にY／Sc系ターゲットが直接接続。",
+      "04_sc_crystal": "SAM基板・テンプレートはScAlN系RF・通信デバイスの下地へ接続。"
+    }
+  },
+  {
+    "id": "05_military_radar",
+    "stage": 5,
+    "label": "軍事用レーダー・モジュール",
+    "header": "05 軍事用レーダー・モジュール",
+    "els": [
+      "Y",
+      "Sc"
+    ],
+    "src": [
+      "04_target",
+      "04_sc_crystal"
+    ],
+    "srcEls": {
+      "04_target": [
+        "Y",
+        "Sc"
+      ],
+      "04_sc_crystal": [
+        "Sc"
+      ]
+    },
+    "srcNotes": {
+      "04_target": "YIG系マイクロ波部品とScAlN系RF部品の薄膜形成にY／Sc系ターゲットがレーダー・モジュールへ直接接続。",
+      "04_sc_crystal": "SAM基板・テンプレートはScAlN系RFフィルタ・共振器の下地としてレーダー・モジュールへ接続。"
+    }
+  },
+  {
+    "id": "05_unmanned",
+    "stage": 5,
+    "label": "無人装備・ドローン",
+    "header": "05 無人装備・ドローン",
+    "els": [
+      "DyTb",
+      "Sm"
+    ],
+    "src": [
+      "04_mag"
+    ],
+    "srcEls": {
+      "04_mag": [
+        "DyTb",
+        "Sm"
+      ]
+    },
+    "srcNotes": {
+      "04_mag": "高保磁力NdFeB／SmCo磁石は無人機の推進モータ・ジンバル・アクチュエータへ直接接続。"
+    }
   },
   {
     "id": "05_airframe_support",
@@ -417,16 +592,19 @@ const SUBCATS = [
     "label": "航空機構造・整備",
     "header": "05 航空機構造・整備",
     "els": [
-      "Y",
-      "DyTb",
-      "Sm",
       "Sc"
     ],
     "src": [
-      "04_coat",
-      "04_mag",
       "04_am"
-    ]
+    ],
+    "srcEls": {
+      "04_am": [
+        "Sc"
+      ]
+    },
+    "srcNotes": {
+      "04_am": "Sc含有Al合金の金属AMは航空機の軽量構造部品に実装・飛行実証例あり。"
+    }
   }
 ];
 
@@ -569,7 +747,18 @@ const SEED = [
     "ev": "B",
     "exc": 0,
     "src": "JSX／Y DD／Sc DD／https://www.kojundo.co.jp/dcms_media/other/SCO01PAG.pdf",
-    "note": "量産よりR&D・試作ノード"
+    "note": "量産よりR&D・試作ノード",
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "9030001068752",
+      "sourceName": "株式会社",
+      "row": 997,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A997:AH997",
+      "decision": "対象外",
+      "userReason": "",
+      "years": "FY2025",
+      "readAt": "2026-09-15"
+    }
   },
   {
     "id": "seed-5",
@@ -1609,7 +1798,7 @@ const SEED = [
     "formal": true,
     "formalSource": "採用候補（Y／04_coat）",
     "src": "https://www.linde-amt.com/resource-library/articles/thermal-barrier-coatings ／ https://www.linde-amt.com/resource-library/articles/aerospace-coating ／ https://www.linde-amt.com/about-us/locations",
-    "note": "日本国内供給ノード。兵庫・埼玉等に拠点。 ／ 正式採用ルール: 採用候補 OR 監視 OR 日本航空電子工業。採用元: 採用候補（Y／04_coat）"
+    "note": "日本国内供給ノード。兵庫・埼玉等に拠点。"
   },
   {
     "id": "seed-46",
@@ -1638,7 +1827,7 @@ const SEED = [
     "formal": true,
     "formalSource": "監視（DyTb・Sm／04_mag）",
     "src": "https://j-shm.co.jp/ ／ https://www.meti.go.jp/policy/economy/economic_security/magnet/magnet_hoshin_260331.pdf ／ https://english.mofcom.gov.cn/Policies/AnnouncementsOrders/art/2025/art_0dd87cbee7b045bf93fabe6ab2faceee.html",
-    "note": "高シェア・直接防衛用途が不足。 ／ 正式採用ルール: 採用候補 OR 監視 OR 日本航空電子工業。採用元: 監視（DyTb・Sm／04_mag）"
+    "note": "高シェア・直接防衛用途が不足。"
   },
   {
     "id": "seed-47",
@@ -1666,7 +1855,7 @@ const SEED = [
     "formal": true,
     "formalSource": "採用候補（Y／04_coat）",
     "src": "https://www.ics-21.com/download/AerospaceTechnology_Jp.pdf ／ https://www.ics-21.com/wp/wp-content/uploads/2026/06/ICS_Company_Profile_2024.3_Latest.pdf ／ https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-yttrium.pdf",
-    "note": "条件2は長期実績・特殊工程認証で代替評価。 ／ 正式採用ルール: 採用候補 OR 監視 OR 日本航空電子工業。採用元: 採用候補（Y／04_coat）"
+    "note": "条件2は長期実績・特殊工程認証で代替評価。"
   },
   {
     "id": "seed-48",
@@ -1694,7 +1883,7 @@ const SEED = [
     "formal": true,
     "formalSource": "採用候補（Y／04_coat）",
     "src": "https://www.oerlikon.com/metco/en/products-services/materials/understanding-tbcs-thermal-barrier-coatings/ ／ https://www.oerlikon.com/metco/ja/%E5%B8%82%E5%A0%B4/%E8%88%AA%E7%A9%BA%E5%AE%87%E5%AE%99/ ／ https://www.oerlikon.com/metco/en/about-us/locations/oerlikon-tokyo/",
-    "note": "日本企業限定ではなく、日本国内供給ノードとして収録。 ／ 正式採用ルール: 採用候補 OR 監視 OR 日本航空電子工業。採用元: 採用候補（Y／04_coat）"
+    "note": "日本企業限定ではなく、日本国内供給ノードとして収録。"
   },
   {
     "id": "seed-49",
@@ -1722,7 +1911,7 @@ const SEED = [
     "formal": true,
     "formalSource": "監視（Y／04_opt）",
     "src": "https://www.optosigma.com/us_en/optics/yb-yag-laser-crystal-a-slab.html ／ https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-yttrium.pdf ／ https://english.mofcom.gov.cn/Policies/AnnouncementsOrders/art/2025/art_0dd87cbee7b045bf93fabe6ab2faceee.html",
-    "note": "商社・加工販売ノードの可能性。 ／ 正式採用ルール: 採用候補 OR 監視 OR 日本航空電子工業。採用元: 監視（Y／04_opt）"
+    "note": "商社・加工販売ノードの可能性。"
   },
   {
     "id": "seed-50",
@@ -1750,7 +1939,7 @@ const SEED = [
     "formal": true,
     "formalSource": "採用候補（Y／04_coat）",
     "src": "https://www.kbknet.co.jp/thermal-spraying/thermal-spraying-list/ ／ https://www.kbknet.co.jp/semiconductor-spaceindustry/ ／ https://www.kbknet.co.jp/quality/",
-    "note": "条件2は認証・ニッチ性で代替評価。シェアは未確認。 ／ 正式採用ルール: 採用候補 OR 監視 OR 日本航空電子工業。採用元: 採用候補（Y／04_coat）"
+    "note": "条件2は認証・ニッチ性で代替評価。シェアは未確認。"
   },
   {
     "id": "seed-51",
@@ -1779,7 +1968,7 @@ const SEED = [
     "formal": true,
     "formalSource": "監視（DyTb・Sm／04_mag）",
     "src": "https://www.sagami-magnet.co.jp/glossary/%E3%82%B5%E3%83%9E%E3%82%B3%E3%83%90%E7%A3%81%E7%9F%B3 ／ https://www.sagami-magnet.co.jp/wp-content/uploads/2025/04/China_Rare_Earth_Items_7Types-Impact_of_Export_Control4_0522.pdf ／ https://www.meti.go.jp/policy/economy/economic_security/magnet/magnet_hoshin_260331.pdf",
-    "note": "商流監視候補。 ／ 正式採用ルール: 採用候補 OR 監視 OR 日本航空電子工業。採用元: 監視（DyTb・Sm／04_mag）"
+    "note": "商流監視候補。"
   },
   {
     "id": "seed-52",
@@ -1807,7 +1996,7 @@ const SEED = [
     "formal": true,
     "formalSource": "監視（Y／04_coat）",
     "src": "https://www.hsk.co.jp/ja/introduction/aerospace.html ／ https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-yttrium.pdf ／ https://english.mofcom.gov.cn/Policies/AnnouncementsOrders/art/2025/art_0dd87cbee7b045bf93fabe6ab2faceee.html",
-    "note": "Y系BOM確認後に再評価。 ／ 正式採用ルール: 採用候補 OR 監視 OR 日本航空電子工業。採用元: 監視（Y／04_coat）"
+    "note": "Y系BOM確認後に再評価。"
   },
   {
     "id": "seed-53",
@@ -1835,7 +2024,7 @@ const SEED = [
     "formal": true,
     "formalSource": "監視（Y／05_laser）",
     "src": "https://ex-fusion.com/news/%E4%B8%96%E7%95%8C%E5%88%9D%E3%80%811%E7%A7%92%E9%96%93%E3%81%AB10%E5%9B%9E%E3%80%81%E6%A8%A1%E6%93%AC%E7%87%83%E6%96%99%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E3%83%AC%E3%83%BC%E3%82%B6%E3%83%BC ／ https://ex-fusion.com/component ／ https://www.jx-nmm.com/newsrelease/2025/20251014_01.html",
-    "note": "YAG接続は確認済みだが現行システムBOMが不足。 ／ 正式採用ルール: 採用候補 OR 監視 OR 日本航空電子工業。採用元: 監視（Y／05_laser）"
+    "note": "YAG接続は確認済みだが現行システムBOMが不足。"
   },
   {
     "id": "seed-54",
@@ -1864,7 +2053,7 @@ const SEED = [
     "formal": true,
     "formalSource": "監視（Sm／05_sat・05_robot）",
     "src": "https://www.maxongroup.com/en/knowledge-and-support/blog/maxon-drives-on-the-red-planet-18150 ／ https://www.maxongroup.com/en-us/market-solutions/industrial-automation/oil-and-gas-industry ／ https://www.meti.go.jp/policy/economy/economic_security/magnet/magnet_hoshin_260331.pdf",
-    "note": "用途とBOMの同一性が確認できるまで監視。 ／ 正式採用ルール: 採用候補 OR 監視 OR 日本航空電子工業。採用元: 監視（Sm／05_sat・05_robot）"
+    "note": "用途とBOMの同一性が確認できるまで監視。"
   },
   {
     "id": "seed-56",
@@ -1893,7 +2082,7 @@ const SEED = [
     "formal": true,
     "formalSource": "監視（DyTb／05_guid・05_sat）",
     "src": "https://npm-ht.co.jp/features/aerospace-defense ／ https://www.kollmorgen.com/en-us/products/motors/direct-drive/kbm-series-frameless ／ https://www.meti.go.jp/policy/economy/economic_security/magnet/magnet_hoshin_260331.pdf",
-    "note": "Dy/Tbフラグは仮置き。 ／ 正式採用ルール: 採用候補 OR 監視 OR 日本航空電子工業。採用元: 監視（DyTb／05_guid・05_sat）"
+    "note": "Dy/Tbフラグは仮置き。"
   },
   {
     "id": "seed-57",
@@ -1922,7 +2111,7 @@ const SEED = [
     "formal": true,
     "formalSource": "監視（DyTb・Sm／05_sat）",
     "src": "https://www.canon-elec.co.jp/space/ ／ https://www.canon-elec.co.jp/products/motor/dc/ ／ https://www.meti.go.jp/policy/economy/economic_security/magnet/magnet_hoshin_260331.pdf",
-    "note": "希土類フラグは候補仮置き。 ／ 正式採用ルール: 採用候補 OR 監視 OR 日本航空電子工業。採用元: 監視（DyTb・Sm／05_sat）"
+    "note": "希土類フラグは候補仮置き。"
   },
   {
     "id": "seed-58",
@@ -1950,7 +2139,7 @@ const SEED = [
     "formal": true,
     "formalSource": "採用候補（Y／05_laser）",
     "src": "https://www.trumpf.com/ja_JP/%E8%A3%BD%E5%93%81/%E3%83%AC%E3%83%BC%E3%82%B6/%E3%83%AC%E3%83%BC%E3%82%B6%E8%A3%85%E7%BD%AE/cw%E3%83%AC%E3%83%BC%E3%82%B6/trudisk/ ／ https://www.trumpf.com/ja_JP/%E3%82%BD%E3%83%AA%E3%83%A5%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/%E6%A5%AD%E7%95%8C/%E8%88%AA%E7%A9%BA%E5%AE%87%E5%AE%99%E7%94%A3%E6%A5%AD/ ／ https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-yttrium.pdf",
-    "note": "日本国内販売・保守ノードとして収録。 ／ 正式採用ルール: 採用候補 OR 監視 OR 日本航空電子工業。採用元: 採用候補（Y／05_laser）"
+    "note": "日本国内販売・保守ノードとして収録。"
   },
   {
     "id": "seed-59",
@@ -1978,7 +2167,7 @@ const SEED = [
     "formal": true,
     "formalSource": "監視（DyTb／05_flight）",
     "src": "https://www.nidec.com/jp/technology/motor/academic/020/ ／ https://moen.nidec.com/aerospace/ ／ https://www.meti.go.jp/policy/economy/economic_security/magnet/magnet_hoshin_260331.pdf",
-    "note": "航空BOMが確認できるまで監視。 ／ 正式採用ルール: 採用候補 OR 監視 OR 日本航空電子工業。採用元: 監視（DyTb／05_flight）"
+    "note": "航空BOMが確認できるまで監視。"
   },
   {
     "id": "seed-60",
@@ -2007,7 +2196,7 @@ const SEED = [
     "formal": true,
     "formalSource": "監視（DyTb・Sm／05_guid）",
     "src": "https://www.kaiweb.jp/index.html ／ https://www.kaiweb.jp/gimbal.html ／ https://www.meti.go.jp/policy/economy/economic_security/magnet/magnet_hoshin_260331.pdf",
-    "note": "条件2はFDR事業のシェアであり対象磁石製品とはずれがある。 ／ 正式採用ルール: 採用候補 OR 監視 OR 日本航空電子工業。採用元: 監視（DyTb・Sm／05_guid）"
+    "note": "条件2はFDR事業のシェアであり対象磁石製品とはずれがある。"
   },
   {
     "id": "seed-61",
@@ -2035,7 +2224,7 @@ const SEED = [
     "formal": true,
     "formalSource": "採用候補（Sm／05_flight）",
     "src": "https://www.global.toshiba/jp/technology/corporate/review/2024/03.html ／ https://www.global.toshiba/ww/technology/corporate/rdc/rd/topics/17/1703-01.html ／ https://www.meti.go.jp/policy/economy/economic_security/magnet/magnet_hoshin_260331.pdf ／ https://www.global.toshiba/jp/outline/corporate/profile.html",
-    "note": "東芝本体はStage 05『飛行制御・電動化』のみ。SmCo磁石材料は東芝マテリアルへ整理。"
+    "note": "SmCo磁石材料は東芝マテリアルへ整理。"
   },
   {
     "id": "seed-62",
@@ -2059,7 +2248,7 @@ const SEED = [
     "prod": "防衛用情報システム、警戒管制・航空管制／戦闘機搭載レーダ向け信号処理・表示装置、航空機搭載関連装置、宇宙用ハイブリッドIC、精密接合装置",
     "pos": "防衛情報システムと航空・宇宙向け高信頼電子機器に強み。JAXA認定ハイブリッドICメーカーで、精密接合では4工法を扱う",
     "def": "警戒管制、航空管制、戦闘機搭載レーダ、航空機搭載装置、人工衛星・ロケットに直接接続",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "bom": "宇宙・防衛用ハイブリッドICと電子機器は確認。対象機器におけるY系材料・希土類磁石の使用は公開情報で未確認",
     "gap": "航空機搭載装置の具体的な機能、モーター／アクチュエータの有無、希土類材料の採否と原産国を確認",
     "ev": "A",
@@ -2067,7 +2256,7 @@ const SEED = [
     "formal": true,
     "formalSource": "再調査（05_defense_electronics・05_sat・05_rf_sensor／所属サブカテゴリーの元素フラグを継承）",
     "src": "https://www.avio.co.jp/company/business/system.html ／ https://www.avio.co.jp/products/device/me/products.html ／ https://www.avio.co.jp/company/business/product.html ／ https://www.avio.co.jp/company/outline/profile.html",
-    "note": "現行事業を横断的に再評価し、防衛半導体・電子回路・通信、衛星・宇宙機・ロケット、RF・圧電・高温センサーへ再分類。飛行制御・電動化と高出力レーザーからは除外 ／ 05_defense_electronicsのDy/Tbフラグは公開BOM未確認のため削除。 ／ 希土類フラグは所属するStage 05サブカテゴリーから自動付与"
+    "note": "企業固有BOM未確認のためDy/Tbフラグを削除。"
   },
   {
     "id": "seed-63",
@@ -2097,7 +2286,7 @@ const SEED = [
     "formal": true,
     "formalSource": "採用候補（Sm／05_guid・05_flight・05_sat）",
     "src": "https://www.moog.co.jp/content/dam/moog/literature/products/motors-servomotors/Moog-Power-and-Data-Motor-and-Resolver-Catalog.pdf ／ https://www.moog.co.jp/products/actuators-servoactuators/defense.html ／ https://www.moog.co.jp/products/actuators-servoactuators/aircraft.html",
-    "note": "会社別中国依存は特に不確実。採用はBOM確認条件付き。 ／ 正式採用ルール: 採用候補 OR 監視 OR 日本航空電子工業。採用元: 採用候補（Sm／05_guid・05_flight・05_sat）"
+    "note": "会社別中国依存は特に不確実。採用はBOM確認条件付き。"
   },
   {
     "id": "seed-64",
@@ -2126,7 +2315,7 @@ const SEED = [
     "formal": true,
     "formalSource": "除外→ユーザー指定（DyTb・Sm／05_guid）",
     "src": "https://www.jae.com/owned/h3/ ／ https://www.jae.com/Motion_Sensor_Control/ ／ https://www.meti.go.jp/policy/economy/economic_security/magnet/magnet_hoshin_260331.pdf",
-    "note": "同一企業内の別製品をつなげる推定は採用しない。 ／ 正式採用ルール: 採用候補 OR 監視 OR 日本航空電子工業。採用元: 除外→ユーザー指定（DyTb・Sm／05_guid） ／ 公開情報では対象機器のDy/Tb/Sm磁石BOM未確認だが、ユーザー指定により正式採用。"
+    "note": "同一企業内の別製品をつなげる推定は採用しない。 ／ 公開情報では対象機器のDy/Tb/Sm磁石BOM未確認だが、ユーザー指定により正式採用。"
   },
   {
     "id": "seed-65",
@@ -2154,7 +2343,7 @@ const SEED = [
     "formal": true,
     "formalSource": "採用候補（Y／05_laser）",
     "src": "https://www.hamamatsu.com/content/dam/hamamatsu-photonics/sites/documents/01_HQ/01_news/01_news_2025/2025_08_28_ja.pdf ／ https://www.hamamatsu.com/content/dam/hamamatsu-photonics/sites/documents/01_HQ/01_news/01_news_2025/2025_07_31_ja.pdf ／ https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-yttrium.pdf",
-    "note": "以前のSc/GSSG仮説は一次資料で確認できず、Y系のみ採用。 ／ 正式採用ルール: 採用候補 OR 監視 OR 日本航空電子工業。採用元: 採用候補（Y／05_laser）"
+    "note": "以前のSc/GSSG仮説は一次資料で確認できず、Y系のみ採用。"
   },
   {
     "id": "stage05-integrated-1",
@@ -2174,11 +2363,11 @@ const SEED = [
     "prod": "マイクロ波・ミリ波・光通信・レーダー評価装置、妨害波監視",
     "pos": "衛星・防衛・航空・船舶の通信、レーダー、妨害波評価に直接接続。民生5G計測と技術基盤を共有。",
     "def": "衛星・防衛・航空・船舶の通信、レーダー、妨害波評価に直接接続。民生5G計測と技術基盤を共有。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://www.anritsu.com/ja-jp/test-measurement/solutions/aerospace-lp ／ https://www.anritsu.com/ja-jp/about-anritsu/corporate-information/profile",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：会社概要の連結売上高 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
+    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：会社概要の連結売上高"
   },
   {
     "id": "stage05-integrated-2",
@@ -2198,11 +2387,11 @@ const SEED = [
     "prod": "防衛・海洋ソナー／水中音響、GNSS/INS、レーダー・大形アンテナ評価、衛星レーザー測距",
     "pos": "防衛装備、水中音響、レーダー・地上局アンテナ、JAXA衛星レーザー測距に直接接続。",
     "def": "防衛装備、水中音響、レーダー・地上局アンテナ、JAXA衛星レーザー測距に直接接続。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "A",
     "exc": 0,
     "src": "https://www.toyo.co.jp/kaiyo/index.html ／ https://www.toyo.co.jp/company/outline/",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：直近の連結売上規模を丸めたレンジ ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
+    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：直近の連結売上規模を丸めたレンジ"
   },
   {
     "id": "stage05-integrated-3",
@@ -2222,11 +2411,11 @@ const SEED = [
     "prod": "宇宙用水晶振動子・発振器、周波数シンセサイザ、QCMセンサ",
     "pos": "人工衛星・ロケット、官公庁・防衛通信、民生通信・車載に共通する高安定周波数源。",
     "def": "人工衛星・ロケット、官公庁・防衛通信、民生通信・車載に共通する高安定周波数源。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://www.ndk.com/jp/company/business/ ／ https://www.ndk.com/jp/company/profile/",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：会社概要の2025年度連結売上高 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
+    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：会社概要の2025年度連結売上高"
   },
   {
     "id": "stage05-integrated-4",
@@ -2246,11 +2435,11 @@ const SEED = [
     "prod": "船舶レーダー、ECDIS、衛星通信、気象レーダー、防衛無線応用機器",
     "pos": "防衛省向け無線応用機器・システムを明示。商船・防災・気象向けと共通技術。",
     "def": "防衛省向け無線応用機器・システムを明示。商船・防災・気象向けと共通技術。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://www.jrc.co.jp/about",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：親会社セグメント・人員規模から推計 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
+    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：親会社セグメント・人員規模から推計"
   },
   {
     "id": "stage05-integrated-5",
@@ -2271,11 +2460,11 @@ const SEED = [
     "prod": "宇宙用自律ロボットアーム、ロボット衛星、月面ローバー",
     "pos": "軌道上サービス、衛星修理・寿命延長、月面建設に直接接続。民間・政府ミッション双方へ展開可能。",
     "def": "軌道上サービス、衛星修理・寿命延長、月面建設に直接接続。民間・政府ミッション双方へ展開可能。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://gitai.tech/2024/03/19/gitai-completes-fully-successful-technology-demonstration-outside-the-iss/ ／ https://gitai.tech/about/",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：非上場スタートアップ。人員・資金調達・開発段階からのレンジ推計 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
+    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：非上場スタートアップ。人員・資金調達・開発段階からのレンジ推計"
   },
   {
     "id": "stage05-integrated-6",
@@ -2296,11 +2485,11 @@ const SEED = [
     "prod": "LMガイド、ボールねじ、XYステージ、宇宙ロボット用直動機構",
     "pos": "JAXAの軌道上サービス技術実証用大型XYステージやISS船外活動支援ロボットに採用。民生ロボット・工作機械と共通。",
     "def": "JAXAの軌道上サービス技術実証用大型XYステージやISS船外活動支援ロボットに採用。民生ロボット・工作機械と共通。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://www.thk.com/jp/ja/contents/pages/recruit/about/company/ ／ https://www.thk.com/jp/ja/ir/finance/highlights/",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：継続事業ベースの連結売上収益 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
+    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：継続事業ベースの連結売上収益"
   },
   {
     "id": "stage05-integrated-7",
@@ -2321,11 +2510,11 @@ const SEED = [
     "prod": "精密軸受、ボールねじ、航空・宇宙・ロボット用モーション部品",
     "pos": "航空・宇宙・ロボットの精密運動部に直結。防衛向け個別実績は非開示。",
     "def": "航空・宇宙・ロボットの精密運動部に直結。防衛向け個別実績は非開示。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://www.nsk.com/jp-ja/company/investors/management/message/ ／ https://www.nsk.com/jp-ja/company/investors/financial-announcements/",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：会社公表の通期予想 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
+    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：会社公表の通期予想"
   },
   {
     "id": "stage05-integrated-8",
@@ -2348,11 +2537,11 @@ const SEED = [
     "prod": "月着陸船、月面輸送、マイクロローバー、深宇宙航行・管制",
     "pos": "月面輸送・探査・資源利用に直結し、深宇宙航法・通信・着陸技術は安全保障にも転用可能。",
     "def": "月面輸送・探査・資源利用に直結し、深宇宙航法・通信・着陸技術は安全保障にも転用可能。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://ispace-inc.com/jpn/news/?p=7035 ／ https://ispace-inc.com/jpn/ir",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：会社公表の通期実績 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
+    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：会社公表の通期実績"
   },
   {
     "id": "stage05-integrated-9",
@@ -2375,38 +2564,11 @@ const SEED = [
     "prod": "小型衛星用水スラスタ、水イオンエンジン、ホールスラスタ",
     "pos": "小型衛星の軌道投入・維持・衝突回避・デオービットに直接接続。安全保障衛星にも転用可能。",
     "def": "小型衛星の軌道投入・維持・衝突回避・デオービットに直接接続。安全保障衛星にも転用可能。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://pale-blue.co.jp/jpn/",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：非上場宇宙スタートアップ。量産立上げ段階としての概算 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
-  },
-  {
-    "id": "stage05-integrated-10",
-    "name": "QPS研究所",
-    "jsx": "統合企業リスト_子会社置換",
-    "stages": [
-      5
-    ],
-    "subs": [
-      "05_sat"
-    ],
-    "tags": [
-      "Y",
-      "DyTb",
-      "Sm",
-      "Sc"
-    ],
-    "own": "非上場子会社 ／ 親会社：QPSホールディングス ／ 自社証券コード：非上場 ／ 親会社証券コード：5595",
-    "rev": "20–50億円 ／ 概算 ／ 2026/5期",
-    "prod": "小型SAR衛星QPS-SAR、衛星間通信・オンボード処理",
-    "pos": "防衛省の宇宙共通キー技術実証の契約相手方で、衛星コンステレーション事業にも参画。",
-    "def": "防衛省の宇宙共通キー技術実証の契約相手方で、衛星コンステレーション事業にも参画。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
-    "ev": "B",
-    "exc": 0,
-    "src": "https://www.mod.go.jp/j/press/news/2024/03/01c.html ／ https://i-qps.net/ir-archives/",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：完全親会社QPSホールディングスの開示と事業規模から推計 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
+    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：非上場宇宙スタートアップ。量産立上げ段階としての概算"
   },
   {
     "id": "stage05-integrated-11",
@@ -2429,11 +2591,11 @@ const SEED = [
     "prod": "小型SAR衛星StriX、衛星コンステレーション、SARデータ解析",
     "pos": "防衛省の衛星コンステレーション整備・運営事業を落札。安全保障・インテリジェンス用途を明示。",
     "def": "防衛省の衛星コンステレーション整備・運営事業を落札。安全保障・インテリジェンス用途を明示。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://synspective.com/jp/company/ ／ https://synspective.com/jp/ir/results/",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：上場会社の衛星・データ事業規模からレンジ表示 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
+    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：上場会社の衛星・データ事業規模からレンジ表示"
   },
   {
     "id": "stage05-integrated-12",
@@ -2456,11 +2618,11 @@ const SEED = [
     "prod": "超小型衛星、衛星コンステレーション、ホステッドペイロード、月測位・通信",
     "pos": "地球観測、衛星通信、測位・位置情報、月インフラ、深宇宙探査に直接接続。",
     "def": "地球観測、衛星通信、測位・位置情報、月インフラ、深宇宙探査に直接接続。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://arkedgespace.com/products-services ／ https://arkedgespace.com/about-us",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：非上場宇宙スタートアップ。案件・人員規模から推計 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
+    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：非上場宇宙スタートアップ。案件・人員規模から推計"
   },
   {
     "id": "stage05-integrated-13",
@@ -2483,11 +2645,11 @@ const SEED = [
     "prod": "小型光学衛星、AxelGlobe地球観測、AxelLiner衛星開発・運用",
     "pos": "防衛省衛星コンステレーション事業で光学衛星画像の取得業務を受注。",
     "def": "防衛省衛星コンステレーション事業で光学衛星画像の取得業務を受注。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://www.axelspace.com/ja/news/satellite_constellation_project/ ／ https://www.axelspace.com/ja/company/",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：上場準備中の非上場宇宙企業。案件・人員規模から推計 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
+    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：上場準備中の非上場宇宙企業。案件・人員規模から推計"
   },
   {
     "id": "stage05-integrated-14",
@@ -2510,11 +2672,11 @@ const SEED = [
     "prod": "小型衛星打上げロケットZERO、観測ロケットMOMO、通信衛星",
     "pos": "ロケット開発・製造・打上げ、人工衛星開発・運用に直接接続。安全保障通信・即応打上げへ転用可能。",
     "def": "ロケット開発・製造・打上げ、人工衛星開発・運用に直接接続。安全保障通信・即応打上げへ転用可能。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://www.istellartech.com/about",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：非上場ロケット企業。人員・開発案件から推計 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
+    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：非上場ロケット企業。人員・開発案件から推計"
   },
   {
     "id": "stage05-integrated-15",
@@ -2537,11 +2699,11 @@ const SEED = [
     "prod": "小型ロケットKAIROS、民間射場スペースポート紀伊、打上げサービス",
     "pos": "小型衛星の打上げ・射場運用に直接接続し、安全保障衛星の即応打上げへ転用可能。",
     "def": "小型衛星の打上げ・射場運用に直接接続し、安全保障衛星の即応打上げへ転用可能。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://www.space-one.co.jp/about/",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：打上げ実証段階の非上場企業としての概算 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
+    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：打上げ実証段階の非上場企業としての概算"
   },
   {
     "id": "stage05-integrated-16",
@@ -2564,11 +2726,11 @@ const SEED = [
     "prod": "衛星搭載観測機器、航法カメラ、高圧電源、粒子センサー、超小型衛星",
     "pos": "衛星・ロケット・ISS搭載機器に加え、防衛省公示で気象・計測装置部品の供給主体として確認。",
     "def": "衛星・ロケット・ISS搭載機器に加え、防衛省公示で気象・計測装置部品の供給主体として確認。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://www.meisei.co.jp/products/products_category/space ／ https://www.meisei.co.jp/company/profile",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：IHIグループ内の宇宙・気象機器事業規模から推計 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
+    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：IHIグループ内の宇宙・気象機器事業規模から推計"
   },
   {
     "id": "stage05-integrated-17",
@@ -2592,11 +2754,11 @@ const SEED = [
     "prod": "軌道上サービス、デブリ除去、ランデブー・近接運用、宇宙領域把握 ／ 衛星捕獲機構、RPO航法、軌道上点検・除去サービス",
     "pos": "防衛省から機動対応宇宙システム実証機を受注。民生の衛星寿命延長・デブリ除去と防衛SDAに共通。 ／ 民生衛星の寿命延長・デブリ除去と、防衛SDA・機動対応宇宙システムに共通。",
     "def": "防衛省から機動対応宇宙システム実証機を受注。民生の衛星寿命延長・デブリ除去と防衛SDAに共通。 ／ 民生衛星の寿命延長・デブリ除去と、防衛SDA・機動対応宇宙システムに共通。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://www.astroscale.com/ja/missions/responsive-space-system-demonstration-satellite-prototype ／ https://www.astroscale.com/ja/investors/",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：上場会社の契約収益・開発段階を踏まえたレンジ表示 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
+    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：上場会社の契約収益・開発段階を踏まえたレンジ表示"
   },
   {
     "id": "stage05-integrated-18",
@@ -2616,11 +2778,11 @@ const SEED = [
     "prod": "PWR/BWR燃料集合体、燃料棒・被覆管関連部品、研究炉・試験炉燃料",
     "pos": "商用炉、研究炉・試験炉の核燃料製造と特殊核物質管理に直結する安全保障上の重要ノード。",
     "def": "商用炉、研究炉・試験炉の核燃料製造と特殊核物質管理に直結する安全保障上の重要ノード。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://www.nfi.co.jp/product ／ https://www.nfi.co.jp/company/outline",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：国内2工場・燃料製造能力と人員規模から推計 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
+    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：国内2工場・燃料製造能力と人員規模から推計"
   },
   {
     "id": "stage05-integrated-19",
@@ -2640,11 +2802,11 @@ const SEED = [
     "prod": "PWR燃料集合体、燃料棒、炉心構成品、燃料サイクル関連サービス",
     "pos": "原子炉炉心と核燃料サイクルに直接接続し、原子力安全保障・核不拡散管理上の重要ノード。",
     "def": "原子炉炉心と核燃料サイクルに直接接続し、原子力安全保障・核不拡散管理上の重要ノード。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://www.mhi.com/jp/group/mnf/business",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：PWR燃料製造拠点・人員規模から推計 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
+    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：PWR燃料製造拠点・人員規模から推計"
   },
   {
     "id": "stage05-integrated-20",
@@ -2664,11 +2826,11 @@ const SEED = [
     "prod": "核燃料・照射材料の試験評価、ジルカロイ被覆管・圧力容器鋼の解析",
     "pos": "燃料信頼性向上、事故耐性、被覆管・炉材料評価に直接接続する原子力安全保障R&Dノード。",
     "def": "燃料信頼性向上、事故耐性、被覆管・炉材料評価に直接接続する原子力安全保障R&Dノード。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://www.nfd.jp/business/business.html ／ https://www.nfd.jp/",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：専門試験研究会社の人員・設備規模から推計 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
+    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：専門試験研究会社の人員・設備規模から推計"
   },
   {
     "id": "stage05-integrated-21",
@@ -2688,11 +2850,11 @@ const SEED = [
     "prod": "LEAPエンジン用チタンアルミ製低圧タービンブレード",
     "pos": "A320neo・737MAX・C919向けベストセラー民間航空エンジンに直結。加工・品質保証技術は防衛エンジンへ転用可能。",
     "def": "A320neo・737MAX・C919向けベストセラー民間航空エンジンに直結。加工・品質保証技術は防衛エンジンへ転用可能。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://aeroedge.co.jp/ir/individual/",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：通期会社予想 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
+    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：通期会社予想"
   },
   {
     "id": "stage05-integrated-22",
@@ -2712,11 +2874,11 @@ const SEED = [
     "prod": "航空機・ジェットエンジン用高精度軸受、特殊環境用軸受",
     "pos": "国内初の航空宇宙用軸受専門工場。P&Wエンジン用軸受を量産。",
     "def": "国内初の航空宇宙用軸受専門工場。P&Wエンジン用軸受を量産。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://www.ntn.co.jp/japan/news/press/news201300003.html",
-    "note": "統合処理：事業部置換 ／ 置換元：NTN ／ 売上根拠：航空宇宙用軸受の専用工場・製品範囲から推計 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
+    "note": "統合処理：事業部置換 ／ 置換元：NTN ／ 売上根拠：航空宇宙用軸受の専用工場・製品範囲から推計"
   },
   {
     "id": "stage05-integrated-23",
@@ -2736,11 +2898,11 @@ const SEED = [
     "prod": "航空機エンジン用クーリングマニホールド・配管、航空宇宙特殊工程",
     "pos": "民間航空機エンジン部品に加え、防衛省・自衛隊関連の航空宇宙機器・整備に直接接続。",
     "def": "民間航空機エンジン部品に加え、防衛省・自衛隊関連の航空宇宙機器・整備に直接接続。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://www.jamco.co.jp/ja/business/jco/engine_partts.html ／ https://www.jamco.co.jp/ja/company/profile.html",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：非上場化前の連結売上規模を丸めたレンジ ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
+    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：非上場化前の連結売上規模を丸めたレンジ"
   },
   {
     "id": "stage05-integrated-24",
@@ -2760,11 +2922,11 @@ const SEED = [
     "prod": "航空機エンジンナセル用CFRPカスケード、航空機・エンジン構造部品",
     "pos": "Boeing、Airbus等の民間航空機エンジン・逆噴射装置に直接搭載。航空エンジン部品の設計・量産技術は防衛機にも転用可能。",
     "def": "Boeing、Airbus等の民間航空機エンジン・逆噴射装置に直接搭載。航空エンジン部品の設計・量産技術は防衛機にも転用可能。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://www.nikkiso.co.jp/products/cfrp/ ／ https://www.nikkiso.co.jp/company/",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：会社公表の連結売上規模をレンジ化 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
+    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：会社公表の連結売上規模をレンジ化"
   },
   {
     "id": "stage05-integrated-25",
@@ -2777,9 +2939,6 @@ const SEED = [
       "05_airframe_support"
     ],
     "tags": [
-      "Y",
-      "DyTb",
-      "Sm",
       "Sc"
     ],
     "own": "親会社内カンパニー ／ 親会社：SUBARU ／ 自社証券コード：事業部 ／ 親会社証券コード：7270",
@@ -2787,11 +2946,11 @@ const SEED = [
     "prod": "航空機・ヘリ・無人機の開発、生産、システム統合、運用支援",
     "pos": "自衛隊向け練習機、UH-2、無人航空機、次期戦闘機に直接接続。",
     "def": "自衛隊向け練習機、UH-2、無人航空機、次期戦闘機に直接接続。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://www.subaru.co.jp/outline/about/aerospace/ ／ https://www.subaru.co.jp/ir/finance/segment.html",
-    "note": "統合処理：カンパニー置換 ／ 置換元：SUBARU ／ 売上根拠：親会社の航空宇宙セグメント売上収益 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
+    "note": "統合処理：カンパニー置換 ／ 置換元：SUBARU ／ 売上根拠：親会社の航空宇宙セグメント売上収益"
   },
   {
     "id": "stage05-integrated-26",
@@ -2804,9 +2963,6 @@ const SEED = [
       "05_airframe_support"
     ],
     "tags": [
-      "Y",
-      "DyTb",
-      "Sm",
       "Sc"
     ],
     "own": "子会社 ／ 親会社：SUBARU ／ 自社証券コード：非上場 ／ 親会社証券コード：7270",
@@ -2814,11 +2970,11 @@ const SEED = [
     "prod": "航空機部品の加工・組立、設備保全、計測器校正、品質保証",
     "pos": "SUBARU航空宇宙カンパニーの航空機製造を担う専業子会社。",
     "def": "SUBARU航空宇宙カンパニーの航空機製造を担う専業子会社。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://fas.subaru.co.jp/outline/outline.html",
-    "note": "統合処理：子会社追加 ／ 置換元：SUBARU ／ 売上根拠：航空機加工・組立・品質保証の人員規模から推計 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
+    "note": "統合処理：子会社追加 ／ 置換元：SUBARU ／ 売上根拠：航空機加工・組立・品質保証の人員規模から推計"
   },
   {
     "id": "stage05-integrated-27",
@@ -2831,9 +2987,6 @@ const SEED = [
       "05_airframe_support"
     ],
     "tags": [
-      "Y",
-      "DyTb",
-      "Sm",
       "Sc"
     ],
     "own": "子会社／関係会社 ／ 親会社：SUBARU ／ 自社証券コード：非上場 ／ 親会社証券コード：7270",
@@ -2841,11 +2994,11 @@ const SEED = [
     "prod": "機体設計、解析、生産技術、航空宇宙ソフトウェア",
     "pos": "航空宇宙専業の設計・生産技術法人。",
     "def": "航空宇宙専業の設計・生産技術法人。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://fatec.subaru.co.jp/company/outline.html",
-    "note": "統合処理：子会社追加 ／ 置換元：SUBARU ／ 売上根拠：会社概要の売上高 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
+    "note": "統合処理：子会社追加 ／ 置換元：SUBARU ／ 売上根拠：会社概要の売上高"
   },
   {
     "id": "stage05-integrated-28",
@@ -2858,9 +3011,6 @@ const SEED = [
       "05_airframe_support"
     ],
     "tags": [
-      "Y",
-      "DyTb",
-      "Sm",
       "Sc"
     ],
     "own": "子会社 ／ 親会社：SUBARU ／ 自社証券コード：非上場 ／ 親会社証券コード：7270",
@@ -2868,11 +3018,11 @@ const SEED = [
     "prod": "自衛隊航空機・搭載装備品・フライトシミュレータの整備、教育",
     "pos": "自衛隊航空機の整備を行う民活会社第1号。",
     "def": "自衛隊航空機の整備を行う民活会社第1号。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://fam.subaru.co.jp/company/",
-    "note": "統合処理：子会社追加 ／ 置換元：SUBARU ／ 売上根拠：自衛隊機MRO専業の人員・契約規模から推計 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
+    "note": "統合処理：子会社追加 ／ 置換元：SUBARU ／ 売上根拠：自衛隊機MRO専業の人員・契約規模から推計"
   },
   {
     "id": "stage05-integrated-29",
@@ -2885,9 +3035,6 @@ const SEED = [
       "05_airframe_support"
     ],
     "tags": [
-      "Y",
-      "DyTb",
-      "Sm",
       "Sc"
     ],
     "own": "子会社／関係会社 ／ 親会社：SUBARU ／ 自社証券コード：非上場 ／ 親会社証券コード：7270",
@@ -2895,11 +3042,11 @@ const SEED = [
     "prod": "アルミ合金航空機構造部品の板金・機械加工・ユニット組立",
     "pos": "SUBARU、三菱重工、川崎重工、日本飛行機、新明和等へ供給。",
     "def": "SUBARU、三菱重工、川崎重工、日本飛行機、新明和等へ供給。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://yusoki.subaru.co.jp/company/index.html",
-    "note": "統合処理：子会社追加 ／ 置換元：SUBARU ／ 売上根拠：複数機体メーカー向け構造部品専業の人員・工程規模から推計 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
+    "note": "統合処理：子会社追加 ／ 置換元：SUBARU ／ 売上根拠：複数機体メーカー向け構造部品専業の人員・工程規模から推計"
   },
   {
     "id": "stage05-integrated-30",
@@ -2919,11 +3066,11 @@ const SEED = [
     "prod": "高出力レーザー用光学系、人工衛星搭載光学系、空間光通信用ビーム制御",
     "pos": "人工衛星搭載光学系と空間光通信へ直接接続。高出力レーザー光学は宇宙・防衛センシングへ転用可能。",
     "def": "人工衛星搭載光学系と空間光通信へ直接接続。高出力レーザー光学は宇宙・防衛センシングへ転用可能。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://www.tamron.com/jp/technology/optics/ ／ https://www.tamron.com/jp/company/company_profile.html",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：会社公表の連結売上高 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
+    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：会社公表の連結売上高"
   },
   {
     "id": "stage05-integrated-31",
@@ -2947,11 +3094,11 @@ const SEED = [
     "prod": "宇宙搭載用高出力レーザー、衛星ライダー、レーザーデブリ除去 ／ 衛星ライダー、レーザー式スペースデブリ除去衛星、専用衛星バス",
     "pos": "衛星ライダー、デブリ制御、地球観測、安全保障の双方へ明示的に展開するデュアルユース技術。 ／ 地球観測、宇宙状況把握、スペースデブリ制御、安全保障に直接接続。",
     "def": "衛星ライダー、デブリ制御、地球観測、安全保障の双方へ明示的に展開するデュアルユース技術。 ／ 地球観測、宇宙状況把握、スペースデブリ制御、安全保障に直接接続。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://www.orbitallasers.com/technology/ ／ https://www.orbitallasers.com/about/",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：創業初期の非上場宇宙スタートアップとしての概算 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
+    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：創業初期の非上場宇宙スタートアップとしての概算"
   },
   {
     "id": "stage05-integrated-32",
@@ -2965,19 +3112,18 @@ const SEED = [
     ],
     "tags": [
       "DyTb",
-      "Sm",
-      "Sc"
+      "Sm"
     ],
     "own": "上場企業 ／ 自社証券コード：7242",
     "rev": "約4,815億円 ／ 連結実績 ／ 2026/3期",
     "prod": "航空機用降着装置、ステアリング・操舵装置、油圧・緊急作動装置",
     "pos": "防衛省・自衛隊保有機向け装備品・補用品の契約実績を公表。民間航空機・産業油圧と技術を共有。",
     "def": "防衛省・自衛隊保有機向け装備品・補用品の契約実績を公表。民間航空機・産業油圧と技術を共有。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://www.kyb.co.jp/company/information.html",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：会社概要の2025年度連結実績 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
+    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：会社概要の2025年度連結実績"
   },
   {
     "id": "stage05-integrated-33",
@@ -2991,19 +3137,18 @@ const SEED = [
     ],
     "tags": [
       "DyTb",
-      "Sm",
-      "Sc"
+      "Sm"
     ],
     "own": "上場企業 ／ 自社証券コード：7224",
     "rev": "約2,700億円 ／ 連結実績（概数） ／ 2026/3期",
     "prod": "US-2救難飛行艇、航空機構造・動翼、機外燃料タンク、整備",
     "pos": "海上自衛隊の救難飛行艇と民間航空機構造部品・整備に直接接続。",
     "def": "海上自衛隊の救難飛行艇と民間航空機構造部品・整備に直接接続。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "A",
     "exc": 0,
     "src": "https://www.shinmaywa.co.jp/products/aircraft/pdf/AircraftDivisionGuide.pdf ／ https://www.shinmaywa.co.jp/ir/factsheet.html",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：連結売上高を100億円単位で丸めて表示 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
+    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：連結売上高を100億円単位で丸めて表示"
   },
   {
     "id": "stage05-integrated-34",
@@ -3017,19 +3162,18 @@ const SEED = [
     ],
     "tags": [
       "DyTb",
-      "Sm",
-      "Sc"
+      "Sm"
     ],
     "own": "上場企業 ／ 自社証券コード：7701",
     "rev": "約5,607億円 ／ 連結実績 ／ 2026/3期",
     "prod": "フライトコントロール、空調、コックピット表示、航空機搭載機器",
     "pos": "P-1/C-2等の防衛機とB747-8等の民間機にフライトコントロールを供給。",
     "def": "P-1/C-2等の防衛機とB747-8等の民間機にフライトコントロールを供給。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "A",
     "exc": 0,
     "src": "https://www.shimadzu.co.jp/sites/shimadzu.co.jp/files/ir/6dog/srnepvp1yzsd995a.pdf ／ https://www.shimadzu.co.jp/aboutus/company/profile.html",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：会社概要の連結売上高 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
+    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：会社概要の連結売上高"
   },
   {
     "id": "stage05-integrated-35",
@@ -3043,19 +3187,18 @@ const SEED = [
     ],
     "tags": [
       "DyTb",
-      "Sm",
-      "Sc"
+      "Sm"
     ],
     "own": "親会社内事業部 ／ 親会社：ダイキン工業 ／ 自社証券コード：事業部 ／ 親会社証券コード：6367",
     "rev": "100–300億円 ／ 概算 ／ 2026年時点",
     "prod": "誘導弾・砲弾部品、航空機部品、航空機用消火器、精密加工",
     "pos": "防衛省向け砲弾・誘導弾部品・航空機部品を開示。",
     "def": "防衛省向け砲弾・誘導弾部品・航空機部品を開示。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://www.daikin.co.jp/corporate/overview/business/defense",
-    "note": "統合処理：事業部置換 ／ 置換元：ダイキン工業 ／ 売上根拠：親会社の特機・その他事業開示と製品範囲から推計 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
+    "note": "統合処理：事業部置換 ／ 置換元：ダイキン工業 ／ 売上根拠：親会社の特機・その他事業開示と製品範囲から推計"
   },
   {
     "id": "stage05-integrated-36",
@@ -3076,11 +3219,11 @@ const SEED = [
     "prod": "高多層・高密度PCB、フレックスリジッド基板、航空宇宙向け基板設計・製造",
     "pos": "JAXA認定PCBがロケット・人工衛星に採用。防衛省認定、JIS Q 9100取得。",
     "def": "JAXA認定PCBがロケット・人工衛星に採用。防衛省認定、JIS Q 9100取得。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。 ／ 防衛半導体・電子回路・通信についてDy/Tbの企業固有BOMを公開確認できず、フラグを削除。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。 ／ Dy/Tbの企業固有BOMを公開確認できず、フラグを削除。",
     "ev": "A",
     "exc": 0,
     "src": "https://www.oki-otc.jp/company/outline.html",
-    "note": "統合処理：子会社置換 ／ 置換元：沖電気工業（OKI） ／ 売上根拠：従業員707名と高付加価値PCB製造の売上/人員レンジから推計 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与 ／ 05_defense_electronicsのDy/Tbフラグは公開BOM未確認のため削除。"
+    "note": "統合処理：子会社置換 ／ 置換元：沖電気工業（OKI） ／ 売上根拠：従業員707名と高付加価値PCB製造の売上/人員レンジから推計"
   },
   {
     "id": "stage05-integrated-37",
@@ -3101,11 +3244,11 @@ const SEED = [
     "prod": "耐放射線・高信頼デジタルIC、宇宙・航空・防衛向け半導体",
     "pos": "人工衛星・宇宙機・航空防衛電子機器へ直接組み込まれる耐放射線半導体を供給。",
     "def": "人工衛星・宇宙機・航空防衛電子機器へ直接組み込まれる耐放射線半導体を供給。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。 ／ 防衛半導体・電子回路・通信についてDy/Tbの企業固有BOMを公開確認できず、フラグを削除。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。 ／ Dy/Tbの企業固有BOMを公開確認できず、フラグを削除。",
     "ev": "B",
     "exc": 0,
     "src": "https://www.renesas.com/en/products/space-harsh-environment/hi-rel-digital ／ https://www.renesas.com/ja/about/newsroom/renesas-reports-financial-results-year-ended-december-31-2025",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：IFRS連結売上収益 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与 ／ 05_defense_electronicsのDy/Tbフラグは公開BOM未確認のため削除。"
+    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：IFRS連結売上収益"
   },
   {
     "id": "stage05-integrated-38",
@@ -3126,11 +3269,11 @@ const SEED = [
     "prod": "積層セラミックコンデンサの開発・製造",
     "pos": "宇宙用途との接続は親会社製品として確認。子会社単独の認証情報は不足。",
     "def": "宇宙用途との接続は親会社製品として確認。子会社単独の認証情報は不足。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。 ／ 防衛半導体・電子回路・通信についてDy/Tbの企業固有BOMを公開確認できず、フラグを削除。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。 ／ Dy/Tbの企業固有BOMを公開確認できず、フラグを削除。",
     "ev": "B",
     "exc": 0,
     "src": "https://corporate.murata.com/en-us/newsroom/news/company/general/2019/1024",
-    "note": "統合処理：子会社追加（監視） ／ 置換元：村田製作所 ／ 売上根拠：大規模MLCC製造拠点の人員・設備規模から推計 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与 ／ 05_defense_electronicsのDy/Tbフラグは公開BOM未確認のため削除。"
+    "note": "統合処理：子会社追加（監視） ／ 置換元：村田製作所 ／ 売上根拠：大規模MLCC製造拠点の人員・設備規模から推計"
   },
   {
     "id": "stage05-integrated-39",
@@ -3151,11 +3294,11 @@ const SEED = [
     "prod": "積層セラミックコンデンサの研究開発・製造",
     "pos": "宇宙・防衛向け認定名義と型番の子会社単独開示は不足。",
     "def": "宇宙・防衛向け認定名義と型番の子会社単独開示は不足。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。 ／ 防衛半導体・電子回路・通信についてDy/Tbの企業固有BOMを公開確認できず、フラグを削除。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。 ／ Dy/Tbの企業固有BOMを公開確認できず、フラグを削除。",
     "ev": "B",
     "exc": 0,
     "src": "https://corporate.murata.com/en-global/newsroom/news/company/general/2026/0205",
-    "note": "統合処理：子会社追加（監視） ／ 置換元：村田製作所 ／ 売上根拠：大規模MLCC開発・製造拠点の人員・設備規模から推計 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与 ／ 05_defense_electronicsのDy/Tbフラグは公開BOM未確認のため削除。"
+    "note": "統合処理：子会社追加（監視） ／ 置換元：村田製作所 ／ 売上根拠：大規模MLCC開発・製造拠点の人員・設備規模から推計"
   },
   {
     "id": "stage05-integrated-40",
@@ -3176,11 +3319,11 @@ const SEED = [
     "prod": "S帯・X帯高出力GaN HEMT、衛星通信・航空管制レーダー用RFデバイス",
     "pos": "航空管制、船舶・気象レーダー、衛星通信に直結し、防衛レーダー・通信へ転用可能。",
     "def": "航空管制、船舶・気象レーダー、衛星通信に直結し、防衛レーダー・通信へ転用可能。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。 ／ 防衛半導体・電子回路・通信についてDy/Tbの企業固有BOMを公開確認できず、フラグを削除。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。 ／ Dy/Tbの企業固有BOMを公開確認できず、フラグを削除。",
     "ev": "B",
     "exc": 0,
     "src": "https://sumitomoelectric.com/jp/products/optical-devices ／ https://sumitomoelectric.com/jp/ir/financial",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：連結売上高を0.1兆円単位で丸めて表示 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与 ／ 05_defense_electronicsのDy/Tbフラグは公開BOM未確認のため削除。"
+    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：連結売上高を0.1兆円単位で丸めて表示"
   },
   {
     "id": "stage05-integrated-41",
@@ -3201,11 +3344,11 @@ const SEED = [
     "prod": "宇宙グレードMLCC、タイミング・高周波・センサデバイス",
     "pos": "国内唯一のJAXA認定MLCCメーカーとして宇宙機採用を公表。",
     "def": "国内唯一のJAXA認定MLCCメーカーとして宇宙機採用を公表。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。 ／ 防衛半導体・電子回路・通信についてDy/Tbの企業固有BOMを公開確認できず、フラグを削除。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。 ／ Dy/Tbの企業固有BOMを公開確認できず、フラグを削除。",
     "ev": "B",
     "exc": 0,
     "src": "https://www.murata.com/en-us/products/capacitor/ceramiccapacitor/overview/strength",
-    "note": "統合処理：事業部置換 ／ 置換元：村田製作所 ／ 売上根拠：親会社のコンデンサ関連売上構成から概算 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与 ／ 05_defense_electronicsのDy/Tbフラグは公開BOM未確認のため削除。"
+    "note": "統合処理：事業部置換 ／ 置換元：村田製作所 ／ 売上根拠：親会社のコンデンサ関連売上構成から概算"
   },
   {
     "id": "stage05-integrated-42",
@@ -3226,11 +3369,11 @@ const SEED = [
     "prod": "防衛ICT、センサー、AI・サイバー、24時間365日維持支援",
     "pos": "防衛省・自衛隊の情報通信システム開発・維持を行う専業会社。",
     "def": "防衛省・自衛隊の情報通信システム開発・維持を行う専業会社。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。 ／ 防衛半導体・電子回路・通信についてDy/Tbの企業固有BOMを公開確認できず、フラグを削除。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。 ／ Dy/Tbの企業固有BOMを公開確認できず、フラグを削除。",
     "ev": "B",
     "exc": 0,
     "src": "https://global.fujitsu/ja-jp/subsidiaries/fdns/about",
-    "note": "統合処理：子会社置換 ／ 置換元：富士通 ／ 売上根拠：会社概要・採用資料に基づく専業会社売上規模 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与 ／ 05_defense_electronicsのDy/Tbフラグは公開BOM未確認のため削除。"
+    "note": "統合処理：子会社置換 ／ 置換元：富士通 ／ 売上根拠：会社概要・採用資料に基づく専業会社売上規模"
   },
   {
     "id": "stage05-integrated-43",
@@ -3251,11 +3394,11 @@ const SEED = [
     "prod": "ガラス・金属・セラミック・サファイア接合、精密加工・組立ユニット",
     "pos": "JIS Q 9100認証範囲に航空機搭載防衛装備品ユニットを明記。",
     "def": "JIS Q 9100認証範囲に航空機搭載防衛装備品ユニットを明記。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。 ／ 防衛半導体・電子回路・通信についてDy/Tbの企業固有BOMを公開確認できず、フラグを削除。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。 ／ Dy/Tbの企業固有BOMを公開確認できず、フラグを削除。",
     "ev": "B",
     "exc": 0,
     "src": "https://global.fujitsu/ja-jp/subsidiaries/fdns/tcl/about",
-    "note": "統合処理：子会社追加 ／ 置換元：富士通 ／ 売上根拠：従業員規模と防衛航空機向け精密製造の売上/人員レンジから推計 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与 ／ 05_defense_electronicsのDy/Tbフラグは公開BOM未確認のため削除。"
+    "note": "統合処理：子会社追加 ／ 置換元：富士通 ／ 売上根拠：従業員規模と防衛航空機向け精密製造の売上/人員レンジから推計"
   },
   {
     "id": "stage05-integrated-44",
@@ -3276,11 +3419,11 @@ const SEED = [
     "prod": "宇宙・防衛用電子部品の試験、故障解析、環境評価、スクリーニング",
     "pos": "MIL-STD-883、JAXA-QTS-2010に基づく宇宙用電子部品試験を提供。",
     "def": "MIL-STD-883、JAXA-QTS-2010に基づく宇宙用電子部品試験を提供。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。 ／ 防衛半導体・電子回路・通信についてDy/Tbの企業固有BOMを公開確認できず、フラグを削除。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。 ／ Dy/Tbの企業固有BOMを公開確認できず、フラグを削除。",
     "ev": "B",
     "exc": 0,
     "src": "https://www.oeg.co.jp/company/prof.html",
-    "note": "統合処理：子会社置換 ／ 置換元：沖電気工業（OKI） ／ 売上根拠：従業員174名の試験・評価専業会社として推計 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与 ／ 05_defense_electronicsのDy/Tbフラグは公開BOM未確認のため削除。"
+    "note": "統合処理：子会社置換 ／ 置換元：沖電気工業（OKI） ／ 売上根拠：従業員174名の試験・評価専業会社として推計"
   },
   {
     "id": "stage05-integrated-45",
@@ -3301,11 +3444,11 @@ const SEED = [
     "prod": "艦艇用ジャイロコンパス、航法支援装置、電磁ログ、対勢作図装置",
     "pos": "陸海空の防衛製品、特に自衛艦の航法・姿勢・速度計測に直接接続。",
     "def": "陸海空の防衛製品、特に自衛艦の航法・姿勢・速度計測に直接接続。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://www.ydktechs.co.jp/jp/corporation/index.html",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：人員・製品構成と親会社開示から推計 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
+    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：人員・製品構成と親会社開示から推計"
   },
   {
     "id": "stage05-integrated-46",
@@ -3326,11 +3469,11 @@ const SEED = [
     "prod": "水晶ジャイロ、加速度センサー、慣性計測ユニット（IMU）",
     "pos": "M-G370シリーズIMUがISS『きぼう』Int-Ball2に採用。",
     "def": "M-G370シリーズIMUがISS『きぼう』Int-Ball2に採用。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://corporate.epson/ja/news/2024/240311.html",
-    "note": "統合処理：事業部置換 ／ 置換元：セイコーエプソン ／ 売上根拠：IMU・センシング製品群と対象市場規模から推計 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
+    "note": "統合処理：事業部置換 ／ 置換元：セイコーエプソン ／ 売上根拠：IMU・センシング製品群と対象市場規模から推計"
   },
   {
     "id": "stage05-integrated-47",
@@ -3351,11 +3494,11 @@ const SEED = [
     "prod": "水晶デバイス、ジャイロセンサー振動片",
     "pos": "親会社IMUは宇宙採用実績あり。完成品・保証は親会社名義。",
     "def": "親会社IMUは宇宙採用実績あり。完成品・保証は親会社名義。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://corporate.epson/ja/about/network/domestic/miyazakiepson/company/history.html",
-    "note": "統合処理：子会社追加（監視） ／ 置換元：セイコーエプソン ／ 売上根拠：水晶デバイス製造拠点の人員・設備規模から推計 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
+    "note": "統合処理：子会社追加（監視） ／ 置換元：セイコーエプソン ／ 売上根拠：水晶デバイス製造拠点の人員・設備規模から推計"
   },
   {
     "id": "stage05-integrated-48",
@@ -3378,11 +3521,11 @@ const SEED = [
     "prod": "船舶レーダー、ECDIS、GNSS、デジタルマップ、水中音響機器 ／ 船舶レーダー、水中音響、GNSS、通信・航海統合装置",
     "pos": "防衛省向け水中音響機器・GNSS関連機器・デジタルマップ装置を明示。商船・漁船向けと技術基盤を共有。 ／ 防衛省向け水中音響機器・GNSS関連機器を明示。商船・漁船向けレーダーとのデュアルユース性が高い。",
     "def": "防衛省向け水中音響機器・GNSS関連機器・デジタルマップ装置を明示。商船・漁船向けと技術基盤を共有。 ／ 防衛省向け水中音響機器・GNSS関連機器を明示。商船・漁船向けレーダーとのデュアルユース性が高い。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://www.furuno.co.jp/corporate/business/marine.html ／ https://www.furuno.co.jp/ir/library/bs.html",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：通期決算規模を丸めたレンジ ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
+    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：通期決算規模を丸めたレンジ"
   },
   {
     "id": "stage05-integrated-49",
@@ -3405,11 +3548,11 @@ const SEED = [
     "prod": "MEMSジャイロ、慣性センサ、姿勢センサユニット、Northfinder ／ 航空機脚システム、油圧・熱交換器、電動油圧アクチュエーション",
     "pos": "航空宇宙・船舶向け慣性センシングと、防衛省保有機の約8割に搭載される脚システムを同社内に保有。 ／ 防衛・民間航空機の降着装置、熱管理、電動化に直接接続。",
     "def": "航空宇宙・船舶向け慣性センシングと、防衛省保有機の約8割に搭載される脚システムを同社内に保有。 ／ 防衛・民間航空機の降着装置、熱管理、電動化に直接接続。",
-    "chn": "所属するStage 05サブカテゴリーの希土類フラグを継承。企業固有の希土類BOM・中国依存は未確認。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "A",
     "exc": 0,
     "src": "https://www.spp.co.jp/business/sensor/ ／ https://www.spp.co.jp/company/profile/",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：非上場化前の連結売上規模と現事業構成から推計 ／ 希土類フラグはStage 05所属サブカテゴリーから自動付与"
+    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：非上場化前の連結売上規模と現事業構成から推計"
   },
   {
     "id": "company-115",
@@ -3662,6 +3805,3715 @@ const SEED = [
     "formalSource": "SOFC/SOEC追加DD：正式採用",
     "src": "https://www.niterragroup.com/news/upload/f679bfe62f0ddc701713cdacb7375518.pdf ／ https://www.niterragroup.com/english/corporate/networks/ ／ https://www.niterragroup.com/english/business/innovation/sofc/ ／ https://jp.toto.com/company/press/company/management/2019_12_03_009224/",
     "note": "工程5『SOFC／SOEC』へ正式採用し、重要として表示。"
+  },
+  {
+    "id": "atla-2010001098064",
+    "name": "株式会社国際電気",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_laser",
+      "05_guid",
+      "05_rf_sensor",
+      "05_defense_electronics"
+    ],
+    "tags": [
+      "Y",
+      "DyTb",
+      "Sm",
+      "Sc"
+    ],
+    "own": "非上場（旧・日立国際電気は2018年3月に上場廃止）。日清紡ホールディングスグループが80%（HVJホールディングス経由）、日立製作所が20%を保有。日清紡HDは東証プライム・3105、日立製作所は東証プライム・6501。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "2010001098064",
+      "sourceName": "株式会社国際電気",
+      "row": 8,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A8:AH8",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_laser",
+          "products": [
+            "えん体用レーザ受信装置III型",
+            "対戦車/対空火器用レーザ送信装置"
+          ]
+        },
+        {
+          "id": "05_guid",
+          "products": [
+            "航法援助装置 JMRN-A3-C"
+          ]
+        },
+        {
+          "id": "05_rf_sensor",
+          "products": [
+            "レーダ試験器ラインテスタYPM-25"
+          ]
+        },
+        {
+          "id": "05_defense_electronics",
+          "products": [
+            "洋上無線ルータORQ-2B-2-Y",
+            "対空無線機 GMU-4(100W)"
+          ]
+        }
+      ],
+      "rareEarthFlags": "Y, Dy, Tb, Sm, Sc",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "783億2,000万円（2025年12月期、連結）",
+    "prod": "えん体用レーザ受信装置III型 ／ 対戦車/対空火器用レーザ送信装置 ／ 航法援助装置 JMRN-A3-C ／ レーダ試験器ラインテスタYPM-25 ／ 洋上無線ルータORQ-2B-2-Y ／ 対空無線機 GMU-4(100W)",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：えん体用レーザ受信装置III型；対戦車/対空火器用レーザ送信装置；航法援助装置 JMRN-A3-C；レーダ試験器ラインテスタYPM-25；洋上無線ルータORQ-2B-2-Y；対空無線機 GMU-4(100W)",
+    "bom": "調達品目「対空無線機 GMU-4(100W)；無線機 J/GRC-303A；HF無線機 HRC-122B」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A8:AH8 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2010001098064 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.kokusaidenki.co.jp/corporate/corporate.html ／ https://www.kokusaidenki.co.jp/corporate/history.html ／ https://www2.jpx.co.jp/disc/31050/140120230531589487.pdf",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Dy, Tb, Sm, Sc。中（一般論）",
+    "financial": {
+      "fiscalYear": "2025年12月期",
+      "revenueValueJpy": 78320000000,
+      "scope": "連結",
+      "confidence": "A",
+      "evidenceNote": "公式会社概要が2025年12月期の連結売上78,320百万円を掲載。公式沿革と日清紡HDの開示で、日清紡グループ80%、日立20%の資本関係および上場廃止を確認。",
+      "sourceUrls": [
+        "https://www.kokusaidenki.co.jp/corporate/corporate.html",
+        "https://www.kokusaidenki.co.jp/corporate/history.html",
+        "https://www2.jpx.co.jp/disc/31050/140120230531589487.pdf"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-2011101014084",
+    "name": "東芝インフラシステムズ株式会社",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_guid",
+      "05_sat",
+      "05_rf_sensor",
+      "05_defense_electronics",
+      "05_military_radar"
+    ],
+    "tags": [
+      "DyTb",
+      "Sm",
+      "Sc"
+    ],
+    "own": "非上場。株式会社東芝100%子会社だったが、2025年4月1日に東芝を存続会社とする吸収合併で消滅。東芝は2023年12月に上場廃止し、現在は非上場。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "2011101014084",
+      "sourceName": "東芝インフラシステムズ株式会社",
+      "row": 14,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A14:AH14",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_guid",
+          "products": [
+            "協調型誘導システムの研究試作"
+          ]
+        },
+        {
+          "id": "05_sat",
+          "products": [
+            "衛星通信干渉源標定装置",
+            "衛星通信干渉源標定装置(その2)"
+          ]
+        },
+        {
+          "id": "05_rf_sensor",
+          "products": [
+            "UAV捜索レーダ(検証用)"
+          ]
+        },
+        {
+          "id": "05_defense_electronics",
+          "products": [
+            "衛星通信干渉源標定装置",
+            "戦術情報処理表示装置 HYQ-2B"
+          ]
+        },
+        {
+          "id": "05_military_radar",
+          "products": [
+            "UAV捜索レーダ(検証用)",
+            "捜索用レーダ HPS-106",
+            "捜索用レーダ HPS-106B",
+            "捜索用レーダ(HPS-106B・P-1用)",
+            "捜索用レーダ(HPS-106B・P-1用)(初度費)",
+            "多目的監視レーダ(試験用)(その1)",
+            "計測用レーダ",
+            "多目的監視レーダ(試験用)(その2)",
+            "警戒管制レーダー用味方識別装置J/UPX-111()",
+            "捜索用レーダ(HPS-106B・P-1(BL2)用)(初度費)",
+            "捜索用レーダ(HPS-106B・P-1(BL2)用)",
+            "固定式警戒管制レーダー装置J/FPS-4()",
+            "固定式警戒管制レーダー装置J/FPS-4()(初度費)",
+            "捜索用レーダ HPS-106B・電子作戦機(試作機)用",
+            "捜索用レーダHPS-106B"
+          ],
+          "sourceSheet": "統合契約時系列"
+        }
+      ],
+      "rareEarthFlags": "Dy, Tb, Sm, Sc",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "3,832億円（2023年度、単体。消滅前に確認できる年間売上高）",
+    "prod": "協調型誘導システムの研究試作 ／ 衛星通信干渉源標定装置 ／ 衛星通信干渉源標定装置(その2) ／ UAV捜索レーダ(検証用) ／ 戦術情報処理表示装置 HYQ-2B ／ 捜索用レーダ HPS-106 ／ 捜索用レーダ HPS-106B ／ 捜索用レーダ(HPS-106B・P-1用) ／ 捜索用レーダ(HPS-106B・P-1用)(初度費) ／ 多目的監視レーダ(試験用)(その1) ／ 計測用レーダ ／ 多目的監視レーダ(試験用)(その2) ／ 警戒管制レーダー用味方識別装置J/UPX-111() ／ 捜索用レーダ(HPS-106B・P-1(BL2)用)(初度費) ／ 捜索用レーダ(HPS-106B・P-1(BL2)用) ／ 固定式警戒管制レーダー装置J/FPS-4() ／ 固定式警戒管制レーダー装置J/FPS-4()(初度費) ／ 捜索用レーダ HPS-106B・電子作戦機(試作機)用 ／ 捜索用レーダHPS-106B",
+    "def": "防衛装備庁納入品（FY2023・FY2024）：協調型誘導システムの研究試作；衛星通信干渉源標定装置；衛星通信干渉源標定装置(その2)；UAV捜索レーダ(検証用)；戦術情報処理表示装置 HYQ-2B；捜索用レーダ HPS-106；捜索用レーダ HPS-106B；捜索用レーダ(HPS-106B・P-1用)；捜索用レーダ(HPS-106B・P-1用)(初度費)；多目的監視レーダ(試験用)(その1)；計測用レーダ；多目的監視レーダ(試験用)(その2)；警戒管制レーダー用味方識別装置J/UPX-111()；捜索用レーダ(HPS-106B・P-1(BL2)用)(初度費)；捜索用レーダ(HPS-106B・P-1(BL2)用)；固定式警戒管制レーダー装置J/FPS-4()；固定式警戒管制レーダー装置J/FPS-4()(初度費)；捜索用レーダ HPS-106B・電子作戦機(試作機)用；捜索用レーダHPS-106B",
+    "bom": "調達品目「協調型誘導システムの研究試作；91式携帯地対空誘導弾(B)訓練器材；93式近距離地対空誘導弾」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A14:AH14 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2011101014084 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.global.toshiba/jp/news/corporate/2024/11/news-20241114-01.html ／ https://www.global.toshiba/jp/ir/corporate/stock/epub/infrastructure.html",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Dy, Tb, Sm, Sc。中（一般論）",
+    "financial": {
+      "fiscalYear": "2023年度",
+      "revenueValueJpy": 383200000000,
+      "scope": "単体",
+      "confidence": "A",
+      "evidenceNote": "東芝の統合発表に、TISSの株主が東芝100%、年間売上高が2023年度3,832億円と明記。東芝の電子公告ページで2025年4月1日の吸収合併消滅を確認。",
+      "sourceUrls": [
+        "https://www.global.toshiba/jp/news/corporate/2024/11/news-20241114-01.html",
+        "https://www.global.toshiba/jp/ir/corporate/stock/epub/infrastructure.html"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-9010501010505",
+    "name": "日本電計株式会社",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_rf_sensor"
+    ],
+    "tags": [
+      "Y",
+      "Sc"
+    ],
+    "own": "上場。東京証券取引所スタンダード市場、証券コード9908。特定の親会社なし。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "9010501010505",
+      "sourceName": "日本電計株式会社",
+      "row": 17,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A17:AH17",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_rf_sensor",
+          "products": [
+            "マイクロ波カウンタ",
+            "高周波信号受信器(可搬IV型)"
+          ]
+        }
+      ],
+      "rareEarthFlags": "Y, Sc",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "1,331億4,854万7千円（2026年3月期、連結）",
+    "prod": "マイクロ波カウンタ ／ 高周波信号受信器(可搬IV型)",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：マイクロ波カウンタ；高周波信号受信器(可搬IV型)",
+    "bom": "調達品目「無線機用試験器 N-TS-503D；マイクロ波カウンタ；高周波信号受信器(可搬IV型)」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A17:AH17 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9010501010505 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.n-denkei.co.jp/ir/individual/result/ ／ https://www.n-denkei.co.jp/ir/ir-faq/ ／ https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20260513/20260512525815.pdf",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
+    "financial": {
+      "fiscalYear": "2026年3月期",
+      "revenueValueJpy": 133148547000,
+      "scope": "連結",
+      "confidence": "A",
+      "evidenceNote": "公式業績ページに第81期の連結売上133,148百万円、決算短信に133,148,547千円を掲載。公式FAQが東証スタンダード・9908を明記。",
+      "sourceUrls": [
+        "https://www.n-denkei.co.jp/ir/individual/result/",
+        "https://www.n-denkei.co.jp/ir/ir-faq/",
+        "https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20260513/20260512525815.pdf"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-7010401006126",
+    "name": "沖電気工業株式会社",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_rf_sensor",
+      "05_airframe_support"
+    ],
+    "tags": [
+      "DyTb"
+    ],
+    "own": "上場。東京証券取引所プライム市場、証券コード6703。特定の親会社なし。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "7010401006126",
+      "sourceName": "沖電気工業株式会社",
+      "row": 18,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A18:AH18",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025・FY2026",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_rf_sensor",
+          "products": [
+            "艦艇水中音響計測装置LQM-1A"
+          ]
+        },
+        {
+          "id": "05_airframe_support",
+          "products": [
+            "F-15航空機用維持部品(国産・その15)"
+          ]
+        }
+      ],
+      "rareEarthFlags": "Dy, Tb",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "4,216億3,500万円（2026年3月期、連結）",
+    "prod": "艦艇水中音響計測装置LQM-1A ／ F-15航空機用維持部品(国産・その15)",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025・FY2026）：艦艇水中音響計測装置LQM-1A；F-15航空機用維持部品(国産・その15)",
+    "bom": "調達品目「艦艇水中音響計測装置LQM-1A」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A18:AH18 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7010401006126 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.oki.com/global/ja/ir/finance/summary/ ／ https://www.oki.com/global/ja/ir/assets_c/uploads/260513_all.pdf ／ https://www.oki.com/global/ir/corporate/glance/",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Dy, Tb。中（一般論）",
+    "financial": {
+      "fiscalYear": "2026年3月期",
+      "revenueValueJpy": 421635000000,
+      "scope": "連結",
+      "confidence": "A",
+      "evidenceNote": "公式決算サマリーおよび決算短信で2026年3月期連結売上421,635百万円を確認。公式企業概要が東証プライム・6703を明記。",
+      "sourceUrls": [
+        "https://www.oki.com/global/ja/ir/finance/summary/",
+        "https://www.oki.com/global/ja/ir/assets_c/uploads/260513_all.pdf",
+        "https://www.oki.com/global/ir/corporate/glance/"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-9010801024873",
+    "name": "株式会社光電製作所",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_rf_sensor",
+      "05_military_radar"
+    ],
+    "tags": [
+      "Sc"
+    ],
+    "own": "非上場。株式会社KODENホールディングス傘下（同社が株主）。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "9010801024873",
+      "sourceName": "株式会社光電製作所",
+      "row": 35,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A35:AH35",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_rf_sensor",
+          "products": [
+            "海上監視レーダ装置 JTPS-P4"
+          ]
+        },
+        {
+          "id": "05_military_radar",
+          "products": [
+            "海上監視レーダ装置 JTPS-P4"
+          ],
+          "sourceSheet": "統合契約時系列"
+        }
+      ],
+      "rareEarthFlags": "Sc",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "56億1,687万円（2026年3月期、単体）",
+    "prod": "海上監視レーダ装置 JTPS-P4",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：海上監視レーダ装置 JTPS-P4",
+    "bom": "調達品目「海上監視レーダ装置 JTPS-P4」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A35:AH35 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9010801024873 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.koden-electronics.co.jp/corporate/about/",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Sc。中（一般論）",
+    "financial": {
+      "fiscalYear": "2026年3月期",
+      "revenueValueJpy": 5616870000,
+      "scope": "単体",
+      "confidence": "A",
+      "evidenceNote": "公式会社概要に株主KODENホールディングス、売上高56億1,687万円（2026年3月期）を掲載。上場市場・証券コードの記載はなく非上場法人。",
+      "sourceUrls": [
+        "https://www.koden-electronics.co.jp/corporate/about/"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-1020001006043",
+    "name": "海洋電子工業株式会社",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_defense_electronics"
+    ],
+    "tags": [
+      "Y",
+      "Sc"
+    ],
+    "own": "非上場（公式会社概要が株式非公開と明記）。親会社は公開情報で確認できず。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "1020001006043",
+      "sourceName": "海洋電子工業株式会社",
+      "row": 42,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A42:AH42",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_defense_electronics",
+          "products": [
+            "通信架装置 OTQ-4-A",
+            "通信架装置 OTQ-5-A"
+          ]
+        }
+      ],
+      "rareEarthFlags": "Y, Sc",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "173億円（2025年3月期、単体。公開求人の決算情報）",
+    "prod": "通信架装置 OTQ-4-A ／ 通信架装置 OTQ-5-A",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：通信架装置 OTQ-4-A；通信架装置 OTQ-5-A",
+    "bom": "調達品目「航空支援用無線機；無線機 RRC-39；無線機RRC-39B」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A42:AH42 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1020001006043 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.kaiyo-denshi.co.jp/about/ ／ https://www.r-agent.com/viewjob/jk48eb5fa65c1c80c5/",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
+    "financial": {
+      "fiscalYear": "2025年3月期",
+      "revenueValueJpy": 17300000000,
+      "scope": "単体",
+      "confidence": "B",
+      "evidenceNote": "公式会社概要は資本金6,132万円・株式非公開・社員470名を明記するが売上非掲載。リクルートエージェントの公開求人に決算情報として2025/03単体売上17,300百万円を掲載。一次資料で売上を直接確認できないため確度B。",
+      "sourceUrls": [
+        "https://www.kaiyo-denshi.co.jp/about/",
+        "https://www.r-agent.com/viewjob/jk48eb5fa65c1c80c5/"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-7010701017021",
+    "name": "三菱電機ディフェンス&スペーステクノロジーズ株式会社",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_rf_sensor",
+      "05_defense_electronics",
+      "05_military_radar"
+    ],
+    "tags": [
+      "Y",
+      "Sc"
+    ],
+    "own": "非上場。三菱電機株式会社100%出資子会社。親会社は東京証券取引所プライム市場、証券コード6503。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "7010701017021",
+      "sourceName": "三菱電機ディフェンス&スペーステクノロジーズ株式会社",
+      "row": 48,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A48:AH48",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_rf_sensor",
+          "products": [
+            "局地気象レーダ装置 GFMQ-1-B"
+          ]
+        },
+        {
+          "id": "05_defense_electronics",
+          "products": [
+            "救命無線機(RRC-40・P-1用)",
+            "救命無線機RRC-22D"
+          ]
+        },
+        {
+          "id": "05_military_radar",
+          "products": [
+            "局地気象レーダ装置 GFMQ-1-B"
+          ],
+          "sourceSheet": "統合契約時系列"
+        }
+      ],
+      "rareEarthFlags": "Y, Sc",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "411億円（2026年3月期、単体）",
+    "prod": "局地気象レーダ装置 GFMQ-1-B ／ 救命無線機(RRC-40・P-1用) ／ 救命無線機RRC-22D",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：局地気象レーダ装置 GFMQ-1-B；救命無線機(RRC-40・P-1用)；救命無線機RRC-22D",
+    "bom": "調達品目「救命無線機(RRC-40・P-1用)；救命無線機RRC-22D；救命無線機RRC-22D(初度費)」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A48:AH48 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7010701017021 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.medstec.co.jp/company/profile.html ／ https://www.mitsubishielectric.co.jp/ir/data/business_report/pdf/153/5.pdf",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
+    "financial": {
+      "fiscalYear": "2026年3月期",
+      "revenueValueJpy": 41100000000,
+      "scope": "単体",
+      "confidence": "A",
+      "evidenceNote": "公式会社概要に三菱電機100%出資、2026年3月期売上411億円を掲載。三菱電機の事業報告でも議決権100%の子会社として確認可能。",
+      "sourceUrls": [
+        "https://www.medstec.co.jp/company/profile.html",
+        "https://www.mitsubishielectric.co.jp/ir/data/business_report/pdf/153/5.pdf"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-1010401098920",
+    "name": "コーンズテクノロジー株式会社",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_rf_sensor",
+      "05_defense_electronics",
+      "05_unmanned"
+    ],
+    "tags": [
+      "Y",
+      "Sc"
+    ],
+    "own": "非上場。コーンズ・アンド・カンパニー・リミテッドのグループ会社（親会社の持株比率は公式サイトで非開示）。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "1010401098920",
+      "sourceName": "コーンズテクノロジー株式会社",
+      "row": 50,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A50:AH50",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_rf_sensor",
+          "products": [
+            "高周波電力増幅器"
+          ]
+        },
+        {
+          "id": "05_defense_electronics",
+          "products": [
+            "CH-47J用救命無線機"
+          ]
+        },
+        {
+          "id": "05_unmanned",
+          "products": [
+            "爆発物対処用UGV(改)"
+          ],
+          "sourceSheet": "統合契約時系列"
+        }
+      ],
+      "rareEarthFlags": "Y, Sc",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "305億7,900万円（2026年3月期、単体・決算公告由来）",
+    "prod": "高周波電力増幅器 ／ CH-47J用救命無線機 ／ 爆発物対処用UGV(改)",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：高周波電力増幅器；CH-47J用救命無線機；爆発物対処用UGV(改)",
+    "bom": "調達品目「CH-47J用救命無線機；高周波電力増幅器」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A50:AH50 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1010401098920 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://cornestech.co.jp/company ／ https://www.cornes.co.jp/company/group/ ／ https://catr.jp/companies/efe05/19692",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
+    "financial": {
+      "fiscalYear": "2026年3月期",
+      "revenueValueJpy": 30579000000,
+      "scope": "単体",
+      "confidence": "B",
+      "evidenceNote": "両社公式サイトでコーンズグループ会社であることを確認。売上は官報決算を収録する公開データベースの2026年3月期305億7,900万円。公式会社概要に売上・持株比率の記載がないため確度B。",
+      "sourceUrls": [
+        "https://cornestech.co.jp/company",
+        "https://www.cornes.co.jp/company/group/",
+        "https://catr.jp/companies/efe05/19692"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-4010701009640",
+    "name": "株式会社明電舎",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_laser",
+      "05_sat"
+    ],
+    "tags": [
+      "Y",
+      "DyTb",
+      "Sm"
+    ],
+    "own": "上場。東京証券取引所プライム市場・名古屋証券取引所プレミア市場、証券コード6508。特定の親会社なし。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "4010701009640",
+      "sourceName": "株式会社明電舎",
+      "row": 53,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A53:AH53",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_laser",
+          "products": [
+            "宇宙状況把握レーザー測距装置用電源装置"
+          ]
+        },
+        {
+          "id": "05_sat",
+          "products": [
+            "宇宙状況把握レーザー測距装置用電源装置"
+          ]
+        }
+      ],
+      "rareEarthFlags": "Y, Dy, Tb, Sm",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "3,261億9,400万円（2026年3月期、連結）",
+    "prod": "宇宙状況把握レーザー測距装置用電源装置",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：宇宙状況把握レーザー測距装置用電源装置",
+    "bom": "調達品目「宇宙状況把握レーザー測距装置用電源装置；発動発電機75kW(監視装置用電源装置)；発動発電機75kW(監視装置用電源装置)(初度費)」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A53:AH53 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4010701009640 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.meidensha.co.jp/corporate/ ／ https://www2.jpx.co.jp/disc/65080/140120260513530264.pdf ／ https://www.meidensha.co.jp/ir/ir_12/",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Dy, Tb, Sm。中（一般論）",
+    "financial": {
+      "fiscalYear": "2026年3月期",
+      "revenueValueJpy": 326194000000,
+      "scope": "連結",
+      "confidence": "A",
+      "evidenceNote": "公式企業情報と決算資料で2025年度（2026年3月期）連結売上326,194百万円を確認。公式FAQが証券コード6508と東京・名古屋上場を明記。",
+      "sourceUrls": [
+        "https://www.meidensha.co.jp/corporate/",
+        "https://www2.jpx.co.jp/disc/65080/140120260513530264.pdf",
+        "https://www.meidensha.co.jp/ir/ir_12/"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-1010001110829",
+    "name": "リコージャパン株式会社",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_defense_electronics"
+    ],
+    "tags": [
+      "DyTb",
+      "Sm"
+    ],
+    "own": "非上場。株式会社リコーの完全子会社。親会社リコーは東京証券取引所プライム市場、証券コード7752。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "1010001110829",
+      "sourceName": "リコージャパン株式会社",
+      "row": 54,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A54:AH54",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025・FY2026",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_defense_electronics",
+          "products": [
+            "業務管理情報処理装置(日米情報共有端末・T-4用地上再生端末)"
+          ]
+        }
+      ],
+      "rareEarthFlags": "Dy, Tb, Sm",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "8,032億4,600万円（2026年3月期、単体）",
+    "prod": "業務管理情報処理装置(日米情報共有端末・T-4用地上再生端末)",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025・FY2026）：業務管理情報処理装置(日米情報共有端末・T-4用地上再生端末)",
+    "bom": "調達品目「磁石式電話機GTP-602」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A54:AH54 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1010001110829 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://jp.ricoh.com/companies/ricoh-japan/our-workstyle ／ https://jp.ricoh.com/companies/ricoh-japan/outline ／ https://www2.jpx.co.jp/disc/42640/140120260309578318.pdf",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Dy, Tb, Sm。中（一般論）",
+    "financial": {
+      "fiscalYear": "2026年3月期",
+      "revenueValueJpy": 803246000000,
+      "scope": "単体",
+      "confidence": "A",
+      "evidenceNote": "リコージャパン公式ページに2026年3月期売上803,246百万円を掲載。上場会社の第三者割当開示がリコージャパンの完全親会社を株式会社リコーと明記。",
+      "sourceUrls": [
+        "https://jp.ricoh.com/companies/ricoh-japan/our-workstyle",
+        "https://jp.ricoh.com/companies/ricoh-japan/outline",
+        "https://www2.jpx.co.jp/disc/42640/140120260309578318.pdf"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-5011101016202",
+    "name": "日本エヤークラフトサプライ株式会社",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_unmanned"
+    ],
+    "tags": [
+      "DyTb",
+      "Sm"
+    ],
+    "own": "非上場。親会社・主要株主は公開会社概要で確認できず（独立系とみられるが断定しない）。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "5011101016202",
+      "sourceName": "日本エヤークラフトサプライ株式会社",
+      "row": 55,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A55:AH55",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_unmanned",
+          "products": [
+            "小型攻撃用UAVIII型(固定翼型)概念実証業務委託",
+            "攻撃用UAV概念実証業務委託(その1)"
+          ],
+          "sourceSheet": "統合契約時系列"
+        }
+      ],
+      "rareEarthFlags": "Dy, Tb, Sm",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "90億4,100万円（2025年度、単体）",
+    "prod": "小型攻撃用UAVIII型(固定翼型)概念実証業務委託 ／ 攻撃用UAV概念実証業務委託(その1)",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：小型攻撃用UAVIII型(固定翼型)概念実証業務委託；攻撃用UAV概念実証業務委託(その1)",
+    "bom": "調達品目「多重電磁波偽装網セット(誘導武器器材用)」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A55:AH55 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5011101016202 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.nasco.co.jp/company/j_profile",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Dy, Tb, Sm。中（一般論）",
+    "financial": {
+      "fiscalYear": "2025年度",
+      "revenueValueJpy": 9041000000,
+      "scope": "単体",
+      "confidence": "A",
+      "evidenceNote": "公式会社概要に資本金5,000万円、従業員86名、2025年度売上90億4,100万円を掲載。上場市場・証券コード・親会社の記載はない。",
+      "sourceUrls": [
+        "https://www.nasco.co.jp/company/j_profile"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-7012401000240",
+    "name": "NECネットワーク・センサ株式会社",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_guid",
+      "05_sat",
+      "05_defense_electronics"
+    ],
+    "tags": [
+      "Y",
+      "Sc"
+    ],
+    "own": "非上場。日本電気株式会社（NEC）100%出資子会社。親会社NECは東京証券取引所プライム市場、証券コード6701。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "7012401000240",
+      "sourceName": "NECネットワーク・センサ株式会社",
+      "row": 56,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A56:AH56",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025・FY2026",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_guid",
+          "products": [
+            "符号変換器 GPS-C18",
+            "符号変換器 GPS-C22"
+          ]
+        },
+        {
+          "id": "05_sat",
+          "products": [
+            "航空機搭載衛星通信用符号変換装置 J/AYQ-3( )",
+            "航空機搭載衛星通信用符号変換装置 J/AYQ-3( ) 構成品"
+          ]
+        },
+        {
+          "id": "05_defense_electronics",
+          "products": [
+            "電子管 SPA-V-44986",
+            "電子管 LD4576"
+          ]
+        }
+      ],
+      "rareEarthFlags": "Y, Sc",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "543億円（2025年度、単体）",
+    "prod": "符号変換器 GPS-C18 ／ 符号変換器 GPS-C22 ／ 航空機搭載衛星通信用符号変換装置 J/AYQ-3( ) ／ 航空機搭載衛星通信用符号変換装置 J/AYQ-3( ) 構成品 ／ 電子管 SPA-V-44986 ／ 電子管 LD4576",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025・FY2026）：符号変換器 GPS-C18；符号変換器 GPS-C22；航空機搭載衛星通信用符号変換装置 J/AYQ-3( )；航空機搭載衛星通信用符号変換装置 J/AYQ-3( ) 構成品；電子管 SPA-V-44986；電子管 LD4576",
+    "bom": "調達品目「電子管 SPA-V-44986；電子管 LD4576；電子管LD4516」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A56:AH56 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7012401000240 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.necnets.co.jp/company/profile.html ／ https://catr.jp/companies/f3fab/12763",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
+    "financial": {
+      "fiscalYear": "2025年度",
+      "revenueValueJpy": 54300000000,
+      "scope": "単体",
+      "confidence": "A",
+      "evidenceNote": "公式プロフィールにNEC全額出資、2025年度売上543億円を掲載。官報決算データベースの2026年3月期542億6,000万円とも整合。",
+      "sourceUrls": [
+        "https://www.necnets.co.jp/company/profile.html",
+        "https://catr.jp/companies/f3fab/12763"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-2020001020489",
+    "name": "ジェイ・アール・シー特機株式会社",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_rf_sensor"
+    ],
+    "tags": [
+      "DyTb"
+    ],
+    "own": "非上場。日本無線株式会社100%子会社で、日清紡ホールディングスグループ。最終親会社の日清紡HDは東京証券取引所プライム市場、証券コード3105。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "2020001020489",
+      "sourceName": "ジェイ・アール・シー特機株式会社",
+      "row": 58,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A58:AH58",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_rf_sensor",
+          "products": [
+            "艦艇水中音響計測装置LQM-1A用音響インテンシティ計測器材"
+          ]
+        }
+      ],
+      "rareEarthFlags": "Dy, Tb",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "79億5,500万円（2025年度、単体）",
+    "prod": "艦艇水中音響計測装置LQM-1A用音響インテンシティ計測器材",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：艦艇水中音響計測装置LQM-1A用音響インテンシティ計測器材",
+    "bom": "調達品目「艦艇水中音響計測装置LQM-1A用音響インテンシティ計測器材」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A58:AH58 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2020001020489 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.jrctokki.co.jp/company/ ／ https://www.jrc.co.jp/company/group ／ https://job.mynavi.jp/28/pc/search/corp89366/outline.html",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Dy, Tb。中（一般論）",
+    "financial": {
+      "fiscalYear": "2025年度",
+      "revenueValueJpy": 7955000000,
+      "scope": "単体",
+      "confidence": "A",
+      "evidenceNote": "公式会社概要に2025年度売上7,955百万円を掲載。日本無線公式が主要子会社と表示し、採用情報が日本無線100%子会社であることを明記。",
+      "sourceUrls": [
+        "https://www.jrctokki.co.jp/company/",
+        "https://www.jrc.co.jp/company/group",
+        "https://job.mynavi.jp/28/pc/search/corp89366/outline.html"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-1020001081053",
+    "name": "東芝電波プロダクツ株式会社",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_laser",
+      "05_defense_electronics"
+    ],
+    "tags": [
+      "Y",
+      "DyTb",
+      "Sm",
+      "Sc"
+    ],
+    "own": "非上場。株式会社東芝100%出資子会社。親会社東芝は2023年12月に上場廃止し、現在は非上場。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "1020001081053",
+      "sourceName": "東芝電波プロダクツ株式会社",
+      "row": 59,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A59:AH59",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_laser",
+          "products": [
+            "人員用レーザ受信装置",
+            "小火器用レーザ送信装置"
+          ]
+        },
+        {
+          "id": "05_defense_electronics",
+          "products": [
+            "電子管 E10034359P1",
+            "対空無線機 GMV-23"
+          ]
+        }
+      ],
+      "rareEarthFlags": "Y, Dy, Tb, Sm, Sc",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "242億円（2025年度、単体）",
+    "prod": "人員用レーザ受信装置 ／ 小火器用レーザ送信装置 ／ 電子管 E10034359P1 ／ 対空無線機 GMV-23",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：人員用レーザ受信装置；小火器用レーザ送信装置；電子管 E10034359P1；対空無線機 GMV-23",
+    "bom": "調達品目「電子管 E10034359P1；対空無線機 GMV-23；対空無線機 GMV-22」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A59:AH59 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1020001081053 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.toshiba.co.jp/tept/company/profile.htm ／ https://www.toshiba.co.jp/tept/company/ceo.htm",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Dy, Tb, Sm, Sc。中（一般論）",
+    "financial": {
+      "fiscalYear": "2025年度",
+      "revenueValueJpy": 24200000000,
+      "scope": "単体",
+      "confidence": "A",
+      "evidenceNote": "公式会社概要に東芝100%出資、2025年度売上242億円を掲載。社長挨拶も東芝を親会社と明記。",
+      "sourceUrls": [
+        "https://www.toshiba.co.jp/tept/company/profile.htm",
+        "https://www.toshiba.co.jp/tept/company/ceo.htm"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-4010001052390",
+    "name": "株式会社エアロパートナーズ",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_robot",
+      "05_unmanned"
+    ],
+    "tags": [
+      "Y"
+    ],
+    "own": "非上場。株式会社理経の連結子会社（議決権97.34%）。親会社理経は東京証券取引所スタンダード市場、証券コード8226。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "4010001052390",
+      "sourceName": "株式会社エアロパートナーズ",
+      "row": 61,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A61:AH61",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025・FY2026",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_robot",
+          "products": [
+            "レーザ計測ドローン",
+            "3次元情報収集ドローン"
+          ]
+        },
+        {
+          "id": "05_unmanned",
+          "products": [
+            "レーザ計測ドローン",
+            "3次元情報収集ドローン"
+          ],
+          "sourceSheet": "統合契約時系列"
+        }
+      ],
+      "rareEarthFlags": "Y",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "120億7,774万9千円（2025年3月期、単体）",
+    "prod": "レーザ計測ドローン ／ 3次元情報収集ドローン",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025・FY2026）：レーザ計測ドローン；3次元情報収集ドローン",
+    "bom": "調達品目「レーザ計測ドローン」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A61:AH61 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4010001052390 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.rikei.co.jp/wp/wp-content/uploads/for_investor/68syousyutuuti20250627.pdf ／ https://edinetdb.jp/company/E02699/text?fy=2025 ／ https://www.aeropartners.co.jp/company_history",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y。中（一般論）",
+    "financial": {
+      "fiscalYear": "2025年3月期",
+      "revenueValueJpy": 12077749000,
+      "scope": "単体",
+      "confidence": "A",
+      "evidenceNote": "理経のFY2025有価証券報告書の重要子会社情報に、議決権97.34%および当該法人の売上12,077,749千円を掲載。公式沿革でも2017年に理経の連結子会社となったことを確認。",
+      "sourceUrls": [
+        "https://www.rikei.co.jp/wp/wp-content/uploads/for_investor/68syousyutuuti20250627.pdf",
+        "https://edinetdb.jp/company/E02699/text?fy=2025",
+        "https://www.aeropartners.co.jp/company_history"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-8010001057337",
+    "name": "丸文株式会社",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_rf_sensor",
+      "05_defense_electronics",
+      "05_military_radar"
+    ],
+    "tags": [
+      "Y",
+      "Sc"
+    ],
+    "own": "上場。東京証券取引所プライム市場、証券コード7537。特定の親会社なし。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "8010001057337",
+      "sourceName": "丸文株式会社",
+      "row": 64,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A64:AH64",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_rf_sensor",
+          "products": [
+            "電子管(捜索レーダ送受信機用)"
+          ]
+        },
+        {
+          "id": "05_defense_electronics",
+          "products": [
+            "電子管VDX-1372",
+            "電子管 VMX1198/L-4791"
+          ]
+        },
+        {
+          "id": "05_military_radar",
+          "products": [
+            "電子管(捜索レーダ送受信機用)",
+            "電子管 捜索レーダ送受信機用"
+          ],
+          "sourceSheet": "統合契約時系列"
+        }
+      ],
+      "rareEarthFlags": "Y, Sc",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "2,134億2,500万円（2026年3月期、連結）",
+    "prod": "電子管(捜索レーダ送受信機用) ／ 電子管VDX-1372 ／ 電子管 VMX1198/L-4791 ／ 電子管 捜索レーダ送受信機用",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：電子管(捜索レーダ送受信機用)；電子管VDX-1372；電子管 VMX1198/L-4791；電子管 捜索レーダ送受信機用",
+    "bom": "調達品目「電子管VDX-1372；電子管 VMX1198/L-4791；電子管DOD-042」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A64:AH64 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8010001057337 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.marubun.co.jp/corporate/profile/",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
+    "financial": {
+      "fiscalYear": "2026年3月期",
+      "revenueValueJpy": 213425000000,
+      "scope": "連結",
+      "confidence": "A",
+      "evidenceNote": "公式企業概要に東証プライム・7537、2026年3月期連結売上213,425百万円（単体158,556百万円）を掲載。",
+      "sourceUrls": [
+        "https://www.marubun.co.jp/corporate/profile/"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-3010001033004",
+    "name": "日本海洋株式会社",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_robot",
+      "05_defense_electronics",
+      "05_unmanned"
+    ],
+    "tags": [
+      "Y",
+      "DyTb",
+      "Sm",
+      "Sc"
+    ],
+    "own": "非上場。タキオニッシュホールディングス株式会社100%子会社。親会社も非上場。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "3010001033004",
+      "sourceName": "日本海洋株式会社",
+      "row": 65,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A65:AH65",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_robot",
+          "products": [
+            "リムペットマイン対処作業ロボット",
+            "機雷対処用水中無人機RXX-2"
+          ]
+        },
+        {
+          "id": "05_defense_electronics",
+          "products": [
+            "小型UGV(歩行型)用無線機(STREAMCASTER)"
+          ]
+        },
+        {
+          "id": "05_unmanned",
+          "products": [
+            "機雷対処用水中無人機RXX-2",
+            "小型UGV(歩行型)用無線機(STREAMCASTER)"
+          ],
+          "sourceSheet": "統合契約時系列"
+        }
+      ],
+      "rareEarthFlags": "Y, Dy, Tb, Sm, Sc",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "15億7,100万円（2023年3月期、単体。直近の公式サイト掲載値）",
+    "prod": "リムペットマイン対処作業ロボット ／ 機雷対処用水中無人機RXX-2 ／ 小型UGV(歩行型)用無線機(STREAMCASTER)",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：リムペットマイン対処作業ロボット；機雷対処用水中無人機RXX-2；小型UGV(歩行型)用無線機(STREAMCASTER)",
+    "bom": "調達品目「小型UGV(歩行型)用無線機(STREAMCASTER)；リムペットマイン対処作業ロボット；機雷対処用水中無人機RXX-2」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A65:AH65 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=3010001033004 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://nipponkaiyo.fastechs.jp/company/ ／ https://catr.jp/companies/903fe/21305",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Dy, Tb, Sm, Sc。中（一般論）",
+    "financial": {
+      "fiscalYear": "2023年3月期",
+      "revenueValueJpy": 1571000000,
+      "scope": "単体",
+      "confidence": "A",
+      "evidenceNote": "公式会社情報に2023年3月期売上1,571百万円、株主タキオニッシュホールディングス100%を掲載。2024～2026年の決算公告は売上高を開示していないため、公式サイトの直近確認値を採用。",
+      "sourceUrls": [
+        "https://nipponkaiyo.fastechs.jp/company/",
+        "https://catr.jp/companies/903fe/21305"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-4130001044153",
+    "name": "JMUディフェンスシステムズ株式会社",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_unmanned"
+    ],
+    "tags": [
+      "DyTb",
+      "Sm"
+    ],
+    "own": "非上場。ジャパン マリンユナイテッド株式会社100%出資子会社。JMU自体も非上場（主要株主は今治造船60%、JFEホールディングス20%、IHI20%）。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "4130001044153",
+      "sourceName": "JMUディフェンスシステムズ株式会社",
+      "row": 69,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A69:AH69",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_unmanned",
+          "products": [
+            "小型多用途USVII型概念実証業務委託"
+          ],
+          "sourceSheet": "統合契約時系列"
+        }
+      ],
+      "rareEarthFlags": "Dy, Tb, Sm",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "76億800万円（2025年3月期、単体）",
+    "prod": "小型多用途USVII型概念実証業務委託",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：小型多用途USVII型概念実証業務委託",
+    "bom": "調達品目「地対艦誘導弾用洋上標的装置」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A69:AH69 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4130001044153 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.jmuc.co.jp/jmuds/company/index.html ／ https://job.mynavi.jp/27/pc/search/corp108911/outline.html ／ https://catr.jp/companies/e0cab/6361",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Dy, Tb, Sm。中（一般論）",
+    "financial": {
+      "fiscalYear": "2025年3月期",
+      "revenueValueJpy": 7608000000,
+      "scope": "単体",
+      "confidence": "B",
+      "evidenceNote": "公式会社概要にJMU100%出資を明記。売上はマイナビ掲載の2025年3月期76億円およびYahoo!しごとカタログの76.08億円に基づく。官報決算の純利益・総資産とは整合するが公式サイトに売上がないため確度B。",
+      "sourceUrls": [
+        "https://www.jmuc.co.jp/jmuds/company/index.html",
+        "https://job.mynavi.jp/27/pc/search/corp108911/outline.html",
+        "https://catr.jp/companies/e0cab/6361"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-1120001019349",
+    "name": "アイコム株式会社",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_defense_electronics"
+    ],
+    "tags": [
+      "Y",
+      "Sc"
+    ],
+    "own": "上場。東京証券取引所プライム市場、証券コード6820。特定の親会社なし。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "1120001019349",
+      "sourceName": "アイコム株式会社",
+      "row": 70,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A70:AH70",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_defense_electronics",
+          "products": [
+            "無線機RRC-45",
+            "無線機 RRC―45"
+          ]
+        }
+      ],
+      "rareEarthFlags": "Y, Sc",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "369億5,900万円（2026年3月期、連結）",
+    "prod": "無線機RRC-45 ／ 無線機 RRC―45",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：無線機RRC-45；無線機 RRC―45",
+    "bom": "調達品目「無線機RRC-45；無線機 RRC―45；デジタルUHF無線機(携帯用)」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A70:AH70 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1120001019349 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www2.jpx.co.jp/disc/68200/140120260515536144.pdf ／ https://www.icom.co.jp/ir/paperwork/ ／ https://www.icom.co.jp/corporate/overview/",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
+    "financial": {
+      "fiscalYear": "2026年3月期",
+      "revenueValueJpy": 36959000000,
+      "scope": "連結",
+      "confidence": "A",
+      "evidenceNote": "2026年3月期決算短信の連結損益計算書に売上36,959百万円。公式株式事務ページが東証プライム・6820を明記。",
+      "sourceUrls": [
+        "https://www2.jpx.co.jp/disc/68200/140120260515536144.pdf",
+        "https://www.icom.co.jp/ir/paperwork/",
+        "https://www.icom.co.jp/corporate/overview/"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-3020001018037",
+    "name": "株式会社鶴見精機",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_rf_sensor"
+    ],
+    "tags": [
+      "Sc"
+    ],
+    "own": "非上場（証券コードなし）。親会社は公開情報から確認できず、独立系とみられる。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "3020001018037",
+      "sourceName": "株式会社鶴見精機",
+      "row": 77,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A77:AH77",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_rf_sensor",
+          "products": [
+            "マイクロ波式波高計改1"
+          ]
+        }
+      ],
+      "rareEarthFlags": "Sc",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "非公表／不明（公式会社概要に売上高の記載なし）",
+    "prod": "マイクロ波式波高計改1",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：マイクロ波式波高計改1",
+    "bom": "調達品目「マイクロ波式波高計改1」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A77:AH77 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=3020001018037 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://tsurumi-seiki.co.jp/company/",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Sc。中（一般論）",
+    "financial": {
+      "fiscalYear": null,
+      "revenueValueJpy": null,
+      "scope": "単体",
+      "confidence": "B",
+      "evidenceNote": "公式会社概要で法人名、資本金2,100万円、従業員数、事業内容を確認したが、株主・親会社・売上高は掲載されていない。公開情報だけでは売上規模を確定できないため推定しない。",
+      "sourceUrls": [
+        "https://tsurumi-seiki.co.jp/company/"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-8100001002473",
+    "name": "長野日本無線株式会社",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_defense_electronics"
+    ],
+    "tags": [
+      "Y",
+      "Sc"
+    ],
+    "own": "非上場（旧証券コード6878、2016年3月17日上場廃止）。日本無線株式会社の完全子会社。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "8100001002473",
+      "sourceName": "長野日本無線株式会社",
+      "row": 82,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A82:AH82",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_defense_electronics",
+          "products": [
+            "無線機ORC-15E-1",
+            "無線機ORC-15F"
+          ]
+        }
+      ],
+      "rareEarthFlags": "Y, Sc",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "229億7,700万円（2024年12月期、連結）",
+    "prod": "無線機ORC-15E-1 ／ 無線機ORC-15F",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：無線機ORC-15E-1；無線機ORC-15F",
+    "bom": "調達品目「無線機ORC-15E-1；無線機ORC-15F；無線機ORC-15F(初度費)」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A82:AH82 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8100001002473 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.njrc.jp/achievement/meeting.html ／ https://www.njrc.jp/achievement/zaimu.html ／ https://catr.jp/companies/40a19/11189",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
+    "financial": {
+      "fiscalYear": "2024年12月期",
+      "revenueValueJpy": 22977000000,
+      "scope": "連結",
+      "confidence": "B",
+      "evidenceNote": "公式サイトは日本無線の完全子会社化と上場廃止を明記。2024年度の連結売上構成も公式掲載。売上総額は官報決算データベース掲載値で照合した。",
+      "sourceUrls": [
+        "https://www.njrc.jp/achievement/meeting.html",
+        "https://www.njrc.jp/achievement/zaimu.html",
+        "https://catr.jp/companies/40a19/11189"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-4010601031653",
+    "name": "株式会社IHIエアロスペース",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_sat"
+    ],
+    "tags": [
+      "Sc"
+    ],
+    "own": "非上場。株式会社IHI（東証プライム、証券コード7013）の連結子会社。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "4010601031653",
+      "sourceName": "株式会社IHIエアロスペース",
+      "row": 90,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A90:AH90",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_sat",
+          "products": [
+            "HTV-Xを活用したHGV探知等に関する宇宙技術実証(その1)"
+          ]
+        }
+      ],
+      "rareEarthFlags": "Sc",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "666億円（2025年3月期、単体）",
+    "prod": "HTV-Xを活用したHGV探知等に関する宇宙技術実証(その1)",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：HTV-Xを活用したHGV探知等に関する宇宙技術実証(その1)",
+    "bom": "調達品目「92式地雷原処理用ロケット弾；チャフロケット弾；24式水際地雷原処理装置用ロケット弾」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A90:AH90 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4010601031653 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.ihi.co.jp/all_news/2026/ir/__icsFiles/afieldfile/2026/06/02/notice_260602.pdf ／ https://www.ihi.co.jp/ir/stock/information/",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Sc。中（一般論）",
+    "financial": {
+      "fiscalYear": "2025年3月期",
+      "revenueValueJpy": 66600000000,
+      "scope": "単体",
+      "confidence": "A",
+      "evidenceNote": "IHIの公式公表資料が同社を連結子会社と明記し、会社概要欄に2025年3月期売上高666億円を掲載。IHIの公式株式情報で証券コード7013を確認。",
+      "sourceUrls": [
+        "https://www.ihi.co.jp/all_news/2026/ir/__icsFiles/afieldfile/2026/06/02/notice_260602.pdf",
+        "https://www.ihi.co.jp/ir/stock/information/"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-8010401096587",
+    "name": "モトローラ・ソリューションズ株式会社",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_defense_electronics"
+    ],
+    "tags": [
+      "Y",
+      "Sc"
+    ],
+    "own": "非上場の日本法人。最終親会社Motorola Solutions, Inc.はNYSE上場（ティッカーMSI）。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "8010401096587",
+      "sourceName": "モトローラ・ソリューションズ株式会社",
+      "row": 93,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A93:AH93",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_defense_electronics",
+          "products": [
+            "無線機 GRT-( )",
+            "飛行場統制用無線機 GRT-20-D"
+          ]
+        }
+      ],
+      "rareEarthFlags": "Y, Sc",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "15億5,100万円（2022年12月期、単体。直近確認できた日本法人売上）",
+    "prod": "無線機 GRT-( ) ／ 飛行場統制用無線機 GRT-20-D",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：無線機 GRT-( )；飛行場統制用無線機 GRT-20-D",
+    "bom": "調達品目「無線機 GRT-( )；飛行場統制用無線機 GRT-20-D；無線機 GRT-36」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A93:AH93 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8010401096587 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.motorolasolutions.com/en_us/about/company-overview/office-locations.html..html ／ https://catr.jp/companies/ecb38/150803/settlements/db453/324540 ／ https://www.sec.gov/Archives/edgar/data/68505/000006850526000010/msi-20251231.htm",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
+    "financial": {
+      "fiscalYear": "2022年12月期",
+      "revenueValueJpy": 1551000000,
+      "scope": "単体",
+      "confidence": "B",
+      "evidenceNote": "公式拠点一覧でMotorola Solutions Japan Limitedを確認。日本法人の第48期決算公告（決算末日2022-12-31）に売上高15億5,100万円。親会社のSEC 10-KでNYSEティッカーMSIを確認。親会社売上は日本法人売上に混在させていない。",
+      "sourceUrls": [
+        "https://www.motorolasolutions.com/en_us/about/company-overview/office-locations.html..html",
+        "https://catr.jp/companies/ecb38/150803/settlements/db453/324540",
+        "https://www.sec.gov/Archives/edgar/data/68505/000006850526000010/msi-20251231.htm"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-1020001006613",
+    "name": "日本飛行機株式会社",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_airframe_support"
+    ],
+    "tags": [
+      "DyTb",
+      "Sm"
+    ],
+    "own": "非上場。川崎重工業株式会社（東証プライム、証券コード7012）の100%子会社。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "1020001006613",
+      "sourceName": "日本飛行機株式会社",
+      "row": 106,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A106:AH106",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_airframe_support",
+          "products": [
+            "YS-11機体定期修理",
+            "P-3C機体定期特別修理"
+          ]
+        }
+      ],
+      "rareEarthFlags": "Dy, Tb, Sm",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "331億8,500万円（2025年3月期、単体）",
+    "prod": "YS-11機体定期修理 ／ P-3C機体定期特別修理",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：YS-11機体定期修理；P-3C機体定期特別修理",
+    "bom": "調達品目「誘導弾射爆撃訓練用水上標的；誘導弾射爆撃訓練用水上標的(GNSS付加)(モニタリング・テスト用)(初度費)；誘導弾射爆撃訓練用水上標的(GNSS付加)(モニタリング・テスト用)」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A106:AH106 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1020001006613 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.nippi.co.jp/jp/company_overview.html ／ https://catr.jp/companies/c3549/20802",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Dy, Tb, Sm。中（一般論）",
+    "financial": {
+      "fiscalYear": "2025年3月期",
+      "revenueValueJpy": 33185000000,
+      "scope": "単体",
+      "confidence": "B",
+      "evidenceNote": "公式会社概要に川崎重工業100%出資と明記。2025年3月期売上高は官報決算データベース掲載の個別決算値で確認。",
+      "sourceUrls": [
+        "https://www.nippi.co.jp/jp/company_overview.html",
+        "https://catr.jp/companies/c3549/20802"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-4010401057023",
+    "name": "タレスジャパン株式会社",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_rf_sensor",
+      "05_defense_electronics",
+      "05_military_radar"
+    ],
+    "tags": [
+      "Y",
+      "Sc"
+    ],
+    "own": "非上場のタレスグループ日本法人。最終親会社Thales S.A.はEuronext Paris上場（銘柄コードHO、ISIN FR0000121329）。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "4010401057023",
+      "sourceName": "タレスジャパン株式会社",
+      "row": 113,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A113:AH113",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_rf_sensor",
+          "products": [
+            "捜索レーダ OM-100D"
+          ]
+        },
+        {
+          "id": "05_defense_electronics",
+          "products": [
+            "電子管 91553968"
+          ]
+        },
+        {
+          "id": "05_military_radar",
+          "products": [
+            "捜索レーダ OM-100D",
+            "捜索レーダ(OM-100D・US-2用)",
+            "捜索レーダ(OM-100D)"
+          ],
+          "sourceSheet": "統合契約時系列"
+        }
+      ],
+      "rareEarthFlags": "Y, Sc",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "非公表／不明（日本法人単体）",
+    "prod": "捜索レーダ OM-100D ／ 電子管 91553968 ／ 捜索レーダ(OM-100D・US-2用) ／ 捜索レーダ(OM-100D)",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：捜索レーダ OM-100D；電子管 91553968；捜索レーダ(OM-100D・US-2用)；捜索レーダ(OM-100D)",
+    "bom": "調達品目「電子管 91553968；捜索レーダ OM-100D；捜索レーダ(OM-100D・US-2用)」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A113:AH113 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4010401057023 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.thalesgroup.com/en/countries/asia-pacific/thales-japan ／ https://live.euronext.com/fr/products/equities/company-news/2026-03-03-thales-publie-ses-resultats-annuels-2025-communique ／ https://catr.jp/companies/382bb/157093",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
+    "financial": {
+      "fiscalYear": null,
+      "revenueValueJpy": null,
+      "scope": "単体",
+      "confidence": "B",
+      "evidenceNote": "公式グループ情報で日本法人として確認し、Euronext公表で親会社の上場コードHOを確認。日本法人の公開決算情報から売上高は確認できず、グループ売上を代用していない。",
+      "sourceUrls": [
+        "https://www.thalesgroup.com/en/countries/asia-pacific/thales-japan",
+        "https://live.euronext.com/fr/products/equities/company-news/2026-03-03-thales-publie-ses-resultats-annuels-2025-communique",
+        "https://catr.jp/companies/382bb/157093"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-7010701022780",
+    "name": "株式会社レスター",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_robot",
+      "05_unmanned"
+    ],
+    "tags": [
+      "DyTb",
+      "Sm"
+    ],
+    "own": "東証プライム上場、証券コード3156。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "7010701022780",
+      "sourceName": "株式会社レスター",
+      "row": 115,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A115:AH115",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2024・FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_robot",
+          "products": [
+            "小型無人機対処器材用ドローン",
+            "UAV(災害用II型)GDXS-13-B"
+          ]
+        },
+        {
+          "id": "05_unmanned",
+          "products": [
+            "小型無人機対処器材用ドローン",
+            "UAV(災害用II型)GDXS-13-B",
+            "UAV(災害用II型) GDXS-13-B",
+            "小型無人機(ドローン)"
+          ],
+          "sourceSheet": "統合契約時系列"
+        }
+      ],
+      "rareEarthFlags": "Dy, Tb, Sm",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "6,309億500万円（2026年3月期、連結）",
+    "prod": "小型無人機対処器材用ドローン ／ UAV(災害用II型)GDXS-13-B ／ UAV(災害用II型) GDXS-13-B ／ 小型無人機(ドローン)",
+    "def": "防衛装備庁納入品（FY2024・FY2025）：小型無人機対処器材用ドローン；UAV(災害用II型)GDXS-13-B；UAV(災害用II型) GDXS-13-B；小型無人機(ドローン)",
+    "bom": "調達品目「小型無人機対処器材用ドローン；小型無人機(ドローン)」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A115:AH115 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7010701022780 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www2.jpx.co.jp/disc/31560/140120260513528426.pdf ／ https://www.restargp.com/company/outline/",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Dy, Tb, Sm。中（一般論）",
+    "financial": {
+      "fiscalYear": "2026年3月期",
+      "revenueValueJpy": 630905000000,
+      "scope": "連結",
+      "confidence": "A",
+      "evidenceNote": "JPX掲載の2026年3月期決算短信でコード3156、連結売上高630,905百万円を確認。",
+      "sourceUrls": [
+        "https://www2.jpx.co.jp/disc/31560/140120260513528426.pdf",
+        "https://www.restargp.com/company/outline/"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-8011001039795",
+    "name": "株式会社ノビテック",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_rf_sensor",
+      "05_military_radar"
+    ],
+    "tags": [
+      "Y",
+      "Sc"
+    ],
+    "own": "非上場（証券コードなし）。親会社は公開情報から確認できず。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "8011001039795",
+      "sourceName": "株式会社ノビテック",
+      "row": 119,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A119:AH119",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_rf_sensor",
+          "products": [
+            "弾道レーダ(洋上試験対応)",
+            "初速レーダ"
+          ]
+        },
+        {
+          "id": "05_military_radar",
+          "products": [
+            "弾道レーダ(洋上試験対応)",
+            "初速レーダ",
+            "弾道追随レーダ装置"
+          ],
+          "sourceSheet": "統合契約時系列"
+        }
+      ],
+      "rareEarthFlags": "Y, Sc",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "非公表／不明（公式会社概要に売上高の記載なし）",
+    "prod": "弾道レーダ(洋上試験対応) ／ 初速レーダ ／ 弾道追随レーダ装置",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：弾道レーダ(洋上試験対応)；初速レーダ；弾道追随レーダ装置",
+    "bom": "調達品目「可視化用レーザー照明；レーザーカーテン速度計システム；弾道レーダ(洋上試験対応)」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A119:AH119 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8011001039795 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.nobby-tech.co.jp/company/",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
+    "financial": {
+      "fiscalYear": null,
+      "revenueValueJpy": null,
+      "scope": "単体",
+      "confidence": "B",
+      "evidenceNote": "公式会社概要で資本金5,000万円、設立年、事業内容を確認したが、株主・親会社・売上高は掲載されていない。",
+      "sourceUrls": [
+        "https://www.nobby-tech.co.jp/company/"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-7013301019486",
+    "name": "キーコム株式会社",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_rf_sensor",
+      "05_military_radar"
+    ],
+    "tags": [
+      "Sc"
+    ],
+    "own": "非上場（証券コードなし）。親会社は公開情報から確認できず。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "7013301019486",
+      "sourceName": "キーコム株式会社",
+      "row": 120,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A120:AH120",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_rf_sensor",
+          "products": [
+            "3次元ミリ波レーダー"
+          ]
+        },
+        {
+          "id": "05_military_radar",
+          "products": [
+            "3次元ミリ波レーダー"
+          ],
+          "sourceSheet": "統合契約時系列"
+        }
+      ],
+      "rareEarthFlags": "Sc",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "年商16億円（3年平均、公式会社概要。対象年度は非記載）",
+    "prod": "3次元ミリ波レーダー",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：3次元ミリ波レーダー",
+    "bom": "調達品目「3次元ミリ波レーダー」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A120:AH120 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7013301019486 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://keycom.co.jp/j/japanese/kaisyaannnai.html",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Sc。中（一般論）",
+    "financial": {
+      "fiscalYear": "基準年非記載（3年平均）",
+      "revenueValueJpy": 1600000000,
+      "scope": "単体・3年平均",
+      "confidence": "A",
+      "evidenceNote": "公式会社概要が従業員60名、年商16億円／3年平均と明記。個別FYは示されていないため、その制約を表示に残した。",
+      "sourceUrls": [
+        "https://keycom.co.jp/j/japanese/kaisyaannnai.html"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-9011101031552",
+    "name": "KDDI株式会社",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_sat",
+      "05_defense_electronics"
+    ],
+    "tags": [
+      "Y",
+      "Sc"
+    ],
+    "own": "東証プライム上場、証券コード9433。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "9011101031552",
+      "sourceName": "KDDI株式会社",
+      "row": 126,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A126:AH126",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_sat",
+          "products": [
+            "衛星幹線通信システム携帯局 JPRC-B1",
+            "車載型衛星通信装置 GMBY-B2"
+          ]
+        },
+        {
+          "id": "05_defense_electronics",
+          "products": [
+            "専用電話の通信器材借上(05換装)",
+            "衛星幹線通信システム携帯局 JPRC-B1"
+          ]
+        }
+      ],
+      "rareEarthFlags": "Y, Sc",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "6兆719億1,500万円（2026年3月期、連結・IFRS）",
+    "prod": "衛星幹線通信システム携帯局 JPRC-B1 ／ 車載型衛星通信装置 GMBY-B2 ／ 専用電話の通信器材借上(05換装)",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：衛星幹線通信システム携帯局 JPRC-B1；車載型衛星通信装置 GMBY-B2；専用電話の通信器材借上(05換装)",
+    "bom": "調達品目「車載型衛星通信装置 GMBY-B2；低軌道衛星通信装置；携帯衛星通信装置 GPBY-B2」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A126:AH126 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9011101031552 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://newsroom.kddi.com/ir-news/assets/2026/kddi_ir-1148_4471/kddi_2026_4qc_PsXBu3.pdf ／ https://newsroom.kddi.com/ir-news/detail/kddi_ir-1148_4471.html",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
+    "financial": {
+      "fiscalYear": "2026年3月期",
+      "revenueValueJpy": 6071915000000,
+      "scope": "連結",
+      "confidence": "A",
+      "evidenceNote": "公式決算短信で証券コード9433、2026年3月期連結売上高6,071,915百万円を確認。",
+      "sourceUrls": [
+        "https://newsroom.kddi.com/ir-news/assets/2026/kddi_ir-1148_4471/kddi_2026_4qc_PsXBu3.pdf",
+        "https://newsroom.kddi.com/ir-news/detail/kddi_ir-1148_4471.html"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-7010001225687",
+    "name": "株式会社ミクニエアロスペース",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_robot",
+      "05_unmanned"
+    ],
+    "tags": [
+      "Y"
+    ],
+    "own": "非上場。株式会社ミクニ（東証スタンダード、証券コード7247）の100%子会社。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "7010001225687",
+      "sourceName": "株式会社ミクニエアロスペース",
+      "row": 134,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A134:AH134",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_robot",
+          "products": [
+            "UAV(実動対抗部隊用)GDXS-15"
+          ]
+        },
+        {
+          "id": "05_unmanned",
+          "products": [
+            "UAV(実動対抗部隊用)GDXS-15"
+          ],
+          "sourceSheet": "統合契約時系列"
+        }
+      ],
+      "rareEarthFlags": "Y",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "非公表／不明（当該法人単体）",
+    "prod": "UAV(実動対抗部隊用)GDXS-15",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：UAV(実動対抗部隊用)GDXS-15",
+    "bom": "調達品目「夜間照準補助具(可視レーザー(緑))」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A134:AH134 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7010001225687 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://mikuni-aero.jp/about/ ／ https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20250603/20250530575552.pdf",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y。中（一般論）",
+    "financial": {
+      "fiscalYear": null,
+      "revenueValueJpy": null,
+      "scope": "単体",
+      "confidence": "A",
+      "evidenceNote": "公式会社概要がミクニ100%出資を明記し、親会社資料で証券コード7247を確認。当該子会社単体の売上高は公開情報で確認できず、親会社連結売上は代用していない。",
+      "sourceUrls": [
+        "https://mikuni-aero.jp/about/",
+        "https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20250603/20250530575552.pdf"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-7010001063732",
+    "name": "株式会社日本デジコム",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_sat",
+      "05_defense_electronics"
+    ],
+    "tags": [
+      "Y",
+      "Sc"
+    ],
+    "own": "非上場（証券コードなし）。親会社は公開情報から確認できず。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "7010001063732",
+      "sourceName": "株式会社日本デジコム",
+      "row": 141,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A141:AH141",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_sat",
+          "products": [
+            "携行型衛星通信装置I型",
+            "搭載型衛星通信セット(検証用)"
+          ]
+        },
+        {
+          "id": "05_defense_electronics",
+          "products": [
+            "携行型衛星通信装置I型",
+            "搭載型衛星通信セット(検証用)"
+          ]
+        }
+      ],
+      "rareEarthFlags": "Y, Sc",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "非公表／不明（2026年1月期決算公告は貸借対照表のみで売上高非掲載）",
+    "prod": "携行型衛星通信装置I型 ／ 搭載型衛星通信セット(検証用)",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：携行型衛星通信装置I型；搭載型衛星通信セット(検証用)",
+    "bom": "調達品目「携行型衛星通信装置I型；海事衛星通信装置NORC-4E」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A141:AH141 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7010001063732 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.jdc.ne.jp/about/ ／ https://catr.jp/companies/af577/3919",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
+    "financial": {
+      "fiscalYear": "2026年1月期",
+      "revenueValueJpy": null,
+      "scope": "単体",
+      "confidence": "B",
+      "evidenceNote": "衛星通信事業者の公式会社概要と法人番号7010001063732を照合。最新の第27期公告は純利益・総資産等のみで売上高を開示していないため、売上は不明とした。",
+      "sourceUrls": [
+        "https://www.jdc.ne.jp/about/",
+        "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7010001063732",
+        "https://catr.jp/companies/af577/3919"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-6180001075605",
+    "name": "株式会社エムエイチアイロジテック",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_guid"
+    ],
+    "tags": [
+      "DyTb",
+      "Sm"
+    ],
+    "own": "非上場。三菱重工業株式会社（東証プライム、証券コード7011）の100%子会社。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "6180001075605",
+      "sourceName": "株式会社エムエイチアイロジテック",
+      "row": 155,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A155:AH155",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_guid",
+          "products": [
+            "88式地対艦誘導弾用部品(構成品)",
+            "90式艦対艦誘導弾用火工品等"
+          ]
+        }
+      ],
+      "rareEarthFlags": "Dy, Tb, Sm",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "112億5,000万円（2025年度、単体）",
+    "prod": "88式地対艦誘導弾用部品(構成品) ／ 90式艦対艦誘導弾用火工品等",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：88式地対艦誘導弾用部品(構成品)；90式艦対艦誘導弾用火工品等",
+    "bom": "調達品目「88式地対艦誘導弾用部品(構成品)；90式艦対艦誘導弾用火工品等；93式空対艦誘導弾用部品(国産)」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A155:AH155 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6180001075605 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.mhi.com/jp/group/mlt/company",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Dy, Tb, Sm。中（一般論）",
+    "financial": {
+      "fiscalYear": "2025年度",
+      "revenueValueJpy": 11250000000,
+      "scope": "単体",
+      "confidence": "A",
+      "evidenceNote": "公式会社概要が三菱重工業100%出資および2025年度売上高112億5千万円を明記。",
+      "sourceUrls": [
+        "https://www.mhi.com/jp/group/mlt/company"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-8020001003257",
+    "name": "フジ・インバック株式会社",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_unmanned"
+    ],
+    "tags": [
+      "Sc"
+    ],
+    "own": "非上場（証券コードなし）。親会社は公開情報から確認できず。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "8020001003257",
+      "sourceName": "フジ・インバック株式会社",
+      "row": 169,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A169:AH169",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_unmanned",
+          "products": [
+            "UAV模擬標的機(多目的監視レーダ試験用)"
+          ],
+          "sourceSheet": "統合契約時系列"
+        }
+      ],
+      "rareEarthFlags": "Sc",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "非公表／不明（公式会社概要に売上高の記載なし）",
+    "prod": "UAV模擬標的機(多目的監視レーダ試験用)",
+    "def": "防衛装備庁納入品（FY2023・FY2024）：UAV模擬標的機(多目的監視レーダ試験用)",
+    "bom": "調達品目「UAV模擬標的機(多目的監視レーダ試験用)」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A169:AH169 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8020001003257 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://fuji-imvac.jp/company/",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Sc。中（一般論）",
+    "financial": {
+      "fiscalYear": null,
+      "revenueValueJpy": null,
+      "scope": "単体",
+      "confidence": "B",
+      "evidenceNote": "公式会社概要で資本金9,800万円、設立年、関連会社を確認したが、株主・親会社・売上高は掲載されていない。",
+      "sourceUrls": [
+        "https://fuji-imvac.jp/company/"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-6010901021583",
+    "name": "株式会社S.T.ディバイス",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_defense_electronics"
+    ],
+    "tags": [
+      "Y",
+      "Sc"
+    ],
+    "own": "非上場（証券コードなし）。親会社は公開情報から確認できず。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "6010901021583",
+      "sourceName": "株式会社S.T.ディバイス",
+      "row": 171,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A171:AH171",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_defense_electronics",
+          "products": [
+            "電子管 09M033P43",
+            "電子管MA2876-4H"
+          ]
+        }
+      ],
+      "rareEarthFlags": "Y, Sc",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "非公表／不明（公開決算情報なし）",
+    "prod": "電子管 09M033P43 ／ 電子管MA2876-4H",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：電子管 09M033P43；電子管MA2876-4H",
+    "bom": "調達品目「電子管 09M033P43；電子管MA2876-4H；電子管 補助表示装置表示器用」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A171:AH171 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6010901021583 ／ https://journal.jogmec.go.jp/content/300601616.pdf",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
+    "financial": {
+      "fiscalYear": null,
+      "revenueValueJpy": null,
+      "scope": "単体",
+      "confidence": "B",
+      "evidenceNote": "gBizINFOで法人番号6010901021583、設立日、代表者、政府調達資格を確認したが、財務・決算欄に売上情報はない。根拠のない推定は行わない。",
+      "sourceUrls": [
+        "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6010901021583"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-8010001032091",
+    "name": "リチャードソンエレクトロニクス株式会社",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_rf_sensor",
+      "05_defense_electronics",
+      "05_military_radar"
+    ],
+    "tags": [
+      "Y",
+      "Sc"
+    ],
+    "own": "非上場の日本法人。米国Richardson Electronics, Ltd.の全額出資子会社で、親会社はNASDAQ上場（ティッカーRELL）。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "8010001032091",
+      "sourceName": "リチャードソンエレクトロニクス株式会社",
+      "row": 175,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A175:AH175",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_rf_sensor",
+          "products": [
+            "電子管 捜索レーダ送受信機モジュール"
+          ]
+        },
+        {
+          "id": "05_defense_electronics",
+          "products": [
+            "電子管 7665A/HY60",
+            "電子管 捜索レーダ送受信機モジュール"
+          ]
+        },
+        {
+          "id": "05_military_radar",
+          "products": [
+            "電子管 捜索レーダ送受信機モジュール"
+          ],
+          "sourceSheet": "統合契約時系列"
+        }
+      ],
+      "rareEarthFlags": "Y, Sc",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "非公表／不明（日本法人単体）",
+    "prod": "電子管 捜索レーダ送受信機モジュール ／ 電子管 7665A/HY60",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：電子管 捜索レーダ送受信機モジュール；電子管 7665A/HY60",
+    "bom": "調達品目「電子管 7665A/HY60；電子管 捜索レーダ送受信機モジュール」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A175:AH175 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8010001032091 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.rell.co.jp/about/index.html",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
+    "financial": {
+      "fiscalYear": null,
+      "revenueValueJpy": null,
+      "scope": "単体",
+      "confidence": "A",
+      "evidenceNote": "日本法人公式会社概要が米国Richardson Electronics Ltd.の全額出資で1989年設立、親会社はNASDAQ上場（RELL）と明記。掲載の年商1億4,200万ドルは2016年の親会社グローバル売上であり、日本法人売上には使用していない。",
+      "sourceUrls": [
+        "https://www.rell.co.jp/about/index.html"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-1120003008110",
+    "name": "株式会社amuse oneself",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_robot",
+      "05_unmanned"
+    ],
+    "tags": [
+      "Y"
+    ],
+    "own": "非上場（証券コードなし）。豊田通商株式会社から出資を受けているが、持分比率・親会社該当性は非公表。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "1120003008110",
+      "sourceName": "株式会社amuse oneself",
+      "row": 201,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A201:AH201",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_robot",
+          "products": [
+            "3次元情報収集ドローン解析装置",
+            "3次元情報収集ドローン"
+          ]
+        },
+        {
+          "id": "05_unmanned",
+          "products": [
+            "3次元情報収集ドローン解析装置",
+            "3次元情報収集ドローン",
+            "レーザ計測ドローン"
+          ],
+          "sourceSheet": "統合契約時系列"
+        }
+      ],
+      "rareEarthFlags": "Y",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "非公表／不明",
+    "prod": "3次元情報収集ドローン解析装置 ／ 3次元情報収集ドローン ／ レーザ計測ドローン",
+    "def": "防衛装備庁納入品（FY2023）：3次元情報収集ドローン解析装置；3次元情報収集ドローン；レーザ計測ドローン",
+    "bom": "調達品目「レーザ計測ドローン」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A201:AH201 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1120003008110 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://amuse-oneself.com/topics/1459.html ／ https://www.toyota-tsusho.com/press/detail/250530_006593.html ／ https://prtimes.jp/main/html/rd/p/000000010.000112742.html",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y。中（一般論）",
+    "financial": {
+      "fiscalYear": null,
+      "revenueValueJpy": null,
+      "scope": "単体",
+      "confidence": "B",
+      "evidenceNote": "会社公式情報で資金調達実績、豊田通商公式リリースで同社からの出資を確認。出資比率と売上高は非公表であり、調達額や親会社売上から推定していない。",
+      "sourceUrls": [
+        "https://amuse-oneself.com/topics/1459.html",
+        "https://www.toyota-tsusho.com/press/detail/250530_006593.html",
+        "https://prtimes.jp/main/html/rd/p/000000010.000112742.html"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-2010001022478",
+    "name": "田中電気株式会社",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_robot",
+      "05_defense_electronics",
+      "05_unmanned"
+    ],
+    "tags": [
+      "Y",
+      "Sc"
+    ],
+    "own": "非上場（証券コードなし）。親会社は公開情報から確認できず。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "2010001022478",
+      "sourceName": "田中電気株式会社",
+      "row": 205,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A205:AH205",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_robot",
+          "products": [
+            "ドローン(1)"
+          ]
+        },
+        {
+          "id": "05_defense_electronics",
+          "products": [
+            "デジタルIP無線機(携帯用)",
+            "デジタルIP無線機(車載用)"
+          ]
+        },
+        {
+          "id": "05_unmanned",
+          "products": [
+            "ドローン(1)"
+          ],
+          "sourceSheet": "統合契約時系列"
+        }
+      ],
+      "rareEarthFlags": "Y, Sc",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "78億9,744万円（2024年1月期、単体）",
+    "prod": "ドローン(1) ／ デジタルIP無線機(携帯用) ／ デジタルIP無線機(車載用)",
+    "def": "防衛装備庁納入品（FY2023・FY2024）：ドローン(1)；デジタルIP無線機(携帯用)；デジタルIP無線機(車載用)",
+    "bom": "調達品目「デジタルIP無線機(携帯用)；デジタルIP無線機(車載用)」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A205:AH205 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2010001022478 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.tanaka-denki.co.jp/about-us/profile/ ／ https://syukatsu-kaigi.jp/companies/123752 ／ https://jobcatalog.yahoo.co.jp/company/1500129583/information/",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
+    "financial": {
+      "fiscalYear": "2024年1月期",
+      "revenueValueJpy": 7897440000,
+      "scope": "単体",
+      "confidence": "B",
+      "evidenceNote": "公式会社概要で所在地・設立・資本金・従業員数を確認。2024年1月期の個別売上高78億9,744万円は複数の企業・採用情報データベースで一致確認したが、一次決算資料を直接確認できないため信頼度B。",
+      "sourceUrls": [
+        "https://www.tanaka-denki.co.jp/about-us/profile/",
+        "https://syukatsu-kaigi.jp/companies/123752",
+        "https://jobcatalog.yahoo.co.jp/company/1500129583/information/"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-5030001041556",
+    "name": "株式会社アビサル",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_defense_electronics"
+    ],
+    "tags": [
+      "Y",
+      "Sc"
+    ],
+    "own": "非上場。タキオニッシュホールディングス株式会社（非上場）の100%子会社。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "5030001041556",
+      "sourceName": "株式会社アビサル",
+      "row": 217,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A217:AH217",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_defense_electronics",
+          "products": [
+            "無線機 RRC-17E"
+          ]
+        }
+      ],
+      "rareEarthFlags": "Y, Sc",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "非公表／不明（2026年3月期決算公告は売上高非掲載）",
+    "prod": "無線機 RRC-17E",
+    "def": "防衛装備庁納入品（FY2023・FY2024）：無線機 RRC-17E",
+    "bom": "調達品目「無線機 RRC-17E」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A217:AH217 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5030001041556 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.t-abyss.jp/company/ ／ https://catr.jp/companies/348e3/14558",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
+    "financial": {
+      "fiscalYear": "2026年3月期",
+      "revenueValueJpy": null,
+      "scope": "単体",
+      "confidence": "A",
+      "evidenceNote": "公式会社概要がタキオニッシュホールディングス100%出資を明記。最新の2026年3月期公告で純利益・総資産は確認できるが売上高は非掲載のため不明とした。",
+      "sourceUrls": [
+        "https://www.t-abyss.jp/company/",
+        "https://catr.jp/companies/348e3/14558"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-1010001058548",
+    "name": "緑屋電気株式会社",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_rf_sensor",
+      "05_defense_electronics",
+      "05_military_radar"
+    ],
+    "tags": [
+      "Y",
+      "Sc"
+    ],
+    "own": "非上場（証券コードなし）。緑屋電気グループの中核会社。公開会社概要では外部親会社の記載なし。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "1010001058548",
+      "sourceName": "緑屋電気株式会社",
+      "row": 221,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A221:AH221",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_rf_sensor",
+          "products": [
+            "電子管 捜索レーダ送受信機モジュール用"
+          ]
+        },
+        {
+          "id": "05_defense_electronics",
+          "products": [
+            "電子管 捜索レーダ送受信機モジュール用",
+            "F-2用SATURN対応無線機"
+          ]
+        },
+        {
+          "id": "05_military_radar",
+          "products": [
+            "電子管 捜索レーダ送受信機モジュール用"
+          ],
+          "sourceSheet": "統合契約時系列"
+        }
+      ],
+      "rareEarthFlags": "Y, Sc",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "1,440億円（2025年、グループ売上高）",
+    "prod": "電子管 捜索レーダ送受信機モジュール用 ／ F-2用SATURN対応無線機",
+    "def": "防衛装備庁納入品（FY2025）：電子管 捜索レーダ送受信機モジュール用；F-2用SATURN対応無線機",
+    "bom": "調達品目「電子管 捜索レーダ送受信機モジュール用；F-2用SATURN対応無線機」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A221:AH221 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1010001058548 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.midoriya.co.jp/company/about/",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
+    "financial": {
+      "fiscalYear": "2025",
+      "revenueValueJpy": 144000000000,
+      "scope": "グループ",
+      "confidence": "A",
+      "evidenceNote": "公式会社概要が売上高1,440億円（グループ 2025年）と明記。単体売上ではないためスコープをグループとした。上場市場・証券コードの記載はなく、当該法人は非上場。",
+      "sourceUrls": [
+        "https://www.midoriya.co.jp/company/about/"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-3010403011350",
+    "name": "キーサイト・テクノロジー株式会社",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_rf_sensor"
+    ],
+    "tags": [
+      "Y",
+      "Sc"
+    ],
+    "own": "非上場（証券コードなし）。Keysight Technologies, Inc.（NYSE: KEYS）の100%子会社。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "3010403011350",
+      "sourceName": "キーサイト・テクノロジー株式会社",
+      "row": 268,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A268:AH268",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_rf_sensor",
+          "products": [
+            "パワーセンサ校正システムの借上",
+            "マイクロ波ネットワークアナライザ"
+          ]
+        }
+      ],
+      "rareEarthFlags": "Y, Sc",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "非公表／不明（日本法人）。参考として親会社グローバル売上54億米ドル（FY2025）は当該法人売上に不採用。",
+    "prod": "パワーセンサ校正システムの借上 ／ マイクロ波ネットワークアナライザ",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：パワーセンサ校正システムの借上；マイクロ波ネットワークアナライザ",
+    "bom": "調達品目「マイクロ波ネットワークアナライザ」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A268:AH268 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=3010403011350 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.keysight.com/jp/ja/home.html ／ https://job.mynavi.jp/27/pc/search/corp203395/outline.html?func=corpinfo ／ https://catr.jp/companies/38151/259430",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
+    "financial": {
+      "fiscalYear": "FY2025",
+      "revenueValueJpy": null,
+      "scope": "単体（非公表）",
+      "confidence": "A",
+      "evidenceNote": "採用会社概要に株主構成Keysight Technologies, Inc. 100%、日本法人売上は会社規定により非公表とある。官報決算情報も売上高欄は非開示。親会社のグローバル売上は転用していない。",
+      "sourceUrls": [
+        "https://www.keysight.com/jp/ja/home.html",
+        "https://job.mynavi.jp/27/pc/search/corp203395/outline.html?func=corpinfo",
+        "https://catr.jp/companies/38151/259430"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-7010001036564",
+    "name": "アキラ株式会社",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_defense_electronics"
+    ],
+    "tags": [
+      "Y",
+      "Sc"
+    ],
+    "own": "非上場（証券コードなし）。公開情報上、上場親会社は確認できず。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "7010001036564",
+      "sourceName": "アキラ株式会社",
+      "row": 278,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A278:AH278",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_defense_electronics",
+          "products": [
+            "携帯無線機C型"
+          ]
+        }
+      ],
+      "rareEarthFlags": "Y, Sc",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "410億円（2025年9月期実績、単体）",
+    "prod": "携帯無線機C型",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：携帯無線機C型",
+    "bom": "調達品目「携帯無線機C型」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A278:AH278 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7010001036564 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.akira.agns.co.jp/index.html ／ https://job.mynavi.jp/27/pc/search/corp78196/outline.html?func=corpinfo",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
+    "financial": {
+      "fiscalYear": "2025年9月期",
+      "revenueValueJpy": 41000000000,
+      "scope": "単体",
+      "confidence": "B",
+      "evidenceNote": "法人番号7010001036564、所在地・事業内容から水処理・環境設備のアキラ株式会社を同定。採用会社概要に2025年9月30日実績410億円と明記。公式サイトには上場情報の記載なし。",
+      "sourceUrls": [
+        "https://www.akira.agns.co.jp/index.html",
+        "https://job.mynavi.jp/27/pc/search/corp78196/outline.html?func=corpinfo"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-2020001012577",
+    "name": "株式会社江田商会",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_robot"
+    ],
+    "tags": [
+      "DyTb",
+      "Sm"
+    ],
+    "own": "非上場（証券コードなし）。公開会社概要上、上場親会社は確認できず。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "2020001012577",
+      "sourceName": "株式会社江田商会",
+      "row": 302,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A302:AH302",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_robot",
+          "products": [
+            "ロボット"
+          ]
+        }
+      ],
+      "rareEarthFlags": "Dy, Tb, Sm",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "46億8,882万円（2024年3月期、単体）",
+    "prod": "ロボット",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：ロボット",
+    "bom": "調達品目「ロボット」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A302:AH302 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2020001012577 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.eda.co.jp/company/ ／ https://job.mynavi.jp/27/pc/search/corp80495/outline.html",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Dy, Tb, Sm。中（一般論）",
+    "financial": {
+      "fiscalYear": "2024年3月期",
+      "revenueValueJpy": 4688820000,
+      "scope": "単体",
+      "confidence": "B",
+      "evidenceNote": "公式会社案内で法人を同定。採用会社概要は売上高46億8,882万円（2024年3月）、前年53億5,060万円を掲載。連結表記がなく、会社単体の会社データとして扱った。",
+      "sourceUrls": [
+        "https://www.eda.co.jp/company/",
+        "https://job.mynavi.jp/27/pc/search/corp80495/outline.html"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-4020001010554",
+    "name": "穂高電子株式会社",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_rf_sensor"
+    ],
+    "tags": [
+      "Sc"
+    ],
+    "own": "非上場（証券コードなし）。公開会社概要上、上場親会社は確認できず。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "4020001010554",
+      "sourceName": "穂高電子株式会社",
+      "row": 323,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A323:AH323",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_rf_sensor",
+          "products": [
+            "高周波特性評価装置",
+            "高周波誘電率測定システム"
+          ]
+        }
+      ],
+      "rareEarthFlags": "Sc",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "非公表／不明（近年FYの売上高は確認できず）",
+    "prod": "高周波特性評価装置 ／ 高周波誘電率測定システム",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：高周波特性評価装置；高周波誘電率測定システム",
+    "bom": "調達品目「高周波特性評価装置；高周波誘電率測定システム」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A323:AH323 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4020001010554 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.hodaka.co.jp/company ／ https://kigyo.city.kyoto.lg.jp/kyomachi/company/single/1021.php",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Sc。中（一般論）",
+    "financial": {
+      "fiscalYear": null,
+      "revenueValueJpy": null,
+      "scope": "単体（非公表）",
+      "confidence": "B",
+      "evidenceNote": "公式会社概要は資本金・社員数を掲載するが売上高を非掲載。京都市掲載の67億75万円は2012年5月期で古く、近年売上としては採用しなかった。",
+      "sourceUrls": [
+        "https://www.hodaka.co.jp/company",
+        "https://kigyo.city.kyoto.lg.jp/kyomachi/company/single/1021.php"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-5010001006123",
+    "name": "日京テクノス株式会社",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_rf_sensor"
+    ],
+    "tags": [
+      "Sc"
+    ],
+    "own": "非上場（証券コードなし）。公開会社概要上、上場親会社は確認できず。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "5010001006123",
+      "sourceName": "日京テクノス株式会社",
+      "row": 335,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A335:AH335",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_rf_sensor",
+          "products": [
+            "2450MHzマイクロ波発振装置",
+            "マイクロ波パワーメーター"
+          ]
+        }
+      ],
+      "rareEarthFlags": "Sc",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "非公表／不明（第三者DBに推定26.061億円の表示があるが根拠不明のため不採用）",
+    "prod": "2450MHzマイクロ波発振装置 ／ マイクロ波パワーメーター",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：2450MHzマイクロ波発振装置；マイクロ波パワーメーター",
+    "bom": "調達品目「2450MHzマイクロ波発振装置；マイクロ波パワーメーター」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A335:AH335 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5010001006123 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.nikkyo-tec.co.jp/about.html ／ https://baseconnect.in/branch_offices/6ec7abd2-8e71-42d8-ad47-5aad479f828b",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Sc。中（一般論）",
+    "financial": {
+      "fiscalYear": null,
+      "revenueValueJpy": null,
+      "scope": "単体（非公表）",
+      "confidence": "B",
+      "evidenceNote": "公式会社概要およびGビズインフォに売上高の確定値なし。Baseconnectの26.061億円は推定表示でFY・算定根拠が不明なため、根拠なき推定を避けて不採用。",
+      "sourceUrls": [
+        "https://www.nikkyo-tec.co.jp/about.html",
+        "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5010001006123",
+        "https://baseconnect.in/branch_offices/6ec7abd2-8e71-42d8-ad47-5aad479f828b"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-5013201004111",
+    "name": "東洋エレクトロニクス株式会社",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_defense_electronics"
+    ],
+    "tags": [
+      "Y",
+      "Sc"
+    ],
+    "own": "非上場（証券コードなし）。公開会社概要上、上場親会社は確認できず。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "5013201004111",
+      "sourceName": "東洋エレクトロニクス株式会社",
+      "row": 352,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A352:AH352",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_defense_electronics",
+          "products": [
+            "統合音声通信装置端末機器",
+            "統合艦内音声通信装置端末機器"
+          ]
+        }
+      ],
+      "rareEarthFlags": "Y, Sc",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "非公表／不明",
+    "prod": "統合音声通信装置端末機器 ／ 統合艦内音声通信装置端末機器",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：統合音声通信装置端末機器；統合艦内音声通信装置端末機器",
+    "bom": "調達品目「統合音声通信装置端末機器；統合艦内音声通信装置端末機器」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A352:AH352 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5013201004111 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.sd.toyonics.co.jp/00_c_info/kaisya_gaiyou.html ／ https://catr.jp/companies/7d319/208761",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
+    "financial": {
+      "fiscalYear": null,
+      "revenueValueJpy": null,
+      "scope": "単体（非公表）",
+      "confidence": "B",
+      "evidenceNote": "法人番号5013201004111に対応する東京都目黒区・TOYONICSの法人を対象。公式会社概要は資本金1億円・従業員数等を掲載するが売上高なし。官報決算DBでも売上高は非開示。宮城県の同名別法人は除外。",
+      "sourceUrls": [
+        "https://www.sd.toyonics.co.jp/00_c_info/kaisya_gaiyou.html",
+        "https://catr.jp/companies/7d319/208761"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-9010401139568",
+    "name": "株式会社GTAj",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_laser"
+    ],
+    "tags": [
+      "Y"
+    ],
+    "own": "非上場（証券コードなし）。英国法人GT Aerospace (Europe) Ltd.が100%保有。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "9010401139568",
+      "sourceName": "株式会社GTAj",
+      "row": 356,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A356:AH356",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_laser",
+          "products": [
+            "レーザ照射装置JGVG-W1"
+          ]
+        }
+      ],
+      "rareEarthFlags": "Y",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "42億円（掲載値、対象FY不明）",
+    "prod": "レーザ照射装置JGVG-W1",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：レーザ照射装置JGVG-W1",
+    "bom": "調達品目「レーザ照射装置JGVG-W1」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A356:AH356 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9010401139568 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://gtaerospace.jp/about/ ／ https://knoock.jp/seishain/company/187413",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y。中（一般論）",
+    "financial": {
+      "fiscalYear": null,
+      "revenueValueJpy": null,
+      "scope": "単体とみられるがFY・基準未確認",
+      "confidence": "C",
+      "evidenceNote": "公式会社案内が英国親会社100%を明記。求人情報転載ページに売上高4,200百万円とあるが対象FY・決算範囲が示されないため、表示上は参考値とし数値フィールドはnull。",
+      "sourceUrls": [
+        "https://gtaerospace.jp/about/",
+        "https://knoock.jp/seishain/company/187413"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-1010601026053",
+    "name": "株式会社フォーサイトテクノ",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_laser"
+    ],
+    "tags": [
+      "Y"
+    ],
+    "own": "非上場（証券コードなし）。丸文株式会社（東証プライム 7537）の連結子会社。株主として丸文株式会社、ミツイワ株式会社を公式掲載。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "1010601026053",
+      "sourceName": "株式会社フォーサイトテクノ",
+      "row": 464,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A464:AH464",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_laser",
+          "products": [
+            "レーザー発振装置"
+          ]
+        }
+      ],
+      "rareEarthFlags": "Y",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "非公表／不明（FY2025単体売上は確認できず）",
+    "prod": "レーザー発振装置",
+    "def": "防衛装備庁納入品（FY2023）：レーザー発振装置",
+    "bom": "調達品目「レーザー発振装置」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A464:AH464 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1010601026053 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.foresight-t.co.jp/company/ ／ https://www.marubun.co.jp/wp-content/uploads/2025/07/CorporateProfile2025.pdf ／ https://catr.jp/companies/b79f8/17977",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y。中（一般論）",
+    "financial": {
+      "fiscalYear": "2025年3月期",
+      "revenueValueJpy": null,
+      "scope": "単体（非公表）",
+      "confidence": "A",
+      "evidenceNote": "公式会社概要に株主2社を掲載し、丸文の統合報告・会社案内で連結子会社として確認。2025年3月期決算公告は純利益等のみで売上高非開示。丸文連結売上は転用していない。",
+      "sourceUrls": [
+        "https://www.foresight-t.co.jp/company/",
+        "https://www.marubun.co.jp/wp-content/uploads/2025/07/CorporateProfile2025.pdf",
+        "https://catr.jp/companies/b79f8/17977"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-7010001045862",
+    "name": "日清紡マイクロデバイス株式会社",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_defense_electronics"
+    ],
+    "tags": [
+      "Y",
+      "Sc"
+    ],
+    "own": "非上場（証券コードなし）。日清紡ホールディングス株式会社（東証プライム 3105）の連結子会社。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "7010001045862",
+      "sourceName": "日清紡マイクロデバイス株式会社",
+      "row": 549,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A549:AH549",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_defense_electronics",
+          "products": [
+            "電子管 TL399",
+            "電子管 M1628"
+          ]
+        }
+      ],
+      "rareEarthFlags": "Y, Sc",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "812億1,100万円（FY2022、当該子会社の主要損益情報・連結会社間内部売上控除後）",
+    "prod": "電子管 TL399 ／ 電子管 M1628",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：電子管 TL399；電子管 M1628",
+    "bom": "調達品目「電子管 TL399；電子管 M1628；電子管 W435」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A549:AH549 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7010001045862 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.nisshinbo-microdevices.co.jp/ja/about/profile/ ／ https://www.nisshinbo.co.jp/ir/library/securities_report.html ／ https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3105_securities_2022_mufu.pdf",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
+    "financial": {
+      "fiscalYear": "2022年12月期",
+      "revenueValueJpy": 81211000000,
+      "scope": "当該子会社（親会社有報の主要な損益情報）",
+      "confidence": "A",
+      "evidenceNote": "日清紡HDの2022年12月期有価証券報告書が、売上高比率10%超の子会社として日清紡マイクロデバイスの売上高81,211百万円を開示。以後の親会社資料のマイクロデバイス『事業』売上は複数社・消去を含むため当該法人売上に転用していない。",
+      "sourceUrls": [
+        "https://www.nisshinbo-microdevices.co.jp/ja/about/profile/",
+        "https://www.nisshinbo.co.jp/ir/library/securities_report.html",
+        "https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3105_securities_2022_mufu.pdf"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-1060001013523",
+    "name": "キヤノン電子管デバイス株式会社",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_defense_electronics"
+    ],
+    "tags": [
+      "Y",
+      "Sc"
+    ],
+    "own": "非上場（証券コードなし）。キヤノン株式会社（東証プライム 7751）が100%保有。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "1060001013523",
+      "sourceName": "キヤノン電子管デバイス株式会社",
+      "row": 552,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A552:AH552",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024・FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_defense_electronics",
+          "products": [
+            "電子管 E3109",
+            "電子管 E37150-9100MHZ"
+          ]
+        }
+      ],
+      "rareEarthFlags": "Y, Sc",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "非公表／不明（FY2025決算公告も売上高非開示）",
+    "prod": "電子管 E3109 ／ 電子管 E37150-9100MHZ",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：電子管 E3109；電子管 E37150-9100MHZ",
+    "bom": "調達品目「電子管 E3109；電子管 E37150-9100MHZ；電子管K261E」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A552:AH552 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1060001013523 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://etd.canon/ja/company/index.html ／ https://catr.jp/companies/e279f/32501",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
+    "financial": {
+      "fiscalYear": "2025年12月期",
+      "revenueValueJpy": null,
+      "scope": "単体（非公表）",
+      "confidence": "A",
+      "evidenceNote": "公式会社概要がキヤノン株式会社100%保有と明記。2025年12月期の官報決算では純利益・総資産等は確認できるが売上高は非開示。キヤノングループ売上は転用していない。",
+      "sourceUrls": [
+        "https://etd.canon/ja/company/index.html",
+        "https://catr.jp/companies/e279f/32501"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-4010901000754",
+    "name": "株式会社アムテックス",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_rf_sensor"
+    ],
+    "tags": [
+      "Sc"
+    ],
+    "own": "非上場（証券コードなし）。公開会社概要上、上場親会社は確認できず。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "4010901000754",
+      "sourceName": "株式会社アムテックス",
+      "row": 646,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A646:AH646",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2024・FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_rf_sensor",
+          "products": [
+            "高周波発振器"
+          ]
+        }
+      ],
+      "rareEarthFlags": "Sc",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "非公表／不明",
+    "prod": "高周波発振器",
+    "def": "防衛装備庁納入品（FY2024・FY2025）：高周波発振器",
+    "bom": "調達品目「高周波発振器」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A646:AH646 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4010901000754 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.amtechs.co.jp/office/",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Sc。中（一般論）",
+    "financial": {
+      "fiscalYear": null,
+      "revenueValueJpy": null,
+      "scope": "単体（非公表）",
+      "confidence": "B",
+      "evidenceNote": "東京都世田谷区経堂のRF・ミリ波・GNSS機器企業（資本金9,000万円）を対象。公式会社概要に売上・株主の記載なし。埼玉県の自動車整備機器会社など同名別法人は除外。",
+      "sourceUrls": [
+        "https://www.amtechs.co.jp/office/"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-6010001005025",
+    "name": "ティー・ピー・ティー株式会社",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_guid"
+    ],
+    "tags": [
+      "DyTb",
+      "Sm"
+    ],
+    "own": "非上場（証券コードなし）。米国Trans Pacific Technologies, Inc.を関連会社として掲載するが、資本関係・親会社該当性は非公表。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "6010001005025",
+      "sourceName": "ティー・ピー・ティー株式会社",
+      "row": 698,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A698:AH698",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_guid",
+          "products": [
+            "シンクロ・レゾルバ角度表示器"
+          ]
+        }
+      ],
+      "rareEarthFlags": "Dy, Tb, Sm",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "非公表／不明",
+    "prod": "シンクロ・レゾルバ角度表示器",
+    "def": "防衛装備庁納入品（FY2023・FY2024）：シンクロ・レゾルバ角度表示器",
+    "bom": "調達品目「シンクロ・レゾルバ角度表示器」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A698:AH698 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6010001005025 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.tptech.co.jp/%E4%BC%9A%E7%A4%BE%E6%A6%82%E8%A6%81/ ／ https://www.geekly.co.jp/companys/data/4232/",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Dy, Tb, Sm。中（一般論）",
+    "financial": {
+      "fiscalYear": null,
+      "revenueValueJpy": null,
+      "scope": "単体（非公表）",
+      "confidence": "B",
+      "evidenceNote": "公式会社概要は資本金4,000万円、米国関連会社を掲載するが売上高なし。求人会社情報も売上高を非公開としている。",
+      "sourceUrls": [
+        "https://www.tptech.co.jp/%E4%BC%9A%E7%A4%BE%E6%A6%82%E8%A6%81/",
+        "https://www.geekly.co.jp/companys/data/4232/"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-8050001016181",
+    "name": "ヤトロ電子株式会社",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_robot"
+    ],
+    "tags": [
+      "DyTb",
+      "Sm"
+    ],
+    "own": "非上場（証券コードなし）。公開情報上、上場親会社は確認できず。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "8050001016181",
+      "sourceName": "ヤトロ電子株式会社",
+      "row": 766,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A766:AH766",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_robot",
+          "products": [
+            "搭乗型移動支援ロボット"
+          ]
+        }
+      ],
+      "rareEarthFlags": "Dy, Tb, Sm",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "58.97億円（掲載値、対象FY不明）",
+    "prod": "搭乗型移動支援ロボット",
+    "def": "防衛装備庁納入品（FY2025）：搭乗型移動支援ロボット",
+    "bom": "調達品目「搭乗型移動支援ロボット」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A766:AH766 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8050001016181 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.yatoro.co.jp/service/ ／ https://jobcatalog.yahoo.co.jp/company/2003243339/qa/",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Dy, Tb, Sm。中（一般論）",
+    "financial": {
+      "fiscalYear": null,
+      "revenueValueJpy": null,
+      "scope": "単体とみられるがFY未確認",
+      "confidence": "C",
+      "evidenceNote": "公式サイト・Gビズインフォで法人を同定。Yahoo!しごとカタログに売上高58.97億円、決算月6月とあるが年度が示されないため参考表示とし数値フィールドはnull。",
+      "sourceUrls": [
+        "https://www.yatoro.co.jp/service/",
+        "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8050001016181",
+        "https://jobcatalog.yahoo.co.jp/company/2003243339/qa/"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-7010501032617",
+    "name": "島津サイエンス東日本株式会社",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_rf_sensor"
+    ],
+    "tags": [
+      "Sc"
+    ],
+    "own": "非上場（証券コードなし）。島津製作所（東証プライム 7701）グループ。2025年4月1日に島津サイエンス西日本を吸収合併し、島津サイエンス株式会社へ商号変更（旧法人名は現存せず）。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "7010501032617",
+      "sourceName": "島津サイエンス東日本株式会社",
+      "row": 783,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A783:AH783",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023・FY2024",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_rf_sensor",
+          "products": [
+            "高周波圧電素子作製装置及び高品質制御システム"
+          ]
+        }
+      ],
+      "rareEarthFlags": "Sc",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "非公表／不明（旧東日本単体）。FY2024の379億4,100万円は東日本・西日本合算のため不採用。",
+    "prod": "高周波圧電素子作製装置及び高品質制御システム",
+    "def": "防衛装備庁納入品（FY2023・FY2024）：高周波圧電素子作製装置及び高品質制御システム",
+    "bom": "調達品目「高周波圧電素子作製装置及び高品質制御システム」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A783:AH783 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7010501032617 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.ssc.shimadzu.co.jp/news/2025/250401.html ／ https://www.ssc.shimadzu.co.jp/company/outline.html ／ https://www.shimadzu.co.jp/sites/shimadzu.co.jp/files/ir/7328/65utlc4g3n3zt023.pdf",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Sc。中（一般論）",
+    "financial": {
+      "fiscalYear": "2024年度",
+      "revenueValueJpy": null,
+      "scope": "旧東日本単体（非公表）",
+      "confidence": "A",
+      "evidenceNote": "公式統合告知と島津製作所有報で2025年4月の吸収合併・商号変更を確認。現行会社概要の2022～2024年度売上は旧東西2社合算と明記されるため、旧東日本法人の売上としては採用していない。統合後法人は島津製作所100%出資。",
+      "sourceUrls": [
+        "https://www.ssc.shimadzu.co.jp/news/2025/250401.html",
+        "https://www.ssc.shimadzu.co.jp/company/outline.html",
+        "https://www.shimadzu.co.jp/sites/shimadzu.co.jp/files/ir/7328/65utlc4g3n3zt023.pdf"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-2011101072297",
+    "name": "東京ロボティクス株式会社",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_robot"
+    ],
+    "tags": [
+      "DyTb",
+      "Sm"
+    ],
+    "own": "非上場（証券コードなし）。株式会社安川電機（東証プライム 6506）が100%保有。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "2011101072297",
+      "sourceName": "東京ロボティクス株式会社",
+      "row": 986,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A986:AH986",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2024",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_robot",
+          "products": [
+            "ロボット"
+          ]
+        }
+      ],
+      "rareEarthFlags": "Dy, Tb, Sm",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "非公表／不明",
+    "prod": "ロボット",
+    "def": "防衛装備庁納入品（FY2024）：ロボット",
+    "bom": "調達品目「ロボット」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A986:AH986 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2011101072297 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://robotics.tokyo/ja/about-us/ ／ https://robotics.tokyo/data/ir/bs_202109.pdf",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Dy, Tb, Sm。中（一般論）",
+    "financial": {
+      "fiscalYear": null,
+      "revenueValueJpy": null,
+      "scope": "単体（非公表）",
+      "confidence": "A",
+      "evidenceNote": "公式会社概要が安川電機100%出資と明記。公開決算公告は貸借対照表中心で売上高を確認できない。Aiロボティクス株式会社（247A）は別法人のため除外。",
+      "sourceUrls": [
+        "https://robotics.tokyo/ja/about-us/",
+        "https://robotics.tokyo/data/ir/bs_202109.pdf"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-9040001015415",
+    "name": "株式会社移動ロボット研究所",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_robot"
+    ],
+    "tags": [
+      "DyTb",
+      "Sm"
+    ],
+    "own": "非上場（証券コードなし）。公式サイトは富士ソフト株式会社を主要株主と掲載。富士ソフト（旧コード9749）も2025年5月16日に上場廃止済み。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "9040001015415",
+      "sourceName": "株式会社",
+      "row": 999,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A999:AH999",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_robot",
+          "products": [
+            "クローラー型移動ロボット"
+          ]
+        }
+      ],
+      "rareEarthFlags": "Dy, Tb, Sm",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "非公表／不明",
+    "prod": "クローラー型移動ロボット",
+    "def": "防衛装備庁納入品（FY2025）：クローラー型移動ロボット",
+    "bom": "調達品目「クローラー型移動ロボット」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A999:AH999 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9040001015415 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.irobo.co.jp/%E4%BC%81%E6%A5%AD%E6%A6%82%E8%A6%81 ／ https://www.fsi.co.jp/company/about.html ／ https://www.jpx.co.jp/news/1023/20250425-11.html",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Dy, Tb, Sm。中（一般論）",
+    "financial": {
+      "fiscalYear": null,
+      "revenueValueJpy": null,
+      "scope": "単体（非公表）",
+      "confidence": "A",
+      "evidenceNote": "公式会社概要が主要株主を富士ソフトとする。保有比率は非公表のため『親会社』とは断定しない。富士ソフト公式・JPXで2025年5月16日の上場廃止を確認。売上は公開資料で確認できず。",
+      "sourceUrls": [
+        "https://www.irobo.co.jp/%E4%BC%81%E6%A5%AD%E6%A6%82%E8%A6%81",
+        "https://www.fsi.co.jp/company/about.html",
+        "https://www.jpx.co.jp/news/1023/20250425-11.html"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-8010001007944",
+    "name": "株式会社矢沢科学",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_rf_sensor"
+    ],
+    "tags": [
+      "Sc"
+    ],
+    "own": "非上場（証券コードなし）。公開会社概要上、上場親会社は確認できず。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "8010001007944",
+      "sourceName": "株式会社矢沢科学",
+      "row": 1130,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A1130:AH1130",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2025",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_rf_sensor",
+          "products": [
+            "圧電定数測定装置"
+          ]
+        }
+      ],
+      "rareEarthFlags": "Sc",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "非公表／不明",
+    "prod": "圧電定数測定装置",
+    "def": "防衛装備庁納入品（FY2025）：圧電定数測定装置",
+    "bom": "調達品目「圧電定数測定装置」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A1130:AH1130 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8010001007944 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://yazawakagaku.co.jp/company/ ／ https://houjin.goo.to/corporations/8010001007944",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Sc。中（一般論）",
+    "financial": {
+      "fiscalYear": null,
+      "revenueValueJpy": null,
+      "scope": "単体（非公表）",
+      "confidence": "B",
+      "evidenceNote": "公式会社概要とGビズインフォで法人番号・所在地を確認。公式情報に売上・株主の記載なし。第三者法人情報では未上場とされる。",
+      "sourceUrls": [
+        "https://yazawakagaku.co.jp/company/",
+        "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8010001007944",
+        "https://houjin.goo.to/corporations/8010001007944"
+      ],
+      "researchedAt": "2026-09-15"
+    }
+  },
+  {
+    "id": "atla-3310001006466",
+    "name": "株式会社西日本流体技研",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_robot"
+    ],
+    "tags": [
+      "DyTb",
+      "Sm"
+    ],
+    "own": "非上場（証券コードなし）。公開会社概要上、上場親会社は確認できず。",
+    "pos": "",
+    "chn": "原料調達国・中国依存は未確認",
+    "ev": "B",
+    "exc": 0,
+    "atlaProcurement": true,
+    "atla": {
+      "corporateNumber": "3310001006466",
+      "sourceName": "株式会社西日本流体技研",
+      "row": 1135,
+      "sourceUrl": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A1135:AH1135",
+      "decision": "対象",
+      "userReason": "",
+      "years": "FY2023",
+      "readAt": "2026-09-15",
+      "categories": [
+        {
+          "id": "05_robot",
+          "products": [
+            "スキャニングロボットアーム"
+          ]
+        }
+      ],
+      "rareEarthFlags": "Dy, Tb, Sm",
+      "rareEarthPossibility": "中（一般論）"
+    },
+    "rev": "5億2,500万円（2023年1月期、単体）",
+    "prod": "スキャニングロボットアーム",
+    "def": "防衛装備庁納入品（FY2023）：スキャニングロボットアーム",
+    "bom": "調達品目「スキャニングロボットアーム」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
+    "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
+    "src": "https://docs.google.com/spreadsheets/d/1qrSy3FvzZaLSvlO12IL7jixjbPyBqpvQr1drBUzctG8/edit#gid=1727075732&range=A1135:AH1135 ／ https://info.gbiz.go.jp/hojin/ichiran?hojinBango=3310001006466 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://fel.ne.jp/information/overview/ ／ https://www.industry-sasebo.jp/corporation/%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%80%80%E8%A5%BF%E6%97%A5%E6%9C%AC%E6%B5%81%E4%BD%93%E6%8A%80%E7%A0%94 ／ https://www.r-agent.com/viewjob/jk904e7fa4ba8328f9/",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Dy, Tb, Sm。中（一般論）",
+    "financial": {
+      "fiscalYear": "2023年1月期",
+      "revenueValueJpy": 525000000,
+      "scope": "単体",
+      "confidence": "B",
+      "evidenceNote": "公式・佐世保工業会資料で法人を同定。リクルートエージェント掲載の決算情報に2023年1月期売上525百万円（単体）、2022年1月期576百万円とある。一次決算資料は未確認のため信頼度B。",
+      "sourceUrls": [
+        "https://fel.ne.jp/information/overview/",
+        "https://www.industry-sasebo.jp/corporation/%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%80%80%E8%A5%BF%E6%97%A5%E6%9C%AC%E6%B5%81%E4%BD%93%E6%8A%80%E7%A0%94",
+        "https://www.r-agent.com/viewjob/jk904e7fa4ba8328f9/"
+      ],
+      "researchedAt": "2026-09-15"
+    }
   }
 ];
 
@@ -3801,10 +7653,25 @@ const DEPENDENCY_ROWS = [
 
 // Excel取り込み行にも同じ規則を適用する（初期データには生成時点で反映済み）。
 const applyStage05RobotSmExposure = (rows) => rows.map((company) =>
-  (company.subs || []).includes("05_robot")
+  !company.atla && (company.subs || []).includes("05_robot")
     ? { ...company, tags: [...new Set([...(company.tags || []), "Sm"])] }
     : company
 );
+
+function summarizeItems(value, limit) {
+  const text = String(value || "").trim();
+  const match = text.match(/^(防衛装備庁納入品（[^）]+）：)(.*)$/);
+  const prefix = match ? match[1] : "";
+  const body = match ? match[2] : text;
+  const separator = body.includes("；") ? "；" : " ／ ";
+  const items = body.split(/\s*(?:；|／)\s*/).filter(Boolean);
+  if (items.length <= limit) return { short: text, full: text, hidden: 0 };
+  return {
+    short: prefix + items.slice(0, limit).join(separator) + separator + "ほか" + (items.length - limit) + "件",
+    full: text,
+    hidden: items.length - limit
+  };
+}
 
 function pieGradient(segments) {
   let at = 0;
@@ -3962,12 +7829,13 @@ export default function RareEarthDDExplorer() {
         .re-dot{width:9px;height:9px;border-radius:50%;flex:none}
         .re-tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:9px}
         .re-tag{border:1px solid ${COLORS.line};border-radius:999px;padding:1px 7px;font:10px ui-monospace,SFMono-Regular,Menlo,monospace}
-        .re-pos{font-size:12px;color:${COLORS.sub};line-height:1.55;margin-top:8px}
+        .re-pos{font-size:12px;color:${COLORS.sub};line-height:1.55;margin-top:8px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:4;overflow:hidden}
         .re-detail{border:1px solid ${COLORS.line};border-radius:12px;background:${COLORS.panel};padding:18px;position:sticky;top:14px}
         .re-empty{border:1px dashed ${COLORS.line};border-radius:12px;padding:24px;color:${COLORS.faint};font-size:13px}
         .re-dl{margin:14px 0 0}
         .re-row{display:grid;grid-template-columns:96px 1fr;gap:10px;border-top:1px solid ${COLORS.line};padding:8px 0}
-        .re-row dt{font-size:12px;color:${COLORS.faint}} .re-row dd{margin:0;font-size:13px;line-height:1.65}
+        .re-row dt{font-size:12px;color:${COLORS.faint}} .re-row dd{margin:0;font-size:13px;line-height:1.65;overflow-wrap:anywhere}
+        .re-more{margin-top:5px}.re-more summary{width:max-content;color:${COLORS.Sc};font-size:11px;cursor:pointer}.re-more div{margin-top:6px;color:${COLORS.sub}}
         .re-note{color:${COLORS.Sm}}
         @media(max-width:980px){.re-main{grid-template-columns:1fr}.re-detail{position:static}.re-flow{grid-template-columns:repeat(5,210px)}}
         @media(max-width:720px){.re-dep-grid{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}}
@@ -4069,11 +7937,16 @@ export default function RareEarthDDExplorer() {
                     <span>{company.name}</span>
                   </div>
                   <div className="re-tags">
+                    {company.atlaProcurement && <span className="re-tag re-atla-badge">防衛装備庁調達実績あり</span>}
                     {company.tags.map((tag) => (
                       <span key={tag} className="re-tag" style={{ color: COLORS[tag], borderColor: COLORS[tag] }}>{tag === "DyTb" ? "Dy・Tb" : tag}</span>
                     ))}
                   </div>
-                  <div className="re-pos">{company.pos || company.prod || "詳細は企業カードを選択"}</div>
+                  {(() => {
+                    const full = company.pos || company.prod || "詳細は企業カードを選択";
+                    const display = company.pos ? { short: company.pos } : summarizeItems(full, 3);
+                    return <div className="re-pos" title={full}>{display.short}</div>;
+                  })()}
                 </button>
               ))}
             </div>
@@ -4097,6 +7970,10 @@ export default function RareEarthDDExplorer() {
                     ["主要製品・役割", selectedCompany.prod],
                     ["市場地位", selectedCompany.pos],
                     ["航空・宇宙・防衛", selectedCompany.def],
+                    ["防衛装備庁調達実績", selectedCompany.atlaProcurement ? "防衛装備庁調達実績あり" : ""],
+                    ["工程5判定（調達品目基準）", selectedCompany.atla?.decision],
+                    ["ユーザー判定", selectedCompany.atla?.userReason],
+                    ["希土類判定（調達品目基準）", selectedCompany.atla?.rareEarthFlags],
                     ["中国依存・DD", selectedCompany.chn],
                     ["BOM根拠", selectedCompany.bom],
                     ["追加DDギャップ", selectedCompany.gap],
@@ -4104,12 +7981,25 @@ export default function RareEarthDDExplorer() {
                     ["サブカテゴリー", selectedCompany.subs.map((id) => (SUBCATS.find((s) => s.id === id) || {}).label || id).join(" / ")],
                     ["参照元", selectedCompany.src],
                     ["備考", selectedCompany.note]
-                  ].filter((entry) => entry[1]).map(([label, value]) => (
-                    <div className="re-row" key={label}>
-                      <dt>{label}</dt>
-                      <dd className={label === "備考" ? "re-note" : ""}>{value}</dd>
-                    </div>
-                  ))}
+                  ].filter((entry) => entry[1]).map(([label, value]) => {
+                    const display = label === "主要製品・役割" || label === "航空・宇宙・防衛"
+                      ? summarizeItems(value, 5)
+                      : { short: value, full: value, hidden: 0 };
+                    return (
+                      <div className="re-row" key={label}>
+                        <dt>{label}</dt>
+                        <dd className={label === "備考" ? "re-note" : ""}>
+                          {display.short}
+                          {display.hidden > 0 && (
+                            <details className="re-more">
+                              <summary>全{display.hidden + 5}件を表示</summary>
+                              <div>{display.full}</div>
+                            </details>
+                          )}
+                        </dd>
+                      </div>
+                    );
+                  })}
                 </dl>
               </div>
             )}

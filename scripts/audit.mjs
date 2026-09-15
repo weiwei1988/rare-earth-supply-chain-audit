@@ -1,5 +1,5 @@
-// グラフ接続監査。工程間の接続は src/data/subcategories.json の src だけを根拠にする
-// （画面側の描画も同じ src を読むので、監査と表示がずれない）。
+// グラフ接続監査。工程間の接続は src/data/subcategories.json の src を根拠にし、
+// 工程4→5だけは srcEls で上流ごとの許可元素も限定する（画面側も同じ規則）。
 import { loadDataset, fatal, ELEMENTS } from "./lib/dataset.mjs";
 
 const dataset = await loadDataset().catch(fatal);
@@ -10,6 +10,11 @@ function activeElements(sub) {
 }
 
 const active = new Map(dataset.subcategories.map((sub) => [sub.id, activeElements(sub)]));
+
+function routeElements(sub, source) {
+  const allowed = sub.stage === 5 ? sub.srcEls[source] : ELEMENTS;
+  return ELEMENTS.filter((element) => allowed.includes(element) && dataset.bySub.get(source).els.includes(element) && sub.els.includes(element));
+}
 
 const edges = [];
 const emptyEndpointEdges = [];
@@ -27,7 +32,7 @@ for (const sub of dataset.stageSubs(2)) {
 
 for (const sub of dataset.subcategories.filter((item) => item.stage > 2)) {
   for (const source of sub.src) {
-    const shared = ELEMENTS.filter((element) => dataset.bySub.get(source).els.includes(element) && sub.els.includes(element));
+    const shared = routeElements(sub, source);
     for (const element of shared) {
       const record = { from: source, to: sub.id, element };
       const key = `${source}|${sub.id}|${element}`;
@@ -49,8 +54,9 @@ function reachesOrigin(id, element, seen = new Set()) {
   if (!active.get(id).includes(element)) return false;
   if (sub.stage === 2) return true;
   if (seen.has(id)) return false;
-  seen.add(id);
-  return incoming.get(id).some((source) => reachesOrigin(source, element, seen));
+  const nextSeen = new Set(seen);
+  nextSeen.add(id);
+  return incoming.get(id).some((source) => routeElements(sub, source).includes(element) && reachesOrigin(source, element, nextSeen));
 }
 
 const unreachable = dataset.subcategories
@@ -71,6 +77,7 @@ const report = {
   companies: dataset.companies.length,
   categories: dataset.subcategories.length,
   edges: edges.length,
+  stage04to05Edges: edges.filter((edge) => dataset.bySub.get(edge.to)?.stage === 5).length,
   duplicateEdgeKeys,
   emptyEndpointEdges,
   unreachableStage05: unreachable,
