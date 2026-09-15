@@ -1,0 +1,870 @@
+[
+  {
+    "name": "JMUディフェンスシステムズ株式会社",
+    "ownership_listing": "非上場。ジャパン マリンユナイテッド株式会社100%出資子会社。JMU自体も非上場（主要株主は今治造船60%、JFEホールディングス20%、IHI20%）。",
+    "revenue_display": "76億800万円（2025年3月期、単体）",
+    "revenue_value_jpy": 7608000000,
+    "fiscal_year": "2025年3月期",
+    "scope": "単体",
+    "source_urls": [
+      "https://www.jmuc.co.jp/jmuds/company/index.html",
+      "https://job.mynavi.jp/27/pc/search/corp108911/outline.html",
+      "https://catr.jp/companies/e0cab/6361"
+    ],
+    "evidence_note": "公式会社概要にJMU100%出資を明記。売上はマイナビ掲載の2025年3月期76億円およびYahoo!しごとカタログの76.08億円に基づく。官報決算の純利益・総資産とは整合するが公式サイトに売上がないため確度B。",
+    "confidence": "B",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "KDDI株式会社",
+    "ownership_listing": "東証プライム上場、証券コード9433。",
+    "revenue_display": "6兆719億1,500万円（2026年3月期、連結・IFRS）",
+    "revenue_value_jpy": 6071915000000,
+    "fiscal_year": "2026年3月期",
+    "scope": "連結",
+    "source_urls": [
+      "https://newsroom.kddi.com/ir-news/assets/2026/kddi_ir-1148_4471/kddi_2026_4qc_PsXBu3.pdf",
+      "https://newsroom.kddi.com/ir-news/detail/kddi_ir-1148_4471.html"
+    ],
+    "evidence_note": "公式決算短信で証券コード9433、2026年3月期連結売上高6,071,915百万円を確認。",
+    "confidence": "A",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "NECネットワーク・センサ株式会社",
+    "ownership_listing": "非上場。日本電気株式会社（NEC）100%出資子会社。親会社NECは東京証券取引所プライム市場、証券コード6701。",
+    "revenue_display": "543億円（2025年度、単体）",
+    "revenue_value_jpy": 54300000000,
+    "fiscal_year": "2025年度",
+    "scope": "単体",
+    "source_urls": [
+      "https://www.necnets.co.jp/company/profile.html",
+      "https://catr.jp/companies/f3fab/12763"
+    ],
+    "evidence_note": "公式プロフィールにNEC全額出資、2025年度売上543億円を掲載。官報決算データベースの2026年3月期542億6,000万円とも整合。",
+    "confidence": "A",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "アイコム株式会社",
+    "ownership_listing": "上場。東京証券取引所プライム市場、証券コード6820。特定の親会社なし。",
+    "revenue_display": "369億5,900万円（2026年3月期、連結）",
+    "revenue_value_jpy": 36959000000,
+    "fiscal_year": "2026年3月期",
+    "scope": "連結",
+    "source_urls": [
+      "https://www2.jpx.co.jp/disc/68200/140120260515536144.pdf",
+      "https://www.icom.co.jp/ir/paperwork/",
+      "https://www.icom.co.jp/corporate/overview/"
+    ],
+    "evidence_note": "2026年3月期決算短信の連結損益計算書に売上36,959百万円。公式株式事務ページが東証プライム・6820を明記。",
+    "confidence": "A",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "アキラ株式会社",
+    "ownership_listing": "非上場（証券コードなし）。公開情報上、上場親会社は確認できず。",
+    "revenue_display": "410億円（2025年9月期実績、単体）",
+    "revenue_value_jpy": 41000000000,
+    "fiscal_year": "2025年9月期",
+    "scope": "単体",
+    "source_urls": [
+      "https://www.akira.agns.co.jp/index.html",
+      "https://job.mynavi.jp/27/pc/search/corp78196/outline.html?func=corpinfo"
+    ],
+    "evidence_note": "法人番号7010001036564、所在地・事業内容から水処理・環境設備のアキラ株式会社を同定。採用会社概要に2025年9月30日実績410億円と明記。公式サイトには上場情報の記載なし。",
+    "confidence": "B",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "キーコム株式会社",
+    "ownership_listing": "非上場（証券コードなし）。親会社は公開情報から確認できず。",
+    "revenue_display": "年商16億円（3年平均、公式会社概要。対象年度は非記載）",
+    "revenue_value_jpy": 1600000000,
+    "fiscal_year": "基準年非記載（3年平均）",
+    "scope": "単体・3年平均",
+    "source_urls": [
+      "https://keycom.co.jp/j/japanese/kaisyaannnai.html"
+    ],
+    "evidence_note": "公式会社概要が従業員60名、年商16億円／3年平均と明記。個別FYは示されていないため、その制約を表示に残した。",
+    "confidence": "A",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "キーサイト・テクノロジー株式会社",
+    "ownership_listing": "非上場（証券コードなし）。Keysight Technologies, Inc.（NYSE: KEYS）の100%子会社。",
+    "revenue_display": "非公表／不明（日本法人）。参考として親会社グローバル売上54億米ドル（FY2025）は当該法人売上に不採用。",
+    "revenue_value_jpy": null,
+    "fiscal_year": "FY2025",
+    "scope": "単体（非公表）",
+    "source_urls": [
+      "https://www.keysight.com/jp/ja/home.html",
+      "https://job.mynavi.jp/27/pc/search/corp203395/outline.html?func=corpinfo",
+      "https://catr.jp/companies/38151/259430"
+    ],
+    "evidence_note": "採用会社概要に株主構成Keysight Technologies, Inc. 100%、日本法人売上は会社規定により非公表とある。官報決算情報も売上高欄は非開示。親会社のグローバル売上は転用していない。",
+    "confidence": "A",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "キヤノン電子管デバイス株式会社",
+    "ownership_listing": "非上場（証券コードなし）。キヤノン株式会社（東証プライム 7751）が100%保有。",
+    "revenue_display": "非公表／不明（FY2025決算公告も売上高非開示）",
+    "revenue_value_jpy": null,
+    "fiscal_year": "2025年12月期",
+    "scope": "単体（非公表）",
+    "source_urls": [
+      "https://etd.canon/ja/company/index.html",
+      "https://catr.jp/companies/e279f/32501"
+    ],
+    "evidence_note": "公式会社概要がキヤノン株式会社100%保有と明記。2025年12月期の官報決算では純利益・総資産等は確認できるが売上高は非開示。キヤノングループ売上は転用していない。",
+    "confidence": "A",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "コーンズテクノロジー株式会社",
+    "ownership_listing": "非上場。コーンズ・アンド・カンパニー・リミテッドのグループ会社（親会社の持株比率は公式サイトで非開示）。",
+    "revenue_display": "305億7,900万円（2026年3月期、単体・決算公告由来）",
+    "revenue_value_jpy": 30579000000,
+    "fiscal_year": "2026年3月期",
+    "scope": "単体",
+    "source_urls": [
+      "https://cornestech.co.jp/company",
+      "https://www.cornes.co.jp/company/group/",
+      "https://catr.jp/companies/efe05/19692"
+    ],
+    "evidence_note": "両社公式サイトでコーンズグループ会社であることを確認。売上は官報決算を収録する公開データベースの2026年3月期305億7,900万円。公式会社概要に売上・持株比率の記載がないため確度B。",
+    "confidence": "B",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "ジェイ・アール・シー特機株式会社",
+    "ownership_listing": "非上場。日本無線株式会社100%子会社で、日清紡ホールディングスグループ。最終親会社の日清紡HDは東京証券取引所プライム市場、証券コード3105。",
+    "revenue_display": "79億5,500万円（2025年度、単体）",
+    "revenue_value_jpy": 7955000000,
+    "fiscal_year": "2025年度",
+    "scope": "単体",
+    "source_urls": [
+      "https://www.jrctokki.co.jp/company/",
+      "https://www.jrc.co.jp/company/group",
+      "https://job.mynavi.jp/28/pc/search/corp89366/outline.html"
+    ],
+    "evidence_note": "公式会社概要に2025年度売上7,955百万円を掲載。日本無線公式が主要子会社と表示し、採用情報が日本無線100%子会社であることを明記。",
+    "confidence": "A",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "タレスジャパン株式会社",
+    "ownership_listing": "非上場のタレスグループ日本法人。最終親会社Thales S.A.はEuronext Paris上場（銘柄コードHO、ISIN FR0000121329）。",
+    "revenue_display": "非公表／不明（日本法人単体）",
+    "revenue_value_jpy": null,
+    "fiscal_year": null,
+    "scope": "単体",
+    "source_urls": [
+      "https://www.thalesgroup.com/en/countries/asia-pacific/thales-japan",
+      "https://live.euronext.com/fr/products/equities/company-news/2026-03-03-thales-publie-ses-resultats-annuels-2025-communique",
+      "https://catr.jp/companies/382bb/157093"
+    ],
+    "evidence_note": "公式グループ情報で日本法人として確認し、Euronext公表で親会社の上場コードHOを確認。日本法人の公開決算情報から売上高は確認できず、グループ売上を代用していない。",
+    "confidence": "B",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "ティー・ピー・ティー株式会社",
+    "ownership_listing": "非上場（証券コードなし）。米国Trans Pacific Technologies, Inc.を関連会社として掲載するが、資本関係・親会社該当性は非公表。",
+    "revenue_display": "非公表／不明",
+    "revenue_value_jpy": null,
+    "fiscal_year": null,
+    "scope": "単体（非公表）",
+    "source_urls": [
+      "https://www.tptech.co.jp/%E4%BC%9A%E7%A4%BE%E6%A6%82%E8%A6%81/",
+      "https://www.geekly.co.jp/companys/data/4232/"
+    ],
+    "evidence_note": "公式会社概要は資本金4,000万円、米国関連会社を掲載するが売上高なし。求人会社情報も売上高を非公開としている。",
+    "confidence": "B",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "フジ・インバック株式会社",
+    "ownership_listing": "非上場（証券コードなし）。親会社は公開情報から確認できず。",
+    "revenue_display": "非公表／不明（公式会社概要に売上高の記載なし）",
+    "revenue_value_jpy": null,
+    "fiscal_year": null,
+    "scope": "単体",
+    "source_urls": [
+      "https://fuji-imvac.jp/company/"
+    ],
+    "evidence_note": "公式会社概要で資本金9,800万円、設立年、関連会社を確認したが、株主・親会社・売上高は掲載されていない。",
+    "confidence": "B",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "モトローラ・ソリューションズ株式会社",
+    "ownership_listing": "非上場の日本法人。最終親会社Motorola Solutions, Inc.はNYSE上場（ティッカーMSI）。",
+    "revenue_display": "15億5,100万円（2022年12月期、単体。直近確認できた日本法人売上）",
+    "revenue_value_jpy": 1551000000,
+    "fiscal_year": "2022年12月期",
+    "scope": "単体",
+    "source_urls": [
+      "https://www.motorolasolutions.com/en_us/about/company-overview/office-locations.html..html",
+      "https://catr.jp/companies/ecb38/150803/settlements/db453/324540",
+      "https://www.sec.gov/Archives/edgar/data/68505/000006850526000010/msi-20251231.htm"
+    ],
+    "evidence_note": "公式拠点一覧でMotorola Solutions Japan Limitedを確認。日本法人の第48期決算公告（決算末日2022-12-31）に売上高15億5,100万円。親会社のSEC 10-KでNYSEティッカーMSIを確認。親会社売上は日本法人売上に混在させていない。",
+    "confidence": "B",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "ヤトロ電子株式会社",
+    "ownership_listing": "非上場（証券コードなし）。公開情報上、上場親会社は確認できず。",
+    "revenue_display": "58.97億円（掲載値、対象FY不明）",
+    "revenue_value_jpy": null,
+    "fiscal_year": null,
+    "scope": "単体とみられるがFY未確認",
+    "source_urls": [
+      "https://www.yatoro.co.jp/service/",
+      "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8050001016181",
+      "https://jobcatalog.yahoo.co.jp/company/2003243339/qa/"
+    ],
+    "evidence_note": "公式サイト・Gビズインフォで法人を同定。Yahoo!しごとカタログに売上高58.97億円、決算月6月とあるが年度が示されないため参考表示とし数値フィールドはnull。",
+    "confidence": "C",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "リコージャパン株式会社",
+    "ownership_listing": "非上場。株式会社リコーの完全子会社。親会社リコーは東京証券取引所プライム市場、証券コード7752。",
+    "revenue_display": "8,032億4,600万円（2026年3月期、単体）",
+    "revenue_value_jpy": 803246000000,
+    "fiscal_year": "2026年3月期",
+    "scope": "単体",
+    "source_urls": [
+      "https://jp.ricoh.com/companies/ricoh-japan/our-workstyle",
+      "https://jp.ricoh.com/companies/ricoh-japan/outline",
+      "https://www2.jpx.co.jp/disc/42640/140120260309578318.pdf"
+    ],
+    "evidence_note": "リコージャパン公式ページに2026年3月期売上803,246百万円を掲載。上場会社の第三者割当開示がリコージャパンの完全親会社を株式会社リコーと明記。",
+    "confidence": "A",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "リチャードソンエレクトロニクス株式会社",
+    "ownership_listing": "非上場の日本法人。米国Richardson Electronics, Ltd.の全額出資子会社で、親会社はNASDAQ上場（ティッカーRELL）。",
+    "revenue_display": "非公表／不明（日本法人単体）",
+    "revenue_value_jpy": null,
+    "fiscal_year": null,
+    "scope": "単体",
+    "source_urls": [
+      "https://www.rell.co.jp/about/index.html"
+    ],
+    "evidence_note": "日本法人公式会社概要が米国Richardson Electronics Ltd.の全額出資で1989年設立、親会社はNASDAQ上場（RELL）と明記。掲載の年商1億4,200万ドルは2016年の親会社グローバル売上であり、日本法人売上には使用していない。",
+    "confidence": "A",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "沖電気工業株式会社",
+    "ownership_listing": "上場。東京証券取引所プライム市場、証券コード6703。特定の親会社なし。",
+    "revenue_display": "4,216億3,500万円（2026年3月期、連結）",
+    "revenue_value_jpy": 421635000000,
+    "fiscal_year": "2026年3月期",
+    "scope": "連結",
+    "source_urls": [
+      "https://www.oki.com/global/ja/ir/finance/summary/",
+      "https://www.oki.com/global/ja/ir/assets_c/uploads/260513_all.pdf",
+      "https://www.oki.com/global/ir/corporate/glance/"
+    ],
+    "evidence_note": "公式決算サマリーおよび決算短信で2026年3月期連結売上421,635百万円を確認。公式企業概要が東証プライム・6703を明記。",
+    "confidence": "A",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "海洋電子工業株式会社",
+    "ownership_listing": "非上場（公式会社概要が株式非公開と明記）。親会社は公開情報で確認できず。",
+    "revenue_display": "173億円（2025年3月期、単体。公開求人の決算情報）",
+    "revenue_value_jpy": 17300000000,
+    "fiscal_year": "2025年3月期",
+    "scope": "単体",
+    "source_urls": [
+      "https://www.kaiyo-denshi.co.jp/about/",
+      "https://www.r-agent.com/viewjob/jk48eb5fa65c1c80c5/"
+    ],
+    "evidence_note": "公式会社概要は資本金6,132万円・株式非公開・社員470名を明記するが売上非掲載。リクルートエージェントの公開求人に決算情報として2025/03単体売上17,300百万円を掲載。一次資料で売上を直接確認できないため確度B。",
+    "confidence": "B",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "株式会社amuse oneself",
+    "ownership_listing": "非上場（証券コードなし）。豊田通商株式会社から出資を受けているが、持分比率・親会社該当性は非公表。",
+    "revenue_display": "非公表／不明",
+    "revenue_value_jpy": null,
+    "fiscal_year": null,
+    "scope": "単体",
+    "source_urls": [
+      "https://amuse-oneself.com/topics/1459.html",
+      "https://www.toyota-tsusho.com/press/detail/250530_006593.html",
+      "https://prtimes.jp/main/html/rd/p/000000010.000112742.html"
+    ],
+    "evidence_note": "会社公式情報で資金調達実績、豊田通商公式リリースで同社からの出資を確認。出資比率と売上高は非公表であり、調達額や親会社売上から推定していない。",
+    "confidence": "B",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "株式会社GTAj",
+    "ownership_listing": "非上場（証券コードなし）。英国法人GT Aerospace (Europe) Ltd.が100%保有。",
+    "revenue_display": "42億円（掲載値、対象FY不明）",
+    "revenue_value_jpy": null,
+    "fiscal_year": null,
+    "scope": "単体とみられるがFY・基準未確認",
+    "source_urls": [
+      "https://gtaerospace.jp/about/",
+      "https://knoock.jp/seishain/company/187413"
+    ],
+    "evidence_note": "公式会社案内が英国親会社100%を明記。求人情報転載ページに売上高4,200百万円とあるが対象FY・決算範囲が示されないため、表示上は参考値とし数値フィールドはnull。",
+    "confidence": "C",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "株式会社IHIエアロスペース",
+    "ownership_listing": "非上場。株式会社IHI（東証プライム、証券コード7013）の連結子会社。",
+    "revenue_display": "666億円（2025年3月期、単体）",
+    "revenue_value_jpy": 66600000000,
+    "fiscal_year": "2025年3月期",
+    "scope": "単体",
+    "source_urls": [
+      "https://www.ihi.co.jp/all_news/2026/ir/__icsFiles/afieldfile/2026/06/02/notice_260602.pdf",
+      "https://www.ihi.co.jp/ir/stock/information/"
+    ],
+    "evidence_note": "IHIの公式公表資料が同社を連結子会社と明記し、会社概要欄に2025年3月期売上高666億円を掲載。IHIの公式株式情報で証券コード7013を確認。",
+    "confidence": "A",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "株式会社S.T.ディバイス",
+    "ownership_listing": "非上場（証券コードなし）。親会社は公開情報から確認できず。",
+    "revenue_display": "非公表／不明（公開決算情報なし）",
+    "revenue_value_jpy": null,
+    "fiscal_year": null,
+    "scope": "単体",
+    "source_urls": [
+      "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6010901021583"
+    ],
+    "evidence_note": "gBizINFOで法人番号6010901021583、設立日、代表者、政府調達資格を確認したが、財務・決算欄に売上情報はない。根拠のない推定は行わない。",
+    "confidence": "B",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "株式会社アビサル",
+    "ownership_listing": "非上場。タキオニッシュホールディングス株式会社（非上場）の100%子会社。",
+    "revenue_display": "非公表／不明（2026年3月期決算公告は売上高非掲載）",
+    "revenue_value_jpy": null,
+    "fiscal_year": "2026年3月期",
+    "scope": "単体",
+    "source_urls": [
+      "https://www.t-abyss.jp/company/",
+      "https://catr.jp/companies/348e3/14558"
+    ],
+    "evidence_note": "公式会社概要がタキオニッシュホールディングス100%出資を明記。最新の2026年3月期公告で純利益・総資産は確認できるが売上高は非掲載のため不明とした。",
+    "confidence": "A",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "株式会社アムテックス",
+    "ownership_listing": "非上場（証券コードなし）。公開会社概要上、上場親会社は確認できず。",
+    "revenue_display": "非公表／不明",
+    "revenue_value_jpy": null,
+    "fiscal_year": null,
+    "scope": "単体（非公表）",
+    "source_urls": [
+      "https://www.amtechs.co.jp/office/"
+    ],
+    "evidence_note": "東京都世田谷区経堂のRF・ミリ波・GNSS機器企業（資本金9,000万円）を対象。公式会社概要に売上・株主の記載なし。埼玉県の自動車整備機器会社など同名別法人は除外。",
+    "confidence": "B",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "株式会社エアロパートナーズ",
+    "ownership_listing": "非上場。株式会社理経の連結子会社（議決権97.34%）。親会社理経は東京証券取引所スタンダード市場、証券コード8226。",
+    "revenue_display": "120億7,774万9千円（2025年3月期、単体）",
+    "revenue_value_jpy": 12077749000,
+    "fiscal_year": "2025年3月期",
+    "scope": "単体",
+    "source_urls": [
+      "https://www.rikei.co.jp/wp/wp-content/uploads/for_investor/68syousyutuuti20250627.pdf",
+      "https://edinetdb.jp/company/E02699/text?fy=2025",
+      "https://www.aeropartners.co.jp/company_history"
+    ],
+    "evidence_note": "理経のFY2025有価証券報告書の重要子会社情報に、議決権97.34%および当該法人の売上12,077,749千円を掲載。公式沿革でも2017年に理経の連結子会社となったことを確認。",
+    "confidence": "A",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "株式会社エムエイチアイロジテック",
+    "ownership_listing": "非上場。三菱重工業株式会社（東証プライム、証券コード7011）の100%子会社。",
+    "revenue_display": "112億5,000万円（2025年度、単体）",
+    "revenue_value_jpy": 11250000000,
+    "fiscal_year": "2025年度",
+    "scope": "単体",
+    "source_urls": [
+      "https://www.mhi.com/jp/group/mlt/company"
+    ],
+    "evidence_note": "公式会社概要が三菱重工業100%出資および2025年度売上高112億5千万円を明記。",
+    "confidence": "A",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "株式会社ノビテック",
+    "ownership_listing": "非上場（証券コードなし）。親会社は公開情報から確認できず。",
+    "revenue_display": "非公表／不明（公式会社概要に売上高の記載なし）",
+    "revenue_value_jpy": null,
+    "fiscal_year": null,
+    "scope": "単体",
+    "source_urls": [
+      "https://www.nobby-tech.co.jp/company/"
+    ],
+    "evidence_note": "公式会社概要で資本金5,000万円、設立年、事業内容を確認したが、株主・親会社・売上高は掲載されていない。",
+    "confidence": "B",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "株式会社フォーサイトテクノ",
+    "ownership_listing": "非上場（証券コードなし）。丸文株式会社（東証プライム 7537）の連結子会社。株主として丸文株式会社、ミツイワ株式会社を公式掲載。",
+    "revenue_display": "非公表／不明（FY2025単体売上は確認できず）",
+    "revenue_value_jpy": null,
+    "fiscal_year": "2025年3月期",
+    "scope": "単体（非公表）",
+    "source_urls": [
+      "https://www.foresight-t.co.jp/company/",
+      "https://www.marubun.co.jp/wp-content/uploads/2025/07/CorporateProfile2025.pdf",
+      "https://catr.jp/companies/b79f8/17977"
+    ],
+    "evidence_note": "公式会社概要に株主2社を掲載し、丸文の統合報告・会社案内で連結子会社として確認。2025年3月期決算公告は純利益等のみで売上高非開示。丸文連結売上は転用していない。",
+    "confidence": "A",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "株式会社ミクニエアロスペース",
+    "ownership_listing": "非上場。株式会社ミクニ（東証スタンダード、証券コード7247）の100%子会社。",
+    "revenue_display": "非公表／不明（当該法人単体）",
+    "revenue_value_jpy": null,
+    "fiscal_year": null,
+    "scope": "単体",
+    "source_urls": [
+      "https://mikuni-aero.jp/about/",
+      "https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20250603/20250530575552.pdf"
+    ],
+    "evidence_note": "公式会社概要がミクニ100%出資を明記し、親会社資料で証券コード7247を確認。当該子会社単体の売上高は公開情報で確認できず、親会社連結売上は代用していない。",
+    "confidence": "A",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "株式会社レスター",
+    "ownership_listing": "東証プライム上場、証券コード3156。",
+    "revenue_display": "6,309億500万円（2026年3月期、連結）",
+    "revenue_value_jpy": 630905000000,
+    "fiscal_year": "2026年3月期",
+    "scope": "連結",
+    "source_urls": [
+      "https://www2.jpx.co.jp/disc/31560/140120260513528426.pdf",
+      "https://www.restargp.com/company/outline/"
+    ],
+    "evidence_note": "JPX掲載の2026年3月期決算短信でコード3156、連結売上高630,905百万円を確認。",
+    "confidence": "A",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "株式会社移動ロボット研究所",
+    "ownership_listing": "非上場（証券コードなし）。公式サイトは富士ソフト株式会社を主要株主と掲載。富士ソフト（旧コード9749）も2025年5月16日に上場廃止済み。",
+    "revenue_display": "非公表／不明",
+    "revenue_value_jpy": null,
+    "fiscal_year": null,
+    "scope": "単体（非公表）",
+    "source_urls": [
+      "https://www.irobo.co.jp/%E4%BC%81%E6%A5%AD%E6%A6%82%E8%A6%81",
+      "https://www.fsi.co.jp/company/about.html",
+      "https://www.jpx.co.jp/news/1023/20250425-11.html"
+    ],
+    "evidence_note": "公式会社概要が主要株主を富士ソフトとする。保有比率は非公表のため『親会社』とは断定しない。富士ソフト公式・JPXで2025年5月16日の上場廃止を確認。売上は公開資料で確認できず。",
+    "confidence": "A",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "株式会社光電製作所",
+    "ownership_listing": "非上場。株式会社KODENホールディングス傘下（同社が株主）。",
+    "revenue_display": "56億1,687万円（2026年3月期、単体）",
+    "revenue_value_jpy": 5616870000,
+    "fiscal_year": "2026年3月期",
+    "scope": "単体",
+    "source_urls": [
+      "https://www.koden-electronics.co.jp/corporate/about/"
+    ],
+    "evidence_note": "公式会社概要に株主KODENホールディングス、売上高56億1,687万円（2026年3月期）を掲載。上場市場・証券コードの記載はなく非上場法人。",
+    "confidence": "A",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "株式会社江田商会",
+    "ownership_listing": "非上場（証券コードなし）。公開会社概要上、上場親会社は確認できず。",
+    "revenue_display": "46億8,882万円（2024年3月期、単体）",
+    "revenue_value_jpy": 4688820000,
+    "fiscal_year": "2024年3月期",
+    "scope": "単体",
+    "source_urls": [
+      "https://www.eda.co.jp/company/",
+      "https://job.mynavi.jp/27/pc/search/corp80495/outline.html"
+    ],
+    "evidence_note": "公式会社案内で法人を同定。採用会社概要は売上高46億8,882万円（2024年3月）、前年53億5,060万円を掲載。連結表記がなく、会社単体の会社データとして扱った。",
+    "confidence": "B",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "株式会社国際電気",
+    "ownership_listing": "非上場（旧・日立国際電気は2018年3月に上場廃止）。日清紡ホールディングスグループが80%（HVJホールディングス経由）、日立製作所が20%を保有。日清紡HDは東証プライム・3105、日立製作所は東証プライム・6501。",
+    "revenue_display": "783億2,000万円（2025年12月期、連結）",
+    "revenue_value_jpy": 78320000000,
+    "fiscal_year": "2025年12月期",
+    "scope": "連結",
+    "source_urls": [
+      "https://www.kokusaidenki.co.jp/corporate/corporate.html",
+      "https://www.kokusaidenki.co.jp/corporate/history.html",
+      "https://www2.jpx.co.jp/disc/31050/140120230531589487.pdf"
+    ],
+    "evidence_note": "公式会社概要が2025年12月期の連結売上78,320百万円を掲載。公式沿革と日清紡HDの開示で、日清紡グループ80%、日立20%の資本関係および上場廃止を確認。",
+    "confidence": "A",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "株式会社西日本流体技研",
+    "ownership_listing": "非上場（証券コードなし）。公開会社概要上、上場親会社は確認できず。",
+    "revenue_display": "5億2,500万円（2023年1月期、単体）",
+    "revenue_value_jpy": 525000000,
+    "fiscal_year": "2023年1月期",
+    "scope": "単体",
+    "source_urls": [
+      "https://fel.ne.jp/information/overview/",
+      "https://www.industry-sasebo.jp/corporation/%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%80%80%E8%A5%BF%E6%97%A5%E6%9C%AC%E6%B5%81%E4%BD%93%E6%8A%80%E7%A0%94",
+      "https://www.r-agent.com/viewjob/jk904e7fa4ba8328f9/"
+    ],
+    "evidence_note": "公式・佐世保工業会資料で法人を同定。リクルートエージェント掲載の決算情報に2023年1月期売上525百万円（単体）、2022年1月期576百万円とある。一次決算資料は未確認のため信頼度B。",
+    "confidence": "B",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "株式会社鶴見精機",
+    "ownership_listing": "非上場（証券コードなし）。親会社は公開情報から確認できず、独立系とみられる。",
+    "revenue_display": "非公表／不明（公式会社概要に売上高の記載なし）",
+    "revenue_value_jpy": null,
+    "fiscal_year": null,
+    "scope": "単体",
+    "source_urls": [
+      "https://tsurumi-seiki.co.jp/company/"
+    ],
+    "evidence_note": "公式会社概要で法人名、資本金2,100万円、従業員数、事業内容を確認したが、株主・親会社・売上高は掲載されていない。公開情報だけでは売上規模を確定できないため推定しない。",
+    "confidence": "B",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "株式会社日本デジコム",
+    "ownership_listing": "非上場（証券コードなし）。親会社は公開情報から確認できず。",
+    "revenue_display": "非公表／不明（2026年1月期決算公告は貸借対照表のみで売上高非掲載）",
+    "revenue_value_jpy": null,
+    "fiscal_year": "2026年1月期",
+    "scope": "単体",
+    "source_urls": [
+      "https://www.jdc.ne.jp/about/",
+      "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7010001063732",
+      "https://catr.jp/companies/af577/3919"
+    ],
+    "evidence_note": "衛星通信事業者の公式会社概要と法人番号7010001063732を照合。最新の第27期公告は純利益・総資産等のみで売上高を開示していないため、売上は不明とした。",
+    "confidence": "B",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "株式会社明電舎",
+    "ownership_listing": "上場。東京証券取引所プライム市場・名古屋証券取引所プレミア市場、証券コード6508。特定の親会社なし。",
+    "revenue_display": "3,261億9,400万円（2026年3月期、連結）",
+    "revenue_value_jpy": 326194000000,
+    "fiscal_year": "2026年3月期",
+    "scope": "連結",
+    "source_urls": [
+      "https://www.meidensha.co.jp/corporate/",
+      "https://www2.jpx.co.jp/disc/65080/140120260513530264.pdf",
+      "https://www.meidensha.co.jp/ir/ir_12/"
+    ],
+    "evidence_note": "公式企業情報と決算資料で2025年度（2026年3月期）連結売上326,194百万円を確認。公式FAQが証券コード6508と東京・名古屋上場を明記。",
+    "confidence": "A",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "株式会社矢沢科学",
+    "ownership_listing": "非上場（証券コードなし）。公開会社概要上、上場親会社は確認できず。",
+    "revenue_display": "非公表／不明",
+    "revenue_value_jpy": null,
+    "fiscal_year": null,
+    "scope": "単体（非公表）",
+    "source_urls": [
+      "https://yazawakagaku.co.jp/company/",
+      "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8010001007944",
+      "https://houjin.goo.to/corporations/8010001007944"
+    ],
+    "evidence_note": "公式会社概要とGビズインフォで法人番号・所在地を確認。公式情報に売上・株主の記載なし。第三者法人情報では未上場とされる。",
+    "confidence": "B",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "丸文株式会社",
+    "ownership_listing": "上場。東京証券取引所プライム市場、証券コード7537。特定の親会社なし。",
+    "revenue_display": "2,134億2,500万円（2026年3月期、連結）",
+    "revenue_value_jpy": 213425000000,
+    "fiscal_year": "2026年3月期",
+    "scope": "連結",
+    "source_urls": [
+      "https://www.marubun.co.jp/corporate/profile/"
+    ],
+    "evidence_note": "公式企業概要に東証プライム・7537、2026年3月期連結売上213,425百万円（単体158,556百万円）を掲載。",
+    "confidence": "A",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "三菱電機ディフェンス&スペーステクノロジーズ株式会社",
+    "ownership_listing": "非上場。三菱電機株式会社100%出資子会社。親会社は東京証券取引所プライム市場、証券コード6503。",
+    "revenue_display": "411億円（2026年3月期、単体）",
+    "revenue_value_jpy": 41100000000,
+    "fiscal_year": "2026年3月期",
+    "scope": "単体",
+    "source_urls": [
+      "https://www.medstec.co.jp/company/profile.html",
+      "https://www.mitsubishielectric.co.jp/ir/data/business_report/pdf/153/5.pdf"
+    ],
+    "evidence_note": "公式会社概要に三菱電機100%出資、2026年3月期売上411億円を掲載。三菱電機の事業報告でも議決権100%の子会社として確認可能。",
+    "confidence": "A",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "長野日本無線株式会社",
+    "ownership_listing": "非上場（旧証券コード6878、2016年3月17日上場廃止）。日本無線株式会社の完全子会社。",
+    "revenue_display": "229億7,700万円（2024年12月期、連結）",
+    "revenue_value_jpy": 22977000000,
+    "fiscal_year": "2024年12月期",
+    "scope": "連結",
+    "source_urls": [
+      "https://www.njrc.jp/achievement/meeting.html",
+      "https://www.njrc.jp/achievement/zaimu.html",
+      "https://catr.jp/companies/40a19/11189"
+    ],
+    "evidence_note": "公式サイトは日本無線の完全子会社化と上場廃止を明記。2024年度の連結売上構成も公式掲載。売上総額は官報決算データベース掲載値で照合した。",
+    "confidence": "B",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "田中電気株式会社",
+    "ownership_listing": "非上場（証券コードなし）。親会社は公開情報から確認できず。",
+    "revenue_display": "78億9,744万円（2024年1月期、単体）",
+    "revenue_value_jpy": 7897440000,
+    "fiscal_year": "2024年1月期",
+    "scope": "単体",
+    "source_urls": [
+      "https://www.tanaka-denki.co.jp/about-us/profile/",
+      "https://syukatsu-kaigi.jp/companies/123752",
+      "https://jobcatalog.yahoo.co.jp/company/1500129583/information/"
+    ],
+    "evidence_note": "公式会社概要で所在地・設立・資本金・従業員数を確認。2024年1月期の個別売上高78億9,744万円は複数の企業・採用情報データベースで一致確認したが、一次決算資料を直接確認できないため信頼度B。",
+    "confidence": "B",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "島津サイエンス東日本株式会社",
+    "ownership_listing": "非上場（証券コードなし）。島津製作所（東証プライム 7701）グループ。2025年4月1日に島津サイエンス西日本を吸収合併し、島津サイエンス株式会社へ商号変更（旧法人名は現存せず）。",
+    "revenue_display": "非公表／不明（旧東日本単体）。FY2024の379億4,100万円は東日本・西日本合算のため不採用。",
+    "revenue_value_jpy": null,
+    "fiscal_year": "2024年度",
+    "scope": "旧東日本単体（非公表）",
+    "source_urls": [
+      "https://www.ssc.shimadzu.co.jp/news/2025/250401.html",
+      "https://www.ssc.shimadzu.co.jp/company/outline.html",
+      "https://www.shimadzu.co.jp/sites/shimadzu.co.jp/files/ir/7328/65utlc4g3n3zt023.pdf"
+    ],
+    "evidence_note": "公式統合告知と島津製作所有報で2025年4月の吸収合併・商号変更を確認。現行会社概要の2022～2024年度売上は旧東西2社合算と明記されるため、旧東日本法人の売上としては採用していない。統合後法人は島津製作所100%出資。",
+    "confidence": "A",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "東京ロボティクス株式会社",
+    "ownership_listing": "非上場（証券コードなし）。株式会社安川電機（東証プライム 6506）が100%保有。",
+    "revenue_display": "非公表／不明",
+    "revenue_value_jpy": null,
+    "fiscal_year": null,
+    "scope": "単体（非公表）",
+    "source_urls": [
+      "https://robotics.tokyo/ja/about-us/",
+      "https://robotics.tokyo/data/ir/bs_202109.pdf"
+    ],
+    "evidence_note": "公式会社概要が安川電機100%出資と明記。公開決算公告は貸借対照表中心で売上高を確認できない。Aiロボティクス株式会社（247A）は別法人のため除外。",
+    "confidence": "A",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "東芝インフラシステムズ株式会社",
+    "ownership_listing": "非上場。株式会社東芝100%子会社だったが、2025年4月1日に東芝を存続会社とする吸収合併で消滅。東芝は2023年12月に上場廃止し、現在は非上場。",
+    "revenue_display": "3,832億円（2023年度、単体。消滅前に確認できる年間売上高）",
+    "revenue_value_jpy": 383200000000,
+    "fiscal_year": "2023年度",
+    "scope": "単体",
+    "source_urls": [
+      "https://www.global.toshiba/jp/news/corporate/2024/11/news-20241114-01.html",
+      "https://www.global.toshiba/jp/ir/corporate/stock/epub/infrastructure.html"
+    ],
+    "evidence_note": "東芝の統合発表に、TISSの株主が東芝100%、年間売上高が2023年度3,832億円と明記。東芝の電子公告ページで2025年4月1日の吸収合併消滅を確認。",
+    "confidence": "A",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "東芝電波プロダクツ株式会社",
+    "ownership_listing": "非上場。株式会社東芝100%出資子会社。親会社東芝は2023年12月に上場廃止し、現在は非上場。",
+    "revenue_display": "242億円（2025年度、単体）",
+    "revenue_value_jpy": 24200000000,
+    "fiscal_year": "2025年度",
+    "scope": "単体",
+    "source_urls": [
+      "https://www.toshiba.co.jp/tept/company/profile.htm",
+      "https://www.toshiba.co.jp/tept/company/ceo.htm"
+    ],
+    "evidence_note": "公式会社概要に東芝100%出資、2025年度売上242億円を掲載。社長挨拶も東芝を親会社と明記。",
+    "confidence": "A",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "東洋エレクトロニクス株式会社",
+    "ownership_listing": "非上場（証券コードなし）。公開会社概要上、上場親会社は確認できず。",
+    "revenue_display": "非公表／不明",
+    "revenue_value_jpy": null,
+    "fiscal_year": null,
+    "scope": "単体（非公表）",
+    "source_urls": [
+      "https://www.sd.toyonics.co.jp/00_c_info/kaisya_gaiyou.html",
+      "https://catr.jp/companies/7d319/208761"
+    ],
+    "evidence_note": "法人番号5013201004111に対応する東京都目黒区・TOYONICSの法人を対象。公式会社概要は資本金1億円・従業員数等を掲載するが売上高なし。官報決算DBでも売上高は非開示。宮城県の同名別法人は除外。",
+    "confidence": "B",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "日京テクノス株式会社",
+    "ownership_listing": "非上場（証券コードなし）。公開会社概要上、上場親会社は確認できず。",
+    "revenue_display": "非公表／不明（第三者DBに推定26.061億円の表示があるが根拠不明のため不採用）",
+    "revenue_value_jpy": null,
+    "fiscal_year": null,
+    "scope": "単体（非公表）",
+    "source_urls": [
+      "https://www.nikkyo-tec.co.jp/about.html",
+      "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5010001006123",
+      "https://baseconnect.in/branch_offices/6ec7abd2-8e71-42d8-ad47-5aad479f828b"
+    ],
+    "evidence_note": "公式会社概要およびGビズインフォに売上高の確定値なし。Baseconnectの26.061億円は推定表示でFY・算定根拠が不明なため、根拠なき推定を避けて不採用。",
+    "confidence": "B",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "日清紡マイクロデバイス株式会社",
+    "ownership_listing": "非上場（証券コードなし）。日清紡ホールディングス株式会社（東証プライム 3105）の連結子会社。",
+    "revenue_display": "812億1,100万円（FY2022、当該子会社の主要損益情報・連結会社間内部売上控除後）",
+    "revenue_value_jpy": 81211000000,
+    "fiscal_year": "2022年12月期",
+    "scope": "当該子会社（親会社有報の主要な損益情報）",
+    "source_urls": [
+      "https://www.nisshinbo-microdevices.co.jp/ja/about/profile/",
+      "https://www.nisshinbo.co.jp/ir/library/securities_report.html",
+      "https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3105_securities_2022_mufu.pdf"
+    ],
+    "evidence_note": "日清紡HDの2022年12月期有価証券報告書が、売上高比率10%超の子会社として日清紡マイクロデバイスの売上高81,211百万円を開示。以後の親会社資料のマイクロデバイス『事業』売上は複数社・消去を含むため当該法人売上に転用していない。",
+    "confidence": "A",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "日本エヤークラフトサプライ株式会社",
+    "ownership_listing": "非上場。親会社・主要株主は公開会社概要で確認できず（独立系とみられるが断定しない）。",
+    "revenue_display": "90億4,100万円（2025年度、単体）",
+    "revenue_value_jpy": 9041000000,
+    "fiscal_year": "2025年度",
+    "scope": "単体",
+    "source_urls": [
+      "https://www.nasco.co.jp/company/j_profile"
+    ],
+    "evidence_note": "公式会社概要に資本金5,000万円、従業員86名、2025年度売上90億4,100万円を掲載。上場市場・証券コード・親会社の記載はない。",
+    "confidence": "A",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "日本海洋株式会社",
+    "ownership_listing": "非上場。タキオニッシュホールディングス株式会社100%子会社。親会社も非上場。",
+    "revenue_display": "15億7,100万円（2023年3月期、単体。直近の公式サイト掲載値）",
+    "revenue_value_jpy": 1571000000,
+    "fiscal_year": "2023年3月期",
+    "scope": "単体",
+    "source_urls": [
+      "https://nipponkaiyo.fastechs.jp/company/",
+      "https://catr.jp/companies/903fe/21305"
+    ],
+    "evidence_note": "公式会社情報に2023年3月期売上1,571百万円、株主タキオニッシュホールディングス100%を掲載。2024～2026年の決算公告は売上高を開示していないため、公式サイトの直近確認値を採用。",
+    "confidence": "A",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "日本電計株式会社",
+    "ownership_listing": "上場。東京証券取引所スタンダード市場、証券コード9908。特定の親会社なし。",
+    "revenue_display": "1,331億4,854万7千円（2026年3月期、連結）",
+    "revenue_value_jpy": 133148547000,
+    "fiscal_year": "2026年3月期",
+    "scope": "連結",
+    "source_urls": [
+      "https://www.n-denkei.co.jp/ir/individual/result/",
+      "https://www.n-denkei.co.jp/ir/ir-faq/",
+      "https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20260513/20260512525815.pdf"
+    ],
+    "evidence_note": "公式業績ページに第81期の連結売上133,148百万円、決算短信に133,148,547千円を掲載。公式FAQが東証スタンダード・9908を明記。",
+    "confidence": "A",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "日本飛行機株式会社",
+    "ownership_listing": "非上場。川崎重工業株式会社（東証プライム、証券コード7012）の100%子会社。",
+    "revenue_display": "331億8,500万円（2025年3月期、単体）",
+    "revenue_value_jpy": 33185000000,
+    "fiscal_year": "2025年3月期",
+    "scope": "単体",
+    "source_urls": [
+      "https://www.nippi.co.jp/jp/company_overview.html",
+      "https://catr.jp/companies/c3549/20802"
+    ],
+    "evidence_note": "公式会社概要に川崎重工業100%出資と明記。2025年3月期売上高は官報決算データベース掲載の個別決算値で確認。",
+    "confidence": "B",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "穂高電子株式会社",
+    "ownership_listing": "非上場（証券コードなし）。公開会社概要上、上場親会社は確認できず。",
+    "revenue_display": "非公表／不明（近年FYの売上高は確認できず）",
+    "revenue_value_jpy": null,
+    "fiscal_year": null,
+    "scope": "単体（非公表）",
+    "source_urls": [
+      "https://www.hodaka.co.jp/company",
+      "https://kigyo.city.kyoto.lg.jp/kyomachi/company/single/1021.php"
+    ],
+    "evidence_note": "公式会社概要は資本金・社員数を掲載するが売上高を非掲載。京都市掲載の67億75万円は2012年5月期で古く、近年売上としては採用しなかった。",
+    "confidence": "B",
+    "researched_at": "2026-09-15"
+  },
+  {
+    "name": "緑屋電気株式会社",
+    "ownership_listing": "非上場（証券コードなし）。緑屋電気グループの中核会社。公開会社概要では外部親会社の記載なし。",
+    "revenue_display": "1,440億円（2025年、グループ売上高）",
+    "revenue_value_jpy": 144000000000,
+    "fiscal_year": "2025",
+    "scope": "グループ",
+    "source_urls": [
+      "https://www.midoriya.co.jp/company/about/"
+    ],
+    "evidence_note": "公式会社概要が売上高1,440億円（グループ 2025年）と明記。単体売上ではないためスコープをグループとした。上場市場・証券コードの記載はなく、当該法人は非上場。",
+    "confidence": "A",
+    "researched_at": "2026-09-15"
+  }
+]
