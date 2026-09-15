@@ -78,6 +78,46 @@ export async function loadDataset() {
         throw new ValidationError(`${sub.id} の src ${source} は工程 ${upstream.stage} です（1つ上流の工程 ${sub.stage - 1} である必要があります）。`);
       }
     }
+    // 工程5は、上流カテゴリーだけでなく「その上流から何の元素をつなぐか」も明示する。
+    // src と els の単純な積集合にすると、カテゴリーの元素追加だけで無関係な線が増えるため。
+    if (sub.stage === 5) {
+      if (!sub.srcEls || typeof sub.srcEls !== "object" || Array.isArray(sub.srcEls)) {
+        throw new ValidationError(`${sub.id} に工程4→5の元素別接続（srcEls）がありません。`);
+      }
+      const routeSources = Object.keys(sub.srcEls);
+      const missingSources = sub.src.filter((source) => !routeSources.includes(source));
+      const extraSources = routeSources.filter((source) => !sub.src.includes(source));
+      if (missingSources.length || extraSources.length) {
+        throw new ValidationError(`${sub.id} の src と srcEls が一致しません（不足: ${missingSources.join(", ") || "なし"} / 余分: ${extraSources.join(", ") || "なし"}）。`);
+      }
+      for (const source of sub.src) {
+        const routeElements = sub.srcEls[source];
+        if (!Array.isArray(routeElements) || !routeElements.length) {
+          throw new ValidationError(`${sub.id} の srcEls.${source} に元素がありません。`);
+        }
+        assertUnique(routeElements, `${sub.id} の srcEls.${source}`);
+        assertSubset(routeElements, sub.els, `${sub.id} の srcEls.${source}`);
+        assertSubset(routeElements, subcategories.find((item) => item.id === source).els, `${sub.id} の srcEls.${source}`);
+      }
+      if (!sub.srcNotes || typeof sub.srcNotes !== "object" || Array.isArray(sub.srcNotes)) {
+        throw new ValidationError(`${sub.id} に工程4→5の接続根拠（srcNotes）がありません。`);
+      }
+      const noteSources = Object.keys(sub.srcNotes);
+      const missingNotes = sub.src.filter((source) => !noteSources.includes(source));
+      const extraNotes = noteSources.filter((source) => !sub.src.includes(source));
+      if (missingNotes.length || extraNotes.length) {
+        throw new ValidationError(`${sub.id} の src と srcNotes が一致しません（不足: ${missingNotes.join(", ") || "なし"} / 余分: ${extraNotes.join(", ") || "なし"}）。`);
+      }
+      for (const source of sub.src) {
+        if (typeof sub.srcNotes[source] !== "string" || !sub.srcNotes[source].trim()) {
+          throw new ValidationError(`${sub.id} の srcNotes.${source} に接続根拠がありません。`);
+        }
+      }
+    } else if (sub.srcEls !== undefined) {
+      throw new ValidationError(`${sub.id} は工程5ではないため srcEls を持てません。`);
+    } else if (sub.srcNotes !== undefined) {
+      throw new ValidationError(`${sub.id} は工程5ではないため srcNotes を持てません。`);
+    }
   }
 
   const companyIds = companies.map((company) => company.id);
@@ -91,6 +131,11 @@ export async function loadDataset() {
     assertSubset(company.stages, stageIds, `${company.name} の stages`);
     assertSubset(company.tags, ELEMENTS, `${company.name} の tags`);
     if (!EVALUATION_PATTERN.test(String(company.ev ?? "").trim())) throw new ValidationError(`${company.name} の評価表記 ${company.ev} を解釈できません（A/B/C/X に ± を付けた表記か「参考」）。`);
+    if (company.financial) {
+      if (!['A', 'B', 'C'].includes(company.financial.confidence)) throw new ValidationError(`${company.name} の財務調査確度が不正です`);
+      if (!Array.isArray(company.financial.sourceUrls) || !company.financial.sourceUrls.length) throw new ValidationError(`${company.name} の財務調査出典がありません`);
+      if (company.financial.sourceUrls.some((url) => !/^https:\/\//.test(url))) throw new ValidationError(`${company.name} の財務調査出典URLが不正です`);
+    }
     const impliedStages = [...new Set(company.subs.map((id) => subcategories.find((sub) => sub.id === id).stage))];
     const missing = impliedStages.filter((stage) => !company.stages.includes(stage));
     if (missing.length) throw new ValidationError(`${company.name} の stages に ${missing.join(",")} が不足しています（subs から導出）。`);

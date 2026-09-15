@@ -219,7 +219,13 @@
     ],
     "src": [
       "04_opt"
-    ]
+    ],
+    "srcEls": {
+      "04_opt": ["Y"]
+    },
+    "srcNotes": {
+      "04_opt": "YAGレーザー発振器はYを結晶母材に含み、高出力固体レーザーの発振部へ直接接続。"
+    }
   },
   {
     "id": "05_engine",
@@ -231,7 +237,13 @@
     ],
     "src": [
       "04_coat"
-    ]
+    ],
+    "srcEls": {
+      "04_coat": ["Y"]
+    },
+    "srcNotes": {
+      "04_coat": "YSZ系TBCは航空エンジン・ガスタービン高温部の遮熱皮膜として直接使用。"
+    }
   },
   {
     "id": "05_energy",
@@ -247,7 +259,13 @@
     ],
     "src": [
       "04_elec"
-    ]
+    ],
+    "srcEls": {
+      "04_elec": ["Y", "Sc"]
+    },
+    "srcNotes": {
+      "04_elec": "YSZ／ScSZはSOFC・SOECの固体電解質として直接使用。"
+    }
   },
   {
     "id": "05_nuclear",
@@ -259,7 +277,13 @@
     ],
     "src": [
       "04_coat"
-    ]
+    ],
+    "srcEls": {
+      "04_coat": ["Y"]
+    },
+    "srcNotes": {
+      "04_coat": "Y₂O₃／YSZ皮膜は核燃料製造用るつぼや原子力向け透過障壁で研究・使用。量産被覆管の主流材を意味しない。"
+    }
   },
   {
     "id": "05_guid",
@@ -267,12 +291,29 @@
     "label": "誘導・慣性・航法",
     "header": "05 誘導・慣性・航法",
     "els": [
+      "Y",
       "DyTb",
-      "Sm"
+      "Sm",
+      "Sc"
     ],
     "src": [
-      "04_mag"
-    ]
+      "04_opt",
+      "04_mag",
+      "04_target",
+      "04_sc_crystal"
+    ],
+    "srcEls": {
+      "04_opt": ["Y"],
+      "04_mag": ["DyTb", "Sm"],
+      "04_target": ["Sc"],
+      "04_sc_crystal": ["Sc"]
+    },
+    "srcNotes": {
+      "04_opt": "YAGレーザーは測距・目標指示・レーザー誘導の光源へ直接接続。",
+      "04_mag": "Dy・Tb添加NdFeB／SmCo磁石は誘導制御用モータ・アクチュエータ・ジャイロへ直接接続。",
+      "04_target": "ScAlN等のSc系圧電薄膜はMEMS慣性・航法センサへ直接接続。",
+      "04_sc_crystal": "SAM基板・テンプレートはScAlN系圧電／MEMSセンサの下地へ直接接続。"
+    }
   },
   {
     "id": "05_sat",
@@ -286,11 +327,23 @@
       "Sc"
     ],
     "src": [
+      "04_opt",
       "04_mag",
       "04_sc_crystal",
-      "04_am",
-      "04_elec"
-    ]
+      "04_am"
+    ],
+    "srcEls": {
+      "04_opt": ["Y"],
+      "04_mag": ["DyTb", "Sm"],
+      "04_sc_crystal": ["Sc"],
+      "04_am": ["Sc"]
+    },
+    "srcNotes": {
+      "04_opt": "Nd:YAGレーザーは宇宙搭載LiDAR・レーザー測距の光源へ直接接続。",
+      "04_mag": "SmCo／高保磁力NdFeB磁石は衛星のリアクションホイール・モータ・アクチュエータへ直接接続。",
+      "04_sc_crystal": "SAM基板・テンプレートは衛星通信向けScAlN系RF／圧電デバイスの下地へ接続。",
+      "04_am": "Sc含有Al合金の金属AM部品は宇宙機・ロケットの軽量構造／熱流体部品に実装例あり。"
+    }
   },
   {
     "id": "05_flight",
@@ -299,13 +352,17 @@
     "header": "05 飛行制御・電動化",
     "els": [
       "DyTb",
-      "Sm",
-      "Sc"
+      "Sm"
     ],
     "src": [
-      "04_mag",
-      "04_am"
-    ]
+      "04_mag"
+    ],
+    "srcEls": {
+      "04_mag": ["DyTb", "Sm"]
+    },
+    "srcNotes": {
+      "04_mag": "高保磁力NdFeB／SmCo磁石は飛行制御アクチュエータと電動推進モータへ直接接続。"
+    }
   },
   {
     "id": "05_robot",
@@ -318,7 +375,13 @@
     ],
     "src": [
       "04_mag"
-    ]
+    ],
+    "srcEls": {
+      "04_mag": ["DyTb", "Sm"]
+    },
+    "srcNotes": {
+      "04_mag": "高性能永久磁石は小型・高トルクのロボット用モータと精密アクチュエータへ直接接続。"
+    }
   },
   {
     "id": "05_rf_sensor",
@@ -326,12 +389,24 @@
     "label": "RF・圧電・高温センサ",
     "header": "05 RF・圧電・高温センサー",
     "els": [
+      "Y",
       "Sc"
     ],
     "src": [
+      "04_elec",
       "04_target",
       "04_sc_crystal"
-    ]
+    ],
+    "srcEls": {
+      "04_elec": ["Y", "Sc"],
+      "04_target": ["Sc"],
+      "04_sc_crystal": ["Sc"]
+    },
+    "srcNotes": {
+      "04_elec": "YSZ／ScSZ電解質は高温酸素・ガスセンサへ直接接続。",
+      "04_target": "ScAlN薄膜のスパッタ成膜はRFフィルタ・圧電センサへ直接接続。",
+      "04_sc_crystal": "SAM基板・テンプレートはScAlN系RF／圧電デバイスの下地へ直接接続。"
+    }
   },
   {
     "id": "05_defense_electronics",
@@ -343,11 +418,58 @@
       "Sc"
     ],
     "src": [
-      "04_coat",
-      "04_elec",
       "04_target",
       "04_sc_crystal"
-    ]
+    ],
+    "srcEls": {
+      "04_target": ["Y", "Sc"],
+      "04_sc_crystal": ["Sc"]
+    },
+    "srcNotes": {
+      "04_target": "YIG系マイクロ波部品とScAlN系RF部品の薄膜形成にY／Sc系ターゲットが直接接続。",
+      "04_sc_crystal": "SAM基板・テンプレートはScAlN系RF・通信デバイスの下地へ接続。"
+    }
+  },
+  {
+    "id": "05_military_radar",
+    "stage": 5,
+    "label": "軍事用レーダー・モジュール",
+    "header": "05 軍事用レーダー・モジュール",
+    "els": [
+      "Y",
+      "Sc"
+    ],
+    "src": [
+      "04_target",
+      "04_sc_crystal"
+    ],
+    "srcEls": {
+      "04_target": ["Y", "Sc"],
+      "04_sc_crystal": ["Sc"]
+    },
+    "srcNotes": {
+      "04_target": "YIG系マイクロ波部品とScAlN系RF部品の薄膜形成にY／Sc系ターゲットがレーダー・モジュールへ直接接続。",
+      "04_sc_crystal": "SAM基板・テンプレートはScAlN系RFフィルタ・共振器の下地としてレーダー・モジュールへ接続。"
+    }
+  },
+  {
+    "id": "05_unmanned",
+    "stage": 5,
+    "label": "無人装備・ドローン",
+    "header": "05 無人装備・ドローン",
+    "els": [
+      "DyTb",
+      "Sm"
+    ],
+    "src": [
+      "04_mag"
+    ],
+    "srcEls": {
+      "04_mag": ["DyTb", "Sm"]
+    },
+    "srcNotes": {
+      "04_mag": "高保磁力NdFeB／SmCo磁石は無人機の推進モータ・ジンバル・アクチュエータへ直接接続。"
+    }
   },
   {
     "id": "05_airframe_support",
@@ -355,15 +477,16 @@
     "label": "航空機構造・整備",
     "header": "05 航空機構造・整備",
     "els": [
-      "Y",
-      "DyTb",
-      "Sm",
       "Sc"
     ],
     "src": [
-      "04_coat",
-      "04_mag",
       "04_am"
-    ]
+    ],
+    "srcEls": {
+      "04_am": ["Sc"]
+    },
+    "srcNotes": {
+      "04_am": "Sc含有Al合金の金属AMは航空機の軽量構造部品に実装・飛行実証例あり。"
+    }
   }
 ]

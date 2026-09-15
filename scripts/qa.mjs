@@ -3,6 +3,7 @@
 import fs from "node:fs/promises";
 import { loadDataset, fatal, ELEMENTS, normalizeEv } from "./lib/dataset.mjs";
 import { readGeneratedRegion, evaluateHtmlData, evaluateJsxData } from "./lib/generated.mjs";
+import { sheetTags } from "./import-atla.mjs";
 
 const failures = [];
 const report = {};
@@ -19,29 +20,100 @@ function sameJson(a, b) {
 const dataset = await loadDataset().catch(fatal);
 const html = await fs.readFile(new URL("../index.html", import.meta.url), "utf8");
 const jsx = await fs.readFile(new URL("../src/希土類サプライチェーン.jsx", import.meta.url), "utf8");
+const financials = JSON.parse(await fs.readFile(new URL("../src/data/company-financials.json", import.meta.url), "utf8"));
 
 // --- データ側の不変条件 ---------------------------------------------------
 report.companies = dataset.companies.length;
 report.subcategories = dataset.subcategories.length;
 report.stages = dataset.stages.length;
 
+const reviewed = dataset.companies.filter(c => c.atla?.decision === "対象");
 const taglessCompanies = dataset.companies.filter((company) => !company.tags.length).map((company) => company.name);
-check("全企業に希土類タグがある", taglessCompanies.length === 0, taglessCompanies.join(", "));
+check("希土類フラグなし企業は0件", taglessCompanies.length === 0, taglessCompanies.join(", "));
+check("工程5の希土類フラグなし企業は0件", dataset.companies.filter(c => c.stages.includes(5)).every(c => c.tags.length));
+check("希土類対象外企業を収録しない", dataset.companies.every(c => c.atla?.rareEarthFlags !== "対象外" && c.atla?.rareEarthPossibility !== "対象外"));
+check("文脈再確認後の人力判定57社を収録", reviewed.length === 57);
+check("シート指定の希土類フラグと一致", reviewed.every(c => sameJson(c.tags, sheetTags(c.atla.rareEarthFlags))));
+check("人力判定の分類と納入品を収録", reviewed.every(c => c.atlaProcurement && c.stages.includes(5) && c.atla.categories.every(s => c.subs.includes(s.id) && s.products.length && s.products.every(p => c.def.includes(p)))));
+check("調達実績フラグ58社", dataset.companies.filter(c => c.atlaProcurement).length === 58);
+check("希土類対象外のQPS研究所は除外", !dataset.companies.some(c => c.id === "stage05-integrated-10"));
+check("高純度化学研究所はY・Scを維持", sameJson(dataset.companies.find(c => c.id === "seed-4")?.tags, ["Y", "Sc"]));
+check("軍事用レーダー・モジュール9社、無人装備・ドローン10社", dataset.companiesInSub("05_military_radar").length === 9 && dataset.companiesInSub("05_unmanned").length === 10);
+check("新設カテゴリーは調達実績企業のみ", [...dataset.companiesInSub("05_military_radar"), ...dataset.companiesInSub("05_unmanned")].every(c => c.atlaProcurement));
+check("企業・事業単位179件、工程5は130件、29分類", dataset.companies.length === 179 && dataset.companies.filter(c => c.stages.includes(5)).length === 130 && dataset.subcategories.length === 29);
+const financialNames = new Set(financials.map(item => item.name));
+check("新規ATLA企業57社の所有・売上を公開情報で調査", financials.length === 57 && reviewed.every(company => financialNames.has(company.name)));
+check("所有・上場の仮表示を57社から解消", reviewed.every(company => company.own && !/所有・上場区分は未確認|^日本企業$/.test(company.own)));
+check("売上規模に対象FY・年度不明・非公表のいずれかを明記", reviewed.every(company => company.rev && (/\d{4}|FY|対象年度|対象FY|非公表／不明/.test(company.rev))));
+check("財務調査の構造化根拠とURLを保持", reviewed.every(company => company.financial?.sourceUrls?.length && company.financial.sourceUrls.every(url => company.src.includes(url))));
+check("財務調査結果は売上数値33社・不明24社", financials.filter(item => item.revenue_value_jpy != null).length === 33 && financials.filter(item => item.revenue_value_jpy == null).length === 24);
+check("HTMLとJSXに調達実績フラグ表示あり", html.includes('re-atla-badge') && jsx.includes('re-atla-badge'));
+check(
+  "多品目企業を一覧3件・詳細5件に要約し全件展開できる",
+  html.includes("summarizeItems(c.prod,3)") && html.includes('details class="re-more"') && html.includes("display.hidden+5") &&
+    jsx.includes("summarizeItems(full, 3)") && jsx.includes("summarizeItems(value, 5)") && jsx.includes("<details className=\"re-more\">")
+);
+const stage05Labels = dataset.stageSubs(5).flatMap(sub => [sub.label, sub.header.replace(/^05 /, '')]);
+const categoryResidue = dataset.companies.filter(c => c.stages.includes(5)).flatMap(c => ['prod', 'def'].flatMap(field => stage05Labels.filter(label => String(c[field] ?? '').includes(`${label}：`)).map(label => `${c.name}:${field}:${label}`)));
+check("工程5カードの主要製品・防衛用途に分類名接頭辞なし", categoryResidue.length === 0, categoryResidue.join(", "));
+const internalResidue = dataset.companies.filter(c => c.stages.includes(5)).filter(c => /Stage 05『|05_[a-z_]+|所属するStage 05サブカテゴリー/.test(`${c.chn ?? ''} ${c.note ?? ''}`)).map(c => c.name);
+check("工程5カードの注記・中国依存に内部分類名なし", internalResidue.length === 0, internalResidue.join(", "));
+const kokusai = dataset.companies.find(c => c.name === "株式会社国際電気");
+check("国際電気のラインテスタはRFのみでレーダー分類外", kokusai?.subs.includes("05_rf_sensor") && !kokusai?.subs.includes("05_military_radar") && kokusai?.prod.includes("レーダ試験器ラインテスタYPM-25"));
+const contextualFalsePositiveIds = ["atla-6020001145951", "atla-3013301035504", "atla-9011601013273", "atla-5010001070887", "atla-3122001014600", "atla-4310001003520", "atla-3010801002612", "atla-8120001062020", "atla-5010401123798", "atla-2010001010788", "atla-3010001029349", "atla-4070001022669", "atla-5010001007914", "atla-7010401188476", "atla-3010001020497"];
+check("文脈不適合のみの15カードを工程5から除外", contextualFalsePositiveIds.every(id => !dataset.companies.some(c => c.id === id)));
+
+// 工程4→5はカテゴリー間の共通元素を全部つながず、用途に対応する元素だけを許可する。
+const expectedStage05Routes = {
+  "05_laser": { "04_opt": ["Y"] },
+  "05_engine": { "04_coat": ["Y"] },
+  "05_energy": { "04_elec": ["Y", "Sc"] },
+  "05_nuclear": { "04_coat": ["Y"] },
+  "05_guid": { "04_opt": ["Y"], "04_mag": ["DyTb", "Sm"], "04_target": ["Sc"], "04_sc_crystal": ["Sc"] },
+  "05_sat": { "04_opt": ["Y"], "04_mag": ["DyTb", "Sm"], "04_sc_crystal": ["Sc"], "04_am": ["Sc"] },
+  "05_flight": { "04_mag": ["DyTb", "Sm"] },
+  "05_robot": { "04_mag": ["DyTb", "Sm"] },
+  "05_rf_sensor": { "04_elec": ["Y", "Sc"], "04_target": ["Sc"], "04_sc_crystal": ["Sc"] },
+  "05_defense_electronics": { "04_target": ["Y", "Sc"], "04_sc_crystal": ["Sc"] },
+  "05_military_radar": { "04_target": ["Y", "Sc"], "04_sc_crystal": ["Sc"] },
+  "05_unmanned": { "04_mag": ["DyTb", "Sm"] },
+  "05_airframe_support": { "04_am": ["Sc"] },
+};
+const actualStage05Routes = Object.fromEntries(dataset.stageSubs(5).map((sub) => [sub.id, sub.srcEls]));
+check("工程4→5の元素別接続表が監査済み定義と一致", sameJson(actualStage05Routes, expectedStage05Routes));
+const stage05RouteKeys = dataset.stageSubs(5).flatMap((sub) => Object.entries(sub.srcEls).flatMap(([source, elements]) => elements.map((element) => `${source}|${sub.id}|${element}`)));
+check("工程4→5の定義線は32本で重複なし", stage05RouteKeys.length === 32 && new Set(stage05RouteKeys).size === 32);
+check("工程4→5の全接続に判定根拠あり", dataset.stageSubs(5).every((sub) => sub.src.every((source) => typeof sub.srcNotes[source] === "string" && sub.srcNotes[source].trim())));
+check("サブカテゴリー元素フラグが接続元素と一致", dataset.stageSubs(5).every((sub) => sameJson(sub.els, [...new Set(Object.values(sub.srcEls).flat())])));
+check(
+  "全体では全接続線、サブカテゴリー選択時は前後線だけを表示",
+  html.includes('.re-edge{transition:opacity .12s ease}') &&
+    html.includes('.re-flow-canvas.is-tracing .re-edge:not(.is-linked){opacity:0!important}') &&
+    html.includes('traceNodeId=null') &&
+    html.includes('selection={type:"all",id:"all"}') &&
+    html.includes('if(selection.type==="all")return true') &&
+    html.includes('traceable&&traceNodeId!==btn.dataset.id?btn.dataset.id:null') &&
+    html.includes('edge.dataset.from===id||edge.dataset.to===id') &&
+    !html.includes('mouseenter', html.indexOf('function traceEdges'))
+);
 
 const overTagged = dataset.companies
   .filter((company) => {
+    // 人力確認シートの品目別タグはカテゴリーの一般的な宣言元素より優先する。
+    // 上流接続はシートに根拠がないため自動で追加しない。
+    if (company.atla?.decision === "対象") return false;
     const declared = new Set(company.subs.flatMap((id) => dataset.bySub.get(id).els));
     return company.tags.some((tag) => !declared.has(tag));
   })
   .map((company) => company.name);
-check("企業タグが所属サブカテゴリーの宣言元素に収まる", overTagged.length === 0, overTagged.join(", "));
+check("従来カードのタグが宣言元素に収まり人力判定はシートと一致", overTagged.length === 0, overTagged.join(", "));
 
 // 公開BOM未確認のため Dy/Tb を落としている工程（データ側で確定済みであることを保つ）。
-const defenseDyTb = dataset.companiesInSub("05_defense_electronics").filter((company) => company.tags.includes("DyTb")).map((company) => company.name);
-check("05_defense_electronics に Dy/Tb タグがない", defenseDyTb.length === 0, defenseDyTb.join(", "));
+const defenseDyTb = dataset.companiesInSub("05_defense_electronics").filter((company) => company.atla?.decision !== "対象" && company.tags.includes("DyTb")).map((company) => company.name);
+check("旧防衛電子カードにカテゴリー由来のDy/Tbを再付与しない", defenseDyTb.length === 0, defenseDyTb.join(", "));
 
-const robotMissingSm = dataset.companiesInSub("05_robot").filter((company) => !company.tags.includes("Sm")).map((company) => company.name);
-check("05_robot 所属企業はすべて Sm を持つ", robotMissingSm.length === 0, robotMissingSm.join(", "));
+const robotMissingSm = dataset.companiesInSub("05_robot").filter((company) => !company.atla && !company.tags.includes("Sm")).map((company) => company.name);
+check("旧ロボティクスカードのSmを維持しシート判定には継承しない", robotMissingSm.length === 0, robotMissingSm.join(", "));
 
 const unknownEv = dataset.companies.filter((company) => !["A", "B", "X"].includes(normalizeEv(company.ev))).map((company) => company.name);
 check("評価が A/B/X に正規化できる", unknownEv.length === 0, unknownEv.join(", "));
@@ -85,7 +157,7 @@ check(
 
 // --- 生成物の構造 ---------------------------------------------------------
 check("index.html に iframe がない", !/<iframe/i.test(html));
-check("フロー図の高さが900", /viewBox="0 0 \d+ 900"/.test(html) || html.includes("var W=1400,H=900"));
+check("フロー図の高さが1070", /viewBox="0 0 \d+ 1070"/.test(html) || html.includes("var W=1400,H=1070"));
 check("SheetJS の読み込みタグがある", html.includes("xlsx.full.min.js"));
 
 // データ定義が生成領域の外に散らばっていないこと（手書きのコピーが復活していないかの検出）。
@@ -104,7 +176,7 @@ for (const declaration of ["const SEED =", "const SUBCATS =", "const STAGES =", 
 check("JSX に旧 SEED_ROWS が残っていない", !jsx.includes("SEED_ROWS"));
 
 // 画面側のハードコードされた接続表が復活していないこと（接続は src/data 側が持つ）。
-check("フロー図の接続表がデータ由来", !html.includes("var s2to3=") && !html.includes("var s3to4="));
+check("フロー図の接続表がデータ由来", !html.includes("var s2to3=") && !html.includes("var s3to4=") && html.includes("d.srcEls&&d.srcEls[src]"));
 
 // 元素の集合が全ファイルで一致していること。
 check("元素の一覧が index.html と一致", ELEMENTS.every((element) => html.includes(`"${element}"`)));

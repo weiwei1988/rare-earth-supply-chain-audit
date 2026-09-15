@@ -34,6 +34,8 @@ function subcatForHtml(sub) {
   const out = { id: sub.id, stage: sub.stage, label: sub.label, header: sub.header, els: sub.els };
   if (sub.forceEls) out.forceEls = sub.forceEls;
   if (sub.src) out.src = sub.src;
+  if (sub.srcEls) out.srcEls = sub.srcEls;
+  if (sub.srcNotes) out.srcNotes = sub.srcNotes;
   return out;
 }
 
