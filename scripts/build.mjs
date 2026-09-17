@@ -31,7 +31,7 @@ function replaceRegion(source, generated, path) {
 }
 
 function subcatForHtml(sub) {
-  const out = { id: sub.id, stage: sub.stage, label: sub.label, header: sub.header, els: sub.els };
+  const out = { id: sub.id, stage: sub.stage, label: sub.label, header: sub.header, description: sub.description, els: sub.els };
   if (sub.forceEls) out.forceEls = sub.forceEls;
   if (sub.src) out.src = sub.src;
   if (sub.srcEls) out.srcEls = sub.srcEls;
