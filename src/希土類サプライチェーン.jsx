@@ -66,6 +66,7 @@ const SUBCATS = [
     "stage": 2,
     "label": "高純度酸化物・化合物",
     "header": "02 高純度酸化物・化合物",
+    "description": "Y₂O₃・YF₃・Sc₂O₃などの高純度化合物",
     "els": [
       "Y",
       "DyTb",
@@ -78,6 +79,7 @@ const SUBCATS = [
     "stage": 2,
     "label": "金属化・還元／一次金属",
     "header": "02 金属化・還元／一次金属",
+    "description": "酸化物・フッ化物を希土類金属へ還元",
     "els": [
       "DyTb",
       "Sm",
@@ -89,6 +91,7 @@ const SUBCATS = [
     "stage": 2,
     "label": "回収・再精製",
     "header": "02 回収・再精製",
+    "description": "工程くず・使用済み磁石から希土類を回収",
     "els": [
       "Y",
       "DyTb",
@@ -101,6 +104,7 @@ const SUBCATS = [
     "stage": 2,
     "label": "原料輸入・販売・品質保証",
     "header": "02 原料輸入・販売・品質保証",
+    "description": "輸入・在庫・原産地証明と品質保証",
     "els": [
       "Y",
       "DyTb",
@@ -113,6 +117,7 @@ const SUBCATS = [
     "stage": 3,
     "label": "高機能粉末（YSZ・ScSZ）",
     "header": "03 高機能粉末（YSZ・ScSZ）",
+    "description": "耐熱・電解質用途のYSZ・ScSZ粉末",
     "els": [
       "Y",
       "Sc"
@@ -128,6 +133,7 @@ const SUBCATS = [
     "stage": 3,
     "label": "磁石合金・磁粉・コンパウンド",
     "header": "03 磁石合金・磁粉・コンパウンド",
+    "description": "NdFeB・SmCo用の合金・磁粉・コンパウンド",
     "els": [
       "DyTb",
       "Sm"
@@ -144,6 +150,7 @@ const SUBCATS = [
     "stage": 3,
     "label": "Al-Sc母合金（構造材・半導体）",
     "header": "03 Al-Sc母合金（構造材・半導体）",
+    "description": "航空・半導体向け低濃度Al–Sc母合金",
     "els": [
       "Sc"
     ],
@@ -159,6 +166,7 @@ const SUBCATS = [
     "stage": 3,
     "label": "金属AM・結合用原料",
     "header": "03 金属AM・結合用原料",
+    "description": "Sc含有のAM粉末・ワイヤ・接合原料",
     "els": [
       "Sc"
     ],
@@ -172,6 +180,7 @@ const SUBCATS = [
     "stage": 3,
     "label": "結晶（YAG・SAM）・セラミックス・前駆体",
     "header": "03 結晶（YAG・SAM）・セラミックス・前駆体",
+    "description": "YAG・SAM結晶とセラミックス前駆体",
     "els": [
       "Y",
       "Sc"
@@ -186,6 +195,7 @@ const SUBCATS = [
     "stage": 4,
     "label": "固体レーザー発振器（YAG）",
     "header": "04 固体レーザー発振器（YAG）",
+    "description": "Nd:YAG・Yb:YAGなどの固体レーザー光源",
     "els": [
       "Y"
     ],
@@ -198,6 +208,7 @@ const SUBCATS = [
     "stage": 4,
     "label": "耐熱（TBC）／耐プラズマコーティング",
     "header": "04 耐熱（TBC）／耐プラズマコーティング",
+    "description": "航空高温部TBC・半導体耐プラズマ膜",
     "els": [
       "Y"
     ],
@@ -211,6 +222,7 @@ const SUBCATS = [
     "stage": 4,
     "label": "電解質・センサ基板",
     "header": "04 電解質・センサ基板",
+    "description": "YSZ・ScSZ電解質と高温センサ基板",
     "els": [
       "Y",
       "Sc"
@@ -224,6 +236,7 @@ const SUBCATS = [
     "stage": 4,
     "label": "磁石（焼結・ボンド）",
     "header": "04 磁石（焼結・ボンド）",
+    "description": "NdFeB・SmCoの焼結／ボンド磁石",
     "els": [
       "DyTb",
       "Sm"
@@ -237,6 +250,7 @@ const SUBCATS = [
     "stage": 4,
     "label": "薄膜・スパッタリングターゲット",
     "header": "04 薄膜・スパッタリングターゲット",
+    "description": "Y・Sc系の薄膜形成用スパッタ材",
     "els": [
       "Y",
       "Sc"
@@ -251,6 +265,7 @@ const SUBCATS = [
     "stage": 4,
     "label": "SAMウェハ・テンプレート",
     "header": "04 SAMウェハ・テンプレート",
+    "description": "ScAlMgO₄ウェハとGaN成長用下地",
     "els": [
       "Sc"
     ],
@@ -263,6 +278,7 @@ const SUBCATS = [
     "stage": 4,
     "label": "金属AM造形・加工",
     "header": "04 金属AM造形・加工",
+    "description": "Sc含有Al合金の造形・加工部品",
     "els": [
       "Sc"
     ],
@@ -276,6 +292,7 @@ const SUBCATS = [
     "stage": 5,
     "label": "高出力レーザー",
     "header": "05 高出力レーザー",
+    "description": "測距・照射・指向性エネルギー用光源",
     "els": [
       "Y"
     ],
@@ -296,6 +313,7 @@ const SUBCATS = [
     "stage": 5,
     "label": "航空エンジン・ガスタービン",
     "header": "05 航空エンジン・ガスタービン",
+    "description": "航空エンジン・ガスタービンの高温部品",
     "els": [
       "Y"
     ],
@@ -316,6 +334,7 @@ const SUBCATS = [
     "stage": 5,
     "label": "固体酸化物形燃料電池（SOFC）／固体酸化物形電解（SOEC）",
     "header": "05 固体酸化物形燃料電池（SOFC）／固体酸化物形電解（SOEC）",
+    "description": "高効率発電・水素製造用セル／スタック",
     "els": [
       "Y",
       "Sc"
@@ -341,6 +360,7 @@ const SUBCATS = [
     "stage": 5,
     "label": "原子力・核燃料被覆材",
     "header": "05 原子力・核燃料被覆材",
+    "description": "核燃料製造・耐熱／透過障壁用途",
     "els": [
       "Y"
     ],
@@ -361,6 +381,7 @@ const SUBCATS = [
     "stage": 5,
     "label": "誘導・慣性・航法",
     "header": "05 誘導・慣性・航法",
+    "description": "誘導弾・IMU・ジャイロ・アクチュエータ",
     "els": [
       "Y",
       "DyTb",
@@ -400,6 +421,7 @@ const SUBCATS = [
     "stage": 5,
     "label": "衛星・宇宙機・ロケット",
     "header": "05 衛星・宇宙機・ロケット",
+    "description": "衛星・探査機・ロケット部品／サービス",
     "els": [
       "Y",
       "DyTb",
@@ -439,6 +461,7 @@ const SUBCATS = [
     "stage": 5,
     "label": "飛行制御・電動化",
     "header": "05 飛行制御・電動化",
+    "description": "飛行制御・推進・電動アクチュエータ",
     "els": [
       "DyTb",
       "Sm"
@@ -461,6 +484,7 @@ const SUBCATS = [
     "stage": 5,
     "label": "ロボティクス・精密",
     "header": "05 ロボティクス・精密",
+    "description": "ロボット・精密駆動・自動化装置",
     "els": [
       "DyTb",
       "Sm"
@@ -483,6 +507,7 @@ const SUBCATS = [
     "stage": 5,
     "label": "RF・圧電・高温センサ",
     "header": "05 RF・圧電・高温センサー",
+    "description": "RFフィルタ・圧電／高温センサ",
     "els": [
       "Y",
       "Sc"
@@ -515,6 +540,7 @@ const SUBCATS = [
     "stage": 5,
     "label": "防衛半導体・電子回路・通信",
     "header": "05 防衛半導体・電子回路・通信",
+    "description": "防衛半導体・電子回路・通信装置",
     "els": [
       "Y",
       "Sc"
@@ -542,6 +568,7 @@ const SUBCATS = [
     "stage": 5,
     "label": "軍事用レーダー・モジュール",
     "header": "05 軍事用レーダー・モジュール",
+    "description": "捜索・追尾レーダーとRFモジュール",
     "els": [
       "Y",
       "Sc"
@@ -569,6 +596,7 @@ const SUBCATS = [
     "stage": 5,
     "label": "無人装備・ドローン",
     "header": "05 無人装備・ドローン",
+    "description": "UAV・UGV・無人艇と搭載機器",
     "els": [
       "DyTb",
       "Sm"
@@ -591,6 +619,7 @@ const SUBCATS = [
     "stage": 5,
     "label": "航空機構造・整備",
     "header": "05 航空機構造・整備",
+    "description": "航空機構造部品の製造・修理・整備",
     "els": [
       "Sc"
     ],

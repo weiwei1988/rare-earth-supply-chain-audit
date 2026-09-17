@@ -61,6 +61,9 @@ export async function loadDataset() {
   const subIds = subcategories.map((sub) => sub.id);
   assertUnique(subIds, "サブカテゴリーID");
   for (const sub of subcategories) {
+    for (const key of ["label", "header", "description"]) {
+      if (typeof sub[key] !== "string" || !sub[key].trim()) throw new ValidationError(`${sub.id} に ${key} がありません。`);
+    }
     if (!stageIds.includes(sub.stage)) throw new ValidationError(`${sub.id} の工程 ${sub.stage} は未定義です。`);
     if (!sub.id.startsWith(`0${sub.stage}_`)) throw new ValidationError(`${sub.id} のID接頭辞が工程 ${sub.stage} と一致しません。`);
     if (!sub.header.startsWith(`0${sub.stage} `)) throw new ValidationError(`${sub.id} の header が工程 ${sub.stage} と一致しません: ${sub.header}`);
