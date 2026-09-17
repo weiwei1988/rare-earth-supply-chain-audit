@@ -35,7 +35,7 @@ check("希土類対象外企業を収録しない", dataset.companies.every(c =>
 check("文脈再確認後の人力判定57社を収録", reviewed.length === 57);
 check("シート指定の希土類フラグと一致", reviewed.every(c => sameJson(c.tags, sheetTags(c.atla.rareEarthFlags))));
 check("人力判定の分類と納入品を収録", reviewed.every(c => c.atlaProcurement && c.stages.includes(5) && c.atla.categories.every(s => c.subs.includes(s.id) && s.products.length && s.products.every(p => c.def.includes(p)))));
-check("調達実績フラグ58社", dataset.companies.filter(c => c.atlaProcurement).length === 58);
+check("調達実績フラグ63社", dataset.companies.filter(c => c.atlaProcurement).length === 63);
 check("希土類対象外のQPS研究所は除外", !dataset.companies.some(c => c.id === "stage05-integrated-10"));
 check("高純度化学研究所はY・Scを維持", sameJson(dataset.companies.find(c => c.id === "seed-4")?.tags, ["Y", "Sc"]));
 const santoku = dataset.companies.find(c => c.id === "seed-2");
@@ -64,7 +64,7 @@ const addedEngineIds = ["engine-ihi-aero", "engine-khi-aero", "engine-mhiael", "
 const addedEngineCompanies = addedEngineIds.map(id => dataset.companies.find(c => c.id === id));
 check(
   "航空エンジン・ガスタービンの追加調査5社を最重要として収録",
-  addedEngineCompanies.every(company => company?.stages.includes(5) && sameJson(company.subs, ["05_engine"]) && sameJson(company.tags, ["Y"]) && company.ev === "A" && company.note.includes("2026-09-17公開情報調査で追加")) &&
+  addedEngineCompanies.every(company => company?.stages.includes(5) && sameJson(company.subs, ["05_engine"]) && sameJson(company.tags, ["Y"]) && company.ev === "A" && company.atlaProcurement && company.note.includes("2026-09-17公開情報調査で追加")) &&
     dataset.companiesInSub("05_engine").length === 9
 );
 check("企業・事業単位184件、工程5は135件、29分類", dataset.companies.length === 184 && dataset.companies.filter(c => c.stages.includes(5)).length === 135 && dataset.subcategories.length === 29);
@@ -113,14 +113,17 @@ check("工程4→5の定義線は32本で重複なし", stage05RouteKeys.length 
 check("工程4→5の全接続に判定根拠あり", dataset.stageSubs(5).every((sub) => sub.src.every((source) => typeof sub.srcNotes[source] === "string" && sub.srcNotes[source].trim())));
 check("サブカテゴリー元素フラグが接続元素と一致", dataset.stageSubs(5).every((sub) => sameJson(sub.els, [...new Set(Object.values(sub.srcEls).flat())])));
 check(
-  "全体では全接続線、サブカテゴリー選択時は前後線だけを表示",
+  "全体では全接続線、サブカテゴリー選択時は関係する全上流・全下流接続だけを表示",
   html.includes('.re-edge{transition:opacity .12s ease}') &&
     html.includes('.re-flow-canvas.is-tracing .re-edge:not(.is-linked){opacity:0!important}') &&
     html.includes('traceNodeId=null') &&
     html.includes('selection={type:"all",id:"all"}') &&
     html.includes('if(selection.type==="all")return true') &&
-    html.includes('traceable&&traceNodeId!==btn.dataset.id?btn.dataset.id:null') &&
-    html.includes('edge.dataset.from===id||edge.dataset.to===id') &&
+    html.includes('traceNodeId=traceable?btn.dataset.id:null') &&
+    html.includes('function walk(direction,element)') &&
+    html.includes('selectedElements.forEach(function(element){walk("up",element);walk("down",element)}') &&
+    html.includes('linked.has(edge)') &&
+    !html.includes('edge.dataset.from===id||edge.dataset.to===id') &&
     !html.includes('mouseenter', html.indexOf('function traceEdges'))
 );
 

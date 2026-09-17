@@ -6931,7 +6931,8 @@
     "ev": "A",
     "exc": 0,
     "src": "https://www.ihi.co.jp/products/aeroengine_space_defense/aircraft_engines/ ／ https://limo.media/articles/-/135977 ／ https://www.jstage.jst.go.jp/article/jhts/33/5/33_252/_article/-char/ja/ ／ https://www.ihi.co.jp/technology/techinfo/contents_no/__icsFiles/afieldfile/2023/06/17/b457509c506b91e3c12f83988c9173eb.pdf",
-    "note": "2026-09-17公開情報調査で追加。売上は有価証券報告書を引用した記事の数値。IHIエアロスペースはロケット・宇宙の別会社で、航空エンジンはIHI本体の事業領域が担う。"
+    "note": "2026-09-17公開情報調査で追加。売上は有価証券報告書を引用した記事の数値。IHIエアロスペースはロケット・宇宙の別会社で、航空エンジンはIHI本体の事業領域が担う。",
+    "atlaProcurement": true
   },
   {
     "id": "engine-khi-aero",
@@ -6954,7 +6955,8 @@
     "ev": "A",
     "exc": 0,
     "src": "https://www.khi.co.jp/mobility/aero/jet_engine/ ／ https://www.khi.co.jp/mobility/aero/jet_engine/trent.html ／ https://www.khi.co.jp/pressrelease/detail/20241120_1.html ／ https://news.yahoo.co.jp/articles/e25df310d74374069db15d3bb89d3b6f88248612",
-    "note": "2026-09-17公開情報調査で追加。"
+    "note": "2026-09-17公開情報調査で追加。",
+    "atlaProcurement": true
   },
   {
     "id": "engine-mhiael",
@@ -6977,7 +6979,8 @@
     "ev": "A",
     "exc": 0,
     "src": "https://www.mhi.com/jp/group/mhiael/news/202212.html ／ https://www.mhi.com/jp/news/1412225609.html",
-    "note": "2026-09-17公開情報調査で追加。"
+    "note": "2026-09-17公開情報調査で追加。",
+    "atlaProcurement": true
   },
   {
     "id": "engine-mhi-gt",
@@ -7000,7 +7003,8 @@
     "ev": "A",
     "exc": 0,
     "src": "https://power.mhi.com/products/gasturbines ／ https://www.mhi.com/jp/technology/review/sites/g/files/jwhtju2326/files/tr/pdf/524/524005.pdf ／ https://patents.google.com/patent/JP5622399B2/ja ／ https://newswitch.jp/p/48282 ／ https://www.nikkei.com/article/DGXZQOUB043ET0U6A200C2000000/",
-    "note": "2026-09-17公開情報調査で追加。SOFC・SOECは別カード「三菱重工業（エナジードメイン）」。"
+    "note": "2026-09-17公開情報調査で追加。SOFC・SOECは別カード「三菱重工業（エナジードメイン）」。",
+    "atlaProcurement": true
   },
   {
     "id": "engine-ihi-power",
@@ -7023,6 +7027,7 @@
     "ev": "A",
     "exc": 0,
     "src": "https://job.mynavi.jp/27/pc/search/corp85861/outline.html ／ https://www.ihi.co.jp/ips/products_land/gt_IM_LM/LM2500.html ／ https://www.ge.com/news/press-releases/marine-industrial-engines/ge-lm2500-marine-gas-turbines-power-japanese-js-kaga/jp",
-    "note": "2026-09-17公開情報調査で追加。GEの発表はIHIグループとしての役割で、機種ごとの担当会社（IHI本体とIHI原動機）の切り分けは要確認。"
+    "note": "2026-09-17公開情報調査で追加。GEの発表はIHIグループとしての役割で、機種ごとの担当会社（IHI本体とIHI原動機）の切り分けは要確認。",
+    "atlaProcurement": true
   }
 ]
