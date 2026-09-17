@@ -665,8 +665,8 @@ const SEED = [
   },
   {
     "id": "seed-2",
-    "name": "三徳",
-    "jsx": "三徳",
+    "name": "三徳（プロテリアルマグネティクス傘下）",
+    "jsx": "三徳（プロテリアルマグネティクス傘下）",
     "stages": [
       2,
       3
@@ -680,7 +680,7 @@ const SEED = [
       "DyTb",
       "Sm"
     ],
-    "own": "プロテリアル子会社・非上場",
+    "own": "プロテリアルマグネティクス子会社・非上場（2026年7月1日移行）",
     "rev": "約239億円（2018年3月期）",
     "prod": "Nd磁石合金、Sm磁石合金、高純度希土類金属、磁石リサイクル",
     "pos": "国内Nd磁石合金市場シェア約65%とされる上流チョークポイント",
@@ -688,8 +688,8 @@ const SEED = [
     "chn": "高。Dy/Tb/Sm原料と中国JV経路、輸出許可を確認",
     "ev": "A",
     "exc": 0,
-    "src": "JSX／DyTb DD／Sm DD",
-    "note": "親会社プロテリアルとは別法人として収録"
+    "src": "JSX／DyTb DD／Sm DD ／ https://www.santoku-corp.co.jp/news/20260701_1.html ／ https://www.santoku-corp.co.jp/company/about.html",
+    "note": "正式商号は株式会社三徳。2026年7月1日のグループ内再編で株式会社プロテリアルから株式会社プロテリアルマグネティクスの子会社へ移行。プロテリアル本体とは別法人として収録"
   },
   {
     "id": "seed-3",
@@ -702,6 +702,9 @@ const SEED = [
     ],
     "subs": [
       "02_compound",
+      "02_metal",
+      "02_recycle",
+      "03_magnet",
       "03_ceramic",
       "03_precursor",
       "04_mag"
@@ -713,14 +716,14 @@ const SEED = [
     ],
     "own": "東証プライム(4063)",
     "rev": "約2.6兆円",
-    "prod": "Y₂O₃・YF₃・YOF・YAG系材料、NdFeB・SmCo磁石、粒界拡散技術",
-    "pos": "Y系精製・粉末と高性能磁石の双方を持つ総合ノード",
+    "prod": "Y₂O₃・YF₃・YOF・YAG系材料、希土類金属・磁石合金、NdFeB・SmCo磁石、工程内材・回収磁石の再資源化",
+    "pos": "信越化学グループとして分離・精製、還元、合金・磁粉、焼結磁石、リサイクルを担う一貫ノード",
     "def": "半導体耐プラズマ材、TBC周辺、高性能磁石、航空宇宙・防衛電子",
     "chn": "高。Y/Dy/Tb/Sm調達、海外精製拠点、輸出管理対象混合物を確認",
     "ev": "A",
     "exc": 1,
-    "src": "JSX／Y DD／DyTb DD／Sm DD",
-    "note": "JSXの2ノードを法人単位で重複統合"
+    "src": "JSX／Y DD／DyTb DD／Sm DD ／ https://www.shinetsu.co.jp/en/sustainability/esg_environment/resource_saving/ ／ https://www.shinetsu.co.jp/en/news/news-release/shin-etsu-chemical-to-set-up-a-base-in-china-to-manufacture-magnet-alloys-for-rare-earth-magnets/",
+    "note": "JSXの2ノードを重複統合。工程2・3は海外子会社・海外工場を含む信越化学グループとしての一貫生産範囲"
   },
   {
     "id": "seed-4",
@@ -1100,7 +1103,7 @@ const SEED = [
     "own": "非上場・旧日立金属",
     "rev": "約7,686億円（2025年度）",
     "prod": "NEOMAX NdFeB焼結磁石、低Dy化磁石",
-    "pos": "三徳を傘下に合金→磁石→リサイクルを統合",
+    "pos": "プロテリアルマグネティクスを介して三徳を傘下に置き、合金→磁石→リサイクルを統合",
     "def": "航空宇宙・防衛用モータ、発電機、センサ",
     "chn": "高。Dy/Tb拡散材、Nd/Pr、リサイクル材の原産地を確認",
     "ev": "A",
@@ -1113,9 +1116,11 @@ const SEED = [
     "name": "TDK",
     "jsx": "TDK",
     "stages": [
+      3,
       4
     ],
     "subs": [
+      "03_magnet",
       "04_mag"
     ],
     "tags": [
@@ -1124,14 +1129,14 @@ const SEED = [
     ],
     "own": "東証プライム(6762)",
     "rev": "約2.2兆円",
-    "prod": "NdFeB・SmCo磁石、HAL工法、Dy削減・フリー磁石",
-    "pos": "高性能磁石・SmCoの世界的大手",
+    "prod": "希土類磁石用合金（TDK Ganzhou）、NdFeB・SmCo磁石、HAL工法、Dy削減・フリー磁石",
+    "pos": "TDKグループとして磁石合金から高性能磁石までを担う。工程3はTDK Ganzhouの事業",
     "def": "センサ、モータ、航空宇宙アクチュエータ、防衛電子",
     "chn": "高。Dy/Tb/Sm調達、拡散材在庫、製品グレード別使用量を確認",
     "ev": "A",
     "exc": 1,
-    "src": "JSX／DyTb DD／Sm DD",
-    "note": "売上条件は例外"
+    "src": "JSX／DyTb DD／Sm DD ／ https://www.tdk.com/en/about_tdk_china/tdk_ganzhou/index.html ／ https://www.tdk.com/en/news_center/press/20181127_01.html",
+    "note": "売上条件は例外。工程3は中国のTDK Ganzhouを含むグループ範囲。希土類の分離・精製・一次金属化は公開根拠未確認のため工程2対象外。SmフラグはTDKのSmCo磁石に基づく既存評価"
   },
   {
     "id": "seed-20",
@@ -7514,6 +7519,121 @@ const SEED = [
       ],
       "researchedAt": "2026-09-15"
     }
+  },
+  {
+    "id": "engine-ihi-aero",
+    "name": "IHI（航空・宇宙・防衛事業領域）",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_engine"
+    ],
+    "tags": [
+      "Y"
+    ],
+    "own": "上場企業 ／ 株式会社IHI（東証プライム、証券コード7013）の事業領域",
+    "rev": "航空・宇宙・防衛セグメント 売上収益 6,481億円（2026年3月期、IFRS）",
+    "prod": "防衛省向け F110（F-2）・F3（T-4）・F7-10（P-1）・T700（ヘリコプター）エンジン ／ 民間 V2500 ファンモジュール、GEnx 低圧タービン・高圧圧縮機後段、Trent の低圧・中圧タービン部品、PW1100G-JM 複合材ファン部品",
+    "pos": "防衛省向けジェットエンジンの生産と、GE・ロールス・ロイス・P&Wとの民間エンジン国際共同開発を担う。",
+    "def": "F-2（F110）、T-4（F3）、P-1（F7-10）、自衛隊ヘリコプター（T700）のエンジンを担当。",
+    "chn": "タービン高温部の遮熱コーティング（TBC）のトップコートは一般にイットリア安定化ジルコニア（YSZ）で、IHIの研究部門も航空エンジン用TBCを報告している。Y原料・溶射材料の調達国は非開示。",
+    "ev": "A",
+    "exc": 0,
+    "src": "https://www.ihi.co.jp/products/aeroengine_space_defense/aircraft_engines/ ／ https://limo.media/articles/-/135977 ／ https://www.jstage.jst.go.jp/article/jhts/33/5/33_252/_article/-char/ja/ ／ https://www.ihi.co.jp/technology/techinfo/contents_no/__icsFiles/afieldfile/2023/06/17/b457509c506b91e3c12f83988c9173eb.pdf",
+    "note": "2026-09-17公開情報調査で追加。売上は有価証券報告書を引用した記事の数値。IHIエアロスペースはロケット・宇宙の別会社で、航空エンジンはIHI本体の事業領域が担う。"
+  },
+  {
+    "id": "engine-khi-aero",
+    "name": "川崎重工業（航空宇宙システムカンパニー ジェットエンジン）",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_engine"
+    ],
+    "tags": [
+      "Y"
+    ],
+    "own": "上場企業 ／ 川崎重工業株式会社（東証プライム、証券コード7012）の社内カンパニー",
+    "rev": "連結売上収益 2兆3,112億円（2026年3月期）。ジェットエンジン事業単体の売上は未確認",
+    "prod": "Trent・RB211・V2500・PW4000・CF34の国際共同開発・分担製造、PW1100G-JM部品、航空機用補助動力装置（APU） ／ ヘリコプター用T55・T53・RTM322エンジン",
+    "pos": "大型から小型までの民間エンジンの国際共同事業に参画。PW1100G-JMの部品修理・整備にも参入。",
+    "def": "ヘリコプター用T55・T53ターボシャフトエンジンを製品として掲載。防衛向け型式の納入実績は企業ページでは未確認。",
+    "chn": "エンジン高温部の遮熱コーティングにはYSZを使うのが一般的。担当モジュールは圧縮機が中心で、Y系材料を使う部位の範囲は要確認。原料調達国は非開示。",
+    "ev": "A",
+    "exc": 0,
+    "src": "https://www.khi.co.jp/mobility/aero/jet_engine/ ／ https://www.khi.co.jp/mobility/aero/jet_engine/trent.html ／ https://www.khi.co.jp/pressrelease/detail/20241120_1.html ／ https://news.yahoo.co.jp/articles/e25df310d74374069db15d3bb89d3b6f88248612",
+    "note": "2026-09-17公開情報調査で追加。"
+  },
+  {
+    "id": "engine-mhiael",
+    "name": "三菱重工航空エンジン株式会社",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_engine"
+    ],
+    "tags": [
+      "Y"
+    ],
+    "own": "非上場 ／ 三菱重工業の民間航空エンジン事業会社（グループ会社）",
+    "rev": "非開示（三菱重工業に連結）",
+    "prod": "PW1100G-JMの燃焼器部品製造・燃焼器モジュール組立、ディフューザーケース",
+    "pos": "PW1100G-JMで燃焼器5,000台・ディフューザーケース3,000台の量産累計出荷を2022年に達成（長崎工場・小牧北工場）。",
+    "def": "民間航空エンジンが中心。防衛向けの個別実績は未確認。",
+    "chn": "燃焼器ライナーの遮熱コーティングにはYSZを使うのが一般的。コーティング材・原料の調達国は非開示。",
+    "ev": "A",
+    "exc": 0,
+    "src": "https://www.mhi.com/jp/group/mhiael/news/202212.html ／ https://www.mhi.com/jp/news/1412225609.html",
+    "note": "2026-09-17公開情報調査で追加。"
+  },
+  {
+    "id": "engine-mhi-gt",
+    "name": "三菱重工業（GTCC・ガスタービン事業）",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_engine"
+    ],
+    "tags": [
+      "Y"
+    ],
+    "own": "上場企業 ／ 三菱重工業株式会社（東証プライム、証券コード7011）のエナジー事業領域",
+    "rev": "連結売上収益 4兆9,741億円（2026年3月期）。GTCC受注高 2兆6,526億円（同）",
+    "prod": "発電用大型ガスタービン（M501J・JAC形など）、ガスタービン・コンバインドサイクル（GTCC）、動翼・静翼の補修",
+    "pos": "1600℃級J形ガスタービンに先進遮熱コーティングを採用。データセンター向けの電力需要でGTCC受注が過去最高。",
+    "def": "発電用が中心。防衛施設・艦艇向けの個別実績は未確認。",
+    "chn": "動翼・静翼の遮熱コーティングは8質量%イットリア部分安定化ジルコニア（YSZ）が従来材で、J形では熱伝導率を下げた先進TBCを開発（三菱重工技報2015）。Y系原料の調達国は非開示。",
+    "ev": "A",
+    "exc": 0,
+    "src": "https://power.mhi.com/products/gasturbines ／ https://www.mhi.com/jp/technology/review/sites/g/files/jwhtju2326/files/tr/pdf/524/524005.pdf ／ https://patents.google.com/patent/JP5622399B2/ja ／ https://newswitch.jp/p/48282 ／ https://www.nikkei.com/article/DGXZQOUB043ET0U6A200C2000000/",
+    "note": "2026-09-17公開情報調査で追加。SOFC・SOECは別カード「三菱重工業（エナジードメイン）」。"
+  },
+  {
+    "id": "engine-ihi-power",
+    "name": "株式会社IHI原動機",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_engine"
+    ],
+    "tags": [
+      "Y"
+    ],
+    "own": "非上場 ／ IHIグループ（株式会社IHIの子会社）",
+    "rev": "約778億円（2024年度）",
+    "prod": "舶用・陸用ガスタービン（LM2500・LM6000など）、ディーゼルエンジン、ガスエンジン、発電装置",
+    "pos": "IHIグループは国内唯一のGE認定LMエンジンLevel4整備工場。舶用ガスタービンを艦艇・高速船に供給。",
+    "def": "IHIは海上自衛隊向けLM2500・LM500の設計・製造・試験と保守を担い、こんごう・むらさめ・たかなみ・あたご・ひゅうが・いずも型護衛艦に採用（GE発表）。",
+    "chn": "ガスタービン高温部の遮熱コーティングにはYSZを使うのが一般的。部品・コーティング材の調達国は非開示。",
+    "ev": "A",
+    "exc": 0,
+    "src": "https://job.mynavi.jp/27/pc/search/corp85861/outline.html ／ https://www.ihi.co.jp/ips/products_land/gt_IM_LM/LM2500.html ／ https://www.ge.com/news/press-releases/marine-industrial-engines/ge-lm2500-marine-gas-turbines-power-japanese-js-kaga/jp",
+    "note": "2026-09-17公開情報調査で追加。GEの発表はIHIグループとしての役割で、機種ごとの担当会社（IHI本体とIHI原動機）の切り分けは要確認。"
   }
 ];
 
