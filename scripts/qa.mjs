@@ -68,6 +68,7 @@ check(
     dataset.companiesInSub("05_engine").length === 9
 );
 check("企業・事業単位184件、工程5は135件、29分類", dataset.companies.length === 184 && dataset.companies.filter(c => c.stages.includes(5)).length === 135 && dataset.subcategories.length === 29);
+check("全29分類に簡潔な解説文を収録", dataset.subcategories.every(sub => typeof sub.description === "string" && sub.description.trim().length >= 8 && sub.description.length <= 40));
 const financialNames = new Set(financials.map(item => item.name));
 check("新規ATLA企業57社の所有・売上を公開情報で調査", financials.length === 57 && reviewed.every(company => financialNames.has(company.name)));
 check("所有・上場の仮表示を57社から解消", reviewed.every(company => company.own && !/所有・上場区分は未確認|^日本企業$/.test(company.own)));
@@ -187,7 +188,29 @@ check(
 
 // --- 生成物の構造 ---------------------------------------------------------
 check("index.html に iframe がない", !/<iframe/i.test(html));
-check("フロー図の高さが1070", /viewBox="0 0 \d+ 1070"/.test(html) || html.includes("var W=1400,H=1070"));
+check(
+  "サブカテゴリーの高さを所属会社数に比例させる",
+  html.includes("minCardHeight=82,perCompany=2.7") &&
+    html.includes("totalSubCount(item.id)*perCompany") &&
+    html.includes("canvas.style.height=H+\"px\"") &&
+    html.includes("totalSubCount(item.id)+'社")
+);
+check("サブカテゴリーに解説文を表示", html.includes('class="re-card-description"') && html.includes("esc(item.description)"));
+check(
+  "サブカテゴリーを横長にして工程間隔を確保",
+  html.includes(".re-sub-card{width:200px") && html.includes("var W=1500") && html.includes("var nodeW=200,matW=200,devW=200"),
+);
+check(
+  "中国原料カードの横幅と比率をサブカテゴリーへ統一",
+  html.includes(".re-stage-card{width:200px;height:90px}") && html.includes('var source={id:"stage01",x:8,w:200'),
+);
+check(
+  "元素絞り込みを代表色と複数色の分割配色で強調",
+  html.includes(".re-sub-card.is-filter-match") &&
+    html.includes("function segmentedGradient(tags,angle,colorValue)") &&
+    html.includes("matchedEls.length>1?\" is-filter-multi\"") &&
+    html.includes("--re-highlight-band:"),
+);
 check("SheetJS の読み込みタグがある", html.includes("xlsx.full.min.js"));
 
 // データ定義が生成領域の外に散らばっていないこと（手書きのコピーが復活していないかの検出）。
