@@ -38,9 +38,36 @@ check("人力判定の分類と納入品を収録", reviewed.every(c => c.atlaPr
 check("調達実績フラグ58社", dataset.companies.filter(c => c.atlaProcurement).length === 58);
 check("希土類対象外のQPS研究所は除外", !dataset.companies.some(c => c.id === "stage05-integrated-10"));
 check("高純度化学研究所はY・Scを維持", sameJson(dataset.companies.find(c => c.id === "seed-4")?.tags, ["Y", "Sc"]));
+const santoku = dataset.companies.find(c => c.id === "seed-2");
+check(
+  "三徳は正式商号を維持してプロテリアルマグネティクス傘下と表示",
+  santoku?.name === "三徳（プロテリアルマグネティクス傘下）" &&
+    santoku?.own.includes("2026年7月1日") && santoku?.note.includes("正式商号は株式会社三徳")
+);
+const shinEtsu = dataset.companies.find(c => c.id === "seed-3");
+check(
+  "信越化学工業はグループ範囲で工程2・3の磁石上流を収録",
+  ["02_compound", "02_metal", "02_recycle", "03_magnet", "03_ceramic", "03_precursor", "04_mag"].every(id => shinEtsu?.subs.includes(id)) &&
+    [2, 3, 4].every(stage => shinEtsu?.stages.includes(stage)) &&
+    shinEtsu?.note.includes("信越化学グループ")
+);
+const tdk = dataset.companies.find(c => c.id === "seed-19");
+check(
+  "TDKはグループ範囲で工程3に収録し工程2は対象外",
+  tdk?.subs.includes("03_magnet") && tdk?.subs.includes("04_mag") &&
+    tdk?.stages.includes(3) && tdk?.stages.includes(4) && !tdk?.stages.includes(2) &&
+    tdk?.note.includes("TDK Ganzhou") && tdk?.note.includes("工程2対象外")
+);
 check("軍事用レーダー・モジュール9社、無人装備・ドローン10社", dataset.companiesInSub("05_military_radar").length === 9 && dataset.companiesInSub("05_unmanned").length === 10);
 check("新設カテゴリーは調達実績企業のみ", [...dataset.companiesInSub("05_military_radar"), ...dataset.companiesInSub("05_unmanned")].every(c => c.atlaProcurement));
-check("企業・事業単位179件、工程5は130件、29分類", dataset.companies.length === 179 && dataset.companies.filter(c => c.stages.includes(5)).length === 130 && dataset.subcategories.length === 29);
+const addedEngineIds = ["engine-ihi-aero", "engine-khi-aero", "engine-mhiael", "engine-mhi-gt", "engine-ihi-power"];
+const addedEngineCompanies = addedEngineIds.map(id => dataset.companies.find(c => c.id === id));
+check(
+  "航空エンジン・ガスタービンの追加調査5社を最重要として収録",
+  addedEngineCompanies.every(company => company?.stages.includes(5) && sameJson(company.subs, ["05_engine"]) && sameJson(company.tags, ["Y"]) && company.ev === "A" && company.note.includes("2026-09-17公開情報調査で追加")) &&
+    dataset.companiesInSub("05_engine").length === 9
+);
+check("企業・事業単位184件、工程5は135件、29分類", dataset.companies.length === 184 && dataset.companies.filter(c => c.stages.includes(5)).length === 135 && dataset.subcategories.length === 29);
 const financialNames = new Set(financials.map(item => item.name));
 check("新規ATLA企業57社の所有・売上を公開情報で調査", financials.length === 57 && reviewed.every(company => financialNames.has(company.name)));
 check("所有・上場の仮表示を57社から解消", reviewed.every(company => company.own && !/所有・上場区分は未確認|^日本企業$/.test(company.own)));
