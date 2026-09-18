@@ -211,6 +211,23 @@ check(
     html.includes("matchedEls.length>1?\" is-filter-multi\"") &&
     html.includes("--re-highlight-band:"),
 );
+check(
+  "サプライチェーンを上下左右移動・拡大縮小・初期表示へ復帰",
+  html.includes('id="re-flow-viewport"') &&
+    html.includes('id="re-map-zoom-out"') &&
+    html.includes('id="re-map-zoom-in"') &&
+    html.includes('id="re-map-fit"') &&
+    html.includes('function fitMapView()') &&
+    html.includes('mapView.scale=1') &&
+    html.includes('canvas.querySelector(\'[data-node-id="stage01"]\')') &&
+    html.includes('viewport.clientWidth/2-sourceCenterX*mapView.scale') &&
+    html.includes('function zoomMap(nextScale,clientX,clientY)') &&
+    html.includes('zoomIn.addEventListener("click",function(){zoomMap(mapView.scale+.1)') &&
+    html.includes('zoomOut.addEventListener("click",function(){zoomMap(mapView.scale-.1)') &&
+    html.includes('viewport.addEventListener("pointermove"') &&
+    html.includes('viewport.addEventListener("wheel"') &&
+    html.includes('height:clamp(520px,72vh,900px)'),
+);
 check("SheetJS の読み込みタグがある", html.includes("xlsx.full.min.js"));
 
 // データ定義が生成領域の外に散らばっていないこと（手書きのコピーが復活していないかの検出）。
