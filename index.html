@@ -44,8 +44,15 @@ button[data-element]:not([data-element="all"])[aria-pressed="true"]{color:var(--
 .re-legend{display:flex;gap:13px;flex-wrap:wrap;font-size:11px;color:var(--faint)}
 .re-legend span{display:inline-flex;align-items:center;gap:5px}
 .re-legend i{width:8px;height:8px;border-radius:50%;display:inline-block}
-.re-flow-wrap{overflow-x:auto;margin-top:12px;padding-bottom:8px}
-.re-flow-canvas{position:relative;width:1500px;min-height:1120px;margin:0 auto}
+.re-map-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:1500px;margin:12px auto 0}
+.re-map-help{font-size:11px;color:var(--faint);line-height:1.45}
+.re-map-tools{display:flex;align-items:center;gap:6px;flex:none}
+.re-map-tools button{border-radius:8px;padding:6px 10px;min-width:36px}
+.re-map-scale{min-width:48px;text-align:center;font:11px ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--sub)}
+.re-flow-wrap{position:relative;overflow:hidden;height:clamp(520px,72vh,900px);margin-top:8px;border:1px solid var(--line);border-radius:12px;background:color-mix(in srgb,var(--panel) 35%,var(--bg));cursor:grab;touch-action:none;overscroll-behavior:contain}
+.re-flow-wrap.is-dragging{cursor:grabbing;user-select:none}
+.re-flow-wrap:focus-visible{outline:2px solid var(--text);outline-offset:3px}
+.re-flow-canvas{position:relative;width:1500px;min-height:1120px;margin:0;transform-origin:0 0;will-change:transform}
 .re-flow-svg{position:absolute;inset:0;width:1500px;height:100%;pointer-events:none}
 .re-path-bg{fill:none;stroke-width:8;stroke-linecap:round;opacity:.14}
 .re-path-fg{fill:none;stroke-width:2;stroke-linecap:round;stroke-dasharray:4 8;opacity:.82}
@@ -159,7 +166,16 @@ button[data-element]:not([data-element="all"])[aria-pressed="true"]{color:var(--
       <button data-element="Sc" type="button" aria-pressed="false">Sc</button>
       <span class="re-status" id="re-status">統合データを準備中…</span>
     </div>
-    <div class="re-flow-wrap">
+    <div class="re-map-toolbar">
+      <span class="re-map-help">マップをドラッグして移動。トラックパッドは2本指で移動、ピンチで拡大・縮小できます。</span>
+      <div class="re-map-tools" role="group" aria-label="マップの拡大縮小">
+        <button id="re-map-zoom-out" type="button" aria-label="縮小">−</button>
+        <span class="re-map-scale" id="re-map-scale" aria-live="polite">100%</span>
+        <button id="re-map-zoom-in" type="button" aria-label="拡大">＋</button>
+        <button id="re-map-fit" type="button">初期表示</button>
+      </div>
+    </div>
+    <div class="re-flow-wrap" id="re-flow-viewport" tabindex="0" aria-label="ドラッグとズームができるサプライチェーンマップ">
       <div class="re-flow-canvas" id="re-flow-canvas" aria-label="Stage 01から05までの希土類サプライチェーン"></div>
     </div>
     <div class="re-route-note" id="re-route-note" aria-live="polite">サブカテゴリーカードの高さは登録社数に比例します。元素で絞り込むと該当カードを代表色で強調し、複数元素に該当するカードは分割配色します。全体表示ではすべての接続線を表示します。</div>
@@ -188,6 +204,7 @@ button[data-element]:not([data-element="all"])[aria-pressed="true"]{color:var(--
   var risk={A:"var(--risk-a)",B:"var(--risk-b)",C:"var(--risk-b)",X:"var(--risk-x)"};
   var riskLabel={A:"◎ 最重要",B:"○ 重要",C:"○ 重要",X:"参考"};
   var data=seed.slice(),allElements=["Y","DyTb","Sm","Sc"],selectedElements=["Y","DyTb","Sm","Sc"],selection={type:"all",id:"all"},traceNodeId=null,selectedId=null;
+  var mapView={scale:1,x:0,y:0,minScale:.25,maxScale:2.5,autoFit:true,initialized:false,dragging:false,moved:false,suppressClick:false};
 
   function compact(v){return String(v==null?"":v).replace(/[\s\n\r　]+/g,"").replace(/[／/]/g,"/")}
   function truthy(v){return v===true||v===1||["1","true","yes","y","○","〇","●","該当"].indexOf(String(v==null?"":v).trim().toLowerCase())>=0}
@@ -332,6 +349,7 @@ button[data-element]:not([data-element="all"])[aria-pressed="true"]{color:var(--
     var canvas=root.querySelector("#re-flow-canvas");
     canvas.style.height=H+"px";
     canvas.innerHTML=svg+cards;
+    if(mapView.initialized)requestAnimationFrame(function(){if(mapView.autoFit)fitMapView();else applyMapView()});
     function traceEdges(id){
       canvas.classList.toggle("is-tracing",!!id);
       var edges=Array.from(canvas.querySelectorAll(".re-edge")),linked=new Set();
@@ -361,6 +379,86 @@ button[data-element]:not([data-element="all"])[aria-pressed="true"]{color:var(--
       traceNodeId=traceable?btn.dataset.id:null;
       selection={type:btn.dataset.type,id:btn.dataset.id};selectedId=null;render()
     })})
+  }
+
+  function clampMapView(){
+    var viewport=root.querySelector("#re-flow-viewport"),canvas=root.querySelector("#re-flow-canvas"),margin=20;
+    var vw=viewport.clientWidth,vh=viewport.clientHeight,cw=canvas.offsetWidth*mapView.scale,ch=canvas.offsetHeight*mapView.scale;
+    if(cw<=vw)mapView.x=(vw-cw)/2;else mapView.x=Math.min(vw/2-margin,Math.max(vw/2-cw+margin,mapView.x));
+    if(ch<=vh)mapView.y=(vh-ch)/2;else mapView.y=Math.min(vh/2-margin,Math.max(vh/2-ch+margin,mapView.y));
+  }
+  function applyMapView(){
+    var canvas=root.querySelector("#re-flow-canvas"),scaleLabel=root.querySelector("#re-map-scale");
+    clampMapView();
+    canvas.style.transform="translate3d("+mapView.x+"px,"+mapView.y+"px,0) scale("+mapView.scale+")";
+    scaleLabel.textContent=Math.round(mapView.scale*100)+"%";
+  }
+  function fitMapView(){
+    var viewport=root.querySelector("#re-flow-viewport"),canvas=root.querySelector("#re-flow-canvas"),source=canvas.querySelector('[data-node-id="stage01"]');
+    var sourceCenterX=source?source.offsetLeft+source.offsetWidth/2:canvas.offsetWidth/2;
+    var sourceCenterY=source?source.offsetTop+source.offsetHeight/2:canvas.offsetHeight/2;
+    mapView.scale=1;
+    mapView.x=viewport.clientWidth/2-sourceCenterX*mapView.scale;
+    mapView.y=viewport.clientHeight/2-sourceCenterY*mapView.scale;
+    mapView.autoFit=true;
+    applyMapView()
+  }
+  function zoomMap(nextScale,clientX,clientY){
+    var viewport=root.querySelector("#re-flow-viewport"),rect=viewport.getBoundingClientRect();
+    var px=clientX==null?viewport.clientWidth/2:clientX-rect.left,py=clientY==null?viewport.clientHeight/2:clientY-rect.top;
+    var mapX=(px-mapView.x)/mapView.scale,mapY=(py-mapView.y)/mapView.scale;
+    mapView.scale=Math.max(mapView.minScale,Math.min(mapView.maxScale,nextScale));
+    mapView.x=px-mapX*mapView.scale;
+    mapView.y=py-mapY*mapView.scale;
+    mapView.autoFit=false;
+    applyMapView()
+  }
+  function initMapView(){
+    if(mapView.initialized)return;
+    var viewport=root.querySelector("#re-flow-viewport"),zoomIn=root.querySelector("#re-map-zoom-in"),zoomOut=root.querySelector("#re-map-zoom-out"),fit=root.querySelector("#re-map-fit");
+    mapView.initialized=true;
+    zoomIn.addEventListener("click",function(){zoomMap(mapView.scale+.1)});
+    zoomOut.addEventListener("click",function(){zoomMap(mapView.scale-.1)});
+    fit.addEventListener("click",fitMapView);
+    viewport.addEventListener("pointerdown",function(event){
+      if(event.button!==0)return;
+      mapView.dragging=true;mapView.moved=false;mapView.startClientX=event.clientX;mapView.startClientY=event.clientY;mapView.startX=mapView.x;mapView.startY=mapView.y;
+      viewport.classList.add("is-dragging")
+    });
+    viewport.addEventListener("pointermove",function(event){
+      if(!mapView.dragging)return;
+      var dx=event.clientX-mapView.startClientX,dy=event.clientY-mapView.startClientY;
+      if(Math.abs(dx)+Math.abs(dy)>4){mapView.moved=true;if(!viewport.hasPointerCapture(event.pointerId))viewport.setPointerCapture(event.pointerId)}
+      mapView.x=mapView.startX+dx;mapView.y=mapView.startY+dy;mapView.autoFit=false;applyMapView();event.preventDefault()
+    });
+    function stopDrag(event){
+      if(!mapView.dragging)return;
+      mapView.dragging=false;viewport.classList.remove("is-dragging");
+      if(viewport.hasPointerCapture(event.pointerId))viewport.releasePointerCapture(event.pointerId);
+      if(mapView.moved){mapView.suppressClick=true;setTimeout(function(){mapView.suppressClick=false},0)}
+    }
+    viewport.addEventListener("pointerup",stopDrag);viewport.addEventListener("pointercancel",stopDrag);
+    viewport.addEventListener("click",function(event){if(mapView.suppressClick){event.preventDefault();event.stopPropagation()}},true);
+    viewport.addEventListener("wheel",function(event){
+      event.preventDefault();
+      if(event.ctrlKey||event.metaKey)zoomMap(mapView.scale*Math.exp(-event.deltaY*.002),event.clientX,event.clientY);
+      else{mapView.x-=event.deltaX;mapView.y-=event.deltaY;mapView.autoFit=false;applyMapView()}
+    },{passive:false});
+    viewport.addEventListener("keydown",function(event){
+      var handled=true,step=48;
+      if(event.key==="ArrowLeft"){mapView.x+=step;mapView.autoFit=false;applyMapView()}
+      else if(event.key==="ArrowRight"){mapView.x-=step;mapView.autoFit=false;applyMapView()}
+      else if(event.key==="ArrowUp"){mapView.y+=step;mapView.autoFit=false;applyMapView()}
+      else if(event.key==="ArrowDown"){mapView.y-=step;mapView.autoFit=false;applyMapView()}
+      else if(event.key==="+"||event.key==="=")zoomMap(mapView.scale+.1);
+      else if(event.key==="-"||event.key==="_")zoomMap(mapView.scale-.1);
+      else if(event.key==="0")fitMapView();
+      else handled=false;
+      if(handled)event.preventDefault()
+    });
+    if(window.ResizeObserver)new ResizeObserver(function(){if(mapView.autoFit)fitMapView();else applyMapView()}).observe(viewport);
+    else window.addEventListener("resize",function(){if(mapView.autoFit)fitMapView();else applyMapView()});
+    requestAnimationFrame(fitMapView)
   }
 
   function subLabel(id){var sub=allSubs.find(function(item){return item.id===id});return sub?sub.label:id}
@@ -504,7 +602,7 @@ button[data-element]:not([data-element="all"])[aria-pressed="true"]{color:var(--
     parseWorkbook(file).then(function(result){data=result.mode==="formal"?mergeCompanyRows(seed,result.rows):result.rows;selectedId=null;root.querySelector("#re-status").textContent=data.length+"社・事業単位・"+file.name;render()}).catch(function(error){root.querySelector("#re-status").innerHTML='<span class="re-error">読込エラー: '+esc(error.message)+'</span>'})
   });
   root.querySelector("#re-status").textContent=data.length+"社・事業単位・Stage 05統合企業リスト反映版";
-  render()
+  render();initMapView()
 })();
 </script>
 </body>
