@@ -190,7 +190,7 @@ check(
 check("index.html に iframe がない", !/<iframe/i.test(html));
 check(
   "サブカテゴリーの高さを所属会社数に比例させる",
-  html.includes("minCardHeight=82,perCompany=2.7") &&
+  html.includes("minCardHeight=70,perCompany=1.8,columnGap=6") &&
     html.includes("totalSubCount(item.id)*perCompany") &&
     html.includes("canvas.style.height=H+\"px\"") &&
     html.includes("totalSubCount(item.id)+'社")
@@ -198,11 +198,14 @@ check(
 check("サブカテゴリーに解説文を表示", html.includes('class="re-card-description"') && html.includes("esc(item.description)"));
 check(
   "サブカテゴリーを横長にして工程間隔を確保",
-  html.includes(".re-sub-card{width:200px") && html.includes("var W=1500") && html.includes("var nodeW=200,matW=200,devW=200"),
+  html.includes(".re-sub-card{width:230px") &&
+    html.includes("var W=1400") &&
+    html.includes("var s2x=295,s3x=578,s4x=861,s5x=1144") &&
+    html.includes("var nodeW=230,matW=230,devW=230"),
 );
 check(
   "中国原料カードの横幅と比率をサブカテゴリーへ統一",
-  html.includes(".re-stage-card{width:200px;height:90px}") && html.includes('var source={id:"stage01",x:8,w:200'),
+  html.includes(".re-stage-card{width:230px;height:82px") && html.includes('var source={id:"stage01",x:12,w:230'),
 );
 check(
   "元素絞り込みを代表色と複数色の分割配色で強調",
@@ -220,13 +223,27 @@ check(
     html.includes('function fitMapView()') &&
     html.includes('mapView.scale=1') &&
     html.includes('canvas.querySelector(\'[data-node-id="stage01"]\')') &&
-    html.includes('viewport.clientWidth/2-sourceCenterX*mapView.scale') &&
+    html.includes('sourceTargetLeft=Math.max(32,Math.min(80,viewport.clientWidth*.07))') &&
+    html.includes('mapView.x=source?sourceTargetLeft-source.offsetLeft:0') &&
     html.includes('function zoomMap(nextScale,clientX,clientY)') &&
     html.includes('zoomIn.addEventListener("click",function(){zoomMap(mapView.scale+.1)') &&
     html.includes('zoomOut.addEventListener("click",function(){zoomMap(mapView.scale-.1)') &&
     html.includes('viewport.addEventListener("pointermove"') &&
     html.includes('viewport.addEventListener("wheel"') &&
+    html.includes('Math.exp(-event.deltaY*.006)') &&
+    html.includes('mapView.pointers=new Map()') &&
+    html.includes('function beginPinch()') &&
+    html.includes('mapView.pinchStartScale*(distance/mapView.pinchStartDistance)') &&
+    html.includes('viewport.addEventListener("gesturechange"') &&
     html.includes('height:clamp(520px,72vh,900px)'),
+);
+check(
+  "工程4・5の名称を更新し枠外システム統合を撤去",
+  html.includes("STAGE 04 — モジュール・機器") &&
+    html.includes("STAGE 05 — 装備・システム") &&
+    !html.includes("OUT OF SCOPE / 枠外") &&
+    !html.includes("re-prime-card") &&
+    !html.includes("→ システム統合"),
 );
 check("SheetJS の読み込みタグがある", html.includes("xlsx.full.min.js"));
 
