@@ -1,7 +1,6 @@
 // 静的QA。src/data/*.json の内容そのものと、生成物（index.html / JSX）が
 // JSONと一致しているかを検査する。文字列やインデックス位置に依存した抽出は行わない。
 import fs from "node:fs/promises";
-import { createHash } from "node:crypto";
 import { loadDataset, fatal, ELEMENTS, normalizeEv } from "./lib/dataset.mjs";
 import { readGeneratedRegion, evaluateHtmlData, evaluateJsxData } from "./lib/generated.mjs";
 import { sheetTags } from "./import-atla.mjs";
@@ -22,8 +21,6 @@ const dataset = await loadDataset().catch(fatal);
 const html = await fs.readFile(new URL("../index.html", import.meta.url), "utf8");
 const jsx = await fs.readFile(new URL("../src/希土類サプライチェーン.jsx", import.meta.url), "utf8");
 const financials = JSON.parse(await fs.readFile(new URL("../src/data/company-financials.json", import.meta.url), "utf8"));
-const pagesWorkflow = await fs.readFile(new URL("../.github/workflows/pages.yml", import.meta.url), "utf8");
-const vendoredXlsx = await fs.readFile(new URL("../assets/vendor/xlsx.full.min.js", import.meta.url));
 
 // --- データ側の不変条件 ---------------------------------------------------
 report.companies = dataset.companies.length;
@@ -255,11 +252,10 @@ check(
     !html.includes("→ システム統合"),
 );
 check(
-  "SheetJSを検証済みローカル資産から読み込む",
-  html.includes('<script src="./assets/vendor/xlsx.full.min.js"></script>') &&
-    !/<script[^>]+src=["']https?:\/\//i.test(html) &&
-    createHash("sha256").update(vendoredXlsx).digest("hex") === "cc015130aa8521e7f088f88898eba949ccdcbfb38df0bd129b44b7273c3a6f41" &&
-    pagesWorkflow.includes("cp -R assets _site/"),
+  "画面からExcel読込機能を撤去",
+  !html.includes('type="file"') && !jsx.includes('type="file"') &&
+    !html.includes("Excelを読み込む") && !jsx.includes("Excelを読み込む") &&
+    !/\bXLSX\b/.test(html) && !/\bXLSX\b/.test(jsx),
 );
 check(
   "公開生成物に元Spreadsheet情報がない",

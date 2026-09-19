@@ -30,8 +30,8 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,B
 .re-title{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:30px;font-weight:500;margin:7px 0 0}
 .re-header{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
 .re-controls{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:15px}
-button,.re-file-label{font:13px inherit;color:var(--sub);background:transparent;border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer}
-button:hover,.re-file-label:hover{background:var(--panel-hi);color:var(--text)}
+button{font:13px inherit;color:var(--sub);background:transparent;border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer}
+button:hover{background:var(--panel-hi);color:var(--text)}
 button[aria-pressed="true"]{color:var(--text);border-color:var(--text);background:var(--panel-hi)}
 button[data-element="Y"]{--re-filter-color:var(--y)}
 button[data-element="DyTb"]{--re-filter-color:var(--dytb)}
@@ -40,8 +40,6 @@ button[data-element="Sc"]{--re-filter-color:var(--sc)}
 button[data-element]:not([data-element="all"]){color:var(--re-filter-color);border-color:var(--re-filter-color)}
 button[data-element]:not([data-element="all"]):hover{color:var(--re-filter-color);border-color:var(--re-filter-color);background:color-mix(in srgb,var(--re-filter-color) 14%,transparent)}
 button[data-element]:not([data-element="all"])[aria-pressed="true"]{color:var(--bg);border-color:var(--re-filter-color);background:var(--re-filter-color)}
-.re-file-label{border-radius:8px;color:var(--text);background:var(--panel-hi)}
-.re-file-label input{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
 .re-status{font-size:12px;color:var(--faint);margin-left:auto}
 .re-legend{display:flex;gap:13px;flex-wrap:wrap;font-size:11px;color:var(--faint)}
 .re-legend span{display:inline-flex;align-items:center;gap:5px}
@@ -139,7 +137,6 @@ button[data-element]:not([data-element="all"])[aria-pressed="true"]{color:var(--
 .re-more{margin-top:5px}
 .re-more summary{width:max-content;color:var(--sc);font-size:11px;cursor:pointer}
 .re-more div{margin-top:6px;color:var(--sub)}
-.re-error{color:var(--risk-a)}
 @media(max-width:980px){.re-main{grid-template-columns:1fr}.re-dossier{position:static}}
 @media(max-width:720px){.re-dep-grid{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}}
 @media(max-width:560px){.re-shell{padding:18px 12px 36px}.re-title{font-size:23px}.re-status{margin-left:0;width:100%}.re-company-grid{grid-template-columns:1fr}.re-route-row{grid-template-columns:1fr}.re-route-elements{margin-top:-5px}}
@@ -157,8 +154,6 @@ button[data-element]:not([data-element="all"])[aria-pressed="true"]{color:var(--
       </div>
     </header>
     <div class="re-controls">
-      <label class="re-file-label">Excelを読み込む<input id="re-xlsx" type="file" accept=".xlsx,.xls"></label>
-      <button id="re-reset" type="button">初期データ</button>
       <button data-element="all" type="button" aria-pressed="true">全体</button>
       <button data-element="Y" type="button" aria-pressed="false">Y</button>
       <button data-element="DyTb" type="button" aria-pressed="false">Dy・Tb</button>
@@ -186,7 +181,6 @@ button[data-element]:not([data-element="all"])[aria-pressed="true"]{color:var(--
     </main>
   </div>
 </div>
-<script src="./assets/vendor/xlsx.full.min.js"></script>
 <script>
 (function(){
   var root=document.getElementById("rare-earth-original-flow");
@@ -206,8 +200,6 @@ button[data-element]:not([data-element="all"])[aria-pressed="true"]{color:var(--
   var data=seed.slice(),allElements=["Y","DyTb","Sm","Sc"],selectedElements=["Y","DyTb","Sm","Sc"],selection={type:"all",id:"all"},traceNodeId=null,selectedId=null;
   var mapView={scale:1,x:0,y:0,minScale:.25,maxScale:2.5,autoFit:true,initialized:false,dragging:false,moved:false,suppressClick:false};
 
-  function compact(v){return String(v==null?"":v).replace(/[\s\n\r　]+/g,"").replace(/[／/]/g,"/")}
-  function truthy(v){return v===true||v===1||["1","true","yes","y","○","〇","●","該当"].indexOf(String(v==null?"":v).trim().toLowerCase())>=0}
   function esc(v){return String(v==null?"":v).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]})}
   function summarizeItems(value,limit){
     var text=String(value||"").trim(),prefix="",body=text,match=text.match(/^(防衛装備庁納入品（[^）]+）：)(.*)$/);
@@ -222,15 +214,6 @@ button[data-element]:not([data-element="all"])[aria-pressed="true"]{color:var(--
       var tags=Array.isArray(c.tags)?c.tags:[];
       return tags.some(function(tag){return selectedElements.indexOf(tag)>=0})
     })
-  }
-  function mergeCompanyRows(base,incoming){
-    var map=new Map(base.map(function(c){return[c.name,c]}));
-    incoming.forEach(function(c){
-      var p=map.get(c.name);
-      if(!p){map.set(c.name,c);return}
-      map.set(c.name,Object.assign({},p,c,{id:p.id,stages:Array.from(new Set((p.stages||[]).concat(c.stages||[]))),subs:Array.from(new Set((p.subs||[]).concat(c.subs||[]))),tags:Array.from(new Set((p.tags||[]).concat(c.tags||[]))),formal:!!(p.formal||c.formal),formalSource:[p.formalSource,c.formalSource].filter(Boolean).filter(function(v,i,a){return a.indexOf(v)===i}).join(" / ")}))
-    });
-    return Array.from(map.values())
   }
   function inSelection(c){
     if(selection.type==="all")return true;
@@ -586,30 +569,6 @@ button[data-element]:not([data-element="all"])[aria-pressed="true"]{color:var(--
     }).join("")+'</dl></div>';
   }
 
-  function parseWorkbook(file){
-    if(!window.XLSX)return Promise.reject(new Error("同梱のExcel読込ライブラリを読み込めません。配布ファイル一式が揃っているか確認してください"));
-    return file.arrayBuffer().then(function(buffer){
-      var wb=XLSX.read(buffer,{type:"array"}),name=wb.SheetNames.find(function(n){return/正式採用リスト|統合企業一覧|企業一覧/.test(n)})||wb.SheetNames[0],sheet=wb.Sheets[name];
-      var matrix=XLSX.utils.sheet_to_json(sheet,{header:1,defval:"",raw:false});
-      var hr=matrix.findIndex(function(row){var cs=row.map(compact);return cs.some(function(v){return v.indexOf("企業名")>=0})&&cs.some(function(v){return v==="Stage01"})});
-      if(hr<0)throw new Error("統合企業一覧のヘッダー行を検出できません");
-      var headers=matrix[hr].map(function(v){return String(v||"").trim()}),norm=headers.map(compact);
-      function idx(){for(var a=0;a<arguments.length;a++){var t=compact(arguments[a]),i=norm.indexOf(t);if(i>=0)return i;i=norm.findIndex(function(h){return h.indexOf(t)>=0});if(i>=0)return i}return-1}
-      function at(row){var names=Array.prototype.slice.call(arguments,1),i=idx.apply(null,names);return i>=0?row[i]:""}
-      var parsed=matrix.slice(hr+1).map(function(row,i){
-        var name=at(row,"企業名（統合）","企業名");if(!String(name).trim())return null;
-        var st=[1,2,3,4,5].filter(function(n){return truthy(at(row,"Stage0"+n,"Stage"+n))});
-        var subText=String(at(row,"サブカテゴリー")||"");
-        var subIds=allSubs.filter(function(s){return truthy(at(row,s.header||((s.id.indexOf("04_")===0?"04 ":"05 ")+s.label),s.label))||compact(subText).indexOf(compact(s.header||s.label))>=0||compact(subText).indexOf(compact(s.label))>=0||(s.id==="02_trade"&&(truthy(at(row,"02 原料商流・品質保証","原料商流・品質保証"))||compact(subText).indexOf(compact("原料商流・品質保証"))>=0))}).map(function(s){return s.id});
-        subIds.forEach(function(id){var n=Number(id.slice(0,2));if(st.indexOf(n)<0)st.push(n)});
-        var tags=["Y","DyTb","Sm","Sc"].filter(function(t){return truthy(at(row,t,t==="DyTb"?"Dy/Tb":t))});
-        return{id:"xlsx-"+i,name:String(name).trim(),stages:st,subs:subIds,tags:tags,own:String(at(row,"所有・上場")||""),rev:String(at(row,"売上高","売上規模")||""),prod:String(at(row,"主要製品・役割","主要製品")||""),pos:String(at(row,"市場地位・ニッチ性","市場地位","シェア・地位")||""),def:String(at(row,"航空・宇宙・防衛接続","防衛・航空宇宙")||""),bom:String(at(row,"希土類BOM根拠","BOM根拠")||""),chn:String(at(row,"中国依存・DD論点","中国依存評価","中国依存")||""),gap:String(at(row,"追加DDギャップ")||""),ev:ev(at(row,"証拠ランク")),exc:truthy(at(row,"売上例外")),src:String(at(row,"参照元","一次資料")||""),note:String(at(row,"備考","注記")||""),formal:truthy(at(row,"正式採用","正式採用フラグ")),formalSource:String(at(row,"採用元","正式採用根拠")||"")};
-      }).filter(Boolean);
-      if(!parsed.length)throw new Error("企業データを読み込めませんでした");
-      return{rows:parsed,mode:/正式採用リスト/.test(name)?"formal":"replace"};
-    })
-  }
-
   function render(){
     root.querySelectorAll("[data-element]").forEach(function(btn){
       var key=btn.dataset.element;
@@ -631,12 +590,6 @@ button[data-element]:not([data-element="all"])[aria-pressed="true"]{color:var(--
     }
     traceNodeId=null;selectedId=null;render()
   })});
-  root.querySelector("#re-reset").addEventListener("click",function(){data=seed.slice();selectedElements=allElements.slice();selection={type:"all",id:"all"};traceNodeId=null;selectedId=null;root.querySelector("#re-status").textContent=data.length+"社・事業単位・統合DD初期データ";root.querySelector("#re-xlsx").value="";render()});
-  root.querySelector("#re-xlsx").addEventListener("change",function(event){
-    var file=event.target.files&&event.target.files[0];if(!file)return;
-    root.querySelector("#re-status").textContent="読込中…";
-    parseWorkbook(file).then(function(result){data=result.mode==="formal"?mergeCompanyRows(seed,result.rows):result.rows;selectedId=null;root.querySelector("#re-status").textContent=data.length+"社・事業単位・"+file.name;render()}).catch(function(error){root.querySelector("#re-status").innerHTML='<span class="re-error">読込エラー: '+esc(error.message)+'</span>'})
-  });
   root.querySelector("#re-status").textContent=data.length+"社・事業単位・Stage 05統合企業リスト反映版";
   render();initMapView()
 })();
