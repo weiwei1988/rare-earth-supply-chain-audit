@@ -1,6 +1,7 @@
 // 静的QA。src/data/*.json の内容そのものと、生成物（index.html / JSX）が
 // JSONと一致しているかを検査する。文字列やインデックス位置に依存した抽出は行わない。
 import fs from "node:fs/promises";
+import { createHash } from "node:crypto";
 import { loadDataset, fatal, ELEMENTS, normalizeEv } from "./lib/dataset.mjs";
 import { readGeneratedRegion, evaluateHtmlData, evaluateJsxData } from "./lib/generated.mjs";
 import { sheetTags } from "./import-atla.mjs";
@@ -21,6 +22,8 @@ const dataset = await loadDataset().catch(fatal);
 const html = await fs.readFile(new URL("../index.html", import.meta.url), "utf8");
 const jsx = await fs.readFile(new URL("../src/希土類サプライチェーン.jsx", import.meta.url), "utf8");
 const financials = JSON.parse(await fs.readFile(new URL("../src/data/company-financials.json", import.meta.url), "utf8"));
+const pagesWorkflow = await fs.readFile(new URL("../.github/workflows/pages.yml", import.meta.url), "utf8");
+const vendoredXlsx = await fs.readFile(new URL("../assets/vendor/xlsx.full.min.js", import.meta.url));
 
 // --- データ側の不変条件 ---------------------------------------------------
 report.companies = dataset.companies.length;
@@ -36,6 +39,12 @@ check("文脈再確認後の人力判定57社を収録", reviewed.length === 57)
 check("シート指定の希土類フラグと一致", reviewed.every(c => sameJson(c.tags, sheetTags(c.atla.rareEarthFlags))));
 check("人力判定の分類と納入品を収録", reviewed.every(c => c.atlaProcurement && c.stages.includes(5) && c.atla.categories.every(s => c.subs.includes(s.id) && s.products.length && s.products.every(p => c.def.includes(p)))));
 check("調達実績フラグ63社", dataset.companies.filter(c => c.atlaProcurement).length === 63);
+const forbiddenPublicProvenance = ["row", "sourceUrl", "userReason", "spreadsheetId", "sheetId"];
+check(
+  "公開企業データに元Spreadsheetの識別子・行番号・自由記述がない",
+  dataset.companies.every(company => !forbiddenPublicProvenance.some(key => company.atla?.[key] !== undefined)) &&
+    !JSON.stringify(dataset.companies).includes("docs.google.com/spreadsheets/"),
+);
 check("希土類対象外のQPS研究所は除外", !dataset.companies.some(c => c.id === "stage05-integrated-10"));
 check("高純度化学研究所はY・Scを維持", sameJson(dataset.companies.find(c => c.id === "seed-4")?.tags, ["Y", "Sc"]));
 const santoku = dataset.companies.find(c => c.id === "seed-2");
@@ -245,7 +254,23 @@ check(
     !html.includes("re-prime-card") &&
     !html.includes("→ システム統合"),
 );
-check("SheetJS の読み込みタグがある", html.includes("xlsx.full.min.js"));
+check(
+  "SheetJSを検証済みローカル資産から読み込む",
+  html.includes('<script src="./assets/vendor/xlsx.full.min.js"></script>') &&
+    !/<script[^>]+src=["']https?:\/\//i.test(html) &&
+    createHash("sha256").update(vendoredXlsx).digest("hex") === "cc015130aa8521e7f088f88898eba949ccdcbfb38df0bd129b44b7273c3a6f41" &&
+    pagesWorkflow.includes("cp -R assets _site/"),
+);
+check(
+  "公開生成物に元Spreadsheet情報がない",
+  !html.includes("docs.google.com/spreadsheets/") && !jsx.includes("docs.google.com/spreadsheets/") &&
+    !/\buserReason\b/.test(html) && !/\buserReason\b/.test(jsx),
+);
+check(
+  "公開画面の外部通信とリファラー送信を制限",
+  html.includes('name="referrer" content="no-referrer"') &&
+    html.includes("connect-src 'none'") && html.includes("default-src 'self'"),
+);
 
 // データ定義が生成領域の外に散らばっていないこと（手書きのコピーが復活していないかの検出）。
 const htmlRegion = readGeneratedRegion(html, "index.html");

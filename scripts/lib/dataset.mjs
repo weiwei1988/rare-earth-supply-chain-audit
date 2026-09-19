@@ -134,6 +134,9 @@ export async function loadDataset() {
     assertSubset(company.stages, stageIds, `${company.name} の stages`);
     assertSubset(company.tags, ELEMENTS, `${company.name} の tags`);
     if (!EVALUATION_PATTERN.test(String(company.ev ?? "").trim())) throw new ValidationError(`${company.name} の評価表記 ${company.ev} を解釈できません（A/B/C/X に ± を付けた表記か「参考」）。`);
+    const privateAtlaFields = ["row", "sourceUrl", "userReason", "spreadsheetId", "sheetId"].filter((key) => company.atla?.[key] !== undefined);
+    if (privateAtlaFields.length) throw new ValidationError(`${company.name} の公開データに内部シート情報があります: ${privateAtlaFields.join(", ")}`);
+    if (JSON.stringify(company).includes("docs.google.com/spreadsheets/")) throw new ValidationError(`${company.name} の公開データにGoogle Spreadsheet URLがあります`);
     if (company.financial) {
       if (!['A', 'B', 'C'].includes(company.financial.confidence)) throw new ValidationError(`${company.name} の財務調査確度が不正です`);
       if (!Array.isArray(company.financial.sourceUrls) || !company.financial.sourceUrls.length) throw new ValidationError(`${company.name} の財務調査出典がありません`);
