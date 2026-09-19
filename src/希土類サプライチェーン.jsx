@@ -1,13 +1,10 @@
-import React, { useMemo, useRef, useState } from "react";
+import React, { useMemo, useState } from "react";
 
 /**
  * 希土類サプライチェーン DD Explorer
  *
- * - 統合Excelの内容を初期データとして内蔵
- * - 同じ列構造の .xlsx / .xls を画面から再アップロード可能
+ * - 統合済みの監査データを静的データとして内蔵
  * - Stage 04 / 05 のサブカテゴリーと Y / DyTb / Sm / Sc フラグを自動反映
- *
- * XLSXの読込みには、ホスト画面へ同梱した SheetJS を使用します。
  */
 
 const COLORS = {
@@ -7631,13 +7628,6 @@ const DEPENDENCY_ROWS = [
 ];
 /* GENERATED DATA END */
 
-// Excel取り込み行にも同じ規則を適用する（初期データには生成時点で反映済み）。
-const applyStage05RobotSmExposure = (rows) => rows.map((company) =>
-  !company.atla && (company.subs || []).includes("05_robot")
-    ? { ...company, tags: [...new Set([...(company.tags || []), "Sm"])] }
-    : company
-);
-
 function summarizeItems(value, limit) {
   const text = String(value || "").trim();
   const match = text.match(/^(防衛装備庁納入品（[^）]+）：)(.*)$/);
@@ -7663,13 +7653,10 @@ function pieGradient(segments) {
 }
 
 export default function RareEarthDDExplorer() {
-  const [companies, setCompanies] = useState(SEED);
+  const companies = SEED;
   const [selectedElements, setSelectedElements] = useState(ALL_ELEMENT_IDS);
   const [selection, setSelection] = useState({ stage: 2, sub: null });
   const [companyId, setCompanyId] = useState(null);
-  const [sourceName, setSourceName] = useState("統合DD初期データ");
-  const [status, setStatus] = useState("");
-  const fileRef = useRef(null);
 
   const filteredByElement = useMemo(() =>
     companies.filter((company) => company.tags.some((tag) => selectedElements.includes(tag))),
@@ -7706,33 +7693,6 @@ export default function RareEarthDDExplorer() {
     setCompanyId(null);
   };
 
-  const importFile = async (event) => {
-    const file = event.target.files && event.target.files[0];
-    if (!file) return;
-    setStatus("読込中…");
-    try {
-      const result = await readExcel(file);
-      const next = applyStage05RobotSmExposure(result.mode === "formal" ? upsertCompanyRows(SEED, result.rows) : result.rows);
-      setCompanies(next);
-      setSourceName(file.name);
-      setStatus(next.length + "社・事業単位を反映");
-      setCompanyId(null);
-    } catch (error) {
-      setStatus("読込エラー: " + (error && error.message ? error.message : String(error)));
-    } finally {
-      event.target.value = "";
-    }
-  };
-
-  const reset = () => {
-    setCompanies(SEED);
-    setSourceName("統合DD初期データ");
-    setStatus("初期データに戻しました");
-    setCompanyId(null);
-    setSelectedElements(ALL_ELEMENT_IDS);
-    setSelection({ stage: 2, sub: null });
-  };
-
   const toggleElement = (id) => {
     if (id === "all") {
       setSelectedElements(ALL_ELEMENT_IDS);
@@ -7756,7 +7716,7 @@ export default function RareEarthDDExplorer() {
         .re-kicker{font:12px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.18em;color:${COLORS.faint}}
         .re-title{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:30px;margin:7px 0 0}
         .re-controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-        .re-btn,.re-file{border:1px solid ${COLORS.line};background:transparent;color:${COLORS.sub};border-radius:999px;padding:7px 13px;font:13px inherit;cursor:pointer}
+        .re-btn{border:1px solid ${COLORS.line};background:transparent;color:${COLORS.sub};border-radius:999px;padding:7px 13px;font:13px inherit;cursor:pointer}
         .re-btn[data-active="true"]{color:${COLORS.text};border-color:currentColor;background:${COLORS.panelHi}}
         .re-btn[data-element="Y"]{--re-filter-color:${COLORS.Y}}
         .re-btn[data-element="DyTb"]{--re-filter-color:${COLORS.DyTb}}
@@ -7765,7 +7725,6 @@ export default function RareEarthDDExplorer() {
         .re-btn[data-element]:not([data-element="all"]){color:var(--re-filter-color);border-color:var(--re-filter-color)}
         .re-btn[data-element]:not([data-element="all"]):hover{color:var(--re-filter-color);border-color:var(--re-filter-color);background:color-mix(in srgb,var(--re-filter-color) 14%,transparent)}
         .re-btn[data-element]:not([data-element="all"])[data-active="true"]{color:${COLORS.ink};border-color:var(--re-filter-color);background:var(--re-filter-color)}
-        .re-file{border-radius:8px;color:${COLORS.text};background:${COLORS.panelHi}}
         .re-flow{display:grid;grid-template-columns:repeat(5,minmax(215px,1fr));gap:20px;margin-top:24px;overflow-x:auto;padding-bottom:8px}
         .re-stage{position:relative;min-height:158px;border:1px solid ${COLORS.line};border-top:3px solid ${COLORS.line};border-radius:12px;background:${COLORS.panel};padding:14px;text-align:left;color:${COLORS.text};cursor:pointer}
         .re-stage[data-active="true"]{border-top-color:${COLORS.text};background:${COLORS.panelHi}}
@@ -7828,11 +7787,6 @@ export default function RareEarthDDExplorer() {
             <div className="re-kicker">DUAL-USE SUPPLY CHAIN AUDIT — Y / Dy·Tb / Sm / Sc</div>
             <h1 className="re-title">希土類デュアルユース・サプライチェーン監査</h1>
           </div>
-          <div className="re-controls">
-            <input ref={fileRef} type="file" accept=".xlsx,.xls" onChange={importFile} style={{ display: "none" }} />
-            <button className="re-file" onClick={() => fileRef.current && fileRef.current.click()}>Excelを読み込む</button>
-            <button className="re-btn" onClick={reset}>初期データ</button>
-          </div>
         </div>
 
         <div className="re-controls" style={{ marginTop: 16 }}>
@@ -7847,8 +7801,7 @@ export default function RareEarthDDExplorer() {
         </div>
 
         <div className="re-meta">
-          <span>{companies.length}社・事業単位　|　データ: {sourceName}</span>
-          <span>{status}</span>
+          <span>{companies.length}社・事業単位</span>
         </div>
 
         <section className="re-flow" aria-label="希土類サプライチェーン">
