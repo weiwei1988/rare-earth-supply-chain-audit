@@ -52,11 +52,10 @@ button[data-element]:not([data-element="all"])[aria-pressed="true"]{color:var(--
 .re-flow-wrap{position:relative;overflow:hidden;height:clamp(520px,72vh,900px);margin-top:8px;border:1px solid var(--line);border-radius:12px;background:color-mix(in srgb,var(--panel) 35%,var(--bg));cursor:grab;touch-action:none;overscroll-behavior:contain}
 .re-flow-wrap.is-dragging{cursor:grabbing;user-select:none}
 .re-flow-wrap:focus-visible{outline:2px solid var(--text);outline-offset:3px}
-.re-flow-canvas{position:relative;width:1500px;min-height:1120px;margin:0;transform-origin:0 0;will-change:transform}
-.re-flow-svg{position:absolute;inset:0;width:1500px;height:100%;pointer-events:none}
+.re-flow-canvas{position:relative;width:1400px;min-height:920px;margin:0;transform-origin:0 0;will-change:transform}
+.re-flow-svg{position:absolute;inset:0;width:1400px;height:100%;pointer-events:none}
 .re-path-bg{fill:none;stroke-width:8;stroke-linecap:round;opacity:.14}
 .re-path-fg{fill:none;stroke-width:2;stroke-linecap:round;stroke-dasharray:4 8;opacity:.82}
-.re-path-prime{fill:none;stroke:var(--line);stroke-width:1.4;stroke-dasharray:4 6}
 .re-edge{transition:opacity .12s ease}
 .re-flow-canvas.is-tracing .re-edge:not(.is-linked){opacity:0!important}
 .re-route-note{margin:4px auto 0;max-width:1500px;border:1px solid var(--line);border-radius:10px;background:var(--panel);padding:10px 12px;color:var(--sub);font-size:11px;line-height:1.55}
@@ -69,14 +68,13 @@ button[data-element]:not([data-element="all"])[aria-pressed="true"]{color:var(--
 .re-card:hover{transform:translateY(-1px)}
 .re-card[aria-pressed="true"]{background:var(--panel-hi);border-color:var(--text)}
 .re-card.is-dim{opacity:.22}
-.re-stage-card{width:200px;height:90px}
-.re-sub-card{width:200px;min-height:82px;padding:7px 10px 24px;overflow:hidden;transition:opacity .12s ease,border-color .12s ease,background .12s ease,box-shadow .12s ease,transform .12s ease}
+.re-stage-card{width:230px;height:82px;padding:8px 10px}
+.re-sub-card{width:230px;min-height:70px;padding:6px 9px 21px;overflow:hidden;transition:opacity .12s ease,border-color .12s ease,background .12s ease,box-shadow .12s ease,transform .12s ease}
 .re-sub-card.is-filter-match{background:var(--re-highlight-bg);border-color:var(--re-highlight-primary);box-shadow:0 0 0 1px color-mix(in srgb,var(--re-highlight-primary) 30%,transparent)}
 .re-sub-card.is-filter-match::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--re-highlight-band)}
 .re-sub-card.is-filter-match[aria-pressed="true"]{box-shadow:0 0 0 2px var(--text),0 0 0 4px var(--re-highlight-primary)}
 .re-mat-card{width:158px;height:70px}
 .re-device-card{width:170px;height:58px}
-.re-prime-card{width:180px;height:128px;border-style:dashed;background:transparent}
 .re-card-code{font:10px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.13em;color:var(--faint)}
 .re-card-title{font-size:13px;font-weight:500;margin-top:7px;line-height:1.35}
 .re-sub-card .re-card-code{font-size:9px;letter-spacing:.1em;white-space:nowrap}
@@ -85,11 +83,11 @@ button[data-element]:not([data-element="all"])[aria-pressed="true"]{color:var(--
 .re-sub-card[data-id="04_coat"] .re-card-title{font-size:10px;line-height:1.15;margin-top:3px;letter-spacing:-.03em}
 .re-sub-card[data-id="05_energy"] .re-card-title{font-size:9px;line-height:1.1;margin-top:3px;letter-spacing:-.03em;padding-right:18px}
 .re-card-sub{font-size:11px;color:var(--sub);margin-top:4px;line-height:1.35}
-.re-card-description{font-size:10px;color:var(--faint);margin-top:6px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.re-card-count{position:absolute;right:9px;bottom:7px;font:11px ui-monospace,SFMono-Regular,Menlo,monospace;border:1px solid var(--line);border-radius:999px;padding:0 7px;color:var(--sub)}
-.re-card-tags{position:absolute;left:10px;bottom:6px;display:flex;gap:4px;margin:0;font:10px ui-monospace,SFMono-Regular,Menlo,monospace;line-height:1;white-space:nowrap}
+.re-card-description{font-size:10px;color:var(--faint);margin-top:4px;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.re-card-count{position:absolute;right:8px;bottom:5px;font:10px ui-monospace,SFMono-Regular,Menlo,monospace;border:1px solid var(--line);border-radius:999px;padding:0 6px;color:var(--sub)}
+.re-card-tags{position:absolute;left:9px;bottom:5px;display:flex;gap:4px;margin:0;font:10px ui-monospace,SFMono-Regular,Menlo,monospace;line-height:1;white-space:nowrap}
 .re-stamp{position:absolute;border:1.5px solid var(--risk-a);color:var(--risk-a);border-radius:4px;padding:3px 8px;font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:11px;background:var(--bg)}
-.re-column-label{position:absolute;top:4px;width:220px;font:10px ui-monospace,SFMono-Regular,Menlo,monospace;line-height:1.35;letter-spacing:.12em;color:var(--faint)}
+.re-column-label{position:absolute;top:4px;width:230px;font:10px ui-monospace,SFMono-Regular,Menlo,monospace;line-height:1.35;letter-spacing:.1em;color:var(--faint)}
 .re-detail-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:18px 0 12px}
 .re-detail-head h2{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:19px;font-weight:500;margin:0}
 .re-detail-head span{font-size:12px;color:var(--faint)}
@@ -167,7 +165,7 @@ button[data-element]:not([data-element="all"])[aria-pressed="true"]{color:var(--
       <span class="re-status" id="re-status">統合データを準備中…</span>
     </div>
     <div class="re-map-toolbar">
-      <span class="re-map-help">マップをドラッグして移動。トラックパッドは2本指で移動、ピンチで拡大・縮小できます。</span>
+      <span class="re-map-help">マップをドラッグして移動。トラックパッドは2本指、タッチ画面は1本指で移動し、ピンチで拡大・縮小できます。</span>
       <div class="re-map-tools" role="group" aria-label="マップの拡大縮小">
         <button id="re-map-zoom-out" type="button" aria-label="縮小">−</button>
         <span class="re-map-scale" id="re-map-scale" aria-live="polite">100%</span>
@@ -240,9 +238,8 @@ button[data-element]:not([data-element="all"])[aria-pressed="true"]{color:var(--
   }
   function list(){return visible().filter(inSelection)}
   function curve(x1,y1,x2,y2){var dx=(x2-x1)*.55;return"M "+x1+" "+y1+" C "+(x1+dx)+" "+y1+", "+(x2-dx)+" "+y2+", "+x2+" "+y2}
-  function path(d,color,dim,prime,meta){
+  function path(d,color,dim,meta){
     var attrs=meta?' data-from="'+esc(meta.from)+'" data-to="'+esc(meta.to)+'" data-element="'+esc(meta.element)+'" role="img" aria-label="'+esc(meta.title)+'"':'';
-    if(prime)return'<g class="re-edge re-edge-prime"'+attrs+'><title>'+esc(meta.title)+'</title><path class="re-path-prime" d="'+d+'"></path></g>';
     return'<g class="re-edge"'+attrs+' opacity="'+(dim?.08:1)+'">'+(meta?'<title>'+esc(meta.title)+'</title>':'')+'<path class="re-path-bg" stroke="'+color+'" d="'+d+'"></path><path class="re-path-fg" stroke="'+color+'" d="'+d+'"></path></g>'
   }
   function tagLabel(t){return t==="DyTb"?"Dy・Tb":t}
@@ -254,9 +251,9 @@ button[data-element]:not([data-element="all"])[aria-pressed="true"]{color:var(--
   function activeEls(item){var forced=item.forceEls||[];return item.els.filter(function(element){return forced.indexOf(element)>=0||subElementCount(item.id,element)>0})}
 
   function renderFlow(){
-    var W=1500,minCardHeight=82,perCompany=2.7,columnGap=10;
-    var s2x=240,s3x=505,s4x=770,s5x=1035,primeX=1300;
-    var nodeW=200,matW=200,devW=200;
+    var W=1400,minCardHeight=70,perCompany=1.8,columnGap=6;
+    var s2x=295,s3x=578,s4x=861,s5x=1144;
+    var nodeW=230,matW=230,devW=230;
     var lane={Y:-6,DyTb:-2,Sm:2,Sc:6};
     // 最低限の可読領域に、所属企業1社あたり同じ高さを加える。
     // 元素フィルターでは高さを変えず、カテゴリー間の規模比較を維持する。
@@ -274,8 +271,8 @@ button[data-element]:not([data-element="all"])[aria-pressed="true"]{color:var(--
     function scaledHeight(item){return Math.round(minCardHeight+totalSubCount(item.id)*perCompany)}
     function columnSpan(nodes){return nodes.reduce(function(sum,item){return sum+scaledHeight(item)},0)+Math.max(0,nodes.length-1)*columnGap}
     var maxSpan=Math.max(columnSpan(s2nodes),columnSpan(s3nodes),columnSpan(s4nodes),columnSpan(s5nodes));
-    var H=Math.max(1120,Math.ceil(maxSpan+110)),CY=H/2;
-    var source={id:"stage01",x:8,w:200,y:CY,els:["Y","DyTb","Sm","Sc"]};
+    var H=Math.max(920,Math.ceil(maxSpan+80)),CY=H/2;
+    var source={id:"stage01",x:12,w:230,y:CY,els:["Y","DyTb","Sm","Sc"]};
     function layoutColumn(nodes){
       var top=(H-columnSpan(nodes))/2;
       return nodes.map(function(item){var h=scaledHeight(item),position={item:item,h:h,y:top+h/2};top+=h+columnGap;return position})
@@ -298,7 +295,7 @@ button[data-element]:not([data-element="all"])[aria-pressed="true"]{color:var(--
         edgeKeys.add(edgeKey);
         var fromLabel=a.node?a.node.label:"中国原料",toLabel=b.node?b.node.label:b.id;
         var title=fromLabel+" → "+toLabel+" / "+tagLabel(e)+(note?" — "+note:"");
-        svg+=path(curve(a.x+a.w,a.y+lane[e],b.x-8,b.y+lane[e]),colors[e],selectedElements.indexOf(e)<0,false,{from:a.id,to:b.id,element:e,title:title})
+        svg+=path(curve(a.x+a.w,a.y+lane[e],b.x-8,b.y+lane[e]),colors[e],selectedElements.indexOf(e)<0,{from:a.id,to:b.id,element:e,title:title})
       })
     }
     Object.keys(s2map).forEach(function(id){connect(source,s2map[id],s2map[id].els)});
@@ -307,7 +304,6 @@ button[data-element]:not([data-element="all"])[aria-pressed="true"]{color:var(--
     s4nodes.forEach(function(s){(s.src||[]).forEach(function(from){connect(s3map[from],s4map[s.id])})});
     devices.forEach(function(d){
       Array.from(new Set(d.src)).forEach(function(src){if(s4map[src])connect(s4map[src],s5map[d.id],d.srcEls&&d.srcEls[src],d.srcNotes&&d.srcNotes[src])});
-      if(s5map[d.id].els.length>0)svg+=path(curve(s5map[d.id].x+devW,s5map[d.id].y,primeX-8,CY+(s5y.indexOf(s5map[d.id].y)-(s5y.length-1)/2)*10),"",false,true,{from:d.id,to:"prime",element:"",title:d.label+" → システム統合"})
     });
     svg+='</svg>';
 
@@ -329,23 +325,22 @@ button[data-element]:not([data-element="all"])[aria-pressed="true"]{color:var(--
       var highlight=matchedEls.length>0;
       var routeTitle=type==="use"?(item.src||[]).map(function(src){return(subLabel(src)+" → "+item.label+" / "+(item.srcEls[src]||[]).map(tagLabel).join("・")+" — "+item.srcNotes[src])}).join("\n"):"";
       return'<button type="button" class="re-card re-sub-card'+(dim?" is-dim":"")+(highlight?" is-filter-match":"")+(matchedEls.length>1?" is-filter-multi":"")+'" data-type="'+type+'" data-id="'+item.id+'" data-node-id="'+item.id+'"'+(routeTitle?' title="'+esc(routeTitle)+'"':'')+' aria-pressed="'+(selection.type===type&&selection.id===item.id)+'" style="left:'+pos.x+'px;top:'+(pos.y-pos.h/2)+'px;height:'+pos.h+'px'+highlightVars(matchedEls)+'">'+
-        '<div class="re-card-code">STAGE '+stageCode+' / '+(type==="use"?"機器":type==="mat"?"機能部材":"中間工程")+'</div><div class="re-card-title">'+esc(item.label)+'</div><div class="re-card-description">'+esc(item.description)+'</div><div class="re-card-tags">'+tagsHtml(pos.els)+'</div><span class="re-card-count">'+totalSubCount(item.id)+'社</span></button>'
+        '<div class="re-card-code">STAGE '+stageCode+' / '+(type==="use"?"装備・システム":type==="mat"?"モジュール・機器":"中間工程")+'</div><div class="re-card-title">'+esc(item.label)+'</div><div class="re-card-description">'+esc(item.description)+'</div><div class="re-card-tags">'+tagsHtml(pos.els)+'</div><span class="re-card-count">'+totalSubCount(item.id)+'社</span></button>'
     }
 
     var cards='';
-    cards+='<div class="re-column-label" style="left:8px">STAGE 01 — 中国原料</div>';
+    cards+='<div class="re-column-label" style="left:12px">STAGE 01 — 中国原料</div>';
     cards+='<div class="re-column-label" style="left:'+s2x+'px">STAGE 02 — 分離精製・高純度化／一次変換</div>';
     cards+='<div class="re-column-label" style="left:'+s3x+'px">STAGE 03 — 組成設計・用途別中間材料</div>';
-    cards+='<div class="re-column-label" style="left:'+s4x+'px">STAGE 04 — 機能材料・部材／製造用消耗材</div>';
-    cards+='<div class="re-column-label" style="left:'+s5x+'px">STAGE 05 — 機器・コンポーネント</div>';
+    cards+='<div class="re-column-label" style="left:'+s4x+'px">STAGE 04 — モジュール・機器</div>';
+    cards+='<div class="re-column-label" style="left:'+s5x+'px">STAGE 05 — 装備・システム</div>';
     cards+='<div class="re-stamp" style="left:18px;top:'+(CY-310)+'px;transform:rotate(-5deg)">2025.04 七元素規制</div>';
     cards+='<div class="re-stamp" style="left:40px;top:'+(CY-277)+'px;transform:rotate(3deg)">2026.01 対日強化</div>';
-    cards+='<button type="button" class="re-card re-stage-card" data-type="stage" data-id="1" data-node-id="stage01" aria-pressed="'+(selection.type==="stage")+'" style="left:'+source.x+'px;top:'+(CY-45)+'px"><div class="re-card-code">SOURCE / STAGE 01</div><div class="re-card-title">中国原料</div><div class="re-card-sub">採掘・分離精製・輸出管理</div></button>';
+    cards+='<button type="button" class="re-card re-stage-card" data-type="stage" data-id="1" data-node-id="stage01" aria-pressed="'+(selection.type==="stage")+'" style="left:'+source.x+'px;top:'+(CY-41)+'px"><div class="re-card-code">SOURCE / STAGE 01</div><div class="re-card-title">中国原料</div><div class="re-card-sub">採掘・分離精製・輸出管理</div></button>';
     s2nodes.forEach(function(s){cards+=subCard(s,s2map[s.id],"sub","02")});
     s3nodes.forEach(function(s){cards+=subCard(s,s3map[s.id],"sub","03")});
     s4nodes.forEach(function(s){cards+=subCard(s,s4map[s.id],"mat","04")});
     s5nodes.forEach(function(s){cards+=subCard(s,s5map[s.id],"use","05")});
-    cards+='<button type="button" class="re-card re-prime-card" data-type="prime" data-id="prime" aria-pressed="'+(selection.type==="prime")+'" style="left:'+primeX+'px;top:'+(CY-64)+'px"><div class="re-card-code">OUT OF SCOPE / 枠外</div><div class="re-card-title">システム統合</div><div class="re-card-sub">三菱重工・川重・IHI・三菱電機・NEC 等</div></button>';
     var canvas=root.querySelector("#re-flow-canvas");
     canvas.style.height=H+"px";
     canvas.innerHTML=svg+cards;
@@ -395,10 +390,10 @@ button[data-element]:not([data-element="all"])[aria-pressed="true"]{color:var(--
   }
   function fitMapView(){
     var viewport=root.querySelector("#re-flow-viewport"),canvas=root.querySelector("#re-flow-canvas"),source=canvas.querySelector('[data-node-id="stage01"]');
-    var sourceCenterX=source?source.offsetLeft+source.offsetWidth/2:canvas.offsetWidth/2;
     var sourceCenterY=source?source.offsetTop+source.offsetHeight/2:canvas.offsetHeight/2;
+    var sourceTargetLeft=Math.max(32,Math.min(80,viewport.clientWidth*.07));
     mapView.scale=1;
-    mapView.x=viewport.clientWidth/2-sourceCenterX*mapView.scale;
+    mapView.x=source?sourceTargetLeft-source.offsetLeft:0;
     mapView.y=viewport.clientHeight/2-sourceCenterY*mapView.scale;
     mapView.autoFit=true;
     applyMapView()
@@ -416,33 +411,76 @@ button[data-element]:not([data-element="all"])[aria-pressed="true"]{color:var(--
   function initMapView(){
     if(mapView.initialized)return;
     var viewport=root.querySelector("#re-flow-viewport"),zoomIn=root.querySelector("#re-map-zoom-in"),zoomOut=root.querySelector("#re-map-zoom-out"),fit=root.querySelector("#re-map-fit");
+    mapView.pointers=new Map();mapView.pinching=false;mapView.suppressTimer=null;mapView.gestureStartScale=1;
     mapView.initialized=true;
     zoomIn.addEventListener("click",function(){zoomMap(mapView.scale+.1)});
     zoomOut.addEventListener("click",function(){zoomMap(mapView.scale-.1)});
     fit.addEventListener("click",fitMapView);
+    function pointerPair(){return Array.from(mapView.pointers.values()).slice(0,2)}
+    function beginPinch(){
+      var pair=pointerPair();if(pair.length<2)return;
+      var rect=viewport.getBoundingClientRect(),centerX=(pair[0].x+pair[1].x)/2-rect.left,centerY=(pair[0].y+pair[1].y)/2-rect.top;
+      mapView.pinchStartDistance=Math.max(1,Math.hypot(pair[1].x-pair[0].x,pair[1].y-pair[0].y));
+      mapView.pinchStartScale=mapView.scale;
+      mapView.pinchMapX=(centerX-mapView.x)/mapView.scale;mapView.pinchMapY=(centerY-mapView.y)/mapView.scale;
+      mapView.pinching=true;mapView.dragging=false;mapView.moved=true;viewport.classList.add("is-dragging");
+      pair.forEach(function(point){if(!viewport.hasPointerCapture(point.id))viewport.setPointerCapture(point.id)})
+    }
+    function suppressNextClick(){
+      mapView.suppressClick=true;clearTimeout(mapView.suppressTimer);
+      mapView.suppressTimer=setTimeout(function(){mapView.suppressClick=false},300)
+    }
     viewport.addEventListener("pointerdown",function(event){
-      if(event.button!==0)return;
-      mapView.dragging=true;mapView.moved=false;mapView.startClientX=event.clientX;mapView.startClientY=event.clientY;mapView.startX=mapView.x;mapView.startY=mapView.y;
-      viewport.classList.add("is-dragging")
+      if(event.pointerType==="mouse"&&event.button!==0)return;
+      mapView.pointers.set(event.pointerId,{id:event.pointerId,x:event.clientX,y:event.clientY});
+      if(mapView.pointers.size===1){
+        mapView.dragging=true;mapView.moved=false;mapView.startClientX=event.clientX;mapView.startClientY=event.clientY;mapView.startX=mapView.x;mapView.startY=mapView.y;
+        viewport.classList.add("is-dragging")
+      }else if(mapView.pointers.size===2)beginPinch()
     });
     viewport.addEventListener("pointermove",function(event){
+      if(!mapView.pointers.has(event.pointerId))return;
+      mapView.pointers.set(event.pointerId,{id:event.pointerId,x:event.clientX,y:event.clientY});
+      if(mapView.pinching&&mapView.pointers.size>=2){
+        var pair=pointerPair(),rect=viewport.getBoundingClientRect(),centerX=(pair[0].x+pair[1].x)/2-rect.left,centerY=(pair[0].y+pair[1].y)/2-rect.top;
+        var distance=Math.max(1,Math.hypot(pair[1].x-pair[0].x,pair[1].y-pair[0].y));
+        mapView.scale=Math.max(mapView.minScale,Math.min(mapView.maxScale,mapView.pinchStartScale*(distance/mapView.pinchStartDistance)));
+        mapView.x=centerX-mapView.pinchMapX*mapView.scale;mapView.y=centerY-mapView.pinchMapY*mapView.scale;
+        mapView.autoFit=false;applyMapView();event.preventDefault();return
+      }
       if(!mapView.dragging)return;
       var dx=event.clientX-mapView.startClientX,dy=event.clientY-mapView.startClientY;
       if(Math.abs(dx)+Math.abs(dy)>4){mapView.moved=true;if(!viewport.hasPointerCapture(event.pointerId))viewport.setPointerCapture(event.pointerId)}
       mapView.x=mapView.startX+dx;mapView.y=mapView.startY+dy;mapView.autoFit=false;applyMapView();event.preventDefault()
     });
     function stopDrag(event){
-      if(!mapView.dragging)return;
-      mapView.dragging=false;viewport.classList.remove("is-dragging");
       if(viewport.hasPointerCapture(event.pointerId))viewport.releasePointerCapture(event.pointerId);
-      if(mapView.moved){mapView.suppressClick=true;setTimeout(function(){mapView.suppressClick=false},0)}
+      mapView.pointers.delete(event.pointerId);
+      if(mapView.pinching){
+        suppressNextClick();
+        if(mapView.pointers.size>=2){beginPinch();return}
+        mapView.pinching=false;
+        if(mapView.pointers.size===1){
+          var point=Array.from(mapView.pointers.values())[0];
+          mapView.dragging=true;mapView.moved=true;mapView.startClientX=point.x;mapView.startClientY=point.y;mapView.startX=mapView.x;mapView.startY=mapView.y;return
+        }
+      }
+      if(mapView.pointers.size)return;
+      mapView.dragging=false;viewport.classList.remove("is-dragging");
+      if(mapView.moved)suppressNextClick()
     }
     viewport.addEventListener("pointerup",stopDrag);viewport.addEventListener("pointercancel",stopDrag);
     viewport.addEventListener("click",function(event){if(mapView.suppressClick){event.preventDefault();event.stopPropagation()}},true);
     viewport.addEventListener("wheel",function(event){
       event.preventDefault();
-      if(event.ctrlKey||event.metaKey)zoomMap(mapView.scale*Math.exp(-event.deltaY*.002),event.clientX,event.clientY);
+      if(event.ctrlKey||event.metaKey)zoomMap(mapView.scale*Math.exp(-event.deltaY*.006),event.clientX,event.clientY);
       else{mapView.x-=event.deltaX;mapView.y-=event.deltaY;mapView.autoFit=false;applyMapView()}
+    },{passive:false});
+    viewport.addEventListener("gesturestart",function(event){event.preventDefault();mapView.gestureStartScale=mapView.scale},{passive:false});
+    viewport.addEventListener("gesturechange",function(event){
+      event.preventDefault();if(mapView.pinching)return;
+      var clientX=Number.isFinite(event.clientX)?event.clientX:null,clientY=Number.isFinite(event.clientY)?event.clientY:null;
+      zoomMap(mapView.gestureStartScale*event.scale,clientX,clientY)
     },{passive:false});
     viewport.addEventListener("keydown",function(event){
       var handled=true,step=48;
@@ -480,13 +518,13 @@ button[data-element]:not([data-element="all"])[aria-pressed="true"]{color:var(--
   function selectionLabel(){
     if(selection.type==="all")return"全体 — 全工程・全サブカテゴリー";
     if(selection.type==="stage"){
-      var s=selection.id>3?{label:selection.id===4?"機能部材":"搭載機器"}:stages.find(function(x){return x.id===Number(selection.id)});
+      var s=selection.id>3?{label:selection.id===4?"モジュール・機器":"装備・システム"}:stages.find(function(x){return x.id===Number(selection.id)});
       return"工程 "+selection.id+" — "+s.label;
     }
     if(selection.type==="sub"){var q=commerceSubs.find(function(x){return x.id===selection.id});return"工程 "+q.stage+" — "+q.label}
-    if(selection.type==="mat"){var m=mats.find(function(x){return x.id===selection.id});return"工程 4 機能材料・部材／製造用消耗材 — "+m.label}
-    if(selection.type==="use"){var d=devices.find(function(x){return x.id===selection.id});return"工程 5 搭載機器 — "+d.label}
-    return"枠外 — システム統合（防衛プライム）"
+    if(selection.type==="mat"){var m=mats.find(function(x){return x.id===selection.id});return"工程 4 モジュール・機器 — "+m.label}
+    if(selection.type==="use"){var d=devices.find(function(x){return x.id===selection.id});return"工程 5 装備・システム — "+d.label}
+    return"全体 — 全工程・全サブカテゴリー"
   }
 
   function dependencyDashboardHtml(){
@@ -518,10 +556,6 @@ button[data-element]:not([data-element="all"])[aria-pressed="true"]{color:var(--
     root.querySelector("#re-list-title").textContent=selectionLabel();
     root.querySelector("#re-list-count").textContent=items.length+"社・事業単位";
     var box=root.querySelector("#re-companies");
-    if(selection.type==="prime"){
-      box.innerHTML='<div class="re-empty">売上1,000億円条件の枠外。需要は三菱重工・川崎重工・IHI・三菱電機・NEC等へ最終集約されます。</div>';
-      return;
-    }
     if(!items.length){box.innerHTML='<div class="re-empty">この絞り込み条件では該当企業がありません。</div>';return}
     box.innerHTML=items.map(function(c){
       var e=ev(c.ev),tagHtml=c.tags.map(function(t){return'<span class="re-tag" style="color:'+colors[t]+';border-color:'+colors[t]+'">'+tagLabel(t)+'</span>'}).join("");
