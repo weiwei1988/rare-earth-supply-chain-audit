@@ -1,5 +1,5 @@
-// グラフ接続監査。工程間の接続は src/data/subcategories.json の src を根拠にし、
-// 工程4→5だけは srcEls で上流ごとの許可元素も限定する（画面側も同じ規則）。
+// グラフ接続監査。工程間の接続は src/data/subcategories.json の src と、
+// 上流ごとの許可元素 srcEls を根拠にする（画面側も同じ規則）。
 import { loadDataset, fatal, ELEMENTS } from "./lib/dataset.mjs";
 
 const dataset = await loadDataset().catch(fatal);
@@ -12,7 +12,7 @@ function activeElements(sub) {
 const active = new Map(dataset.subcategories.map((sub) => [sub.id, activeElements(sub)]));
 
 function routeElements(sub, source) {
-  const allowed = sub.stage === 5 ? sub.srcEls[source] : ELEMENTS;
+  const allowed = sub.srcEls?.[source] ?? [];
   return ELEMENTS.filter((element) => allowed.includes(element) && dataset.bySub.get(source).els.includes(element) && sub.els.includes(element));
 }
 
@@ -47,7 +47,8 @@ for (const sub of dataset.subcategories.filter((item) => item.stage > 2)) {
   }
 }
 
-// 到達性：Stage 05 の各ノードが Stage 02 まで遡れるか（元素ごと）。
+const finalStage = Math.max(...dataset.stages.map((stage) => stage.id));
+// 到達性：最終工程の各ノードが Stage 02 まで遡れるか（元素ごと）。
 const incoming = new Map(dataset.subcategories.map((sub) => [sub.id, sub.src ?? []]));
 function reachesOrigin(id, element, seen = new Set()) {
   const sub = dataset.bySub.get(id);
@@ -60,12 +61,12 @@ function reachesOrigin(id, element, seen = new Set()) {
 }
 
 const unreachable = dataset.subcategories
-  .filter((sub) => sub.stage === 5)
+  .filter((sub) => sub.stage === finalStage)
   .flatMap((sub) => active.get(sub.id).filter((element) => !reachesOrigin(sub.id, element)).map((element) => `${sub.id}:${element}`));
 
-// Stage 05 の各サブカテゴリーに何社ぶら下がっているか（元素別）。
-const stage05Coverage = Object.fromEntries(
-  dataset.stageSubs(5).map((sub) => [
+// 最終工程の各サブカテゴリーに何社ぶら下がっているか（元素別）。
+const finalStageCoverage = Object.fromEntries(
+  dataset.stageSubs(finalStage).map((sub) => [
     sub.id,
     Object.fromEntries(ELEMENTS.map((element) => [element, dataset.elementCount(sub.id, element)]).filter(([, count]) => count > 0)),
   ]),
@@ -77,11 +78,11 @@ const report = {
   companies: dataset.companies.length,
   categories: dataset.subcategories.length,
   edges: edges.length,
-  stage04to05Edges: edges.filter((edge) => dataset.bySub.get(edge.to)?.stage === 5).length,
+  finalStageEdges: edges.filter((edge) => dataset.bySub.get(edge.to)?.stage === finalStage).length,
   duplicateEdgeKeys,
   emptyEndpointEdges,
-  unreachableStage05: unreachable,
-  stage05Coverage,
+  unreachableFinalStage: unreachable,
+  finalStageCoverage,
   stage02OnlyCompanies: orphanCompanies,
 };
 
@@ -89,7 +90,7 @@ console.log(JSON.stringify(report, null, 2));
 
 const failures = [];
 if (duplicateEdgeKeys.length) failures.push(`接続線が重複しています: ${duplicateEdgeKeys.join(", ")}`);
-if (unreachable.length) failures.push(`Stage 05 から Stage 02 まで遡れない元素があります: ${unreachable.join(", ")}`);
+if (unreachable.length) failures.push(`Stage ${String(finalStage).padStart(2, "0")} から Stage 02 まで遡れない元素があります: ${unreachable.join(", ")}`);
 if (failures.length) {
   failures.forEach((failure) => console.error(` - ${failure}`));
   process.exit(1);

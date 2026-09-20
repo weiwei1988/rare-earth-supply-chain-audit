@@ -25,7 +25,7 @@ const DEP_COLORS = {
 
 export function evaluateHtmlData(html) {
   const region = readGeneratedRegion(html, "index.html");
-  return new Function("depColors", `${region}\nreturn {seed,stages,commerceSubs,mats,devices,dependencyRows};`)(DEP_COLORS);
+  return new Function("depColors", `${region}\nreturn {seed,stages,commerceSubs,parts,modules,systems,columnOrder,dependencyRows};`)(DEP_COLORS);
 }
 
 // JSX の生成領域は COLORS（CSS変数への対応表）を参照する。
