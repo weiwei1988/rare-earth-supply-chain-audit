@@ -36,6 +36,8 @@ function subcatForHtml(sub) {
   if (sub.src) out.src = sub.src;
   if (sub.srcEls) out.srcEls = sub.srcEls;
   if (sub.srcNotes) out.srcNotes = sub.srcNotes;
+  if (sub.srcSkip) out.srcSkip = sub.srcSkip;
+  if (sub.note) out.note = sub.note;
   return out;
 }
 
@@ -51,17 +53,15 @@ function dependencyWith(dataset, colorRef) {
 }
 
 function htmlRegion(dataset) {
-  // 画面は左3列（Stage 01〜03）の見出しだけを stages から描画する。
-  const headerStages = dataset.stages
-    .filter((stage) => stage.id <= 3)
-    .map((stage) => ({ id: stage.id, label: stage.label, sub: stage.short }));
   return [
     `  /* ${START} — ${NOTICE} */`,
     `  var seed=${serialize(dataset.companies)};`,
-    `  var stages=${serialize(headerStages)};`,
+    `  var stages=${serialize(dataset.stages)};`,
     `  var commerceSubs=${serialize(dataset.subcategories.filter((sub) => sub.stage <= 3).map(subcatForHtml))};`,
-    `  var mats=${serialize(dataset.stageSubs(4).map(subcatForHtml))};`,
-    `  var devices=${serialize(dataset.stageSubs(5).map(subcatForHtml))};`,
+    `  var parts=${serialize(dataset.stageSubs(4).map(subcatForHtml))};`,
+    `  var modules=${serialize(dataset.stageSubs(5).map(subcatForHtml))};`,
+    `  var systems=${serialize(dataset.stageSubs(6).map(subcatForHtml))};`,
+    `  var columnOrder=${serialize(dataset.columnOrder)};`,
     `  var dependencyRows=${serialize(dependencyWith(dataset, (token) => `depColors.${token}`))};`,
     `  /* ${END} */`,
   ].join("\n") + "\n";

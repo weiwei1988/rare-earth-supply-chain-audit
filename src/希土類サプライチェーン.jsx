@@ -28,32 +28,38 @@ const STAGES = [
   {
     "id": 1,
     "code": "01",
-    "label": "中国原料",
+    "label": "海外の資源・分離",
     "short": "採掘・分離精製・輸出管理"
   },
   {
     "id": 2,
     "code": "02",
-    "label": "分離精製・高純度化／一次変換",
-    "short": "純度・元素形態で取引される一次素材"
+    "label": "素材",
+    "short": "酸化物・塩・金属・再資源化"
   },
   {
     "id": 3,
     "code": "03",
-    "label": "組成設計・用途別中間材料",
-    "short": "用途固有の組成・粒径・性能を設計"
+    "label": "材料",
+    "short": "合金・粉末・結晶"
   },
   {
     "id": 4,
     "code": "04",
-    "label": "モジュール・機器",
-    "short": "機能部材・ターゲット・工程投入材"
+    "label": "部材",
+    "short": "磁石・溶射材・ターゲット・電解質・基板"
   },
   {
     "id": 5,
     "code": "05",
+    "label": "モジュール・機器",
+    "short": "モータ・皮膜施工・レーザー・セルスタック"
+  },
+  {
+    "id": 6,
+    "code": "06",
     "label": "装備・システム",
-    "short": "レーザー・推進・センサー"
+    "short": "装備の統合と装備向け部品・納入"
   }
 ];
 
@@ -61,22 +67,23 @@ const SUBCATS = [
   {
     "id": "02_compound",
     "stage": 2,
-    "label": "高純度酸化物・化合物",
-    "header": "02 高純度酸化物・化合物",
-    "description": "Y₂O₃・YF₃・Sc₂O₃などの高純度化合物",
+    "label": "希土類酸化物・塩・化合物",
+    "header": "02 希土類酸化物・塩・化合物",
+    "description": "Y₂O₃・Sc₂O₃、硝酸塩・フッ化物ほか",
     "els": [
       "Y",
       "DyTb",
       "Sm",
       "Sc"
-    ]
+    ],
+    "note": "国内では鉱石からの分離は行われず、輸入した化合物の高純度化と、酸化物・硝酸塩・塩化物・フッ化物などへの形態変換が中心。住友金属鉱山の Sc₂O₃ はフィリピン産中間体を原料とする非中国の供給源。"
   },
   {
     "id": "02_metal",
     "stage": 2,
-    "label": "金属化・還元／一次金属",
-    "header": "02 金属化・還元／一次金属",
-    "description": "酸化物・フッ化物を希土類金属へ還元",
+    "label": "希土類金属（還元）",
+    "header": "02 希土類金属（還元）",
+    "description": "酸化物・フッ化物を金属に",
     "els": [
       "DyTb",
       "Sm",
@@ -86,258 +93,599 @@ const SUBCATS = [
   {
     "id": "02_recycle",
     "stage": 2,
-    "label": "回収・再精製",
-    "header": "02 回収・再精製",
-    "description": "工程くず・使用済み磁石から希土類を回収",
+    "label": "再資源化",
+    "header": "02 再資源化",
+    "description": "工程くず・使用済み磁石から回収",
     "els": [
       "Y",
       "DyTb",
-      "Sm",
-      "Sc"
+      "Sm"
     ]
   },
   {
-    "id": "02_trade",
-    "stage": 2,
-    "label": "原料輸入・販売・品質保証",
-    "header": "02 原料輸入・販売・品質保証",
-    "description": "輸入・在庫・原産地証明と品質保証",
-    "els": [
-      "Y",
-      "DyTb",
-      "Sm",
-      "Sc"
-    ]
-  },
-  {
-    "id": "03_ceramic",
+    "id": "03_magnet_alloy",
     "stage": 3,
-    "label": "高機能粉末（YSZ・ScSZ）",
-    "header": "03 高機能粉末（YSZ・ScSZ）",
-    "description": "耐熱・電解質用途のYSZ・ScSZ粉末",
+    "label": "磁石合金",
+    "header": "03 磁石合金",
+    "description": "NdFeB・SmCo 用の合金",
     "els": [
-      "Y",
-      "Sc"
+      "DyTb",
+      "Sm"
     ],
     "src": [
+      "02_metal",
       "02_compound",
-      "02_recycle",
-      "02_trade"
-    ]
+      "02_recycle"
+    ],
+    "srcEls": {
+      "02_metal": [
+        "DyTb",
+        "Sm"
+      ],
+      "02_compound": [
+        "DyTb"
+      ],
+      "02_recycle": [
+        "DyTb",
+        "Sm"
+      ]
+    },
+    "srcNotes": {
+      "02_metal": "金属を溶解して NdFeB・SmCo 合金に",
+      "02_compound": "Dy・Tb の酸化物・フッ化物を磁石合金・粒界拡散材の原料に",
+      "02_recycle": "工程くず・使用済み磁石を合金原料に戻す"
+    }
   },
   {
-    "id": "03_magnet",
+    "id": "03_magnet_powder",
     "stage": 3,
-    "label": "磁石合金・磁粉・コンパウンド",
-    "header": "03 磁石合金・磁粉・コンパウンド",
-    "description": "NdFeB・SmCo用の合金・磁粉・コンパウンド",
+    "label": "磁粉・コンパウンド",
+    "header": "03 磁粉・コンパウンド",
+    "description": "ボンド磁石用（NdFeB・SmFeN）",
     "els": [
       "DyTb",
       "Sm"
     ],
     "src": [
       "02_compound",
-      "02_metal",
-      "02_recycle",
-      "02_trade"
-    ]
+      "02_metal"
+    ],
+    "srcEls": {
+      "02_compound": [
+        "Sm"
+      ],
+      "02_metal": [
+        "DyTb",
+        "Sm"
+      ]
+    },
+    "srcNotes": {
+      "02_compound": "Sm 化合物を原料に SmFeN 磁粉を製造",
+      "02_metal": "希土類金属を溶解・急冷してボンド磁石用の磁粉に"
+    }
   },
   {
     "id": "03_light_alloy",
     "stage": 3,
-    "label": "Al-Sc母合金（構造材・半導体）",
-    "header": "03 Al-Sc母合金（構造材・半導体）",
-    "description": "航空・半導体向け低濃度Al–Sc母合金",
+    "label": "Al–Sc 母合金（構造材）",
+    "header": "03 Al–Sc 母合金（構造材）",
+    "description": "輸送機器・AM 向けアルミ合金",
     "els": [
       "Sc"
     ],
     "src": [
-      "02_compound",
-      "02_metal",
-      "02_recycle",
-      "02_trade"
-    ]
-  },
-  {
-    "id": "03_am_feedstock",
-    "stage": 3,
-    "label": "金属AM・結合用原料",
-    "header": "03 金属AM・結合用原料",
-    "description": "Sc含有のAM粉末・ワイヤ・接合原料",
-    "els": [
-      "Sc"
+      "02_compound"
     ],
-    "src": [
-      "02_metal",
-      "02_trade"
-    ]
+    "srcEls": {
+      "02_compound": [
+        "Sc"
+      ]
+    },
+    "srcNotes": {
+      "02_compound": "Sc₂O₃ をアルミ中で還元して構造用の母合金に"
+    }
   },
   {
-    "id": "03_precursor",
+    "id": "03_ceramic",
     "stage": 3,
-    "label": "結晶（YAG・SAM）・セラミックス・前駆体",
-    "header": "03 結晶（YAG・SAM）・セラミックス・前駆体",
-    "description": "YAG・SAM結晶とセラミックス前駆体",
+    "label": "安定化ジルコニア粉末",
+    "header": "03 安定化ジルコニア粉末",
+    "description": "YSZ・ScSZ 粉末",
     "els": [
       "Y",
       "Sc"
     ],
     "src": [
+      "02_compound"
+    ],
+    "srcEls": {
+      "02_compound": [
+        "Y",
+        "Sc"
+      ]
+    },
+    "srcNotes": {
+      "02_compound": "Y₂O₃・Sc₂O₃ をジルコニアの安定化剤に"
+    }
+  },
+  {
+    "id": "03_yttria_powder",
+    "stage": 3,
+    "label": "高純度 Y₂O₃・YF₃ 粉末",
+    "header": "03 高純度 Y₂O₃・YF₃ 粉末",
+    "description": "焼結・溶射・ODS 用の微粉",
+    "els": [
+      "Y"
+    ],
+    "src": [
+      "02_recycle",
+      "02_compound"
+    ],
+    "srcEls": {
+      "02_recycle": [
+        "Y"
+      ],
+      "02_compound": [
+        "Y"
+      ]
+    },
+    "srcNotes": {
+      "02_recycle": "回収した Y を高純度 Y₂O₃ の原料に",
+      "02_compound": "分離精製した Y₂O₃ を高純度の微粉に整え、YF₃・YOF（オキシフッ化物）に加工"
+    }
+  },
+  {
+    "id": "03_yag_crystal",
+    "stage": 3,
+    "label": "Y 系単結晶・透明セラミックス",
+    "header": "03 Y 系単結晶・透明セラミックス",
+    "description": "YAG・Y₂O₃・TGG",
+    "els": [
+      "Y",
+      "DyTb"
+    ],
+    "src": [
+      "02_compound"
+    ],
+    "srcEls": {
+      "02_compound": [
+        "Y",
+        "DyTb"
+      ]
+    },
+    "srcNotes": {
+      "02_compound": "高純度 Y₂O₃・Tb₄O₇ を結晶育成・焼結の原料に"
+    }
+  },
+  {
+    "id": "03_alsc_semi",
+    "stage": 3,
+    "label": "Al–Sc 合金（半導体用途）",
+    "header": "03 Al–Sc 合金（半導体用途）",
+    "description": "ターゲット用の低酸素 Al–Sc 合金",
+    "els": [
+      "Sc"
+    ],
+    "src": [
       "02_compound",
-      "02_trade"
-    ]
+      "02_metal"
+    ],
+    "srcEls": {
+      "02_compound": [
+        "Sc"
+      ],
+      "02_metal": [
+        "Sc"
+      ]
+    },
+    "srcNotes": {
+      "02_compound": "Sc₂O₃ をアルミ中で還元して半導体用の Al–Sc 合金に",
+      "02_metal": "Sc 金属をアルミと溶解・合金化"
+    }
   },
   {
-    "id": "04_opt",
+    "id": "03_sam_crystal",
+    "stage": 3,
+    "label": "SAM 単結晶",
+    "header": "03 SAM 単結晶",
+    "description": "ScAlMgO₄ 結晶育成",
+    "els": [
+      "Sc"
+    ],
+    "src": [
+      "02_compound"
+    ],
+    "srcEls": {
+      "02_compound": [
+        "Sc"
+      ]
+    },
+    "srcNotes": {
+      "02_compound": "Sc₂O₃ を SAM 結晶の原料に"
+    }
+  },
+  {
+    "id": "03_dielectric_additive",
+    "stage": 3,
+    "label": "誘電体用希土類添加剤",
+    "header": "03 誘電体用希土類添加剤",
+    "description": "MLCC 用の希土類微粉・塩・溶液",
+    "els": [
+      "Y",
+      "DyTb"
+    ],
+    "src": [
+      "02_compound"
+    ],
+    "srcEls": {
+      "02_compound": [
+        "Y",
+        "DyTb"
+      ]
+    },
+    "srcNotes": {
+      "02_compound": "分離精製した Dy₂O₃・Tb₄O₇・Y₂O₃ を、粒径を整えた微粉や硝酸塩などの塩・溶液に加工"
+    },
+    "note": "分離精製した酸化物を、誘電体への配合に合わせて粒径を整えた微粉や、硝酸塩・酢酸塩などの塩・溶液に加工したもの。チタン酸バリウムへ副成分として混合、または粒子表面の被覆に使う。"
+  },
+  {
+    "id": "04_mag",
     "stage": 4,
-    "label": "固体レーザー発振器（YAG）",
-    "header": "04 固体レーザー発振器（YAG）",
-    "description": "Nd:YAG・Yb:YAGなどの固体レーザー光源",
+    "label": "永久磁石",
+    "header": "04 永久磁石",
+    "description": "焼結 NdFeB・SmCo・ボンド",
+    "els": [
+      "DyTb",
+      "Sm"
+    ],
+    "src": [
+      "03_magnet_alloy",
+      "03_magnet_powder"
+    ],
+    "srcEls": {
+      "03_magnet_alloy": [
+        "DyTb",
+        "Sm"
+      ],
+      "03_magnet_powder": [
+        "DyTb",
+        "Sm"
+      ]
+    },
+    "srcNotes": {
+      "03_magnet_alloy": "合金を粉砕・成形・焼結して磁石に",
+      "03_magnet_powder": "磁粉を樹脂で固めてボンド磁石に"
+    },
+    "note": "国内製造に加え、中国製磁石を輸入して加工・販売する商流がある。"
+  },
+  {
+    "id": "04_am_feedstock",
+    "stage": 4,
+    "label": "AM 用粉末・ワイヤ",
+    "header": "04 AM 用粉末・ワイヤ",
+    "description": "Scalmalloy・WAAM ワイヤ",
+    "els": [
+      "Sc"
+    ],
+    "src": [
+      "03_light_alloy"
+    ],
+    "srcEls": {
+      "03_light_alloy": [
+        "Sc"
+      ]
+    },
+    "srcNotes": {
+      "03_light_alloy": "母合金を粉末・ワイヤに加工"
+    }
+  },
+  {
+    "id": "04_tbc_spray",
+    "stage": 4,
+    "label": "遮熱用溶射材料",
+    "header": "04 遮熱用溶射材料",
+    "description": "YSZ 溶射粉末",
     "els": [
       "Y"
     ],
     "src": [
-      "03_precursor"
-    ]
-  },
-  {
-    "id": "04_coat",
-    "stage": 4,
-    "label": "耐熱（TBC）／耐プラズマコーティング",
-    "header": "04 耐熱（TBC）／耐プラズマコーティング",
-    "description": "航空高温部TBC・半導体耐プラズマ膜",
-    "els": [
-      "Y"
+      "03_ceramic"
     ],
-    "src": [
-      "03_ceramic",
-      "03_precursor"
-    ]
+    "srcEls": {
+      "03_ceramic": [
+        "Y"
+      ]
+    },
+    "srcNotes": {
+      "03_ceramic": "YSZ を遮熱皮膜用の溶射粉末に造粒"
+    }
   },
   {
     "id": "04_elec",
     "stage": 4,
-    "label": "電解質・センサ基板",
-    "header": "04 電解質・センサ基板",
-    "description": "YSZ・ScSZ電解質と高温センサ基板",
+    "label": "固体電解質・基板",
+    "header": "04 固体電解質・基板",
+    "description": "YSZ・ScSZ シート・センサ基板",
     "els": [
       "Y",
       "Sc"
     ],
     "src": [
       "03_ceramic"
-    ]
+    ],
+    "srcEls": {
+      "03_ceramic": [
+        "Y",
+        "Sc"
+      ]
+    },
+    "srcNotes": {
+      "03_ceramic": "YSZ・ScSZ をシート・基板に焼結"
+    }
   },
   {
-    "id": "04_mag",
+    "id": "04_media",
     "stage": 4,
-    "label": "磁石（焼結・ボンド）",
-    "header": "04 磁石（焼結・ボンド）",
-    "description": "NdFeB・SmCoの焼結／ボンド磁石",
+    "label": "粉砕・分散メディア",
+    "header": "04 粉砕・分散メディア",
+    "description": "YSZ ボール（製造工程材）",
+    "els": [
+      "Y"
+    ],
+    "src": [
+      "03_ceramic"
+    ],
+    "srcEls": {
+      "03_ceramic": [
+        "Y"
+      ]
+    },
+    "srcNotes": {
+      "03_ceramic": "YSZ をボール・ビーズに焼結"
+    }
+  },
+  {
+    "id": "04_plasma_spray",
+    "stage": 4,
+    "label": "耐プラズマ用溶射材料",
+    "header": "04 耐プラズマ用溶射材料",
+    "description": "Y₂O₃・YF₃・YOF 溶射顆粒",
+    "els": [
+      "Y"
+    ],
+    "src": [
+      "03_yttria_powder"
+    ],
+    "srcEls": {
+      "03_yttria_powder": [
+        "Y"
+      ]
+    },
+    "srcNotes": {
+      "03_yttria_powder": "Y₂O₃・YF₃・YOF を溶射用の顆粒に造粒"
+    }
+  },
+  {
+    "id": "04_ods",
+    "stage": 4,
+    "label": "ODS 合金（Y₂O₃ 分散強化）",
+    "header": "04 ODS 合金（Y₂O₃ 分散強化）",
+    "description": "Y₂O₃ を分散させた合金素材",
+    "els": [
+      "Y"
+    ],
+    "src": [
+      "03_yttria_powder"
+    ],
+    "srcEls": {
+      "03_yttria_powder": [
+        "Y"
+      ]
+    },
+    "srcNotes": {
+      "03_yttria_powder": "Y₂O₃ 微粉を分散粒子として合金粉末に混ぜ込む"
+    },
+    "note": "Fe–Cr（–Al）合金粉末に Y₂O₃ 微粒子（0.35〜0.5 質量%）を機械的に混ぜ込み（メカニカルアロイング）、熱間押出で素材にする。高速炉（9Cr-ODS）と軽水炉の事故耐性燃料（FeCrAl-ODS）の被覆管向けに開発中。"
+  },
+  {
+    "id": "04_laser_medium",
+    "stage": 4,
+    "label": "レーザー媒質",
+    "header": "04 レーザー媒質",
+    "description": "ロッド・スラブ・ファラデー素子",
+    "els": [
+      "Y",
+      "DyTb"
+    ],
+    "src": [
+      "03_yag_crystal"
+    ],
+    "srcEls": {
+      "03_yag_crystal": [
+        "Y",
+        "DyTb"
+      ]
+    },
+    "srcNotes": {
+      "03_yag_crystal": "結晶・セラミックスを切り出し・研磨してロッド・スラブ・ファラデー回転子に"
+    }
+  },
+  {
+    "id": "04_target",
+    "stage": 4,
+    "label": "スパッタリングターゲット",
+    "header": "04 スパッタリングターゲット",
+    "description": "Al–Sc スパッタリングターゲット",
+    "els": [
+      "Sc"
+    ],
+    "src": [
+      "03_alsc_semi"
+    ],
+    "srcEls": {
+      "03_alsc_semi": [
+        "Sc"
+      ]
+    },
+    "srcNotes": {
+      "03_alsc_semi": "低酸素 Al–Sc 合金をターゲットに加工"
+    }
+  },
+  {
+    "id": "04_sc_crystal",
+    "stage": 4,
+    "label": "SAM ウェハ・テンプレート",
+    "header": "04 SAM ウェハ・テンプレート",
+    "description": "GaN 成長用の基板・テンプレート",
+    "els": [
+      "Sc"
+    ],
+    "src": [
+      "03_sam_crystal"
+    ],
+    "srcEls": {
+      "03_sam_crystal": [
+        "Sc"
+      ]
+    },
+    "srcNotes": {
+      "03_sam_crystal": "結晶をウェハに加工し、GaN を成長"
+    }
+  },
+  {
+    "id": "04_dielectric",
+    "stage": 4,
+    "label": "誘電体材料",
+    "header": "04 誘電体材料",
+    "description": "チタン酸バリウム＋希土類添加",
+    "els": [
+      "Y",
+      "DyTb"
+    ],
+    "src": [
+      "03_dielectric_additive"
+    ],
+    "srcEls": {
+      "03_dielectric_additive": [
+        "Y",
+        "DyTb"
+      ]
+    },
+    "srcNotes": {
+      "03_dielectric_additive": "チタン酸バリウムへの副成分添加（酸化物微粉の混合、または塩溶液による粒子表面の被覆）"
+    },
+    "note": "MLCC の誘電体は、チタン酸バリウムに Dy・Ho・Y などの希土類を副成分として加え、寿命・温度特性を整える。副成分は酸化物微粉として混合するか、硝酸塩などの塩溶液でチタン酸バリウム粒子の表面に被覆する。チタン酸バリウム自体は希土類を含まず、添加は誘電体材料メーカーの配合品か MLCC メーカーの社内配合で行う。"
+  },
+  {
+    "id": "05_motor",
+    "stage": 5,
+    "label": "モータ・アクチュエータ",
+    "header": "05 モータ・アクチュエータ",
+    "description": "サーボ・ホイール・電動化",
     "els": [
       "DyTb",
       "Sm"
     ],
     "src": [
-      "03_magnet"
-    ]
-  },
-  {
-    "id": "04_target",
-    "stage": 4,
-    "label": "薄膜・スパッタリングターゲット",
-    "header": "04 薄膜・スパッタリングターゲット",
-    "description": "Y・Sc系の薄膜形成用スパッタ材",
-    "els": [
-      "Y",
-      "Sc"
+      "04_mag"
     ],
-    "src": [
-      "03_light_alloy",
-      "03_precursor"
-    ]
+    "srcEls": {
+      "04_mag": [
+        "DyTb",
+        "Sm"
+      ]
+    },
+    "srcNotes": {
+      "04_mag": "ロータ・アクチュエータに組み込む"
+    }
   },
   {
-    "id": "04_sc_crystal",
-    "stage": 4,
-    "label": "SAMウェハ・テンプレート",
-    "header": "04 SAMウェハ・テンプレート",
-    "description": "ScAlMgO₄ウェハとGaN成長用下地",
-    "els": [
-      "Sc"
-    ],
-    "src": [
-      "03_precursor"
-    ]
-  },
-  {
-    "id": "04_am",
-    "stage": 4,
-    "label": "金属AM造形・加工",
-    "header": "04 金属AM造形・加工",
-    "description": "Sc含有Al合金の造形・加工部品",
-    "els": [
-      "Sc"
-    ],
-    "src": [
-      "03_light_alloy",
-      "03_am_feedstock"
-    ]
-  },
-  {
-    "id": "05_laser",
+    "id": "05_tube",
     "stage": 5,
-    "label": "高出力レーザー",
-    "header": "05 高出力レーザー",
-    "description": "測距・照射・指向性エネルギー用光源",
+    "label": "マイクロ波電子管",
+    "header": "05 マイクロ波電子管",
+    "description": "送信管（型番のみ公開）",
+    "els": [
+      "Sm",
+      "Sc"
+    ],
+    "src": [
+      "04_mag",
+      "04_target"
+    ],
+    "srcEls": {
+      "04_mag": [
+        "Sm"
+      ],
+      "04_target": [
+        "Sc"
+      ]
+    },
+    "srcNotes": {
+      "04_mag": "SmCo 磁石で電子ビームを収束",
+      "04_target": "陰極・電極の薄膜形成（スカンデート陰極など）"
+    },
+    "note": "進行波管（TWT）などは電子ビームの収束に SmCo 磁石を、陰極にはスカンジウムを含むスカンデート陰極を使う構成がある。調達品目は型番のみで、管の種類は確認できない。"
+  },
+  {
+    "id": "05_am",
+    "stage": 5,
+    "label": "金属 AM 造形部品",
+    "header": "05 金属 AM 造形部品",
+    "description": "ロケット・航空機の軽量部品",
+    "els": [
+      "Sc"
+    ],
+    "src": [
+      "04_am_feedstock"
+    ],
+    "srcEls": {
+      "04_am_feedstock": [
+        "Sc"
+      ]
+    },
+    "srcNotes": {
+      "04_am_feedstock": "粉末・ワイヤで積層造形"
+    }
+  },
+  {
+    "id": "05_tbc",
+    "stage": 5,
+    "label": "遮熱皮膜（TBC）",
+    "header": "05 遮熱皮膜（TBC）",
+    "description": "エンジン高温部品への溶射施工",
     "els": [
       "Y"
     ],
     "src": [
-      "04_opt"
+      "03_ceramic",
+      "04_tbc_spray"
     ],
     "srcEls": {
-      "04_opt": [
+      "03_ceramic": [
+        "Y"
+      ],
+      "04_tbc_spray": [
         "Y"
       ]
     },
     "srcNotes": {
-      "04_opt": "YAGレーザー発振器はYを結晶母材に含み、高出力固体レーザーの発振部へ直接接続。"
-    }
-  },
-  {
-    "id": "05_engine",
-    "stage": 5,
-    "label": "航空エンジン・ガスタービン",
-    "header": "05 航空エンジン・ガスタービン",
-    "description": "航空エンジン・ガスタービンの高温部品",
-    "els": [
-      "Y"
-    ],
-    "src": [
-      "04_coat"
-    ],
-    "srcEls": {
-      "04_coat": [
-        "Y"
-      ]
+      "03_ceramic": "YSZ（イットリア安定化ジルコニア）を遮熱皮膜の原料に",
+      "04_tbc_spray": "YSZ 溶射粉末を溶射して遮熱皮膜に"
     },
-    "srcNotes": {
-      "04_coat": "YSZ系TBCは航空エンジン・ガスタービン高温部の遮熱皮膜として直接使用。"
+    "srcSkip": {
+      "03_ceramic": "利用者の指定：遮熱皮膜は安定化ジルコニア粉末と溶射材料の双方から接続する"
     }
   },
   {
-    "id": "05_energy",
+    "id": "05_sofc",
     "stage": 5,
-    "label": "固体酸化物形燃料電池（SOFC）／固体酸化物形電解（SOEC）",
-    "header": "05 固体酸化物形燃料電池（SOFC）／固体酸化物形電解（SOEC）",
-    "description": "高効率発電・水素製造用セル／スタック",
+    "label": "SOFC セルスタック",
+    "header": "05 SOFC セルスタック",
+    "description": "固体酸化物形の発電・電解",
     "els": [
       "Y",
       "Sc"
-    ],
-    "forceEls": [
-      "Y"
     ],
     "src": [
       "04_elec"
@@ -349,76 +697,111 @@ const SUBCATS = [
       ]
     },
     "srcNotes": {
-      "04_elec": "YSZ／ScSZはSOFC・SOECの固体電解質として直接使用。"
+      "04_elec": "固体電解質としてセルスタックに"
     }
   },
   {
-    "id": "05_nuclear",
+    "id": "05_plasma_parts",
     "stage": 5,
-    "label": "原子力・核燃料被覆材",
-    "header": "05 原子力・核燃料被覆材",
-    "description": "核燃料製造・耐熱／透過障壁用途",
+    "label": "耐プラズマ皮膜・部品",
+    "header": "05 耐プラズマ皮膜・部品",
+    "description": "半導体製造装置のチャンバー部材",
     "els": [
       "Y"
     ],
     "src": [
-      "04_coat"
+      "03_yttria_powder",
+      "04_plasma_spray"
     ],
     "srcEls": {
-      "04_coat": [
+      "03_yttria_powder": [
+        "Y"
+      ],
+      "04_plasma_spray": [
         "Y"
       ]
     },
     "srcNotes": {
-      "04_coat": "Y₂O₃／YSZ皮膜は核燃料製造用るつぼや原子力向け透過障壁で研究・使用。量産被覆管の主流材を意味しない。"
+      "03_yttria_powder": "Y₂O₃ 微粉を成形・焼結して耐プラズマ部品に",
+      "04_plasma_spray": "Y₂O₃・YF₃ 溶射粉末を溶射して耐プラズマ皮膜に"
+    },
+    "srcSkip": {
+      "03_yttria_powder": "利用者の指定：耐プラズマ皮膜・部品は、焼結部品の原料になる高純度 Y₂O₃・YF₃ 粉末と、耐プラズマ用溶射材料の双方から接続する"
     }
   },
   {
-    "id": "05_guid",
+    "id": "05_cladding",
     "stage": 5,
-    "label": "誘導・慣性・航法",
-    "header": "05 誘導・慣性・航法",
-    "description": "誘導弾・IMU・ジャイロ・アクチュエータ",
+    "label": "燃料被覆管（ODS 鋼）",
+    "header": "05 燃料被覆管（ODS 鋼）",
+    "description": "事故耐性燃料向け（開発段階）",
+    "els": [
+      "Y"
+    ],
+    "src": [
+      "04_ods"
+    ],
+    "srcEls": {
+      "04_ods": [
+        "Y"
+      ]
+    },
+    "srcNotes": {
+      "04_ods": "ODS 素材を押出・圧延して被覆管にする"
+    },
+    "note": "商用炉の被覆管はジルコニウム合金（ジルカロイ）で、ジルコニア粉末や希土類は使わない。Y を使うのは開発中の ODS 鋼被覆管（FeCrAl-ODS は 2030 年代の実用化を目標）。"
+  },
+  {
+    "id": "05_laser_osc",
+    "stage": 5,
+    "label": "固体レーザー発振器",
+    "header": "05 固体レーザー発振器",
+    "description": "Nd:YAG・Yb:YAG",
     "els": [
       "Y",
-      "DyTb",
-      "Sm",
+      "DyTb"
+    ],
+    "src": [
+      "04_laser_medium"
+    ],
+    "srcEls": {
+      "04_laser_medium": [
+        "Y",
+        "DyTb"
+      ]
+    },
+    "srcNotes": {
+      "04_laser_medium": "媒質・アイソレーターを発振器に組み込む"
+    },
+    "note": "旧分類では工程4（機能材料・部材）だった。発振器は部材を組み込んだ機器のため、モジュール・機器の段に置いた。"
+  },
+  {
+    "id": "05_scaln_film",
+    "stage": 5,
+    "label": "ScAlN 圧電薄膜",
+    "header": "05 ScAlN 圧電薄膜",
+    "description": "RF フィルタ・MEMS 向けの成膜",
+    "els": [
       "Sc"
     ],
     "src": [
-      "04_opt",
-      "04_mag",
-      "04_target",
-      "04_sc_crystal"
+      "04_target"
     ],
     "srcEls": {
-      "04_opt": [
-        "Y"
-      ],
-      "04_mag": [
-        "DyTb",
-        "Sm"
-      ],
       "04_target": [
         "Sc"
-      ],
-      "04_sc_crystal": [
-        "Sc"
       ]
     },
     "srcNotes": {
-      "04_opt": "YAGレーザーは測距・目標指示・レーザー誘導の光源へ直接接続。",
-      "04_mag": "Dy・Tb添加NdFeB／SmCo磁石は誘導制御用モータ・アクチュエータ・ジャイロへ直接接続。",
-      "04_target": "ScAlN等のSc系圧電薄膜はMEMS慣性・航法センサへ直接接続。",
-      "04_sc_crystal": "SAM基板・テンプレートはScAlN系圧電／MEMSセンサの下地へ直接接続。"
+      "04_target": "スパッタで ScAlN 圧電膜を成膜"
     }
   },
   {
-    "id": "05_sat",
+    "id": "05_electronics",
     "stage": 5,
-    "label": "衛星・宇宙機・ロケット",
-    "header": "05 衛星・宇宙機・ロケット",
-    "description": "衛星・探査機・ロケット部品／サービス",
+    "label": "電子部品・半導体",
+    "header": "05 電子部品・半導体",
+    "description": "MLCC・GaN HEMT・IC・水晶",
     "els": [
       "Y",
       "DyTb",
@@ -426,210 +809,483 @@ const SUBCATS = [
       "Sc"
     ],
     "src": [
-      "04_opt",
-      "04_mag",
+      "04_media",
+      "04_target",
       "04_sc_crystal",
-      "04_am"
+      "04_mag",
+      "04_dielectric"
     ],
     "srcEls": {
-      "04_opt": [
+      "04_media": [
         "Y"
       ],
-      "04_mag": [
-        "DyTb",
-        "Sm"
-      ],
-      "04_sc_crystal": [
-        "Sc"
-      ],
-      "04_am": [
-        "Sc"
-      ]
-    },
-    "srcNotes": {
-      "04_opt": "Nd:YAGレーザーは宇宙搭載LiDAR・レーザー測距の光源へ直接接続。",
-      "04_mag": "SmCo／高保磁力NdFeB磁石は衛星のリアクションホイール・モータ・アクチュエータへ直接接続。",
-      "04_sc_crystal": "SAM基板・テンプレートは衛星通信向けScAlN系RF／圧電デバイスの下地へ接続。",
-      "04_am": "Sc含有Al合金の金属AM部品は宇宙機・ロケットの軽量構造／熱流体部品に実装例あり。"
-    }
-  },
-  {
-    "id": "05_flight",
-    "stage": 5,
-    "label": "飛行制御・電動化",
-    "header": "05 飛行制御・電動化",
-    "description": "飛行制御・推進・電動アクチュエータ",
-    "els": [
-      "DyTb",
-      "Sm"
-    ],
-    "src": [
-      "04_mag"
-    ],
-    "srcEls": {
-      "04_mag": [
-        "DyTb",
-        "Sm"
-      ]
-    },
-    "srcNotes": {
-      "04_mag": "高保磁力NdFeB／SmCo磁石は飛行制御アクチュエータと電動推進モータへ直接接続。"
-    }
-  },
-  {
-    "id": "05_robot",
-    "stage": 5,
-    "label": "ロボティクス・精密",
-    "header": "05 ロボティクス・精密",
-    "description": "ロボット・精密駆動・自動化装置",
-    "els": [
-      "DyTb",
-      "Sm"
-    ],
-    "src": [
-      "04_mag"
-    ],
-    "srcEls": {
-      "04_mag": [
-        "DyTb",
-        "Sm"
-      ]
-    },
-    "srcNotes": {
-      "04_mag": "高性能永久磁石は小型・高トルクのロボット用モータと精密アクチュエータへ直接接続。"
-    }
-  },
-  {
-    "id": "05_rf_sensor",
-    "stage": 5,
-    "label": "RF・圧電・高温センサ",
-    "header": "05 RF・圧電・高温センサー",
-    "description": "RFフィルタ・圧電／高温センサ",
-    "els": [
-      "Y",
-      "Sc"
-    ],
-    "src": [
-      "04_elec",
-      "04_target",
-      "04_sc_crystal"
-    ],
-    "srcEls": {
-      "04_elec": [
-        "Y",
-        "Sc"
-      ],
       "04_target": [
         "Sc"
       ],
       "04_sc_crystal": [
         "Sc"
+      ],
+      "04_mag": [
+        "DyTb",
+        "Sm"
+      ],
+      "04_dielectric": [
+        "Y",
+        "DyTb"
       ]
     },
     "srcNotes": {
-      "04_elec": "YSZ／ScSZ電解質は高温酸素・ガスセンサへ直接接続。",
-      "04_target": "ScAlN薄膜のスパッタ成膜はRFフィルタ・圧電センサへ直接接続。",
-      "04_sc_crystal": "SAM基板・テンプレートはScAlN系RF／圧電デバイスの下地へ直接接続。"
-    }
+      "04_media": "MLCC など電子部品の粉砕・分散工程で使う",
+      "04_target": "Al–Sc 配線・ScAlN 膜などの成膜（半導体・電子部品）",
+      "04_sc_crystal": "GaN 系 RF・パワー・光デバイスの下地基板",
+      "04_mag": "センサ・リレー・スピーカー等の電子部品の磁石",
+      "04_dielectric": "MLCC の誘電体層（チタン酸バリウム＋Dy・Ho・Y 酸化物）"
+    },
+    "note": "MLCC の誘電体には希土類が添加されるのが一般的だが、各社の組成は非開示。IC・GaN HEMT・水晶デバイス・基板は希土類材料との結びつきを製品記載から読み取れない。"
   },
   {
-    "id": "05_defense_electronics",
-    "stage": 5,
-    "label": "防衛半導体・電子回路・通信",
-    "header": "05 防衛半導体・電子回路・通信",
-    "description": "防衛半導体・電子回路・通信装置",
+    "id": "06_aircraft",
+    "stage": 6,
+    "label": "航空機・飛行制御",
+    "header": "06 航空機・飛行制御",
+    "description": "機体・操舵・降着・電動化",
     "els": [
       "Y",
+      "DyTb",
+      "Sm",
       "Sc"
     ],
     "src": [
-      "04_target",
-      "04_sc_crystal"
+      "05_am",
+      "05_motor",
+      "05_electronics"
     ],
     "srcEls": {
-      "04_target": [
-        "Y",
+      "05_am": [
         "Sc"
       ],
-      "04_sc_crystal": [
+      "05_motor": [
+        "DyTb",
+        "Sm"
+      ],
+      "05_electronics": [
+        "Y",
+        "DyTb",
         "Sc"
       ]
     },
     "srcNotes": {
-      "04_target": "YIG系マイクロ波部品とScAlN系RF部品の薄膜形成にY／Sc系ターゲットが直接接続。",
-      "04_sc_crystal": "SAM基板・テンプレートはScAlN系RF・通信デバイスの下地へ接続。"
+      "05_am": "航空機の軽量構造部品",
+      "05_motor": "飛行制御アクチュエータ・発電機・電動推進",
+      "05_electronics": "飛行制御コンピュータ・アビオニクス・表示装置の電子回路・部品（MLCC・IC・基板・水晶デバイス）"
     }
   },
   {
-    "id": "05_military_radar",
-    "stage": 5,
-    "label": "軍事用レーダー・モジュール",
-    "header": "05 軍事用レーダー・モジュール",
-    "description": "捜索・追尾レーダーとRFモジュール",
+    "id": "06_guidance",
+    "stage": 6,
+    "label": "誘導・慣性航法",
+    "header": "06 誘導・慣性航法",
+    "description": "誘導弾・IMU・ジャイロ",
     "els": [
       "Y",
+      "DyTb",
+      "Sm",
       "Sc"
     ],
     "src": [
-      "04_target",
-      "04_sc_crystal"
+      "05_scaln_film",
+      "05_motor",
+      "05_electronics"
     ],
     "srcEls": {
-      "04_target": [
-        "Y",
+      "05_scaln_film": [
         "Sc"
       ],
-      "04_sc_crystal": [
+      "05_motor": [
+        "DyTb",
+        "Sm"
+      ],
+      "05_electronics": [
+        "Y",
+        "DyTb",
         "Sc"
       ]
     },
     "srcNotes": {
-      "04_target": "YIG系マイクロ波部品とScAlN系RF部品の薄膜形成にY／Sc系ターゲットがレーダー・モジュールへ直接接続。",
-      "04_sc_crystal": "SAM基板・テンプレートはScAlN系RFフィルタ・共振器の下地としてレーダー・モジュールへ接続。"
+      "05_scaln_film": "MEMS 慣性・圧電センサ",
+      "05_motor": "操舵・シーカー駆動、ジャイロ",
+      "05_electronics": "慣性計測装置（IMU）・誘導制御装置の電子回路・センサ"
     }
   },
   {
-    "id": "05_unmanned",
-    "stage": 5,
-    "label": "無人装備・ドローン",
-    "header": "05 無人装備・ドローン",
-    "description": "UAV・UGV・無人艇と搭載機器",
+    "id": "06_unmanned",
+    "stage": 6,
+    "label": "無人機・ロボット",
+    "header": "06 無人機・ロボット",
+    "description": "ドローン・UGV・ロボット",
     "els": [
+      "Y",
       "DyTb",
       "Sm"
     ],
     "src": [
-      "04_mag"
+      "05_motor",
+      "05_laser_osc",
+      "05_electronics"
     ],
     "srcEls": {
-      "04_mag": [
+      "05_motor": [
+        "DyTb",
+        "Sm"
+      ],
+      "05_laser_osc": [
+        "Y"
+      ],
+      "05_electronics": [
+        "Y",
+        "DyTb"
+      ]
+    },
+    "srcNotes": {
+      "05_motor": "推進モータ・ジンバル・関節",
+      "05_laser_osc": "レーザー計測（ライダー）の光源",
+      "05_electronics": "無人機・ロボットの電子回路・センサ"
+    }
+  },
+  {
+    "id": "06_naval",
+    "stage": 6,
+    "label": "艦艇・水中・航法",
+    "header": "06 艦艇・水中・航法",
+    "description": "ジャイロコンパス・水中音響",
+    "els": [
+      "Y",
+      "DyTb",
+      "Sm",
+      "Sc"
+    ],
+    "src": [
+      "05_motor",
+      "05_electronics"
+    ],
+    "srcEls": {
+      "05_motor": [
+        "DyTb",
+        "Sm"
+      ],
+      "05_electronics": [
+        "Y",
+        "DyTb",
+        "Sc"
+      ]
+    },
+    "srcNotes": {
+      "05_motor": "航法装置・水中機器の駆動部",
+      "05_electronics": "艦艇・水中機器の電子回路・センサ"
+    }
+  },
+  {
+    "id": "06_launch",
+    "stage": 6,
+    "label": "ロケット・打上げ",
+    "header": "06 ロケット・打上げ",
+    "description": "ロケット・ロケット弾",
+    "els": [
+      "Y",
+      "DyTb",
+      "Sm",
+      "Sc"
+    ],
+    "src": [
+      "05_am",
+      "05_motor",
+      "05_electronics"
+    ],
+    "srcEls": {
+      "05_am": [
+        "Sc"
+      ],
+      "05_motor": [
+        "DyTb",
+        "Sm"
+      ],
+      "05_electronics": [
+        "Y",
+        "DyTb"
+      ]
+    },
+    "srcNotes": {
+      "05_am": "ロケット部品（UACJ・JAXA・三菱重工の共同開発）",
+      "05_motor": "推力方向制御（TVC）アクチュエータ",
+      "05_electronics": "ロケットの電子機器・アビオニクス"
+    }
+  },
+  {
+    "id": "06_space",
+    "stage": 6,
+    "label": "衛星・宇宙機",
+    "header": "06 衛星・宇宙機",
+    "description": "衛星・探査機・軌道上サービス",
+    "els": [
+      "Y",
+      "DyTb",
+      "Sm",
+      "Sc"
+    ],
+    "src": [
+      "05_motor",
+      "05_laser_osc",
+      "05_electronics"
+    ],
+    "srcEls": {
+      "05_motor": [
+        "DyTb",
+        "Sm"
+      ],
+      "05_laser_osc": [
+        "Y"
+      ],
+      "05_electronics": [
+        "Y",
+        "DyTb",
+        "Sc"
+      ]
+    },
+    "srcNotes": {
+      "05_motor": "リアクションホイール・駆動機構",
+      "05_laser_osc": "宇宙ライダー・レーザー測距",
+      "05_electronics": "宇宙用電子部品"
+    }
+  },
+  {
+    "id": "06_engine",
+    "stage": 6,
+    "label": "航空エンジン・ガスタービン",
+    "header": "06 航空エンジン・ガスタービン",
+    "description": "エンジン・ガスタービンと部品",
+    "els": [
+      "Y"
+    ],
+    "src": [
+      "05_tbc"
+    ],
+    "srcEls": {
+      "05_tbc": [
+        "Y"
+      ]
+    },
+    "srcNotes": {
+      "05_tbc": "燃焼器・タービン高温部品の遮熱皮膜"
+    }
+  },
+  {
+    "id": "06_energy",
+    "stage": 6,
+    "label": "エネルギー・電源",
+    "header": "06 エネルギー・電源",
+    "description": "SOFC・SOEC システム、発電機",
+    "els": [
+      "Y",
+      "DyTb",
+      "Sm",
+      "Sc"
+    ],
+    "src": [
+      "05_motor",
+      "05_sofc"
+    ],
+    "srcEls": {
+      "05_motor": [
+        "DyTb",
+        "Sm"
+      ],
+      "05_sofc": [
+        "Y",
+        "Sc"
+      ]
+    },
+    "srcNotes": {
+      "05_motor": "発電機（永久磁石式）",
+      "05_sofc": "発電・水電解システム"
+    }
+  },
+  {
+    "id": "06_semi",
+    "stage": 6,
+    "label": "半導体製造装置",
+    "header": "06 半導体製造装置",
+    "description": "エッチング・成膜装置（民生）",
+    "els": [
+      "Y"
+    ],
+    "src": [
+      "05_plasma_parts"
+    ],
+    "srcEls": {
+      "05_plasma_parts": [
+        "Y"
+      ]
+    },
+    "srcNotes": {
+      "05_plasma_parts": "エッチング装置のチャンバー部材"
+    }
+  },
+  {
+    "id": "06_nuclear",
+    "stage": 6,
+    "label": "原子力燃料",
+    "header": "06 原子力燃料",
+    "description": "燃料集合体・照射試験",
+    "els": [
+      "Y"
+    ],
+    "src": [
+      "05_cladding"
+    ],
+    "srcEls": {
+      "05_cladding": [
+        "Y"
+      ]
+    },
+    "srcNotes": {
+      "05_cladding": "燃料棒の被覆管（事故耐性燃料・高速炉燃料、開発段階）"
+    }
+  },
+  {
+    "id": "06_laser",
+    "stage": 6,
+    "label": "レーザー装備・照射",
+    "header": "06 レーザー装備・照射",
+    "description": "測距・照射・高出力",
+    "els": [
+      "Y",
+      "DyTb"
+    ],
+    "src": [
+      "05_laser_osc",
+      "05_electronics"
+    ],
+    "srcEls": {
+      "05_laser_osc": [
+        "Y",
+        "DyTb"
+      ],
+      "05_electronics": [
+        "Y"
+      ]
+    },
+    "srcNotes": {
+      "05_laser_osc": "測距・照射・加工用の光源",
+      "05_electronics": "交戦訓練用のレーザ送受信器などの半導体レーザー・電子回路"
+    }
+  },
+  {
+    "id": "06_radar",
+    "stage": 6,
+    "label": "レーダー",
+    "header": "06 レーダー",
+    "description": "捜索・監視・気象レーダ",
+    "els": [
+      "Y",
+      "DyTb",
+      "Sm",
+      "Sc"
+    ],
+    "src": [
+      "05_scaln_film",
+      "05_tube",
+      "05_electronics",
+      "05_motor"
+    ],
+    "srcEls": {
+      "05_scaln_film": [
+        "Sc"
+      ],
+      "05_tube": [
+        "Sm",
+        "Sc"
+      ],
+      "05_electronics": [
+        "Y",
+        "DyTb",
+        "Sc"
+      ],
+      "05_motor": [
         "DyTb",
         "Sm"
       ]
     },
     "srcNotes": {
-      "04_mag": "高保磁力NdFeB／SmCo磁石は無人機の推進モータ・ジンバル・アクチュエータへ直接接続。"
+      "05_scaln_film": "RF フィルタ・共振器",
+      "05_tube": "送信管（TWT・マグネトロン等）",
+      "05_electronics": "送受信モジュールの電子回路・部品",
+      "05_motor": "アンテナ駆動・回転機構のモータ"
     }
   },
   {
-    "id": "05_airframe_support",
-    "stage": 5,
-    "label": "航空機構造・整備",
-    "header": "05 航空機構造・整備",
-    "description": "航空機構造部品の製造・修理・整備",
+    "id": "06_comm",
+    "stage": 6,
+    "label": "通信・情報",
+    "header": "06 通信・情報",
+    "description": "無線機・衛星通信・情報システム",
     "els": [
+      "Y",
+      "DyTb",
+      "Sm",
       "Sc"
     ],
     "src": [
-      "04_am"
+      "05_scaln_film",
+      "05_tube",
+      "05_electronics"
     ],
     "srcEls": {
-      "04_am": [
+      "05_scaln_film": [
+        "Sc"
+      ],
+      "05_tube": [
+        "Sm",
+        "Sc"
+      ],
+      "05_electronics": [
+        "Y",
+        "DyTb",
+        "Sm",
         "Sc"
       ]
     },
     "srcNotes": {
-      "04_am": "Sc含有Al合金の金属AMは航空機の軽量構造部品に実装・飛行実証例あり。"
+      "05_scaln_film": "通信機の RF フィルタ",
+      "05_tube": "衛星通信・無線の送信管",
+      "05_electronics": "通信機器の電子回路・部品（磁性部品を含む）"
+    }
+  },
+  {
+    "id": "06_rf_sensor",
+    "stage": 6,
+    "label": "RF・圧電センサ・計測",
+    "header": "06 RF・圧電センサ・計測",
+    "description": "高周波計測・圧電評価・センサ",
+    "els": [
+      "Y",
+      "Sc"
+    ],
+    "src": [
+      "05_scaln_film",
+      "05_electronics"
+    ],
+    "srcEls": {
+      "05_scaln_film": [
+        "Sc"
+      ],
+      "05_electronics": [
+        "Y",
+        "Sc"
+      ]
+    },
+    "srcNotes": {
+      "05_scaln_film": "圧電センサ・高周波デバイス",
+      "05_electronics": "計測器・センサの電子部品"
     }
   }
 ];
@@ -640,10 +1296,10 @@ const SEED = [
     "name": "ネオマグ（商流ノード）",
     "jsx": "商流ノード（ネオマグ等）",
     "stages": [
-      2
+      4
     ],
     "subs": [
-      "02_trade"
+      "04_mag"
     ],
     "tags": [
       "DyTb",
@@ -657,7 +1313,7 @@ const SEED = [
     "chn": "高。輸入元、原産国証明、再輸出規制該否を確認",
     "ev": "A",
     "exc": 0,
-    "src": "JSX／DyTb DD／Sm DD",
+    "src": "JSX ／ DyTb DD ／ Sm DD",
     "note": "JSXではctx=1の商流参考ノード。企業名として統合表に収録"
   },
   {
@@ -666,12 +1322,16 @@ const SEED = [
     "jsx": "三井金属レアマテリアル事業部",
     "stages": [
       2,
-      3
+      3,
+      4
     ],
     "subs": [
+      "03_dielectric_additive",
       "02_compound",
       "02_recycle",
-      "03_magnet"
+      "03_magnet_alloy",
+      "03_yttria_powder",
+      "04_plasma_spray"
     ],
     "tags": [
       "Y",
@@ -680,13 +1340,13 @@ const SEED = [
     ],
     "own": "三井金属鉱業の事業部。旧・日本イットリウムを2025年4月吸収合併",
     "rev": "事業部非開示／親会社約7,000億円",
-    "prod": "高純度Y₂O₃・YF₃・YOF、YSZ用Y化合物、SmCo磁性合金粉末、Tb-Gd合金",
+    "prod": "高純度Y₂O₃・YF₃・YOF、Y₂O₃・YOF 顆粒（焼結・溶射用。半導体製造装置の耐プラズマ部材向け）、YSZ用Y化合物、SmCo磁性合金粉末、Tb-Gd合金、MLCC 用途の希土類塩・加工品（硝酸塩溶液・酢酸塩など）、リサイクル原料からの再資源化",
     "pos": "国内Y系分離精製の根元。全希土類を扱う国内希少ノード",
     "def": "耐プラズマ、TBC、レーザー、磁石の上流。防衛電子・宇宙用半導体",
     "chn": "中～高。原料の中国原産比率、非中国・リサイクル原料、在庫月数を確認",
     "ev": "A",
     "exc": 1,
-    "src": "JSX／Y DD／DyTb DD／Sm DD",
+    "src": "JSX ／ Y DD ／ DyTb DD ／ Sm DD ／ https://em.mitsui-kinzoku.com/products/applications/electronics/mlcc/ ／ https://em.mitsui-kinzoku.com/rare-material/products/oxide-rare-earth-compounds/",
     "note": "法人ではなく事業部単位。売上条件は例外"
   },
   {
@@ -699,8 +1359,8 @@ const SEED = [
     ],
     "subs": [
       "02_metal",
-      "02_recycle",
-      "03_magnet"
+      "03_magnet_alloy",
+      "02_recycle"
     ],
     "tags": [
       "DyTb",
@@ -714,7 +1374,7 @@ const SEED = [
     "chn": "高。Dy/Tb/Sm原料と中国JV経路、輸出許可を確認",
     "ev": "A",
     "exc": 0,
-    "src": "JSX／DyTb DD／Sm DD ／ https://www.santoku-corp.co.jp/news/20260701_1.html ／ https://www.santoku-corp.co.jp/company/about.html",
+    "src": "JSX ／ DyTb DD ／ Sm DD ／ https://www.santoku-corp.co.jp/news/20260701_1.html ／ https://www.santoku-corp.co.jp/company/about.html",
     "note": "正式商号は株式会社三徳。2026年7月1日のグループ内再編で株式会社プロテリアルから株式会社プロテリアルマグネティクスの子会社へ移行。プロテリアル本体とは別法人として収録"
   },
   {
@@ -730,10 +1390,11 @@ const SEED = [
       "02_compound",
       "02_metal",
       "02_recycle",
-      "03_magnet",
-      "03_ceramic",
-      "03_precursor",
-      "04_mag"
+      "03_magnet_alloy",
+      "04_mag",
+      "04_plasma_spray",
+      "03_yag_crystal",
+      "03_yttria_powder"
     ],
     "tags": [
       "Y",
@@ -742,13 +1403,13 @@ const SEED = [
     ],
     "own": "東証プライム(4063)",
     "rev": "約2.6兆円",
-    "prod": "Y₂O₃・YF₃・YOF・YAG系材料、希土類金属・磁石合金、NdFeB・SmCo磁石、工程内材・回収磁石の再資源化",
+    "prod": "Y₂O₃・YF₃・YOF・YAG系材料、Y₂O₃ 系の溶射用顆粒（QU・PQ タイプ）、希土類金属・磁石合金、NdFeB・SmCo磁石、工程内材・回収磁石の再資源化",
     "pos": "信越化学グループとして分離・精製、還元、合金・磁粉、焼結磁石、リサイクルを担う一貫ノード",
     "def": "半導体耐プラズマ材、TBC周辺、高性能磁石、航空宇宙・防衛電子",
     "chn": "高。Y/Dy/Tb/Sm調達、海外精製拠点、輸出管理対象混合物を確認",
     "ev": "A",
     "exc": 1,
-    "src": "JSX／Y DD／DyTb DD／Sm DD ／ https://www.shinetsu.co.jp/en/sustainability/esg_environment/resource_saving/ ／ https://www.shinetsu.co.jp/en/news/news-release/shin-etsu-chemical-to-set-up-a-base-in-china-to-manufacture-magnet-alloys-for-rare-earth-magnets/",
+    "src": "JSX ／ Y DD ／ DyTb DD ／ Sm DD ／ https://www.shinetsu.co.jp/en/sustainability/esg_environment/resource_saving/ ／ https://www.shinetsu.co.jp/en/news/news-release/shin-etsu-chemical-to-set-up-a-base-in-china-to-manufacture-magnet-alloys-for-rare-earth-magnets/ ／ https://www.rare-earth.jp/product.html",
     "note": "JSXの2ノードを重複統合。工程2・3は海外子会社・海外工場を含む信越化学グループとしての一貫生産範囲"
   },
   {
@@ -775,7 +1436,7 @@ const SEED = [
     "chn": "高。Sc₂O₃を含む原料原産国証明、ロット量、中国輸出許可を確認",
     "ev": "B",
     "exc": 0,
-    "src": "JSX／Y DD／Sc DD／https://www.kojundo.co.jp/dcms_media/other/SCO01PAG.pdf",
+    "src": "JSX ／ Y DD ／ Sc DD ／ https://www.kojundo.co.jp/dcms_media/other/SCO01PAG.pdf ／ https://www.kojundo.co.jp/material/thin_film_material/sputtering_targets.html",
     "note": "量産よりR&D・試作ノード",
     "atlaProcurement": true,
     "atla": {
@@ -807,7 +1468,7 @@ const SEED = [
     "chn": "高。安定化剤Y₂O₃の原産国、非中国Y、顧客優先供給を確認",
     "ev": "A",
     "exc": 1,
-    "src": "JSX／Y DD",
+    "src": "JSX ／ Y DD",
     "note": "売上条件は例外"
   },
   {
@@ -832,7 +1493,7 @@ const SEED = [
     "chn": "中～高。Y₂O₃／Sc₂O₃の原産国、Sc含有量別在庫、代替材の実用度を確認",
     "ev": "A",
     "exc": 0,
-    "src": "JSX／Y DD／Sc DD／https://www.dkkk.co.jp/products/functions.html",
+    "src": "JSX ／ Y DD ／ Sc DD ／ https://www.dkkk.co.jp/products/functions.html",
     "note": "条件内のYSZ・ScSZ粉末中核"
   },
   {
@@ -840,10 +1501,11 @@ const SEED = [
     "name": "フジミインコーポレーテッド",
     "jsx": "フジミインコーポレーテッド",
     "stages": [
-      3
+      4
     ],
     "subs": [
-      "03_ceramic"
+      "04_tbc_spray",
+      "04_plasma_spray"
     ],
     "tags": [
       "Y"
@@ -856,7 +1518,7 @@ const SEED = [
     "chn": "高。高純度Y原料ソース、粉末拠点、顧客別優先供給を確認",
     "ev": "B",
     "exc": 0,
-    "src": "JSX／Y DD",
+    "src": "JSX ／ Y DD",
     "note": "条件内の溶射粉末中核"
   },
   {
@@ -869,7 +1531,7 @@ const SEED = [
     ],
     "subs": [
       "02_compound",
-      "03_magnet"
+      "03_magnet_powder"
     ],
     "tags": [
       "Sm",
@@ -883,7 +1545,7 @@ const SEED = [
     "chn": "Scは低～中（フィリピン→日本の代替供給側）。Smは高。HPAL稼働率、精製拠点集中、Sm原料を確認",
     "ev": "A",
     "exc": 1,
-    "src": "JSX／Sm DD／Sc DD／https://www.smm.co.jp/business/refining/products/scandium/",
+    "src": "JSX ／ Sm DD ／ Sc DD ／ https://www.smm.co.jp/business/refining/products/scandium/",
     "note": "親会社のSc事業と実製造子会社のSm事業を1行に統合"
   },
   {
@@ -894,7 +1556,7 @@ const SEED = [
       3
     ],
     "subs": [
-      "03_magnet"
+      "03_magnet_powder"
     ],
     "tags": [
       "DyTb"
@@ -907,7 +1569,7 @@ const SEED = [
     "chn": "高。中国・タイ等の拠点、原料原産国、ライセンスを確認",
     "ev": "参考",
     "exc": 1,
-    "src": "JSX／DyTb DD",
+    "src": "JSX ／ DyTb DD",
     "note": "日本企業ではないが日本側BOM上の重要供給源"
   },
   {
@@ -915,23 +1577,26 @@ const SEED = [
     "name": "神島化学工業",
     "jsx": "神島化学工業",
     "stages": [
-      3
+      3,
+      4
     ],
     "subs": [
-      "03_precursor"
+      "03_yag_crystal",
+      "04_laser_medium"
     ],
     "tags": [
-      "Y"
+      "Y",
+      "DyTb"
     ],
     "own": "東証スタンダード(4026)",
     "rev": "274.05億円（2025年4月期）",
-    "prod": "透明YAG・Y₂O₃セラミックス、レーザー媒質、蛍光体",
+    "prod": "透明YAG・Y₂O₃セラミックス、レーザー媒質、蛍光体、光アイソレーター用 TGG 透明セラミックス",
     "pos": "大型・接合YAGで世界唯一級とされる",
     "def": "高出力レーザー、宇宙デブリ捕捉、レーザー核融合",
     "chn": "高。高純度Y₂O₃とNd/Yb等ドーパント原産国を確認",
     "ev": "A",
     "exc": 0,
-    "src": "JSX／Y DD",
+    "src": "JSX ／ Y DD ／ https://www.konoshima.co.jp/ceramics/tgg.html",
     "note": "Y系機能部材の最重要候補 ／ Stage 04『固体レーザー発振器（YAG）』から除外し、YAG結晶・セラミックス材料側のStage 03に限定"
   },
   {
@@ -939,10 +1604,12 @@ const SEED = [
     "name": "信光社",
     "jsx": "信光社",
     "stages": [
-      3
+      3,
+      4
     ],
     "subs": [
-      "03_precursor"
+      "03_yag_crystal",
+      "04_laser_medium"
     ],
     "tags": [
       "Y"
@@ -963,19 +1630,17 @@ const SEED = [
     "name": "オキサイド",
     "jsx": "固体レーザー発振器DD正式採用",
     "stages": [
-      4,
-      3
+      5
     ],
     "subs": [
-      "04_opt",
-      "03_precursor"
+      "05_laser_osc"
     ],
     "tags": [
       "Y"
     ],
     "own": "証券コード：6521",
     "rev": "100.4億円（2026年2月期・連結）",
-    "prod": "266nm・193nm全固体深紫外レーザー、CW／QCW／ピコ秒レーザー、波長変換モジュール",
+    "prod": "266nm・193nm全固体深紫外レーザー、CW／QCW／ピコ秒レーザー、波長変換モジュール、波長変換用単結晶（BBO・CLBO）",
     "pos": "深紫外レーザー世界シェア30%以上、波長変換単結晶95%以上（会社推計）。",
     "def": "深紫外レーザーは先端半導体検査・微細加工の基盤。航空機・ドローン・衛星向け特殊レーザーも扱うが、同製品は米Areté製。自社深紫外レーザーの防衛納入は未確認。 ／ 今回の公開情報確認では直接契約を特定できず。",
     "chn": "当該DUV製品はBBO等の非線形結晶が主要。Y曝露は基本波源BOMを確認するまで確定不可。",
@@ -985,7 +1650,7 @@ const SEED = [
     "exc": 0,
     "formal": true,
     "formalSource": "固体レーザー発振器DD：採用候補",
-    "src": "https://www.opt-oxide.com/products-list/laser/ ／ https://www.opt-oxide.com/products-list/laser/qcw-laser/item_LA00008 ／ https://www.opt-oxide.com/v2019/wp-content/uploads/2013/03/266Laser_r12-1.pdf ／ https://www.opt-oxide.com/ir/meeting/meeting26_review/ ／ https://www.opt-oxide.com/products-list/laser/special",
+    "src": "https://www.opt-oxide.com/products-list/laser/ ／ https://www.opt-oxide.com/products-list/laser/qcw-laser/item_LA00008 ／ https://www.opt-oxide.com/v2019/wp-content/uploads/2013/03/266Laser_r12-1.pdf ／ https://www.opt-oxide.com/ir/meeting/meeting26_review/ ／ https://www.opt-oxide.com/products-list/laser/special ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00006",
     "note": "固体レーザー発振器DDの「採用候補（発振器）」に基づきStage 04へ正式採用。"
   },
   {
@@ -993,10 +1658,11 @@ const SEED = [
     "name": "トーカロ",
     "jsx": "トーカロ",
     "stages": [
-      4
+      5
     ],
     "subs": [
-      "04_coat"
+      "05_tbc",
+      "05_plasma_parts"
     ],
     "tags": [
       "Y"
@@ -1009,7 +1675,7 @@ const SEED = [
     "chn": "高。認証済み粉末の供給元、切替時再認証、広州拠点を確認",
     "ev": "A",
     "exc": 0,
-    "src": "JSX／Y DD",
+    "src": "JSX ／ Y DD",
     "note": "加工ノード。急所は粉末・原料側"
   },
   {
@@ -1017,10 +1683,11 @@ const SEED = [
     "name": "AGC／AGCセイミケミカル",
     "jsx": "AGC／AGCセイミケミカル",
     "stages": [
-      4
+      4,
+      5
     ],
     "subs": [
-      "04_coat",
+      "05_plasma_parts",
       "04_elec"
     ],
     "tags": [
@@ -1035,7 +1702,7 @@ const SEED = [
     "chn": "中～高。Y／Sc原料、現行商用品のScSZ比率、成膜・粉末供給経路を確認",
     "ev": "A",
     "exc": 1,
-    "src": "JSX／Y DD／Sc DD／https://www.seimichemical.co.jp/product/fuel/",
+    "src": "JSX ／ Y DD ／ Sc DD ／ https://www.seimichemical.co.jp/product/fuel/",
     "note": "ScSZの現行商用比率は未確認。親会社・子会社を統合"
   },
   {
@@ -1043,10 +1710,12 @@ const SEED = [
     "name": "京セラ",
     "jsx": "京セラ",
     "stages": [
-      3
+      3,
+      5
     ],
     "subs": [
-      "03_precursor"
+      "03_yag_crystal",
+      "05_plasma_parts"
     ],
     "tags": [
       "Y"
@@ -1059,7 +1728,7 @@ const SEED = [
     "chn": "中～高。高純度Y₂O₃調達を確認",
     "ev": "B",
     "exc": 1,
-    "src": "JSX／Y DD",
+    "src": "JSX ／ Y DD",
     "note": "売上条件は例外"
   },
   {
@@ -1083,7 +1752,7 @@ const SEED = [
     "chn": "中～高。YSZ粉末供給元と東ソー／第一稀元素依存を確認",
     "ev": "A",
     "exc": 0,
-    "src": "JSX／Y DD",
+    "src": "JSX ／ Y DD",
     "note": "条件内の電解質部材中核"
   },
   {
@@ -1091,10 +1760,10 @@ const SEED = [
     "name": "ニッカトー",
     "jsx": "ニッカトー",
     "stages": [
-      3
+      4
     ],
     "subs": [
-      "03_ceramic"
+      "04_media"
     ],
     "tags": [
       "Y"
@@ -1107,7 +1776,7 @@ const SEED = [
     "chn": "東ソー依存が高いと開示。Y₂O₃→YSZ→工程材の間接リスク",
     "ev": "B",
     "exc": 0,
-    "src": "JSX／Y DD",
+    "src": "JSX ／ Y DD",
     "note": "単一供給依存が定量開示された例"
   },
   {
@@ -1131,7 +1800,7 @@ const SEED = [
     "chn": "高。Dy/Tb拡散材、Nd/Pr、リサイクル材の原産地を確認",
     "ev": "A",
     "exc": 1,
-    "src": "JSX／DyTb DD",
+    "src": "JSX ／ DyTb DD",
     "note": "売上条件は例外"
   },
   {
@@ -1140,10 +1809,12 @@ const SEED = [
     "jsx": "TDK",
     "stages": [
       3,
-      4
+      4,
+      5
     ],
     "subs": [
-      "03_magnet",
+      "03_magnet_alloy",
+      "05_electronics",
       "04_mag"
     ],
     "tags": [
@@ -1152,13 +1823,13 @@ const SEED = [
     ],
     "own": "東証プライム(6762)",
     "rev": "約2.2兆円",
-    "prod": "希土類磁石用合金（TDK Ganzhou）、NdFeB・SmCo磁石、HAL工法、Dy削減・フリー磁石",
+    "prod": "希土類磁石用合金（TDK Ganzhou）、NdFeB・SmCo磁石、HAL工法、Dy削減・フリー磁石、電子部品（MLCC・インダクタ・磁気センサなど）",
     "pos": "TDKグループとして磁石合金から高性能磁石までを担う。工程3はTDK Ganzhouの事業",
     "def": "センサ、モータ、航空宇宙アクチュエータ、防衛電子",
     "chn": "高。Dy/Tb/Sm調達、拡散材在庫、製品グレード別使用量を確認",
     "ev": "A",
     "exc": 1,
-    "src": "JSX／DyTb DD／Sm DD ／ https://www.tdk.com/en/about_tdk_china/tdk_ganzhou/index.html ／ https://www.tdk.com/en/news_center/press/20181127_01.html",
+    "src": "JSX ／ DyTb DD ／ Sm DD ／ https://www.tdk.com/en/about_tdk_china/tdk_ganzhou/index.html ／ https://www.tdk.com/en/news_center/press/20181127_01.html ／ https://www.tdk.com/ja/products/",
     "note": "売上条件は例外。工程3は中国のTDK Ganzhouを含むグループ範囲。希土類の分離・精製・一次金属化は公開根拠未確認のため工程2対象外。SmフラグはTDKのSmCo磁石に基づく既存評価"
   },
   {
@@ -1182,7 +1853,7 @@ const SEED = [
     "chn": "高。Sm原料、能力維持投資、補助金採択状況を確認",
     "ev": "A",
     "exc": 0,
-    "src": "JSX／Sm DD",
+    "src": "JSX ／ Sm DD",
     "note": "高温磁石の代替困難性が高い ／ SmCo磁石材料の開発・製造ノードとしてStage 04『磁石（焼結・ボンド）』に配置"
   },
   {
@@ -1206,7 +1877,7 @@ const SEED = [
     "chn": "高。Sm原料と外資所有構造を確認",
     "ev": "A",
     "exc": 0,
-    "src": "JSX／Sm DD",
+    "src": "JSX ／ Sm DD",
     "note": "所有・ガバナンスもDD対象"
   },
   {
@@ -1230,7 +1901,7 @@ const SEED = [
     "chn": "高。Sm原料と焼結内製／加工特化の内製深度を確認",
     "ev": "B",
     "exc": 0,
-    "src": "JSX／Sm DD",
+    "src": "JSX ／ Sm DD",
     "note": "防衛実績は非開示"
   },
   {
@@ -1254,7 +1925,7 @@ const SEED = [
     "chn": "高。Sm原料、用途別顧客、原産国を確認",
     "ev": "B",
     "exc": 0,
-    "src": "JSX／Sm DD",
+    "src": "JSX ／ Sm DD",
     "note": "防衛・宇宙実績は要確認"
   },
   {
@@ -1266,7 +1937,7 @@ const SEED = [
       4
     ],
     "subs": [
-      "03_magnet",
+      "03_magnet_powder",
       "04_mag"
     ],
     "tags": [
@@ -1281,7 +1952,7 @@ const SEED = [
     "chn": "中～高。Nd/Pr/Sm、Magnequench系磁粉、製品別BOMを確認",
     "ev": "A",
     "exc": 0,
-    "src": "JSX／DyTb DD／Sm DD",
+    "src": "JSX ／ DyTb DD ／ Sm DD",
     "note": "Dy/Tb回避側とSm規制曝露側を併有"
   },
   {
@@ -1305,7 +1976,7 @@ const SEED = [
     "chn": "中。Dy/Tb依存は低減するがNd/Pr中国依存は残存",
     "ev": "A",
     "exc": 1,
-    "src": "JSX／DyTb DD",
+    "src": "JSX ／ DyTb DD",
     "note": "供給途絶時の代替技術候補"
   },
   {
@@ -1316,9 +1987,7 @@ const SEED = [
       5
     ],
     "subs": [
-      "05_guid",
-      "05_sat",
-      "05_flight"
+      "05_motor"
     ],
     "tags": [
       "DyTb",
@@ -1332,7 +2001,7 @@ const SEED = [
     "chn": "中。NdFeB/SmCo材質、磁石メーカー、原産国、海外拠点を確認",
     "ev": "A",
     "exc": 0,
-    "src": "JSX／DyTb DD／Sm DD",
+    "src": "JSX ／ DyTb DD ／ Sm DD",
     "note": "磁石だけでなく技能継承も論点"
   },
   {
@@ -1340,12 +2009,13 @@ const SEED = [
     "name": "東京計器",
     "jsx": "東京計器",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_guid"
+      "06_naval"
     ],
     "tags": [
+      "Y",
       "DyTb",
       "Sm"
     ],
@@ -1357,7 +2027,7 @@ const SEED = [
     "chn": "中。モータ・センサ磁石経由の間接依存",
     "ev": "A",
     "exc": 0,
-    "src": "JSX／Sm DD",
+    "src": "JSX ／ Sm DD",
     "note": "磁石材質・BOMは要確認"
   },
   {
@@ -1365,13 +2035,15 @@ const SEED = [
     "name": "三菱プレシジョン",
     "jsx": "三菱プレシジョン",
     "stages": [
-      5
+      5,
+      6
     ],
     "subs": [
-      "05_guid",
-      "05_sat"
+      "05_motor",
+      "06_guidance"
     ],
     "tags": [
+      "Y",
       "DyTb",
       "Sm"
     ],
@@ -1383,7 +2055,7 @@ const SEED = [
     "chn": "中～高。ホイール内モータ・センサ磁石のBOMを確認",
     "ev": "A",
     "exc": 0,
-    "src": "JSX／DyTb DD／Sm DD",
+    "src": "JSX ／ DyTb DD ／ Sm DD",
     "note": "磁石変更時の認証・設計変更期間が重要"
   },
   {
@@ -1394,8 +2066,7 @@ const SEED = [
       5
     ],
     "subs": [
-      "05_sat",
-      "05_robot"
+      "05_motor"
     ],
     "tags": [
       "DyTb",
@@ -1409,7 +2080,7 @@ const SEED = [
     "chn": "中。NdFeB/SmCo選定、耐放射線仕様、原産国を確認",
     "ev": "B",
     "exc": 0,
-    "src": "JSX／DyTb DD",
+    "src": "JSX ／ DyTb DD",
     "note": "民生部品活用型でBOM次第"
   },
   {
@@ -1420,8 +2091,7 @@ const SEED = [
       5
     ],
     "subs": [
-      "05_sat",
-      "05_robot"
+      "05_motor"
     ],
     "tags": [
       "DyTb",
@@ -1435,7 +2105,7 @@ const SEED = [
     "chn": "中。NdFeBモータ経由の間接依存",
     "ev": "B",
     "exc": 0,
-    "src": "JSX／DyTb DD",
+    "src": "JSX ／ DyTb DD",
     "note": "磁石は内蔵モータ側の間接曝露"
   },
   {
@@ -1446,7 +2116,7 @@ const SEED = [
       5
     ],
     "subs": [
-      "05_flight"
+      "05_motor"
     ],
     "tags": [
       "DyTb"
@@ -1459,7 +2129,7 @@ const SEED = [
     "chn": "中。電動化に伴うNdFeB依存増加、磁石BOMを確認",
     "ev": "B",
     "exc": 1,
-    "src": "JSX／DyTb DD",
+    "src": "JSX ／ DyTb DD",
     "note": "売上条件は例外"
   },
   {
@@ -1470,7 +2140,7 @@ const SEED = [
       5
     ],
     "subs": [
-      "05_flight"
+      "05_motor"
     ],
     "tags": [
       "DyTb",
@@ -1484,7 +2154,7 @@ const SEED = [
     "chn": "中～高。PM/誘導型、SmCo/高保磁力NdFeBの採否を確認",
     "ev": "A",
     "exc": 1,
-    "src": "JSX／DyTb DD／Sm DD",
+    "src": "JSX ／ DyTb DD ／ Sm DD",
     "note": "条件をやや超過する例外"
   },
   {
@@ -1495,8 +2165,7 @@ const SEED = [
       5
     ],
     "subs": [
-      "05_flight",
-      "05_robot"
+      "05_motor"
     ],
     "tags": [
       "DyTb",
@@ -1510,7 +2179,7 @@ const SEED = [
     "chn": "中～高。内製/外部調達、NdFeB/SmCo、Dy/Tb/Sm調達元を確認",
     "ev": "B",
     "exc": 1,
-    "src": "JSX／DyTb DD／Sm DD",
+    "src": "JSX ／ DyTb DD ／ Sm DD",
     "note": "売上条件は例外"
   },
   {
@@ -1521,7 +2190,7 @@ const SEED = [
       2
     ],
     "subs": [
-      "02_trade"
+      "02_compound"
     ],
     "tags": [
       "Sc"
@@ -1534,7 +2203,7 @@ const SEED = [
     "chn": "高。Sc₂O₃の供給国・メーカー、国内加工前原産地、中国輸出許可を確認",
     "ev": "B",
     "exc": 1,
-    "src": "Sc DD／https://www.iwatani.co.jp/jpn/business/material/resources-advanced/products/re/",
+    "src": "Sc DD ／ https://www.iwatani.co.jp/jpn/business/material/resources-advanced/products/re/",
     "note": "会社別Sc調達比率は非開示"
   },
   {
@@ -1546,8 +2215,7 @@ const SEED = [
     ],
     "subs": [
       "02_compound",
-      "02_metal",
-      "02_trade"
+      "02_metal"
     ],
     "tags": [
       "Sc"
@@ -1560,7 +2228,7 @@ const SEED = [
     "chn": "高。製造国、輸入元、原産国証明、在庫、再輸出管理を確認",
     "ev": "B",
     "exc": 0,
-    "src": "Sc DD／https://www.ostech.co.jp/products/special_raremetal/scandium/",
+    "src": "Sc DD ／ https://www.ostech.co.jp/products/special_raremetal/scandium/",
     "note": "量産能力・国内加工深度は要確認"
   },
   {
@@ -1568,13 +2236,11 @@ const SEED = [
     "name": "フルヤ金属",
     "jsx": "Sc DD追加",
     "stages": [
-      2,
       3,
       4
     ],
     "subs": [
-      "02_metal",
-      "03_light_alloy",
+      "03_alsc_semi",
       "04_target"
     ],
     "tags": [
@@ -1588,7 +2254,7 @@ const SEED = [
     "chn": "高～中。現行Sc調達国、中国許可、国内還元・使用済みターゲット回収の量産化を確認",
     "ev": "A",
     "exc": 0,
-    "src": "Sc DD／https://www.furuyametals.co.jp/stories/future03/／https://www.furuyametals.co.jp/ir/message/",
+    "src": "Sc DD ／ https://www.furuyametals.co.jp/stories/future03/ ／ https://www.furuyametals.co.jp/ir/message/",
     "note": "Sc原料の金属化・Al-Scターゲット用合金調製からターゲット製造までを表現し、Stage 02『金属化・還元／一次金属』、Stage 03『Al-Sc母合金（構造材・半導体）』、Stage 04『薄膜・スパッタリングターゲット』に配置"
   },
   {
@@ -1596,10 +2262,10 @@ const SEED = [
     "name": "東洋アルミニウム",
     "jsx": "Sc DD追加",
     "stages": [
-      3
+      4
     ],
     "subs": [
-      "03_am_feedstock"
+      "04_am_feedstock"
     ],
     "tags": [
       "Sc"
@@ -1612,7 +2278,7 @@ const SEED = [
     "chn": "高～要確認。Sc原料・母合金、APWORKS指定調達、航空認証ロットの代替可否",
     "ev": "A",
     "exc": 1,
-    "src": "Sc DD／https://www.toyal.co.jp/products/pw_pt/product/powdalloy.html／https://www.toyal.co.jp/abouttoyal/",
+    "src": "Sc DD ／ https://www.toyal.co.jp/products/pw_pt/product/powdalloy.html ／ https://www.toyal.co.jp/abouttoyal/",
     "note": "売上条件を約134億円超過する例外"
   },
   {
@@ -1621,12 +2287,13 @@ const SEED = [
     "jsx": "Sc DD追加",
     "stages": [
       3,
-      4
+      4,
+      5
     ],
     "subs": [
       "03_light_alloy",
-      "03_am_feedstock",
-      "04_am"
+      "04_am_feedstock",
+      "05_am"
     ],
     "tags": [
       "Sc"
@@ -1639,7 +2306,7 @@ const SEED = [
     "chn": "低～中。豪州Sc共同開発ルートと量産時の原料ソース、ロケット認証を確認",
     "ev": "A",
     "exc": 1,
-    "src": "Sc DD／https://www.uacj.co.jp/release/20250303.html／https://www.uacj.co.jp/release/20210826.html",
+    "src": "Sc DD ／ https://www.uacj.co.jp/release/20250303.html ／ https://www.uacj.co.jp/release/20210826.html",
     "note": "非中国原料開発側の戦略例外"
   },
   {
@@ -1647,11 +2314,10 @@ const SEED = [
     "name": "富山住友電工",
     "jsx": "Sc DD追加",
     "stages": [
-      3
+      4
     ],
     "subs": [
-      "03_light_alloy",
-      "03_am_feedstock"
+      "04_am_feedstock"
     ],
     "tags": [
       "Sc"
@@ -1664,7 +2330,7 @@ const SEED = [
     "chn": "中～高・未確定。Sc₂O₃直接購入かAl–Sc中間材受入か、母合金供給元、工程分担を確認",
     "ev": "A",
     "exc": 0,
-    "src": "Sc DD／https://www.kenkai.jaxa.jp/project/kakushinyusou/results/pdf/01_06.pdf／https://www.uacj.co.jp/release/20250303.html",
+    "src": "Sc DD ／ https://www.kenkai.jaxa.jp/project/kakushinyusou/results/pdf/01_06.pdf ／ https://www.uacj.co.jp/release/20250303.html",
     "note": "『国内3社のみ』『ミサイル用途』『中国100%依存』は根拠不足のため不採用 ／ Stage 03『Al-Sc母合金（構造材・半導体）』『金属AM・結合用原料』を横断"
   },
   {
@@ -1690,7 +2356,7 @@ const SEED = [
     "bom": "公式製品表で3YSZ（Y2O3 3mol%）、8YSZ（Y2O3 8mol%）、6ScSZ、10Sc1CeSZを確認。",
     "ev": "A",
     "exc": 1,
-    "src": "Sc DD／https://www.shokubai.co.jp/ja/products/detail/sofc/",
+    "src": "Sc DD ／ https://www.shokubai.co.jp/ja/products/detail/sofc/",
     "note": "YSZ・ScSZ系SOFC電解質シートの国内商業生産ノード"
   },
   {
@@ -1698,12 +2364,12 @@ const SEED = [
     "name": "福田結晶技術研究所",
     "jsx": "Sc DD追加",
     "stages": [
-      4,
-      3
+      3,
+      4
     ],
     "subs": [
-      "04_sc_crystal",
-      "03_precursor"
+      "03_sam_crystal",
+      "04_sc_crystal"
     ],
     "tags": [
       "Sc"
@@ -1716,7 +2382,7 @@ const SEED = [
     "chn": "高～要確認。Sc₂O₃調達元、結晶歩留まり、坩堝・育成炉能力、代替基板を確認",
     "ev": "A",
     "exc": 0,
-    "src": "Sc DD／https://fxtal2002.com/technology/crystal1",
+    "src": "Sc DD ／ https://fxtal2002.com/technology/crystal1",
     "note": "Sc含有単結晶・半導体基板の国内最重要候補"
   },
   {
@@ -1724,10 +2390,10 @@ const SEED = [
     "name": "NTTデータ ザムテクノロジーズ",
     "jsx": "Sc DD追加",
     "stages": [
-      4
+      5
     ],
     "subs": [
-      "04_am"
+      "05_am"
     ],
     "tags": [
       "Sc"
@@ -1740,7 +2406,7 @@ const SEED = [
     "chn": "中～要確認。Scalmalloy実使用比率、粉末銘柄、航空顧客、認証、Sc回収率を確認",
     "ev": "C",
     "exc": 0,
-    "src": "Sc DD／https://www.toyal.co.jp/whatsnews/2023/10/2023100501.html",
+    "src": "Sc DD ／ https://www.toyal.co.jp/whatsnews/2023/10/2023100501.html",
     "note": "Scalmalloyの直接採用は未確認のため監視ノード"
   },
   {
@@ -1751,7 +2417,7 @@ const SEED = [
       5
     ],
     "subs": [
-      "05_rf_sensor"
+      "05_scaln_film"
     ],
     "tags": [
       "Sc"
@@ -1764,7 +2430,7 @@ const SEED = [
     "chn": "中～要確認。現行量産品のScAlN採用、ターゲット供給元、Sc原産国をBOM確認",
     "ev": "B",
     "exc": 1,
-    "src": "Sc DD／https://www.aist.go.jp/aist_j/press_release/pr2008/pr20081121/pr20081121.html",
+    "src": "Sc DD ／ https://www.aist.go.jp/aist_j/press_release/pr2008/pr20081121/pr20081121.html",
     "note": "量産Sc採用は未確認。R&D・下流監視ノード"
   },
   {
@@ -1776,10 +2442,10 @@ const SEED = [
       4
     ],
     "subs": [
-      "03_precursor",
-      "03_light_alloy",
-      "04_opt",
-      "04_target"
+      "03_yag_crystal",
+      "04_target",
+      "03_alsc_semi",
+      "04_laser_medium"
     ],
     "tags": [
       "Y",
@@ -1805,10 +2471,12 @@ const SEED = [
     "name": "Linde AMT Japan",
     "jsx": "正式採用追加",
     "stages": [
-      4
+      4,
+      5
     ],
     "subs": [
-      "04_coat"
+      "04_tbc_spray",
+      "05_tbc"
     ],
     "tags": [
       "Y"
@@ -1862,10 +2530,10 @@ const SEED = [
     "name": "アイ・シイ・エス",
     "jsx": "正式採用追加",
     "stages": [
-      4
+      5
     ],
     "subs": [
-      "04_coat"
+      "05_tbc"
     ],
     "tags": [
       "Y"
@@ -1890,10 +2558,12 @@ const SEED = [
     "name": "エリコンジャパン／Oerlikon Metco",
     "jsx": "正式採用追加",
     "stages": [
-      4
+      4,
+      5
     ],
     "subs": [
-      "04_coat"
+      "04_tbc_spray",
+      "05_tbc"
     ],
     "tags": [
       "Y"
@@ -1921,7 +2591,7 @@ const SEED = [
       4
     ],
     "subs": [
-      "04_opt"
+      "04_laser_medium"
     ],
     "tags": [
       "Y"
@@ -1946,10 +2616,10 @@ const SEED = [
     "name": "倉敷ボーリング機工",
     "jsx": "正式採用追加",
     "stages": [
-      4
+      5
     ],
     "subs": [
-      "04_coat"
+      "05_tbc"
     ],
     "tags": [
       "Y"
@@ -2003,10 +2673,10 @@ const SEED = [
     "name": "放電精密加工研究所",
     "jsx": "正式採用追加",
     "stages": [
-      4
+      5
     ],
     "subs": [
-      "04_coat"
+      "05_tbc"
     ],
     "tags": [
       "Y"
@@ -2031,13 +2701,14 @@ const SEED = [
     "name": "EX-Fusion",
     "jsx": "正式採用追加",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_laser"
+      "06_laser"
     ],
     "tags": [
-      "Y"
+      "Y",
+      "DyTb"
     ],
     "own": "日本企業",
     "rev": "売上条件解除（本追加DDでは未評価）",
@@ -2062,8 +2733,7 @@ const SEED = [
       5
     ],
     "subs": [
-      "05_robot",
-      "05_sat"
+      "05_motor"
     ],
     "tags": [
       "Sm"
@@ -2091,8 +2761,7 @@ const SEED = [
       5
     ],
     "subs": [
-      "05_guid",
-      "05_sat"
+      "05_motor"
     ],
     "tags": [
       "DyTb"
@@ -2117,12 +2786,15 @@ const SEED = [
     "name": "キヤノン電子",
     "jsx": "正式採用追加",
     "stages": [
-      5
+      5,
+      6
     ],
     "subs": [
-      "05_sat"
+      "05_motor",
+      "06_space"
     ],
     "tags": [
+      "Y",
       "DyTb",
       "Sm"
     ],
@@ -2149,7 +2821,7 @@ const SEED = [
       5
     ],
     "subs": [
-      "05_laser"
+      "05_laser_osc"
     ],
     "tags": [
       "Y"
@@ -2177,7 +2849,7 @@ const SEED = [
       5
     ],
     "subs": [
-      "05_flight"
+      "05_motor"
     ],
     "tags": [
       "DyTb"
@@ -2205,7 +2877,7 @@ const SEED = [
       5
     ],
     "subs": [
-      "05_guid"
+      "05_motor"
     ],
     "tags": [
       "DyTb",
@@ -2234,7 +2906,7 @@ const SEED = [
       5
     ],
     "subs": [
-      "05_flight"
+      "05_motor"
     ],
     "tags": [
       "Sm"
@@ -2259,17 +2931,17 @@ const SEED = [
     "name": "日本アビオニクス",
     "jsx": "正式採用追加",
     "stages": [
-      5
+      5,
+      6
     ],
     "subs": [
-      "05_defense_electronics",
-      "05_sat",
-      "05_rf_sensor"
+      "06_radar",
+      "05_electronics"
     ],
     "tags": [
       "Y",
-      "Sc",
-      "Sm"
+      "Sm",
+      "Sc"
     ],
     "own": "日本企業",
     "rev": "291.94億円（2026年3月期・連結）",
@@ -2284,7 +2956,7 @@ const SEED = [
     "formal": true,
     "formalSource": "再調査（05_defense_electronics・05_sat・05_rf_sensor／所属サブカテゴリーの元素フラグを継承）",
     "src": "https://www.avio.co.jp/company/business/system.html ／ https://www.avio.co.jp/products/device/me/products.html ／ https://www.avio.co.jp/company/business/product.html ／ https://www.avio.co.jp/company/outline/profile.html",
-    "note": "企業固有BOM未確認のためDy/Tbフラグを削除。"
+    "note": ""
   },
   {
     "id": "seed-63",
@@ -2294,9 +2966,7 @@ const SEED = [
       5
     ],
     "subs": [
-      "05_flight",
-      "05_guid",
-      "05_sat"
+      "05_motor"
     ],
     "tags": [
       "Sm"
@@ -2321,12 +2991,13 @@ const SEED = [
     "name": "日本航空電子工業",
     "jsx": "正式採用追加",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_guid"
+      "06_guidance"
     ],
     "tags": [
+      "Y",
       "DyTb",
       "Sm"
     ],
@@ -2353,10 +3024,11 @@ const SEED = [
       5
     ],
     "subs": [
-      "05_laser"
+      "05_laser_osc"
     ],
     "tags": [
-      "Y"
+      "Y",
+      "DyTb"
     ],
     "own": "日本企業",
     "rev": "売上条件解除（本追加DDでは未評価）",
@@ -2378,18 +3050,19 @@ const SEED = [
     "name": "アンリツ",
     "jsx": "統合企業リスト_子会社置換",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_rf_sensor"
+      "06_rf_sensor"
     ],
     "tags": [
+      "Y",
       "Sc"
     ],
     "own": "上場企業 ／ 自社証券コード：6754",
     "rev": "約1,175億円 ／ 連結実績 ／ 2026/3期",
     "prod": "マイクロ波・ミリ波・光通信・レーダー評価装置、妨害波監視",
-    "pos": "衛星・防衛・航空・船舶の通信、レーダー、妨害波評価に直接接続。民生5G計測と技術基盤を共有。",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "def": "衛星・防衛・航空・船舶の通信、レーダー、妨害波評価に直接接続。民生5G計測と技術基盤を共有。",
     "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
@@ -2402,18 +3075,19 @@ const SEED = [
     "name": "東陽テクニカ",
     "jsx": "統合企業リスト_子会社置換",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_rf_sensor"
+      "06_rf_sensor"
     ],
     "tags": [
+      "Y",
       "Sc"
     ],
     "own": "上場企業 ／ 自社証券コード：8151",
     "rev": "350–450億円 ／ 概算 ／ 2025/9期",
     "prod": "防衛・海洋ソナー／水中音響、GNSS/INS、レーダー・大形アンテナ評価、衛星レーザー測距",
-    "pos": "防衛装備、水中音響、レーダー・地上局アンテナ、JAXA衛星レーザー測距に直接接続。",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "def": "防衛装備、水中音響、レーダー・地上局アンテナ、JAXA衛星レーザー測距に直接接続。",
     "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "A",
@@ -2429,15 +3103,15 @@ const SEED = [
       5
     ],
     "subs": [
-      "05_rf_sensor"
+      "05_electronics"
     ],
     "tags": [
-      "Sc"
+      "Y"
     ],
     "own": "上場企業 ／ 自社証券コード：6779",
     "rev": "約546億円 ／ 連結実績 ／ 2026/3期",
     "prod": "宇宙用水晶振動子・発振器、周波数シンセサイザ、QCMセンサ",
-    "pos": "人工衛星・ロケット、官公庁・防衛通信、民生通信・車載に共通する高安定周波数源。",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "def": "人工衛星・ロケット、官公庁・防衛通信、民生通信・車載に共通する高安定周波数源。",
     "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
@@ -2450,18 +3124,19 @@ const SEED = [
     "name": "日本無線（JRC）",
     "jsx": "統合企業リスト_子会社置換",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_rf_sensor"
+      "06_radar"
     ],
     "tags": [
+      "Y",
       "Sc"
     ],
     "own": "非上場子会社 ／ 親会社：日清紡ホールディングス ／ 自社証券コード：非上場（旧6751） ／ 親会社証券コード：3105",
     "rev": "1,000–1,500億円 ／ 概算 ／ 2026年時点",
     "prod": "船舶レーダー、ECDIS、衛星通信、気象レーダー、防衛無線応用機器",
-    "pos": "防衛省向け無線応用機器・システムを明示。商船・防災・気象向けと共通技術。",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "def": "防衛省向け無線応用機器・システムを明示。商船・防災・気象向けと共通技術。",
     "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
@@ -2474,10 +3149,10 @@ const SEED = [
     "name": "GITAI",
     "jsx": "統合企業リスト_子会社置換",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_robot"
+      "06_unmanned"
     ],
     "tags": [
       "DyTb",
@@ -2486,7 +3161,7 @@ const SEED = [
     "own": "非上場企業 ／ 自社証券コード：非上場",
     "rev": "10–30億円 ／ 概算 ／ 2026年時点",
     "prod": "宇宙用自律ロボットアーム、ロボット衛星、月面ローバー",
-    "pos": "軌道上サービス、衛星修理・寿命延長、月面建設に直接接続。民間・政府ミッション双方へ展開可能。",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "def": "軌道上サービス、衛星修理・寿命延長、月面建設に直接接続。民間・政府ミッション双方へ展開可能。",
     "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
@@ -2499,10 +3174,10 @@ const SEED = [
     "name": "THK",
     "jsx": "統合企業リスト_子会社置換",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_robot"
+      "06_unmanned"
     ],
     "tags": [
       "DyTb",
@@ -2511,7 +3186,7 @@ const SEED = [
     "own": "上場企業 ／ 自社証券コード：6481",
     "rev": "約2,404億円 ／ 連結実績 ／ 2025/12期",
     "prod": "LMガイド、ボールねじ、XYステージ、宇宙ロボット用直動機構",
-    "pos": "JAXAの軌道上サービス技術実証用大型XYステージやISS船外活動支援ロボットに採用。民生ロボット・工作機械と共通。",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "def": "JAXAの軌道上サービス技術実証用大型XYステージやISS船外活動支援ロボットに採用。民生ロボット・工作機械と共通。",
     "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
@@ -2520,39 +3195,14 @@ const SEED = [
     "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：継続事業ベースの連結売上収益"
   },
   {
-    "id": "stage05-integrated-7",
-    "name": "日本精工（NSK）",
-    "jsx": "統合企業リスト_子会社置換",
-    "stages": [
-      5
-    ],
-    "subs": [
-      "05_robot"
-    ],
-    "tags": [
-      "DyTb",
-      "Sm"
-    ],
-    "own": "上場企業 ／ 自社証券コード：6471",
-    "rev": "約9,000億円 ／ 連結予想 ／ 2026/3期",
-    "prod": "精密軸受、ボールねじ、航空・宇宙・ロボット用モーション部品",
-    "pos": "航空・宇宙・ロボットの精密運動部に直結。防衛向け個別実績は非開示。",
-    "def": "航空・宇宙・ロボットの精密運動部に直結。防衛向け個別実績は非開示。",
-    "chn": "企業固有の希土類BOM・中国依存は未確認。",
-    "ev": "B",
-    "exc": 0,
-    "src": "https://www.nsk.com/jp-ja/company/investors/management/message/ ／ https://www.nsk.com/jp-ja/company/investors/financial-announcements/",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：会社公表の通期予想"
-  },
-  {
     "id": "stage05-integrated-8",
     "name": "ispace",
     "jsx": "統合企業リスト_子会社置換",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_sat"
+      "06_space"
     ],
     "tags": [
       "Y",
@@ -2563,7 +3213,7 @@ const SEED = [
     "own": "上場企業 ／ 自社証券コード：9348",
     "rev": "約47.4億円 ／ 連結実績 ／ 2025/3期",
     "prod": "月着陸船、月面輸送、マイクロローバー、深宇宙航行・管制",
-    "pos": "月面輸送・探査・資源利用に直結し、深宇宙航法・通信・着陸技術は安全保障にも転用可能。",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "def": "月面輸送・探査・資源利用に直結し、深宇宙航法・通信・着陸技術は安全保障にも転用可能。",
     "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
@@ -2576,10 +3226,10 @@ const SEED = [
     "name": "Pale Blue",
     "jsx": "統合企業リスト_子会社置換",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_sat"
+      "06_space"
     ],
     "tags": [
       "Y",
@@ -2590,7 +3240,7 @@ const SEED = [
     "own": "非上場企業 ／ 自社証券コード：非上場",
     "rev": "10億円未満 ／ 概算 ／ 2026年時点",
     "prod": "小型衛星用水スラスタ、水イオンエンジン、ホールスラスタ",
-    "pos": "小型衛星の軌道投入・維持・衝突回避・デオービットに直接接続。安全保障衛星にも転用可能。",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "def": "小型衛星の軌道投入・維持・衝突回避・デオービットに直接接続。安全保障衛星にも転用可能。",
     "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
@@ -2603,10 +3253,10 @@ const SEED = [
     "name": "Synspective",
     "jsx": "統合企業リスト_子会社置換",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_sat"
+      "06_space"
     ],
     "tags": [
       "Y",
@@ -2617,7 +3267,7 @@ const SEED = [
     "own": "上場企業 ／ 自社証券コード：290A",
     "rev": "20–50億円 ／ 概算 ／ 2025/12期",
     "prod": "小型SAR衛星StriX、衛星コンステレーション、SARデータ解析",
-    "pos": "防衛省の衛星コンステレーション整備・運営事業を落札。安全保障・インテリジェンス用途を明示。",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "def": "防衛省の衛星コンステレーション整備・運営事業を落札。安全保障・インテリジェンス用途を明示。",
     "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
@@ -2630,10 +3280,10 @@ const SEED = [
     "name": "アークエッジ・スペース",
     "jsx": "統合企業リスト_子会社置換",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_sat"
+      "06_space"
     ],
     "tags": [
       "Y",
@@ -2644,7 +3294,7 @@ const SEED = [
     "own": "非上場企業 ／ 自社証券コード：非上場",
     "rev": "10–30億円 ／ 概算 ／ 2026年時点",
     "prod": "超小型衛星、衛星コンステレーション、ホステッドペイロード、月測位・通信",
-    "pos": "地球観測、衛星通信、測位・位置情報、月インフラ、深宇宙探査に直接接続。",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "def": "地球観測、衛星通信、測位・位置情報、月インフラ、深宇宙探査に直接接続。",
     "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
@@ -2657,10 +3307,10 @@ const SEED = [
     "name": "アクセルスペース",
     "jsx": "統合企業リスト_子会社置換",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_sat"
+      "06_space"
     ],
     "tags": [
       "Y",
@@ -2671,7 +3321,7 @@ const SEED = [
     "own": "非上場企業 ／ 親会社：アクセルスペースホールディングス ／ 自社証券コード：非上場 ／ 親会社証券コード：非上場",
     "rev": "10–30億円 ／ 概算 ／ 2026年時点",
     "prod": "小型光学衛星、AxelGlobe地球観測、AxelLiner衛星開発・運用",
-    "pos": "防衛省衛星コンステレーション事業で光学衛星画像の取得業務を受注。",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "def": "防衛省衛星コンステレーション事業で光学衛星画像の取得業務を受注。",
     "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
@@ -2684,10 +3334,10 @@ const SEED = [
     "name": "インターステラテクノロジズ",
     "jsx": "統合企業リスト_子会社置換",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_sat"
+      "06_launch"
     ],
     "tags": [
       "Y",
@@ -2698,7 +3348,7 @@ const SEED = [
     "own": "非上場企業 ／ 自社証券コード：非上場",
     "rev": "10–30億円 ／ 概算 ／ 2026年時点",
     "prod": "小型衛星打上げロケットZERO、観測ロケットMOMO、通信衛星",
-    "pos": "ロケット開発・製造・打上げ、人工衛星開発・運用に直接接続。安全保障通信・即応打上げへ転用可能。",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "def": "ロケット開発・製造・打上げ、人工衛星開発・運用に直接接続。安全保障通信・即応打上げへ転用可能。",
     "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
@@ -2711,10 +3361,10 @@ const SEED = [
     "name": "スペースワン",
     "jsx": "統合企業リスト_子会社置換",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_sat"
+      "06_launch"
     ],
     "tags": [
       "Y",
@@ -2725,7 +3375,7 @@ const SEED = [
     "own": "非上場企業 ／ 親会社：キヤノン電子・IHIエアロスペースほか ／ 自社証券コード：非上場 ／ 親会社証券コード：7739・7013ほか",
     "rev": "10億円未満 ／ 概算 ／ 2026年時点",
     "prod": "小型ロケットKAIROS、民間射場スペースポート紀伊、打上げサービス",
-    "pos": "小型衛星の打上げ・射場運用に直接接続し、安全保障衛星の即応打上げへ転用可能。",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "def": "小型衛星の打上げ・射場運用に直接接続し、安全保障衛星の即応打上げへ転用可能。",
     "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
@@ -2738,10 +3388,10 @@ const SEED = [
     "name": "明星電気",
     "jsx": "統合企業リスト_子会社置換",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_sat"
+      "06_space"
     ],
     "tags": [
       "Y",
@@ -2752,7 +3402,7 @@ const SEED = [
     "own": "非上場子会社 ／ 親会社：IHI ／ 自社証券コード：非上場（旧6709） ／ 親会社証券コード：7013",
     "rev": "150–300億円 ／ 概算 ／ 2026年時点",
     "prod": "衛星搭載観測機器、航法カメラ、高圧電源、粒子センサー、超小型衛星",
-    "pos": "衛星・ロケット・ISS搭載機器に加え、防衛省公示で気象・計測装置部品の供給主体として確認。",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "def": "衛星・ロケット・ISS搭載機器に加え、防衛省公示で気象・計測装置部品の供給主体として確認。",
     "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
@@ -2765,11 +3415,10 @@ const SEED = [
     "name": "アストロスケールホールディングス",
     "jsx": "統合企業リスト_子会社置換",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_sat",
-      "05_robot"
+      "06_space"
     ],
     "tags": [
       "Y",
@@ -2780,7 +3429,7 @@ const SEED = [
     "own": "上場企業 ／ 自社証券コード：186A",
     "rev": "30–100億円 ／ 概算 ／ 2026/4期",
     "prod": "軌道上サービス、デブリ除去、ランデブー・近接運用、宇宙領域把握 ／ 衛星捕獲機構、RPO航法、軌道上点検・除去サービス",
-    "pos": "防衛省から機動対応宇宙システム実証機を受注。民生の衛星寿命延長・デブリ除去と防衛SDAに共通。 ／ 民生衛星の寿命延長・デブリ除去と、防衛SDA・機動対応宇宙システムに共通。",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "def": "防衛省から機動対応宇宙システム実証機を受注。民生の衛星寿命延長・デブリ除去と防衛SDAに共通。 ／ 民生衛星の寿命延長・デブリ除去と、防衛SDA・機動対応宇宙システムに共通。",
     "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
@@ -2793,10 +3442,10 @@ const SEED = [
     "name": "原子燃料工業",
     "jsx": "統合企業リスト_子会社置換",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_nuclear"
+      "06_nuclear"
     ],
     "tags": [
       "Y"
@@ -2804,7 +3453,7 @@ const SEED = [
     "own": "非上場企業 ／ 自社証券コード：非上場",
     "rev": "300–500億円 ／ 概算 ／ 2026年時点",
     "prod": "PWR/BWR燃料集合体、燃料棒・被覆管関連部品、研究炉・試験炉燃料",
-    "pos": "商用炉、研究炉・試験炉の核燃料製造と特殊核物質管理に直結する安全保障上の重要ノード。",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "def": "商用炉、研究炉・試験炉の核燃料製造と特殊核物質管理に直結する安全保障上の重要ノード。",
     "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
@@ -2817,10 +3466,10 @@ const SEED = [
     "name": "三菱原子燃料",
     "jsx": "統合企業リスト_子会社置換",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_nuclear"
+      "06_nuclear"
     ],
     "tags": [
       "Y"
@@ -2828,7 +3477,7 @@ const SEED = [
     "own": "非上場企業 ／ 親会社：三菱重工業・三菱マテリアル・Oranoほか ／ 自社証券コード：非上場 ／ 親会社証券コード：7011・5711ほか",
     "rev": "300–500億円 ／ 概算 ／ 2026年時点",
     "prod": "PWR燃料集合体、燃料棒、炉心構成品、燃料サイクル関連サービス",
-    "pos": "原子炉炉心と核燃料サイクルに直接接続し、原子力安全保障・核不拡散管理上の重要ノード。",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "def": "原子炉炉心と核燃料サイクルに直接接続し、原子力安全保障・核不拡散管理上の重要ノード。",
     "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
@@ -2841,23 +3490,25 @@ const SEED = [
     "name": "日本核燃料開発",
     "jsx": "統合企業リスト_子会社置換",
     "stages": [
-      5
+      5,
+      6
     ],
     "subs": [
-      "05_nuclear"
+      "06_nuclear",
+      "05_cladding"
     ],
     "tags": [
       "Y"
     ],
     "own": "非上場企業 ／ 親会社：東芝エネルギーシステムズ・日立GEニュークリア ／ 自社証券コード：非上場 ／ 親会社証券コード：6502・6501系",
     "rev": "50–100億円 ／ 概算 ／ 2026年時点",
-    "prod": "核燃料・照射材料の試験評価、ジルカロイ被覆管・圧力容器鋼の解析",
-    "pos": "燃料信頼性向上、事故耐性、被覆管・炉材料評価に直接接続する原子力安全保障R&Dノード。",
+    "prod": "核燃料・照射材料の試験評価、ジルカロイ被覆管・圧力容器鋼の解析、FeCrAl-ODS 被覆管（事故耐性燃料）の開発・照射評価",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "def": "燃料信頼性向上、事故耐性、被覆管・炉材料評価に直接接続する原子力安全保障R&Dノード。",
     "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
-    "src": "https://www.nfd.jp/business/business.html ／ https://www.nfd.jp/",
+    "src": "https://www.nfd.jp/business/business.html ／ https://www.nfd.jp/ ／ https://www.jstage.jst.go.jp/article/jaesjb/66/9/66_453/_pdf",
     "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：専門試験研究会社の人員・設備規模から推計"
   },
   {
@@ -2865,10 +3516,10 @@ const SEED = [
     "name": "AeroEdge",
     "jsx": "統合企業リスト_子会社置換",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_engine"
+      "06_engine"
     ],
     "tags": [
       "Y"
@@ -2876,7 +3527,7 @@ const SEED = [
     "own": "上場企業 ／ 自社証券コード：7409",
     "rev": "約50.5億円 ／ 会社予想 ／ 2026/6期",
     "prod": "LEAPエンジン用チタンアルミ製低圧タービンブレード",
-    "pos": "A320neo・737MAX・C919向けベストセラー民間航空エンジンに直結。加工・品質保証技術は防衛エンジンへ転用可能。",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "def": "A320neo・737MAX・C919向けベストセラー民間航空エンジンに直結。加工・品質保証技術は防衛エンジンへ転用可能。",
     "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
@@ -2885,94 +3536,25 @@ const SEED = [
     "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：通期会社予想"
   },
   {
-    "id": "stage05-integrated-22",
-    "name": "NTN 軸受事業本部 航空宇宙技術部／桑名製作所",
-    "jsx": "統合企業リスト_子会社置換",
-    "stages": [
-      5
-    ],
-    "subs": [
-      "05_engine"
-    ],
-    "tags": [
-      "Y"
-    ],
-    "own": "親会社内組織・工場 ／ 親会社：NTN ／ 自社証券コード：事業部 ／ 親会社証券コード：6472",
-    "rev": "100–300億円 ／ 概算 ／ 2026年時点",
-    "prod": "航空機・ジェットエンジン用高精度軸受、特殊環境用軸受",
-    "pos": "国内初の航空宇宙用軸受専門工場。P&Wエンジン用軸受を量産。",
-    "def": "国内初の航空宇宙用軸受専門工場。P&Wエンジン用軸受を量産。",
-    "chn": "企業固有の希土類BOM・中国依存は未確認。",
-    "ev": "B",
-    "exc": 0,
-    "src": "https://www.ntn.co.jp/japan/news/press/news201300003.html",
-    "note": "統合処理：事業部置換 ／ 置換元：NTN ／ 売上根拠：航空宇宙用軸受の専用工場・製品範囲から推計"
-  },
-  {
-    "id": "stage05-integrated-23",
-    "name": "ジャムコ",
-    "jsx": "統合企業リスト_子会社置換",
-    "stages": [
-      5
-    ],
-    "subs": [
-      "05_engine"
-    ],
-    "tags": [
-      "Y"
-    ],
-    "own": "非上場企業 ／ 自社証券コード：非上場（旧7408）",
-    "rev": "600–700億円 ／ 概算 ／ 2025/3期",
-    "prod": "航空機エンジン用クーリングマニホールド・配管、航空宇宙特殊工程",
-    "pos": "民間航空機エンジン部品に加え、防衛省・自衛隊関連の航空宇宙機器・整備に直接接続。",
-    "def": "民間航空機エンジン部品に加え、防衛省・自衛隊関連の航空宇宙機器・整備に直接接続。",
-    "chn": "企業固有の希土類BOM・中国依存は未確認。",
-    "ev": "B",
-    "exc": 0,
-    "src": "https://www.jamco.co.jp/ja/business/jco/engine_partts.html ／ https://www.jamco.co.jp/ja/company/profile.html",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：非上場化前の連結売上規模を丸めたレンジ"
-  },
-  {
-    "id": "stage05-integrated-24",
-    "name": "日機装",
-    "jsx": "統合企業リスト_子会社置換",
-    "stages": [
-      5
-    ],
-    "subs": [
-      "05_engine"
-    ],
-    "tags": [
-      "Y"
-    ],
-    "own": "上場企業 ／ 自社証券コード：6376",
-    "rev": "2,500–3,000億円 ／ 概算 ／ 2025/12期",
-    "prod": "航空機エンジンナセル用CFRPカスケード、航空機・エンジン構造部品",
-    "pos": "Boeing、Airbus等の民間航空機エンジン・逆噴射装置に直接搭載。航空エンジン部品の設計・量産技術は防衛機にも転用可能。",
-    "def": "Boeing、Airbus等の民間航空機エンジン・逆噴射装置に直接搭載。航空エンジン部品の設計・量産技術は防衛機にも転用可能。",
-    "chn": "企業固有の希土類BOM・中国依存は未確認。",
-    "ev": "B",
-    "exc": 0,
-    "src": "https://www.nikkiso.co.jp/products/cfrp/ ／ https://www.nikkiso.co.jp/company/",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：会社公表の連結売上規模をレンジ化"
-  },
-  {
     "id": "stage05-integrated-25",
     "name": "SUBARU 航空宇宙カンパニー",
     "jsx": "統合企業リスト_子会社置換",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_airframe_support"
+      "06_aircraft"
     ],
     "tags": [
+      "Y",
+      "DyTb",
+      "Sm",
       "Sc"
     ],
     "own": "親会社内カンパニー ／ 親会社：SUBARU ／ 自社証券コード：事業部 ／ 親会社証券コード：7270",
     "rev": "約1,417億円 ／ セグメント実績 ／ 2026/3期",
     "prod": "航空機・ヘリ・無人機の開発、生産、システム統合、運用支援",
-    "pos": "自衛隊向け練習機、UH-2、無人航空機、次期戦闘機に直接接続。",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "def": "自衛隊向け練習機、UH-2、無人航空機、次期戦闘機に直接接続。",
     "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
@@ -2981,110 +3563,14 @@ const SEED = [
     "note": "統合処理：カンパニー置換 ／ 置換元：SUBARU ／ 売上根拠：親会社の航空宇宙セグメント売上収益"
   },
   {
-    "id": "stage05-integrated-26",
-    "name": "株式会社エフ・エー・エス",
-    "jsx": "統合企業リスト_子会社置換",
-    "stages": [
-      5
-    ],
-    "subs": [
-      "05_airframe_support"
-    ],
-    "tags": [
-      "Sc"
-    ],
-    "own": "子会社 ／ 親会社：SUBARU ／ 自社証券コード：非上場 ／ 親会社証券コード：7270",
-    "rev": "20–50億円 ／ 概算 ／ 2026年時点",
-    "prod": "航空機部品の加工・組立、設備保全、計測器校正、品質保証",
-    "pos": "SUBARU航空宇宙カンパニーの航空機製造を担う専業子会社。",
-    "def": "SUBARU航空宇宙カンパニーの航空機製造を担う専業子会社。",
-    "chn": "企業固有の希土類BOM・中国依存は未確認。",
-    "ev": "B",
-    "exc": 0,
-    "src": "https://fas.subaru.co.jp/outline/outline.html",
-    "note": "統合処理：子会社追加 ／ 置換元：SUBARU ／ 売上根拠：航空機加工・組立・品質保証の人員規模から推計"
-  },
-  {
-    "id": "stage05-integrated-27",
-    "name": "富士エアロスペーステクノロジー株式会社（FATEC）",
-    "jsx": "統合企業リスト_子会社置換",
-    "stages": [
-      5
-    ],
-    "subs": [
-      "05_airframe_support"
-    ],
-    "tags": [
-      "Sc"
-    ],
-    "own": "子会社／関係会社 ／ 親会社：SUBARU ／ 自社証券コード：非上場 ／ 親会社証券コード：7270",
-    "rev": "約28.7億円 ／ 会社公表値 ／ 2024年度",
-    "prod": "機体設計、解析、生産技術、航空宇宙ソフトウェア",
-    "pos": "航空宇宙専業の設計・生産技術法人。",
-    "def": "航空宇宙専業の設計・生産技術法人。",
-    "chn": "企業固有の希土類BOM・中国依存は未確認。",
-    "ev": "B",
-    "exc": 0,
-    "src": "https://fatec.subaru.co.jp/company/outline.html",
-    "note": "統合処理：子会社追加 ／ 置換元：SUBARU ／ 売上根拠：会社概要の売上高"
-  },
-  {
-    "id": "stage05-integrated-28",
-    "name": "富士航空整備株式会社",
-    "jsx": "統合企業リスト_子会社置換",
-    "stages": [
-      5
-    ],
-    "subs": [
-      "05_airframe_support"
-    ],
-    "tags": [
-      "Sc"
-    ],
-    "own": "子会社 ／ 親会社：SUBARU ／ 自社証券コード：非上場 ／ 親会社証券コード：7270",
-    "rev": "20–50億円 ／ 概算 ／ 2026年時点",
-    "prod": "自衛隊航空機・搭載装備品・フライトシミュレータの整備、教育",
-    "pos": "自衛隊航空機の整備を行う民活会社第1号。",
-    "def": "自衛隊航空機の整備を行う民活会社第1号。",
-    "chn": "企業固有の希土類BOM・中国依存は未確認。",
-    "ev": "B",
-    "exc": 0,
-    "src": "https://fam.subaru.co.jp/company/",
-    "note": "統合処理：子会社追加 ／ 置換元：SUBARU ／ 売上根拠：自衛隊機MRO専業の人員・契約規模から推計"
-  },
-  {
-    "id": "stage05-integrated-29",
-    "name": "輸送機工業株式会社",
-    "jsx": "統合企業リスト_子会社置換",
-    "stages": [
-      5
-    ],
-    "subs": [
-      "05_airframe_support"
-    ],
-    "tags": [
-      "Sc"
-    ],
-    "own": "子会社／関係会社 ／ 親会社：SUBARU ／ 自社証券コード：非上場 ／ 親会社証券コード：7270",
-    "rev": "50–150億円 ／ 概算 ／ 2026年時点",
-    "prod": "アルミ合金航空機構造部品の板金・機械加工・ユニット組立",
-    "pos": "SUBARU、三菱重工、川崎重工、日本飛行機、新明和等へ供給。",
-    "def": "SUBARU、三菱重工、川崎重工、日本飛行機、新明和等へ供給。",
-    "chn": "企業固有の希土類BOM・中国依存は未確認。",
-    "ev": "B",
-    "exc": 0,
-    "src": "https://yusoki.subaru.co.jp/company/index.html",
-    "note": "統合処理：子会社追加 ／ 置換元：SUBARU ／ 売上根拠：複数機体メーカー向け構造部品専業の人員・工程規模から推計"
-  },
-  {
     "id": "stage05-integrated-30",
     "name": "タムロン",
     "jsx": "統合企業リスト_子会社置換",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_laser"
+      "06_laser"
     ],
     "tags": [
       "Y"
@@ -3092,7 +3578,7 @@ const SEED = [
     "own": "上場企業 ／ 自社証券コード：7740",
     "rev": "約851億円 ／ 連結実績 ／ 2025/12期",
     "prod": "高出力レーザー用光学系、人工衛星搭載光学系、空間光通信用ビーム制御",
-    "pos": "人工衛星搭載光学系と空間光通信へ直接接続。高出力レーザー光学は宇宙・防衛センシングへ転用可能。",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "def": "人工衛星搭載光学系と空間光通信へ直接接続。高出力レーザー光学は宇宙・防衛センシングへ転用可能。",
     "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
@@ -3105,11 +3591,10 @@ const SEED = [
     "name": "Orbital Lasers",
     "jsx": "統合企業リスト_子会社置換",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_laser",
-      "05_sat"
+      "06_space"
     ],
     "tags": [
       "Y",
@@ -3120,7 +3605,7 @@ const SEED = [
     "own": "非上場企業 ／ 自社証券コード：非上場",
     "rev": "10億円未満 ／ 概算 ／ 2026年時点",
     "prod": "宇宙搭載用高出力レーザー、衛星ライダー、レーザーデブリ除去 ／ 衛星ライダー、レーザー式スペースデブリ除去衛星、専用衛星バス",
-    "pos": "衛星ライダー、デブリ制御、地球観測、安全保障の双方へ明示的に展開するデュアルユース技術。 ／ 地球観測、宇宙状況把握、スペースデブリ制御、安全保障に直接接続。",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "def": "衛星ライダー、デブリ制御、地球観測、安全保障の双方へ明示的に展開するデュアルユース技術。 ／ 地球観測、宇宙状況把握、スペースデブリ制御、安全保障に直接接続。",
     "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
@@ -3133,10 +3618,10 @@ const SEED = [
     "name": "カヤバ（KYB）",
     "jsx": "統合企業リスト_子会社置換",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_flight"
+      "06_aircraft"
     ],
     "tags": [
       "DyTb",
@@ -3145,7 +3630,7 @@ const SEED = [
     "own": "上場企業 ／ 自社証券コード：7242",
     "rev": "約4,815億円 ／ 連結実績 ／ 2026/3期",
     "prod": "航空機用降着装置、ステアリング・操舵装置、油圧・緊急作動装置",
-    "pos": "防衛省・自衛隊保有機向け装備品・補用品の契約実績を公表。民間航空機・産業油圧と技術を共有。",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "def": "防衛省・自衛隊保有機向け装備品・補用品の契約実績を公表。民間航空機・産業油圧と技術を共有。",
     "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
@@ -3158,19 +3643,20 @@ const SEED = [
     "name": "新明和工業",
     "jsx": "統合企業リスト_子会社置換",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_flight"
+      "06_aircraft"
     ],
     "tags": [
+      "Y",
       "DyTb",
       "Sm"
     ],
     "own": "上場企業 ／ 自社証券コード：7224",
     "rev": "約2,700億円 ／ 連結実績（概数） ／ 2026/3期",
     "prod": "US-2救難飛行艇、航空機構造・動翼、機外燃料タンク、整備",
-    "pos": "海上自衛隊の救難飛行艇と民間航空機構造部品・整備に直接接続。",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "def": "海上自衛隊の救難飛行艇と民間航空機構造部品・整備に直接接続。",
     "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "A",
@@ -3183,19 +3669,20 @@ const SEED = [
     "name": "島津製作所",
     "jsx": "統合企業リスト_子会社置換",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_flight"
+      "06_aircraft"
     ],
     "tags": [
+      "Y",
       "DyTb",
       "Sm"
     ],
     "own": "上場企業 ／ 自社証券コード：7701",
     "rev": "約5,607億円 ／ 連結実績 ／ 2026/3期",
     "prod": "フライトコントロール、空調、コックピット表示、航空機搭載機器",
-    "pos": "P-1/C-2等の防衛機とB747-8等の民間機にフライトコントロールを供給。",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "def": "P-1/C-2等の防衛機とB747-8等の民間機にフライトコントロールを供給。",
     "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "A",
@@ -3208,10 +3695,10 @@ const SEED = [
     "name": "ダイキン工業 特機事業（淀川製作所）",
     "jsx": "統合企業リスト_子会社置換",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_flight"
+      "06_guidance"
     ],
     "tags": [
       "DyTb",
@@ -3220,7 +3707,7 @@ const SEED = [
     "own": "親会社内事業部 ／ 親会社：ダイキン工業 ／ 自社証券コード：事業部 ／ 親会社証券コード：6367",
     "rev": "100–300億円 ／ 概算 ／ 2026年時点",
     "prod": "誘導弾・砲弾部品、航空機部品、航空機用消火器、精密加工",
-    "pos": "防衛省向け砲弾・誘導弾部品・航空機部品を開示。",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "def": "防衛省向け砲弾・誘導弾部品・航空機部品を開示。",
     "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
@@ -3236,18 +3723,17 @@ const SEED = [
       5
     ],
     "subs": [
-      "05_defense_electronics"
+      "05_electronics"
     ],
     "tags": [
-      "Y",
-      "Sc"
+      "Y"
     ],
     "own": "子会社 ／ 親会社：沖電気工業（OKI） ／ 自社証券コード：非上場 ／ 親会社証券コード：6703",
     "rev": "200–400億円 ／ 概算 ／ 2026年時点",
     "prod": "高多層・高密度PCB、フレックスリジッド基板、航空宇宙向け基板設計・製造",
-    "pos": "JAXA認定PCBがロケット・人工衛星に採用。防衛省認定、JIS Q 9100取得。",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "def": "JAXA認定PCBがロケット・人工衛星に採用。防衛省認定、JIS Q 9100取得。",
-    "chn": "企業固有の希土類BOM・中国依存は未確認。 ／ Dy/Tbの企業固有BOMを公開確認できず、フラグを削除。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "A",
     "exc": 0,
     "src": "https://www.oki-otc.jp/company/outline.html",
@@ -3261,18 +3747,17 @@ const SEED = [
       5
     ],
     "subs": [
-      "05_defense_electronics"
+      "05_electronics"
     ],
     "tags": [
-      "Y",
-      "Sc"
+      "Y"
     ],
     "own": "上場企業 ／ 自社証券コード：6723",
     "rev": "約1兆3,212億円 ／ 連結実績 ／ 2025/12期",
     "prod": "耐放射線・高信頼デジタルIC、宇宙・航空・防衛向け半導体",
-    "pos": "人工衛星・宇宙機・航空防衛電子機器へ直接組み込まれる耐放射線半導体を供給。",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "def": "人工衛星・宇宙機・航空防衛電子機器へ直接組み込まれる耐放射線半導体を供給。",
-    "chn": "企業固有の希土類BOM・中国依存は未確認。 ／ Dy/Tbの企業固有BOMを公開確認できず、フラグを削除。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://www.renesas.com/en/products/space-harsh-environment/hi-rel-digital ／ https://www.renesas.com/ja/about/newsroom/renesas-reports-financial-results-year-ended-december-31-2025",
@@ -3286,18 +3771,18 @@ const SEED = [
       5
     ],
     "subs": [
-      "05_defense_electronics"
+      "05_electronics"
     ],
     "tags": [
       "Y",
-      "Sc"
+      "DyTb"
     ],
     "own": "製造子会社 ／ 親会社：村田製作所 ／ 自社証券コード：非上場 ／ 親会社証券コード：6981",
     "rev": "1,000–3,000億円 ／ 概算 ／ 2026年時点",
     "prod": "積層セラミックコンデンサの開発・製造",
-    "pos": "宇宙用途との接続は親会社製品として確認。子会社単独の認証情報は不足。",
+    "pos": "村田製作所グループの MLCC 製造子会社。グループの MLCC は世界シェア約4割（日本経済新聞、2024年10月）。",
     "def": "宇宙用途との接続は親会社製品として確認。子会社単独の認証情報は不足。",
-    "chn": "企業固有の希土類BOM・中国依存は未確認。 ／ Dy/Tbの企業固有BOMを公開確認できず、フラグを削除。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://corporate.murata.com/en-us/newsroom/news/company/general/2019/1024",
@@ -3311,18 +3796,18 @@ const SEED = [
       5
     ],
     "subs": [
-      "05_defense_electronics"
+      "05_electronics"
     ],
     "tags": [
       "Y",
-      "Sc"
+      "DyTb"
     ],
     "own": "製造子会社 ／ 親会社：村田製作所 ／ 自社証券コード：非上場 ／ 親会社証券コード：6981",
     "rev": "1,000–3,000億円 ／ 概算 ／ 2026年時点",
     "prod": "積層セラミックコンデンサの研究開発・製造",
-    "pos": "宇宙・防衛向け認定名義と型番の子会社単独開示は不足。",
+    "pos": "村田製作所グループの MLCC 製造子会社。グループの MLCC は世界シェア約4割（日本経済新聞、2024年10月）。",
     "def": "宇宙・防衛向け認定名義と型番の子会社単独開示は不足。",
-    "chn": "企業固有の希土類BOM・中国依存は未確認。 ／ Dy/Tbの企業固有BOMを公開確認できず、フラグを削除。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://corporate.murata.com/en-global/newsroom/news/company/general/2026/0205",
@@ -3336,7 +3821,7 @@ const SEED = [
       5
     ],
     "subs": [
-      "05_defense_electronics"
+      "05_electronics"
     ],
     "tags": [
       "Y",
@@ -3345,9 +3830,9 @@ const SEED = [
     "own": "上場企業 ／ 自社証券コード：5802",
     "rev": "約4.7兆円 ／ 連結実績（概数） ／ 2026/3期",
     "prod": "S帯・X帯高出力GaN HEMT、衛星通信・航空管制レーダー用RFデバイス",
-    "pos": "航空管制、船舶・気象レーダー、衛星通信に直結し、防衛レーダー・通信へ転用可能。",
+    "pos": "GaN HEMT で世界トップシェア（同社プレスリリース、2023年11月）。",
     "def": "航空管制、船舶・気象レーダー、衛星通信に直結し、防衛レーダー・通信へ転用可能。",
-    "chn": "企業固有の希土類BOM・中国依存は未確認。 ／ Dy/Tbの企業固有BOMを公開確認できず、フラグを削除。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://sumitomoelectric.com/jp/products/optical-devices ／ https://sumitomoelectric.com/jp/ir/financial",
@@ -3361,18 +3846,18 @@ const SEED = [
       5
     ],
     "subs": [
-      "05_defense_electronics"
+      "05_electronics"
     ],
     "tags": [
       "Y",
-      "Sc"
+      "DyTb"
     ],
     "own": "親会社内事業 ／ 親会社：村田製作所 ／ 自社証券コード：事業部 ／ 親会社証券コード：6981",
     "rev": "8,000–10,000億円 ／ 概算 ／ 2026年時点",
     "prod": "宇宙グレードMLCC、タイミング・高周波・センサデバイス",
-    "pos": "国内唯一のJAXA認定MLCCメーカーとして宇宙機採用を公表。",
+    "pos": "MLCC で世界シェア約4割（日本経済新聞、2024年10月）。",
     "def": "国内唯一のJAXA認定MLCCメーカーとして宇宙機採用を公表。",
-    "chn": "企業固有の希土類BOM・中国依存は未確認。 ／ Dy/Tbの企業固有BOMを公開確認できず、フラグを削除。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://www.murata.com/en-us/products/capacitor/ceramiccapacitor/overview/strength",
@@ -3383,10 +3868,10 @@ const SEED = [
     "name": "富士通ディフェンス＆ナショナルセキュリティ株式会社（FDNS）",
     "jsx": "統合企業リスト_子会社置換",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_defense_electronics"
+      "06_comm"
     ],
     "tags": [
       "Y",
@@ -3396,8 +3881,8 @@ const SEED = [
     "rev": "約688億円 ／ 会社公表値 ／ 2025年度",
     "prod": "防衛ICT、センサー、AI・サイバー、24時間365日維持支援",
     "pos": "防衛省・自衛隊の情報通信システム開発・維持を行う専業会社。",
-    "def": "防衛省・自衛隊の情報通信システム開発・維持を行う専業会社。",
-    "chn": "企業固有の希土類BOM・中国依存は未確認。 ／ Dy/Tbの企業固有BOMを公開確認できず、フラグを削除。",
+    "def": "",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://global.fujitsu/ja-jp/subsidiaries/fdns/about",
@@ -3411,18 +3896,17 @@ const SEED = [
       5
     ],
     "subs": [
-      "05_defense_electronics"
+      "05_electronics"
     ],
     "tags": [
-      "Y",
-      "Sc"
+      "Y"
     ],
     "own": "孫会社 ／ 親会社：富士通 ／ 自社証券コード：非上場 ／ 親会社証券コード：6702",
     "rev": "5–20億円 ／ 概算 ／ 2026年時点",
     "prod": "ガラス・金属・セラミック・サファイア接合、精密加工・組立ユニット",
-    "pos": "JIS Q 9100認証範囲に航空機搭載防衛装備品ユニットを明記。",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "def": "JIS Q 9100認証範囲に航空機搭載防衛装備品ユニットを明記。",
-    "chn": "企業固有の希土類BOM・中国依存は未確認。 ／ Dy/Tbの企業固有BOMを公開確認できず、フラグを削除。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://global.fujitsu/ja-jp/subsidiaries/fdns/tcl/about",
@@ -3436,18 +3920,17 @@ const SEED = [
       5
     ],
     "subs": [
-      "05_defense_electronics"
+      "05_electronics"
     ],
     "tags": [
-      "Y",
-      "Sc"
+      "Y"
     ],
     "own": "子会社／グループ会社 ／ 親会社：沖電気工業（OKI） ／ 自社証券コード：非上場 ／ 親会社証券コード：6703",
     "rev": "20–50億円 ／ 概算 ／ 2026年時点",
     "prod": "宇宙・防衛用電子部品の試験、故障解析、環境評価、スクリーニング",
-    "pos": "MIL-STD-883、JAXA-QTS-2010に基づく宇宙用電子部品試験を提供。",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "def": "MIL-STD-883、JAXA-QTS-2010に基づく宇宙用電子部品試験を提供。",
-    "chn": "企業固有の希土類BOM・中国依存は未確認。 ／ Dy/Tbの企業固有BOMを公開確認できず、フラグを削除。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
     "src": "https://www.oeg.co.jp/company/prof.html",
@@ -3458,19 +3941,20 @@ const SEED = [
     "name": "YDKテクノロジーズ",
     "jsx": "統合企業リスト_子会社置換",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_guid"
+      "06_naval"
     ],
     "tags": [
+      "Y",
       "DyTb",
       "Sm"
     ],
     "own": "非上場子会社 ／ 親会社：横河電機 ／ 自社証券コード：非上場 ／ 親会社証券コード：6841",
     "rev": "100–300億円 ／ 概算 ／ 2026年時点",
     "prod": "艦艇用ジャイロコンパス、航法支援装置、電磁ログ、対勢作図装置",
-    "pos": "陸海空の防衛製品、特に自衛艦の航法・姿勢・速度計測に直接接続。",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "def": "陸海空の防衛製品、特に自衛艦の航法・姿勢・速度計測に直接接続。",
     "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
@@ -3483,19 +3967,18 @@ const SEED = [
     "name": "セイコーエプソン センシングシステム事業",
     "jsx": "統合企業リスト_子会社置換",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_guid"
+      "06_guidance"
     ],
     "tags": [
-      "DyTb",
-      "Sm"
+      "Y"
     ],
     "own": "親会社内事業 ／ 親会社：セイコーエプソン ／ 自社証券コード：事業部 ／ 親会社証券コード：6724",
     "rev": "50–150億円 ／ 概算 ／ 2026年時点",
     "prod": "水晶ジャイロ、加速度センサー、慣性計測ユニット（IMU）",
-    "pos": "M-G370シリーズIMUがISS『きぼう』Int-Ball2に採用。",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "def": "M-G370シリーズIMUがISS『きぼう』Int-Ball2に採用。",
     "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
@@ -3511,16 +3994,15 @@ const SEED = [
       5
     ],
     "subs": [
-      "05_guid"
+      "05_electronics"
     ],
     "tags": [
-      "DyTb",
-      "Sm"
+      "Y"
     ],
     "own": "製造子会社 ／ 親会社：セイコーエプソン ／ 自社証券コード：非上場 ／ 親会社証券コード：6724",
     "rev": "100–300億円 ／ 概算 ／ 2026年時点",
     "prod": "水晶デバイス、ジャイロセンサー振動片",
-    "pos": "親会社IMUは宇宙採用実績あり。完成品・保証は親会社名義。",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "def": "親会社IMUは宇宙採用実績あり。完成品・保証は親会社名義。",
     "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
@@ -3533,13 +4015,13 @@ const SEED = [
     "name": "古野電気",
     "jsx": "統合企業リスト_子会社置換",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_guid",
-      "05_rf_sensor"
+      "06_naval"
     ],
     "tags": [
+      "Y",
       "DyTb",
       "Sm",
       "Sc"
@@ -3547,7 +4029,7 @@ const SEED = [
     "own": "上場企業 ／ 自社証券コード：6814",
     "rev": "1,400–1,600億円 ／ 概算 ／ 2026/2期",
     "prod": "船舶レーダー、ECDIS、GNSS、デジタルマップ、水中音響機器 ／ 船舶レーダー、水中音響、GNSS、通信・航海統合装置",
-    "pos": "防衛省向け水中音響機器・GNSS関連機器・デジタルマップ装置を明示。商船・漁船向けと技術基盤を共有。 ／ 防衛省向け水中音響機器・GNSS関連機器を明示。商船・漁船向けレーダーとのデュアルユース性が高い。",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "def": "防衛省向け水中音響機器・GNSS関連機器・デジタルマップ装置を明示。商船・漁船向けと技術基盤を共有。 ／ 防衛省向け水中音響機器・GNSS関連機器を明示。商船・漁船向けレーダーとのデュアルユース性が高い。",
     "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
@@ -3560,27 +4042,30 @@ const SEED = [
     "name": "住友精密工業",
     "jsx": "統合企業リスト_子会社置換",
     "stages": [
-      5
+      5,
+      6
     ],
     "subs": [
-      "05_guid",
-      "05_flight"
+      "05_motor",
+      "06_guidance",
+      "06_semi"
     ],
     "tags": [
+      "Y",
       "DyTb",
       "Sm",
       "Sc"
     ],
     "own": "非上場子会社 ／ 親会社：住友商事 ／ 自社証券コード：非上場（旧6355） ／ 親会社証券コード：8053",
     "rev": "600–800億円 ／ 概算 ／ 2026年時点",
-    "prod": "MEMSジャイロ、慣性センサ、姿勢センサユニット、Northfinder ／ 航空機脚システム、油圧・熱交換器、電動油圧アクチュエーション",
-    "pos": "航空宇宙・船舶向け慣性センシングと、防衛省保有機の約8割に搭載される脚システムを同社内に保有。 ／ 防衛・民間航空機の降着装置、熱管理、電動化に直接接続。",
-    "def": "航空宇宙・船舶向け慣性センシングと、防衛省保有機の約8割に搭載される脚システムを同社内に保有。 ／ 防衛・民間航空機の降着装置、熱管理、電動化に直接接続。",
-    "chn": "企業固有の希土類BOM・中国依存は未確認。",
+    "prod": "MEMSジャイロ、慣性センサ、姿勢センサユニット、Northfinder ／ 航空機脚システム、油圧・熱交換器、電動油圧アクチュエーション ／ MEMS・半導体製造装置（シリコン深掘りエッチング装置、プラズマ CVD 装置。100%子会社の SPPテクノロジーズが製造・販売）",
+    "pos": "航空宇宙・船舶向け慣性センシングと、防衛省保有機の約8割に搭載される脚システムを同社内に保有。MEMS 製造用のシリコン深掘りエッチング装置でシェア90%（同社公表）。",
+    "def": "防衛・民間航空機の降着装置、熱管理、電動化に直接接続。",
+    "chn": "企業固有の希土類BOM・中国依存は未確認。半導体製造装置のエッチング・プラズマ CVD チャンバー部品には Y₂O₃ 系の耐プラズマ部材を使うのが一般的（部材の調達先は非開示）。",
     "ev": "A",
     "exc": 0,
-    "src": "https://www.spp.co.jp/business/sensor/ ／ https://www.spp.co.jp/company/profile/",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：非上場化前の連結売上規模と現事業構成から推計"
+    "src": "https://www.spp.co.jp/business/sensor/ ／ https://www.spp.co.jp/company/profile/ ／ https://www.spp.co.jp/business/microtech/ ／ https://www.sptcorp.com/ja/media-center/merger-into-sumitomo-precision-products/",
+    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：非上場化前の連結売上規模と現事業構成から推計 ／ 2026-09-19 sandbox：半導体製造装置（100%子会社 SPPテクノロジーズ。住友精密工業による吸収合併を2026年10月1日目途で検討中）を追加。"
   },
   {
     "id": "company-115",
@@ -3611,10 +4096,10 @@ const SEED = [
     "name": "京セラSOC株式会社",
     "jsx": "固体レーザー発振器DD正式採用",
     "stages": [
-      4
+      5
     ],
     "subs": [
-      "04_opt"
+      "05_laser_osc"
     ],
     "tags": [
       "Y"
@@ -3639,10 +4124,10 @@ const SEED = [
     "name": "TOWAレーザーフロント株式会社",
     "jsx": "固体レーザー発振器DD正式採用",
     "stages": [
-      4
+      5
     ],
     "subs": [
-      "04_opt"
+      "05_laser_osc"
     ],
     "tags": [
       "Y"
@@ -3667,10 +4152,10 @@ const SEED = [
     "name": "株式会社オプトクエスト",
     "jsx": "固体レーザー発振器DD正式採用",
     "stages": [
-      4
+      5
     ],
     "subs": [
-      "04_opt"
+      "05_laser_osc"
     ],
     "tags": [
       "Y"
@@ -3695,10 +4180,10 @@ const SEED = [
     "name": "エスシーティー株式会社（SCT）",
     "jsx": "固体レーザー発振器DD・ユーザー指定正式採用",
     "stages": [
-      4
+      5
     ],
     "subs": [
-      "04_opt"
+      "05_laser_osc"
     ],
     "tags": [
       "Y"
@@ -3723,10 +4208,12 @@ const SEED = [
     "name": "三菱重工業（エナジードメイン）",
     "jsx": "SOFC/SOEC追加DD正式採用",
     "stages": [
-      5
+      5,
+      6
     ],
     "subs": [
-      "05_energy"
+      "05_sofc",
+      "06_energy"
     ],
     "tags": [
       "Y",
@@ -3755,7 +4242,7 @@ const SEED = [
       5
     ],
     "subs": [
-      "05_energy"
+      "05_sofc"
     ],
     "tags": [
       "Y",
@@ -3784,7 +4271,7 @@ const SEED = [
       5
     ],
     "subs": [
-      "05_energy"
+      "05_sofc"
     ],
     "tags": [
       "Y",
@@ -3813,7 +4300,7 @@ const SEED = [
       5
     ],
     "subs": [
-      "05_energy"
+      "05_sofc"
     ],
     "tags": [
       "Y",
@@ -3838,13 +4325,11 @@ const SEED = [
     "id": "atla-2010001098064",
     "name": "株式会社国際電気",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_laser",
-      "05_guid",
-      "05_rf_sensor",
-      "05_defense_electronics"
+      "06_comm",
+      "06_laser"
     ],
     "tags": [
       "Y",
@@ -3853,7 +4338,7 @@ const SEED = [
       "Sc"
     ],
     "own": "非上場（旧・日立国際電気は2018年3月に上場廃止）。日清紡ホールディングスグループが80%（HVJホールディングス経由）、日立製作所が20%を保有。日清紡HDは東証プライム・3105、日立製作所は東証プライム・6501。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -3920,22 +4405,21 @@ const SEED = [
     "id": "atla-2011101014084",
     "name": "東芝インフラシステムズ株式会社",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_guid",
-      "05_sat",
-      "05_rf_sensor",
-      "05_defense_electronics",
-      "05_military_radar"
+      "06_radar",
+      "06_guidance",
+      "06_comm"
     ],
     "tags": [
+      "Y",
       "DyTb",
       "Sm",
       "Sc"
     ],
     "own": "非上場。株式会社東芝100%子会社だったが、2025年4月1日に東芝を存続会社とする吸収合併で消滅。東芝は2023年12月に上場廃止し、現在は非上場。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -4022,17 +4506,17 @@ const SEED = [
     "id": "atla-9010501010505",
     "name": "日本電計株式会社",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_rf_sensor"
+      "06_rf_sensor"
     ],
     "tags": [
       "Y",
       "Sc"
     ],
     "own": "上場。東京証券取引所スタンダード市場、証券コード9908。特定の親会社なし。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -4080,17 +4564,18 @@ const SEED = [
     "id": "atla-7010401006126",
     "name": "沖電気工業株式会社",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_rf_sensor",
-      "05_airframe_support"
+      "06_naval",
+      "06_aircraft"
     ],
     "tags": [
+      "Y",
       "DyTb"
     ],
     "own": "上場。東京証券取引所プライム市場、証券コード6703。特定の親会社なし。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -4143,17 +4628,17 @@ const SEED = [
     "id": "atla-9010801024873",
     "name": "株式会社光電製作所",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_rf_sensor",
-      "05_military_radar"
+      "06_radar"
     ],
     "tags": [
+      "Y",
       "Sc"
     ],
     "own": "非上場。株式会社KODENホールディングス傘下（同社が株主）。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -4205,17 +4690,17 @@ const SEED = [
     "id": "atla-1020001006043",
     "name": "海洋電子工業株式会社",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_defense_electronics"
+      "06_comm"
     ],
     "tags": [
       "Y",
       "Sc"
     ],
     "own": "非上場（公式会社概要が株式非公開と明記）。親会社は公開情報で確認できず。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -4262,19 +4747,18 @@ const SEED = [
     "id": "atla-7010701017021",
     "name": "三菱電機ディフェンス&スペーステクノロジーズ株式会社",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_rf_sensor",
-      "05_defense_electronics",
-      "05_military_radar"
+      "06_radar",
+      "06_comm"
     ],
     "tags": [
       "Y",
       "Sc"
     ],
     "own": "非上場。三菱電機株式会社100%出資子会社。親会社は東京証券取引所プライム市場、証券コード6503。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -4334,19 +4818,19 @@ const SEED = [
     "id": "atla-1010401098920",
     "name": "コーンズテクノロジー株式会社",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_rf_sensor",
-      "05_defense_electronics",
-      "05_unmanned"
+      "06_comm",
+      "06_unmanned"
     ],
     "tags": [
       "Y",
+      "DyTb",
       "Sc"
     ],
     "own": "非上場。コーンズ・アンド・カンパニー・リミテッドのグループ会社（親会社の持株比率は公式サイトで非開示）。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -4406,11 +4890,11 @@ const SEED = [
     "id": "atla-4010701009640",
     "name": "株式会社明電舎",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_laser",
-      "05_sat"
+      "06_space",
+      "06_energy"
     ],
     "tags": [
       "Y",
@@ -4418,7 +4902,7 @@ const SEED = [
       "Sm"
     ],
     "own": "上場。東京証券取引所プライム市場・名古屋証券取引所プレミア市場、証券コード6508。特定の親会社なし。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -4447,8 +4931,8 @@ const SEED = [
       "rareEarthPossibility": "中（一般論）"
     },
     "rev": "3,261億9,400万円（2026年3月期、連結）",
-    "prod": "宇宙状況把握レーザー測距装置用電源装置",
-    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：宇宙状況把握レーザー測距装置用電源装置",
+    "prod": "宇宙状況把握レーザー測距装置用電源装置 ／ 発動発電機75kW(監視装置用電源装置)",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：宇宙状況把握レーザー測距装置用電源装置；発動発電機75kW(監視装置用電源装置)",
     "bom": "調達品目「宇宙状況把握レーザー測距装置用電源装置；発動発電機75kW(監視装置用電源装置)；発動発電機75kW(監視装置用電源装置)(初度費)」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4010701009640 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.meidensha.co.jp/corporate/ ／ https://www2.jpx.co.jp/disc/65080/140120260513530264.pdf ／ https://www.meidensha.co.jp/ir/ir_12/",
@@ -4471,17 +4955,18 @@ const SEED = [
     "id": "atla-1010001110829",
     "name": "リコージャパン株式会社",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_defense_electronics"
+      "06_comm"
     ],
     "tags": [
+      "Y",
       "DyTb",
       "Sm"
     ],
     "own": "非上場。株式会社リコーの完全子会社。親会社リコーは東京証券取引所プライム市場、証券コード7752。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -4528,17 +5013,17 @@ const SEED = [
     "id": "atla-5011101016202",
     "name": "日本エヤークラフトサプライ株式会社",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_unmanned"
+      "06_unmanned"
     ],
     "tags": [
       "DyTb",
       "Sm"
     ],
     "own": "非上場。親会社・主要株主は公開会社概要で確認できず（独立系とみられるが断定しない）。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -4585,19 +5070,20 @@ const SEED = [
     "id": "atla-7012401000240",
     "name": "NECネットワーク・センサ株式会社",
     "stages": [
-      5
+      5,
+      6
     ],
     "subs": [
-      "05_guid",
-      "05_sat",
-      "05_defense_electronics"
+      "06_comm",
+      "05_tube"
     ],
     "tags": [
       "Y",
+      "Sm",
       "Sc"
     ],
     "own": "非上場。日本電気株式会社（NEC）100%出資子会社。親会社NECは東京証券取引所プライム市場、証券コード6701。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -4658,16 +5144,16 @@ const SEED = [
     "id": "atla-2020001020489",
     "name": "ジェイ・アール・シー特機株式会社",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_rf_sensor"
+      "06_naval"
     ],
     "tags": [
       "DyTb"
     ],
     "own": "非上場。日本無線株式会社100%子会社で、日清紡ホールディングスグループ。最終親会社の日清紡HDは東京証券取引所プライム市場、証券コード3105。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -4714,11 +5200,13 @@ const SEED = [
     "id": "atla-1020001081053",
     "name": "東芝電波プロダクツ株式会社",
     "stages": [
-      5
+      5,
+      6
     ],
     "subs": [
-      "05_laser",
-      "05_defense_electronics"
+      "06_laser",
+      "05_tube",
+      "06_comm"
     ],
     "tags": [
       "Y",
@@ -4727,7 +5215,7 @@ const SEED = [
       "Sc"
     ],
     "own": "非上場。株式会社東芝100%出資子会社。親会社東芝は2023年12月に上場廃止し、現在は非上場。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -4781,17 +5269,17 @@ const SEED = [
     "id": "atla-4010001052390",
     "name": "株式会社エアロパートナーズ",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_robot",
-      "05_unmanned"
+      "06_unmanned"
     ],
     "tags": [
-      "Y"
+      "Y",
+      "DyTb"
     ],
     "own": "非上場。株式会社理経の連結子会社（議決権97.34%）。親会社理経は東京証券取引所スタンダード市場、証券コード8226。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -4850,16 +5338,14 @@ const SEED = [
       5
     ],
     "subs": [
-      "05_rf_sensor",
-      "05_defense_electronics",
-      "05_military_radar"
+      "05_tube"
     ],
     "tags": [
-      "Y",
+      "Sm",
       "Sc"
     ],
     "own": "上場。東京証券取引所プライム市場、証券コード7537。特定の親会社なし。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -4919,12 +5405,11 @@ const SEED = [
     "id": "atla-3010001033004",
     "name": "日本海洋株式会社",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_robot",
-      "05_defense_electronics",
-      "05_unmanned"
+      "06_naval",
+      "06_comm"
     ],
     "tags": [
       "Y",
@@ -4933,7 +5418,7 @@ const SEED = [
       "Sc"
     ],
     "own": "非上場。タキオニッシュホールディングス株式会社100%子会社。親会社も非上場。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -4994,17 +5479,17 @@ const SEED = [
     "id": "atla-4130001044153",
     "name": "JMUディフェンスシステムズ株式会社",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_unmanned"
+      "06_naval"
     ],
     "tags": [
       "DyTb",
       "Sm"
     ],
     "own": "非上場。ジャパン マリンユナイテッド株式会社100%出資子会社。JMU自体も非上場（主要株主は今治造船60%、JFEホールディングス20%、IHI20%）。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -5052,17 +5537,17 @@ const SEED = [
     "id": "atla-1120001019349",
     "name": "アイコム株式会社",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_defense_electronics"
+      "06_comm"
     ],
     "tags": [
       "Y",
       "Sc"
     ],
     "own": "上場。東京証券取引所プライム市場、証券コード6820。特定の親会社なし。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -5110,16 +5595,17 @@ const SEED = [
     "id": "atla-3020001018037",
     "name": "株式会社鶴見精機",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_rf_sensor"
+      "06_rf_sensor"
     ],
     "tags": [
+      "Y",
       "Sc"
     ],
     "own": "非上場（証券コードなし）。親会社は公開情報から確認できず、独立系とみられる。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -5164,17 +5650,17 @@ const SEED = [
     "id": "atla-8100001002473",
     "name": "長野日本無線株式会社",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_defense_electronics"
+      "06_comm"
     ],
     "tags": [
       "Y",
       "Sc"
     ],
     "own": "非上場（旧証券コード6878、2016年3月17日上場廃止）。日本無線株式会社の完全子会社。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -5222,16 +5708,17 @@ const SEED = [
     "id": "atla-4010601031653",
     "name": "株式会社IHIエアロスペース",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_sat"
+      "06_launch"
     ],
     "tags": [
+      "Y",
       "Sc"
     ],
     "own": "非上場。株式会社IHI（東証プライム、証券コード7013）の連結子会社。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -5254,8 +5741,8 @@ const SEED = [
       "rareEarthPossibility": "中（一般論）"
     },
     "rev": "666億円（2025年3月期、単体）",
-    "prod": "HTV-Xを活用したHGV探知等に関する宇宙技術実証(その1)",
-    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：HTV-Xを活用したHGV探知等に関する宇宙技術実証(その1)",
+    "prod": "HTV-Xを活用したHGV探知等に関する宇宙技術実証(その1) ／ 92式地雷原処理用ロケット弾 ／ チャフロケット弾 ／ 24式水際地雷原処理装置用ロケット弾",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：HTV-Xを活用したHGV探知等に関する宇宙技術実証(その1)；92式地雷原処理用ロケット弾；チャフロケット弾；24式水際地雷原処理装置用ロケット弾",
     "bom": "調達品目「92式地雷原処理用ロケット弾；チャフロケット弾；24式水際地雷原処理装置用ロケット弾」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4010601031653 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.ihi.co.jp/all_news/2026/ir/__icsFiles/afieldfile/2026/06/02/notice_260602.pdf ／ https://www.ihi.co.jp/ir/stock/information/",
@@ -5277,17 +5764,17 @@ const SEED = [
     "id": "atla-8010401096587",
     "name": "モトローラ・ソリューションズ株式会社",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_defense_electronics"
+      "06_comm"
     ],
     "tags": [
       "Y",
       "Sc"
     ],
     "own": "非上場の日本法人。最終親会社Motorola Solutions, Inc.はNYSE上場（ティッカーMSI）。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -5335,17 +5822,18 @@ const SEED = [
     "id": "atla-1020001006613",
     "name": "日本飛行機株式会社",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_airframe_support"
+      "06_aircraft"
     ],
     "tags": [
       "DyTb",
-      "Sm"
+      "Sm",
+      "Sc"
     ],
     "own": "非上場。川崎重工業株式会社（東証プライム、証券コード7012）の100%子会社。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -5369,11 +5857,11 @@ const SEED = [
       "rareEarthPossibility": "中（一般論）"
     },
     "rev": "331億8,500万円（2025年3月期、単体）",
-    "prod": "YS-11機体定期修理 ／ P-3C機体定期特別修理",
+    "prod": "YS-11機体定期修理 ／ P-3C機体定期特別修理 ／ 内装ランチャーシステムの研究（ステルス戦闘機の兵器内装化、国内唯一のランチャー専門メーカー） ／ 航空機構造の複合材・複雑一体化構造の加工技術開発",
     "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：YS-11機体定期修理；P-3C機体定期特別修理",
     "bom": "調達品目「誘導弾射爆撃訓練用水上標的；誘導弾射爆撃訓練用水上標的(GNSS付加)(モニタリング・テスト用)(初度費)；誘導弾射爆撃訓練用水上標的(GNSS付加)(モニタリング・テスト用)」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
-    "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1020001006613 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.nippi.co.jp/jp/company_overview.html ／ https://catr.jp/companies/c3549/20802",
+    "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1020001006613 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.nippi.co.jp/jp/company_overview.html ／ https://catr.jp/companies/c3549/20802 ／ https://www.nippi.co.jp/jp/reseach_development.html",
     "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Dy, Tb, Sm。中（一般論）",
     "financial": {
       "fiscalYear": "2025年3月期",
@@ -5392,19 +5880,18 @@ const SEED = [
     "id": "atla-4010401057023",
     "name": "タレスジャパン株式会社",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_rf_sensor",
-      "05_defense_electronics",
-      "05_military_radar"
+      "06_radar"
     ],
     "tags": [
       "Y",
+      "Sm",
       "Sc"
     ],
     "own": "非上場のタレスグループ日本法人。最終親会社Thales S.A.はEuronext Paris上場（銘柄コードHO、ISIN FR0000121329）。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -5466,18 +5953,17 @@ const SEED = [
     "id": "atla-7010701022780",
     "name": "株式会社レスター",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_robot",
-      "05_unmanned"
+      "06_unmanned"
     ],
     "tags": [
       "DyTb",
       "Sm"
     ],
     "own": "東証プライム上場、証券コード3156。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -5534,18 +6020,17 @@ const SEED = [
     "id": "atla-8011001039795",
     "name": "株式会社ノビテック",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_rf_sensor",
-      "05_military_radar"
+      "06_radar"
     ],
     "tags": [
       "Y",
       "Sc"
     ],
     "own": "非上場（証券コードなし）。親会社は公開情報から確認できず。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -5600,17 +6085,17 @@ const SEED = [
     "id": "atla-7013301019486",
     "name": "キーコム株式会社",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_rf_sensor",
-      "05_military_radar"
+      "06_radar"
     ],
     "tags": [
+      "Y",
       "Sc"
     ],
     "own": "非上場（証券コードなし）。親会社は公開情報から確認できず。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -5662,18 +6147,17 @@ const SEED = [
     "id": "atla-9011101031552",
     "name": "KDDI株式会社",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_sat",
-      "05_defense_electronics"
+      "06_comm"
     ],
     "tags": [
       "Y",
       "Sc"
     ],
     "own": "東証プライム上場、証券コード9433。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -5727,17 +6211,18 @@ const SEED = [
     "id": "atla-7010001225687",
     "name": "株式会社ミクニエアロスペース",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_robot",
-      "05_unmanned"
+      "06_unmanned",
+      "06_laser"
     ],
     "tags": [
-      "Y"
+      "Y",
+      "DyTb"
     ],
     "own": "非上場。株式会社ミクニ（東証スタンダード、証券コード7247）の100%子会社。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -5767,8 +6252,8 @@ const SEED = [
       "rareEarthPossibility": "中（一般論）"
     },
     "rev": "非公表／不明（当該法人単体）",
-    "prod": "UAV(実動対抗部隊用)GDXS-15",
-    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：UAV(実動対抗部隊用)GDXS-15",
+    "prod": "UAV(実動対抗部隊用)GDXS-15 ／ 夜間照準補助具(可視レーザー(緑))",
+    "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：UAV(実動対抗部隊用)GDXS-15；夜間照準補助具(可視レーザー(緑))",
     "bom": "調達品目「夜間照準補助具(可視レーザー(緑))」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7010001225687 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://mikuni-aero.jp/about/ ／ https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20250603/20250530575552.pdf",
@@ -5790,18 +6275,17 @@ const SEED = [
     "id": "atla-7010001063732",
     "name": "株式会社日本デジコム",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_sat",
-      "05_defense_electronics"
+      "06_comm"
     ],
     "tags": [
       "Y",
       "Sc"
     ],
     "own": "非上場（証券コードなし）。親会社は公開情報から確認できず。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -5856,17 +6340,17 @@ const SEED = [
     "id": "atla-6180001075605",
     "name": "株式会社エムエイチアイロジテック",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_guid"
+      "06_guidance"
     ],
     "tags": [
       "DyTb",
       "Sm"
     ],
     "own": "非上場。三菱重工業株式会社（東証プライム、証券コード7011）の100%子会社。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -5912,16 +6396,16 @@ const SEED = [
     "id": "atla-8020001003257",
     "name": "フジ・インバック株式会社",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_unmanned"
+      "06_unmanned"
     ],
     "tags": [
-      "Sc"
+      "DyTb"
     ],
     "own": "非上場（証券コードなし）。親会社は公開情報から確認できず。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -5970,14 +6454,14 @@ const SEED = [
       5
     ],
     "subs": [
-      "05_defense_electronics"
+      "05_tube"
     ],
     "tags": [
-      "Y",
+      "Sm",
       "Sc"
     ],
     "own": "非上場（証券コードなし）。親会社は公開情報から確認できず。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -6026,16 +6510,14 @@ const SEED = [
       5
     ],
     "subs": [
-      "05_rf_sensor",
-      "05_defense_electronics",
-      "05_military_radar"
+      "05_tube"
     ],
     "tags": [
-      "Y",
+      "Sm",
       "Sc"
     ],
     "own": "非上場の日本法人。米国Richardson Electronics, Ltd.の全額出資子会社で、親会社はNASDAQ上場（ティッカーRELL）。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -6094,17 +6576,17 @@ const SEED = [
     "id": "atla-1120003008110",
     "name": "株式会社amuse oneself",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_robot",
-      "05_unmanned"
+      "06_unmanned"
     ],
     "tags": [
-      "Y"
+      "Y",
+      "DyTb"
     ],
     "own": "非上場（証券コードなし）。豊田通商株式会社から出資を受けているが、持分比率・親会社該当性は非公表。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -6161,19 +6643,19 @@ const SEED = [
     "id": "atla-2010001022478",
     "name": "田中電気株式会社",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_robot",
-      "05_defense_electronics",
-      "05_unmanned"
+      "06_comm",
+      "06_unmanned"
     ],
     "tags": [
       "Y",
+      "DyTb",
       "Sc"
     ],
     "own": "非上場（証券コードなし）。親会社は公開情報から確認できず。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -6234,17 +6716,17 @@ const SEED = [
     "id": "atla-5030001041556",
     "name": "株式会社アビサル",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_defense_electronics"
+      "06_comm"
     ],
     "tags": [
       "Y",
       "Sc"
     ],
     "own": "非上場。タキオニッシュホールディングス株式会社（非上場）の100%子会社。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -6290,19 +6772,20 @@ const SEED = [
     "id": "atla-1010001058548",
     "name": "緑屋電気株式会社",
     "stages": [
-      5
+      5,
+      6
     ],
     "subs": [
-      "05_rf_sensor",
-      "05_defense_electronics",
-      "05_military_radar"
+      "05_tube",
+      "06_comm"
     ],
     "tags": [
       "Y",
+      "Sm",
       "Sc"
     ],
     "own": "非上場（証券コードなし）。緑屋電気グループの中核会社。公開会社概要では外部親会社の記載なし。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -6361,17 +6844,17 @@ const SEED = [
     "id": "atla-3010403011350",
     "name": "キーサイト・テクノロジー株式会社",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_rf_sensor"
+      "06_rf_sensor"
     ],
     "tags": [
       "Y",
       "Sc"
     ],
     "own": "非上場（証券コードなし）。Keysight Technologies, Inc.（NYSE: KEYS）の100%子会社。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -6419,17 +6902,17 @@ const SEED = [
     "id": "atla-7010001036564",
     "name": "アキラ株式会社",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_defense_electronics"
+      "06_comm"
     ],
     "tags": [
       "Y",
       "Sc"
     ],
     "own": "非上場（証券コードなし）。公開情報上、上場親会社は確認できず。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -6475,17 +6958,17 @@ const SEED = [
     "id": "atla-2020001012577",
     "name": "株式会社江田商会",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_robot"
+      "06_unmanned"
     ],
     "tags": [
       "DyTb",
       "Sm"
     ],
     "own": "非上場（証券コードなし）。公開会社概要上、上場親会社は確認できず。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -6531,16 +7014,17 @@ const SEED = [
     "id": "atla-4020001010554",
     "name": "穂高電子株式会社",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_rf_sensor"
+      "06_rf_sensor"
     ],
     "tags": [
+      "Y",
       "Sc"
     ],
     "own": "非上場（証券コードなし）。公開会社概要上、上場親会社は確認できず。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -6587,16 +7071,17 @@ const SEED = [
     "id": "atla-5010001006123",
     "name": "日京テクノス株式会社",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_rf_sensor"
+      "06_rf_sensor"
     ],
     "tags": [
+      "Y",
       "Sc"
     ],
     "own": "非上場（証券コードなし）。公開会社概要上、上場親会社は確認できず。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -6644,17 +7129,17 @@ const SEED = [
     "id": "atla-5013201004111",
     "name": "東洋エレクトロニクス株式会社",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_defense_electronics"
+      "06_comm"
     ],
     "tags": [
       "Y",
       "Sc"
     ],
     "own": "非上場（証券コードなし）。公開会社概要上、上場親会社は確認できず。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -6701,16 +7186,16 @@ const SEED = [
     "id": "atla-9010401139568",
     "name": "株式会社GTAj",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_laser"
+      "06_laser"
     ],
     "tags": [
       "Y"
     ],
     "own": "非上場（証券コードなし）。英国法人GT Aerospace (Europe) Ltd.が100%保有。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -6756,16 +7241,16 @@ const SEED = [
     "id": "atla-1010601026053",
     "name": "株式会社フォーサイトテクノ",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_laser"
+      "06_laser"
     ],
     "tags": [
       "Y"
     ],
     "own": "非上場（証券コードなし）。丸文株式会社（東証プライム 7537）の連結子会社。株主として丸文株式会社、ミツイワ株式会社を公式掲載。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -6815,14 +7300,14 @@ const SEED = [
       5
     ],
     "subs": [
-      "05_defense_electronics"
+      "05_tube"
     ],
     "tags": [
-      "Y",
+      "Sm",
       "Sc"
     ],
     "own": "非上場（証券コードなし）。日清紡ホールディングス株式会社（東証プライム 3105）の連結子会社。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -6873,14 +7358,14 @@ const SEED = [
       5
     ],
     "subs": [
-      "05_defense_electronics"
+      "05_tube"
     ],
     "tags": [
-      "Y",
+      "Sm",
       "Sc"
     ],
     "own": "非上場（証券コードなし）。キヤノン株式会社（東証プライム 7751）が100%保有。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -6927,16 +7412,17 @@ const SEED = [
     "id": "atla-4010901000754",
     "name": "株式会社アムテックス",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_rf_sensor"
+      "06_rf_sensor"
     ],
     "tags": [
+      "Y",
       "Sc"
     ],
     "own": "非上場（証券コードなし）。公開会社概要上、上場親会社は確認できず。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -6984,14 +7470,14 @@ const SEED = [
       5
     ],
     "subs": [
-      "05_guid"
+      "05_motor"
     ],
     "tags": [
       "DyTb",
       "Sm"
     ],
     "own": "非上場（証券コードなし）。米国Trans Pacific Technologies, Inc.を関連会社として掲載するが、資本関係・親会社該当性は非公表。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -7037,17 +7523,17 @@ const SEED = [
     "id": "atla-8050001016181",
     "name": "ヤトロ電子株式会社",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_robot"
+      "06_unmanned"
     ],
     "tags": [
       "DyTb",
       "Sm"
     ],
     "own": "非上場（証券コードなし）。公開情報上、上場親会社は確認できず。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -7094,16 +7580,17 @@ const SEED = [
     "id": "atla-7010501032617",
     "name": "島津サイエンス東日本株式会社",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_rf_sensor"
+      "06_rf_sensor"
     ],
     "tags": [
+      "Y",
       "Sc"
     ],
     "own": "非上場（証券コードなし）。島津製作所（東証プライム 7701）グループ。2025年4月1日に島津サイエンス西日本を吸収合併し、島津サイエンス株式会社へ商号変更（旧法人名は現存せず）。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -7150,17 +7637,17 @@ const SEED = [
     "id": "atla-2011101072297",
     "name": "東京ロボティクス株式会社",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_robot"
+      "06_unmanned"
     ],
     "tags": [
       "DyTb",
       "Sm"
     ],
     "own": "非上場（証券コードなし）。株式会社安川電機（東証プライム 6506）が100%保有。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -7206,17 +7693,17 @@ const SEED = [
     "id": "atla-9040001015415",
     "name": "株式会社移動ロボット研究所",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_robot"
+      "06_unmanned"
     ],
     "tags": [
       "DyTb",
       "Sm"
     ],
     "own": "非上場（証券コードなし）。公式サイトは富士ソフト株式会社を主要株主と掲載。富士ソフト（旧コード9749）も2025年5月16日に上場廃止済み。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -7263,16 +7750,17 @@ const SEED = [
     "id": "atla-8010001007944",
     "name": "株式会社矢沢科学",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_rf_sensor"
+      "06_rf_sensor"
     ],
     "tags": [
+      "Y",
       "Sc"
     ],
     "own": "非上場（証券コードなし）。公開会社概要上、上場親会社は確認できず。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -7319,17 +7807,17 @@ const SEED = [
     "id": "atla-3310001006466",
     "name": "株式会社西日本流体技研",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_robot"
+      "06_unmanned"
     ],
     "tags": [
       "DyTb",
       "Sm"
     ],
     "own": "非上場（証券コードなし）。公開会社概要上、上場親会社は確認できず。",
-    "pos": "",
+    "pos": "市場シェア・地位は公開情報で未確認",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -7376,10 +7864,10 @@ const SEED = [
     "id": "engine-ihi-aero",
     "name": "IHI（航空・宇宙・防衛事業領域）",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_engine"
+      "06_engine"
     ],
     "tags": [
       "Y"
@@ -7387,110 +7875,626 @@ const SEED = [
     "own": "上場企業 ／ 株式会社IHI（東証プライム、証券コード7013）の事業領域",
     "rev": "航空・宇宙・防衛セグメント 売上収益 6,481億円（2026年3月期、IFRS）",
     "prod": "防衛省向け F110（F-2）・F3（T-4）・F7-10（P-1）・T700（ヘリコプター）エンジン ／ 民間 V2500 ファンモジュール、GEnx 低圧タービン・高圧圧縮機後段、Trent の低圧・中圧タービン部品、PW1100G-JM 複合材ファン部品",
-    "pos": "防衛省向けジェットエンジンの生産と、GE・ロールス・ロイス・P&Wとの民間エンジン国際共同開発を担う。",
+    "pos": "防衛省向けジェットエンジンの生産と、GE・ロールス・ロイス・P&W との民間エンジン国際共同開発を担う。",
     "def": "F-2（F110）、T-4（F3）、P-1（F7-10）、自衛隊ヘリコプター（T700）のエンジンを担当。",
-    "chn": "タービン高温部の遮熱コーティング（TBC）のトップコートは一般にイットリア安定化ジルコニア（YSZ）で、IHIの研究部門も航空エンジン用TBCを報告している。Y原料・溶射材料の調達国は非開示。",
+    "chn": "タービン高温部の遮熱コーティング（TBC）のトップコートは一般にイットリア安定化ジルコニア（YSZ）で、IHI の研究部門も航空エンジン用 TBC を報告している。Y 原料・溶射材料の調達国は非開示。",
     "ev": "A",
     "exc": 0,
     "src": "https://www.ihi.co.jp/products/aeroengine_space_defense/aircraft_engines/ ／ https://limo.media/articles/-/135977 ／ https://www.jstage.jst.go.jp/article/jhts/33/5/33_252/_article/-char/ja/ ／ https://www.ihi.co.jp/technology/techinfo/contents_no/__icsFiles/afieldfile/2023/06/17/b457509c506b91e3c12f83988c9173eb.pdf",
-    "note": "2026-09-17公開情報調査で追加。売上は有価証券報告書を引用した記事の数値。IHIエアロスペースはロケット・宇宙の別会社で、航空エンジンはIHI本体の事業領域が担う。",
+    "note": "売上は有価証券報告書を引用した記事の数値。IHIエアロスペースはロケット・宇宙の別会社で、航空エンジンは本体の事業領域が担う。",
     "atlaProcurement": true
   },
   {
     "id": "engine-khi-aero",
     "name": "川崎重工業（航空宇宙システムカンパニー ジェットエンジン）",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_engine"
+      "06_engine"
     ],
     "tags": [
       "Y"
     ],
     "own": "上場企業 ／ 川崎重工業株式会社（東証プライム、証券コード7012）の社内カンパニー",
     "rev": "連結売上収益 2兆3,112億円（2026年3月期）。ジェットエンジン事業単体の売上は未確認",
-    "prod": "Trent・RB211・V2500・PW4000・CF34の国際共同開発・分担製造、PW1100G-JM部品、航空機用補助動力装置（APU） ／ ヘリコプター用T55・T53・RTM322エンジン",
-    "pos": "大型から小型までの民間エンジンの国際共同事業に参画。PW1100G-JMの部品修理・整備にも参入。",
-    "def": "ヘリコプター用T55・T53ターボシャフトエンジンを製品として掲載。防衛向け型式の納入実績は企業ページでは未確認。",
-    "chn": "エンジン高温部の遮熱コーティングにはYSZを使うのが一般的。担当モジュールは圧縮機が中心で、Y系材料を使う部位の範囲は要確認。原料調達国は非開示。",
+    "prod": "Trent・RB211・V2500・PW4000・CF34 の国際共同開発・分担製造、PW1100G-JM 部品、航空機用補助動力装置（APU） ／ ヘリコプター用 T55・T53・RTM322 エンジン",
+    "pos": "大型から小型までの民間エンジンの国際共同事業に参画。PW1100G-JM の部品修理・整備にも参入。",
+    "def": "ヘリコプター用 T55・T53 ターボシャフトエンジンを製品として掲載。防衛向け型式の納入実績は企業ページでは未確認。",
+    "chn": "エンジン高温部の遮熱コーティングには YSZ を使うのが一般的。担当モジュールは圧縮機が中心で、Y 系材料を使う部位の範囲は要確認。原料調達国は非開示。",
     "ev": "A",
     "exc": 0,
     "src": "https://www.khi.co.jp/mobility/aero/jet_engine/ ／ https://www.khi.co.jp/mobility/aero/jet_engine/trent.html ／ https://www.khi.co.jp/pressrelease/detail/20241120_1.html ／ https://news.yahoo.co.jp/articles/e25df310d74374069db15d3bb89d3b6f88248612",
-    "note": "2026-09-17公開情報調査で追加。",
+    "note": "",
     "atlaProcurement": true
   },
   {
     "id": "engine-mhiael",
     "name": "三菱重工航空エンジン株式会社",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_engine"
+      "06_engine"
     ],
     "tags": [
       "Y"
     ],
     "own": "非上場 ／ 三菱重工業の民間航空エンジン事業会社（グループ会社）",
     "rev": "非開示（三菱重工業に連結）",
-    "prod": "PW1100G-JMの燃焼器部品製造・燃焼器モジュール組立、ディフューザーケース",
-    "pos": "PW1100G-JMで燃焼器5,000台・ディフューザーケース3,000台の量産累計出荷を2022年に達成（長崎工場・小牧北工場）。",
+    "prod": "PW1100G-JM の燃焼器部品製造・燃焼器モジュール組立、ディフューザーケース",
+    "pos": "PW1100G-JM で燃焼器 5,000 台・ディフューザーケース 3,000 台の量産累計出荷を 2022 年に達成（長崎工場・小牧北工場）。",
     "def": "民間航空エンジンが中心。防衛向けの個別実績は未確認。",
-    "chn": "燃焼器ライナーの遮熱コーティングにはYSZを使うのが一般的。コーティング材・原料の調達国は非開示。",
+    "chn": "燃焼器ライナーの遮熱コーティングには YSZ を使うのが一般的。コーティング材・原料の調達国は非開示。",
     "ev": "A",
     "exc": 0,
     "src": "https://www.mhi.com/jp/group/mhiael/news/202212.html ／ https://www.mhi.com/jp/news/1412225609.html",
-    "note": "2026-09-17公開情報調査で追加。",
+    "note": "",
     "atlaProcurement": true
   },
   {
     "id": "engine-mhi-gt",
     "name": "三菱重工業（GTCC・ガスタービン事業）",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_engine"
+      "06_engine"
     ],
     "tags": [
       "Y"
     ],
     "own": "上場企業 ／ 三菱重工業株式会社（東証プライム、証券コード7011）のエナジー事業領域",
-    "rev": "連結売上収益 4兆9,741億円（2026年3月期）。GTCC受注高 2兆6,526億円（同）",
-    "prod": "発電用大型ガスタービン（M501J・JAC形など）、ガスタービン・コンバインドサイクル（GTCC）、動翼・静翼の補修",
-    "pos": "1600℃級J形ガスタービンに先進遮熱コーティングを採用。データセンター向けの電力需要でGTCC受注が過去最高。",
+    "rev": "連結売上収益 4兆9,741億円（2026年3月期）。GTCC 受注高 2兆6,526億円（同）",
+    "prod": "発電用大型ガスタービン（M501J・JAC 形など）、ガスタービン・コンバインドサイクル（GTCC）、動翼・静翼の補修",
+    "pos": "1600℃級 J 形ガスタービンに先進遮熱コーティングを採用。データセンター向けの電力需要で GTCC 受注が過去最高。",
     "def": "発電用が中心。防衛施設・艦艇向けの個別実績は未確認。",
-    "chn": "動翼・静翼の遮熱コーティングは8質量%イットリア部分安定化ジルコニア（YSZ）が従来材で、J形では熱伝導率を下げた先進TBCを開発（三菱重工技報2015）。Y系原料の調達国は非開示。",
+    "chn": "動翼・静翼の遮熱コーティングは 8 質量% イットリア部分安定化ジルコニア（YSZ）が従来材で、J 形では熱伝導率を下げた先進 TBC を開発（三菱重工技報 2015）。Y 系原料の調達国は非開示。",
     "ev": "A",
     "exc": 0,
     "src": "https://power.mhi.com/products/gasturbines ／ https://www.mhi.com/jp/technology/review/sites/g/files/jwhtju2326/files/tr/pdf/524/524005.pdf ／ https://patents.google.com/patent/JP5622399B2/ja ／ https://newswitch.jp/p/48282 ／ https://www.nikkei.com/article/DGXZQOUB043ET0U6A200C2000000/",
-    "note": "2026-09-17公開情報調査で追加。SOFC・SOECは別カード「三菱重工業（エナジードメイン）」。",
+    "note": "SOFC・SOEC は別カード「三菱重工業（エナジードメイン）」。",
     "atlaProcurement": true
   },
   {
     "id": "engine-ihi-power",
     "name": "株式会社IHI原動機",
     "stages": [
-      5
+      6
     ],
     "subs": [
-      "05_engine"
+      "06_engine"
     ],
     "tags": [
       "Y"
     ],
-    "own": "非上場 ／ IHIグループ（株式会社IHIの子会社）",
+    "own": "非上場 ／ IHIグループ（株式会社IHI の子会社）",
     "rev": "約778億円（2024年度）",
-    "prod": "舶用・陸用ガスタービン（LM2500・LM6000など）、ディーゼルエンジン、ガスエンジン、発電装置",
-    "pos": "IHIグループは国内唯一のGE認定LMエンジンLevel4整備工場。舶用ガスタービンを艦艇・高速船に供給。",
-    "def": "IHIは海上自衛隊向けLM2500・LM500の設計・製造・試験と保守を担い、こんごう・むらさめ・たかなみ・あたご・ひゅうが・いずも型護衛艦に採用（GE発表）。",
-    "chn": "ガスタービン高温部の遮熱コーティングにはYSZを使うのが一般的。部品・コーティング材の調達国は非開示。",
+    "prod": "舶用・陸用ガスタービン（LM2500・LM6000 など）、ディーゼルエンジン、ガスエンジン、発電装置",
+    "pos": "IHI グループは国内唯一の GE 認定 LM エンジン Level4 整備工場。舶用ガスタービンを艦艇・高速船に供給。",
+    "def": "IHI は海上自衛隊向け LM2500・LM500 の設計・製造・試験と保守を担い、こんごう・むらさめ・たかなみ・あたご・ひゅうが・いずも型護衛艦に採用（GE 発表）。",
+    "chn": "ガスタービン高温部の遮熱コーティングには YSZ を使うのが一般的。部品・コーティング材の調達国は非開示。",
     "ev": "A",
     "exc": 0,
     "src": "https://job.mynavi.jp/27/pc/search/corp85861/outline.html ／ https://www.ihi.co.jp/ips/products_land/gt_IM_LM/LM2500.html ／ https://www.ge.com/news/press-releases/marine-industrial-engines/ge-lm2500-marine-gas-turbines-power-japanese-js-kaga/jp",
-    "note": "2026-09-17公開情報調査で追加。GEの発表はIHIグループとしての役割で、機種ごとの担当会社（IHI本体とIHI原動機）の切り分けは要確認。",
+    "note": "GE の発表は IHI グループとしての役割で、機種ごとの担当会社（IHI 本体と IHI原動機）の切り分けは要確認。",
     "atlaProcurement": true
+  },
+  {
+    "id": "dielectric-sakai",
+    "name": "堺化学工業",
+    "stages": [
+      4
+    ],
+    "subs": [
+      "04_dielectric"
+    ],
+    "tags": [
+      "Y",
+      "DyTb"
+    ],
+    "own": "上場企業 ／ 堺化学工業株式会社（東証プライム、証券コード4078）",
+    "rev": "連結売上高 201億円（2026年3月期第1四半期、前年同期比 7.9% 減）",
+    "prod": "MLCC 用誘電体（チタン酸バリウム BT シリーズ、チタン酸ジルコン酸バリウム）、高純度炭酸バリウム、チタン酸ストロンチウムなどのペロブスカイト誘電体粉末",
+    "pos": "水熱合成法による超微細・高結晶性のチタン酸バリウムを MLCC 向けに供給。電子材料（誘電体）を成長事業と位置づける。",
+    "def": "MLCC を通じて、防衛・航空宇宙の電子機器全般に間接的につながる（防衛向けの直接納入は未確認）。",
+    "chn": "チタン酸バリウム自体は希土類を含まない。MLCC の誘電体では Dy・Ho・Y などの希土類酸化物を添加するのが一般的で、重希土類（Dy・Tb）の輸入は中国依存が高い。同社の希土類添加品と原料の調達国は非開示。",
+    "ev": "B",
+    "exc": 0,
+    "src": "https://www.sakai-chem.co.jp/jp/products/electronic_materials/ ／ https://www.sakai-chem.co.jp/jp/ir/segment/ ／ https://diamond.jp/zai/articles/-/281277",
+    "note": ""
+  },
+  {
+    "id": "dielectric-kcm",
+    "name": "共立マテリアル",
+    "stages": [
+      4
+    ],
+    "subs": [
+      "04_dielectric"
+    ],
+    "tags": [
+      "Y",
+      "DyTb"
+    ],
+    "own": "非上場 ／ 株式会社ノリタケ（東証プライム、証券コード5331）の完全子会社（2012年〜）",
+    "rev": "非公表（ノリタケに連結）。従業員 連結296名（2026年3月末）",
+    "prod": "MLCC 用微粒子チタン酸バリウム（粒子径 50〜400nm、純度99.8%以上）、大粒径チタン酸カルシウム、陶磁器・ガラス用セラミック原料",
+    "pos": "微粒子・高結晶度のチタン酸バリウムを量産し、MLCC の薄層化・高積層化に対応。",
+    "def": "MLCC を通じて、防衛・航空宇宙の電子機器全般に間接的につながる（防衛向けの直接納入は未確認）。",
+    "chn": "チタン酸バリウム自体は希土類を含まない。MLCC の誘電体では Dy・Ho・Y などの希土類酸化物を添加するのが一般的で、重希土類（Dy・Tb）の輸入は中国依存が高い。同社の希土類添加品と原料の調達国は非開示。",
+    "ev": "B",
+    "exc": 0,
+    "src": "https://www.kyoritsu-kcm.co.jp/products/electronic/electronic_04.php ／ https://www.kyoritsu-kcm.co.jp/company/overview.php ／ https://diamond.jp/zai/articles/-/281277",
+    "note": ""
+  },
+  {
+    "id": "dielectric-fujititan",
+    "name": "富士チタン工業",
+    "stages": [
+      4
+    ],
+    "subs": [
+      "04_dielectric"
+    ],
+    "tags": [
+      "Y",
+      "DyTb"
+    ],
+    "own": "非上場 ／ 石原産業（東証プライム、証券コード4028）の完全子会社",
+    "rev": "非公表（石原産業に連結）",
+    "prod": "MLCC 用チタン酸バリウム、化合繊用酸化チタン、マイクロチタン",
+    "pos": "チタン酸バリウムを村田製作所などの電子部品メーカーに供給。2023年に村田製作所・石原産業と合弁でチタン酸バリウムの新会社（MF マテリアル）を設立。",
+    "def": "MLCC を通じて、防衛・航空宇宙の電子機器全般に間接的につながる（防衛向けの直接納入は未確認）。",
+    "chn": "チタン酸バリウム自体は希土類を含まない。MLCC の誘電体では Dy・Ho・Y などの希土類酸化物を添加するのが一般的で、重希土類（Dy・Tb）の輸入は中国依存が高い。同社の希土類添加品と原料の調達国は非開示。",
+    "ev": "B",
+    "exc": 0,
+    "src": "https://www.fuji-titan.co.jp/ ／ https://corporate.murata.com/-/media/corporate/about/newsroom/news/irnews/irnews/2023/0317/20230317-j.ashx ／ https://diamond.jp/zai/articles/-/281277",
+    "note": ""
+  },
+  {
+    "id": "dielectric-toda",
+    "name": "戸田工業",
+    "stages": [
+      4
+    ],
+    "subs": [
+      "04_dielectric"
+    ],
+    "tags": [
+      "Y",
+      "DyTb"
+    ],
+    "own": "上場企業 ／ 戸田工業株式会社（東証、証券コード4100）",
+    "rev": "連結売上高 約280億円（2026年3月期。2027年3月期の会社予想は290億円、前期比3.4%増）",
+    "prod": "MLCC 用チタン酸バリウム（誘電体層用・電極層向け共材用、粉体・分散体）、高誘電率・高屈折率フィラー、圧電デバイス用材料、酸化鉄など粉体材料",
+    "pos": "湿式合成法による微粒子・粒度分布の狭いチタン酸バリウムを、粉体と分散体（スラリー）の両形態で供給。",
+    "def": "MLCC を通じて、防衛・航空宇宙の電子機器全般に間接的につながる（防衛向けの直接納入は未確認）。",
+    "chn": "チタン酸バリウム自体は希土類を含まない。MLCC の誘電体では Dy・Ho・Y などの希土類酸化物を添加するのが一般的で、重希土類（Dy・Tb）の輸入は中国依存が高い。同社の希土類添加品と原料の調達国は非開示。",
+    "ev": "B",
+    "exc": 0,
+    "src": "https://www.todakogyo.co.jp/product/dielectric.html ／ https://www.todakogyo.co.jp/product/detail/detail126.html ／ https://finance.yahoo.co.jp/quote/4100.T/financials ／ https://diamond.jp/zai/articles/-/281277",
+    "note": ""
+  },
+  {
+    "id": "dielectric-nippon-chem",
+    "name": "日本化学工業",
+    "stages": [
+      4
+    ],
+    "subs": [
+      "04_dielectric"
+    ],
+    "tags": [
+      "Y",
+      "DyTb"
+    ],
+    "own": "上場企業 ／ 日本化学工業株式会社（東証プライム、証券コード4092）",
+    "rev": "連結売上高 401億8,200万円、営業利益 24億1,500万円（2026年3月期）",
+    "prod": "MLCC 用チタン酸バリウム（福島第一工場）、無機化学製品、電子材料",
+    "pos": "2021年4月にチタン酸バリウムの生産設備を完成。2026年8月、AI サーバー向け高性能 MLCC の需要に対応するため、福島第一工場（郡山市）の生産能力を現行比約1.5倍に増強すると発表（2027年度稼働予定）。",
+    "def": "MLCC を通じて、防衛・航空宇宙の電子機器全般に間接的につながる（防衛向けの直接納入は未確認）。",
+    "chn": "チタン酸バリウム自体は希土類を含まない。MLCC の誘電体では Dy・Ho・Y などの希土類酸化物を添加するのが一般的で、重希土類（Dy・Tb）の輸入は中国依存が高い。同社の希土類添加品と原料の調達国は非開示。",
+    "ev": "B",
+    "exc": 0,
+    "src": "https://www.nippon-chem.co.jp/wp-content/uploads/%E3%83%81%E3%82%BF%E3%83%B3%E9%85%B8%E3%83%90%E3%83%AA%E3%82%A6%E3%83%A0%E3%81%AE%E7%94%9F%E7%94%A3%E8%83%BD%E5%8A%9B%E5%A2%97%E5%BC%B7%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6.pdf ／ https://www.projectdesign.jp/articles/news/757bc30b-22fa-4162-8050-7e48eb04990d ／ https://finance.matsui.co.jp/stock/4092/settlement/index ／ https://diamond.jp/zai/articles/-/281277",
+    "note": ""
+  },
+  {
+    "id": "salts-nikki",
+    "name": "ニッキ株式会社",
+    "stages": [
+      2,
+      3
+    ],
+    "subs": [
+      "02_compound",
+      "03_dielectric_additive",
+      "03_yttria_powder"
+    ],
+    "tags": [
+      "Y",
+      "DyTb",
+      "Sm"
+    ],
+    "own": "非上場 ／ 1957年設立（日産稀元素化学株式会社として東京で創立）、資本金3,066万円",
+    "rev": "非公表。従業員 約80名",
+    "prod": "高純度レアアース塩類（酸化物・水酸化物・炭酸塩・硝酸塩・塩化物・酢酸塩・フッ化物・アセチルアセトナート）。Ce・Y・La・Pr・Nd・Sm・Eu・Gd・Dy・Er など",
+    "pos": "埼玉県川口市の高純度レアアース塩類の専門メーカー。川口工場と猿島工場（茨城県坂東市）で製造。",
+    "def": "希土類の酸化物・塩として、セラミックス・電子材料などの下流工程に原料を供給（防衛向けの直接納入は未確認）。",
+    "chn": "希土類原料の調達国は非開示。Dy など重希土類の輸入は中国依存が高い。",
+    "ev": "B",
+    "exc": 0,
+    "src": "https://www.re-nikki.co.jp/company.php ／ https://www.re-nikki.co.jp/products.php",
+    "note": ""
+  },
+  {
+    "id": "semi-tel",
+    "name": "東京エレクトロン",
+    "stages": [
+      6
+    ],
+    "subs": [
+      "06_semi"
+    ],
+    "tags": [
+      "Y"
+    ],
+    "own": "上場企業 ／ 東京エレクトロン株式会社（東証プライム、証券コード8035）",
+    "rev": "連結売上高 2兆4,435億円（2026年3月期）",
+    "prod": "ドライエッチング装置、成膜装置（CVD・ALD）、コータ／デベロッパ、洗浄装置などの半導体製造装置、FPD 製造装置",
+    "pos": "半導体製造装置の世界大手。コータ／デベロッパで世界首位、ドライエッチング装置でも主要企業。",
+    "def": "民生の半導体製造が中心で、防衛向けの直接納入は未確認。国内の半導体製造（経済安全保障）の基盤。",
+    "chn": "エッチング・成膜装置のチャンバー内壁や部品に、Y₂O₃・YF₃ 系の耐プラズマ皮膜・セラミックスを使うのが一般的（トーカロ・AGC・京セラなどが部材を供給）。部材の調達先と原料の調達国は非開示。",
+    "ev": "B",
+    "exc": 0,
+    "src": "https://www.tel.co.jp/product/etch.html ／ https://www.tel.co.jp/ir/irta3a00000006g5-att/fy26q4tanshin-j.pdf",
+    "note": ""
+  },
+  {
+    "id": "semi-hitachi-hightech",
+    "name": "日立ハイテク",
+    "stages": [
+      6
+    ],
+    "subs": [
+      "06_semi"
+    ],
+    "tags": [
+      "Y"
+    ],
+    "own": "非上場 ／ 株式会社日立製作所（東証プライム、証券コード6501）の完全子会社",
+    "rev": "売上収益 6,704億円（2024年3月期、連結）",
+    "prod": "ドライエッチング装置、測長 SEM・検査装置などの半導体製造・計測装置、分析装置",
+    "pos": "ドライエッチング装置と測長 SEM を手がける。2025年3月に笠戸地区でエッチング装置の新製造棟を竣工。",
+    "def": "民生の半導体製造が中心で、防衛向けの直接納入は未確認。国内の半導体製造（経済安全保障）の基盤。",
+    "chn": "エッチング・成膜装置のチャンバー内壁や部品に、Y₂O₃・YF₃ 系の耐プラズマ皮膜・セラミックスを使うのが一般的（トーカロ・AGC・京セラなどが部材を供給）。部材の調達先と原料の調達国は非開示。",
+    "ev": "B",
+    "exc": 0,
+    "src": "https://www.hitachi-hightech.com/us/en/products/semiconductor-manufacturing/dry-etch-systems/ ／ https://www.hitachi.co.jp/New/cnews/month/2025/03/0331a.html ／ https://www.hitachi-hightech.com/global/en/company/financial-info/",
+    "note": ""
+  },
+  {
+    "id": "semi-kokusai",
+    "name": "KOKUSAI ELECTRIC",
+    "stages": [
+      6
+    ],
+    "subs": [
+      "06_semi"
+    ],
+    "tags": [
+      "Y"
+    ],
+    "own": "上場企業 ／ 株式会社KOKUSAI ELECTRIC（東証プライム、証券コード6525）。旧・日立国際電気の半導体製造装置事業で、通信機器の株式会社国際電気とは別会社",
+    "rev": "連結売上収益 2,351億円（2026年3月期、IFRS）",
+    "prod": "バッチ式成膜装置（ALD・CVD）、枚葉式プラズマ処理装置（MARORA：プラズマ窒化・酸化）、トリートメント（膜質改善）装置",
+    "pos": "バッチ成膜装置で世界トップクラスのシェア（同社公表）。3D NAND・DRAM などメモリ向けが中心。",
+    "def": "民生の半導体製造が中心で、防衛向けの直接納入は未確認。国内の半導体製造（経済安全保障）の基盤。",
+    "chn": "枚葉式プラズマ処理装置の処理室部品に Y₂O₃ 系の耐プラズマ部材を使うのが一般的。バッチ式成膜装置の反応管は石英が主。部材の調達先と原料の調達国は非開示。",
+    "ev": "B",
+    "exc": 0,
+    "src": "https://www.kokusai-electric.com/products/single_wafer/marora/ ／ https://www.kokusai-electric.com/company/strength ／ https://www.kokusai-electric.com/latest_report",
+    "note": ""
+  },
+  {
+    "id": "semi-ulvac",
+    "name": "アルバック",
+    "stages": [
+      6
+    ],
+    "subs": [
+      "06_semi"
+    ],
+    "tags": [
+      "Y"
+    ],
+    "own": "上場企業 ／ 株式会社アルバック（東証プライム、証券コード6728）",
+    "rev": "連結売上高 2,691億円（2026年6月期）",
+    "prod": "スパッタリング装置（ENTRON-EXX など）、ドライエッチング装置（NE シリーズ）、PE-CVD 装置、アッシング装置、自然酸化膜除去装置などの半導体製造装置、FPD・電子部品向けの真空装置",
+    "pos": "真空技術を核とする装置大手。半導体向けはスパッタリング装置と自然酸化膜除去装置が主力で、パワーデバイス・MRAM など難エッチング材料向けのエッチング装置も手がける。",
+    "def": "民生の半導体製造が中心で、防衛向けの直接納入は未確認。国内の半導体製造（経済安全保障）の基盤。",
+    "chn": "ドライエッチング装置・PE-CVD 装置のチャンバー部品に Y₂O₃ 系の耐プラズマ皮膜・セラミックスを使うのが一般的。部材の調達先と原料の調達国は非開示。",
+    "ev": "B",
+    "exc": 0,
+    "src": "https://www.ulvac.co.jp/business/semiconductor_production_equipment/ ／ https://www.ulvac.co.jp/special/power-device/ ／ https://ir.ulvac.co.jp/ja/ir/newsrelease.html",
+    "note": ""
+  },
+  {
+    "id": "semi-canon-anelva",
+    "name": "キヤノンアネルバ",
+    "stages": [
+      6
+    ],
+    "subs": [
+      "06_semi"
+    ],
+    "tags": [
+      "Y"
+    ],
+    "own": "非上場 ／ キヤノン株式会社（東証プライム、証券コード7751）の完全子会社",
+    "rev": "売上高 417億円（2025年12月期）",
+    "prod": "スパッタリング装置（メモリ配線用 IC7500 など）、ドライエッチング装置（MRAM 向けイオンビームエッチングなど）、原子拡散接合装置、真空計などの真空コンポーネント",
+    "pos": "スパッタリング装置を主力とする真空装置メーカー。MRAM・DRAM、イメージセンサー、パワー・高周波デバイス、HDD 向けに装置を納める。",
+    "def": "民生の半導体製造が中心で、防衛向けの直接納入は未確認。国内の半導体製造（経済安全保障）の基盤。",
+    "chn": "エッチング装置のチャンバー部品に Y₂O₃ 系の耐プラズマ部材を使うのが一般的。スパッタリング装置での使用範囲は非開示。部材の調達先と原料の調達国は非開示。",
+    "ev": "B",
+    "exc": 0,
+    "src": "https://anelva.canon/business/equipment/ ／ https://anelva.canon/corporate/company/overview.html",
+    "note": ""
+  },
+  {
+    "id": "semi-shibaura",
+    "name": "芝浦メカトロニクス",
+    "stages": [
+      6
+    ],
+    "subs": [
+      "06_semi"
+    ],
+    "tags": [
+      "Y"
+    ],
+    "own": "上場企業 ／ 芝浦メカトロニクス株式会社（東証プライム、証券コード6590）",
+    "rev": "連結売上高 880億円（2026年3月期）",
+    "prod": "フォトマスク用ドライエッチング装置（ARES）、ケミカルドライエッチング装置（CDE）、低温アッシング装置（ICE）、半導体用スパッタリング装置、洗浄装置、後工程のボンダ",
+    "pos": "枚葉式の洗浄装置が主力。フォトマスク用ドライエッチング装置 ARES を東芝と共同開発した（2006年〜）。",
+    "def": "民生の半導体製造が中心で、防衛向けの直接納入は未確認。国内の半導体製造（経済安全保障）の基盤。",
+    "chn": "ドライエッチング・アッシング装置のチャンバー部品に Y₂O₃ 系の耐プラズマ部材を使うのが一般的。部材の調達先と原料の調達国は非開示。",
+    "ev": "B",
+    "exc": 0,
+    "src": "https://www.shibaura.co.jp/products/semicon/ ／ https://www.global.toshiba/content/dam/toshiba/migration/corp/techReviewAssets/tech/review/2012/04/67_04pdf/a07.pdf ／ https://www.shibaura.co.jp/ir/data/tanshin.html",
+    "note": ""
+  },
+  {
+    "id": "semi-samco",
+    "name": "サムコ",
+    "stages": [
+      6
+    ],
+    "subs": [
+      "06_semi"
+    ],
+    "tags": [
+      "Y"
+    ],
+    "own": "上場企業 ／ サムコ株式会社（東証プライム、証券コード6387）",
+    "rev": "売上高 108億円（2026年7月期、非連結）",
+    "prod": "ICP エッチング装置、シリコン深掘りエッチング装置、RIE 装置、プラズマ CVD 装置、ALD 装置、プラズマクリーナー",
+    "pos": "化合物半導体（GaN・GaAs・InP など）と電子部品向けのプラズマ装置が主力。2026年7月期は化合物半導体分野が売上の約4割、エッチング装置が約65%。",
+    "def": "民生の半導体製造が中心。GaN など化合物半導体の加工装置を手がけるが、防衛向けデバイスの製造ラインへの納入は未確認。",
+    "chn": "エッチング装置・プラズマ CVD 装置のチャンバー部品に Y₂O₃ 系の耐プラズマ部材を使うのが一般的。部材の調達先と原料の調達国は非開示。",
+    "ev": "B",
+    "exc": 0,
+    "src": "https://www.samco.co.jp/products/etching/icp/ ／ https://www.samco.co.jp/products/cvd/plasmacvd/ ／ https://www.zaikei.co.jp/article/20260915/870021.html",
+    "note": ""
+  },
+  {
+    "id": "semi-panasonic-connect",
+    "name": "パナソニック コネクト",
+    "stages": [
+      6
+    ],
+    "subs": [
+      "06_semi"
+    ],
+    "tags": [
+      "Y"
+    ],
+    "own": "非上場 ／ パナソニック ホールディングス株式会社（東証プライム、証券コード6752）の完全子会社",
+    "rev": "コネクト・セグメント売上高 1兆3,803億円（2026年3月期、パナソニック HD の開示）",
+    "prod": "ドライエッチング装置（APX300）、プラズマダイサー（APX300-DM・PD）、プラズマクリーナー、電子部品実装機",
+    "pos": "電子部品実装機の大手。ドライエッチング装置は LED・化合物半導体・パワー・高周波・MEMS 向けで、プラズマダイサーで後工程にも広げている。",
+    "def": "民生の半導体製造が中心で、防衛向けの直接納入は未確認。国内の半導体製造（経済安全保障）の基盤。",
+    "chn": "ドライエッチング装置・プラズマダイサーのチャンバー部品に Y₂O₃ 系の耐プラズマ部材を使うのが一般的。部材の調達先と原料の調達国は非開示。",
+    "ev": "B",
+    "exc": 0,
+    "src": "https://connect.panasonic.com/jp-ja/products-services_fa/solutions/device-related/dry-etcher ／ https://connect.panasonic.com/jp-ja/products-services_fa_concept_plazma-dicer ／ https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20260512/20260512524367.pdf",
+    "note": ""
+  },
+  {
+    "id": "ods-kobelco-kaken",
+    "name": "コベルコ科研",
+    "stages": [
+      4
+    ],
+    "subs": [
+      "04_ods"
+    ],
+    "tags": [
+      "Y"
+    ],
+    "own": "非上場 ／ 神戸製鋼所（東証プライム、証券コード5406）のグループ会社",
+    "rev": "非公表",
+    "prod": "ODS 鋼（マルテンサイト系・フェライト系）・Ni 基 ODS 合金の試作・小規模量産（メカニカルアロイング、1〜10kg 規模）、材料試験・分析",
+    "pos": "メカニカルアロイングによる ODS 合金を試作。京都大学などと次世代原子炉用のスーパー ODS 鋼を共同開発。",
+    "def": "高速炉・事故耐性燃料向けの被覆管材料の開発に参加（防衛向けの直接納入は未確認）。",
+    "chn": "ODS 鋼の分散粒子に Y₂O₃（0.35 質量% 程度）を使う。Y₂O₃ の調達国は非開示。",
+    "ev": "B",
+    "exc": 0,
+    "src": "https://www.kobelcokaken.co.jp/target/special.html ／ https://www.kyoto-u.ac.jp/ja/archive/prev/news_data/h/h1/news6/2008/080929_1 ／ https://www.nsystemkoubo.jp/result/h22/o06.html",
+    "note": ""
+  },
+  {
+    "id": "cladding-hitachi-ge",
+    "name": "日立GEニュークリア・エナジー",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_cladding"
+    ],
+    "tags": [
+      "Y"
+    ],
+    "own": "非上場 ／ 日立製作所（東証プライム、証券コード6501）の連結子会社（GE との合弁）",
+    "rev": "非公表",
+    "prod": "原子力発電プラント（ABWR など）の設計・建設・保守、燃料・炉心開発（FeCrAl-ODS 被覆管・SiC 被覆管）",
+    "pos": "国内の BWR プラントメーカー。GNF-J・日本核燃料開発と FeCrAl-ODS 被覆管を開発し、2030 年代の実用化を目指す。",
+    "def": "原子力発電所の建設・保守（防衛向けの直接納入は未確認）。",
+    "chn": "FeCrAl-ODS 被覆管は Y₂O₃ を約 0.5 質量% 分散させる（12Cr-6Al-0.5Ti-0.4Zr-0.5Y₂O₃）。Y₂O₃ の調達国は非開示。",
+    "ev": "B",
+    "exc": 0,
+    "src": "https://www.jstage.jst.go.jp/article/jaesjb/66/9/66_453/_pdf ／ https://www.hitachi-hgne.co.jp/2025HGNE_aesj.pdf",
+    "note": ""
+  },
+  {
+    "id": "plasma-toto",
+    "name": "TOTO",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_plasma_parts"
+    ],
+    "tags": [
+      "Y"
+    ],
+    "own": "上場企業 ／ TOTO株式会社（東証プライム、証券コード5332）",
+    "rev": "連結売上高 7,374億円、うち新領域事業（セラミック）674億円（2026年3月期）",
+    "prod": "半導体製造装置用の AD 部材（エアロゾルデポジション法のイットリア膜をチャンバー内部材にコーティング）、静電チャック、衛生陶器・住宅設備",
+    "pos": "AD 法（室温でセラミック微粒子を吹き付けて緻密な膜をつくる方法）を実用化。2026年3月期は静電チャック・AD 部材の販売増でセラミック事業が34%増収。",
+    "def": "民生の半導体製造装置向けが中心で、防衛向けの直接納入は未確認。",
+    "chn": "AD 膜の原料はイットリア（Y₂O₃）微粒子。原料の調達先・調達国は非開示。",
+    "ev": "B",
+    "exc": 0,
+    "src": "https://jp.toto.com/products/ceramics/ad/ ／ https://jp.toto.com/company/press/2026_04_30/ ／ https://www.fse.or.jp/files/lis_tkj/26043053327.pdf",
+    "note": ""
+  },
+  {
+    "id": "plasma-ntk-ceratec",
+    "name": "NTKセラテック",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_plasma_parts"
+    ],
+    "tags": [
+      "Y"
+    ],
+    "own": "非上場 ／ 日本特殊陶業株式会社（東証プライム、証券コード5334）の子会社",
+    "rev": "売上高 515億円（2026年3月期）",
+    "prod": "半導体・液晶製造装置用のファインセラミックス部品（真空チャック、静電チャック・ヒーター）、セラミックス溶射（Y₂O₃・Al₂O₃。エッチャー・CVD 装置のチャンバー内部材）",
+    "pos": "半導体製造装置向けのセラミックス部品を手がけ、宮城県富谷市に新工場を建設している。",
+    "def": "民生の半導体製造装置向けが中心で、防衛向けの直接納入は未確認。",
+    "chn": "Y₂O₃ 溶射材料の調達先と原料の調達国は非開示。",
+    "ev": "B",
+    "exc": 0,
+    "src": "https://www.ceratech.co.jp/product/coating/plasma_coating/ ／ https://www.ceratech.co.jp/company/outline/",
+    "note": ""
+  },
+  {
+    "id": "plasma-coorstek",
+    "name": "クアーズテック",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_plasma_parts"
+    ],
+    "tags": [
+      "Y"
+    ],
+    "own": "非上場 ／ 米 CoorsTek, Inc. の日本法人（クアーズテック合同会社。旧・東芝セラミックス）",
+    "rev": "非開示",
+    "prod": "半導体製造装置用の石英ガラス・炭化ケイ素・ファインセラミックス部品。プラズマエッチング装置用のイットリア部材・イットリアコーティング（Exyria）",
+    "pos": "旧・東芝セラミックス（コバレントマテリアル）。国内に秦野・刈谷・長崎・小国などの事業所を持つ。",
+    "def": "民生の半導体製造装置向けが中心で、防衛向けの直接納入は未確認。",
+    "chn": "イットリア部材を国内拠点で製造しているかは未確認。原料の調達国は非開示。",
+    "ev": "B",
+    "exc": 0,
+    "src": "https://www.coorstek.com/en/industries/semiconductor/etch/ ／ https://www.coorstek.com/jp/",
+    "note": ""
+  },
+  {
+    "id": "plasma-nishimura",
+    "name": "西村陶業",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_plasma_parts"
+    ],
+    "tags": [
+      "Y"
+    ],
+    "own": "非上場 ／ 西村陶業株式会社（京都市山科区、1918年創業、資本金6,000万円）",
+    "rev": "非開示",
+    "prod": "工業用セラミックス。イットリア（純度99.9%以上）のリング・角板・パイプ・キャップ・ガスノズルなどの半導体装置用部品",
+    "pos": "市場シェア・地位は公開情報で未確認",
+    "def": "民生の半導体製造装置向けが中心で、防衛向けの直接納入は未確認。",
+    "chn": "イットリア原料の調達先と調達国は非開示。",
+    "ev": "B",
+    "exc": 0,
+    "src": "https://nishimuratougyou.co.jp/material/material03 ／ https://nishimuratougyou.co.jp/company/company2",
+    "note": ""
+  },
+  {
+    "id": "plasma-tsubasa",
+    "name": "つばさ真空理研",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_plasma_parts"
+    ],
+    "tags": [
+      "Y"
+    ],
+    "own": "非上場 ／ つばさ真空理研株式会社（神奈川県藤沢市、2019年設立、資本金6,000万円）",
+    "rev": "非開示",
+    "prod": "イオンアシスト蒸着（IAD）による Y₂O₃・YOF（Y₅O₄F₇）・YAG 膜の受託成膜。ドライエッチング・プラズマ CVD 装置の内部部品（石英・アルミナ・アルミ）の保護膜",
+    "pos": "市場シェア・地位は公開情報で未確認",
+    "def": "民生の半導体製造装置向けが中心で、防衛向けの直接納入は未確認。",
+    "chn": "成膜原料の調達先と原料の調達国は非開示。",
+    "ev": "B",
+    "exc": 0,
+    "src": "https://tsubasa-sci.co.jp/tech-intro.html ／ https://tsubasa-sci.co.jp/company.html",
+    "note": ""
+  },
+  {
+    "id": "plasma-soc",
+    "name": "住友大阪セメント",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_plasma_parts"
+    ],
+    "tags": [
+      "Y"
+    ],
+    "own": "上場企業 ／ 住友大阪セメント株式会社（東証プライム、証券コード5232）",
+    "rev": "連結売上高 2,237億円（2026年3月期）",
+    "prod": "セメント、半導体製造装置用の静電チャック（SiC ナノ複合セラミックス）、光通信部品。研究開発品として半導体製造装置向けの導電性イットリア",
+    "pos": "エッチング装置向け静電チャックの新製造棟を竣工し、生産能力を約2倍にした。",
+    "def": "民生の半導体製造装置向けが中心で、防衛向けの直接納入は未確認。",
+    "chn": "導電性イットリアは研究開発段階。原料の調達国は非開示。",
+    "ev": "B",
+    "exc": 0,
+    "src": "https://www.soc.co.jp/service/development/technology/technology02/ceramics/ ／ https://www.soc.co.jp/news/87192/ ／ https://www.soc.co.jp/sys/wp-content/uploads/2026/05/4cb6c30e2ee6356eaa2d824f4c1e223e.pdf",
+    "note": ""
   }
 ];
 
@@ -7904,7 +8908,7 @@ export default function RareEarthDDExplorer() {
                     ["市場地位", selectedCompany.pos],
                     ["航空・宇宙・防衛", selectedCompany.def],
                     ["防衛装備庁調達実績", selectedCompany.atlaProcurement ? "防衛装備庁調達実績あり" : ""],
-                    ["工程5判定（調達品目基準）", selectedCompany.atla?.decision],
+                    ["調達品目判定（人力確認）", selectedCompany.atla?.decision],
                     ["希土類判定（調達品目基準）", selectedCompany.atla?.rareEarthFlags],
                     ["中国依存・DD", selectedCompany.chn],
                     ["BOM根拠", selectedCompany.bom],

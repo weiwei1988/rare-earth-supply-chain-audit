@@ -1,0 +1,59 @@
+{
+  "2": [
+    "02_compound",
+    "02_metal",
+    "02_recycle"
+  ],
+  "3": [
+    "03_magnet_alloy",
+    "03_magnet_powder",
+    "03_light_alloy",
+    "03_ceramic",
+    "03_yttria_powder",
+    "03_yag_crystal",
+    "03_alsc_semi",
+    "03_sam_crystal",
+    "03_dielectric_additive"
+  ],
+  "4": [
+    "04_mag",
+    "04_am_feedstock",
+    "04_tbc_spray",
+    "04_elec",
+    "04_media",
+    "04_plasma_spray",
+    "04_ods",
+    "04_laser_medium",
+    "04_target",
+    "04_sc_crystal",
+    "04_dielectric"
+  ],
+  "5": [
+    "05_motor",
+    "05_tube",
+    "05_am",
+    "05_tbc",
+    "05_sofc",
+    "05_plasma_parts",
+    "05_cladding",
+    "05_laser_osc",
+    "05_scaln_film",
+    "05_electronics"
+  ],
+  "6": [
+    "06_aircraft",
+    "06_guidance",
+    "06_unmanned",
+    "06_naval",
+    "06_launch",
+    "06_space",
+    "06_engine",
+    "06_energy",
+    "06_semi",
+    "06_nuclear",
+    "06_laser",
+    "06_radar",
+    "06_comm",
+    "06_rf_sensor"
+  ]
+}

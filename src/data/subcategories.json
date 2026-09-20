@@ -2,22 +2,23 @@
   {
     "id": "02_compound",
     "stage": 2,
-    "label": "高純度酸化物・化合物",
-    "header": "02 高純度酸化物・化合物",
-    "description": "Y₂O₃・YF₃・Sc₂O₃などの高純度化合物",
+    "label": "希土類酸化物・塩・化合物",
+    "header": "02 希土類酸化物・塩・化合物",
+    "description": "Y₂O₃・Sc₂O₃、硝酸塩・フッ化物ほか",
     "els": [
       "Y",
       "DyTb",
       "Sm",
       "Sc"
-    ]
+    ],
+    "note": "国内では鉱石からの分離は行われず、輸入した化合物の高純度化と、酸化物・硝酸塩・塩化物・フッ化物などへの形態変換が中心。住友金属鉱山の Sc₂O₃ はフィリピン産中間体を原料とする非中国の供給源。"
   },
   {
     "id": "02_metal",
     "stage": 2,
-    "label": "金属化・還元／一次金属",
-    "header": "02 金属化・還元／一次金属",
-    "description": "酸化物・フッ化物を希土類金属へ還元",
+    "label": "希土類金属（還元）",
+    "header": "02 希土類金属（還元）",
+    "description": "酸化物・フッ化物を金属に",
     "els": [
       "DyTb",
       "Sm",
@@ -27,290 +28,715 @@
   {
     "id": "02_recycle",
     "stage": 2,
-    "label": "回収・再精製",
-    "header": "02 回収・再精製",
-    "description": "工程くず・使用済み磁石から希土類を回収",
+    "label": "再資源化",
+    "header": "02 再資源化",
+    "description": "工程くず・使用済み磁石から回収",
     "els": [
       "Y",
       "DyTb",
-      "Sm",
-      "Sc"
+      "Sm"
     ]
   },
   {
-    "id": "02_trade",
-    "stage": 2,
-    "label": "原料輸入・販売・品質保証",
-    "header": "02 原料輸入・販売・品質保証",
-    "description": "輸入・在庫・原産地証明と品質保証",
-    "els": [
-      "Y",
-      "DyTb",
-      "Sm",
-      "Sc"
-    ]
-  },
-  {
-    "id": "03_ceramic",
+    "id": "03_magnet_alloy",
     "stage": 3,
-    "label": "高機能粉末（YSZ・ScSZ）",
-    "header": "03 高機能粉末（YSZ・ScSZ）",
-    "description": "耐熱・電解質用途のYSZ・ScSZ粉末",
+    "label": "磁石合金",
+    "header": "03 磁石合金",
+    "description": "NdFeB・SmCo 用の合金",
     "els": [
-      "Y",
-      "Sc"
+      "DyTb",
+      "Sm"
     ],
     "src": [
+      "02_metal",
       "02_compound",
-      "02_recycle",
-      "02_trade"
-    ]
+      "02_recycle"
+    ],
+    "srcEls": {
+      "02_metal": [
+        "DyTb",
+        "Sm"
+      ],
+      "02_compound": [
+        "DyTb"
+      ],
+      "02_recycle": [
+        "DyTb",
+        "Sm"
+      ]
+    },
+    "srcNotes": {
+      "02_metal": "金属を溶解して NdFeB・SmCo 合金に",
+      "02_compound": "Dy・Tb の酸化物・フッ化物を磁石合金・粒界拡散材の原料に",
+      "02_recycle": "工程くず・使用済み磁石を合金原料に戻す"
+    }
   },
   {
-    "id": "03_magnet",
+    "id": "03_magnet_powder",
     "stage": 3,
-    "label": "磁石合金・磁粉・コンパウンド",
-    "header": "03 磁石合金・磁粉・コンパウンド",
-    "description": "NdFeB・SmCo用の合金・磁粉・コンパウンド",
+    "label": "磁粉・コンパウンド",
+    "header": "03 磁粉・コンパウンド",
+    "description": "ボンド磁石用（NdFeB・SmFeN）",
     "els": [
       "DyTb",
       "Sm"
     ],
     "src": [
       "02_compound",
-      "02_metal",
-      "02_recycle",
-      "02_trade"
-    ]
+      "02_metal"
+    ],
+    "srcEls": {
+      "02_compound": [
+        "Sm"
+      ],
+      "02_metal": [
+        "DyTb",
+        "Sm"
+      ]
+    },
+    "srcNotes": {
+      "02_compound": "Sm 化合物を原料に SmFeN 磁粉を製造",
+      "02_metal": "希土類金属を溶解・急冷してボンド磁石用の磁粉に"
+    }
   },
   {
     "id": "03_light_alloy",
     "stage": 3,
-    "label": "Al-Sc母合金（構造材・半導体）",
-    "header": "03 Al-Sc母合金（構造材・半導体）",
-    "description": "航空・半導体向け低濃度Al–Sc母合金",
+    "label": "Al–Sc 母合金（構造材）",
+    "header": "03 Al–Sc 母合金（構造材）",
+    "description": "輸送機器・AM 向けアルミ合金",
     "els": [
       "Sc"
     ],
     "src": [
-      "02_compound",
-      "02_metal",
-      "02_recycle",
-      "02_trade"
-    ]
-  },
-  {
-    "id": "03_am_feedstock",
-    "stage": 3,
-    "label": "金属AM・結合用原料",
-    "header": "03 金属AM・結合用原料",
-    "description": "Sc含有のAM粉末・ワイヤ・接合原料",
-    "els": [
-      "Sc"
+      "02_compound"
     ],
-    "src": [
-      "02_metal",
-      "02_trade"
-    ]
+    "srcEls": {
+      "02_compound": [
+        "Sc"
+      ]
+    },
+    "srcNotes": {
+      "02_compound": "Sc₂O₃ をアルミ中で還元して構造用の母合金に"
+    }
   },
   {
-    "id": "03_precursor",
+    "id": "03_ceramic",
     "stage": 3,
-    "label": "結晶（YAG・SAM）・セラミックス・前駆体",
-    "header": "03 結晶（YAG・SAM）・セラミックス・前駆体",
-    "description": "YAG・SAM結晶とセラミックス前駆体",
+    "label": "安定化ジルコニア粉末",
+    "header": "03 安定化ジルコニア粉末",
+    "description": "YSZ・ScSZ 粉末",
     "els": [
       "Y",
       "Sc"
     ],
     "src": [
+      "02_compound"
+    ],
+    "srcEls": {
+      "02_compound": [
+        "Y",
+        "Sc"
+      ]
+    },
+    "srcNotes": {
+      "02_compound": "Y₂O₃・Sc₂O₃ をジルコニアの安定化剤に"
+    }
+  },
+  {
+    "id": "03_yttria_powder",
+    "stage": 3,
+    "label": "高純度 Y₂O₃・YF₃ 粉末",
+    "header": "03 高純度 Y₂O₃・YF₃ 粉末",
+    "description": "焼結・溶射・ODS 用の微粉",
+    "els": [
+      "Y"
+    ],
+    "src": [
+      "02_recycle",
+      "02_compound"
+    ],
+    "srcEls": {
+      "02_recycle": [
+        "Y"
+      ],
+      "02_compound": [
+        "Y"
+      ]
+    },
+    "srcNotes": {
+      "02_recycle": "回収した Y を高純度 Y₂O₃ の原料に",
+      "02_compound": "分離精製した Y₂O₃ を高純度の微粉に整え、YF₃・YOF（オキシフッ化物）に加工"
+    }
+  },
+  {
+    "id": "03_yag_crystal",
+    "stage": 3,
+    "label": "Y 系単結晶・透明セラミックス",
+    "header": "03 Y 系単結晶・透明セラミックス",
+    "description": "YAG・Y₂O₃・TGG",
+    "els": [
+      "Y",
+      "DyTb"
+    ],
+    "src": [
+      "02_compound"
+    ],
+    "srcEls": {
+      "02_compound": [
+        "Y",
+        "DyTb"
+      ]
+    },
+    "srcNotes": {
+      "02_compound": "高純度 Y₂O₃・Tb₄O₇ を結晶育成・焼結の原料に"
+    }
+  },
+  {
+    "id": "03_alsc_semi",
+    "stage": 3,
+    "label": "Al–Sc 合金（半導体用途）",
+    "header": "03 Al–Sc 合金（半導体用途）",
+    "description": "ターゲット用の低酸素 Al–Sc 合金",
+    "els": [
+      "Sc"
+    ],
+    "src": [
       "02_compound",
-      "02_trade"
-    ]
+      "02_metal"
+    ],
+    "srcEls": {
+      "02_compound": [
+        "Sc"
+      ],
+      "02_metal": [
+        "Sc"
+      ]
+    },
+    "srcNotes": {
+      "02_compound": "Sc₂O₃ をアルミ中で還元して半導体用の Al–Sc 合金に",
+      "02_metal": "Sc 金属をアルミと溶解・合金化"
+    }
   },
   {
-    "id": "04_opt",
+    "id": "03_sam_crystal",
+    "stage": 3,
+    "label": "SAM 単結晶",
+    "header": "03 SAM 単結晶",
+    "description": "ScAlMgO₄ 結晶育成",
+    "els": [
+      "Sc"
+    ],
+    "src": [
+      "02_compound"
+    ],
+    "srcEls": {
+      "02_compound": [
+        "Sc"
+      ]
+    },
+    "srcNotes": {
+      "02_compound": "Sc₂O₃ を SAM 結晶の原料に"
+    }
+  },
+  {
+    "id": "03_dielectric_additive",
+    "stage": 3,
+    "label": "誘電体用希土類添加剤",
+    "header": "03 誘電体用希土類添加剤",
+    "description": "MLCC 用の希土類微粉・塩・溶液",
+    "els": [
+      "Y",
+      "DyTb"
+    ],
+    "src": [
+      "02_compound"
+    ],
+    "srcEls": {
+      "02_compound": [
+        "Y",
+        "DyTb"
+      ]
+    },
+    "srcNotes": {
+      "02_compound": "分離精製した Dy₂O₃・Tb₄O₇・Y₂O₃ を、粒径を整えた微粉や硝酸塩などの塩・溶液に加工"
+    },
+    "note": "分離精製した酸化物を、誘電体への配合に合わせて粒径を整えた微粉や、硝酸塩・酢酸塩などの塩・溶液に加工したもの。チタン酸バリウムへ副成分として混合、または粒子表面の被覆に使う。"
+  },
+  {
+    "id": "04_mag",
     "stage": 4,
-    "label": "固体レーザー発振器（YAG）",
-    "header": "04 固体レーザー発振器（YAG）",
-    "description": "Nd:YAG・Yb:YAGなどの固体レーザー光源",
+    "label": "永久磁石",
+    "header": "04 永久磁石",
+    "description": "焼結 NdFeB・SmCo・ボンド",
+    "els": [
+      "DyTb",
+      "Sm"
+    ],
+    "src": [
+      "03_magnet_alloy",
+      "03_magnet_powder"
+    ],
+    "srcEls": {
+      "03_magnet_alloy": [
+        "DyTb",
+        "Sm"
+      ],
+      "03_magnet_powder": [
+        "DyTb",
+        "Sm"
+      ]
+    },
+    "srcNotes": {
+      "03_magnet_alloy": "合金を粉砕・成形・焼結して磁石に",
+      "03_magnet_powder": "磁粉を樹脂で固めてボンド磁石に"
+    },
+    "note": "国内製造に加え、中国製磁石を輸入して加工・販売する商流がある。"
+  },
+  {
+    "id": "04_am_feedstock",
+    "stage": 4,
+    "label": "AM 用粉末・ワイヤ",
+    "header": "04 AM 用粉末・ワイヤ",
+    "description": "Scalmalloy・WAAM ワイヤ",
+    "els": [
+      "Sc"
+    ],
+    "src": [
+      "03_light_alloy"
+    ],
+    "srcEls": {
+      "03_light_alloy": [
+        "Sc"
+      ]
+    },
+    "srcNotes": {
+      "03_light_alloy": "母合金を粉末・ワイヤに加工"
+    }
+  },
+  {
+    "id": "04_tbc_spray",
+    "stage": 4,
+    "label": "遮熱用溶射材料",
+    "header": "04 遮熱用溶射材料",
+    "description": "YSZ 溶射粉末",
     "els": [
       "Y"
     ],
     "src": [
-      "03_precursor"
-    ]
-  },
-  {
-    "id": "04_coat",
-    "stage": 4,
-    "label": "耐熱（TBC）／耐プラズマコーティング",
-    "header": "04 耐熱（TBC）／耐プラズマコーティング",
-    "description": "航空高温部TBC・半導体耐プラズマ膜",
-    "els": [
-      "Y"
+      "03_ceramic"
     ],
-    "src": [
-      "03_ceramic",
-      "03_precursor"
-    ]
+    "srcEls": {
+      "03_ceramic": [
+        "Y"
+      ]
+    },
+    "srcNotes": {
+      "03_ceramic": "YSZ を遮熱皮膜用の溶射粉末に造粒"
+    }
   },
   {
     "id": "04_elec",
     "stage": 4,
-    "label": "電解質・センサ基板",
-    "header": "04 電解質・センサ基板",
-    "description": "YSZ・ScSZ電解質と高温センサ基板",
+    "label": "固体電解質・基板",
+    "header": "04 固体電解質・基板",
+    "description": "YSZ・ScSZ シート・センサ基板",
     "els": [
       "Y",
       "Sc"
     ],
     "src": [
       "03_ceramic"
-    ]
+    ],
+    "srcEls": {
+      "03_ceramic": [
+        "Y",
+        "Sc"
+      ]
+    },
+    "srcNotes": {
+      "03_ceramic": "YSZ・ScSZ をシート・基板に焼結"
+    }
   },
   {
-    "id": "04_mag",
+    "id": "04_media",
     "stage": 4,
-    "label": "磁石（焼結・ボンド）",
-    "header": "04 磁石（焼結・ボンド）",
-    "description": "NdFeB・SmCoの焼結／ボンド磁石",
+    "label": "粉砕・分散メディア",
+    "header": "04 粉砕・分散メディア",
+    "description": "YSZ ボール（製造工程材）",
+    "els": [
+      "Y"
+    ],
+    "src": [
+      "03_ceramic"
+    ],
+    "srcEls": {
+      "03_ceramic": [
+        "Y"
+      ]
+    },
+    "srcNotes": {
+      "03_ceramic": "YSZ をボール・ビーズに焼結"
+    }
+  },
+  {
+    "id": "04_plasma_spray",
+    "stage": 4,
+    "label": "耐プラズマ用溶射材料",
+    "header": "04 耐プラズマ用溶射材料",
+    "description": "Y₂O₃・YF₃・YOF 溶射顆粒",
+    "els": [
+      "Y"
+    ],
+    "src": [
+      "03_yttria_powder"
+    ],
+    "srcEls": {
+      "03_yttria_powder": [
+        "Y"
+      ]
+    },
+    "srcNotes": {
+      "03_yttria_powder": "Y₂O₃・YF₃・YOF を溶射用の顆粒に造粒"
+    }
+  },
+  {
+    "id": "04_ods",
+    "stage": 4,
+    "label": "ODS 合金（Y₂O₃ 分散強化）",
+    "header": "04 ODS 合金（Y₂O₃ 分散強化）",
+    "description": "Y₂O₃ を分散させた合金素材",
+    "els": [
+      "Y"
+    ],
+    "src": [
+      "03_yttria_powder"
+    ],
+    "srcEls": {
+      "03_yttria_powder": [
+        "Y"
+      ]
+    },
+    "srcNotes": {
+      "03_yttria_powder": "Y₂O₃ 微粉を分散粒子として合金粉末に混ぜ込む"
+    },
+    "note": "Fe–Cr（–Al）合金粉末に Y₂O₃ 微粒子（0.35〜0.5 質量%）を機械的に混ぜ込み（メカニカルアロイング）、熱間押出で素材にする。高速炉（9Cr-ODS）と軽水炉の事故耐性燃料（FeCrAl-ODS）の被覆管向けに開発中。"
+  },
+  {
+    "id": "04_laser_medium",
+    "stage": 4,
+    "label": "レーザー媒質",
+    "header": "04 レーザー媒質",
+    "description": "ロッド・スラブ・ファラデー素子",
+    "els": [
+      "Y",
+      "DyTb"
+    ],
+    "src": [
+      "03_yag_crystal"
+    ],
+    "srcEls": {
+      "03_yag_crystal": [
+        "Y",
+        "DyTb"
+      ]
+    },
+    "srcNotes": {
+      "03_yag_crystal": "結晶・セラミックスを切り出し・研磨してロッド・スラブ・ファラデー回転子に"
+    }
+  },
+  {
+    "id": "04_target",
+    "stage": 4,
+    "label": "スパッタリングターゲット",
+    "header": "04 スパッタリングターゲット",
+    "description": "Al–Sc スパッタリングターゲット",
+    "els": [
+      "Sc"
+    ],
+    "src": [
+      "03_alsc_semi"
+    ],
+    "srcEls": {
+      "03_alsc_semi": [
+        "Sc"
+      ]
+    },
+    "srcNotes": {
+      "03_alsc_semi": "低酸素 Al–Sc 合金をターゲットに加工"
+    }
+  },
+  {
+    "id": "04_sc_crystal",
+    "stage": 4,
+    "label": "SAM ウェハ・テンプレート",
+    "header": "04 SAM ウェハ・テンプレート",
+    "description": "GaN 成長用の基板・テンプレート",
+    "els": [
+      "Sc"
+    ],
+    "src": [
+      "03_sam_crystal"
+    ],
+    "srcEls": {
+      "03_sam_crystal": [
+        "Sc"
+      ]
+    },
+    "srcNotes": {
+      "03_sam_crystal": "結晶をウェハに加工し、GaN を成長"
+    }
+  },
+  {
+    "id": "04_dielectric",
+    "stage": 4,
+    "label": "誘電体材料",
+    "header": "04 誘電体材料",
+    "description": "チタン酸バリウム＋希土類添加",
+    "els": [
+      "Y",
+      "DyTb"
+    ],
+    "src": [
+      "03_dielectric_additive"
+    ],
+    "srcEls": {
+      "03_dielectric_additive": [
+        "Y",
+        "DyTb"
+      ]
+    },
+    "srcNotes": {
+      "03_dielectric_additive": "チタン酸バリウムへの副成分添加（酸化物微粉の混合、または塩溶液による粒子表面の被覆）"
+    },
+    "note": "MLCC の誘電体は、チタン酸バリウムに Dy・Ho・Y などの希土類を副成分として加え、寿命・温度特性を整える。副成分は酸化物微粉として混合するか、硝酸塩などの塩溶液でチタン酸バリウム粒子の表面に被覆する。チタン酸バリウム自体は希土類を含まず、添加は誘電体材料メーカーの配合品か MLCC メーカーの社内配合で行う。"
+  },
+  {
+    "id": "05_motor",
+    "stage": 5,
+    "label": "モータ・アクチュエータ",
+    "header": "05 モータ・アクチュエータ",
+    "description": "サーボ・ホイール・電動化",
     "els": [
       "DyTb",
       "Sm"
     ],
     "src": [
-      "03_magnet"
-    ]
-  },
-  {
-    "id": "04_target",
-    "stage": 4,
-    "label": "薄膜・スパッタリングターゲット",
-    "header": "04 薄膜・スパッタリングターゲット",
-    "description": "Y・Sc系の薄膜形成用スパッタ材",
-    "els": [
-      "Y",
-      "Sc"
-    ],
-    "src": [
-      "03_light_alloy",
-      "03_precursor"
-    ]
-  },
-  {
-    "id": "04_sc_crystal",
-    "stage": 4,
-    "label": "SAMウェハ・テンプレート",
-    "header": "04 SAMウェハ・テンプレート",
-    "description": "ScAlMgO₄ウェハとGaN成長用下地",
-    "els": [
-      "Sc"
-    ],
-    "src": [
-      "03_precursor"
-    ]
-  },
-  {
-    "id": "04_am",
-    "stage": 4,
-    "label": "金属AM造形・加工",
-    "header": "04 金属AM造形・加工",
-    "description": "Sc含有Al合金の造形・加工部品",
-    "els": [
-      "Sc"
-    ],
-    "src": [
-      "03_light_alloy",
-      "03_am_feedstock"
-    ]
-  },
-  {
-    "id": "05_laser",
-    "stage": 5,
-    "label": "高出力レーザー",
-    "header": "05 高出力レーザー",
-    "description": "測距・照射・指向性エネルギー用光源",
-    "els": [
-      "Y"
-    ],
-    "src": [
-      "04_opt"
+      "04_mag"
     ],
     "srcEls": {
-      "04_opt": ["Y"]
+      "04_mag": [
+        "DyTb",
+        "Sm"
+      ]
     },
     "srcNotes": {
-      "04_opt": "YAGレーザー発振器はYを結晶母材に含み、高出力固体レーザーの発振部へ直接接続。"
+      "04_mag": "ロータ・アクチュエータに組み込む"
     }
   },
   {
-    "id": "05_engine",
+    "id": "05_tube",
     "stage": 5,
-    "label": "航空エンジン・ガスタービン",
-    "header": "05 航空エンジン・ガスタービン",
-    "description": "航空エンジン・ガスタービンの高温部品",
+    "label": "マイクロ波電子管",
+    "header": "05 マイクロ波電子管",
+    "description": "送信管（型番のみ公開）",
+    "els": [
+      "Sm",
+      "Sc"
+    ],
+    "src": [
+      "04_mag",
+      "04_target"
+    ],
+    "srcEls": {
+      "04_mag": [
+        "Sm"
+      ],
+      "04_target": [
+        "Sc"
+      ]
+    },
+    "srcNotes": {
+      "04_mag": "SmCo 磁石で電子ビームを収束",
+      "04_target": "陰極・電極の薄膜形成（スカンデート陰極など）"
+    },
+    "note": "進行波管（TWT）などは電子ビームの収束に SmCo 磁石を、陰極にはスカンジウムを含むスカンデート陰極を使う構成がある。調達品目は型番のみで、管の種類は確認できない。"
+  },
+  {
+    "id": "05_am",
+    "stage": 5,
+    "label": "金属 AM 造形部品",
+    "header": "05 金属 AM 造形部品",
+    "description": "ロケット・航空機の軽量部品",
+    "els": [
+      "Sc"
+    ],
+    "src": [
+      "04_am_feedstock"
+    ],
+    "srcEls": {
+      "04_am_feedstock": [
+        "Sc"
+      ]
+    },
+    "srcNotes": {
+      "04_am_feedstock": "粉末・ワイヤで積層造形"
+    }
+  },
+  {
+    "id": "05_tbc",
+    "stage": 5,
+    "label": "遮熱皮膜（TBC）",
+    "header": "05 遮熱皮膜（TBC）",
+    "description": "エンジン高温部品への溶射施工",
     "els": [
       "Y"
     ],
     "src": [
-      "04_coat"
+      "03_ceramic",
+      "04_tbc_spray"
     ],
     "srcEls": {
-      "04_coat": ["Y"]
+      "03_ceramic": [
+        "Y"
+      ],
+      "04_tbc_spray": [
+        "Y"
+      ]
     },
     "srcNotes": {
-      "04_coat": "YSZ系TBCは航空エンジン・ガスタービン高温部の遮熱皮膜として直接使用。"
+      "03_ceramic": "YSZ（イットリア安定化ジルコニア）を遮熱皮膜の原料に",
+      "04_tbc_spray": "YSZ 溶射粉末を溶射して遮熱皮膜に"
+    },
+    "srcSkip": {
+      "03_ceramic": "利用者の指定：遮熱皮膜は安定化ジルコニア粉末と溶射材料の双方から接続する"
     }
   },
   {
-    "id": "05_energy",
+    "id": "05_sofc",
     "stage": 5,
-    "label": "固体酸化物形燃料電池（SOFC）／固体酸化物形電解（SOEC）",
-    "header": "05 固体酸化物形燃料電池（SOFC）／固体酸化物形電解（SOEC）",
-    "description": "高効率発電・水素製造用セル／スタック",
+    "label": "SOFC セルスタック",
+    "header": "05 SOFC セルスタック",
+    "description": "固体酸化物形の発電・電解",
     "els": [
       "Y",
       "Sc"
-    ],
-    "forceEls": [
-      "Y"
     ],
     "src": [
       "04_elec"
     ],
     "srcEls": {
-      "04_elec": ["Y", "Sc"]
+      "04_elec": [
+        "Y",
+        "Sc"
+      ]
     },
     "srcNotes": {
-      "04_elec": "YSZ／ScSZはSOFC・SOECの固体電解質として直接使用。"
+      "04_elec": "固体電解質としてセルスタックに"
     }
   },
   {
-    "id": "05_nuclear",
+    "id": "05_plasma_parts",
     "stage": 5,
-    "label": "原子力・核燃料被覆材",
-    "header": "05 原子力・核燃料被覆材",
-    "description": "核燃料製造・耐熱／透過障壁用途",
+    "label": "耐プラズマ皮膜・部品",
+    "header": "05 耐プラズマ皮膜・部品",
+    "description": "半導体製造装置のチャンバー部材",
     "els": [
       "Y"
     ],
     "src": [
-      "04_coat"
+      "03_yttria_powder",
+      "04_plasma_spray"
     ],
     "srcEls": {
-      "04_coat": ["Y"]
+      "03_yttria_powder": [
+        "Y"
+      ],
+      "04_plasma_spray": [
+        "Y"
+      ]
     },
     "srcNotes": {
-      "04_coat": "Y₂O₃／YSZ皮膜は核燃料製造用るつぼや原子力向け透過障壁で研究・使用。量産被覆管の主流材を意味しない。"
+      "03_yttria_powder": "Y₂O₃ 微粉を成形・焼結して耐プラズマ部品に",
+      "04_plasma_spray": "Y₂O₃・YF₃ 溶射粉末を溶射して耐プラズマ皮膜に"
+    },
+    "srcSkip": {
+      "03_yttria_powder": "利用者の指定：耐プラズマ皮膜・部品は、焼結部品の原料になる高純度 Y₂O₃・YF₃ 粉末と、耐プラズマ用溶射材料の双方から接続する"
     }
   },
   {
-    "id": "05_guid",
+    "id": "05_cladding",
     "stage": 5,
-    "label": "誘導・慣性・航法",
-    "header": "05 誘導・慣性・航法",
-    "description": "誘導弾・IMU・ジャイロ・アクチュエータ",
+    "label": "燃料被覆管（ODS 鋼）",
+    "header": "05 燃料被覆管（ODS 鋼）",
+    "description": "事故耐性燃料向け（開発段階）",
+    "els": [
+      "Y"
+    ],
+    "src": [
+      "04_ods"
+    ],
+    "srcEls": {
+      "04_ods": [
+        "Y"
+      ]
+    },
+    "srcNotes": {
+      "04_ods": "ODS 素材を押出・圧延して被覆管にする"
+    },
+    "note": "商用炉の被覆管はジルコニウム合金（ジルカロイ）で、ジルコニア粉末や希土類は使わない。Y を使うのは開発中の ODS 鋼被覆管（FeCrAl-ODS は 2030 年代の実用化を目標）。"
+  },
+  {
+    "id": "05_laser_osc",
+    "stage": 5,
+    "label": "固体レーザー発振器",
+    "header": "05 固体レーザー発振器",
+    "description": "Nd:YAG・Yb:YAG",
+    "els": [
+      "Y",
+      "DyTb"
+    ],
+    "src": [
+      "04_laser_medium"
+    ],
+    "srcEls": {
+      "04_laser_medium": [
+        "Y",
+        "DyTb"
+      ]
+    },
+    "srcNotes": {
+      "04_laser_medium": "媒質・アイソレーターを発振器に組み込む"
+    },
+    "note": "旧分類では工程4（機能材料・部材）だった。発振器は部材を組み込んだ機器のため、モジュール・機器の段に置いた。"
+  },
+  {
+    "id": "05_scaln_film",
+    "stage": 5,
+    "label": "ScAlN 圧電薄膜",
+    "header": "05 ScAlN 圧電薄膜",
+    "description": "RF フィルタ・MEMS 向けの成膜",
+    "els": [
+      "Sc"
+    ],
+    "src": [
+      "04_target"
+    ],
+    "srcEls": {
+      "04_target": [
+        "Sc"
+      ]
+    },
+    "srcNotes": {
+      "04_target": "スパッタで ScAlN 圧電膜を成膜"
+    }
+  },
+  {
+    "id": "05_electronics",
+    "stage": 5,
+    "label": "電子部品・半導体",
+    "header": "05 電子部品・半導体",
+    "description": "MLCC・GaN HEMT・IC・水晶",
     "els": [
       "Y",
       "DyTb",
@@ -318,204 +744,483 @@
       "Sc"
     ],
     "src": [
-      "04_opt",
-      "04_mag",
+      "04_media",
       "04_target",
-      "04_sc_crystal"
-    ],
-    "srcEls": {
-      "04_opt": ["Y"],
-      "04_mag": ["DyTb", "Sm"],
-      "04_target": ["Sc"],
-      "04_sc_crystal": ["Sc"]
-    },
-    "srcNotes": {
-      "04_opt": "YAGレーザーは測距・目標指示・レーザー誘導の光源へ直接接続。",
-      "04_mag": "Dy・Tb添加NdFeB／SmCo磁石は誘導制御用モータ・アクチュエータ・ジャイロへ直接接続。",
-      "04_target": "ScAlN等のSc系圧電薄膜はMEMS慣性・航法センサへ直接接続。",
-      "04_sc_crystal": "SAM基板・テンプレートはScAlN系圧電／MEMSセンサの下地へ直接接続。"
-    }
-  },
-  {
-    "id": "05_sat",
-    "stage": 5,
-    "label": "衛星・宇宙機・ロケット",
-    "header": "05 衛星・宇宙機・ロケット",
-    "description": "衛星・探査機・ロケット部品／サービス",
-    "els": [
-      "Y",
-      "DyTb",
-      "Sm",
-      "Sc"
-    ],
-    "src": [
-      "04_opt",
-      "04_mag",
       "04_sc_crystal",
-      "04_am"
+      "04_mag",
+      "04_dielectric"
     ],
     "srcEls": {
-      "04_opt": ["Y"],
-      "04_mag": ["DyTb", "Sm"],
-      "04_sc_crystal": ["Sc"],
-      "04_am": ["Sc"]
+      "04_media": [
+        "Y"
+      ],
+      "04_target": [
+        "Sc"
+      ],
+      "04_sc_crystal": [
+        "Sc"
+      ],
+      "04_mag": [
+        "DyTb",
+        "Sm"
+      ],
+      "04_dielectric": [
+        "Y",
+        "DyTb"
+      ]
     },
     "srcNotes": {
-      "04_opt": "Nd:YAGレーザーは宇宙搭載LiDAR・レーザー測距の光源へ直接接続。",
-      "04_mag": "SmCo／高保磁力NdFeB磁石は衛星のリアクションホイール・モータ・アクチュエータへ直接接続。",
-      "04_sc_crystal": "SAM基板・テンプレートは衛星通信向けScAlN系RF／圧電デバイスの下地へ接続。",
-      "04_am": "Sc含有Al合金の金属AM部品は宇宙機・ロケットの軽量構造／熱流体部品に実装例あり。"
+      "04_media": "MLCC など電子部品の粉砕・分散工程で使う",
+      "04_target": "Al–Sc 配線・ScAlN 膜などの成膜（半導体・電子部品）",
+      "04_sc_crystal": "GaN 系 RF・パワー・光デバイスの下地基板",
+      "04_mag": "センサ・リレー・スピーカー等の電子部品の磁石",
+      "04_dielectric": "MLCC の誘電体層（チタン酸バリウム＋Dy・Ho・Y 酸化物）"
+    },
+    "note": "MLCC の誘電体には希土類が添加されるのが一般的だが、各社の組成は非開示。IC・GaN HEMT・水晶デバイス・基板は希土類材料との結びつきを製品記載から読み取れない。"
+  },
+  {
+    "id": "06_aircraft",
+    "stage": 6,
+    "label": "航空機・飛行制御",
+    "header": "06 航空機・飛行制御",
+    "description": "機体・操舵・降着・電動化",
+    "els": [
+      "Y",
+      "DyTb",
+      "Sm",
+      "Sc"
+    ],
+    "src": [
+      "05_am",
+      "05_motor",
+      "05_electronics"
+    ],
+    "srcEls": {
+      "05_am": [
+        "Sc"
+      ],
+      "05_motor": [
+        "DyTb",
+        "Sm"
+      ],
+      "05_electronics": [
+        "Y",
+        "DyTb",
+        "Sc"
+      ]
+    },
+    "srcNotes": {
+      "05_am": "航空機の軽量構造部品",
+      "05_motor": "飛行制御アクチュエータ・発電機・電動推進",
+      "05_electronics": "飛行制御コンピュータ・アビオニクス・表示装置の電子回路・部品（MLCC・IC・基板・水晶デバイス）"
     }
   },
   {
-    "id": "05_flight",
-    "stage": 5,
-    "label": "飛行制御・電動化",
-    "header": "05 飛行制御・電動化",
-    "description": "飛行制御・推進・電動アクチュエータ",
+    "id": "06_guidance",
+    "stage": 6,
+    "label": "誘導・慣性航法",
+    "header": "06 誘導・慣性航法",
+    "description": "誘導弾・IMU・ジャイロ",
     "els": [
+      "Y",
+      "DyTb",
+      "Sm",
+      "Sc"
+    ],
+    "src": [
+      "05_scaln_film",
+      "05_motor",
+      "05_electronics"
+    ],
+    "srcEls": {
+      "05_scaln_film": [
+        "Sc"
+      ],
+      "05_motor": [
+        "DyTb",
+        "Sm"
+      ],
+      "05_electronics": [
+        "Y",
+        "DyTb",
+        "Sc"
+      ]
+    },
+    "srcNotes": {
+      "05_scaln_film": "MEMS 慣性・圧電センサ",
+      "05_motor": "操舵・シーカー駆動、ジャイロ",
+      "05_electronics": "慣性計測装置（IMU）・誘導制御装置の電子回路・センサ"
+    }
+  },
+  {
+    "id": "06_unmanned",
+    "stage": 6,
+    "label": "無人機・ロボット",
+    "header": "06 無人機・ロボット",
+    "description": "ドローン・UGV・ロボット",
+    "els": [
+      "Y",
       "DyTb",
       "Sm"
     ],
     "src": [
-      "04_mag"
+      "05_motor",
+      "05_laser_osc",
+      "05_electronics"
     ],
     "srcEls": {
-      "04_mag": ["DyTb", "Sm"]
+      "05_motor": [
+        "DyTb",
+        "Sm"
+      ],
+      "05_laser_osc": [
+        "Y"
+      ],
+      "05_electronics": [
+        "Y",
+        "DyTb"
+      ]
     },
     "srcNotes": {
-      "04_mag": "高保磁力NdFeB／SmCo磁石は飛行制御アクチュエータと電動推進モータへ直接接続。"
+      "05_motor": "推進モータ・ジンバル・関節",
+      "05_laser_osc": "レーザー計測（ライダー）の光源",
+      "05_electronics": "無人機・ロボットの電子回路・センサ"
     }
   },
   {
-    "id": "05_robot",
-    "stage": 5,
-    "label": "ロボティクス・精密",
-    "header": "05 ロボティクス・精密",
-    "description": "ロボット・精密駆動・自動化装置",
+    "id": "06_naval",
+    "stage": 6,
+    "label": "艦艇・水中・航法",
+    "header": "06 艦艇・水中・航法",
+    "description": "ジャイロコンパス・水中音響",
     "els": [
+      "Y",
       "DyTb",
-      "Sm"
+      "Sm",
+      "Sc"
     ],
     "src": [
-      "04_mag"
+      "05_motor",
+      "05_electronics"
     ],
     "srcEls": {
-      "04_mag": ["DyTb", "Sm"]
+      "05_motor": [
+        "DyTb",
+        "Sm"
+      ],
+      "05_electronics": [
+        "Y",
+        "DyTb",
+        "Sc"
+      ]
     },
     "srcNotes": {
-      "04_mag": "高性能永久磁石は小型・高トルクのロボット用モータと精密アクチュエータへ直接接続。"
+      "05_motor": "航法装置・水中機器の駆動部",
+      "05_electronics": "艦艇・水中機器の電子回路・センサ"
     }
   },
   {
-    "id": "05_rf_sensor",
-    "stage": 5,
-    "label": "RF・圧電・高温センサ",
-    "header": "05 RF・圧電・高温センサー",
-    "description": "RFフィルタ・圧電／高温センサ",
+    "id": "06_launch",
+    "stage": 6,
+    "label": "ロケット・打上げ",
+    "header": "06 ロケット・打上げ",
+    "description": "ロケット・ロケット弾",
+    "els": [
+      "Y",
+      "DyTb",
+      "Sm",
+      "Sc"
+    ],
+    "src": [
+      "05_am",
+      "05_motor",
+      "05_electronics"
+    ],
+    "srcEls": {
+      "05_am": [
+        "Sc"
+      ],
+      "05_motor": [
+        "DyTb",
+        "Sm"
+      ],
+      "05_electronics": [
+        "Y",
+        "DyTb"
+      ]
+    },
+    "srcNotes": {
+      "05_am": "ロケット部品（UACJ・JAXA・三菱重工の共同開発）",
+      "05_motor": "推力方向制御（TVC）アクチュエータ",
+      "05_electronics": "ロケットの電子機器・アビオニクス"
+    }
+  },
+  {
+    "id": "06_space",
+    "stage": 6,
+    "label": "衛星・宇宙機",
+    "header": "06 衛星・宇宙機",
+    "description": "衛星・探査機・軌道上サービス",
+    "els": [
+      "Y",
+      "DyTb",
+      "Sm",
+      "Sc"
+    ],
+    "src": [
+      "05_motor",
+      "05_laser_osc",
+      "05_electronics"
+    ],
+    "srcEls": {
+      "05_motor": [
+        "DyTb",
+        "Sm"
+      ],
+      "05_laser_osc": [
+        "Y"
+      ],
+      "05_electronics": [
+        "Y",
+        "DyTb",
+        "Sc"
+      ]
+    },
+    "srcNotes": {
+      "05_motor": "リアクションホイール・駆動機構",
+      "05_laser_osc": "宇宙ライダー・レーザー測距",
+      "05_electronics": "宇宙用電子部品"
+    }
+  },
+  {
+    "id": "06_engine",
+    "stage": 6,
+    "label": "航空エンジン・ガスタービン",
+    "header": "06 航空エンジン・ガスタービン",
+    "description": "エンジン・ガスタービンと部品",
+    "els": [
+      "Y"
+    ],
+    "src": [
+      "05_tbc"
+    ],
+    "srcEls": {
+      "05_tbc": [
+        "Y"
+      ]
+    },
+    "srcNotes": {
+      "05_tbc": "燃焼器・タービン高温部品の遮熱皮膜"
+    }
+  },
+  {
+    "id": "06_energy",
+    "stage": 6,
+    "label": "エネルギー・電源",
+    "header": "06 エネルギー・電源",
+    "description": "SOFC・SOEC システム、発電機",
+    "els": [
+      "Y",
+      "DyTb",
+      "Sm",
+      "Sc"
+    ],
+    "src": [
+      "05_motor",
+      "05_sofc"
+    ],
+    "srcEls": {
+      "05_motor": [
+        "DyTb",
+        "Sm"
+      ],
+      "05_sofc": [
+        "Y",
+        "Sc"
+      ]
+    },
+    "srcNotes": {
+      "05_motor": "発電機（永久磁石式）",
+      "05_sofc": "発電・水電解システム"
+    }
+  },
+  {
+    "id": "06_semi",
+    "stage": 6,
+    "label": "半導体製造装置",
+    "header": "06 半導体製造装置",
+    "description": "エッチング・成膜装置（民生）",
+    "els": [
+      "Y"
+    ],
+    "src": [
+      "05_plasma_parts"
+    ],
+    "srcEls": {
+      "05_plasma_parts": [
+        "Y"
+      ]
+    },
+    "srcNotes": {
+      "05_plasma_parts": "エッチング装置のチャンバー部材"
+    }
+  },
+  {
+    "id": "06_nuclear",
+    "stage": 6,
+    "label": "原子力燃料",
+    "header": "06 原子力燃料",
+    "description": "燃料集合体・照射試験",
+    "els": [
+      "Y"
+    ],
+    "src": [
+      "05_cladding"
+    ],
+    "srcEls": {
+      "05_cladding": [
+        "Y"
+      ]
+    },
+    "srcNotes": {
+      "05_cladding": "燃料棒の被覆管（事故耐性燃料・高速炉燃料、開発段階）"
+    }
+  },
+  {
+    "id": "06_laser",
+    "stage": 6,
+    "label": "レーザー装備・照射",
+    "header": "06 レーザー装備・照射",
+    "description": "測距・照射・高出力",
+    "els": [
+      "Y",
+      "DyTb"
+    ],
+    "src": [
+      "05_laser_osc",
+      "05_electronics"
+    ],
+    "srcEls": {
+      "05_laser_osc": [
+        "Y",
+        "DyTb"
+      ],
+      "05_electronics": [
+        "Y"
+      ]
+    },
+    "srcNotes": {
+      "05_laser_osc": "測距・照射・加工用の光源",
+      "05_electronics": "交戦訓練用のレーザ送受信器などの半導体レーザー・電子回路"
+    }
+  },
+  {
+    "id": "06_radar",
+    "stage": 6,
+    "label": "レーダー",
+    "header": "06 レーダー",
+    "description": "捜索・監視・気象レーダ",
+    "els": [
+      "Y",
+      "DyTb",
+      "Sm",
+      "Sc"
+    ],
+    "src": [
+      "05_scaln_film",
+      "05_tube",
+      "05_electronics",
+      "05_motor"
+    ],
+    "srcEls": {
+      "05_scaln_film": [
+        "Sc"
+      ],
+      "05_tube": [
+        "Sm",
+        "Sc"
+      ],
+      "05_electronics": [
+        "Y",
+        "DyTb",
+        "Sc"
+      ],
+      "05_motor": [
+        "DyTb",
+        "Sm"
+      ]
+    },
+    "srcNotes": {
+      "05_scaln_film": "RF フィルタ・共振器",
+      "05_tube": "送信管（TWT・マグネトロン等）",
+      "05_electronics": "送受信モジュールの電子回路・部品",
+      "05_motor": "アンテナ駆動・回転機構のモータ"
+    }
+  },
+  {
+    "id": "06_comm",
+    "stage": 6,
+    "label": "通信・情報",
+    "header": "06 通信・情報",
+    "description": "無線機・衛星通信・情報システム",
+    "els": [
+      "Y",
+      "DyTb",
+      "Sm",
+      "Sc"
+    ],
+    "src": [
+      "05_scaln_film",
+      "05_tube",
+      "05_electronics"
+    ],
+    "srcEls": {
+      "05_scaln_film": [
+        "Sc"
+      ],
+      "05_tube": [
+        "Sm",
+        "Sc"
+      ],
+      "05_electronics": [
+        "Y",
+        "DyTb",
+        "Sm",
+        "Sc"
+      ]
+    },
+    "srcNotes": {
+      "05_scaln_film": "通信機の RF フィルタ",
+      "05_tube": "衛星通信・無線の送信管",
+      "05_electronics": "通信機器の電子回路・部品（磁性部品を含む）"
+    }
+  },
+  {
+    "id": "06_rf_sensor",
+    "stage": 6,
+    "label": "RF・圧電センサ・計測",
+    "header": "06 RF・圧電センサ・計測",
+    "description": "高周波計測・圧電評価・センサ",
     "els": [
       "Y",
       "Sc"
     ],
     "src": [
-      "04_elec",
-      "04_target",
-      "04_sc_crystal"
+      "05_scaln_film",
+      "05_electronics"
     ],
     "srcEls": {
-      "04_elec": ["Y", "Sc"],
-      "04_target": ["Sc"],
-      "04_sc_crystal": ["Sc"]
+      "05_scaln_film": [
+        "Sc"
+      ],
+      "05_electronics": [
+        "Y",
+        "Sc"
+      ]
     },
     "srcNotes": {
-      "04_elec": "YSZ／ScSZ電解質は高温酸素・ガスセンサへ直接接続。",
-      "04_target": "ScAlN薄膜のスパッタ成膜はRFフィルタ・圧電センサへ直接接続。",
-      "04_sc_crystal": "SAM基板・テンプレートはScAlN系RF／圧電デバイスの下地へ直接接続。"
-    }
-  },
-  {
-    "id": "05_defense_electronics",
-    "stage": 5,
-    "label": "防衛半導体・電子回路・通信",
-    "header": "05 防衛半導体・電子回路・通信",
-    "description": "防衛半導体・電子回路・通信装置",
-    "els": [
-      "Y",
-      "Sc"
-    ],
-    "src": [
-      "04_target",
-      "04_sc_crystal"
-    ],
-    "srcEls": {
-      "04_target": ["Y", "Sc"],
-      "04_sc_crystal": ["Sc"]
-    },
-    "srcNotes": {
-      "04_target": "YIG系マイクロ波部品とScAlN系RF部品の薄膜形成にY／Sc系ターゲットが直接接続。",
-      "04_sc_crystal": "SAM基板・テンプレートはScAlN系RF・通信デバイスの下地へ接続。"
-    }
-  },
-  {
-    "id": "05_military_radar",
-    "stage": 5,
-    "label": "軍事用レーダー・モジュール",
-    "header": "05 軍事用レーダー・モジュール",
-    "description": "捜索・追尾レーダーとRFモジュール",
-    "els": [
-      "Y",
-      "Sc"
-    ],
-    "src": [
-      "04_target",
-      "04_sc_crystal"
-    ],
-    "srcEls": {
-      "04_target": ["Y", "Sc"],
-      "04_sc_crystal": ["Sc"]
-    },
-    "srcNotes": {
-      "04_target": "YIG系マイクロ波部品とScAlN系RF部品の薄膜形成にY／Sc系ターゲットがレーダー・モジュールへ直接接続。",
-      "04_sc_crystal": "SAM基板・テンプレートはScAlN系RFフィルタ・共振器の下地としてレーダー・モジュールへ接続。"
-    }
-  },
-  {
-    "id": "05_unmanned",
-    "stage": 5,
-    "label": "無人装備・ドローン",
-    "header": "05 無人装備・ドローン",
-    "description": "UAV・UGV・無人艇と搭載機器",
-    "els": [
-      "DyTb",
-      "Sm"
-    ],
-    "src": [
-      "04_mag"
-    ],
-    "srcEls": {
-      "04_mag": ["DyTb", "Sm"]
-    },
-    "srcNotes": {
-      "04_mag": "高保磁力NdFeB／SmCo磁石は無人機の推進モータ・ジンバル・アクチュエータへ直接接続。"
-    }
-  },
-  {
-    "id": "05_airframe_support",
-    "stage": 5,
-    "label": "航空機構造・整備",
-    "header": "05 航空機構造・整備",
-    "description": "航空機構造部品の製造・修理・整備",
-    "els": [
-      "Sc"
-    ],
-    "src": [
-      "04_am"
-    ],
-    "srcEls": {
-      "04_am": ["Sc"]
-    },
-    "srcNotes": {
-      "04_am": "Sc含有Al合金の金属AMは航空機の軽量構造部品に実装・飛行実証例あり。"
+      "05_scaln_film": "圧電センサ・高周波デバイス",
+      "05_electronics": "計測器・センサの電子部品"
     }
   }
 ]

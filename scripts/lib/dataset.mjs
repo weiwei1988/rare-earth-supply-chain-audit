@@ -40,11 +40,12 @@ function assertSubset(values, allowed, label) {
 }
 
 export async function loadDataset() {
-  const [stages, subcategories, companies, dependency] = await Promise.all([
+  const [stages, subcategories, companies, dependency, columnOrder] = await Promise.all([
     readJson("stages"),
     readJson("subcategories"),
     readJson("companies"),
     readJson("dependency"),
+    readJson("column-order"),
   ]);
 
   const stageIds = stages.map((stage) => stage.id);
@@ -60,6 +61,19 @@ export async function loadDataset() {
 
   const subIds = subcategories.map((sub) => sub.id);
   assertUnique(subIds, "サブカテゴリーID");
+  const orderIds = Object.values(columnOrder).flat();
+  assertUnique(orderIds, "列順のサブカテゴリーID");
+  assertSubset(orderIds, subIds, "列順のサブカテゴリーID");
+  if (orderIds.length !== subIds.length || subIds.some((id) => !orderIds.includes(id))) {
+    throw new ValidationError("列順にすべてのサブカテゴリーを一度ずつ指定してください。");
+  }
+  for (const stage of stageIds.filter((id) => id >= 2)) {
+    const order = columnOrder[stage];
+    if (!Array.isArray(order) || !order.length) throw new ValidationError(`工程 ${stage} の列順がありません。`);
+    if (order.some((id) => subcategories.find((sub) => sub.id === id)?.stage !== stage)) {
+      throw new ValidationError(`工程 ${stage} の列順に別工程のサブカテゴリーがあります。`);
+    }
+  }
   for (const sub of subcategories) {
     for (const key of ["label", "header", "description"]) {
       if (typeof sub[key] !== "string" || !sub[key].trim()) throw new ValidationError(`${sub.id} に ${key} がありません。`);
@@ -71,21 +85,24 @@ export async function loadDataset() {
     if (!sub.els.length) throw new ValidationError(`${sub.id} に元素が設定されていません。`);
     assertSubset(sub.forceEls ?? [], sub.els, `${sub.id} の forceEls`);
     assertSubset(sub.src ?? [], subIds, `${sub.id} の src`);
-    // Stage 02 は Stage 01（中国原料）から一括で受けるため src を持たない。
+    // Stage 02 は Stage 01（海外の資源・分離）から一括で受けるため src を持たない。
     if (sub.stage === 2 && sub.src) throw new ValidationError(`${sub.id} は Stage 02 なので src を持てません。`);
     if (sub.stage > 2 && !sub.src?.length) throw new ValidationError(`${sub.id} に上流サブカテゴリー（src）がありません。`);
     assertUnique(sub.src ?? [], `${sub.id} の src`);
     for (const source of sub.src ?? []) {
       const upstream = subcategories.find((item) => item.id === source);
-      if (upstream.stage !== sub.stage - 1) {
-        throw new ValidationError(`${sub.id} の src ${source} は工程 ${upstream.stage} です（1つ上流の工程 ${sub.stage - 1} である必要があります）。`);
+      if (upstream.stage >= sub.stage) {
+        throw new ValidationError(`${sub.id} の src ${source} は上流工程ではありません。`);
+      }
+      if (upstream.stage < sub.stage - 1 && !sub.srcSkip?.[source]) {
+        throw new ValidationError(`${sub.id} の src ${source} は工程を飛ばすため srcSkip に理由が必要です。`);
       }
     }
-    // 工程5は、上流カテゴリーだけでなく「その上流から何の元素をつなぐか」も明示する。
+    // 工程3以降は、上流カテゴリーごとに接続する元素と根拠を明示する。
     // src と els の単純な積集合にすると、カテゴリーの元素追加だけで無関係な線が増えるため。
-    if (sub.stage === 5) {
+    if (sub.stage > 2) {
       if (!sub.srcEls || typeof sub.srcEls !== "object" || Array.isArray(sub.srcEls)) {
-        throw new ValidationError(`${sub.id} に工程4→5の元素別接続（srcEls）がありません。`);
+        throw new ValidationError(`${sub.id} に元素別接続（srcEls）がありません。`);
       }
       const routeSources = Object.keys(sub.srcEls);
       const missingSources = sub.src.filter((source) => !routeSources.includes(source));
@@ -102,8 +119,12 @@ export async function loadDataset() {
         assertSubset(routeElements, sub.els, `${sub.id} の srcEls.${source}`);
         assertSubset(routeElements, subcategories.find((item) => item.id === source).els, `${sub.id} の srcEls.${source}`);
       }
+      const connectedElements = [...new Set(Object.values(sub.srcEls).flat())].sort();
+      if (JSON.stringify(connectedElements) !== JSON.stringify([...sub.els].sort())) {
+        throw new ValidationError(`${sub.id} の元素フラグと接続元素が一致しません。`);
+      }
       if (!sub.srcNotes || typeof sub.srcNotes !== "object" || Array.isArray(sub.srcNotes)) {
-        throw new ValidationError(`${sub.id} に工程4→5の接続根拠（srcNotes）がありません。`);
+        throw new ValidationError(`${sub.id} に接続根拠（srcNotes）がありません。`);
       }
       const noteSources = Object.keys(sub.srcNotes);
       const missingNotes = sub.src.filter((source) => !noteSources.includes(source));
@@ -116,10 +137,17 @@ export async function loadDataset() {
           throw new ValidationError(`${sub.id} の srcNotes.${source} に接続根拠がありません。`);
         }
       }
-    } else if (sub.srcEls !== undefined) {
-      throw new ValidationError(`${sub.id} は工程5ではないため srcEls を持てません。`);
-    } else if (sub.srcNotes !== undefined) {
-      throw new ValidationError(`${sub.id} は工程5ではないため srcNotes を持てません。`);
+      if (sub.srcSkip !== undefined) {
+        if (!sub.srcSkip || typeof sub.srcSkip !== "object" || Array.isArray(sub.srcSkip)) throw new ValidationError(`${sub.id} の srcSkip が不正です。`);
+        for (const [source, reason] of Object.entries(sub.srcSkip)) {
+          const upstream = subcategories.find((item) => item.id === source);
+          if (!sub.src.includes(source) || !upstream || upstream.stage >= sub.stage - 1 || typeof reason !== "string" || !reason.trim()) {
+            throw new ValidationError(`${sub.id} の srcSkip.${source} が不正です。`);
+          }
+        }
+      }
+    } else if (sub.srcEls !== undefined || sub.srcNotes !== undefined || sub.srcSkip !== undefined) {
+      throw new ValidationError(`${sub.id} は工程2のため接続詳細を持てません。`);
     }
   }
 
@@ -164,6 +192,7 @@ export async function loadDataset() {
     subcategories,
     companies,
     dependency,
+    columnOrder,
     bySub,
     stageSubs: (stage) => subcategories.filter((sub) => sub.stage === stage),
     companiesInSub: (id) => companies.filter((company) => company.subs.includes(id)),
