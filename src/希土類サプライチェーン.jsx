@@ -1715,20 +1715,22 @@ const SEED = [
     ],
     "subs": [
       "03_yag_crystal",
-      "05_plasma_parts"
+      "05_plasma_parts",
+      "05_electronics"
     ],
     "tags": [
-      "Y"
+      "Y",
+      "DyTb"
     ],
     "own": "東証プライム(6971)",
     "rev": "約2兆円",
-    "prod": "単結晶YAG育成・加工、Y₂O₃ファインセラミックス、耐プラズマ工程部品",
-    "pos": "半導体装置用セラミックスの大手",
+    "prod": "単結晶YAG育成・加工、Y₂O₃ファインセラミックス、耐プラズマ工程部品、積層セラミックコンデンサ（MLCC）",
+    "pos": "半導体装置用セラミックスの大手。MLCC は小型・大容量品に強みがあり、鹿児島国分工場（霧島市）に約150億円で新生産棟を建設",
     "def": "防衛電子、半導体装置、センサ・通信部品",
     "chn": "中～高。高純度Y₂O₃調達を確認",
     "ev": "B",
     "exc": 1,
-    "src": "JSX ／ Y DD",
+    "src": "JSX ／ Y DD ／ https://newswitch.jp/p/33403",
     "note": "売上条件は例外"
   },
   {
@@ -1818,19 +1820,20 @@ const SEED = [
       "04_mag"
     ],
     "tags": [
+      "Y",
       "DyTb",
       "Sm"
     ],
-    "own": "東証プライム(6762)",
-    "rev": "約2.2兆円",
-    "prod": "希土類磁石用合金（TDK Ganzhou）、NdFeB・SmCo磁石、HAL工法、Dy削減・フリー磁石、電子部品（MLCC・インダクタ・磁気センサなど）",
-    "pos": "TDKグループとして磁石合金から高性能磁石までを担う。工程3はTDK Ganzhouの事業",
-    "def": "センサ、モータ、航空宇宙アクチュエータ、防衛電子",
-    "chn": "高。Dy/Tb/Sm調達、拡散材在庫、製品グレード別使用量を確認",
+    "own": "上場企業 ／ TDK株式会社（東証プライム、証券コード6762）",
+    "rev": "連結売上高 2兆5,048億円（2026年3月期、IFRS）。うち受動部品 5,932億円、磁気応用製品 2,629億円",
+    "prod": "希土類磁石（NdFeB・SmCo。HAL 工法の Dy 削減品・Dy フリー品）と磁石用合金、積層セラミックコンデンサ（MLCC）・インダクタなどの受動部品、磁気センサ、二次電池。主な拠点は、磁石＝成田工場（千葉県成田市。車載モータ用と試作開発）と中国・タイの工場、磁石用合金＝TDK Ganzhou（中国・江西省贛州）、MLCC＝北上工場（岩手県北上市。2024年に新棟）と秋田（にかほ・由利本荘）",
+    "pos": "磁石は合金から焼結磁石までグループ内で一貫し、SmCo を含む高性能磁石の世界的大手。風力向けネオジム磁石の量産は2016年に中国・タイへ移し、成田工場は車載用と試作開発を担う。MLCC は世界の主要5社の一角で、2026年4月に日本化学工業と誘電体材料の合弁会社を設立。",
+    "def": "センサ、モータ、航空宇宙向けアクチュエータ、防衛電子向けの部品に接続。防衛向けの直接納入は非開示。",
+    "chn": "Dy・Tb・Sm は磁石合金（TDK Ganzhou を含む）と焼結磁石で使い、中国依存が高い。MLCC の誘電体には Dy・Ho・Y などを添加するのが一般的。企業固有の使用量と原料の調達国は非開示。",
     "ev": "A",
     "exc": 1,
-    "src": "JSX ／ DyTb DD ／ Sm DD ／ https://www.tdk.com/en/about_tdk_china/tdk_ganzhou/index.html ／ https://www.tdk.com/en/news_center/press/20181127_01.html ／ https://www.tdk.com/ja/products/",
-    "note": "売上条件は例外。工程3は中国のTDK Ganzhouを含むグループ範囲。希土類の分離・精製・一次金属化は公開根拠未確認のため工程2対象外。SmフラグはTDKのSmCo磁石に基づく既存評価"
+    "src": "JSX ／ DyTb DD ／ Sm DD ／ https://www.tdk.com/system/files/2026042800_0mqf56xw_ja.pdf ／ https://www.tdk.com/en/about_tdk_china/tdk_ganzhou/index.html ／ https://www.tdk.com/en/news_center/press/20181127_01.html ／ https://www.tdk.com/ja/products/ ／ https://product.tdk.com/info/ja/products/capacitor/ceramic/mlcc/catalog.html ／ https://monoist.itmedia.co.jp/mn/articles/2604/06/news021.html ／ https://newswitch.jp/p/4458 ／ https://www.nikkei.com/article/DGXNASFS1800U_Y2A210C1EE8000/ ／ https://eetimes.itmedia.co.jp/ee/articles/2205/10/news095.html ／ https://www.tdk.com/ja/careers/graduates/office/akita/",
+    "note": "売上条件は例外。工程3は中国のTDK Ganzhouを含むグループ範囲。希土類の分離・精製・一次金属化は公開根拠未確認のため工程2対象外。SmフラグはTDKのSmCo磁石に基づく既存評価 ／ 2026-09-22：村田製作所と同じ形に、事業ごとの製品・拠点・地位をカードにまとめた。"
   },
   {
     "id": "seed-20",
@@ -3764,56 +3767,6 @@ const SEED = [
     "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：IFRS連結売上収益"
   },
   {
-    "id": "stage05-integrated-38",
-    "name": "株式会社出雲村田製作所",
-    "jsx": "統合企業リスト_子会社置換",
-    "stages": [
-      5
-    ],
-    "subs": [
-      "05_electronics"
-    ],
-    "tags": [
-      "Y",
-      "DyTb"
-    ],
-    "own": "製造子会社 ／ 親会社：村田製作所 ／ 自社証券コード：非上場 ／ 親会社証券コード：6981",
-    "rev": "1,000–3,000億円 ／ 概算 ／ 2026年時点",
-    "prod": "積層セラミックコンデンサの開発・製造",
-    "pos": "村田製作所グループの MLCC 製造子会社。グループの MLCC は世界シェア約4割（日本経済新聞、2024年10月）。",
-    "def": "宇宙用途との接続は親会社製品として確認。子会社単独の認証情報は不足。",
-    "chn": "企業固有の希土類BOM・中国依存は未確認。",
-    "ev": "B",
-    "exc": 0,
-    "src": "https://corporate.murata.com/en-us/newsroom/news/company/general/2019/1024",
-    "note": "統合処理：子会社追加（監視） ／ 置換元：村田製作所 ／ 売上根拠：大規模MLCC製造拠点の人員・設備規模から推計"
-  },
-  {
-    "id": "stage05-integrated-39",
-    "name": "株式会社福井村田製作所",
-    "jsx": "統合企業リスト_子会社置換",
-    "stages": [
-      5
-    ],
-    "subs": [
-      "05_electronics"
-    ],
-    "tags": [
-      "Y",
-      "DyTb"
-    ],
-    "own": "製造子会社 ／ 親会社：村田製作所 ／ 自社証券コード：非上場 ／ 親会社証券コード：6981",
-    "rev": "1,000–3,000億円 ／ 概算 ／ 2026年時点",
-    "prod": "積層セラミックコンデンサの研究開発・製造",
-    "pos": "村田製作所グループの MLCC 製造子会社。グループの MLCC は世界シェア約4割（日本経済新聞、2024年10月）。",
-    "def": "宇宙・防衛向け認定名義と型番の子会社単独開示は不足。",
-    "chn": "企業固有の希土類BOM・中国依存は未確認。",
-    "ev": "B",
-    "exc": 0,
-    "src": "https://corporate.murata.com/en-global/newsroom/news/company/general/2026/0205",
-    "note": "統合処理：子会社追加（監視） ／ 置換元：村田製作所 ／ 売上根拠：大規模MLCC開発・製造拠点の人員・設備規模から推計"
-  },
-  {
     "id": "stage05-integrated-40",
     "name": "住友電気工業",
     "jsx": "統合企業リスト_子会社置換",
@@ -3827,20 +3780,20 @@ const SEED = [
       "Y",
       "Sc"
     ],
-    "own": "上場企業 ／ 自社証券コード：5802",
+    "own": "上場企業 ／ 住友電気工業株式会社（東証プライム、証券コード5802）。GaN HEMT は子会社の住友電工デバイス・イノベーション（SEDI）が製造",
     "rev": "約4.7兆円 ／ 連結実績（概数） ／ 2026/3期",
     "prod": "S帯・X帯高出力GaN HEMT、衛星通信・航空管制レーダー用RFデバイス",
-    "pos": "GaN HEMT で世界トップシェア（同社プレスリリース、2023年11月）。",
+    "pos": "基地局向け GaN HEMT で世界トップシェア（5G 向けの販売シェアは約7割とされる）。RF GaN の主要企業の一角。",
     "def": "航空管制、船舶・気象レーダー、衛星通信に直結し、防衛レーダー・通信へ転用可能。",
     "chn": "企業固有の希土類BOM・中国依存は未確認。",
     "ev": "B",
     "exc": 0,
-    "src": "https://sumitomoelectric.com/jp/products/optical-devices ／ https://sumitomoelectric.com/jp/ir/financial",
+    "src": "https://sumitomoelectric.com/jp/products/optical-devices ／ https://sumitomoelectric.com/jp/ir/financial ／ https://sei.co.jp/id/2020/06/project/id04.html ／ https://newswitch.jp/p/22352 ／ https://www.yolegroup.com/strategy-insights/the-rise-and-rise-of-rf-gan/",
     "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：連結売上高を0.1兆円単位で丸めて表示"
   },
   {
     "id": "stage05-integrated-41",
-    "name": "村田製作所 コンデンサ事業",
+    "name": "村田製作所",
     "jsx": "統合企業リスト_子会社置換",
     "stages": [
       5
@@ -3852,16 +3805,16 @@ const SEED = [
       "Y",
       "DyTb"
     ],
-    "own": "親会社内事業 ／ 親会社：村田製作所 ／ 自社証券コード：事業部 ／ 親会社証券コード：6981",
-    "rev": "8,000–10,000億円 ／ 概算 ／ 2026年時点",
-    "prod": "宇宙グレードMLCC、タイミング・高周波・センサデバイス",
-    "pos": "MLCC で世界シェア約4割（日本経済新聞、2024年10月）。",
-    "def": "国内唯一のJAXA認定MLCCメーカーとして宇宙機採用を公表。",
-    "chn": "企業固有の希土類BOM・中国依存は未確認。",
+    "own": "上場企業 ／ 株式会社村田製作所（東証プライム、証券コード6981）。MLCC は製造子会社の福井村田製作所・出雲村田製作所などで生産",
+    "rev": "連結売上収益 1兆8,309億円、うちコンデンサ 9,364億円（2026年3月期、IFRS）",
+    "prod": "積層セラミックコンデンサ（MLCC。宇宙グレード品を含む）、インダクタ、タイミング・高周波・センサデバイスなど。MLCC の主な国内拠点は、福井村田製作所（福井県越前市。研究開発・製造。2026年3月にセラミックコンデンサ研究開発センターを稼働）と出雲村田製作所（島根県出雲市。車載・通信向けの開発・製造）",
+    "pos": "MLCC で世界シェア約4割の首位。2031年3月期に43%を目指す。コンデンサ事業は AI サーバー向けが伸び、2026年3月期に前期比12.6%増。",
+    "def": "国内唯一の JAXA 認定 MLCC メーカーとして宇宙機への採用を公表。製造子会社単独の宇宙・防衛向け認定名義と型番は非開示。",
+    "chn": "MLCC の誘電体（チタン酸バリウム）には Dy・Ho・Y などの希土類を添加するのが一般的。企業固有の組成と原料の調達国は非開示。",
     "ev": "B",
     "exc": 0,
-    "src": "https://www.murata.com/en-us/products/capacitor/ceramiccapacitor/overview/strength",
-    "note": "統合処理：事業部置換 ／ 置換元：村田製作所 ／ 売上根拠：親会社のコンデンサ関連売上構成から概算"
+    "src": "https://corporate.murata.com/-/media/corporate/about/newsroom/news/irnews/irnews/2026/0430/25q4-j-fls.ashx?la=ja-jp&cvid=20260430013812000000 ／ https://recruit.murata.com/ja-jp/business/industry/ ／ https://www.murata.com/en-us/products/capacitor/ceramiccapacitor/overview/strength ／ https://corporate.murata.com/en-us/newsroom/news/company/general/2019/1024 ／ https://corporate.murata.com/en-global/newsroom/news/company/general/2026/0205 ／ https://www.pref.shimane.lg.jp/industry/enterprise/richi/nintei/izumomurataseisakusyo.html",
+    "note": "2026-09-21：旧カード「株式会社出雲村田製作所」「株式会社福井村田製作所」「村田製作所 コンデンサ事業」を1枚に統合。"
   },
   {
     "id": "stage05-integrated-42",
@@ -4059,13 +4012,13 @@ const SEED = [
     "own": "非上場子会社 ／ 親会社：住友商事 ／ 自社証券コード：非上場（旧6355） ／ 親会社証券コード：8053",
     "rev": "600–800億円 ／ 概算 ／ 2026年時点",
     "prod": "MEMSジャイロ、慣性センサ、姿勢センサユニット、Northfinder ／ 航空機脚システム、油圧・熱交換器、電動油圧アクチュエーション ／ MEMS・半導体製造装置（シリコン深掘りエッチング装置、プラズマ CVD 装置。100%子会社の SPPテクノロジーズが製造・販売）",
-    "pos": "航空宇宙・船舶向け慣性センシングと、防衛省保有機の約8割に搭載される脚システムを同社内に保有。MEMS 製造用のシリコン深掘りエッチング装置でシェア90%（同社公表）。",
+    "pos": "航空宇宙・船舶向け慣性センシングと、防衛省保有機の約8割に搭載される脚システムを同社内に保有。MEMS 製造用のシリコン深掘りエッチング装置でシェア90%。",
     "def": "防衛・民間航空機の降着装置、熱管理、電動化に直接接続。",
     "chn": "企業固有の希土類BOM・中国依存は未確認。半導体製造装置のエッチング・プラズマ CVD チャンバー部品には Y₂O₃ 系の耐プラズマ部材を使うのが一般的（部材の調達先は非開示）。",
     "ev": "A",
     "exc": 0,
     "src": "https://www.spp.co.jp/business/sensor/ ／ https://www.spp.co.jp/company/profile/ ／ https://www.spp.co.jp/business/microtech/ ／ https://www.sptcorp.com/ja/media-center/merger-into-sumitomo-precision-products/",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：非上場化前の連結売上規模と現事業構成から推計 ／ 2026-09-19 sandbox：半導体製造装置（100%子会社 SPPテクノロジーズ。住友精密工業による吸収合併を2026年10月1日目途で検討中）を追加。"
+    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：非上場化前の連結売上規模と現事業構成から推計 ／ 2026-09-19：半導体製造装置（100%子会社 SPPテクノロジーズ。住友精密工業による吸収合併を2026年10月1日目途で検討中）を追加。"
   },
   {
     "id": "company-115",
@@ -4232,7 +4185,7 @@ const SEED = [
     "formal": true,
     "formalSource": "SOFC/SOEC追加DD：正式採用",
     "src": "https://www.mhi.com/jp/technology/review/sites/g/files/jwhtju2326/files/2025-07/623040.pdf ／ https://www.mhi.com/jp/business/products-services/space-defense/submarines ／ https://www.mhi.com/jp/finance/library/result/ ／ https://www.mhi.com/jp/technology/review/sites/g/files/jwhtju2326/files/tr/pdf/411/411030.pdf",
-    "note": "工程5『SOFC／SOEC』へ正式採用。システム統合能力と防衛プライム能力を評価し、最重要として表示。"
+    "note": "工程5『SOFC／SOEC』へ正式採用。システム統合能力と防衛プライム能力を保有。"
   },
   {
     "id": "sofc-dd-cecylls",
@@ -4261,7 +4214,7 @@ const SEED = [
     "formal": true,
     "formalSource": "SOFC/SOEC追加DD：正式採用",
     "src": "https://www.niterragroup.com/english/news/detail/002107.html ／ https://www.niterragroup.com/english/corporate/networks/ ／ https://www.niterragroup.com/english/business/innovation/sofc/",
-    "note": "工程5『SOFC／SOEC』へ正式採用し、重要として表示。"
+    "note": "工程5『SOFC／SOEC』へ正式採用。"
   },
   {
     "id": "sofc-dd-niterra",
@@ -4290,7 +4243,7 @@ const SEED = [
     "formal": true,
     "formalSource": "SOFC/SOEC追加DD：正式採用",
     "src": "https://www.niterragroup.com/english/business/innovation/new_business/rsoc/ ／ https://www.niterragroup.com/english/business/innovation/sofc/ ／ https://www.niterragroup.com/english/corporate/networks/ ／ https://www.niterragroup.com/ir/",
-    "note": "旧『Niterra（日本特殊陶業）』監視カードを追加DDで更新。工程5『SOFC／SOEC』へ正式採用し、重要として表示。"
+    "note": "旧『Niterra（日本特殊陶業）』監視カードを追加DDで更新。工程5『SOFC／SOEC』へ正式採用。"
   },
   {
     "id": "sofc-dd-morimura",
@@ -4319,7 +4272,7 @@ const SEED = [
     "formal": true,
     "formalSource": "SOFC/SOEC追加DD：正式採用",
     "src": "https://www.niterragroup.com/news/upload/f679bfe62f0ddc701713cdacb7375518.pdf ／ https://www.niterragroup.com/english/corporate/networks/ ／ https://www.niterragroup.com/english/business/innovation/sofc/ ／ https://jp.toto.com/company/press/company/management/2019_12_03_009224/",
-    "note": "工程5『SOFC／SOEC』へ正式採用し、重要として表示。"
+    "note": "工程5『SOFC／SOEC』へ正式採用。"
   },
   {
     "id": "atla-2010001098064",
@@ -8129,6 +8082,30 @@ const SEED = [
     "note": ""
   },
   {
+    "id": "mlcc-taiyo-yuden",
+    "name": "太陽誘電",
+    "stages": [
+      5
+    ],
+    "subs": [
+      "05_electronics"
+    ],
+    "tags": [
+      "Y",
+      "DyTb"
+    ],
+    "own": "上場企業 ／ 太陽誘電株式会社（東証プライム、証券コード6976）",
+    "rev": "連結売上高 3,553億円、うちコンデンサ 2,518億円（2026年3月期）",
+    "prod": "積層セラミックコンデンサ（MLCC）、インダクタ、複合デバイス。材料（チタン酸バリウム誘電体）から一貫生産",
+    "pos": "MLCC で世界シェア3位（2023年度）。シェアは約1割とされる。誘電体材料の開発・生産を群馬（高崎・榛名）に置き、新潟太陽誘電（上越）などで MLCC を製造。高崎に誘電体材料の新棟を建設中。",
+    "def": "民生・車載・情報インフラ向けが中心で、防衛向けの直接納入は未確認。",
+    "chn": "MLCC の誘電体には Dy・Ho・Y などの希土類を添加するのが一般的。同社は Ho（ホルミウム）添加で知られる。企業固有の組成と原料の調達国は非開示。",
+    "ev": "B",
+    "exc": 0,
+    "src": "https://www.yuden.co.jp/jp/product/solutions/mlcc/ ／ https://pdf.irpocket.com/C6976/Kdx3/cyuz/k5xZ.pdf ／ https://newswitch.jp/p/49652 ／ https://www.niigata-yuden.com/product/ ／ https://pdf.irpocket.com/C6976/Bv1s/F9vx/RgmG.pdf",
+    "note": ""
+  },
+  {
     "id": "semi-tel",
     "name": "東京エレクトロン",
     "stages": [
@@ -8189,7 +8166,7 @@ const SEED = [
     "own": "上場企業 ／ 株式会社KOKUSAI ELECTRIC（東証プライム、証券コード6525）。旧・日立国際電気の半導体製造装置事業で、通信機器の株式会社国際電気とは別会社",
     "rev": "連結売上収益 2,351億円（2026年3月期、IFRS）",
     "prod": "バッチ式成膜装置（ALD・CVD）、枚葉式プラズマ処理装置（MARORA：プラズマ窒化・酸化）、トリートメント（膜質改善）装置",
-    "pos": "バッチ成膜装置で世界トップクラスのシェア（同社公表）。3D NAND・DRAM などメモリ向けが中心。",
+    "pos": "バッチ成膜装置で世界トップクラスのシェア。3D NAND・DRAM などメモリ向けが中心。",
     "def": "民生の半導体製造が中心で、防衛向けの直接納入は未確認。国内の半導体製造（経済安全保障）の基盤。",
     "chn": "枚葉式プラズマ処理装置の処理室部品に Y₂O₃ 系の耐プラズマ部材を使うのが一般的。バッチ式成膜装置の反応管は石英が主。部材の調達先と原料の調達国は非開示。",
     "ev": "B",
@@ -8637,14 +8614,28 @@ function summarizeItems(value, limit) {
   const match = text.match(/^(防衛装備庁納入品（[^）]+）：)(.*)$/);
   const prefix = match ? match[1] : "";
   const body = match ? match[2] : text;
-  const separator = body.includes("；") ? "；" : " ／ ";
-  const items = body.split(/\s*(?:；|／)\s*/).filter(Boolean);
+  const separator = body.includes("；") ? "；" : body.includes("／") ? " ／ " : body.includes("、") ? "、" : body.includes("，") ? "，" : " ／ ";
+  const items = body.split(/\s*(?:；|／|、|，)\s*/).filter(Boolean);
   if (items.length <= limit) return { short: text, full: text, hidden: 0 };
   return {
     short: prefix + items.slice(0, limit).join(separator) + separator + "ほか" + (items.length - limit) + "件",
     full: text,
     hidden: items.length - limit
   };
+}
+
+function marketPosition(value) {
+  return String(value || "").trim().split(/(?<=[。！？])\s*/u)
+    .filter((sentence) => !/(?:シェア|市場での地位|市場地位|出荷実績).*(?:未確認|非開示|不明|非公表|未公表|未確立|確認できない)/u.test(sentence))
+    .join("").trim();
+}
+
+function companySummary(company) {
+  const products = summarizeItems(company.prod, 2);
+  const position = marketPosition(company.pos);
+  const short = [products.short, position].filter(Boolean).join(" → ");
+  const full = [company.prod, position].filter(Boolean).join(" → ");
+  return { short: short || company.def || "", full: full || company.def || "" };
 }
 
 function pieGradient(segments) {
@@ -8766,10 +8757,9 @@ export default function RareEarthDDExplorer() {
         .re-dep-source{display:inline-block;margin-top:5px;color:${COLORS.text};font-size:11px;text-underline-offset:3px}
         .re-dep-note{font-size:11px;color:${COLORS.faint};line-height:1.65}
         .re-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
-        .re-company{border:1px solid ${COLORS.line};background:${COLORS.panel};color:${COLORS.text};border-radius:10px;padding:12px;text-align:left;cursor:pointer}
+        .re-company{border:1px solid ${COLORS.line};border-top:3px solid ${COLORS.A};background:${COLORS.panel};color:${COLORS.text};border-radius:10px;padding:12px;text-align:left;cursor:pointer}
         .re-company[data-active="true"]{background:${COLORS.panelHi}}
-        .re-name{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:500}
-        .re-dot{width:9px;height:9px;border-radius:50%;flex:none}
+        .re-name{font-size:14px;font-weight:500}
         .re-tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:9px}
         .re-tag{border:1px solid ${COLORS.line};border-radius:999px;padding:1px 7px;font:10px ui-monospace,SFMono-Regular,Menlo,monospace}
         .re-pos{font-size:12px;color:${COLORS.sub};line-height:1.55;margin-top:8px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:4;overflow:hidden}
@@ -8868,9 +8858,8 @@ export default function RareEarthDDExplorer() {
               {list.map((company) => (
                 <button key={company.id} className="re-company" data-active={companyId === company.id}
                   onClick={() => setCompanyId(company.id)}
-                  style={{ borderTop: "3px solid " + (COLORS[company.ev] || COLORS.C) }}>
+                  >
                   <div className="re-name">
-                    <span className="re-dot" style={{ background: COLORS[company.ev] || COLORS.C }} />
                     <span>{company.name}</span>
                   </div>
                   <div className="re-tags">
@@ -8880,9 +8869,8 @@ export default function RareEarthDDExplorer() {
                     ))}
                   </div>
                   {(() => {
-                    const full = company.pos || company.prod || "詳細は企業カードを選択";
-                    const display = company.pos ? { short: company.pos } : summarizeItems(full, 3);
-                    return <div className="re-pos" title={full}>{display.short}</div>;
+                    const display = companySummary(company);
+                    return <div className="re-pos" title={display.full}>{display.short}</div>;
                   })()}
                 </button>
               ))}
@@ -8895,17 +8883,16 @@ export default function RareEarthDDExplorer() {
             {!selectedCompany ? (
               <div className="re-empty">企業カードを選ぶと、所有構造、売上、製品、市場地位、防衛接続、中国依存、参照元を表示します。</div>
             ) : (
-              <div className="re-detail" style={{ borderTop: "3px solid " + (COLORS[selectedCompany.ev] || COLORS.C) }}>
+              <div className="re-detail" style={{ borderTop: "3px solid " + COLORS.A }}>
                 <div style={{ display: "flex", justifyContent: "space-between", gap: 10, alignItems: "center" }}>
                   <strong style={{ fontSize: 17 }}>{selectedCompany.name}</strong>
-                  <span style={{ color: COLORS[selectedCompany.ev] || COLORS.C, fontSize: 12 }}>{evLabel[selectedCompany.ev] || evLabel.C}</span>
                 </div>
                 <dl className="re-dl">
                   {[
                     ["所有・上場", selectedCompany.own],
                     ["売上高", selectedCompany.rev],
                     ["主要製品・役割", selectedCompany.prod],
-                    ["市場地位", selectedCompany.pos],
+                    ["市場での地位", marketPosition(selectedCompany.pos)],
                     ["航空・宇宙・防衛", selectedCompany.def],
                     ["防衛装備庁調達実績", selectedCompany.atlaProcurement ? "防衛装備庁調達実績あり" : ""],
                     ["調達品目判定（人力確認）", selectedCompany.atla?.decision],

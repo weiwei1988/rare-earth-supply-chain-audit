@@ -1,6 +1,6 @@
 // 静的QA。src/data/*.json と生成物が一致し、6工程の元素別接続が公開境界を守ることを検査する。
 import fs from "node:fs/promises";
-import { loadDataset, fatal, ELEMENTS, normalizeEv } from "./lib/dataset.mjs";
+import { loadDataset, fatal, ELEMENTS } from "./lib/dataset.mjs";
 import { readGeneratedRegion, evaluateHtmlData, evaluateJsxData } from "./lib/generated.mjs";
 
 const failures = [];
@@ -25,14 +25,14 @@ report.subcategories = dataset.subcategories.length;
 report.stages = dataset.stages.length;
 
 // --- 構造・公開データ ------------------------------------------------------
-check("6工程・47分類・198社", dataset.stages.length === 6 && dataset.subcategories.length === 47 && dataset.companies.length === 198);
+check("6工程・47分類・197社", dataset.stages.length === 6 && dataset.subcategories.length === 47 && dataset.companies.length === 197);
 check(
   "工程名称を6工程構造へ更新",
   sameJson(dataset.stages.map((stage) => stage.label), ["海外の資源・分離", "素材", "材料", "部材", "モジュール・機器", "装備・システム"]),
 );
 check(
   "工程別の延べ企業数",
-  sameJson(Object.fromEntries([2, 3, 4, 5, 6].map((stage) => [stage, dataset.companies.filter((company) => company.stages.includes(stage)).length])), { 2: 8, 3: 17, 4: 37, 5: 66, 6: 101 }),
+  sameJson(Object.fromEntries([2, 3, 4, 5, 6].map((stage) => [stage, dataset.companies.filter((company) => company.stages.includes(stage)).length])), { 2: 8, 3: 17, 4: 37, 5: 65, 6: 101 }),
 );
 check(
   "列順が全47分類を工程ごとに一度ずつ指定",
@@ -78,14 +78,19 @@ check(
 );
 const addedCompanies = ["堺化学工業", "共立マテリアル", "富士チタン工業", "戸田工業", "日本化学工業", "ニッキ株式会社", "東京エレクトロン", "日立ハイテク", "KOKUSAI ELECTRIC", "アルバック", "キヤノンアネルバ", "芝浦メカトロニクス", "サムコ", "パナソニック コネクト", "TOTO", "NTKセラテック", "クアーズテック", "西村陶業", "つばさ真空理研", "住友大阪セメント", "コベルコ科研", "日立GEニュークリア・エナジー"];
 check("再構成で追加した22社を収録", addedCompanies.every((name) => dataset.companies.some((company) => company.name === name)));
+check(
+  "MLCC の村田製作所を1枚に統合し、太陽誘電を収録",
+  ["株式会社出雲村田製作所", "株式会社福井村田製作所", "村田製作所 コンデンサ事業"].every((name) => !dataset.companies.some((company) => company.name === name)) &&
+    ["村田製作所", "太陽誘電"].every((name) => dataset.companies.some((company) => company.name === name && company.subs.includes("05_electronics"))),
+);
 const removedCompanies = ["日本精工（NSK）", "NTN", "ジャムコ", "日機装", "エフ・エー・エス", "富士エアロスペーステクノロジー", "富士航空整備", "輸送機工業"];
 check("関連性の薄い8社を除外", removedCompanies.every((name) => !dataset.companies.some((company) => company.name === name)));
 const addedEngineIds = ["engine-ihi-aero", "engine-khi-aero", "engine-mhiael", "engine-mhi-gt", "engine-ihi-power"];
 check(
-  "航空エンジン・ガスタービン追加5社を最重要で最終工程へ収録",
+  "航空エンジン・ガスタービン追加5社を最終工程へ収録",
   addedEngineIds.every((id) => {
     const company = dataset.companies.find((item) => item.id === id);
-    return company?.stages.includes(6) && company.subs.includes("06_engine") && sameJson(company.tags, ["Y"]) && normalizeEv(company.ev) === "A" && company.atlaProcurement;
+    return company?.stages.includes(6) && company.subs.includes("06_engine") && sameJson(company.tags, ["Y"]) && company.atlaProcurement;
   }),
 );
 check("所有・売上の公開情報調査57社を保持", financials.length === 57 && financials.every((item) => dataset.companies.some((company) => company.name === item.name && company.financial?.sourceUrls?.length)));
@@ -108,7 +113,7 @@ check("中国依存データの生成物同期", sameJson(dependencyShape(htmlDa
 
 // --- 公開画面の構造 -------------------------------------------------------
 check("index.html に iframe がない", !/<iframe/i.test(html));
-check("画面を100%表示の6列で描画", html.includes(".re-flow-canvas{position:relative;isolation:isolate;width:1200px") && html.includes("W=Math.max(1200,Math.floor(viewport.clientWidth))") && html.includes("var cardWidth=Math.max(168,Math.min(240") && html.includes("var xByStage={2:sidePadding+columnStep") && html.includes("stage:6,items:systems") && html.includes("canvas.style.width=W+\"px\"") && html.includes("mapView.scale=1;"));
+check("全工程を画面幅に合わせて表示", html.includes(".re-flow-canvas{position:relative;isolation:isolate;width:1200px") && html.includes("W=Math.max(1200,Math.floor(viewport.clientWidth))") && html.includes("var cardWidth=Math.max(168,Math.min(240") && html.includes("var xByStage={2:sidePadding+columnStep") && html.includes("stage:6,items:systems") && html.includes("canvas.style.width=W+\"px\"") && html.includes(".re-flow-wrap{position:relative;overflow:visible;height:auto"));
 check("海外の資源・分離を起点カードとして表示", html.includes("海外の資源・分離") && !html.includes("STAGE 01 — 中国原料"));
 check("接続線は全工程のsrcElsとsrcNotesから描画", html.includes("item.srcEls&&item.srcEls[sourceId]") && html.includes("item.srcNotes&&item.srcNotes[sourceId]") && html.includes("curve(a.x+a.w,a.y+lane[element],b.x,b.y+lane[element])") && html.includes("width:'+pos.w+'px") && html.includes("width:'+source.w+'px"));
 check(
@@ -117,15 +122,26 @@ check(
     html.includes('selectedElements.forEach(function(element){walk("up",element);walk("down",element)}') &&
     html.includes("allSubs.forEach(function(target){if((target.src||[]).indexOf(selected.id)>=0)"),
 );
-check("サブカテゴリーの高さを所属会社数に比例", html.includes("minCardHeight=102,perCompany=4,columnGap=8") && html.includes("totalSubCount(item.id)*perCompany") && !html.includes("is-compact .re-card-description{display:none}"));
+check("コンパクトなサブカテゴリーの高さを所属会社数に比例", html.includes("minCardHeight=92,perCompany=3,columnGap=8") && html.includes("totalSubCount(item.id)*perCompany") && html.includes(".re-card-description{font-size:9px") && !html.includes("is-compact .re-card-description{display:none}"));
 check("元素絞り込みを代表色と分割配色で強調", html.includes(".re-sub-card.is-filter-match") && html.includes("function segmentedGradient(tags,angle,colorValue)") && html.includes("matchedEls.length>1?"));
+check("サブカテゴリー選択時に企業一覧へ自動スクロール", html.includes("if(traceable)requestAnimationFrame(function(){") && html.includes('root.querySelector("#re-list-title")') && html.includes('heading.scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"})'));
 check(
-  "パン・ズーム・タッチ操作を維持",
+  "企業カードの評価ランク表示と色分けを撤去",
+  !html.includes('aria-label="DD評価"') &&
+    !html.includes("riskLabel") &&
+    !html.includes("re-risk-dot") &&
+    !html.includes("ratingOrder") &&
+    html.includes("border-top:3px solid var(--risk-a)") &&
+    html.includes('<div class="re-company-name">'),
+);
+check(
+  "マップのズーム・ドラッグ操作を撤去してページスクロールに一本化",
   html.includes('id="re-flow-viewport"') &&
-    html.includes('id="re-map-zoom-out"') &&
-    html.includes('id="re-map-zoom-in"') &&
-    html.includes("function beginPinch()") &&
-    html.includes("viewport.addEventListener(\"gesturechange\""),
+    html.includes("function initResponsiveMap()") &&
+    !html.includes("re-map-zoom-out") &&
+    !html.includes("function zoomMap(") &&
+    !html.includes("function beginPinch()") &&
+    !html.includes("mapView"),
 );
 check("画面からExcel読込機能を撤去", !html.includes('type="file"') && !jsx.includes('type="file"') && !html.includes("Excelを読み込む") && !jsx.includes("Excelを読み込む") && !/\bXLSX\b/.test(html) && !/\bXLSX\b/.test(jsx));
 check("公開画面の外部通信とリファラー送信を制限", html.includes('name="referrer" content="no-referrer"') && html.includes("connect-src 'none'") && html.includes("default-src 'self'"));

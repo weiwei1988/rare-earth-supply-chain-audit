@@ -1,6 +1,6 @@
 # 希土類デュアルユース・サプライチェーン監査
 
-Y、Dy/Tb、Sm、Scについて、海外の資源・分離から素材、材料、部材、モジュール・機器、装備・システムまでのつながりを、198社・事業単位と47サブカテゴリーから探索する静的な監査インターフェースです。HTML・CSS・JavaScriptで動作し、画面表示にビルドは不要です。
+Y、Dy/Tb、Sm、Scについて、海外の資源・分離から素材、材料、部材、モジュール・機器、装備・システムまでのつながりを、197社・事業単位と47サブカテゴリーから探索する静的な監査インターフェースです。HTML・CSS・JavaScriptで動作し、画面表示にビルドは不要です。
 
 **[公開画面を開く](https://weiwei1988.github.io/rare-earth-supply-chain-audit/index.html)**
 
@@ -32,7 +32,7 @@ python3 -m http.server 8000
 - 6工程：海外の資源・分離、素材、材料、部材、モジュール・機器、装備・システム
 - 47サブカテゴリー
 - 対象希土類：Y、Dy、Tb、Sm、Sc（画面ではDyとTbをまとめて表示）
-- 198社・事業単位
+- 197社・事業単位
 
 収録件数には企業の事業部、子会社、企業グループなども含まれます。企業カードの情報は公開情報をもとに整理した調査時点のスナップショットです。
 
@@ -41,7 +41,7 @@ python3 -m http.server 8000
 | ファイル | 内容 |
 | --- | --- |
 | [`index.html`](index.html) | iframeを使わない配布用画面。初期データを内包する生成物 |
-| [`src/data/companies.json`](src/data/companies.json) | 198社・事業単位の分類、元素フラグ、DD情報、公開参照元、調達実績 |
+| [`src/data/companies.json`](src/data/companies.json) | 197社・事業単位の分類、元素フラグ、DD情報、公開参照元、調達実績 |
 | [`src/data/company-financials.json`](src/data/company-financials.json) | 新規ATLA企業57社の所有・上場、最新確認FYの売上、確度、公開出典 |
 | [`src/data/subcategories.json`](src/data/subcategories.json) | 47サブカテゴリーの工程、対象元素、上流接続。工程3以降は `srcEls` で上流ごとの接続元素、`srcNotes` で接続根拠も定義 |
 | [`src/data/column-order.json`](src/data/column-order.json) | 各工程のサブカテゴリーの縦方向の表示順。接続線の交差を抑える |
