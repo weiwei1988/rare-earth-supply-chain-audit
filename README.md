@@ -53,6 +53,7 @@ python3 -m http.server 8000
 | [`scripts/lib/generated.mjs`](scripts/lib/generated.mjs) | HTML・JSXの生成領域を抽出し、埋め込みデータをQA用に読み取る補助 |
 | [`scripts/qa.mjs`](scripts/qa.mjs) | 件数、元素フラグ、分類、生成物、iframe不在などの静的QA |
 | [`scripts/audit.mjs`](scripts/audit.mjs) | 工程間接続の重複、空端点、上流到達性の監査 |
+| [`scripts/security-audit.mjs`](scripts/security-audit.mjs) | Git追跡ファイル内の認証情報、ローカル絶対パス、資格情報付きURL、メールアドレス、内部Spreadsheet URLを検査 |
 | [`scripts/import-atla.mjs`](scripts/import-atla.mjs) | リポジトリ外の人力判定スナップショットから画面用データを統合する一回限りの取込処理 |
 | [`scripts/apply-financial-research.mjs`](scripts/apply-financial-research.mjs) | 分割調査JSONを検証し、57社の所有・上場／売上と出典を企業カードへ反映 |
 | [`package.json`](package.json) | 生成、同期確認、QA、監査のnpmコマンド |
@@ -62,7 +63,7 @@ python3 -m http.server 8000
 
 ## 検証
 
-Node.js 18以降で、生成物の同期、データ構造、元素フラグ、工程間接続をまとめて検証します。追加のnpmパッケージは不要です。
+Node.js 18以降で、生成物の同期、データ構造、元素フラグ、工程間接続、公開前のセキュリティ監査をまとめて検証します。セキュリティ監査はGit追跡ファイルを対象に、認証情報、ローカル環境固有の絶対パス、資格情報付きURL、メールアドレス、内部Spreadsheet URLの混入を検出します。追加のnpmパッケージは不要です。
 
 ```bash
 npm test

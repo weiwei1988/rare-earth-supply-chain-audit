@@ -1401,16 +1401,16 @@ const SEED = [
       "DyTb",
       "Sm"
     ],
-    "own": "東証プライム(4063)",
-    "rev": "約2.6兆円",
-    "prod": "Y₂O₃・YF₃・YOF・YAG系材料、Y₂O₃ 系の溶射用顆粒（QU・PQ タイプ）、希土類金属・磁石合金、NdFeB・SmCo磁石、工程内材・回収磁石の再資源化",
-    "pos": "信越化学グループとして分離・精製、還元、合金・磁粉、焼結磁石、リサイクルを担う一貫ノード",
-    "def": "半導体耐プラズマ材、TBC周辺、高性能磁石、航空宇宙・防衛電子",
-    "chn": "高。Y/Dy/Tb/Sm調達、海外精製拠点、輸出管理対象混合物を確認",
+    "own": "上場企業 ／ 信越化学工業株式会社（東証プライム、証券コード4063）。希土類の分離・精製と磁石は武生工場（福井県越前市）、磁石合金は信越（長汀）テクノロジー（中国・福建省、年産3,000トン）、分離・精製と焼結磁石は信越マグネティック・マテリアルズ・ベトナム（ハイフォン、磁石は年産2,200トン）が担う",
+    "rev": "連結売上高 2兆5,739億円、うち電子材料 1兆157億円（2026年3月期）。希土類磁石は電子材料事業に含む",
+    "prod": "希土類の分離・精製（酸化物は純度3N〜6N、数10nm の微粉から溶射用の大粒径粉 QU・PQ タイプまで、ほかに水酸化物・フッ化物・複合酸化物）、耐プラズマ皮膜用の Y₂O₃・YOF 溶射材料、ネオジム磁石 N シリーズ（粒界拡散で Dy・Tb を減らした高保磁力品）、サマリウム磁石 R シリーズ（Sm₂Co₁₇）、磁石合金、磁石の研削粉や使用済み HDD・モータからの再資源化",
+    "pos": "希土類の分離・精製から合金・磁石まで一貫して手がける国内では数少ない企業で、磁石の生産能力は国内トップクラス。Sm₂Co₁₇ 磁石は他社に先駆けて量産し、高温・宇宙用途に使われる。2026年6月に福井県で18年ぶりの分離・精製工場の新設を公表し、350億円規模（うち175億円は国の補助）を投じて国内の製錬能力を高める。ベトナムでは分離・精製と焼結磁石を一貫生産する",
+    "def": "高温に耐える Sm 系磁石は航空宇宙用途に使われ、Y₂O₃ 溶射材料は半導体製造装置の耐プラズマ皮膜に、磁石はモータ・アクチュエータや防衛電子部品につながる。防衛向けの直接納入は非開示",
+    "chn": "磁石合金の一部は中国（福建省）で製造する。Dy・Tb など重希土類は中国依存が高く、研削粉（磁石加工で約2割出る）や使用済み HDD・モータからの回収と、中国以外の原料確保を進めている。企業固有の使用量と調達先は非開示",
     "ev": "A",
     "exc": 1,
-    "src": "JSX ／ Y DD ／ DyTb DD ／ Sm DD ／ https://www.shinetsu.co.jp/en/sustainability/esg_environment/resource_saving/ ／ https://www.shinetsu.co.jp/en/news/news-release/shin-etsu-chemical-to-set-up-a-base-in-china-to-manufacture-magnet-alloys-for-rare-earth-magnets/ ／ https://www.rare-earth.jp/product.html",
-    "note": "JSXの2ノードを重複統合。工程2・3は海外子会社・海外工場を含む信越化学グループとしての一貫生産範囲"
+    "src": "JSX ／ Y DD ／ DyTb DD ／ Sm DD ／ https://www.rare-earth.jp/product.html ／ https://www.shinetsu.co.jp/sec/takefu/ ／ https://www.shinetsu-rare-earth-magnet.jp/ ／ https://www.shinetsu.co.jp/en/news/news-release/shin-etsu-chemical-to-set-up-a-base-in-china-to-manufacture-magnet-alloys-for-rare-earth-magnets/ ／ https://www.shinetsu.co.jp/en/news/news-release/shin-etsu-chemical-to-double-its-production-capacity-of-rare-earth-magnets-in-vietnam/ ／ https://www.shinetsu.co.jp/wp-content/uploads/2025/07/20260428_con_J.pdf ／ https://www.jiji.com/jc/article?k=2026061100578&g=eco ／ https://www.fukuishimbun.co.jp/articles/-/2623075 ／ https://xtech.nikkei.com/atcl/nxt/mag/nmc/18/00012/00279/ ／ https://www.shinetsu.co.jp/en/sustainability/esg_environment/resource_saving/",
+    "note": "JSXの2ノードを重複統合。工程2・3は海外子会社・海外工場を含む信越化学グループとしての一貫生産範囲 ／ 2026-09-23：電子材料セグメントの売上、製品グレード、生産拠点と能力、福井の新工場、リサイクルを追記"
   },
   {
     "id": "seed-4",
@@ -1452,24 +1452,26 @@ const SEED = [
     "name": "東ソー",
     "jsx": "東ソー",
     "stages": [
-      3
+      3,
+      4
     ],
     "subs": [
-      "03_ceramic"
+      "03_ceramic",
+      "04_media"
     ],
     "tags": [
       "Y"
     ],
-    "own": "東証プライム(4042)",
-    "rev": "約1兆円",
-    "prod": "YSZ粉末TZシリーズ（4Y～10Y）",
-    "pos": "YSZ粉末で世界トップ級。国内下流の中心性が高い",
-    "def": "SOFC、酸素センサ、遮熱材、航空機エンジン・ガスタービン",
-    "chn": "高。安定化剤Y₂O₃の原産国、非中国Y、顧客優先供給を確認",
+    "own": "上場企業 ／ 東ソー株式会社（東証プライム、証券コード4042）",
+    "rev": "連結売上高 1兆199億円、うち機能商品 2,729億円（2026年3月期）",
+    "prod": "イットリア安定化ジルコニア（YSZ）粉末 TZ シリーズ（3Y〜10Y。固体電解質用に 4Y・6Y・8Y・10Y）、歯科用の透光感グレード（Zpex・Zpex Smile・Zpex 4）とカラーグレード、ジルコニア粉砕ボール・微小ビーズ。加水分解法で製造し、1983年に南陽事業所（山口県周南市）へファインセラミックス用ジルコニアの世界初の商用プラント、2009年に四日市事業所（三重県四日市市）へ展開。2019年10月に南陽で3割増強（約50億円）",
+    "pos": "ファインセラミックス用ジルコニア粉末で世界シェア首位。歯科用ではグローバルスタンダードとされる。用途は光ファイバー接続部品（フェルール・スリーブ）、電子材料の粉砕ボール、酸素センサ・NOx センサ、固体酸化物形燃料電池（SOFC）の電解質まで広い。2026年3月期は装飾用途と東アジアの歯科用途で出荷が増加。歯科加工で出る端材を原料に戻すリサイクル検証を4社で始め、2028年度の実用化を目指す",
+    "def": "SOFC の電解質、酸素センサ、遮熱コーティング用の溶射材料の原料などに使われる。防衛向けの直接納入は非開示",
+    "chn": "安定化剤として Y₂O₃ を使う。Y とジルコニア原料の調達国、非中国品の比率、顧客への優先供給の方針は非開示",
     "ev": "A",
     "exc": 1,
-    "src": "JSX ／ Y DD",
-    "note": "売上条件は例外"
+    "src": "JSX ／ Y DD ／ https://www.tosoh.co.jp/product/functionality/zirconia_powder_tz.html ／ https://www.tosoh.co.jp/product/functionality/zirconia_powder_dental.html ／ https://www.tosoh.co.jp/product/functionality/zirconia_crushing_steel_ball.html ／ https://www.tosoh.co.jp/news/assets/newsrelease20180516.pdf ／ https://www.tosoh.co.jp/ir/library/financial_statements/ ／ https://orbray.com/magazine/archives/12094",
+    "note": "売上条件は例外 ／ 2026-09-23：機能商品セグメントの売上、製品グレード、製造拠点、用途、リサイクルの取り組みを追記。粉砕・分散メディア（YTZ ボール・微小ビーズ）の工程にも配置した"
   },
   {
     "id": "seed-6",
@@ -1485,16 +1487,16 @@ const SEED = [
       "Y",
       "Sc"
     ],
-    "own": "東証プライム(4082)",
-    "rev": "357.51億円（2026年3月期）",
-    "prod": "YSZ粉末、10Sc1CeSZ等のScSZ、SOFC向けジルコニア",
-    "pos": "Zr化合物世界トップ級。Y系・Sc系安定化ジルコニアとレアアースフリー代替材を保有",
-    "def": "SOFC、酸素センサ、高温セラミックス、航空・艦艇補機電源",
-    "chn": "中～高。Y₂O₃／Sc₂O₃の原産国、Sc含有量別在庫、代替材の実用度を確認",
+    "own": "上場企業 ／ 第一稀元素化学工業株式会社（東証プライム、証券コード4082）。1956年設立、本社は大阪市中央区、連結従業員709名（2026年3月末）。福井事業所（福井市。2006年新設）が全品目の8〜9割を生産し、ベトナム子会社 VREC（ホーチミン市フーミー3工業団地。2023年稼働）が中間体のオキシ塩化ジルコニウム（ZOC）を担う",
+    "rev": "連結売上高 357億円、営業利益 35億円（2026年3月期）。分野別は自動車排ガス浄化触媒 224億円、戦略分野 55億円（うちエネルギー 17億円）",
+    "prod": "ジルコニウム化合物と安定化ジルコニア粉末。ファインセラミックス用はイットリア安定化（HSY-3F 系）、セリア安定化（CEZ-12）、マグネシア安定化（MSZ-8）、カルシア安定化（HSY-0480）。燃料電池用は SOFC の固体電解質向けにスカンジア安定化（DSZ-95）、スカンジア・セリア複合安定化（10Sc1CeSZ-R2）、イットリア安定化（HSY-8）。ほかに自動車排ガス浄化触媒用のセリア・ジルコニア系複合酸化物",
+    "pos": "ジルコニウム化合物で世界首位。1980年代からイットリア安定化ジルコニア粉末を手がける。SOFC 向けは AI データセンターの電源需要で2026年3月期に35.5%増収。2025年10月にはレアアースを使わないカルシア安定化ジルコニア（DURAZR-S）を開発し、安定化剤をイットリア・スカンジアに頼らない選択肢も持つ",
+    "def": "SOFC の固体電解質、酸素センサ、高温セラミックス、ポンプ部品・薬液移送機器などの耐摩耗部材に使われる。防衛向けの直接納入は非開示",
+    "chn": "安定化剤の Y₂O₃・Sc₂O₃ の調達国は非開示。原料のジルコンサンドは2010年の中国の輸出規制を機に分散を進め、グループで使う ZOC の約5割をベトナムで生産する計画。レアアースを使わない安定化ジルコニアも実用化した",
     "ev": "A",
     "exc": 0,
-    "src": "JSX ／ Y DD ／ Sc DD ／ https://www.dkkk.co.jp/products/functions.html",
-    "note": "条件内のYSZ・ScSZ粉末中核"
+    "src": "JSX ／ Y DD ／ Sc DD ／ https://www.dkkk.co.jp/products/functions.html ／ https://www.dkkk.co.jp/products/pro03-1.html ／ https://www.dkkk.co.jp/products/pro03-2.html ／ https://www.dkkk.co.jp/company/profile.html ／ https://www.dkkk.co.jp/ir/library/ ／ https://www.jetro.go.jp/biz/areareports/special/2025/1001/5852b0a17e2c4483.html ／ https://prtimes.jp/main/html/rd/p/000000003.000171462.html",
+    "note": "条件内のYSZ・ScSZ粉末中核 ／ 2026-09-23：売上の分野別内訳、製品グレード、生産拠点（福井・ベトナム）、レアアースフリー品を追記"
   },
   {
     "id": "seed-7",
@@ -8724,8 +8726,8 @@ export default function RareEarthDDExplorer() {
         .re-stage{position:relative;min-height:158px;border:1px solid ${COLORS.line};border-top:3px solid ${COLORS.line};border-radius:12px;background:${COLORS.panel};padding:14px;text-align:left;color:${COLORS.text};cursor:pointer}
         .re-stage[data-active="true"]{border-top-color:${COLORS.text};background:${COLORS.panelHi}}
         .re-stage:not(:last-child):after{content:"›";position:absolute;right:-12px;top:60px;color:${COLORS.faint};font-size:22px;z-index:2}
-        .re-code{font:11px ui-monospace,SFMono-Regular,Menlo,monospace;color:${COLORS.faint};letter-spacing:.13em}
-        .re-stage-title{font-size:15px;font-weight:600;margin-top:8px}
+        .re-code{font:12px ui-monospace,SFMono-Regular,Menlo,monospace;color:${COLORS.faint};letter-spacing:.13em}
+        .re-stage-title{font-size:17px;font-weight:600;margin-top:8px}
         .re-stage-short{font-size:12px;color:${COLORS.sub};margin-top:5px;line-height:1.5}
         .re-count{position:absolute;right:12px;top:11px;border:1px solid ${COLORS.line};border-radius:999px;padding:1px 8px;color:${COLORS.sub};font:12px ui-monospace,SFMono-Regular,Menlo,monospace}
         .re-subs{display:flex;gap:5px;flex-wrap:wrap;margin-top:11px}
@@ -8804,7 +8806,7 @@ export default function RareEarthDDExplorer() {
             const subs = SUBCATS.filter((sub) => sub.stage === stage.id && sub.els.some((id) => selectedElements.includes(id)));
             return (
               <div key={stage.id} className="re-stage" data-active={active} onClick={() => selectStage(stage.id)}>
-                {stage.id !== 1 && <span className="re-count">{stageCounts[stage.id] || 0}</span>}
+                <span className="re-count">{stageCounts[stage.id] || 0}社</span>
                 <div className="re-code">STAGE {stage.code}</div>
                 <div className="re-stage-title">{stage.label}</div>
                 <div className="re-stage-short">{stage.short}</div>

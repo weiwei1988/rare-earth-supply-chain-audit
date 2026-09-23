@@ -32,7 +32,7 @@ check(
 );
 check(
   "工程別の延べ企業数",
-  sameJson(Object.fromEntries([2, 3, 4, 5, 6].map((stage) => [stage, dataset.companies.filter((company) => company.stages.includes(stage)).length])), { 2: 8, 3: 17, 4: 37, 5: 65, 6: 101 }),
+  sameJson(Object.fromEntries([2, 3, 4, 5, 6].map((stage) => [stage, dataset.companies.filter((company) => company.stages.includes(stage)).length])), { 2: 8, 3: 17, 4: 38, 5: 65, 6: 101 }),
 );
 check(
   "列順が全47分類を工程ごとに一度ずつ指定",
@@ -115,6 +115,14 @@ check("中国依存データの生成物同期", sameJson(dependencyShape(htmlDa
 check("index.html に iframe がない", !/<iframe/i.test(html));
 check("全工程を画面幅に合わせて表示", html.includes(".re-flow-canvas{position:relative;isolation:isolate;width:1200px") && html.includes("W=Math.max(1200,Math.floor(viewport.clientWidth))") && html.includes("var cardWidth=Math.max(168,Math.min(240") && html.includes("var xByStage={2:sidePadding+columnStep") && html.includes("stage:6,items:systems") && html.includes("canvas.style.width=W+\"px\"") && html.includes(".re-flow-wrap{position:relative;overflow:visible;height:auto"));
 check("海外の資源・分離を起点カードとして表示", html.includes("海外の資源・分離") && !html.includes("STAGE 01 — 中国原料"));
+check(
+  "Stage見出しを拡大し、元素フィルター連動の企業数を表示",
+  html.includes(".re-column-label-title{grid-column:1;font-size:13px") &&
+    html.includes(".re-column-label-count{grid-column:2") &&
+    html.includes("function stageLabel(stage,x)") &&
+    html.includes("countStage(stage.id)+'社") &&
+    html.includes("function countStage(id){return visible().filter"),
+);
 check("接続線は全工程のsrcElsとsrcNotesから描画", html.includes("item.srcEls&&item.srcEls[sourceId]") && html.includes("item.srcNotes&&item.srcNotes[sourceId]") && html.includes("curve(a.x+a.w,a.y+lane[element],b.x,b.y+lane[element])") && html.includes("width:'+pos.w+'px") && html.includes("width:'+source.w+'px"));
 check(
   "全体では全接続線、分類選択時は全上流・全下流を強調",
@@ -122,7 +130,14 @@ check(
     html.includes('selectedElements.forEach(function(element){walk("up",element);walk("down",element)}') &&
     html.includes("allSubs.forEach(function(target){if((target.src||[]).indexOf(selected.id)>=0)"),
 );
-check("コンパクトなサブカテゴリーの高さを所属会社数に比例", html.includes("minCardHeight=92,perCompany=3,columnGap=8") && html.includes("totalSubCount(item.id)*perCompany") && html.includes(".re-card-description{font-size:9px") && !html.includes("is-compact .re-card-description{display:none}"));
+check("工程全体とサブカテゴリーの高さを所属会社数に比例", html.includes("minCardHeight=68,columnGap=8,columnBaseSpan=220,perStageCompany=12,perCardScaleCompany=1.5,maxColumnSpan=1300") && html.includes("minimumSpan+stageCompanyCount*perCardScaleCompany") && html.includes("columnBaseSpan+stageCompanyCount*perStageCompany") && html.includes("extraHeight*weights[index]/weightTotal") && html.includes(".re-card-description{font-size:9px") && !html.includes("is-compact .re-card-description{display:none}"));
+const visualStageSpans = [2, 3, 4, 5, 6].map((stage) => {
+  const categoryCount = dataset.columnOrder[stage].length;
+  const companyCount = dataset.companies.filter((company) => company.stages.includes(stage)).length;
+  const minimumSpan = categoryCount * 68 + Math.max(0, categoryCount - 1) * 8;
+  return Math.max(minimumSpan + companyCount * 1.5, Math.min(1300, 220 + companyCount * 12));
+});
+check("工程列の総高は社数増加に合わせて下流ほど長い", visualStageSpans.every((span, index) => index === 0 || span > visualStageSpans[index - 1]), visualStageSpans.join(" < "));
 check("元素絞り込みを代表色と分割配色で強調", html.includes(".re-sub-card.is-filter-match") && html.includes("function segmentedGradient(tags,angle,colorValue)") && html.includes("matchedEls.length>1?"));
 check("サブカテゴリー選択時に企業一覧へ自動スクロール", html.includes("if(traceable)requestAnimationFrame(function(){") && html.includes('root.querySelector("#re-list-title")') && html.includes('heading.scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"})'));
 check(

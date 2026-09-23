@@ -7,6 +7,6 @@
     "build": "node scripts/build.mjs",
     "check": "node scripts/build.mjs --check",
     "enrich:financials": "node scripts/apply-financial-research.mjs",
-    "test": "node --test scripts/import-atla.test.mjs && node scripts/build.mjs --check && node scripts/qa.mjs && node scripts/audit.mjs"
+    "test": "node --test scripts/import-atla.test.mjs && node scripts/build.mjs --check && node scripts/qa.mjs && node scripts/audit.mjs && node scripts/security-audit.mjs"
   }
 }
