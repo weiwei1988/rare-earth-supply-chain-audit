@@ -8551,62 +8551,57 @@ const DEPENDENCY_ROWS = [
     "id": "Sm",
     "tag": "Sm",
     "label": "Sm",
-    "quality": "品目代理",
-    "china": 73,
-    "metric": "希土類金属の日本輸入構成・2023年",
+    "quality": "世界供給・調査会社推計",
+    "china": 99,
+    "metric": "サマリウム酸化物の世界供給構成・2024年",
     "segments": [
       {
         "name": "中国",
-        "value": 73,
+        "value": 99,
         "color": COLORS.A
       },
       {
-        "name": "ベトナム",
-        "value": 21,
-        "color": COLORS.Y
-      },
-      {
-        "name": "タイ",
-        "value": 6,
-        "color": COLORS.Sm
+        "name": "中国以外",
+        "value": 1,
+        "color": COLORS.line
       }
     ],
-    "evidence": "Smは日本の通関コードで元素別分離できないため、希土類金属（Sc・Yを含む）の輸入構成を代理使用。",
-    "source": "JOGMEC 鉱物資源マテリアルフロー2024（表3-2-2）",
-    "url": "https://journal.jogmec.go.jp/content/300601767.pdf"
+    "evidence": "Benchmark Mineral Intelligenceの2025年版資料にある「Samarium (Sm) Oxide Supply (2024)」では、中国99%、中国以外1%。調査会社による2024年の酸化物供給構成の推計で、日本の輸入依存度や鉱山生産シェアではありません。2026年現在の比率を示すものではありません。",
+    "source": "Benchmark Mineral Intelligence・Rare Earths Price Assessment Methodology（2025年7月版、25頁）",
+    "url": "https://uploads.benchmarkminerals.com/x/ca2f96bc34/benchmark-rare-earths-price-assessment-methodology-late-july-2025.pdf#page=25"
   },
   {
     "id": "Sc",
     "tag": "Sc",
     "label": "Sc",
-    "quality": "品目代理",
-    "china": 70,
-    "metric": "その他希土類化合物の日本輸入・2023年",
+    "quality": "世界生産・複数資料による概算",
+    "china": 83,
+    "metric": "酸化Scの世界生産構成・2024年（概数）",
     "segments": [
       {
         "name": "中国",
-        "value": 70,
+        "value": 83,
         "color": COLORS.A
       },
       {
-        "name": "ベトナム",
-        "value": 16,
+        "name": "カナダ（設備能力上限）",
+        "value": 7.5,
         "color": COLORS.Y
       },
       {
-        "name": "エストニア",
-        "value": 10,
+        "name": "ロシア",
+        "value": 2.3,
         "color": COLORS.DyTb
       },
       {
-        "name": "その他",
-        "value": 4,
+        "name": "日本・フィリピン等（残差）",
+        "value": 7.2,
         "color": COLORS.line
       }
     ],
-    "evidence": "Scは日本の通関コードで元素別分離できないため、Ce・Y・La以外の希土類化合物の輸入構成を代理使用。",
-    "source": "JOGMEC 鉱物資源マテリアルフロー2024（表3-2-5）",
-    "url": "https://journal.jogmec.go.jp/content/300601767.pdf"
+    "evidence": "2024年の世界生産40tを基準に、Rio Tintoの中国約83%推計、カナダの設備能力3t/年（世界比最大7.5%）、USGSのロシア実生産0.9t（約2.3%）を組み合わせた概算。日本・フィリピン等7.2%は差し引き残差です。カナダは実生産シェアではなく設備能力上限であり、各区分は同一統計による厳密な国別内訳ではありません。",
+    "source": "Rio Tinto米商務省提出資料（2025年、31頁）／USGS MCS 2025・Russia 2024／Rio Tinto公表設備能力",
+    "url": "https://downloads.regulations.gov/BIS-2025-0025-0179/attachment_1.pdf"
   }
 ];
 /* GENERATED DATA END */
@@ -8834,7 +8829,7 @@ export default function RareEarthDDExplorer() {
                   <span style={{ color: COLORS.faint, fontSize: 12 }}>公的統計・公的資料ベース</span>
                 </div>
                 <section className="re-dep-dashboard" aria-label="希土類別の中国依存度">
-                  <div className="re-dep-intro">円グラフは日本の輸入相手国構成を数量ベースで表示。Yは元素別実績、Dy・Tbは政府公表の重希土類区分、Sm・Scは日本の通関統計で元素別に分離できないため近接品目の代理指標です。</div>
+                  <div className="re-dep-intro">Y・Dy・Tbは日本の輸入に占める中国の比率、Smは酸化物の世界供給、Scは酸化物の世界生産に占める中国の比率を表示します。Sm・Scは2024年の推計です。各カードの対象年と指標をご確認ください。</div>
                   <div className="re-dep-grid">
                     {visibleDependencyRows.map((row) => (
                       <article className="re-dep-card" key={row.id}>
@@ -8846,7 +8841,7 @@ export default function RareEarthDDExplorer() {
                       </article>
                     ))}
                   </div>
-                  <div className="re-dep-note">データ品質：Sm・Scの円グラフは元素固有の輸入シェアではありません。<a className="re-dep-source" href="https://www.customs.go.jp/tariff/2024_04_01/data/j_28.htm" target="_blank" rel="noopener noreferrer">日本の輸入統計品目</a>は酸化Yを分離する一方、Dy・Tb・Sm・Scの化合物を個別分離していません。Scにはフィリピン由来中間体→日本精製という非中国ルートが確認されています（<a className="re-dep-source" href="https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-scandium.pdf" target="_blank" rel="noopener noreferrer">USGS MCS 2026</a>）。</div>
+                  <div className="re-dep-note">指標の違い：Smは酸化物の世界供給構成に関する調査会社推計です。Scは複数資料による概算で、カナダは設備能力上限、ロシアは実生産量、日本・フィリピン等は残差です。日本の輸入依存度や鉱山生産シェアではなく、2026年現在の比率を示すものでもありません。対象年・工程が異なるため、5元素を同一条件の順位として比較しないでください。</div>
                 </section>
               </>
             ) : (
