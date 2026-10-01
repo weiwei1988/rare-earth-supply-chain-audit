@@ -131,6 +131,12 @@ check(
     html.includes("allSubs.forEach(function(target){if((target.src||[]).indexOf(selected.id)>=0)"),
 );
 check("工程全体とサブカテゴリーの高さを所属会社数に比例", html.includes("minCardHeight=68,columnGap=8,columnBaseSpan=220,perStageCompany=12,perCardScaleCompany=1.5,maxColumnSpan=1300") && html.includes("minimumSpan+stageCompanyCount*perCardScaleCompany") && html.includes("columnBaseSpan+stageCompanyCount*perStageCompany") && html.includes("extraHeight*weights[index]/weightTotal") && html.includes(".re-card-description{font-size:9px") && !html.includes("is-compact .re-card-description{display:none}"));
+check(
+  "元素フィルターの有無でサブカテゴリーカードの高さを固定",
+  html.includes("function totalStageCount(id){return data.filter") &&
+    html.includes("var stageCompanyCount=totalStageCount(stageMeta[column.stage].id)") &&
+    !html.includes("var stageCompanyCount=countStage(stageMeta[column.stage].id)"),
+);
 const visualStageSpans = [2, 3, 4, 5, 6].map((stage) => {
   const categoryCount = dataset.columnOrder[stage].length;
   const companyCount = dataset.companies.filter((company) => company.stages.includes(stage)).length;
