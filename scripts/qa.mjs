@@ -168,6 +168,12 @@ check(
     html.includes('class="re-ef-node-count-bg"') &&
     html.includes('class="re-ef-node-count"') &&
     html.includes("countWidth=20+Array.from(meta).length*6.5") &&
+    html.includes("var flowOrderByElement={") &&
+    html.includes('3:["03_ceramic","03_yag_crystal","03_dielectric_additive","03_yttria_powder"]') &&
+    html.includes('4:["04_laser_medium","04_dielectric","04_mag"]') &&
+    html.includes('3:["03_magnet_powder","03_magnet_alloy"]') &&
+    html.includes('5:["05_am","05_sofc","05_electronics","05_scaln_film","05_tube"]') &&
+    html.includes("flowSortIndex(flowElement,stage,a.id,order)-flowSortIndex(flowElement,stage,b.id,order)") &&
     html.includes('root.querySelector("#re-element-flow-frame").addEventListener("click"') &&
     !html.includes('var panel=root.querySelector(view==="element-flow"?"#re-view-element-flow":"#re-view-overview")') &&
     html.includes('id="re-flow-companies"') &&
