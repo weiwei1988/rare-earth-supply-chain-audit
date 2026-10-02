@@ -117,7 +117,7 @@ check("全工程を画面幅に合わせて表示", html.includes(".re-flow-canv
 check("海外の資源・分離を起点カードとして表示", html.includes("海外の資源・分離") && !html.includes("STAGE 01 — 中国原料"));
 check(
   "Stage見出しを拡大し、元素フィルター連動の企業数を表示",
-  html.includes(".re-column-label-title{grid-column:1;font-size:13px") &&
+  html.includes(".re-column-label-title{grid-column:1;font-size:14.5px") &&
     html.includes(".re-column-label-count{grid-column:2") &&
     html.includes("function stageLabel(stage,x)") &&
     html.includes("countStage(stage.id)+'社") &&
@@ -145,6 +145,34 @@ const visualStageSpans = [2, 3, 4, 5, 6].map((stage) => {
 });
 check("工程列の総高は社数増加に合わせて下流ほど長い", visualStageSpans.every((span, index) => index === 0 || span > visualStageSpans[index - 1]), visualStageSpans.join(" < "));
 check("元素絞り込みを代表色と分割配色で強調", html.includes(".re-sub-card.is-filter-match") && html.includes("function segmentedGradient(tags,angle,colorValue)") && html.includes("matchedEls.length>1?"));
+check(
+  "元素別フローを独立タブで表示",
+  html.includes('data-view="overview"') &&
+    html.includes('data-view="element-flow"') &&
+    html.includes('id="re-element-flow-canvas"') &&
+    html.includes("function renderElementFlow()") &&
+    html.includes("target.item.srcEls[sourceId]") &&
+    html.includes("各カテゴリーに出入りする帯の合計幅は、そのカテゴリーに所属する該当元素企業数に比例します") &&
+    html.includes('if(flowSelectionId){traceFlow("up");traceFlow("down")}') &&
+    html.includes("linkedEdges.has(edge)?' is-linked':'") &&
+    html.includes('svg.classList.toggle("is-tracing",!!flowSelectionId)') &&
+    html.includes("function renderFlowElementControls()") &&
+    html.includes("function renderOverviewElementControls()") &&
+    html.includes("re-overview-element-controls") &&
+    html.includes('class="re-flow-option-dependency"') &&
+    html.includes('button.style.setProperty("--re-dependency"') &&
+    html.includes('stageCount=flowStageCount(stage.id,flowElement)') &&
+    html.includes('class="re-ef-stage-count"') &&
+    html.includes('class="re-ef-stage-count-bg"') &&
+    html.includes("countWidth=26+Array.from(countLabel).length*7.2") &&
+    html.includes('class="re-ef-node-count-bg"') &&
+    html.includes('class="re-ef-node-count"') &&
+    html.includes("countWidth=20+Array.from(meta).length*6.5") &&
+    html.includes('root.querySelector("#re-element-flow-frame").addEventListener("click"') &&
+    !html.includes('var panel=root.querySelector(view==="element-flow"?"#re-view-element-flow":"#re-view-overview")') &&
+    html.includes('id="re-flow-companies"') &&
+    html.includes("function renderFlowCompanyResults()"),
+);
 check("サブカテゴリー選択時に企業一覧へ自動スクロール", html.includes("if(traceable)requestAnimationFrame(function(){") && html.includes('root.querySelector("#re-list-title")') && html.includes('heading.scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"})'));
 check(
   "企業カードの評価ランク表示と色分けを撤去",
