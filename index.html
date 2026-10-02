@@ -29,17 +29,15 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,B
 .re-kicker{font:12px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.19em;color:var(--faint)}
 .re-title{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:30px;font-weight:500;margin:7px 0 0}
 .re-header{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
-.re-controls{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:15px}
+.re-view-tabs{display:flex;gap:6px;margin-top:18px;padding:4px;width:max-content;max-width:100%;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+.re-view-tab{border:0;border-radius:8px;padding:8px 16px;color:var(--sub)}
+.re-view-tab[aria-selected="true"]{background:var(--bg);color:var(--text);box-shadow:0 1px 4px color-mix(in srgb,var(--text) 12%,transparent)}
+.re-view-panel[hidden]{display:none!important}
+.re-controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:15px}
 button{font:13px inherit;color:var(--sub);background:transparent;border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer}
 button:hover{background:var(--panel-hi);color:var(--text)}
 button[aria-pressed="true"]{color:var(--text);border-color:var(--text);background:var(--panel-hi)}
-button[data-element="Y"]{--re-filter-color:var(--y)}
-button[data-element="DyTb"]{--re-filter-color:var(--dytb)}
-button[data-element="Sm"]{--re-filter-color:var(--sm)}
-button[data-element="Sc"]{--re-filter-color:var(--sc)}
-button[data-element]:not([data-element="all"]){color:var(--re-filter-color);border-color:var(--re-filter-color)}
-button[data-element]:not([data-element="all"]):hover{color:var(--re-filter-color);border-color:var(--re-filter-color);background:color-mix(in srgb,var(--re-filter-color) 14%,transparent)}
-button[data-element]:not([data-element="all"])[aria-pressed="true"]{color:var(--bg);border-color:var(--re-filter-color);background:var(--re-filter-color)}
+.re-all-elements{padding:8px 17px}
 .re-status{font-size:12px;color:var(--faint);margin-left:auto}
 .re-map-toolbar{display:flex;align-items:center;gap:12px;max-width:1500px;margin:12px auto 0}
 .re-map-help{font-size:11px;color:var(--faint);line-height:1.45}
@@ -74,10 +72,10 @@ button[data-element]:not([data-element="all"])[aria-pressed="true"]{color:var(--
 .re-card-count{position:absolute;right:8px;bottom:5px;font:10px ui-monospace,SFMono-Regular,Menlo,monospace;border:1px solid var(--line);border-radius:999px;padding:0 6px;color:var(--sub)}
 .re-card-tags{position:absolute;left:9px;bottom:5px;display:flex;gap:4px;margin:0;font:10px ui-monospace,SFMono-Regular,Menlo,monospace;line-height:1;white-space:nowrap}
 .re-stamp{position:absolute;border:1.5px solid var(--risk-a);color:var(--risk-a);border-radius:4px;padding:3px 8px;font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:11px;background:var(--bg)}
-.re-column-label{position:absolute;top:4px;width:168px;display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:7px;align-items:start}
-.re-column-label-code{font:10px ui-monospace,SFMono-Regular,Menlo,monospace;line-height:1.2;letter-spacing:.08em;color:var(--faint)}
-.re-column-label-title{grid-column:1;font-size:13px;font-weight:600;line-height:1.2;color:var(--text);margin-top:2px;overflow-wrap:anywhere}
-.re-column-label-count{grid-column:2;grid-row:1/span 2;align-self:center;border:1px solid var(--line);border-radius:999px;background:var(--panel);padding:1px 6px;color:var(--sub);font:10px ui-monospace,SFMono-Regular,Menlo,monospace;white-space:nowrap}
+.re-column-label{position:absolute;top:4px;width:168px;display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:9px;align-items:start}
+.re-column-label-code{font:600 10.5px ui-monospace,SFMono-Regular,Menlo,monospace;line-height:1.25;letter-spacing:.08em;color:var(--faint)}
+.re-column-label-title{grid-column:1;font-size:14.5px;font-weight:700;line-height:1.22;color:var(--text);margin-top:3px;overflow-wrap:anywhere}
+.re-column-label-count{grid-column:2;grid-row:1/span 2;align-self:center;border:1px solid color-mix(in srgb,var(--text) 28%,var(--line));border-radius:999px;background:var(--panel-hi);padding:3px 8px;color:var(--text);font:700 11.5px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.01em;white-space:nowrap;box-shadow:0 1px 2px color-mix(in srgb,var(--text) 8%,transparent)}
 .re-detail-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:18px 0 12px}
 .re-detail-head h2{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:19px;font-weight:500;margin:0}
 .re-detail-head span{font-size:12px;color:var(--faint)}
@@ -112,6 +110,56 @@ button[data-element]:not([data-element="all"])[aria-pressed="true"]{color:var(--
 .re-dep-evidence{font-size:12px;color:var(--sub);line-height:1.6}
 .re-dep-source{display:inline-block;margin-top:5px;color:var(--text);font-size:11px;text-underline-offset:3px}
 .re-dep-note{font-size:11px;color:var(--faint);line-height:1.65}
+.re-element-flow{margin-top:16px}
+.re-element-flow-head{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;flex-wrap:wrap;margin-bottom:12px}
+.re-element-flow-title{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:24px;font-weight:500;margin:0}
+.re-element-flow-lead{max-width:880px;margin:7px 0 0;color:var(--sub);font-size:12px;line-height:1.65}
+.re-element-flow-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.re-element-card-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:12px 0 16px}
+.re-element-card-grid button[data-flow-element="Y"],.re-element-card-grid button[data-element="Y"]{--re-filter-color:var(--y)}
+.re-element-card-grid button[data-flow-element="DyTb"],.re-element-card-grid button[data-element="DyTb"]{--re-filter-color:var(--dytb)}
+.re-element-card-grid button[data-flow-element="Sm"],.re-element-card-grid button[data-element="Sm"]{--re-filter-color:var(--sm)}
+.re-element-card-grid button[data-flow-element="Sc"],.re-element-card-grid button[data-element="Sc"]{--re-filter-color:var(--sc)}
+.re-element-card-grid button{min-width:0;min-height:142px;display:flex;flex-direction:column;align-items:stretch;color:var(--text);text-align:left;border-radius:12px;border-color:var(--line);padding:14px 16px;background:var(--panel);box-shadow:0 1px 3px color-mix(in srgb,var(--text) 8%,transparent);transition:border-color .15s ease,background .15s ease,box-shadow .15s ease,transform .15s ease}
+.re-element-card-grid button:hover{color:var(--text);border-color:color-mix(in srgb,var(--re-filter-color) 65%,var(--line));background:var(--panel-hi);transform:translateY(-1px)}
+.re-element-card-grid button[aria-pressed="true"]{color:var(--text);background:color-mix(in srgb,var(--re-filter-color) 7%,var(--panel));border-color:var(--re-filter-color);box-shadow:0 0 0 2px color-mix(in srgb,var(--re-filter-color) 20%,transparent),0 2px 5px color-mix(in srgb,var(--text) 9%,transparent)}
+.re-flow-option-symbol{display:flex;align-items:center;gap:9px;font-size:19px;line-height:1.15;font-weight:650}
+.re-flow-option-dot{width:10px;height:10px;flex:0 0 auto;border-radius:50%;background:var(--re-filter-color)}
+.re-flow-option-name{margin-top:6px;font-size:12px;font-weight:600;color:var(--text)}
+.re-flow-option-use{margin-top:7px;min-height:34px;font-size:10px;line-height:1.55;color:var(--sub)}
+.re-flow-option-dependency{display:flex;align-items:baseline;gap:6px;margin-top:auto;padding-top:12px}
+.re-flow-option-dependency strong{font-size:18px;line-height:1;color:var(--text)}
+.re-flow-option-dependency span{font-size:9px;line-height:1.35;color:var(--faint)}
+.re-flow-option-bar{height:5px;margin-top:9px;border-radius:999px;background:color-mix(in srgb,var(--line) 52%,transparent);overflow:hidden}
+.re-flow-option-bar span{display:block;width:var(--re-dependency);height:100%;border-radius:inherit;background:var(--re-filter-color)}
+.re-element-flow-frame{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:color-mix(in srgb,var(--panel) 35%,var(--bg))}
+.re-element-flow-canvas{display:block;width:100%;min-width:1200px;height:auto}
+.re-ef-stage-code{font:10px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.08em;fill:var(--faint)}
+.re-ef-stage-label{font-size:13px;font-weight:700;fill:var(--text)}
+.re-ef-stage-count-bg{opacity:.24;stroke-width:1}
+.re-ef-stage-count{font:700 11.5px ui-monospace,SFMono-Regular,Menlo,monospace;fill:var(--text);letter-spacing:.02em}
+.re-ef-stage-short{font-size:9.5px;fill:var(--sub)}
+.re-ef-link{stroke:none;opacity:.22;transition:opacity .15s ease}
+.re-element-flow-canvas .re-ef-link:hover{opacity:.5}
+.re-element-flow-canvas.is-tracing .re-ef-link{opacity:.055}
+.re-element-flow-canvas.is-tracing .re-ef-link.is-linked{opacity:.72}
+.re-element-flow-canvas.is-tracing .re-ef-link.is-linked:hover{opacity:.9}
+.re-ef-node{cursor:pointer;outline:none}
+.re-ef-node-bar{rx:3;transition:filter .15s ease,opacity .15s ease}
+.re-ef-node:hover .re-ef-node-bar,.re-ef-node:focus .re-ef-node-bar{filter:brightness(1.22)}
+.re-ef-node.is-selected .re-ef-node-bar{filter:brightness(1.24);stroke:var(--text);stroke-width:1.5}
+.re-ef-node-title{font-size:11.5px;font-weight:700;fill:var(--text);pointer-events:none}
+.re-ef-node-count-bg{opacity:.22;stroke-width:.8;pointer-events:none}
+.re-ef-node-count{font:700 10px ui-monospace,SFMono-Regular,Menlo,monospace;fill:var(--text);letter-spacing:.01em;pointer-events:none}
+.re-ef-node-meta{font-size:9px;fill:var(--faint);pointer-events:none}
+.re-ef-source-title{font-size:12px;font-weight:600;fill:var(--text);pointer-events:none}
+.re-element-flow-note{display:grid;grid-template-columns:auto 1fr;gap:10px;margin-top:9px;border:1px solid var(--line);border-radius:10px;background:var(--panel);padding:10px 12px;color:var(--sub);font-size:11px;line-height:1.6}
+.re-element-flow-swatch{width:34px;height:8px;margin-top:5px;border-radius:999px;background:var(--flow-color)}
+.re-element-flow-stats{font:10px ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--faint);margin-top:4px}
+.re-element-flow-results{margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}
+.re-element-flow-results-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:12px}
+.re-element-flow-results-head h2{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:21px;font-weight:500;margin:0}
+.re-element-flow-results-head span{font-size:11px;color:var(--faint)}
 .re-company{border-radius:10px;background:var(--panel);color:var(--text);border:1.5px solid var(--line);border-top:3px solid var(--risk-a);padding:12px 14px;text-align:left}
 .re-company[aria-pressed="true"]{background:var(--panel-hi)}
 .re-company-name{font-size:14px;font-weight:500}
@@ -132,8 +180,9 @@ button[data-element]:not([data-element="all"])[aria-pressed="true"]{color:var(--
 .re-more summary{width:max-content;color:var(--sc);font-size:11px;cursor:pointer}
 .re-more div{margin-top:6px;color:var(--sub)}
 @media(max-width:980px){.re-main{grid-template-columns:1fr}.re-dossier{position:static}}
+@media(max-width:900px){.re-element-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:720px){.re-dep-grid{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}}
-@media(max-width:560px){.re-shell{padding:18px 12px 36px}.re-title{font-size:23px}.re-status{margin-left:0;width:100%}.re-company-grid{grid-template-columns:1fr}.re-route-row{grid-template-columns:1fr}.re-route-elements{margin-top:-5px}}
+@media(max-width:560px){.re-shell{padding:18px 12px 36px}.re-title{font-size:23px}.re-view-tabs{width:100%}.re-view-tab{flex:1;padding:8px 10px}.re-status{margin-left:0;width:100%}.re-company-grid{grid-template-columns:1fr}.re-route-row{grid-template-columns:1fr}.re-route-elements{margin-top:-5px}.re-element-flow-title{font-size:21px}.re-element-card-grid{grid-template-columns:1fr}.re-element-card-grid button{min-height:132px}}
 @media(prefers-reduced-motion:reduce){.re-card{transition:none}}
 </style>
 </head>
@@ -143,13 +192,20 @@ button[data-element]:not([data-element="all"])[aria-pressed="true"]{color:var(--
     <header class="re-header">
       <div><div class="re-kicker">DUAL-USE SUPPLY CHAIN AUDIT — Y / Dy·Tb / Sm / Sc</div><h1 class="re-title">希土類デュアルユース・サプライチェーン監査</h1></div>
     </header>
+    <nav class="re-view-tabs" role="tablist" aria-label="表示モード">
+      <button class="re-view-tab" id="re-tab-overview" data-view="overview" type="button" role="tab" aria-selected="true" aria-controls="re-view-overview">サプライチェーン全体像</button>
+      <button class="re-view-tab" id="re-tab-element-flow" data-view="element-flow" type="button" role="tab" aria-selected="false" aria-controls="re-view-element-flow">元素別フロー</button>
+    </nav>
+    <section class="re-view-panel" id="re-view-overview" role="tabpanel" aria-labelledby="re-tab-overview">
     <div class="re-controls">
-      <button data-element="all" type="button" aria-pressed="true">全体</button>
-      <button data-element="Y" type="button" aria-pressed="false">Y</button>
-      <button data-element="DyTb" type="button" aria-pressed="false">Dy・Tb</button>
-      <button data-element="Sm" type="button" aria-pressed="false">Sm</button>
-      <button data-element="Sc" type="button" aria-pressed="false">Sc</button>
+      <button class="re-all-elements" data-element="all" type="button" aria-pressed="true">全元素を表示</button>
       <span class="re-status" id="re-status">統合データを準備中…</span>
+    </div>
+    <div class="re-element-card-grid re-overview-element-controls" aria-label="表示する希土類元素（複数選択可）">
+      <button data-element="Y" type="button" aria-pressed="true">Y</button>
+      <button data-element="DyTb" type="button" aria-pressed="true">Dy・Tb</button>
+      <button data-element="Sm" type="button" aria-pressed="true">Sm</button>
+      <button data-element="Sc" type="button" aria-pressed="true">Sc</button>
     </div>
     <div class="re-map-toolbar">
       <span class="re-map-help">全工程を横並びで表示します。下部のカテゴリーはページを縦にスクロールしてご覧ください。</span>
@@ -169,6 +225,36 @@ button[data-element]:not([data-element="all"])[aria-pressed="true"]{color:var(--
       <section class="re-company-grid" id="re-companies" aria-live="polite"></section>
       <aside id="re-dossier"><div class="re-empty">企業カードを選択すると、所有構造・売上・製品・市場地位・防衛接続・中国依存を表示します。</div></aside>
     </main>
+    </section>
+    <section class="re-view-panel re-element-flow" id="re-view-element-flow" role="tabpanel" aria-labelledby="re-tab-element-flow" hidden>
+      <div class="re-element-flow-head">
+        <div>
+          <h2 class="re-element-flow-title" id="re-element-flow-title">Y の工程フロー</h2>
+          <p class="re-element-flow-lead">希土類原料が素材、材料、部材、モジュール・機器を経て、装備・システムへ広がる経路を元素別に表示します。</p>
+        </div>
+        <div class="re-element-flow-actions"><button id="re-flow-to-overview" type="button">全体像で見る</button></div>
+      </div>
+      <div class="re-element-card-grid re-element-flow-controls" aria-label="表示する希土類元素">
+        <button data-flow-element="Y" type="button" aria-pressed="true">Y</button>
+        <button data-flow-element="DyTb" type="button" aria-pressed="false">Dy・Tb</button>
+        <button data-flow-element="Sm" type="button" aria-pressed="false">Sm</button>
+        <button data-flow-element="Sc" type="button" aria-pressed="false">Sc</button>
+      </div>
+      <div class="re-element-flow-frame" id="re-element-flow-frame">
+        <svg class="re-element-flow-canvas" id="re-element-flow-canvas" role="img" aria-labelledby="re-element-flow-title"></svg>
+      </div>
+      <div class="re-element-flow-note">
+        <span class="re-element-flow-swatch" aria-hidden="true"></span>
+        <div>各カテゴリーに出入りする帯の合計幅は、そのカテゴリーに所属する該当元素企業数に比例します。複数の接続がある場合は、相手側カテゴリーの企業数比で帯を配分します。物量・金額・実際の商流比率ではありません。線は「サプライチェーン全体像」と同じ監査済みカテゴリー接続だけを使用します。<div class="re-element-flow-stats" id="re-element-flow-stats"></div></div>
+      </div>
+      <section class="re-element-flow-results" id="re-element-flow-results" hidden>
+        <div class="re-element-flow-results-head"><h2 id="re-flow-list-title"></h2><span id="re-flow-list-count"></span></div>
+        <main class="re-main">
+          <section class="re-company-grid" id="re-flow-companies" aria-live="polite"></section>
+          <aside id="re-flow-dossier"><div class="re-empty">企業カードを選択すると、所有構造・売上・製品・市場地位・防衛接続・中国依存を表示します。</div></aside>
+        </main>
+      </section>
+    </section>
   </div>
 </div>
 <script>
@@ -187,7 +273,7 @@ button[data-element]:not([data-element="all"])[aria-pressed="true"]{color:var(--
   /* GENERATED DATA END */
   var allSubs=commerceSubs.concat(parts,modules,systems);
   var colors={Y:"var(--y)",DyTb:"var(--dytb)",Sm:"var(--sm)",Sc:"var(--sc)"};
-  var data=seed.slice(),allElements=["Y","DyTb","Sm","Sc"],selectedElements=["Y","DyTb","Sm","Sc"],selection={type:"all",id:"all"},traceNodeId=null,selectedId=null;
+  var data=seed.slice(),allElements=["Y","DyTb","Sm","Sc"],selectedElements=["Y","DyTb","Sm","Sc"],selection={type:"all",id:"all"},traceNodeId=null,selectedId=null,activeView="overview",flowElement="Y",flowSelectionId=null,flowSelectedId=null;
   function esc(v){return String(v==null?"":v).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]})}
   function summarizeItems(value,limit){
     var text=String(value||"").trim(),prefix="",body=text,match=text.match(/^(防衛装備庁納入品（[^）]+）：)(.*)$/);
@@ -400,6 +486,189 @@ button[data-element]:not([data-element="all"])[aria-pressed="true"]{color:var(--
   }
 
   function subLabel(id){var sub=allSubs.find(function(item){return item.id===id});return sub?sub.label:id}
+  function setView(view){
+    activeView=view;
+    root.querySelectorAll("[data-view]").forEach(function(button){
+      var selected=button.dataset.view===view;
+      button.setAttribute("aria-selected",String(selected));
+      button.setAttribute("tabindex",selected?"0":"-1")
+    });
+    root.querySelector("#re-view-overview").hidden=view!=="overview";
+    root.querySelector("#re-view-element-flow").hidden=view!=="element-flow";
+    requestAnimationFrame(function(){
+      if(view==="element-flow"){renderElementFlow();renderFlowCompanyResults()}
+    })
+  }
+  function flowCompanyCount(id,element){
+    return data.filter(function(company){return company.tags.indexOf(element)>=0&&company.subs.indexOf(id)>=0}).length
+  }
+  function flowStageCount(stage,element){
+    return data.filter(function(company){return company.tags.indexOf(element)>=0&&company.stages.indexOf(stage)>=0}).length
+  }
+  function shortenedLabel(value,limit){
+    var chars=Array.from(String(value||""));
+    return chars.length>limit?chars.slice(0,limit-1).join("")+"…":chars.join("")
+  }
+  var flowElementMeta={
+    Y:{symbol:"Y",name:"イットリウム",use:"遮熱・耐プラズマ皮膜、レーザー結晶、電子部品・電子管",dependency:"日本輸入の中国比率"},
+    DyTb:{symbol:"Dy・Tb",name:"ジスプロシウム・テルビウム",use:"高温でも磁力を保つ NdFeB 磁石、モータ・アクチュエータ",dependency:"重希土類輸入の中国依存"},
+    Sm:{symbol:"Sm",name:"サマリウム",use:"耐熱性の高い SmCo 磁石、マイクロ波電子管",dependency:"中国供給シェア"},
+    Sc:{symbol:"Sc",name:"スカンジウム",use:"軽量高強度 Al 合金、ScAlN 圧電薄膜、SOFC 電解質",dependency:"中国生産シェア（概算）"}
+  };
+  function renderElementControlCards(selector){
+    root.querySelectorAll(selector).forEach(function(button){
+      var element=button.dataset.flowElement||button.dataset.element,meta=flowElementMeta[element],dep=dependencyRows.find(function(row){return row.tag===element}),china=dep?dep.china:0;
+      button.style.setProperty("--re-dependency",Math.max(0,Math.min(100,china))+"%");
+      button.setAttribute("aria-label",meta.symbol+" "+meta.name+"。"+meta.use+"。"+meta.dependency+china+"パーセント");
+      button.innerHTML='<span class="re-flow-option-symbol"><span class="re-flow-option-dot" aria-hidden="true"></span>'+esc(meta.symbol)+'</span><span class="re-flow-option-name">'+esc(meta.name)+'</span><span class="re-flow-option-use">'+esc(meta.use)+'</span><span class="re-flow-option-dependency"><strong>'+china+'%</strong><span>'+esc(meta.dependency)+'</span></span><span class="re-flow-option-bar" aria-hidden="true"><span></span></span>'
+    })
+  }
+  function renderFlowElementControls(){renderElementControlCards("[data-flow-element]")}
+  function renderOverviewElementControls(){renderElementControlCards('[data-element]:not([data-element="all"])')}
+  function renderElementFlow(){
+    if(activeView!=="element-flow")return;
+    renderFlowElementControls();
+    var frame=root.querySelector("#re-element-flow-frame"),svg=root.querySelector("#re-element-flow-canvas");
+    var W=Math.max(1200,Math.floor(frame.clientWidth||1200)),left=34,right=245,top=112,bottom=54,nodeGap=24,companyScale=5;
+    var stageMap=Object.fromEntries(stages.map(function(stage){return[stage.id,stage]}));
+    var order={};Object.keys(columnOrder).forEach(function(stage){columnOrder[stage].forEach(function(id,index){order[id]=index})});
+    var byStage={};
+    for(var stage=2;stage<=6;stage++)byStage[stage]=allSubs.filter(function(item){return item.stage===stage&&item.els.indexOf(flowElement)>=0&&flowCompanyCount(item.id,flowElement)>0}).sort(function(a,b){return(order[a.id]||0)-(order[b.id]||0)});
+    var columnSpans=Object.keys(byStage).map(function(stage){
+      var items=byStage[stage];
+      return items.reduce(function(sum,item){return sum+Math.max(8,flowCompanyCount(item.id,flowElement)*companyScale)},0)+Math.max(0,items.length-1)*nodeGap
+    });
+    var H=Math.max(760,top+bottom+Math.max.apply(null,[1].concat(columnSpans)));
+    var step=(W-left-right)/5,positions={},nodes=[];
+    function positionColumn(items,stage){
+      var heights=items.map(function(item){return Math.max(8,flowCompanyCount(item.id,flowElement)*companyScale)});
+      var span=heights.reduce(function(sum,height){return sum+height},0)+Math.max(0,items.length-1)*nodeGap;
+      var cursor=top+(H-top-bottom-span)/2;
+      items.forEach(function(item,index){
+        var count=flowCompanyCount(item.id,flowElement),height=heights[index];
+        var pos={id:item.id,item:item,stage:stage,count:count,x:left+(stage-1)*step,y:cursor+height/2,h:height,incoming:[],outgoing:[]};
+        cursor+=height+nodeGap;positions[item.id]=pos;nodes.push(pos)
+      })
+    }
+    Object.keys(byStage).forEach(function(stage){positionColumn(byStage[stage],Number(stage))});
+    var dep=dependencyRows.find(function(row){return row.tag===flowElement});
+    var source={id:"flow-source",stage:1,count:flowStageCount(2,flowElement),x:left,y:H/2,h:Math.max(8,flowStageCount(2,flowElement)*companyScale),incoming:[],outgoing:[]};
+    positions[source.id]=source;
+    var edges=[];
+    byStage[2].forEach(function(target){edges.push({from:source.id,to:target.id})});
+    nodes.forEach(function(target){
+      if(target.stage<=2)return;
+      var incoming=(target.item.src||[]).filter(function(sourceId){return positions[sourceId]&&(target.item.srcEls[sourceId]||[]).indexOf(flowElement)>=0});
+      incoming.forEach(function(sourceId){edges.push({from:sourceId,to:target.id})})
+    });
+    edges.forEach(function(edge){
+      edge.a=positions[edge.from];edge.b=positions[edge.to];edge.a.outgoing.push(edge);edge.b.incoming.push(edge)
+    });
+    var linkedEdges=new Set();
+    function traceFlow(direction){
+      var frontier=[flowSelectionId],visited=new Set(frontier);
+      while(frontier.length){
+        var nodeId=frontier.pop();
+        edges.forEach(function(edge){
+          var matches=direction==="up"?edge.to===nodeId:edge.from===nodeId;
+          if(!matches)return;
+          linkedEdges.add(edge);
+          var next=direction==="up"?edge.from:edge.to;
+          if(!visited.has(next)){visited.add(next);frontier.push(next)}
+        })
+      }
+    }
+    if(flowSelectionId){traceFlow("up");traceFlow("down")}
+    [source].concat(nodes).forEach(function(node){
+      node.outgoing.sort(function(a,b){return a.b.y-b.b.y});
+      node.incoming.sort(function(a,b){return a.a.y-b.a.y});
+      var outgoingWeight=node.outgoing.reduce(function(sum,edge){return sum+edge.b.count},0),outCursor=node.y-node.h/2;
+      node.outgoing.forEach(function(edge){edge.fromH=node.h*edge.b.count/Math.max(1,outgoingWeight);edge.fromY=outCursor+edge.fromH/2;outCursor+=edge.fromH});
+      var incomingWeight=node.incoming.reduce(function(sum,edge){return sum+edge.a.count},0),inCursor=node.y-node.h/2;
+      node.incoming.forEach(function(edge){edge.toH=node.h*edge.a.count/Math.max(1,incomingWeight);edge.toY=inCursor+edge.toH/2;inCursor+=edge.toH})
+    });
+    var flowColor=colors[flowElement];
+    function ribbon(edge){
+      var x1=edge.a.x+8,x2=edge.b.x,mid=x1+(x2-x1)*.5;
+      var aTop=edge.fromY-edge.fromH/2,aBottom=edge.fromY+edge.fromH/2,bTop=edge.toY-edge.toH/2,bBottom=edge.toY+edge.toH/2;
+      return"M"+x1+","+aTop+" C"+mid+","+aTop+" "+mid+","+bTop+" "+x2+","+bTop+" L"+x2+","+bBottom+" C"+mid+","+bBottom+" "+mid+","+aBottom+" "+x1+","+aBottom+" Z"
+    }
+    function nodeMarkup(node){
+      var label=node.item.label,meta=node.count+"社",countWidth=20+Array.from(meta).length*6.5;
+      return'<g class="re-ef-node'+(flowSelectionId===node.id?' is-selected':'')+'" data-flow-node="'+node.id+'" tabindex="0" role="button" aria-label="'+esc(label+"、"+meta)+'">'+
+        '<rect class="re-ef-node-bar" x="'+node.x+'" y="'+(node.y-node.h/2)+'" width="8" height="'+node.h+'" fill="'+flowColor+'"></rect>'+
+        '<text class="re-ef-node-title" x="'+(node.x+15)+'" y="'+(node.y-4)+'">'+esc(shortenedLabel(label,16))+'</text>'+
+        '<rect class="re-ef-node-count-bg" x="'+(node.x+14)+'" y="'+(node.y+2)+'" width="'+countWidth+'" height="18" rx="9" fill="'+flowColor+'" stroke="'+flowColor+'"></rect>'+
+        '<text class="re-ef-node-count" x="'+(node.x+21)+'" y="'+(node.y+14.5)+'">'+meta+'</text></g>'
+    }
+    var title=tagLabel(flowElement)+" の工程フロー";
+    root.querySelector("#re-element-flow-title").textContent=title;
+    root.querySelectorAll("[data-flow-element]").forEach(function(button){button.setAttribute("aria-pressed",String(button.dataset.flowElement===flowElement))});
+    root.querySelector(".re-element-flow-swatch").style.setProperty("--flow-color",flowColor);
+    var markup='<title>'+esc(title)+'。Stage 01から06までのカテゴリー間フロー</title>';
+    stages.forEach(function(stage){
+      var x=left+(stage.id-1)*step,stageCount=flowStageCount(stage.id,flowElement),countLabel=stageCount+'社',countWidth=26+Array.from(countLabel).length*7.2;
+      markup+='<text class="re-ef-stage-code" x="'+x+'" y="28">STAGE '+stage.code+'</text><text class="re-ef-stage-label" x="'+x+'" y="48">'+esc(stage.label)+'</text><rect class="re-ef-stage-count-bg" x="'+x+'" y="56" width="'+countWidth+'" height="21" rx="10.5" fill="'+flowColor+'" stroke="'+flowColor+'"></rect><text class="re-ef-stage-count" x="'+(x+9)+'" y="70.5">'+countLabel+'</text><text class="re-ef-stage-short" x="'+x+'" y="94">'+esc(shortenedLabel(stage.short,28))+'</text>'
+    });
+    markup+='<g aria-hidden="true">'+edges.map(function(edge){
+      var from=edge.from===source.id?stageMap[1].label:edge.a.item.label,to=edge.b.item.label;
+      return'<path class="re-ef-link'+(linkedEdges.has(edge)?' is-linked':'')+'" d="'+ribbon(edge)+'" fill="'+flowColor+'"><title>'+esc(from+" "+edge.a.count+"社 → "+to+" "+edge.b.count+"社 / "+tagLabel(flowElement))+'</title></path>'
+    }).join("")+'</g>';
+    var chinaText=dep?"中国比率 "+dep.china+"%":"中国比率は資料参照";
+    markup+='<g class="re-ef-source"><rect class="re-ef-node-bar" x="'+source.x+'" y="'+(source.y-source.h/2)+'" width="8" height="'+source.h+'" fill="'+flowColor+'"></rect><text class="re-ef-source-title" x="'+(source.x+15)+'" y="'+(source.y-4)+'">海外の資源・分離</text><text class="re-ef-node-meta" x="'+(source.x+15)+'" y="'+(source.y+13)+'">'+esc(chinaText)+'</text></g>';
+    markup+=nodes.map(nodeMarkup).join("");
+    svg.setAttribute("viewBox","0 0 "+W+" "+H);
+    svg.setAttribute("width",W);svg.setAttribute("height",H);svg.style.height=H+"px";svg.classList.toggle("is-tracing",!!flowSelectionId);svg.innerHTML=markup;
+    root.querySelector("#re-element-flow-stats").textContent=tagLabel(flowElement)+"："+nodes.length+"カテゴリー・"+edges.length+"接続・"+data.filter(function(company){return company.tags.indexOf(flowElement)>=0}).length+"社／事業単位";
+    function openNode(id){
+      flowSelectionId=id;flowSelectedId=null;renderElementFlow();renderFlowCompanyResults();
+      requestAnimationFrame(function(){var heading=root.querySelector("#re-flow-list-title");if(heading)heading.scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"})})
+    }
+    svg.querySelectorAll("[data-flow-node]").forEach(function(node){
+      node.addEventListener("click",function(){openNode(node.dataset.flowNode)});
+      node.addEventListener("keydown",function(event){if(event.key==="Enter"||event.key===" "){event.preventDefault();openNode(node.dataset.flowNode)}})
+    })
+  }
+  function flowDossierMarkup(company){
+    if(!company)return'<div class="re-empty">企業カードを選択すると、所有構造・売上・製品・市場地位・防衛接続・中国依存を表示します。</div>';
+    var subLabels=company.subs.map(function(id){var sub=allSubs.find(function(item){return item.id===id});return(sub||{label:id}).label}).join(" / ");
+    var rows=[
+      ["所有・上場",company.own],["売上規模",company.rev],["主要製品",company.prod],["市場での地位",marketPosition(company.pos)],
+      ["防衛・航空宇宙",company.def],["防衛装備庁調達実績",company.atlaProcurement?"防衛装備庁調達実績あり":""],["調達品目判定（人力確認）",company.atla?company.atla.decision:""],["希土類判定（調達品目基準）",company.atla?company.atla.rareEarthFlags:""],["中国依存",company.chn],["BOM根拠",company.bom],["追加DDギャップ",company.gap],["帰属工程",company.stages.map(function(stage){return"Stage 0"+stage}).join(" / ")],
+      ["サブカテゴリー",subLabels],["参照元",company.src],["注記",company.note]
+    ].filter(function(row){return row[1]});
+    return'<div class="re-dossier"><div class="re-dossier-title"><strong>'+esc(company.name)+'</strong></div><dl>'+rows.map(function(row){
+      var display=(row[0]==="主要製品"||row[0]==="防衛・航空宇宙")?summarizeItems(row[1],5):{short:row[1],full:row[1],hidden:0};
+      var more=display.hidden?'<details class="re-more"><summary>全'+(display.hidden+5)+'件を表示</summary><div>'+esc(display.full)+'</div></details>':'';
+      return'<div class="re-dossier-row"><dt>'+esc(row[0])+'</dt><dd>'+esc(display.short)+more+'</dd></div>'
+    }).join("")+'</dl></div>'
+  }
+  function renderFlowCompanyResults(){
+    var section=root.querySelector("#re-element-flow-results");
+    if(!flowSelectionId){section.hidden=true;return}
+    var sub=allSubs.find(function(item){return item.id===flowSelectionId});
+    var items=data.filter(function(company){return company.tags.indexOf(flowElement)>=0&&company.subs.indexOf(flowSelectionId)>=0});
+    section.hidden=false;
+    root.querySelector("#re-flow-list-title").textContent=tagLabel(flowElement)+" — "+(sub?sub.label:flowSelectionId);
+    root.querySelector("#re-flow-list-count").textContent=items.length+"社・事業単位";
+    var box=root.querySelector("#re-flow-companies");
+    box.innerHTML=items.length?items.map(function(company){
+      var tagHtml=company.tags.map(function(tag){return'<span class="re-tag" style="color:'+colors[tag]+';border-color:'+colors[tag]+'">'+tagLabel(tag)+'</span>'}).join("");
+      if(company.atlaProcurement)tagHtml+='<span class="re-tag re-atla-badge">防衛装備庁調達実績あり</span>';
+      var summary=companySummary(company);
+      return'<button type="button" class="re-company" data-flow-company="'+esc(company.id)+'" aria-pressed="'+(flowSelectedId===company.id)+'"><div class="re-company-name">'+esc(company.name)+'</div><div class="re-tags">'+tagHtml+'</div><div class="re-company-pos" title="'+esc(summary.full)+'">'+esc(summary.short)+'</div></button>'
+    }).join(""):'<div class="re-empty">このカテゴリーに該当する企業はありません。</div>';
+    var dossier=root.querySelector("#re-flow-dossier"),selected=data.find(function(company){return company.id===flowSelectedId});
+    dossier.innerHTML=flowDossierMarkup(selected);
+    box.querySelectorAll("[data-flow-company]").forEach(function(button){button.addEventListener("click",function(){
+      flowSelectedId=button.dataset.flowCompany;renderFlowCompanyResults();
+      requestAnimationFrame(function(){
+        var heading=dossier.querySelector(".re-dossier-title");if(!heading)return;
+        var rect=heading.getBoundingClientRect(),inView=rect.top>=0&&rect.bottom<=window.innerHeight&&rect.left>=0&&rect.right<=window.innerWidth;
+        if(!inView)dossier.scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"})
+      })
+    })})
+  }
   function renderRouteNote(){
     var holder=root.querySelector("#re-route-note"),rows=[];
     if(selection.type==="sub"){
@@ -493,6 +762,7 @@ button[data-element]:not([data-element="all"])[aria-pressed="true"]{color:var(--
   }
 
   function render(){
+    renderOverviewElementControls();
     root.querySelectorAll("[data-element]").forEach(function(btn){
       var key=btn.dataset.element;
       var pressed=key==="all"?selectedElements.length===allElements.length:selectedElements.indexOf(key)>=0;
@@ -524,6 +794,28 @@ button[data-element]:not([data-element="all"])[aria-pressed="true"]{color:var(--
     traceNodeId=null;selectedId=null;
     render()
   })});
+  root.querySelectorAll("[data-view]").forEach(function(button){button.addEventListener("click",function(){setView(button.dataset.view)})});
+  root.querySelectorAll("[data-flow-element]").forEach(function(button){button.addEventListener("click",function(){
+    flowElement=button.dataset.flowElement;flowSelectionId=null;flowSelectedId=null;renderElementFlow();renderFlowCompanyResults()
+  })});
+  root.querySelector("#re-flow-to-overview").addEventListener("click",function(){
+    selectedElements=[flowElement];selection={type:"all",id:"all"};traceNodeId=null;selectedId=null;setView("overview");render()
+  });
+  root.querySelector("#re-element-flow-frame").addEventListener("click",function(event){
+    var canvas=root.querySelector("#re-element-flow-canvas");
+    if(event.target!==this&&event.target!==canvas)return;
+    if(flowSelectedId){
+      flowSelectedId=null;renderFlowCompanyResults();return
+    }
+    if(flowSelectionId){
+      flowSelectionId=null;flowSelectedId=null;renderElementFlow();renderFlowCompanyResults()
+    }
+  });
+  var elementFlowResizeTimer=null;
+  if(window.ResizeObserver)new ResizeObserver(function(){
+    if(activeView!=="element-flow")return;
+    clearTimeout(elementFlowResizeTimer);elementFlowResizeTimer=setTimeout(renderElementFlow,80)
+  }).observe(root.querySelector("#re-element-flow-frame"));
   var searchInput=root.querySelector("#re-company-search");
   function updateSearch(){selectedId=null;renderList();renderDossier()}
   searchInput.addEventListener("input",function(event){if(!event.isComposing)updateSearch()});
