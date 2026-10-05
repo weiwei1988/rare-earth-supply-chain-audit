@@ -1,44 +1,125 @@
-// 生成領域（GENERATED DATA START / END）を取り出して評価するユーティリティ。
-// マーカーで区切るため、整形やインデントを変えても抽出が壊れない。
+// 生成領域を安全なJSONデータとして直列化・抽出するユーティリティ。
+// 生成物はコードとして評価せず、許可した代入文だけをJSON.parseする。
 const START = "GENERATED DATA START";
 const END = "GENERATED DATA END";
+const START_LINE = /^[ \t]*\/\* GENERATED DATA START\b[^\r\n]*\*\/[ \t]*$/gm;
+const END_LINE = /^[ \t]*\/\* GENERATED DATA END \*\/[ \t]*$/gm;
+
+function marker(source, pattern, label, path) {
+  const matches = [...source.matchAll(pattern)];
+  if (matches.length !== 1) throw new Error(`${path} に生成領域の${label}マーカーが${matches.length}件あります。`);
+  return matches[0];
+}
+
+function bounds(source, path) {
+  const start = marker(source, START_LINE, START, path);
+  const end = marker(source, END_LINE, END, path);
+  if (end.index <= start.index) throw new Error(`${path} の生成領域マーカーの順序が不正です。`);
+  const bodyStart = source.indexOf("\n", start.index + start[0].length) + 1;
+  const bodyEnd = source.lastIndexOf("\n", end.index);
+  if (bodyStart <= 0 || bodyEnd < bodyStart) throw new Error(`${path} の生成領域に改行がありません。`);
+  return { start, end, bodyStart, bodyEnd };
+}
+
+// JSONをHTMLのscript raw-text内に置いても終了タグを作らない表現にする。
+// U+2028/U+2029もJavaScriptソースとの互換性のため明示的にエスケープする。
+export function serializeGeneratedJson(value, indent) {
+  return JSON.stringify(value, null, indent || undefined)
+    .replace(/</g, "\\u003c")
+    .replace(/\u2028/g, "\\u2028")
+    .replace(/\u2029/g, "\\u2029");
+}
 
 export function readGeneratedRegion(source, path) {
-  const startIndex = source.indexOf(START);
-  const endIndex = source.indexOf(END, startIndex + START.length);
-  if (startIndex < 0 || endIndex < 0) throw new Error(`${path} に生成領域のマーカーがありません。`);
-  if (source.indexOf(START, startIndex + START.length) >= 0) throw new Error(`${path} に生成領域が2つ以上あります。`);
-  const bodyStart = source.indexOf("\n", startIndex) + 1;
-  const bodyEnd = source.lastIndexOf("\n", endIndex);
+  const { bodyStart, bodyEnd } = bounds(source, path);
   return source.slice(bodyStart, bodyEnd);
 }
 
-// index.html の生成領域は depColors（CSS変数への対応表）を参照する。
-const DEP_COLORS = {
-  A: "var(--risk-a)",
-  Y: "var(--y)",
-  DyTb: "var(--dytb)",
-  Sm: "var(--sm)",
-  Sc: "var(--sc)",
-  line: "var(--line)",
-};
-
-export function evaluateHtmlData(html) {
-  const region = readGeneratedRegion(html, "index.html");
-  return new Function("depColors", `${region}\nreturn {seed,stages,commerceSubs,parts,modules,systems,columnOrder,dependencyRows};`)(DEP_COLORS);
+export function replaceGeneratedRegion(source, generated, path) {
+  const { start, end } = bounds(source, path);
+  const head = source.slice(0, source.lastIndexOf("\n", start.index) + 1);
+  const tail = source.slice(source.indexOf("\n", end.index + end[0].length) + 1);
+  return head + generated + tail;
 }
 
-// JSX の生成領域は COLORS（CSS変数への対応表）を参照する。
-const JSX_COLORS = {
-  A: "var(--re-risk-a)",
-  Y: "var(--re-y)",
-  DyTb: "var(--re-dytb)",
-  Sm: "var(--re-sm)",
-  Sc: "var(--re-sc)",
-  line: "var(--re-line)",
-};
+function skipWhitespace(source, cursor) {
+  while (cursor < source.length && /\s/u.test(source[cursor])) cursor += 1;
+  return cursor;
+}
 
-export function evaluateJsxData(jsx) {
-  const region = readGeneratedRegion(jsx, "src/希土類サプライチェーン.jsx");
-  return new Function("COLORS", `${region}\nreturn {STAGES,SUBCATS,SEED,DEPENDENCY_ROWS};`)(JSX_COLORS);
+function parseDeclaration(region, cursor, declaration, path) {
+  cursor = skipWhitespace(region, cursor);
+  if (!region.startsWith(declaration, cursor)) {
+    throw new Error(`${path} の生成領域に ${declaration} が所定の位置にありません。`);
+  }
+  cursor = skipWhitespace(region, cursor + declaration.length);
+  const start = cursor;
+  const opening = region[cursor];
+  if (opening !== "[" && opening !== "{") throw new Error(`${path} の ${declaration} はJSON配列またはオブジェクトではありません。`);
+
+  const stack = [];
+  let inString = false;
+  let escaped = false;
+  for (; cursor < region.length; cursor += 1) {
+    const char = region[cursor];
+    if (inString) {
+      if (escaped) escaped = false;
+      else if (char === "\\") escaped = true;
+      else if (char === '"') inString = false;
+      continue;
+    }
+    if (char === '"') {
+      inString = true;
+      continue;
+    }
+    if (char === "[" || char === "{") stack.push(char);
+    else if (char === "]" || char === "}") {
+      const expected = char === "]" ? "[" : "{";
+      if (stack.pop() !== expected) throw new Error(`${path} の ${declaration} の括弧が不正です。`);
+      if (!stack.length) {
+        const json = region.slice(start, cursor + 1);
+        cursor = skipWhitespace(region, cursor + 1);
+        if (region[cursor] !== ";") throw new Error(`${path} の ${declaration} の末尾にセミコロンがありません。`);
+        return { value: JSON.parse(json), cursor: cursor + 1 };
+      }
+    }
+  }
+  throw new Error(`${path} の ${declaration} が完結していません。`);
+}
+
+function parseDeclarations(source, path, declarations) {
+  const region = readGeneratedRegion(source, path);
+  const values = {};
+  let cursor = 0;
+  for (const [declaration, name] of declarations) {
+    const parsed = parseDeclaration(region, cursor, declaration, path);
+    values[name] = parsed.value;
+    cursor = parsed.cursor;
+  }
+  if (skipWhitespace(region, cursor) !== region.length) {
+    throw new Error(`${path} の生成領域に許可されていない文があります。`);
+  }
+  return values;
+}
+
+export function parseHtmlData(html) {
+  return parseDeclarations(html, "index.html", [
+    ["var seed=", "seed"],
+    ["var stages=", "stages"],
+    ["var commerceSubs=", "commerceSubs"],
+    ["var parts=", "parts"],
+    ["var modules=", "modules"],
+    ["var systems=", "systems"],
+    ["var columnOrder=", "columnOrder"],
+    ["var dependencyRows=", "dependencyRows"],
+  ]);
+}
+
+export function parseJsxData(jsx) {
+  return parseDeclarations(jsx, "src/希土類サプライチェーン.jsx", [
+    ["const STAGES =", "STAGES"],
+    ["const SUBCATS =", "SUBCATS"],
+    ["const SEED =", "SEED"],
+    ["const DEPENDENCY_ROWS =", "DEPENDENCY_ROWS"],
+  ]);
 }

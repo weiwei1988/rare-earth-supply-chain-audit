@@ -1,7 +1,7 @@
 // 静的QA。src/data/*.json と生成物が一致し、6工程の元素別接続が公開境界を守ることを検査する。
 import fs from "node:fs/promises";
 import { loadDataset, fatal, ELEMENTS } from "./lib/dataset.mjs";
-import { readGeneratedRegion, evaluateHtmlData, evaluateJsxData } from "./lib/generated.mjs";
+import { readGeneratedRegion, parseHtmlData, parseJsxData } from "./lib/generated.mjs";
 
 const failures = [];
 const report = {};
@@ -98,8 +98,8 @@ const legacySubIds = ["02_trade", "03_magnet", "03_precursor", "04_opt", "04_coa
 check("廃止サブカテゴリーIDを企業分類から除去", dataset.companies.every((company) => company.subs.every((id) => !legacySubIds.includes(id))));
 
 // --- 生成物の同期 ---------------------------------------------------------
-const htmlData = evaluateHtmlData(html);
-const jsxData = evaluateJsxData(jsx);
+const htmlData = parseHtmlData(html);
+const jsxData = parseJsxData(jsx);
 check("index.html の企業データがJSONと一致", sameJson(htmlData.seed, dataset.companies));
 check("JSX の企業データがJSONと一致", sameJson(jsxData.SEED, dataset.companies));
 const htmlSubs = [...htmlData.commerceSubs, ...htmlData.parts, ...htmlData.modules, ...htmlData.systems];
@@ -108,8 +108,7 @@ check("index.html の列順がJSONと一致", sameJson(htmlData.columnOrder, dat
 check("JSX のサブカテゴリーがJSONと一致", sameJson(jsxData.SUBCATS, dataset.subcategories));
 check("JSX の工程がJSONと一致", sameJson(jsxData.STAGES, dataset.stages));
 check("index.html の工程見出しがJSONと一致", sameJson(htmlData.stages, dataset.stages));
-const dependencyShape = (rows) => rows.map((row) => ({ id: row.id, china: row.china, values: row.segments.map((segment) => segment.value) }));
-check("中国依存データの生成物同期", sameJson(dependencyShape(htmlData.dependencyRows), dependencyShape(dataset.dependency)) && sameJson(dependencyShape(jsxData.DEPENDENCY_ROWS), dependencyShape(dataset.dependency)));
+check("中国依存データの生成物同期", sameJson(htmlData.dependencyRows, dataset.dependency) && sameJson(jsxData.DEPENDENCY_ROWS, dataset.dependency));
 
 // --- 公開画面の構造 -------------------------------------------------------
 check("index.html に iframe がない", !/<iframe/i.test(html));

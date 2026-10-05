@@ -8489,22 +8489,22 @@ const DEPENDENCY_ROWS = [
       {
         "name": "中国",
         "value": 94,
-        "color": COLORS.A
+        "color": "A"
       },
       {
         "name": "豪州",
         "value": 3,
-        "color": COLORS.Y
+        "color": "Y"
       },
       {
         "name": "米国",
         "value": 2,
-        "color": COLORS.Sc
+        "color": "Sc"
       },
       {
         "name": "その他",
         "value": 1,
-        "color": COLORS.line
+        "color": "line"
       }
     ],
     "evidence": "財務省貿易統計を基にした純分数量。中国961t／合計1,019t。",
@@ -8522,7 +8522,7 @@ const DEPENDENCY_ROWS = [
       {
         "name": "中国",
         "value": 100,
-        "color": COLORS.A
+        "color": "A"
       }
     ],
     "evidence": "経済産業省は重希土類の輸入について中国依存度100%と整理。元素別通関値ではなくDy・Tbを含む重希土類区分。",
@@ -8540,7 +8540,7 @@ const DEPENDENCY_ROWS = [
       {
         "name": "中国",
         "value": 100,
-        "color": COLORS.A
+        "color": "A"
       }
     ],
     "evidence": "経済産業省は重希土類の輸入について中国依存度100%と整理。元素別通関値ではなくDy・Tbを含む重希土類区分。",
@@ -8558,12 +8558,12 @@ const DEPENDENCY_ROWS = [
       {
         "name": "中国",
         "value": 99,
-        "color": COLORS.A
+        "color": "A"
       },
       {
         "name": "中国以外",
         "value": 1,
-        "color": COLORS.line
+        "color": "line"
       }
     ],
     "evidence": "Benchmark Mineral Intelligenceの2025年版資料にある「Samarium (Sm) Oxide Supply (2024)」では、中国99%、中国以外1%。調査会社による2024年の酸化物供給構成の推計で、日本の輸入依存度や鉱山生産シェアではありません。2026年現在の比率を示すものではありません。",
@@ -8581,22 +8581,22 @@ const DEPENDENCY_ROWS = [
       {
         "name": "中国",
         "value": 83,
-        "color": COLORS.A
+        "color": "A"
       },
       {
         "name": "カナダ（設備能力上限）",
         "value": 7.5,
-        "color": COLORS.Y
+        "color": "Y"
       },
       {
         "name": "ロシア",
         "value": 2.3,
-        "color": COLORS.DyTb
+        "color": "DyTb"
       },
       {
         "name": "日本・フィリピン等（残差）",
         "value": 7.2,
-        "color": COLORS.line
+        "color": "line"
       }
     ],
     "evidence": "2024年の世界生産40tを基準に、Rio Tintoの中国約83%推計、カナダの設備能力3t/年（世界比最大7.5%）、USGSのロシア実生産0.9t（約2.3%）を組み合わせた概算。日本・フィリピン等7.2%は差し引き残差です。カナダは実生産シェアではなく設備能力上限であり、各区分は同一統計による厳密な国別内訳ではありません。",
@@ -8640,7 +8640,7 @@ function pieGradient(segments) {
   return "conic-gradient(" + segments.map((segment) => {
     const from = at;
     at += segment.value;
-    return segment.color + " " + from + "% " + at + "%";
+    return (COLORS[segment.color] || COLORS.line) + " " + from + "% " + at + "%";
   }).join(",") + ")";
 }
 
@@ -8836,7 +8836,7 @@ export default function RareEarthDDExplorer() {
                         <div className="re-dep-head"><div className="re-dep-element"><i style={{ background: COLORS[row.tag] }} />{row.label}</div><span className="re-dep-badge">{row.quality}</span></div>
                         <div className="re-dep-metric">{row.metric}</div>
                         <div className="re-dep-pie" role="img" aria-label={row.label + "の中国比率" + row.china + "%"} style={{ background: pieGradient(row.segments) }}><div className="re-dep-pie-value"><strong>{row.china}%</strong><span>中国</span></div></div>
-                        <div className="re-dep-legend">{row.segments.map((segment) => <div className="re-dep-legend-item" key={segment.name}><i style={{ background: segment.color }} /><span>{segment.name}</span><strong>{segment.value}%</strong></div>)}</div>
+                        <div className="re-dep-legend">{row.segments.map((segment) => <div className="re-dep-legend-item" key={segment.name}><i style={{ background: COLORS[segment.color] || COLORS.line }} /><span>{segment.name}</span><strong>{segment.value}%</strong></div>)}</div>
                         <div className="re-dep-evidence">{row.evidence}<br /><a className="re-dep-source" href={row.url} target="_blank" rel="noopener noreferrer">{row.source}</a></div>
                       </article>
                     ))}
