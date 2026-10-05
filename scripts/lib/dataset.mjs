@@ -39,6 +39,31 @@ function assertSubset(values, allowed, label) {
   if (invalid.length) throw new ValidationError(`${label}に未知の値があります: ${[...new Set(invalid)].join(", ")}`);
 }
 
+export function assertValidSubcategoryId(id, stage) {
+  const match = typeof id === "string" ? id.match(/^0[2-6]_[a-z0-9_]+/u) : null;
+  if (!match || match[0].length !== id.length) {
+    throw new ValidationError(`サブカテゴリーIDが不正です: ${JSON.stringify(id)}`);
+  }
+  if (id.slice(0, 2) !== String(stage).padStart(2, "0")) {
+    throw new ValidationError(`${id} のID接頭辞が工程 ${stage} と一致しません。`);
+  }
+}
+
+export function assertPublicHttpsUrl(value, label) {
+  if (typeof value !== "string" || value !== value.trim() || /[\u0000-\u001f\u007f"'<>\\]/u.test(value)) {
+    throw new ValidationError(`${label}が不正です。`);
+  }
+  let parsed;
+  try {
+    parsed = new URL(value);
+  } catch {
+    throw new ValidationError(`${label}が不正です。`);
+  }
+  if (parsed.protocol !== "https:" || parsed.username || parsed.password) {
+    throw new ValidationError(`${label}は認証情報を含まないHTTPS URLである必要があります。`);
+  }
+}
+
 export async function loadDataset() {
   const [stages, subcategories, companies, dependency, columnOrder] = await Promise.all([
     readJson("stages"),
@@ -79,7 +104,7 @@ export async function loadDataset() {
       if (typeof sub[key] !== "string" || !sub[key].trim()) throw new ValidationError(`${sub.id} に ${key} がありません。`);
     }
     if (!stageIds.includes(sub.stage)) throw new ValidationError(`${sub.id} の工程 ${sub.stage} は未定義です。`);
-    if (!sub.id.startsWith(`0${sub.stage}_`)) throw new ValidationError(`${sub.id} のID接頭辞が工程 ${sub.stage} と一致しません。`);
+    assertValidSubcategoryId(sub.id, sub.stage);
     if (!sub.header.startsWith(`0${sub.stage} `)) throw new ValidationError(`${sub.id} の header が工程 ${sub.stage} と一致しません: ${sub.header}`);
     assertSubset(sub.els, ELEMENTS, `${sub.id} の els`);
     if (!sub.els.length) throw new ValidationError(`${sub.id} に元素が設定されていません。`);
@@ -168,7 +193,9 @@ export async function loadDataset() {
     if (company.financial) {
       if (!['A', 'B', 'C'].includes(company.financial.confidence)) throw new ValidationError(`${company.name} の財務調査確度が不正です`);
       if (!Array.isArray(company.financial.sourceUrls) || !company.financial.sourceUrls.length) throw new ValidationError(`${company.name} の財務調査出典がありません`);
-      if (company.financial.sourceUrls.some((url) => !/^https:\/\//.test(url))) throw new ValidationError(`${company.name} の財務調査出典URLが不正です`);
+      for (const [index, url] of company.financial.sourceUrls.entries()) {
+        assertPublicHttpsUrl(url, `${company.name} の財務調査出典URL ${index + 1}`);
+      }
     }
     const impliedStages = [...new Set(company.subs.map((id) => subcategories.find((sub) => sub.id === id).stage))];
     const missing = impliedStages.filter((stage) => !company.stages.includes(stage));
@@ -179,6 +206,7 @@ export async function loadDataset() {
   assertSubset(dependencyTags, ELEMENTS, "中国依存行の tag");
   assertUnique(dependency.map((row) => row.id), "中国依存行のID");
   for (const row of dependency) {
+    assertPublicHttpsUrl(row.url, `${row.id} の依存度出典URL`);
     assertSubset(row.segments.map((segment) => segment.color), COLOR_TOKENS, `${row.id} の色トークン`);
     const total = row.segments.reduce((sum, segment) => sum + segment.value, 0);
     if (total !== 100) throw new ValidationError(`${row.id} の構成比合計が ${total}% です（100%であること）。`);
