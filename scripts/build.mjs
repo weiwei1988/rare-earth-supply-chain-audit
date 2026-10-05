@@ -34,6 +34,7 @@ function htmlRegion(dataset) {
     `  var systems=${serializeGeneratedJson(dataset.stageSubs(6).map(subcatForHtml))};`,
     `  var columnOrder=${serializeGeneratedJson(dataset.columnOrder)};`,
     `  var dependencyRows=${serializeGeneratedJson(dataset.dependency)};`,
+    `  var localeData=${serializeGeneratedJson(dataset.locales)};`,
     `  /* ${END} */`,
   ].join("\n") + "\n";
 }

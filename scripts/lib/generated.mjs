@@ -112,6 +112,7 @@ export function parseHtmlData(html) {
     ["var systems=", "systems"],
     ["var columnOrder=", "columnOrder"],
     ["var dependencyRows=", "dependencyRows"],
+    ["var localeData=", "localeData"],
   ]);
 }
 

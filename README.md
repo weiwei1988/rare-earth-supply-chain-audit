@@ -42,6 +42,7 @@ python3 -m http.server 8000
 | --- | --- |
 | [`index.html`](index.html) | iframeを使わない配布用画面。初期データを内包する生成物 |
 | [`src/data/companies.json`](src/data/companies.json) | 197社・事業単位の分類、元素フラグ、DD情報、公開参照元、調達実績 |
+| [`src/data/locales/`](src/data/locales/) | 企業カード本文とサブカテゴリー間接続説明の日本語・英語・簡体中文オーバーレイ |
 | [`src/data/company-financials.json`](src/data/company-financials.json) | 新規ATLA企業57社の所有・上場、最新確認FYの売上、確度、公開出典 |
 | [`src/data/subcategories.json`](src/data/subcategories.json) | 47サブカテゴリーの工程、対象元素、上流接続。工程3以降は `srcEls` で上流ごとの接続元素、`srcNotes` で接続根拠も定義 |
 | [`src/data/column-order.json`](src/data/column-order.json) | 各工程のサブカテゴリーの縦方向の表示順。接続線の交差を抑える |
@@ -49,6 +50,7 @@ python3 -m http.server 8000
 | [`src/data/dependency.json`](src/data/dependency.json) | 工程1の元素別中国依存指標、構成比、品質注記、出典 |
 | [`src/希土類サプライチェーン.jsx`](src/希土類サプライチェーン.jsx) | React向けJSXソーススナップショット。データ部は生成物 |
 | [`scripts/build.mjs`](scripts/build.mjs) | JSONから `index.html` とJSXのデータ部を生成し、同期を確認 |
+| [`scripts/sync-ja-locale.mjs`](scripts/sync-ja-locale.mjs) | 日本語正本から同一スキーマの `locales/ja.json` を同期 |
 | [`scripts/lib/dataset.mjs`](scripts/lib/dataset.mjs) | JSONの読み込み、正規化、参照・工程・構成比の検証 |
 | [`scripts/lib/generated.mjs`](scripts/lib/generated.mjs) | HTML・JSXの生成領域を抽出し、埋め込みデータをQA用に読み取る補助 |
 | [`scripts/qa.mjs`](scripts/qa.mjs) | 件数、元素フラグ、分類、生成物、iframe不在などの静的QA |
@@ -59,7 +61,7 @@ python3 -m http.server 8000
 | [`package.json`](package.json) | 生成、同期確認、QA、監査のnpmコマンド |
 | [`.nojekyll`](.nojekyll) | GitHub Pagesで静的ファイルをそのまま配信するための設定 |
 
-`src/data/*.json` がデータの正本です。`index.html` とJSX内の `GENERATED DATA START` から `GENERATED DATA END` までは生成領域であり、直接編集しても次回の生成で上書きされます。
+`src/data/*.json` が事実・構造データの正本です。日本語の企業情報と接続説明は `companies.json` / `subcategories.json`、英語・簡体中文の表示文は `src/data/locales/` で管理します。`index.html` とJSX内の `GENERATED DATA START` から `GENERATED DATA END` までは生成領域であり、直接編集しても次回の生成で上書きされます。
 
 ## 検証
 
@@ -74,6 +76,7 @@ npm test
 企業や分類を変更する場合は、目的に応じて `src/data/*.json` を編集し、生成と検証を実行してください。
 
 ```bash
+npm run locales:sync-ja
 npm run build
 npm test
 ```
