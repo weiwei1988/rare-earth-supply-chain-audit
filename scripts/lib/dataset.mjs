@@ -13,11 +13,17 @@ export function normalizeEv(value) {
   return "B";
 }
 export const COLOR_TOKENS = ["A", "Y", "DyTb", "Sm", "Sc", "line"];
+export const LOCALES = ["ja", "en", "zh-CN"];
+export const COMPANY_TEXT_FIELDS = ["name", "own", "rev", "prod", "pos", "def", "chn", "bom", "gap", "src", "note"];
 
 const dataDir = new URL("../../src/data/", import.meta.url);
 
 async function readJson(name) {
   return JSON.parse(await fs.readFile(new URL(`${name}.json`, dataDir), "utf8"));
+}
+
+async function readLocale(locale) {
+  return JSON.parse(await fs.readFile(new URL(`locales/${locale}.json`, dataDir), "utf8"));
 }
 
 export class ValidationError extends Error {}
@@ -65,12 +71,13 @@ export function assertPublicHttpsUrl(value, label) {
 }
 
 export async function loadDataset() {
-  const [stages, subcategories, companies, dependency, columnOrder] = await Promise.all([
+  const [stages, subcategories, companies, dependency, columnOrder, ...localeRows] = await Promise.all([
     readJson("stages"),
     readJson("subcategories"),
     readJson("companies"),
     readJson("dependency"),
     readJson("column-order"),
+    ...LOCALES.map(readLocale),
   ]);
 
   const stageIds = stages.map((stage) => stage.id);
@@ -202,6 +209,91 @@ export async function loadDataset() {
     if (missing.length) throw new ValidationError(`${company.name} の stages に ${missing.join(",")} が不足しています（subs から導出）。`);
   }
 
+  const localeData = Object.fromEntries(LOCALES.map((locale, index) => [locale, localeRows[index]]));
+  const canonicalCompanyById = new Map(companies.map((company) => [company.id, company]));
+  const routeSubcategories = subcategories.filter((sub) => sub.srcNotes);
+  const routeSubcategoryById = new Map(routeSubcategories.map((sub) => [sub.id, sub]));
+  for (const locale of LOCALES) {
+    const overlay = localeData[locale];
+    if (!overlay || typeof overlay !== "object" || Array.isArray(overlay)) throw new ValidationError(`${locale} の翻訳データが不正です。`);
+    const topKeys = Object.keys(overlay).sort();
+    if (JSON.stringify(topKeys) !== JSON.stringify(["companies", "locale", "routes"])) {
+      throw new ValidationError(`${locale} の翻訳データは locale / companies / routes だけを持つ必要があります。`);
+    }
+    if (overlay.locale !== locale) throw new ValidationError(`${locale} の locale 値が一致しません: ${overlay.locale}`);
+    if (!overlay.companies || typeof overlay.companies !== "object" || Array.isArray(overlay.companies)) {
+      throw new ValidationError(`${locale} の companies が不正です。`);
+    }
+    const translatedCompanyIds = Object.keys(overlay.companies);
+    assertUnique(translatedCompanyIds, `${locale} の翻訳企業ID`);
+    const missingCompanies = companyIds.filter((id) => !translatedCompanyIds.includes(id));
+    const extraCompanies = translatedCompanyIds.filter((id) => !canonicalCompanyById.has(id));
+    if (missingCompanies.length || extraCompanies.length) {
+      throw new ValidationError(`${locale} の企業翻訳IDが正本と一致しません（不足: ${missingCompanies.join(", ") || "なし"} / 余分: ${extraCompanies.join(", ") || "なし"}）。`);
+    }
+    for (const id of companyIds) {
+      const canonical = canonicalCompanyById.get(id);
+      const translated = overlay.companies[id];
+      if (!translated || typeof translated !== "object" || Array.isArray(translated)) {
+        throw new ValidationError(`${locale} の ${id} の企業翻訳が不正です。`);
+      }
+      const requiredFields = COMPANY_TEXT_FIELDS.filter((field) => typeof canonical[field] === "string" && canonical[field].trim());
+      const translatedFields = Object.keys(translated);
+      const missingFields = requiredFields.filter((field) => !translatedFields.includes(field));
+      const extraFields = translatedFields.filter((field) => !requiredFields.includes(field));
+      if (missingFields.length || extraFields.length) {
+        throw new ValidationError(`${locale} の ${id} の翻訳項目が正本と一致しません（不足: ${missingFields.join(", ") || "なし"} / 余分: ${extraFields.join(", ") || "なし"}）。`);
+      }
+      for (const field of translatedFields) {
+        if (typeof translated[field] !== "string" || !translated[field].trim()) {
+          throw new ValidationError(`${locale} の ${id}.${field} に翻訳文がありません。`);
+        }
+        if (locale === "ja" && translated[field] !== canonical[field]) {
+          throw new ValidationError(`ja の ${id}.${field} が日本語正本と同期していません。`);
+        }
+      }
+    }
+    if (!overlay.routes || typeof overlay.routes !== "object" || Array.isArray(overlay.routes)) {
+      throw new ValidationError(`${locale} の routes が不正です。`);
+    }
+    const translatedRouteIds = Object.keys(overlay.routes);
+    const canonicalRouteIds = routeSubcategories.map((sub) => sub.id);
+    const missingRoutes = canonicalRouteIds.filter((id) => !translatedRouteIds.includes(id));
+    const extraRoutes = translatedRouteIds.filter((id) => !routeSubcategoryById.has(id));
+    if (missingRoutes.length || extraRoutes.length) {
+      throw new ValidationError(`${locale} の接続説明IDが正本と一致しません（不足: ${missingRoutes.join(", ") || "なし"} / 余分: ${extraRoutes.join(", ") || "なし"}）。`);
+    }
+    for (const id of canonicalRouteIds) {
+      const translatedRoute = overlay.routes[id];
+      if (!translatedRoute || Object.keys(translatedRoute).length !== 1 || !translatedRoute.srcNotes || typeof translatedRoute.srcNotes !== "object" || Array.isArray(translatedRoute.srcNotes)) {
+        throw new ValidationError(`${locale} の ${id} は srcNotes だけを持つ必要があります。`);
+      }
+      const canonicalNotes = routeSubcategoryById.get(id).srcNotes;
+      const canonicalSources = Object.keys(canonicalNotes);
+      const translatedSources = Object.keys(translatedRoute.srcNotes);
+      const missingSources = canonicalSources.filter((source) => !translatedSources.includes(source));
+      const extraSources = translatedSources.filter((source) => !canonicalSources.includes(source));
+      if (missingSources.length || extraSources.length) {
+        throw new ValidationError(`${locale} の ${id}.srcNotes が正本と一致しません（不足: ${missingSources.join(", ") || "なし"} / 余分: ${extraSources.join(", ") || "なし"}）。`);
+      }
+      for (const source of canonicalSources) {
+        const note = translatedRoute.srcNotes[source];
+        if (typeof note !== "string" || !note.trim()) throw new ValidationError(`${locale} の ${id}.srcNotes.${source} に翻訳文がありません。`);
+        if (locale === "ja" && note !== canonicalNotes[source]) throw new ValidationError(`ja の ${id}.srcNotes.${source} が日本語正本と同期していません。`);
+      }
+    }
+  }
+  for (const id of companyIds) {
+    const japaneseName = canonicalCompanyById.get(id).name;
+    const chineseName = localeData["zh-CN"].companies[id].name;
+    if (/[ァ-ヺー]/u.test(chineseName)) {
+      const englishName = localeData.en.companies[id].name;
+      if (!chineseName.includes(englishName) || !chineseName.includes(japaneseName)) {
+        throw new ValidationError(`zh-CN の ${id} はカタカナ社名を英語名（日本語名）で併記する必要があります。`);
+      }
+    }
+  }
+
   const dependencyTags = dependency.map((row) => row.tag);
   assertSubset(dependencyTags, ELEMENTS, "中国依存行の tag");
   assertUnique(dependency.map((row) => row.id), "中国依存行のID");
@@ -219,6 +311,7 @@ export async function loadDataset() {
     stages,
     subcategories,
     companies,
+    locales: localeData,
     dependency,
     columnOrder,
     bySub,

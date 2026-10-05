@@ -109,6 +109,26 @@ check("JSX のサブカテゴリーがJSONと一致", sameJson(jsxData.SUBCATS, 
 check("JSX の工程がJSONと一致", sameJson(jsxData.STAGES, dataset.stages));
 check("index.html の工程見出しがJSONと一致", sameJson(htmlData.stages, dataset.stages));
 check("中国依存データの生成物同期", sameJson(htmlData.dependencyRows, dataset.dependency) && sameJson(jsxData.DEPENDENCY_ROWS, dataset.dependency));
+check("3言語オーバーレイの生成物同期", sameJson(htmlData.localeData, dataset.locales));
+check(
+  "企業カード本文を日本語・英語・簡体中文で全197社収録",
+  ["ja", "en", "zh-CN"].every((locale) => Object.keys(dataset.locales[locale].companies).length === dataset.companies.length),
+);
+check(
+  "簡体中文の未翻訳カタカナ社名は英語名と日本語名を併記",
+  dataset.companies.every((company) => {
+    const chineseName = dataset.locales["zh-CN"].companies[company.id].name;
+    return !/[ァ-ヺー]/u.test(chineseName) || (
+      chineseName.includes(dataset.locales.en.companies[company.id].name) &&
+      chineseName.includes(company.name)
+    );
+  }),
+);
+const translatedRouteCount = dataset.subcategories.filter((sub) => sub.srcNotes).length;
+check(
+  "サブカテゴリー間接続説明を3言語で全件収録",
+  ["ja", "en", "zh-CN"].every((locale) => Object.keys(dataset.locales[locale].routes).length === translatedRouteCount),
+);
 
 // --- 公開画面の構造 -------------------------------------------------------
 check("index.html に iframe がない", !/<iframe/i.test(html));
@@ -119,10 +139,40 @@ check(
   html.includes(".re-column-label-title{grid-column:1;font-size:14.5px") &&
     html.includes(".re-column-label-count{grid-column:2") &&
     html.includes("function stageLabel(stage,x)") &&
-    html.includes("countStage(stage.id)+'社") &&
+    html.includes("companyCount(countStage(stage.id))") &&
     html.includes("function countStage(id){return visible().filter"),
 );
-check("接続線は全工程のsrcElsとsrcNotesから描画", html.includes("item.srcEls&&item.srcEls[sourceId]") && html.includes("item.srcNotes&&item.srcNotes[sourceId]") && html.includes("curve(a.x+a.w,a.y+lane[element],b.x,b.y+lane[element])") && html.includes("width:'+pos.w+'px") && html.includes("width:'+source.w+'px"));
+check(
+  "日本語・英語・簡体字中国語を両表示モードで切替",
+  ["ja", "en", "zh-CN"].every((language) => html.includes(`data-language="${language}"`)) &&
+    html.includes("var uiStrings={") &&
+    html.includes("var stageTranslations={") &&
+    html.includes("var subTranslations={") &&
+    html.includes("function setLanguage(next)") &&
+    html.includes('localStorage.setItem("rareEarthLanguage",language)') &&
+    html.includes("document.documentElement.lang=language") &&
+    html.includes('root.querySelector("#re-tab-overview").textContent=tr("overview")') &&
+    html.includes('root.querySelector("#re-tab-element-flow").textContent=tr("elementFlow")'),
+);
+check(
+  "元素フローの長い名称を省略せず複数行表示",
+  html.includes("function flowLabelLines(value,limit)") &&
+    html.includes("labelLines=flowLabelLines(label,language===\"en\"?30:16)") &&
+    html.includes("labelLines=flowLabelLines(stageText(stage,\"label\"),language===\"en\"?22:18)") &&
+    html.includes("shortLines=flowLabelLines(stageText(stage,\"short\"),language===\"en\"?34:28)") &&
+    html.includes('svg.classList.toggle("is-english",language==="en")') &&
+    !html.includes("shortenedLabel(label,16)") &&
+    !html.includes("shortenedLabel(stageText(stage,\"short\"),28)"),
+);
+check("接続線は全工程のsrcElsと多言語srcNotesから描画", html.includes("item.srcEls&&item.srcEls[sourceId]") && html.includes("routeText(item,sourceId)") && html.includes("function routeText(target,source)") && html.includes("curve(a.x+a.w,a.y+lane[element],b.x,b.y+lane[element])") && html.includes("width:'+pos.w+'px") && html.includes("width:'+source.w+'px"));
+check(
+  "企業カードと検索は言語別オーバーレイを参照",
+  html.includes("function companyText(company,key)") &&
+    html.includes('companyText(company,"name")') &&
+    html.includes('companyText(company,"prod")') &&
+    html.includes('companyText(company,"def")') &&
+    html.includes("translated.concat(canonical"),
+);
 check(
   "全体では全接続線、分類選択時は全上流・全下流を強調",
   html.includes("function walk(direction,element)") &&
@@ -202,7 +252,7 @@ check("公開画面の外部通信とリファラー送信を制限", html.inclu
 
 // 生成領域外へのデータ複製を防ぐ。
 const htmlRegion = readGeneratedRegion(html, "index.html");
-for (const declaration of ["var seed=", "var commerceSubs=", "var parts=", "var modules=", "var systems=", "var columnOrder=", "var dependencyRows="]) {
+for (const declaration of ["var seed=", "var commerceSubs=", "var parts=", "var modules=", "var systems=", "var columnOrder=", "var dependencyRows=", "var localeData="]) {
   check("index.html の " + declaration + " が生成領域内に1つだけ", html.split(declaration).length - 1 === 1 && htmlRegion.split(declaration).length - 1 === 1);
 }
 check("JSX の生成データ定義が1組", ["const SEED =", "const SUBCATS =", "const STAGES =", "const DEPENDENCY_ROWS ="].every((declaration) => jsx.split(declaration).length - 1 === 1));

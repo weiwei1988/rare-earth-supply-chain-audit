@@ -9,7 +9,7 @@ const end = "/* GENERATED DATA END */";
 
 function htmlFixture(seed) {
   const value = serializeGeneratedJson(seed);
-  return `<script>\n${start}\nvar seed=${value};\nvar stages=[];\nvar commerceSubs=[];\nvar parts=[];\nvar modules=[];\nvar systems=[];\nvar columnOrder={};\nvar dependencyRows=[];\n${end}\n</script>`;
+  return `<script>\n${start}\nvar seed=${value};\nvar stages=[];\nvar commerceSubs=[];\nvar parts=[];\nvar modules=[];\nvar systems=[];\nvar columnOrder={};\nvar dependencyRows=[];\nvar localeData={};\n${end}\n</script>`;
 }
 
 function jsxFixture(extra = "") {
