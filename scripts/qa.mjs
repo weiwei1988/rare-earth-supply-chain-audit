@@ -132,7 +132,7 @@ check(
 
 // --- 公開画面の構造 -------------------------------------------------------
 check("index.html に iframe がない", !/<iframe/i.test(html));
-check("全工程を画面幅に合わせて表示", html.includes(".re-flow-canvas{position:relative;isolation:isolate;width:1200px") && html.includes("W=Math.max(1200,Math.floor(viewport.clientWidth))") && html.includes("var cardWidth=Math.max(168,Math.min(240") && html.includes("var xByStage={2:sidePadding+columnStep") && html.includes("stage:6,items:systems") && html.includes("canvas.style.width=W+\"px\"") && html.includes(".re-flow-wrap{position:relative;overflow:visible;height:auto"));
+check("全工程を画面幅に合わせて表示", html.includes(".re-flow-canvas{position:relative;isolation:isolate;width:1200px") && html.includes("W=Math.max(1200,Math.floor(viewport.clientWidth))") && html.includes("var cardWidth=Math.max(176,Math.min(240") && html.includes("var xByStage={2:sidePadding+columnStep") && html.includes("stage:6,items:systems") && html.includes("canvas.style.width=W+\"px\"") && html.includes(".re-flow-wrap{position:relative;overflow:visible;height:auto"));
 check("海外の資源・分離を起点カードとして表示", html.includes("海外の資源・分離") && !html.includes("STAGE 01 — 中国原料"));
 check(
   "Stage見出しを拡大し、元素フィルター連動の企業数を表示",
@@ -179,7 +179,7 @@ check(
     html.includes('selectedElements.forEach(function(element){walk("up",element);walk("down",element)}') &&
     html.includes("allSubs.forEach(function(target){if((target.src||[]).indexOf(selected.id)>=0)"),
 );
-check("工程全体とサブカテゴリーの高さを所属会社数に比例", html.includes("minCardHeight=68,columnGap=8,columnBaseSpan=220,perStageCompany=12,perCardScaleCompany=1.5,maxColumnSpan=1300") && html.includes("minimumSpan+stageCompanyCount*perCardScaleCompany") && html.includes("columnBaseSpan+stageCompanyCount*perStageCompany") && html.includes("extraHeight*weights[index]/weightTotal") && html.includes(".re-card-description{font-size:9px") && !html.includes("is-compact .re-card-description{display:none}"));
+check("工程全体とサブカテゴリーの高さを所属会社数に比例", html.includes("minCardHeight=100,columnGap=8,columnBaseSpan=220,perStageCompany=16.6,perCardScaleCompany=.8,maxColumnSpan=1580") && html.includes("minimumSpan+stageCompanyCount*perCardScaleCompany") && html.includes("columnBaseSpan+stageCompanyCount*perStageCompany") && html.includes("extraHeight*weights[index]/weightTotal") && html.includes(".re-sub-card{width:176px;min-height:100px") && html.includes(".re-card-description{font-size:9.5px") && !html.includes("is-compact .re-card-description{display:none}"));
 check(
   "元素フィルターの有無でサブカテゴリーカードの高さを固定",
   html.includes("function totalStageCount(id){return data.filter") &&
@@ -189,8 +189,8 @@ check(
 const visualStageSpans = [2, 3, 4, 5, 6].map((stage) => {
   const categoryCount = dataset.columnOrder[stage].length;
   const companyCount = dataset.companies.filter((company) => company.stages.includes(stage)).length;
-  const minimumSpan = categoryCount * 68 + Math.max(0, categoryCount - 1) * 8;
-  return Math.max(minimumSpan + companyCount * 1.5, Math.min(1300, 220 + companyCount * 12));
+  const minimumSpan = categoryCount * 100 + Math.max(0, categoryCount - 1) * 8;
+  return Math.max(minimumSpan + companyCount * 0.8, Math.min(1580, 220 + companyCount * 16.6));
 });
 check("工程列の総高は社数増加に合わせて下流ほど長い", visualStageSpans.every((span, index) => index === 0 || span > visualStageSpans[index - 1]), visualStageSpans.join(" < "));
 check("元素絞り込みを代表色と分割配色で強調", html.includes(".re-sub-card.is-filter-match") && html.includes("function segmentedGradient(tags,angle,colorValue)") && html.includes("matchedEls.length>1?"));

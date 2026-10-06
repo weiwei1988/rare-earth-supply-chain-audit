@@ -62,18 +62,18 @@ button[aria-pressed="true"]{color:var(--text);border-color:var(--text);backgroun
 .re-card[aria-pressed="true"]{background:var(--panel-hi);border-color:var(--text)}
 .re-card.is-dim{opacity:.22}
 .re-stage-card{width:168px;height:82px;padding:8px 10px}
-.re-sub-card{width:168px;min-height:68px;padding:5px 8px 17px;overflow:hidden;transition:opacity .12s ease,border-color .12s ease,background .12s ease,box-shadow .12s ease,transform .12s ease}
+.re-sub-card{width:176px;min-height:100px;padding:6px 9px 24px;overflow:hidden;transition:opacity .12s ease,border-color .12s ease,background .12s ease,box-shadow .12s ease,transform .12s ease}
 .re-sub-card.is-filter-match{background:var(--re-highlight-bg);border-color:var(--re-highlight-primary);box-shadow:0 0 0 1px color-mix(in srgb,var(--re-highlight-primary) 30%,transparent)}
 .re-sub-card.is-filter-match::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--re-highlight-band)}
 .re-sub-card.is-filter-match[aria-pressed="true"]{box-shadow:0 0 0 2px var(--text),0 0 0 4px var(--re-highlight-primary)}
 .re-card-code{font:10px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.13em;color:var(--faint)}
 .re-card-title{font-size:13px;font-weight:500;margin-top:7px;line-height:1.35}
-.re-sub-card .re-card-code{font-size:9px;letter-spacing:.1em;white-space:nowrap}
-.re-sub-card .re-card-title{font-size:11px;line-height:1.16;margin-top:3px;letter-spacing:-.01em;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.re-sub-card .re-card-code{font-size:8.8px;line-height:1.2;letter-spacing:.085em;white-space:nowrap}
+.re-sub-card .re-card-title{font-size:11.2px;line-height:1.22;margin-top:4px;letter-spacing:-.01em;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .re-card-sub{font-size:11px;color:var(--sub);margin-top:4px;line-height:1.35}
-.re-card-description{font-size:9px;color:var(--faint);margin-top:2px;line-height:1.2;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.re-card-description{font-size:9.5px;color:var(--faint);margin-top:3px;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .re-card-count{position:absolute;right:8px;bottom:5px;font:10px ui-monospace,SFMono-Regular,Menlo,monospace;border:1px solid var(--line);border-radius:999px;padding:0 6px;color:var(--sub)}
-.re-card-tags{position:absolute;left:9px;bottom:5px;display:flex;gap:4px;margin:0;font:10px ui-monospace,SFMono-Regular,Menlo,monospace;line-height:1;white-space:nowrap}
+.re-card-tags{position:absolute;left:9px;bottom:7px;display:flex;gap:4px;margin:0;font:10px ui-monospace,SFMono-Regular,Menlo,monospace;line-height:1;white-space:nowrap}
 .re-stamp{position:absolute;border:1.5px solid var(--risk-a);color:var(--risk-a);border-radius:4px;padding:3px 8px;font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:11px;background:var(--bg)}
 .re-column-label{position:absolute;top:4px;width:168px;display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:9px;align-items:start}
 .re-column-label-code{font:600 10.5px ui-monospace,SFMono-Regular,Menlo,monospace;line-height:1.25;letter-spacing:.08em;color:var(--faint)}
@@ -123,16 +123,16 @@ button[aria-pressed="true"]{color:var(--text);border-color:var(--text);backgroun
 .re-element-card-grid button[data-flow-element="DyTb"],.re-element-card-grid button[data-element="DyTb"]{--re-filter-color:var(--dytb)}
 .re-element-card-grid button[data-flow-element="Sm"],.re-element-card-grid button[data-element="Sm"]{--re-filter-color:var(--sm)}
 .re-element-card-grid button[data-flow-element="Sc"],.re-element-card-grid button[data-element="Sc"]{--re-filter-color:var(--sc)}
-.re-element-card-grid button{min-width:0;min-height:142px;display:flex;flex-direction:column;align-items:stretch;color:var(--text);text-align:left;border-radius:12px;border-color:var(--line);padding:14px 16px;background:var(--panel);box-shadow:0 1px 3px color-mix(in srgb,var(--text) 8%,transparent);transition:border-color .15s ease,background .15s ease,box-shadow .15s ease,transform .15s ease}
+.re-element-card-grid button{min-width:0;min-height:190px;display:flex;flex-direction:column;align-items:stretch;color:var(--text);text-align:left;border-radius:12px;border-color:var(--line);padding:15px 17px;background:var(--panel);box-shadow:0 1px 3px color-mix(in srgb,var(--text) 8%,transparent);transition:border-color .15s ease,background .15s ease,box-shadow .15s ease,transform .15s ease}
 .re-element-card-grid button:hover{color:var(--text);border-color:color-mix(in srgb,var(--re-filter-color) 65%,var(--line));background:var(--panel-hi);transform:translateY(-1px)}
 .re-element-card-grid button[aria-pressed="true"]{color:var(--text);background:color-mix(in srgb,var(--re-filter-color) 7%,var(--panel));border-color:var(--re-filter-color);box-shadow:0 0 0 2px color-mix(in srgb,var(--re-filter-color) 20%,transparent),0 2px 5px color-mix(in srgb,var(--text) 9%,transparent)}
 .re-flow-option-symbol{display:flex;align-items:center;gap:9px;font-size:19px;line-height:1.15;font-weight:650}
 .re-flow-option-dot{width:10px;height:10px;flex:0 0 auto;border-radius:50%;background:var(--re-filter-color)}
-.re-flow-option-name{margin-top:6px;font-size:12px;font-weight:600;color:var(--text)}
-.re-flow-option-use{margin-top:7px;min-height:34px;font-size:10px;line-height:1.55;color:var(--sub)}
+.re-flow-option-name{margin-top:6px;font-size:12.5px;font-weight:650;color:var(--text)}
+.re-flow-option-use{margin-top:9px;min-height:74px;font-size:11.5px;line-height:1.62;color:var(--sub)}
 .re-flow-option-dependency{display:flex;align-items:baseline;gap:6px;margin-top:auto;padding-top:12px}
 .re-flow-option-dependency strong{font-size:18px;line-height:1;color:var(--text)}
-.re-flow-option-dependency span{font-size:9px;line-height:1.35;color:var(--faint)}
+.re-flow-option-dependency span{font-size:10px;line-height:1.4;color:var(--faint)}
 .re-flow-option-bar{height:5px;margin-top:9px;border-radius:999px;background:color-mix(in srgb,var(--line) 52%,transparent);overflow:hidden}
 .re-flow-option-bar span{display:block;width:var(--re-dependency);height:100%;border-radius:inherit;background:var(--re-filter-color)}
 .re-element-flow-frame{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:color-mix(in srgb,var(--panel) 35%,var(--bg))}
@@ -379,9 +379,9 @@ button[aria-pressed="true"]{color:var(--text);border-color:var(--text);backgroun
   function renderFlow(){
     var viewport=root.querySelector("#re-flow-viewport"),W=Math.max(1200,Math.floor(viewport.clientWidth));
     var sidePadding=Math.max(18,Math.min(60,Math.round(18+(W-1200)*.05)));
-    var cardWidth=Math.max(168,Math.min(240,Math.round(168+(W-1200)*.092)));
+    var cardWidth=Math.max(176,Math.min(240,Math.round(176+(W-1200)*.082)));
     var columnStep=cardWidth+(W-sidePadding*2-cardWidth*6)/5;
-    var minCardHeight=68,columnGap=8,columnBaseSpan=220,perStageCompany=12,perCardScaleCompany=1.5,maxColumnSpan=1300;
+    var minCardHeight=100,columnGap=8,columnBaseSpan=220,perStageCompany=16.6,perCardScaleCompany=.8,maxColumnSpan=1580;
     var xByStage={2:sidePadding+columnStep,3:sidePadding+columnStep*2,4:sidePadding+columnStep*3,5:sidePadding+columnStep*4,6:sidePadding+columnStep*5};
     var lane={Y:-6,DyTb:-2,Sm:2,Sc:6};
     var stageMeta={};stages.forEach(function(stage){stageMeta[stage.id]=stage});
@@ -410,7 +410,7 @@ button[aria-pressed="true"]{color:var(--text);border-color:var(--text);backgroun
     }
     columns.forEach(sizeColumn);
     var maxSpan=Math.max.apply(null,columns.map(function(column){return column.span}));
-    var H=Math.max(920,Math.ceil(maxSpan+80)),CY=H/2;
+    var columnTopClearance=72,H=Math.max(920,Math.ceil(maxSpan+columnTopClearance*2)),CY=H/2;
     var source={id:"stage01",x:sidePadding,w:cardWidth,y:CY,els:["Y","DyTb","Sm","Sc"]};
     function layoutColumn(column){
       var top=(H-column.span)/2;
@@ -575,9 +575,9 @@ button[aria-pressed="true"]{color:var(--text);border-color:var(--text);backgroun
     return lines.length?lines:[text]
   }
   var flowElementMeta={
-    ja:{Y:{symbol:"Y",name:"イットリウム",use:"遮熱・耐プラズマ皮膜、レーザー結晶、電子部品・電子管",dependency:"日本輸入の中国比率"},DyTb:{symbol:"Dy・Tb",name:"ジスプロシウム・テルビウム",use:"高温でも磁力を保つ NdFeB 磁石、モータ・アクチュエータ",dependency:"重希土類輸入の中国依存"},Sm:{symbol:"Sm",name:"サマリウム",use:"耐熱性の高い SmCo 磁石、マイクロ波電子管",dependency:"中国供給シェア"},Sc:{symbol:"Sc",name:"スカンジウム",use:"軽量高強度 Al 合金、ScAlN 圧電薄膜、SOFC 電解質",dependency:"中国生産シェア（概算）"}},
-    en:{Y:{symbol:"Y",name:"Yttrium",use:"Thermal/plasma-resistant coatings, laser crystals, electronics and electron tubes",dependency:"China share of Japanese imports"},DyTb:{symbol:"Dy · Tb",name:"Dysprosium · Terbium",use:"High-temperature NdFeB magnets, motors and actuators",dependency:"China dependency for heavy-rare-earth imports"},Sm:{symbol:"Sm",name:"Samarium",use:"Heat-resistant SmCo magnets and microwave electron tubes",dependency:"China share of supply"},Sc:{symbol:"Sc",name:"Scandium",use:"Light, strong Al alloys, ScAlN piezo films and SOFC electrolytes",dependency:"China production share (estimate)"}},
-    "zh-CN":{Y:{symbol:"Y",name:"钇",use:"热障/耐等离子体涂层、激光晶体、电子元件与电子管",dependency:"日本进口中的中国占比"},DyTb:{symbol:"Dy · Tb",name:"镝 · 铽",use:"高温NdFeB磁体、电机与执行器",dependency:"重稀土进口对华依赖"},Sm:{symbol:"Sm",name:"钐",use:"耐热SmCo磁体与微波电子管",dependency:"中国供应占比"},Sc:{symbol:"Sc",name:"钪",use:"轻质高强铝合金、ScAlN压电薄膜与SOFC电解质",dependency:"中国生产占比（估算）"}}
+    ja:{Y:{symbol:"Y",name:"イットリウム",use:"高耐熱・耐食性を生かし、YSZ遮熱皮膜、半導体製造装置の耐プラズマ部材、YAGレーザー、SOFC電解質へ展開。MLCC添加剤や電子管など防衛電子の上流にもつながる。",dependency:"日本輸入の中国比率"},DyTb:{symbol:"Dy・Tb",name:"ジスプロシウム・テルビウム",use:"NdFeB磁石の保磁力を高温域でも維持する重希土類。航空・宇宙用モータ、アクチュエータ、誘導・航法、無人機、レーダーの駆動系に加え、光学・電子材料にも波及する。",dependency:"重希土類輸入の中国依存"},Sm:{symbol:"Sm",name:"サマリウム",use:"高温・放射線環境に強いSmCo磁石として、航空宇宙用モータやアクチュエータに使用。電子ビームを収束するマイクロ波電子管を通じ、レーダーや衛星通信にもつながる。",dependency:"中国供給シェア"},Sc:{symbol:"Sc",name:"スカンジウム",use:"Al–Sc軽量高強度合金と金属AMによる航空宇宙構造材、ScAlN圧電薄膜によるRF・MEMS、ScSZ電解質によるSOFC、スカンデート陰極へ用途が分岐する。",dependency:"中国生産シェア（概算）"}},
+    en:{Y:{symbol:"Y",name:"Yttrium",use:"Its heat and corrosion resistance supports YSZ thermal barriers, plasma-resistant semiconductor-tool parts, YAG lasers and SOFC electrolytes. It also enters defense electronics through MLCC additives and electron tubes.",dependency:"China share of Japanese imports"},DyTb:{symbol:"Dy · Tb",name:"Dysprosium · Terbium",use:"These heavy rare earths preserve NdFeB coercivity at high temperatures. They extend into aerospace motors, actuators, guidance and navigation, uncrewed systems and radar drives, as well as optical and electronic materials.",dependency:"China dependency for heavy-rare-earth imports"},Sm:{symbol:"Sm",name:"Samarium",use:"SmCo magnets retain performance under heat and radiation in aerospace motors and actuators. Samarium also reaches radar and satellite communications through microwave electron tubes that focus electron beams.",dependency:"China share of supply"},Sc:{symbol:"Sc",name:"Scandium",use:"Applications branch into Al–Sc lightweight aerospace structures and metal AM, ScAlN piezoelectric films for RF and MEMS, ScSZ electrolytes for SOFCs, and scandate cathodes for electron tubes.",dependency:"China production share (estimate)"}},
+    "zh-CN":{Y:{symbol:"Y",name:"钇",use:"利用其耐高温、耐腐蚀特性，应用于YSZ热障涂层、半导体设备耐等离子体部件、YAG激光器和SOFC电解质，并通过MLCC添加剂、电子管进入国防电子上游。",dependency:"日本进口中的中国占比"},DyTb:{symbol:"Dy · Tb",name:"镝 · 铽",use:"作为重稀土，可使NdFeB磁体在高温下保持矫顽力，进一步用于航空航天电机、执行器、制导与导航、无人系统及雷达驱动，也延伸至光学和电子材料。",dependency:"重稀土进口对华依赖"},Sm:{symbol:"Sm",name:"钐",use:"SmCo磁体在高温和辐射环境下仍能保持性能，用于航空航天电机与执行器；同时通过聚焦电子束的微波电子管，进入雷达和卫星通信领域。",dependency:"中国供应占比"},Sc:{symbol:"Sc",name:"钪",use:"用途分为Al–Sc轻质高强航空航天结构件与金属增材制造、面向RF和MEMS的ScAlN压电薄膜、SOFC用ScSZ电解质，以及电子管用钪酸盐阴极。",dependency:"中国生产占比（估算）"}}
   };
   var flowOrderByElement={
     Y:{
