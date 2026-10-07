@@ -95,7 +95,7 @@ python3 -m http.server 8000
 | [`src/data/dependency.json`](src/data/dependency.json) | 元素別の中国依存・供給シェア、構成比、注記、出典 |
 | [`src/data/locales/`](src/data/locales/) | 日本語・英語・簡体中文の企業情報と接続説明 |
 | [`src/data/column-order.json`](src/data/column-order.json) | 元素フローを含むサブカテゴリーの表示順 |
-| [`scripts/build.mjs`](scripts/build.mjs) | JSONから配布用HTMLとJSXのデータ領域を生成 |
+| [`scripts/build.mjs`](scripts/build.mjs) | 正本JSONと `src/app/*.js` から配布用HTMLを組み立て |
 | [`scripts/sync-ja-locale.mjs`](scripts/sync-ja-locale.mjs) | 日本語正本から日本語ロケールを同期 |
 | [`scripts/qa.mjs`](scripts/qa.mjs) | 件数、分類、多言語データ、画面機能、生成物を検証 |
 | [`scripts/audit.mjs`](scripts/audit.mjs) | 工程間接続の重複、空端点、上流到達性を監査 |
@@ -103,7 +103,23 @@ python3 -m http.server 8000
 
 事実・構造データの正本は `src/data/*.json` です。日本語の企業情報と接続説明は `companies.json` と `subcategories.json`、英語・簡体中文の表示文は `src/data/locales/` で管理します。
 
-`index.html` と [`src/希土類サプライチェーン.jsx`](src/希土類サプライチェーン.jsx) の `GENERATED DATA START` から `GENERATED DATA END` までは生成領域です。直接変更せず、正本JSONを更新して再生成してください。
+画面のスクリプトの正本は `src/app/*.js` です。`npm run build` が下の順に連結し、`index.html` のひとつの即時実行関数に収めます。配布物は単一のHTMLのままです。ファイル同士は同じスコープを共有するため、`import` / `export` は使いません。
+
+| ファイル | 役割 |
+|---|---|
+| [`src/app/state.js`](src/app/state.js) | 画面全体で共有する状態と定数 |
+| [`src/app/i18n.js`](src/app/i18n.js) | 表示文言と言語切り替え |
+| [`src/app/text.js`](src/app/text.js) | 文字列の整形（エスケープ、省略、折り返し） |
+| [`src/app/model.js`](src/app/model.js) | 絞り込みと数え上げ（DOMに触れない） |
+| [`src/app/graph.js`](src/app/graph.js) | 接続線の描画と上流・下流のたどり方 |
+| [`src/app/parts.js`](src/app/parts.js) | 両タブで共用する部品のマークアップ |
+| [`src/app/overview.js`](src/app/overview.js) | 「サプライチェーン全体像」タブの描画 |
+| [`src/app/flow.js`](src/app/flow.js) | 「元素別フロー」タブの描画 |
+| [`src/app/view.js`](src/app/view.js) | タブ・言語の切り替え、再描画の入口、イベント配線 |
+
+再描画は `view.js` の `refresh(scope)` が唯一の入口です。状態を変えたあとに描き直す範囲（`overview` / `list` / `flow` / `flowList` / `all`）を渡して呼びます。
+
+`index.html` の `GENERATED DATA START`〜`GENERATED DATA END`（正本JSONから）と `APP CODE START`〜`APP CODE END`（`src/app/*.js` から）はいずれも生成領域です。直接変更せず、正本を更新して `npm run build` を実行してください。
 
 ## 開発・検証
 
