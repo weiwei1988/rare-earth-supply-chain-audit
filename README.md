@@ -86,27 +86,34 @@ python3 -m http.server 8000
 
 ## データと実装
 
+公開されるのは `index.html` ただ1つです。事実データと画面のスクリプトはそれぞれ別の正本を持ち、`npm run build` がその2つを `index.html` に流し込みます。
+
+```
+src/data/*.json  ─┐
+                  ├─ scripts/build.mjs ─→ index.html（GitHub Pagesで公開）
+src/app/*.js     ─┘
+```
+
+### 事実・構造データの正本
+
 | ファイル | 内容 |
 | --- | --- |
-| [`index.html`](index.html) | GitHub Pagesで公開する静的画面。生成済みデータを内包 |
 | [`src/data/companies.json`](src/data/companies.json) | 企業・事業単位の分類、元素フラグ、公開情報、調達実績 |
 | [`src/data/subcategories.json`](src/data/subcategories.json) | サブカテゴリー、元素、上流接続、接続根拠 |
 | [`src/data/stages.json`](src/data/stages.json) | 6工程の名称と説明 |
 | [`src/data/dependency.json`](src/data/dependency.json) | 元素別の中国依存・供給シェア、構成比、注記、出典 |
-| [`src/data/locales/`](src/data/locales/) | 日本語・英語・簡体中文の企業情報と接続説明 |
 | [`src/data/column-order.json`](src/data/column-order.json) | 元素フローを含むサブカテゴリーの表示順 |
-| [`scripts/build.mjs`](scripts/build.mjs) | 正本JSONと `src/app/*.js` から配布用HTMLを組み立て |
-| [`scripts/sync-ja-locale.mjs`](scripts/sync-ja-locale.mjs) | 日本語正本から日本語ロケールを同期 |
-| [`scripts/qa.mjs`](scripts/qa.mjs) | 件数、分類、多言語データ、画面機能、生成物を検証 |
-| [`scripts/audit.mjs`](scripts/audit.mjs) | 工程間接続の重複、空端点、上流到達性を監査 |
-| [`scripts/security-audit.mjs`](scripts/security-audit.mjs) | 公開ファイルへの認証情報やローカルパス等の混入を検査 |
+| [`src/data/company-financials.json`](src/data/company-financials.json) | 所有・売上の公開情報調査 |
+| [`src/data/locales/`](src/data/locales/) | 英語・簡体中文の企業情報と接続説明。`ja.json` は日本語正本との同期検査用 |
 
-事実・構造データの正本は `src/data/*.json` です。日本語の企業情報と接続説明は `companies.json` と `subcategories.json`、英語・簡体中文の表示文は `src/data/locales/` で管理します。
+日本語の企業情報と接続説明は `companies.json` と `subcategories.json` が正本です。`locales/ja.json` はそれと完全一致していることを検査で強制しており、配布物には載せません（画面側が正本へフォールバックします）。
 
-画面のスクリプトの正本は `src/app/*.js` です。`npm run build` が下の順に連結し、`index.html` のひとつの即時実行関数に収めます。配布物は単一のHTMLのままです。ファイル同士は同じスコープを共有するため、`import` / `export` は使いません。
+### 画面のスクリプトの正本
+
+`npm run build` が下の順に連結し、`index.html` のひとつの即時実行関数に収めます。配布物は単一のHTMLのままです。ファイル同士は同じスコープを共有するため、`import` / `export` は使いません。
 
 | ファイル | 役割 |
-|---|---|
+| --- | --- |
 | [`src/app/state.js`](src/app/state.js) | 画面全体で共有する状態と定数 |
 | [`src/app/i18n.js`](src/app/i18n.js) | 表示文言と言語切り替え |
 | [`src/app/text.js`](src/app/text.js) | 文字列の整形（エスケープ、省略、折り返し） |
@@ -117,9 +124,44 @@ python3 -m http.server 8000
 | [`src/app/flow.js`](src/app/flow.js) | 「元素別フロー」タブの描画 |
 | [`src/app/view.js`](src/app/view.js) | タブ・言語の切り替え、再描画の入口、イベント配線 |
 
-再描画は `view.js` の `refresh(scope)` が唯一の入口です。状態を変えたあとに描き直す範囲（`overview` / `list` / `flow` / `flowList` / `all`）を渡して呼びます。
+連結の順は [`scripts/build.mjs`](scripts/build.mjs) の `APP_FILES` が持ちます。`var` の初期化はこの順に実行されるため、並べ替えるときは依存を確認してください。ファイルを追加したら `APP_FILES` にも追加します（一致しないとビルドが止まります）。
 
-`index.html` の `GENERATED DATA START`〜`GENERATED DATA END`（正本JSONから）と `APP CODE START`〜`APP CODE END`（`src/app/*.js` から）はいずれも生成領域です。直接変更せず、正本を更新して `npm run build` を実行してください。
+再描画は `view.js` の `refresh(scope)` が唯一の入口です。状態を変えたあと、描き直す範囲を渡して呼びます。
+
+| scope | 描き直す範囲 |
+| --- | --- |
+| `overview` | 元素ボタン、マップ、接続根拠、企業一覧、企業詳細 |
+| `list` | 企業一覧と企業詳細だけ |
+| `flow` | 元素別フロー（表示中のときだけ） |
+| `flowList` | 元素別フローの企業一覧と企業詳細だけ |
+| `all` | 両タブ |
+
+### 生成物
+
+[`index.html`](index.html) には2つの生成領域があります。**いずれも直接編集せず、正本を更新して `npm run build` を実行してください。**
+
+| 領域 | 生成元 |
+| --- | --- |
+| `GENERATED DATA START`〜`GENERATED DATA END` | `src/data/*.json` |
+| `APP CODE START`〜`APP CODE END` | `src/app/*.js` |
+
+`index.html` を直接編集すると `npm test` が失敗します。
+
+### 道具
+
+| ファイル | 内容 |
+| --- | --- |
+| [`scripts/build.mjs`](scripts/build.mjs) | 正本JSONと `src/app/*.js` から `index.html` を組み立て（`--check` で同期を検査） |
+| [`scripts/lib/dataset.mjs`](scripts/lib/dataset.mjs) | 正本JSONの読み込みと、工程・分類・接続・公開境界の検証 |
+| [`scripts/lib/generated.mjs`](scripts/lib/generated.mjs) | 生成領域の読み書き。生成物はコードとして評価しない |
+| [`scripts/sync-ja-locale.mjs`](scripts/sync-ja-locale.mjs) | 日本語正本から日本語ロケールを同期 |
+| [`scripts/import-atla.mjs`](scripts/import-atla.mjs) | 防衛装備庁の調達実績を企業カードへ取り込み |
+| [`scripts/apply-financial-research.mjs`](scripts/apply-financial-research.mjs) | 所有・売上の公開情報調査を企業カードへ反映 |
+| [`scripts/qa.mjs`](scripts/qa.mjs) | 件数、分類、多言語データの網羅、画面機能、生成物の同期を検証 |
+| [`scripts/audit.mjs`](scripts/audit.mjs) | 工程間接続の重複、空端点、上流到達性を監査 |
+| [`scripts/security-audit.mjs`](scripts/security-audit.mjs) | 公開ファイルへの認証情報やローカルパス等の混入を検査 |
+
+`qa.mjs` は、手書きのテーブル（画面ラベル、工程名、サブカテゴリー名、元素別フローの表示順、元素の配色）が正本JSONを網羅しているかも検査します。分類や元素を足して翻訳を書き忘れると、画面に日本語が出る前にビルドが止まります。
 
 ## 開発・検証
 
