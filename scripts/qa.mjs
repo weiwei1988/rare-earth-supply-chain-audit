@@ -1,7 +1,7 @@
 // 静的QA。src/data/*.json と生成物が一致し、6工程の元素別接続が公開境界を守ることを検査する。
 import fs from "node:fs/promises";
 import { loadDataset, fatal, ELEMENTS } from "./lib/dataset.mjs";
-import { readGeneratedRegion, parseHtmlData, parseJsxData } from "./lib/generated.mjs";
+import { readGeneratedRegion, parseHtmlData, APP_REGION } from "./lib/generated.mjs";
 
 const failures = [];
 const report = {};
@@ -16,7 +16,6 @@ function sameJson(a, b) {
 
 const dataset = await loadDataset().catch(fatal);
 const html = await fs.readFile(new URL("../index.html", import.meta.url), "utf8");
-const jsx = await fs.readFile(new URL("../src/希土類サプライチェーン.jsx", import.meta.url), "utf8");
 const financials = JSON.parse(await fs.readFile(new URL("../src/data/company-financials.json", import.meta.url), "utf8"));
 const finalStage = Math.max(...dataset.stages.map((stage) => stage.id));
 
@@ -99,17 +98,19 @@ check("廃止サブカテゴリーIDを企業分類から除去", dataset.compan
 
 // --- 生成物の同期 ---------------------------------------------------------
 const htmlData = parseHtmlData(html);
-const jsxData = parseJsxData(jsx);
 check("index.html の企業データがJSONと一致", sameJson(htmlData.seed, dataset.companies));
-check("JSX の企業データがJSONと一致", sameJson(jsxData.SEED, dataset.companies));
 const htmlSubs = [...htmlData.commerceSubs, ...htmlData.parts, ...htmlData.modules, ...htmlData.systems];
 check("index.html のサブカテゴリーがJSONと一致", sameJson(htmlSubs, dataset.subcategories));
 check("index.html の列順がJSONと一致", sameJson(htmlData.columnOrder, dataset.columnOrder));
-check("JSX のサブカテゴリーがJSONと一致", sameJson(jsxData.SUBCATS, dataset.subcategories));
-check("JSX の工程がJSONと一致", sameJson(jsxData.STAGES, dataset.stages));
 check("index.html の工程見出しがJSONと一致", sameJson(htmlData.stages, dataset.stages));
-check("中国依存データの生成物同期", sameJson(htmlData.dependencyRows, dataset.dependency) && sameJson(jsxData.DEPENDENCY_ROWS, dataset.dependency));
-check("3言語オーバーレイの生成物同期", sameJson(htmlData.localeData, dataset.locales));
+check("中国依存データの生成物同期", sameJson(htmlData.dependencyRows, dataset.dependency));
+const PUBLISHED_LOCALES = ["en", "zh-CN"];
+check(
+  "翻訳オーバーレイの生成物同期",
+  sameJson(htmlData.localeData, Object.fromEntries(PUBLISHED_LOCALES.map((locale) => [locale, dataset.locales[locale]]))),
+);
+// ja は日本語正本と同一であることを dataset.mjs が強制しているため、配布物に重複して載せない。
+check("日本語オーバーレイを配布物から除外", !Object.prototype.hasOwnProperty.call(htmlData.localeData, "ja"));
 check(
   "企業カード本文を日本語・英語・簡体中文で全197社収録",
   ["ja", "en", "zh-CN"].every((locale) => Object.keys(dataset.locales[locale].companies).length === dataset.companies.length),
@@ -128,6 +129,132 @@ const translatedRouteCount = dataset.subcategories.filter((sub) => sub.srcNotes)
 check(
   "サブカテゴリー間接続説明を3言語で全件収録",
   ["ja", "en", "zh-CN"].every((locale) => Object.keys(dataset.locales[locale].routes).length === translatedRouteCount),
+);
+
+// --- 画面側の手書きテーブルがJSONを網羅しているか ---------------------------
+// uiStrings / stageTranslations / subTranslations / flowOrderByElement は生成領域の外に
+// 手書きされているため、JSONへ工程・サブカテゴリー・元素を足しても自動では追随しない。
+// 画面側は未定義なら日本語へ黙ってフォールバックするので、ここで網羅を検査する。
+function inlineBlock(source, opener) {
+  const start = source.indexOf(opener);
+  if (start < 0) return "";
+  let depth = 0;
+  let inString = false;
+  let escaped = false;
+  let quote = "";
+  for (let i = start + opener.length - 1; i < source.length; i += 1) {
+    const char = source[i];
+    if (inString) {
+      if (escaped) escaped = false;
+      else if (char === "\\") escaped = true;
+      else if (char === quote) inString = false;
+      continue;
+    }
+    if (char === '"' || char === "'") {
+      inString = true;
+      quote = char;
+      continue;
+    }
+    if (char === "{" || char === "[") depth += 1;
+    else if (char === "}" || char === "]") {
+      depth -= 1;
+      if (!depth) return source.slice(start + opener.length - 1, i + 1);
+    }
+  }
+  return "";
+}
+
+const TRANSLATED_LOCALES = [
+  { locale: "en", opener: "en:{" },
+  { locale: "zh-CN", opener: '"zh-CN":{' },
+];
+
+const subTranslationBlock = inlineBlock(html, "var subTranslations={");
+const missingSubTranslations = [];
+for (const { locale, opener } of TRANSLATED_LOCALES) {
+  const localeBlock = inlineBlock(subTranslationBlock, opener);
+  for (const sub of dataset.subcategories) {
+    if (!localeBlock.includes('"' + sub.id + '":[')) missingSubTranslations.push(locale + "/" + sub.id);
+  }
+}
+check(
+  "サブカテゴリー名称を英語・簡体中文で全件翻訳",
+  missingSubTranslations.length === 0,
+  "index.html の subTranslations に未定義: " + missingSubTranslations.join(", "),
+);
+
+const stageTranslationBlock = inlineBlock(html, "var stageTranslations={");
+const missingStageTranslations = [];
+for (const { locale, opener } of TRANSLATED_LOCALES) {
+  const localeBlock = inlineBlock(stageTranslationBlock, opener);
+  for (const stage of dataset.stages) {
+    if (!localeBlock.includes(stage.id + ":[")) missingStageTranslations.push(locale + "/" + stage.id);
+  }
+}
+check(
+  "工程名称を英語・簡体中文で全件翻訳",
+  missingStageTranslations.length === 0,
+  "index.html の stageTranslations に未定義: " + missingStageTranslations.join(", "),
+);
+
+const uiStringBlock = inlineBlock(html, "var uiStrings={");
+const japaneseUiKeys = [...inlineBlock(uiStringBlock, "ja:{").matchAll(/[,{]([A-Za-z][A-Za-z0-9]*):/g)].map((match) => match[1]);
+const missingUiStrings = [];
+for (const { locale, opener } of TRANSLATED_LOCALES) {
+  const localeBlock = inlineBlock(uiStringBlock, opener);
+  for (const key of japaneseUiKeys) {
+    if (!new RegExp("[,{]" + key + ":").test(localeBlock)) missingUiStrings.push(locale + "/" + key);
+  }
+}
+check(
+  "画面ラベルを英語・簡体中文で全件翻訳",
+  japaneseUiKeys.length > 0 && missingUiStrings.length === 0,
+  "index.html の uiStrings に未定義: " + missingUiStrings.join(", "),
+);
+
+const flowOrderBlock = inlineBlock(html, "var flowOrderByElement={");
+const flowOrderGaps = [];
+for (const element of ELEMENTS) {
+  const elementBlock = inlineBlock(flowOrderBlock, element + ":{");
+  if (!elementBlock) {
+    flowOrderGaps.push(element + ": 定義なし");
+    continue;
+  }
+  for (const stage of dataset.stages.filter((item) => item.id >= 2)) {
+    const stageBlock = inlineBlock(elementBlock, stage.id + ":[");
+    const listed = [...stageBlock.matchAll(/"([^"]+)"/g)].map((match) => match[1]);
+    const expected = dataset.subcategories
+      .filter((sub) => sub.stage === stage.id && sub.els.includes(element))
+      .map((sub) => sub.id);
+    const extra = listed.filter((id) => !expected.includes(id));
+    const missing = expected.filter((id) => !listed.includes(id));
+    if (extra.length) flowOrderGaps.push(element + "/" + stage.id + " 余分: " + extra.join(","));
+    if (missing.length) flowOrderGaps.push(element + "/" + stage.id + " 不足: " + missing.join(","));
+  }
+}
+check(
+  "元素別フローの表示順が全サブカテゴリーを過不足なく網羅",
+  flowOrderGaps.length === 0,
+  "index.html の flowOrderByElement: " + flowOrderGaps.join(" / "),
+);
+
+const elementTables = [
+  ["サブカテゴリーカードの配色 colors", inlineBlock(html, "var colors={")],
+  ["接続線のレーン lane", inlineBlock(html, "var lane={")],
+  ["中国依存ダッシュボードの配色 depColors", inlineBlock(html, "var depColors={")],
+];
+for (const [label, table] of elementTables) {
+  const missing = ELEMENTS.filter((element) => !new RegExp("[,{]" + element + ":").test(table));
+  check(label + " が全元素を網羅", missing.length === 0, "未定義: " + missing.join(", "));
+}
+const flowElementMetaBlock = inlineBlock(html, "var flowElementMeta={");
+const missingElementMeta = ELEMENTS.filter(
+  (element) => flowElementMetaBlock.split(element + ":{symbol:").length - 1 !== 3,
+);
+check(
+  "元素カードの解説を3言語×全元素で定義",
+  missingElementMeta.length === 0,
+  "index.html の flowElementMeta に不足: " + missingElementMeta.join(", "),
 );
 
 // --- 公開画面の構造 -------------------------------------------------------
@@ -175,8 +302,8 @@ check(
 );
 check(
   "全体では全接続線、分類選択時は全上流・全下流を強調",
-  html.includes("function walk(direction,element)") &&
-    html.includes('selectedElements.forEach(function(element){walk("up",element);walk("down",element)}') &&
+  html.includes("function traceLinkedEdges(edges,startId,reader,elementList)") &&
+    html.includes("traceLinkedEdges(edges,id,edgeReader,selectedElements)") &&
     html.includes("allSubs.forEach(function(target){if((target.src||[]).indexOf(selected.id)>=0)"),
 );
 check("工程全体とサブカテゴリーの高さを所属会社数に比例", html.includes("minCardHeight=100,columnGap=8,columnBaseSpan=220,perStageCompany=16.6,perCardScaleCompany=.8,maxColumnSpan=1580") && html.includes("minimumSpan+stageCompanyCount*perCardScaleCompany") && html.includes("columnBaseSpan+stageCompanyCount*perStageCompany") && html.includes("extraHeight*weights[index]/weightTotal") && html.includes(".re-sub-card{width:176px;min-height:100px") && html.includes(".re-card-description{font-size:9.5px") && !html.includes("is-compact .re-card-description{display:none}"));
@@ -202,7 +329,7 @@ check(
     html.includes("function renderElementFlow()") &&
     html.includes("target.item.srcEls[sourceId]") &&
     html.includes("各カテゴリーに出入りする帯の合計幅は、そのカテゴリーに所属する該当元素企業数に比例します") &&
-    html.includes('if(flowSelectionId){traceFlow("up");traceFlow("down")}') &&
+    html.includes("traceLinkedEdges(edges,flowSelectionId,flowEdgeReader,null)") &&
     html.includes("linkedEdges.has(edge)?' is-linked':'") &&
     html.includes('svg.classList.toggle("is-tracing",!!flowSelectionId)') &&
     html.includes("function renderFlowElementControls()") &&
@@ -247,16 +374,54 @@ check(
     !html.includes("function beginPinch()") &&
     !html.includes("mapView"),
 );
-check("画面からExcel読込機能を撤去", !html.includes('type="file"') && !jsx.includes('type="file"') && !html.includes("Excelを読み込む") && !jsx.includes("Excelを読み込む") && !/\bXLSX\b/.test(html) && !/\bXLSX\b/.test(jsx));
+check("画面からExcel読込機能を撤去", !html.includes('type="file"') && !html.includes("Excelを読み込む") && !/\bXLSX\b/.test(html));
 check("公開画面の外部通信とリファラー送信を制限", html.includes('name="referrer" content="no-referrer"') && html.includes("connect-src 'none'") && html.includes("default-src 'self'"));
+
+// --- アプリコードの置き場所 -------------------------------------------------
+// 画面のスクリプトは src/app/*.js が正本。index.html には連結結果だけが入る。
+const appFiles = (await fs.readdir(new URL("../src/app/", import.meta.url))).filter((name) => name.endsWith(".js")).sort();
+report.appFiles = appFiles.length;
+check("src/app に画面のスクリプトがある", appFiles.length >= 5, "見つかったファイル: " + appFiles.join(", "));
+const appSources = Object.fromEntries(await Promise.all(appFiles.map(async (name) => [
+  name, await fs.readFile(new URL(`../src/app/${name}`, import.meta.url), "utf8"),
+])));
+const withModuleSyntax = appFiles.filter((name) => /^\s*(?:import|export)\b/m.test(appSources[name]));
+check(
+  "src/app は連結して使うため import / export を持たない",
+  withModuleSyntax.length === 0,
+  "import / export がある: " + withModuleSyntax.join(", "),
+);
+const appRegionSource = readGeneratedRegion(html, "index.html", APP_REGION);
+const notConcatenated = appFiles.filter((name) => !appRegionSource.includes(`// ---- src/app/${name} ----`));
+check(
+  "src/app の全ファイルが index.html に連結されている",
+  notConcatenated.length === 0,
+  "連結されていない: " + notConcatenated.join(", "),
+);
+// 画面のスクリプトが生成領域の外に書かれていないか（index.html を直接編集していないか）。
+const inlineScript = html.slice(html.lastIndexOf("<script>"), html.lastIndexOf("</script>"));
+const outsideRegions = inlineScript
+  .replace(/\/\* GENERATED DATA START[\s\S]*?\/\* GENERATED DATA END \*\//, "")
+  .replace(/\/\* APP CODE START[\s\S]*?\/\* APP CODE END \*\//, "")
+  .split("\n").map((line) => line.trim()).filter(Boolean);
+check(
+  "index.html の手書きスクリプトは生成領域の中だけ",
+  outsideRegions.every((line) => ["<script>", "(function(){", "})();"].includes(line)),
+  "領域外の行: " + outsideRegions.filter((line) => !["<script>", "(function(){", "})();"].includes(line)).join(" / "),
+);
+check(
+  "再描画の入口が refresh() に一本化されている",
+  html.includes("function refresh(scope)") &&
+    !/[^n]\brender\(\)/.test(appSources["view.js"] ?? "") &&
+    appFiles.every((name) => !/\brenderList\(\);\s*renderDossier\(\)/.test(name === "view.js" ? "" : appSources[name])),
+);
 
 // 生成領域外へのデータ複製を防ぐ。
 const htmlRegion = readGeneratedRegion(html, "index.html");
-for (const declaration of ["var seed=", "var commerceSubs=", "var parts=", "var modules=", "var systems=", "var columnOrder=", "var dependencyRows=", "var localeData="]) {
+for (const declaration of ["var elements=", "var seed=", "var commerceSubs=", "var parts=", "var modules=", "var systems=", "var columnOrder=", "var dependencyRows=", "var localeData="]) {
   check("index.html の " + declaration + " が生成領域内に1つだけ", html.split(declaration).length - 1 === 1 && htmlRegion.split(declaration).length - 1 === 1);
 }
-check("JSX の生成データ定義が1組", ["const SEED =", "const SUBCATS =", "const STAGES =", "const DEPENDENCY_ROWS ="].every((declaration) => jsx.split(declaration).length - 1 === 1));
-check("元素の一覧がindex.htmlと一致", ELEMENTS.every((element) => html.includes('"' + element + '"')));
+check("元素の一覧を生成領域から供給", sameJson(htmlData.elements, ELEMENTS) && html.includes("allElements=elements.slice()") && html.includes("selectedElements=elements.slice()"));
 
 console.log(JSON.stringify(report, null, 2));
 if (failures.length) {

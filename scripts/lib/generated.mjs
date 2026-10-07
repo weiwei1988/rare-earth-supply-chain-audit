@@ -1,20 +1,27 @@
 // 生成領域を安全なJSONデータとして直列化・抽出するユーティリティ。
 // 生成物はコードとして評価せず、許可した代入文だけをJSON.parseする。
-const START = "GENERATED DATA START";
-const END = "GENERATED DATA END";
-const START_LINE = /^[ \t]*\/\* GENERATED DATA START\b[^\r\n]*\*\/[ \t]*$/gm;
-const END_LINE = /^[ \t]*\/\* GENERATED DATA END \*\/[ \t]*$/gm;
+// 生成領域は2種類ある。データ（src/data から）とアプリのコード（src/app から）。
+export const DATA_REGION = "GENERATED DATA";
+export const APP_REGION = "APP CODE";
+
+function markerPatterns(region) {
+  return {
+    start: new RegExp(`^[ \\t]*\\/\\* ${region} START\\b[^\\r\\n]*\\*\\/[ \\t]*$`, "gm"),
+    end: new RegExp(`^[ \\t]*\\/\\* ${region} END \\*\\/[ \\t]*$`, "gm"),
+  };
+}
 
 function marker(source, pattern, label, path) {
   const matches = [...source.matchAll(pattern)];
-  if (matches.length !== 1) throw new Error(`${path} に生成領域の${label}マーカーが${matches.length}件あります。`);
+  if (matches.length !== 1) throw new Error(`${path} に${label}マーカーが${matches.length}件あります。`);
   return matches[0];
 }
 
-function bounds(source, path) {
-  const start = marker(source, START_LINE, START, path);
-  const end = marker(source, END_LINE, END, path);
-  if (end.index <= start.index) throw new Error(`${path} の生成領域マーカーの順序が不正です。`);
+function bounds(source, path, region = DATA_REGION) {
+  const patterns = markerPatterns(region);
+  const start = marker(source, patterns.start, `${region} START`, path);
+  const end = marker(source, patterns.end, `${region} END`, path);
+  if (end.index <= start.index) throw new Error(`${path} の ${region} マーカーの順序が不正です。`);
   const bodyStart = source.indexOf("\n", start.index + start[0].length) + 1;
   const bodyEnd = source.lastIndexOf("\n", end.index);
   if (bodyStart <= 0 || bodyEnd < bodyStart) throw new Error(`${path} の生成領域に改行がありません。`);
@@ -30,13 +37,13 @@ export function serializeGeneratedJson(value, indent) {
     .replace(/\u2029/g, "\\u2029");
 }
 
-export function readGeneratedRegion(source, path) {
-  const { bodyStart, bodyEnd } = bounds(source, path);
+export function readGeneratedRegion(source, path, region = DATA_REGION) {
+  const { bodyStart, bodyEnd } = bounds(source, path, region);
   return source.slice(bodyStart, bodyEnd);
 }
 
-export function replaceGeneratedRegion(source, generated, path) {
-  const { start, end } = bounds(source, path);
+export function replaceGeneratedRegion(source, generated, path, region = DATA_REGION) {
+  const { start, end } = bounds(source, path, region);
   const head = source.slice(0, source.lastIndexOf("\n", start.index) + 1);
   const tail = source.slice(source.indexOf("\n", end.index + end[0].length) + 1);
   return head + generated + tail;
@@ -104,6 +111,7 @@ function parseDeclarations(source, path, declarations) {
 
 export function parseHtmlData(html) {
   return parseDeclarations(html, "index.html", [
+    ["var elements=", "elements"],
     ["var seed=", "seed"],
     ["var stages=", "stages"],
     ["var commerceSubs=", "commerceSubs"],
@@ -116,11 +124,3 @@ export function parseHtmlData(html) {
   ]);
 }
 
-export function parseJsxData(jsx) {
-  return parseDeclarations(jsx, "src/希土類サプライチェーン.jsx", [
-    ["const STAGES =", "STAGES"],
-    ["const SUBCATS =", "SUBCATS"],
-    ["const SEED =", "SEED"],
-    ["const DEPENDENCY_ROWS =", "DEPENDENCY_ROWS"],
-  ]);
-}

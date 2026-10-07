@@ -2,18 +2,14 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs/promises";
 import { assertPublicHttpsUrl, assertValidSubcategoryId, ValidationError } from "./lib/dataset.mjs";
-import { parseHtmlData, parseJsxData, serializeGeneratedJson } from "./lib/generated.mjs";
+import { parseHtmlData, serializeGeneratedJson } from "./lib/generated.mjs";
 
 const start = "/* GENERATED DATA START — test */";
 const end = "/* GENERATED DATA END */";
 
-function htmlFixture(seed) {
+function htmlFixture(seed, extra = "") {
   const value = serializeGeneratedJson(seed);
-  return `<script>\n${start}\nvar seed=${value};\nvar stages=[];\nvar commerceSubs=[];\nvar parts=[];\nvar modules=[];\nvar systems=[];\nvar columnOrder={};\nvar dependencyRows=[];\nvar localeData={};\n${end}\n</script>`;
-}
-
-function jsxFixture(extra = "") {
-  return `${start}\nconst STAGES = [];\nconst SUBCATS = [];\nconst SEED = [];\nconst DEPENDENCY_ROWS = [];\n${extra}${end}\n`;
+  return `<script>\n${start}\nvar elements=[];\nvar seed=${value};\nvar stages=[];\nvar commerceSubs=[];\nvar parts=[];\nvar modules=[];\nvar systems=[];\nvar columnOrder={};\nvar dependencyRows=[];\nvar localeData={};\n${extra}${end}\n</script>`;
 }
 
 test("生成JSONはscript終了タグとraw風文字列を実行可能な構文にしない", () => {
@@ -30,8 +26,8 @@ test("生成JSONはscript終了タグとraw風文字列を実行可能な構文�
 
 test("生成領域パーサーは追加の実行文を拒否して実行しない", () => {
   delete globalThis.__generatedParserSentinel;
-  const source = jsxFixture("globalThis.__generatedParserSentinel = 1;\n");
-  assert.throws(() => parseJsxData(source), /許可されていない文/);
+  const source = htmlFixture([], "globalThis.__generatedParserSentinel = 1;\n");
+  assert.throws(() => parseHtmlData(source), /許可されていない文/);
   assert.equal(globalThis.__generatedParserSentinel, undefined);
 });
 
