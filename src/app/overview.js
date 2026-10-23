@@ -104,14 +104,18 @@ function renderFlow(){
   function stageLabel(stage,x){return'<div class="re-column-label" style="left:'+x+'px;width:'+cardWidth+'px"><span class="re-column-label-code">STAGE '+stage.code+'</span><strong class="re-column-label-title">'+esc(stageText(stage,"label"))+'</strong><span class="re-column-label-count">'+companyCount(countStage(stage.id))+'</span></div>'}
   cards+=stageLabel(sourceStage,source.x);
   columns.forEach(function(column){cards+=stageLabel(stageMeta[column.stage],xByStage[column.stage])});
-  cards+='<div class="re-stamp" style="left:18px;top:'+(CY-310)+'px;transform:rotate(-5deg)">2025.04 七元素規制</div>';
-  cards+='<div class="re-stamp" style="left:40px;top:'+(CY-277)+'px;transform:rotate(3deg)">2026.01 対日強化</div>';
+  cards+='<div class="re-stamp" style="left:18px;top:'+(CY-310)+'px;transform:rotate(-5deg)">'+esc(tr("stampSeven"))+'</div>';
+  cards+='<div class="re-stamp" style="left:40px;top:'+(CY-277)+'px;transform:rotate(3deg)">'+esc(tr("stampJapan"))+'</div>';
   cards+='<button type="button" class="re-card re-stage-card" data-type="stage" data-id="1" data-node-id="stage01" aria-pressed="'+(selection.type==="stage"&&Number(selection.id)===1)+'" style="left:'+source.x+'px;top:'+(CY-41)+'px;width:'+source.w+'px"><div class="re-card-code">SOURCE / STAGE '+sourceStage.code+'</div><div class="re-card-title">'+esc(stageText(sourceStage,"label"))+'</div><div class="re-card-sub">'+esc(stageText(sourceStage,"short"))+'</div></button>';
   columns.forEach(function(column){var stage=stageMeta[column.stage];column.nodes.forEach(function(item){cards+=subCard(item,nodeMap[item.id],stage)})});
   var canvas=root.querySelector("#re-flow-canvas");
   canvas.style.width=W+"px";
   canvas.style.height=H+"px";
   canvas.innerHTML=svg+cards;
+  // STAGE 01 カードの高さは言語で変わる（英語は2行になる）。挿入後に実測し、
+  // 接続線の始点 CY に中心をそろえる。
+  var sourceCard=canvas.querySelector(".re-stage-card");
+  if(sourceCard)sourceCard.style.top=(CY-sourceCard.offsetHeight/2)+"px";
   var edgeReader={from:function(edge){return edge.dataset.from},to:function(edge){return edge.dataset.to},element:function(edge){return edge.dataset.element}};
   function traceEdges(id){
     canvas.classList.toggle("is-tracing",!!id);
@@ -128,7 +132,8 @@ function renderFlow(){
     var traceable=btn.dataset.type==="sub";
     traceNodeId=traceable?btn.dataset.id:null;
     selection={type:btn.dataset.type,id:btn.dataset.id};selectedId=null;refresh("overview");
-    if(traceable)requestAnimationFrame(function(){
+    // STAGE 01 を押したときは中国依存カードが一覧の位置に出るため、サブカテゴリーと同じく送る。
+    requestAnimationFrame(function(){
       var heading=root.querySelector("#re-list-title");
       if(heading)heading.scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"})
     })

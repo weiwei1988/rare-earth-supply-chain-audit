@@ -125,6 +125,15 @@ check(
     );
   }),
 );
+check(
+  "中国依存カードを英語・簡体中文で全件翻訳",
+  PUBLISHED_LOCALES.every((locale) => dataset.dependency.every((row) => {
+    const translated = dataset.locales[locale].dependency[row.id];
+    return translated && translated.segments.length === row.segments.length &&
+      ["quality", "metric", "evidence", "source"].every((field) => translated[field] && translated[field] !== row[field]);
+  })),
+  "未翻訳または日本語正本のままの項目があります",
+);
 const translatedRouteCount = dataset.subcategories.filter((sub) => sub.srcNotes).length;
 check(
   "サブカテゴリー間接続説明を3言語で全件収録",
@@ -355,7 +364,19 @@ check(
     html.includes('id="re-flow-companies"') &&
     html.includes("function renderFlowCompanyResults()"),
 );
-check("サブカテゴリー選択時に企業一覧へ自動スクロール", html.includes("if(traceable)requestAnimationFrame(function(){") && html.includes('root.querySelector("#re-list-title")') && html.includes('heading.scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"})'));
+check(
+  "工程カード選択時に一覧（STAGE 01 は中国依存カード）へ自動スクロール",
+  html.includes('root.querySelector("#re-list-title")') &&
+    html.includes('heading.scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"})') &&
+    !html.includes("if(traceable)requestAnimationFrame(function(){"),
+);
+check(
+  "元素別フローの海外起点から中国依存カードへ",
+  html.includes('var FLOW_SOURCE_ID="flow-source"') &&
+    html.includes("flowSelectionId===FLOW_SOURCE_ID") &&
+    html.includes("dependencyDashboardHtml([flowElement])") &&
+    html.includes('data-flow-node="\'+esc(source.id)+\'"'),
+);
 check(
   "企業カードの評価ランク表示と色分けを撤去",
   !html.includes('aria-label="DD評価"') &&

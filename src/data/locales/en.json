@@ -2416,7 +2416,7 @@
     },
     "04_sc_crystal": {
       "srcNotes": {
-        "03_sam_crystal": "Process crystals into wafers and grow GaN"
+        "03_sam_crystal": "Process crystals into wafers that serve as substrates for GaN growth"
       }
     },
     "04_dielectric": {
@@ -2491,7 +2491,7 @@
     "06_guidance": {
       "srcNotes": {
         "05_scaln_film": "MEMS inertial and piezoelectric sensors",
-        "05_motor": "Steering and seeker drives; gyroscopes",
+        "05_motor": "Steering drives, seeker drives, and gyroscopes",
         "05_electronics": "Electronic circuits and sensors in inertial measurement units (IMUs) and guidance-control systems"
       }
     },
@@ -2540,7 +2540,7 @@
     },
     "06_nuclear": {
       "srcNotes": {
-        "05_cladding": "Fuel-rod cladding for accident-tolerant and fast-reactor fuels, at the development stage"
+        "05_cladding": "Fuel-rod cladding for accident-tolerant and fast-reactor fuels (under development)"
       }
     },
     "06_laser": {
@@ -2569,6 +2569,60 @@
         "05_scaln_film": "Piezoelectric sensors and high-frequency devices",
         "05_electronics": "Electronic components in instruments and sensors"
       }
+    }
+  },
+  "dependency": {
+    "Y": {
+      "quality": "Element-level actuals",
+      "metric": "Japan's yttrium oxide imports, 2023",
+      "evidence": "Contained-metal volumes based on Ministry of Finance trade statistics. China accounts for 961 t of the 1,019 t total.",
+      "source": "JOGMEC, Mineral Resources Material Flow 2024 (Table 3-2-4-2)",
+      "segments": [
+        "China",
+        "Australia",
+        "United States",
+        "Other"
+      ]
+    },
+    "Dy": {
+      "quality": "Heavy-rare-earth actuals",
+      "metric": "Japan's heavy-rare-earth imports, published 2024",
+      "evidence": "METI puts China dependency for heavy-rare-earth imports at 100%. This is the customs category for heavy rare earths, which includes Dy and Tb, rather than element-level figures.",
+      "source": "METI, Current Status of Mineral Policy (October 2024)",
+      "segments": [
+        "China"
+      ]
+    },
+    "Tb": {
+      "quality": "Heavy-rare-earth actuals",
+      "metric": "Japan's heavy-rare-earth imports, published 2024",
+      "evidence": "METI puts China dependency for heavy-rare-earth imports at 100%. This is the customs category for heavy rare earths, which includes Dy and Tb, rather than element-level figures.",
+      "source": "METI, Current Status of Mineral Policy (October 2024)",
+      "segments": [
+        "China"
+      ]
+    },
+    "Sm": {
+      "quality": "Global supply estimate",
+      "metric": "Global samarium oxide supply mix, 2024",
+      "evidence": "Benchmark Mineral Intelligence's 2025 materials give “Samarium (Sm) Oxide Supply (2024)” as 99% China and 1% outside China. This is a research firm's estimate of the 2024 oxide supply mix, not Japan's import dependency or a mine-production share, and it does not represent the ratio as of 2026.",
+      "source": "Benchmark Mineral Intelligence, Rare Earths Price Assessment Methodology (July 2025 edition, p. 25)",
+      "segments": [
+        "China",
+        "Outside China"
+      ]
+    },
+    "Sc": {
+      "quality": "Global production estimate",
+      "metric": "Global scandium oxide production mix, 2024 (approximate)",
+      "evidence": "An approximation built on 2024 global production of 40 t, combining Rio Tinto's estimate of about 83% for China, Canada's capacity of 3 t per year (at most 7.5% of the world total) and the USGS figure for Russia's actual output of 0.9 t (about 2.3%). The 7.2% for Japan, the Philippines and others is the residual. Canada's figure is a capacity ceiling rather than an actual production share, and the segments are not a strict country breakdown drawn from a single statistical source.",
+      "source": "Rio Tinto submission to the U.S. Department of Commerce (2025, p. 31) / USGS MCS 2025, Russia 2024 / Rio Tinto published capacity",
+      "segments": [
+        "China",
+        "Canada (capacity ceiling)",
+        "Russia",
+        "Japan, Philippines, etc. (residual)"
+      ]
     }
   }
 }

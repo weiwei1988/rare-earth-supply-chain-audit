@@ -6,9 +6,10 @@ const dataDir = new URL("../src/data/", import.meta.url);
 const localeDir = new URL("../src/data/locales/", import.meta.url);
 const COMPANY_TEXT_FIELDS = ["name", "own", "rev", "prod", "pos", "def", "chn", "bom", "gap", "src", "note"];
 
-const [companies, subcategories] = await Promise.all([
+const [companies, subcategories, dependency] = await Promise.all([
   fs.readFile(new URL("companies.json", dataDir), "utf8").then(JSON.parse),
   fs.readFile(new URL("subcategories.json", dataDir), "utf8").then(JSON.parse),
+  fs.readFile(new URL("dependency.json", dataDir), "utf8").then(JSON.parse),
 ]);
 
 const overlay = {
@@ -22,6 +23,13 @@ const overlay = {
   routes: Object.fromEntries(subcategories
     .filter((sub) => sub.srcNotes)
     .map((sub) => [sub.id, { srcNotes: sub.srcNotes }])),
+  dependency: Object.fromEntries(dependency.map((row) => [row.id, {
+    quality: row.quality,
+    metric: row.metric,
+    evidence: row.evidence,
+    source: row.source,
+    segments: row.segments.map((segment) => segment.name),
+  }])),
 };
 
 await fs.mkdir(localeDir, { recursive: true });
@@ -30,4 +38,5 @@ console.log(JSON.stringify({
   locale: overlay.locale,
   companies: Object.keys(overlay.companies).length,
   routes: Object.keys(overlay.routes).length,
+  dependency: Object.keys(overlay.dependency).length,
 }));

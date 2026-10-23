@@ -15,6 +15,8 @@ export function normalizeEv(value) {
 export const COLOR_TOKENS = ["A", "Y", "DyTb", "Sm", "Sc", "line"];
 export const LOCALES = ["ja", "en", "zh-CN"];
 export const COMPANY_TEXT_FIELDS = ["name", "own", "rev", "prod", "pos", "def", "chn", "bom", "gap", "src", "note"];
+// 中国依存カードの翻訳項目（segments は区分名の配列）。
+export const DEPENDENCY_TEXT_FIELDS = ["evidence", "metric", "quality", "segments", "source"];
 
 const dataDir = new URL("../../src/data/", import.meta.url);
 
@@ -217,8 +219,8 @@ export async function loadDataset() {
     const overlay = localeData[locale];
     if (!overlay || typeof overlay !== "object" || Array.isArray(overlay)) throw new ValidationError(`${locale} の翻訳データが不正です。`);
     const topKeys = Object.keys(overlay).sort();
-    if (JSON.stringify(topKeys) !== JSON.stringify(["companies", "locale", "routes"])) {
-      throw new ValidationError(`${locale} の翻訳データは locale / companies / routes だけを持つ必要があります。`);
+    if (JSON.stringify(topKeys) !== JSON.stringify(["companies", "dependency", "locale", "routes"])) {
+      throw new ValidationError(`${locale} の翻訳データは locale / companies / routes / dependency だけを持つ必要があります。`);
     }
     if (overlay.locale !== locale) throw new ValidationError(`${locale} の locale 値が一致しません: ${overlay.locale}`);
     if (!overlay.companies || typeof overlay.companies !== "object" || Array.isArray(overlay.companies)) {
@@ -281,6 +283,46 @@ export async function loadDataset() {
         if (typeof note !== "string" || !note.trim()) throw new ValidationError(`${locale} の ${id}.srcNotes.${source} に翻訳文がありません。`);
         if (locale === "ja" && note !== canonicalNotes[source]) throw new ValidationError(`ja の ${id}.srcNotes.${source} が日本語正本と同期していません。`);
       }
+    }
+  }
+  // 中国依存カード（工程01）の翻訳。見出し・指標・根拠・出典と、構成比の区分名を持つ。
+  const canonicalDependencyById = new Map(dependency.map((row) => [row.id, row]));
+  for (const locale of LOCALES) {
+    const overlay = localeData[locale];
+    if (!overlay.dependency || typeof overlay.dependency !== "object" || Array.isArray(overlay.dependency)) {
+      throw new ValidationError(`${locale} の dependency が不正です。`);
+    }
+    const translatedIds = Object.keys(overlay.dependency);
+    const canonicalIds = dependency.map((row) => row.id);
+    const missing = canonicalIds.filter((id) => !translatedIds.includes(id));
+    const extra = translatedIds.filter((id) => !canonicalDependencyById.has(id));
+    if (missing.length || extra.length) {
+      throw new ValidationError(`${locale} の中国依存カードIDが正本と一致しません（不足: ${missing.join(", ") || "なし"} / 余分: ${extra.join(", ") || "なし"}）。`);
+    }
+    for (const id of canonicalIds) {
+      const canonical = canonicalDependencyById.get(id);
+      const translated = overlay.dependency[id];
+      const fields = Object.keys(translated).sort();
+      if (JSON.stringify(fields) !== JSON.stringify(DEPENDENCY_TEXT_FIELDS)) {
+        throw new ValidationError(`${locale} の ${id} は ${DEPENDENCY_TEXT_FIELDS.join(" / ")} だけを持つ必要があります（実際: ${fields.join(", ")}）。`);
+      }
+      for (const field of ["quality", "metric", "evidence", "source"]) {
+        if (typeof translated[field] !== "string" || !translated[field].trim()) {
+          throw new ValidationError(`${locale} の ${id}.${field} に翻訳文がありません。`);
+        }
+        if (locale === "ja" && translated[field] !== canonical[field]) {
+          throw new ValidationError(`ja の ${id}.${field} が日本語正本と同期していません。`);
+        }
+      }
+      if (!Array.isArray(translated.segments) || translated.segments.length !== canonical.segments.length) {
+        throw new ValidationError(`${locale} の ${id}.segments は正本と同じ ${canonical.segments.length} 件である必要があります。`);
+      }
+      translated.segments.forEach((name, index) => {
+        if (typeof name !== "string" || !name.trim()) throw new ValidationError(`${locale} の ${id}.segments[${index}] に区分名がありません。`);
+        if (locale === "ja" && name !== canonical.segments[index].name) {
+          throw new ValidationError(`ja の ${id}.segments[${index}] が日本語正本と同期していません。`);
+        }
+      });
     }
   }
   for (const id of companyIds) {
