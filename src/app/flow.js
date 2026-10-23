@@ -29,7 +29,7 @@ function renderElementFlow(){
   }
   Object.keys(byStage).forEach(function(stage){positionColumn(byStage[stage],Number(stage))});
   var dep=dependencyRows.find(function(row){return row.tag===flowElement});
-  var source={id:"flow-source",stage:1,count:flowStageCount(2,flowElement),x:left,y:H/2,h:Math.max(8,flowStageCount(2,flowElement)*companyScale),incoming:[],outgoing:[]};
+  var source={id:FLOW_SOURCE_ID,stage:1,count:flowStageCount(2,flowElement),x:left,y:H/2,h:Math.max(8,flowStageCount(2,flowElement)*companyScale),incoming:[],outgoing:[]};
   positions[source.id]=source;
   var edges=[];
   byStage[2].forEach(function(target){edges.push({from:source.id,to:target.id})});
@@ -79,7 +79,7 @@ function renderElementFlow(){
     return'<path class="re-ef-link'+(linkedEdges.has(edge)?' is-linked':'')+'" d="'+ribbon(edge)+'" fill="'+flowColor+'"><title>'+esc(from+" "+companyCount(edge.a.count)+" → "+to+" "+companyCount(edge.b.count)+" / "+tagLabel(flowElement))+'</title></path>'
   }).join("")+'</g>';
   var chinaText=dep?tr("chinaRatio",{value:dep.china}):tr("chinaReference");
-  markup+='<g class="re-ef-source"><rect class="re-ef-node-bar" x="'+source.x+'" y="'+(source.y-source.h/2)+'" width="8" height="'+source.h+'" fill="'+flowColor+'"></rect><text class="re-ef-source-title" x="'+(source.x+15)+'" y="'+(source.y-4)+'">'+esc(tr("stageSource"))+'</text><text class="re-ef-node-meta" x="'+(source.x+15)+'" y="'+(source.y+13)+'">'+esc(chinaText)+'</text></g>';
+  markup+='<g class="re-ef-node re-ef-source'+(flowSelectionId===source.id?' is-selected':'')+'" data-flow-node="'+esc(source.id)+'" tabindex="0" role="button" aria-label="'+esc(tr("stageSource")+"、"+chinaText)+'"><rect class="re-ef-node-bar" x="'+source.x+'" y="'+(source.y-source.h/2)+'" width="8" height="'+source.h+'" fill="'+flowColor+'"></rect><text class="re-ef-source-title" x="'+(source.x+15)+'" y="'+(source.y-4)+'">'+esc(tr("stageSource"))+'</text><text class="re-ef-node-meta" x="'+(source.x+15)+'" y="'+(source.y+13)+'">'+esc(chinaText)+'</text></g>';
   markup+=nodes.map(nodeMarkup).join("");
   svg.setAttribute("viewBox","0 0 "+W+" "+H);
   svg.setAttribute("width",W);svg.setAttribute("height",H);svg.style.height=H+"px";svg.classList.toggle("is-tracing",!!flowSelectionId);svg.classList.toggle("is-english",language==="en");svg.innerHTML=markup;
@@ -95,10 +95,21 @@ function renderElementFlow(){
 }
 function renderFlowCompanyResults(){
   var section=root.querySelector("#re-element-flow-results");
+  var main=section.querySelector(".re-main");
   if(!flowSelectionId){section.hidden=true;return}
+  section.hidden=false;
+  // 海外の起点には国内企業がないため、全体像の STAGE 01 と同じ中国依存カードを出す。
+  if(flowSelectionId===FLOW_SOURCE_ID){
+    main.classList.add("is-dependency");
+    root.querySelector("#re-flow-list-title").textContent=tagLabel(flowElement)+" — "+stageText(stages[0],"label");
+    root.querySelector("#re-flow-list-count").textContent=tr("publicStats");
+    root.querySelector("#re-flow-companies").innerHTML=dependencyDashboardHtml([flowElement]);
+    root.querySelector("#re-flow-dossier").innerHTML="";
+    return
+  }
+  main.classList.remove("is-dependency");
   var sub=allSubs.find(function(item){return item.id===flowSelectionId});
   var items=data.filter(function(company){return company.tags.indexOf(flowElement)>=0&&company.subs.indexOf(flowSelectionId)>=0});
-  section.hidden=false;
   root.querySelector("#re-flow-list-title").textContent=tagLabel(flowElement)+" — "+(sub?subText(sub,"label"):flowSelectionId);
   root.querySelector("#re-flow-list-count").textContent=companyUnitCount(items.length);
   var box=root.querySelector("#re-flow-companies");

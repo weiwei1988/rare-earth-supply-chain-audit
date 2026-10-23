@@ -33,17 +33,18 @@ function dossierMarkup(company){
     return'<div class="re-dossier-row"><dt>'+esc(row[0])+'</dt><dd>'+esc(display.short)+more+'</dd></div>'
   }).join("")+'</dl></div>'
 }
-function dependencyDashboardHtml(){
-  var rows=dependencyRows.filter(function(d){return selectedElements.indexOf(d.tag)>=0});
+function dependencyDashboardHtml(elements){
+  var shown=elements||selectedElements;
+  var rows=dependencyRows.filter(function(d){return shown.indexOf(d.tag)>=0});
   function dependencyColor(token){return depColors[token]||depColors.line}
   function gradient(segments){var at=0;return"conic-gradient("+segments.map(function(s){var from=at;at+=s.value;return dependencyColor(s.color)+" "+from+"% "+at+"%"}).join(",")+")"}
   return'<section class="re-dep-dashboard" aria-label="'+esc(tr("china"))+'">'+
     '<div class="re-dep-intro">'+esc(tr("dependencyIntro"))+'</div>'+
-    '<div class="re-dep-grid">'+rows.map(function(d){return '<article class="re-dep-card"><div class="re-dep-head"><div class="re-dep-element"><i style="background:'+colors[d.tag]+'"></i>'+esc(d.label)+'</div><span class="re-dep-badge">'+esc(d.quality)+'</span></div>'+
-      '<div class="re-dep-metric">'+esc(d.metric)+'</div>'+
+    '<div class="re-dep-grid">'+rows.map(function(d){return '<article class="re-dep-card"><div class="re-dep-head"><div class="re-dep-element"><i style="background:'+colors[d.tag]+'"></i>'+esc(d.label)+'</div><span class="re-dep-badge">'+esc(dependencyText(d,"quality"))+'</span></div>'+
+      '<div class="re-dep-metric">'+esc(dependencyText(d,"metric"))+'</div>'+
       '<div class="re-dep-pie" role="img" aria-label="'+esc(d.label+' '+tr("chinaRatio",{value:d.china}))+'" style="background:'+gradient(d.segments)+'"><div class="re-dep-pie-value"><strong>'+d.china+'%</strong><span>'+esc(tr("china"))+'</span></div></div>'+
-      '<div class="re-dep-legend">'+d.segments.map(function(s){return'<div class="re-dep-legend-item"><i style="background:'+dependencyColor(s.color)+'"></i><span>'+esc(s.name)+'</span><strong>'+s.value+'%</strong></div>'}).join("")+'</div>'+
-      '<div class="re-dep-evidence">'+esc(d.evidence)+'<br><a class="re-dep-source" href="'+esc(d.url)+'" target="_blank" rel="noopener noreferrer">'+esc(d.source)+'</a></div></article>'
+      '<div class="re-dep-legend">'+d.segments.map(function(s,index){return'<div class="re-dep-legend-item"><i style="background:'+dependencyColor(s.color)+'"></i><span>'+esc(dependencySegmentName(d,index))+'</span><strong>'+s.value+'%</strong></div>'}).join("")+'</div>'+
+      '<div class="re-dep-evidence">'+esc(dependencyText(d,"evidence"))+'<br><a class="re-dep-source" href="'+esc(d.url)+'" target="_blank" rel="noopener noreferrer">'+esc(dependencyText(d,"source"))+'</a></div></article>'
     }).join("")+'</div>'+
     '<div class="re-dep-note">'+esc(tr("dependencyNote"))+'</div>'+
   '</section>'
