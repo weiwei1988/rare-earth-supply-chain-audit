@@ -114,13 +114,13 @@
     "seed-10": {
       "name": "神島化学工業",
       "own": "東証スタンダード(4026)",
-      "rev": "274.05億円（2025年4月期）",
-      "prod": "透明YAG・Y₂O₃セラミックス、レーザー媒質、蛍光体、光アイソレーター用 TGG 透明セラミックス",
-      "pos": "大型・接合YAGで世界唯一級とされる",
-      "def": "高出力レーザー、宇宙デブリ捕捉、レーザー核融合",
-      "chn": "高。高純度Y₂O₃とNd/Yb等ドーパント原産国を確認",
-      "src": "JSX ／ Y DD ／ https://www.konoshima.co.jp/ceramics/tgg.html",
-      "note": "Y系機能部材の最重要候補 ／ Stage 04『固体レーザー発振器（YAG）』から除外し、YAG結晶・セラミックス材料側のStage 03に限定"
+      "rev": "274.05億円（2025年4月期）。建材・化成品・セラミックスの3事業で、セラミックス単独は非開示",
+      "prod": "透明 YAG セラミックス（100kW 級レーザーの媒質）、Y₂O₃ セラミックス、蛍光体・シンチレータ、光アイソレーター用 TGG（Tb₃Ga₅O₁₂）透明セラミックス、緻密質セラミックス。原料から一貫して作製し、独自の接合技術で大型接合セラミックスも手がける",
+      "pos": "大型の透明セラミックスで世界唯一級とされる。シェアの数値は未確認。",
+      "def": "高出力レーザー、宇宙デブリ捕捉、レーザー核融合。2016年と2024年に宇宙航空研究開発機構から感謝状、2025年に第17回レーザー学会産業賞 優秀賞",
+      "chn": "高。TGG は Tb、YAG・Y₂O₃ は Y が骨格元素で、いずれも中国の中重希土類輸出管理の対象。高純度原料とドーパントの原産国確認が必要",
+      "src": "JSX ／ Y DD ／ https://www.konoshima.co.jp/ceramics/tgg.html ／ https://www.konoshima.co.jp/ceramics/index.html ／ https://www.konoshima.co.jp/ceramics/about.html ／ https://www.konoshima.co.jp/ceramics/resdev2.html",
+      "note": "光散乱源を抑えることで世界で初めて大型透明セラミックスを実現したと自社公表し、単結晶では作れない大型化を強みとする。TGG はベルデ定数36 rad/T·m・熱伝導率5.0 W/mK で Tb 系ガラス（20・0.7）を上回るとする。TGG は可視域のベルデ定数が小さく高価な Ga を使うため、Ga を使わない TAG（Tb₃Al₅O₁₂）セラミックスを開発中。TAG は単結晶では小さいサイズしか作れず実用化に至っていない。TGG セラミックスは φ50mm 程度が大口径化の目安とされる。Stage 04『固体レーザー発振器（YAG）』からは除外し、材料側の Stage 03 に限定"
     },
     "seed-11": {
       "name": "信光社",
@@ -144,7 +144,7 @@
       "bom": "266nm QCWは赤外ファイバー増幅光源を2段波長変換。現行製品のファイバー添加材・変換結晶は非開示。CW Frequadは超高純度BBOを明記。YAG媒質は確認できない。 ／ 当該DUV発振器のYAG使用は未確認",
       "gap": "自社製と輸入販売を区別し、防衛・宇宙顧客、基本波源の媒質、輸出管理該非を確認。",
       "src": "https://www.opt-oxide.com/products-list/laser/ ／ https://www.opt-oxide.com/products-list/laser/qcw-laser/item_LA00008 ／ https://www.opt-oxide.com/v2019/wp-content/uploads/2013/03/266Laser_r12-1.pdf ／ https://www.opt-oxide.com/ir/meeting/meeting26_review/ ／ https://www.opt-oxide.com/products-list/laser/special ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00006",
-      "note": "固体レーザー発振器DDの「採用候補（発振器）」に基づきStage 04へ正式採用。"
+      "note": "固体レーザー発振器DDの「採用候補（発振器）」に基づきStage 04へ正式採用。 ／ 266nm QCW は赤外ファイバー増幅光源を2段波長変換する構成で、ファイバ増幅段と多段変換には戻り光を遮るアイソレータを置くのが一般的。同社自身がファラデー回転子のメーカーでもある"
     },
     "seed-13": {
       "name": "トーカロ",
@@ -1028,12 +1028,12 @@
       "name": "島津製作所",
       "own": "上場企業 ／ 自社証券コード：7701",
       "rev": "約5,607億円 ／ 連結実績 ／ 2026/3期",
-      "prod": "フライトコントロール、空調、コックピット表示、航空機搭載機器",
+      "prod": "フライトコントロール、空調、コックピット表示、航空機搭載機器、水中光無線通信装置 MC100・MC500（AUV・ROV 搭載）",
       "pos": "市場シェア・地位は公開情報で未確認",
-      "def": "P-1/C-2等の防衛機とB747-8等の民間機にフライトコントロールを供給。",
+      "def": "P-1/C-2等の防衛機とB747-8等の民間機にフライトコントロールを供給。 ／ 水中光無線通信装置は防衛装備庁の安全保障技術推進制度の支援を受けて開発したデュアルユース技術。2024年には光／音響ハイブリッド水中通信装置を先進技術の橋渡し研究で実証",
       "chn": "企業固有の希土類BOM・中国依存は未確認。",
-      "src": "https://www.shimadzu.co.jp/sites/shimadzu.co.jp/files/ir/6dog/srnepvp1yzsd995a.pdf ／ https://www.shimadzu.co.jp/aboutus/company/profile.html",
-      "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：会社概要の連結売上高"
+      "src": "https://www.shimadzu.co.jp/sites/shimadzu.co.jp/files/ir/6dog/srnepvp1yzsd995a.pdf ／ https://www.shimadzu.co.jp/aboutus/company/profile.html ／ https://www.shimadzu.co.jp/industry/products/underwater/mc500.html ／ https://www.shimadzu.co.jp/products/enviro/technical-overview04.html",
+      "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：会社概要の連結売上高 ／ MC100 は10m以上で95Mb/s以上・水深3500m耐圧（2020年発売）、MC500 はレーザー光で最大80m（2022年発売）。送受信部に内蔵する光アイソレータ経由で Y・Tb に触れる"
     },
     "stage05-integrated-35": {
       "name": "ダイキン工業 特機事業（淀川製作所）",
@@ -1072,12 +1072,12 @@
       "name": "住友電気工業",
       "own": "上場企業 ／ 住友電気工業株式会社（東証プライム、証券コード5802）。GaN HEMT は子会社の住友電工デバイス・イノベーション（SEDI）が製造",
       "rev": "約4.7兆円 ／ 連結実績（概数） ／ 2026/3期",
-      "prod": "S帯・X帯高出力GaN HEMT、衛星通信・航空管制レーダー用RFデバイス",
-      "pos": "基地局向け GaN HEMT で世界トップシェア（5G 向けの販売シェアは約7割とされる）。RF GaN の主要企業の一角。",
+      "prod": "データセンター向け光トランシーバと通信用光半導体、光アクセス装置、S帯・X帯高出力GaN HEMT、衛星通信・航空管制レーダー用RFデバイス",
+      "pos": "光半導体とRFデバイスの双方を手がける。基地局向け GaN HEMT で世界トップシェア（5G 向けの販売シェアは約7割とされる）。",
       "def": "航空管制、船舶・気象レーダー、衛星通信に直結し、防衛レーダー・通信へ転用可能。",
       "chn": "企業固有の希土類BOM・中国依存は未確認。",
-      "src": "https://sumitomoelectric.com/jp/products/optical-devices ／ https://sumitomoelectric.com/jp/ir/financial ／ https://sei.co.jp/id/2020/06/project/id04.html ／ https://newswitch.jp/p/22352 ／ https://www.yolegroup.com/strategy-insights/the-rise-and-rise-of-rf-gan/",
-      "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：連結売上高を0.1兆円単位で丸めて表示"
+      "src": "https://sumitomoelectric.com/jp/products/optical-devices ／ https://sumitomoelectric.com/jp/ir/financial ／ https://sei.co.jp/id/2020/06/project/id04.html ／ https://newswitch.jp/p/22352 ／ https://www.yolegroup.com/strategy-insights/the-rise-and-rise-of-rf-gan/ ／ https://dempa-digital.com/article/711782 ／ https://www.nikkan.co.jp/articles/view/00781043",
+      "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：連結売上高を0.1兆円単位で丸めて表示 ／ 通信用レーザーの光半導体は2026年度に生産能力を前年比2倍、2029年度までに2026年度比でさらに2倍の計画。インジウムリン基板にも180億円を投資。中期経営計画2028では3年累計1兆円の設備投資のうちデータセンター関連に2000億円。光トランシーバに内蔵する光アイソレータ経由で Y・Tb に触れる"
     },
     "stage05-integrated-41": {
       "name": "村田製作所",
@@ -1225,7 +1225,7 @@
       "bom": "Nd:YAGを公式ページで明示。受動Qスイッチ型マイクロチップレーザー。Qスイッチ材・結晶供給元は非開示。 ／ Y（Nd:YAGを明示）",
       "gap": "防衛装備庁との契約関係、航空宇宙顧客、結晶・Qスイッチ材BOM、市場シェア、年間生産台数を確認。",
       "src": "https://www.optoquest.co.jp/products/325/ ／ https://www.optoquest.co.jp/company/ ／ https://www.optoquest.co.jp/about/ ／ https://www.mod.go.jp/atla/funding/hyouka/r07_seika/R7seika_04riken.pdf",
-      "note": "固体レーザー発振器DDの「採用候補（マイクロチップNd:YAG）」に基づきStage 04へ正式採用。"
+      "note": "固体レーザー発振器DDの「採用候補（マイクロチップNd:YAG）」に基づきStage 04へ正式採用。 ／ サブナノ秒・MW級の尖頭出力は戻り光に弱く、保護のためアイソレータを置くのが一般的。同社自身がマルチコアファイバ用光アイソレータのメーカーでもある"
     },
     "laser-dd-sct": {
       "name": "エスシーティー株式会社（SCT）",
@@ -2315,6 +2315,105 @@
       "def": "民生の半導体製造装置向けが中心で、防衛向けの直接納入は未確認。",
       "chn": "導電性イットリアは研究開発段階。原料の調達国は非開示。",
       "src": "https://www.soc.co.jp/service/development/technology/technology02/ceramics/ ／ https://www.soc.co.jp/news/87192/ ／ https://www.soc.co.jp/sys/wp-content/uploads/2026/05/4cb6c30e2ee6356eaa2d824f4c1e223e.pdf"
+    },
+    "faraday-granopt": {
+      "name": "グラノプト",
+      "own": "非上場。住友金属鉱山51%・三菱ガス化学49%の合弁（2005年4月設立）",
+      "rev": "非開示（資本金1.5億円、従業員183名・2025年7月時点）",
+      "prod": "Bi置換希土類鉄ガーネットの単結晶膜（液相エピタキシャル成長、厚さ0.1〜0.5mm）によるファラデー回転子。GTD・GLB・GSF・GMF・ETD の各品種、波長1310〜1590nm、標準11mm角",
+      "pos": "光通信用ファラデー回転子で世界トップシェア。経済産業省「グローバルニッチトップ企業100選」2020年版の選定資料は、この材料の供給者がほぼ2社に限られると記す",
+      "def": "確認できず。用途は基地局・データセンター・海底ケーブル",
+      "chn": "高。膜組成のY・Tb・Gd・Hoは中国の中重希土類輸出管理の対象元素。深圳に販売子会社。完成品の光アイソレータは世界の9割以上が中国で組み立てられる",
+      "src": "https://www.granopt.jp/company.html ／ https://www.granopt.jp/en/images/gnt100_01.pdf ／ https://www.smm.co.jp/news/release/2026/06/002134.html ／ https://www.mgc.co.jp/corporate/news/2026/260622.html",
+      "note": "秋田県能代市に本社・第1工場、第2工場は2024年度完工。2027年度中にファラデーローテータの生産能力を2025年度比3倍へ。液相エピタキシャル成長の種結晶となるSGGG基板は住友金属鉱山グループが供給"
+    },
+    "faraday-kohoku": {
+      "name": "湖北工業",
+      "own": "東証上場（6524）。1959年設立、資本金2.06億円",
+      "rev": "連結174.54億円（2025年12月期）。うち光部品・デバイス事業86.51億円（営業利益率44.6%）",
+      "prod": "ファラデー回転子（光通信1550/1310nm、産業用レーザー1064/1030nm、2000nm帯）、インライン型・ハイブリッド型光アイソレータ、光サーキュレータ、可変光減衰器、海底ケーブル用光部品、マルチコアファイバ用光部品",
+      "pos": "海底ケーブル用光アイソレータで世界シェア50%以上とされる。結晶育成・加工から素子づくり・精密組立・検品までの一貫生産を自社の競争優位として公表",
+      "def": "宇宙分野向けハイパワー光アイソレータを開発中。2025年9月から国際宇宙ステーションで環境試験。海底ケーブル用部品は海底通信インフラに接続",
+      "chn": "高。自社IR資料に「レアアースの需給ひっ迫に対応し、材料在庫の確保と調達ルートの多様化を進める」と明記。中国2拠点はリード端子事業",
+      "src": "https://www.kohokukogyo.co.jp/product/optical-communication-part-and-device/ ／ https://www.kohokukogyo.co.jp/assets/doc/ir/20251128_mufg_ir_seminar.pdf ／ https://www.nikkan.co.jp/articles/view/00740858",
+      "note": "本社工場は滋賀県長浜市高月町。膜の育成から完成した光部品までを1社で担うため、工程03・04・05にまたがる。アルミ電解コンデンサ用リード端子でも世界シェア6割超"
+    },
+    "faraday-neg": {
+      "name": "日本電気硝子",
+      "own": "東証上場（5214）",
+      "rev": "連結3,114.02億円（2025年12月期）。ファラデー素子単独は非開示",
+      "prod": "自社開発の磁気光学ガラスによるファラデー素子と、それを組んだ高出力レーザー用の偏光依存型光アイソレータ。ファイバ型1030nm、空間型532nm・1030nm。2025年3月に110×110mmの大型素子を発表",
+      "pos": "単結晶より大型化しやすいガラス製の磁気光学素子。シェアの数値は未確認。",
+      "def": "大型素子の用途としてレーザー核融合、スペースデブリ除去、重粒子線がん治療を明記。大阪大学レーザー科学研究所の大型レーザーに実装",
+      "chn": "中。TGG単結晶を使わずガラス化することでTb含有量を抑える方向だが、Tb系であることに変わりはない。原料調達先は非開示",
+      "src": "https://www.neg.co.jp/products/optical-isolator/index.html ／ https://www.neg.co.jp/news/20250326.html ／ https://eetimes.itmedia.co.jp/ee/articles/2503/28/news005.html",
+      "note": "FM-02 は Tb 含有量60mol%以上で、ベルデ定数は TGG 単結晶の1.7倍と自社公表。2025年3月に別組成で110×110mm の大型素子を発表。本社は滋賀県大津市。ファラデー素子・アイソレータの製造工場は非開示。単結晶ではなくガラスで磁気光学素子を作る国内では例の少ない経路"
+    },
+    "faraday-kogaku-giken": {
+      "name": "光学技研",
+      "own": "非上場。ニレコ（東証6863）の100%子会社。1978年設立、資本金7,500万円、従業員70名",
+      "rev": "非開示",
+      "prod": "光アイソレータ・ファラデーローテーター。偏光依存型・偏光無依存型、自由空間型・ファイバ出力型。1064nm高光耐力品はアイソレーション30dB以上、レーザー耐力30W CW。大口径品は磁性ガーネット単結晶膜を使用",
+      "pos": "他社にない口径の大きさを自社で訴求。シェアの数値は未確認。",
+      "def": "確認できず。用途は光計測・光通信・レーザー加工",
+      "chn": "中。ファラデー素子の調達元は非開示",
+      "src": "https://www.kogakugiken.co.jp/products/isolator01.html ／ https://www.kogakugiken.co.jp/products/isolator02.html ／ https://www.kogakugiken.co.jp/company",
+      "note": "大口径品のファラデーローテーターは磁性ガーネット単結晶膜を使用。神奈川県厚木市。磁石・ファラデー素子・偏光子を自社で設計から製作まで行うと明記。大口径光アイソレータ／ファラデーローテーターは2026年3月に受注停止を告知"
+    },
+    "optnet-nec": {
+      "name": "日本電気（NEC）",
+      "own": "東証上場（6701）",
+      "rev": "連結3兆4,234億円（2025年3月期）。光伝送装置単独は非開示",
+      "prod": "光海底ケーブルシステム（海底光中継器、端局装置、利得等化装置、海底分岐装置）、オープン光トランスポート装置 SpectralWave WX シリーズ、衛星用光通信装置",
+      "pos": "光海底ケーブルで国内唯一の供給者。世界3強の一角とされ、シェアは出典により21%から約3割まで幅がある",
+      "def": "JAXA の光衛星間通信システム LUCAS 向けに衛星用光通信装置を開発し、2025年1月に衛星間 1.8Gbps の光通信と地上局への伝送に成功。海底ケーブルは海底地震観測にも接続",
+      "chn": "中。装置に組み込む光部品の調達構造が論点。データセンター向け光トランシーバは中国勢が世界出荷量の多くを占めるとされる",
+      "src": "https://jpn.nec.com/submarine/index.html ／ https://jpn.nec.com/press/202501/20250123_01.html ／ https://jpn.nec.com/press/202012/20201210_02.html ／ https://journal.meti.go.jp/p/40663/",
+      "note": "海底ケーブル本体は子会社オーシーシー（北九州市若松区）が製造。海底光中継器には50〜100km ごとに光アイソレータが入り、湖北工業の主要顧客として名が挙がる"
+    },
+    "optnet-1finity": {
+      "name": "1FINITY",
+      "own": "非上場。富士通の100%子会社。2025年7月1日に会社分割で事業開始",
+      "rev": "非開示（資本金4億円、社員約1,800名）",
+      "prod": "光伝送装置 1FINITY シリーズ。トランスポンダ T900 とラインシステム L900（1波1.2Tbps）、ディスアグリゲーション型 T250。O-RAN 準拠の5G基地局装置も併営",
+      "pos": "国内の光伝送装置の主要供給者。シェアの数値は未確認。",
+      "def": "本事業単位では確認できず。グループの防衛事業は富士通ディフェンス＆ナショナルセキュリティが担う",
+      "chn": "中。光部品の調達構造が論点。個別の依存度は非開示",
+      "src": "https://www.1finity.co.jp/newsroom/press-release/1finity-a-fujitsu-company-commences-operations-and-reveals-brand-identity ／ https://it.impress.co.jp/articles/-/28071 ／ https://businessnetwork.jp/article/30784/",
+      "note": "本社は川崎市中原区。富士通からフォトニクスシステムとモバイルシステムのネットワークプロダクト事業を承継。既収録の富士通ディフェンス＆ナショナルセキュリティとは別法人"
+    },
+    "photonics-orbray": {
+      "name": "Orbray",
+      "own": "非上場。2023年1月にアダマンド並木精密宝石から社名変更",
+      "rev": "非開示",
+      "prod": "フェルール、スリーブ、光コネクタ・光アダプタ、ピグテール・レセプタクル・光モジュール、ファイバアレイ、レンズドファイバ、MEMS 光可変減衰器・光スイッチ。アイソレータ付きレセプタクルは φ2.5mm・φ1.25mm をそろえる",
+      "pos": "光アイソレータを組み込んだレセプタクルを製品として掲げる数少ない国内企業。シェアの数値は未確認。",
+      "def": "防衛向けの納入は確認できない。用途は TOSA・ROSA など光モジュールとの結合部品",
+      "chn": "中。レセプタクルに載せる光アイソレータは Bi 置換ガーネットで Y・Tb を含む。調達先は非開示",
+      "src": "https://orbray.com/product/optical/device/receptacles.html ／ https://orbray.com/product/optical/technology/fiber.html ／ https://orbray.com/corporate/profile.html",
+      "note": "アイソレータ付きレセプタクルは基本がカスタム対応で、ファイバ種（SM・MM・PMF・特殊）、全長、外径、研磨角度を選べ、ラミネート型アイソレータの搭載と AR コートにも対応すると自社で記載。光アイソレータの実装には、メタライズや YAG 溶接によるロウ付けタイプと接着タイプがあり、円筒型・表面実装型・レセプタクル型の形状に対応。本社を秋田へ移すと告知"
+    },
+    "photonics-melco-hakouden": {
+      "name": "三菱電機（高周波光デバイス製作所）",
+      "own": "東証プライム（6503）三菱電機の社内製作所",
+      "rev": "製作所単独は非開示。EML は2022年実績で出荷額184億円",
+      "prod": "電界吸収型変調器集積レーザ（EML）のチップと TO-CAN 型モジュール、200Gbps 受信用 pin-PD チップ",
+      "pos": "データセンター向け光デバイス（EML）で世界シェア1位。2022年実績の世界シェアは42%。",
+      "def": "防衛向けの納入は確認できない。用途はデータセンター向け光トランシーバと FTTH",
+      "chn": "中。EML チップはインジウムリン基板で希土類を使わないが、モジュールに内蔵する光アイソレータ経由で Y・Tb に触れる。EML の生産は国内のみ",
+      "src": "https://okochi.or.jp/jusho/第70回大河内記念生産賞-5/ ／ https://eetimes.itmedia.co.jp/ee/articles/2408/21/news083_2.html ／ https://www.mitsubishielectric.co.jp/semiconductors/hf/locations/index.html",
+      "note": "伊丹の高周波光デバイス製作所（兵庫県伊丹市瑞原四丁目1番地）がウエハプロセス、長崎のメルコアドバンストデバイス（株）が TO-CAN 型のモジュール化を担当し、EML の生産は国内のみ。データセンター向け EML チップは月産150万個でシェア50%、FTTH 向け TO-CAN 型 EML モジュールは月産24万個でシェア30%。2023年度の第70回大河内記念生産賞を「電界吸収型光変調器を集積した半導体レーザーダイオードの開発」で受賞。2024年4月に200Gbps（112Gbaud PAM4）EML チップの量産を開始し、生産能力を2028〜2029年度に3倍超へ引き上げる計画が報じられている"
+    },
+    "photonics-furukawa": {
+      "name": "古河電気工業",
+      "own": "東証プライム（5801）",
+      "rev": "連結1兆3,075億円（2026年3月期）。光デバイス単独は非開示",
+      "prod": "波長可変レーザモジュール ITLA・Micro-ITLA・Nano ITLA、ラマン増幅器用ポンプ LD モジュール、DFB レーザチップ、光ファイバ・光ケーブル",
+      "pos": "DFB レーザチップを作る数少ない国内企業の一社。シェアの数値は未確認。",
+      "def": "防衛向けの納入は確認できない。用途は光デジタルコヒーレント伝送とデータセンター",
+      "chn": "中。レーザチップはインジウムリン基板で希土類を使わないが、レーザモジュールに内蔵する光アイソレータ経由で Y・Tb に触れる",
+      "src": "https://www.furukawaelectric.com/release/2021/comm_20210607.html ／ https://www.furukawaelectric.com/release/2019/comm_190920.html ／ https://www.furukawaelectric.com/company/outline/",
+      "note": "ITLA は制御回路基板付きの波長可変レーザモジュールで、半導体レーザーの出力側に光アイソレータを置いて戻り光を遮るのが一般的な構成。Nano ITLA は25×15.6×6.7mm。ラマン増幅器用ポンプ LD モジュールは400／500／600mW 品で1330〜1520nm に対応。光ファイバの増産に約1000億円を投じ、日米など4カ国で生産能力を2倍にする計画（2026年8月発表）"
     }
   },
   "routes": {
@@ -2349,7 +2448,12 @@
     },
     "03_yag_crystal": {
       "srcNotes": {
-        "02_compound": "高純度 Y₂O₃・Tb₄O₇ を結晶育成・焼結の原料に"
+        "02_compound": "高純度 Y₂O₃ を結晶育成・焼結の原料に"
+      }
+    },
+    "03_magneto_garnet": {
+      "srcNotes": {
+        "02_compound": "Y・Tb・Gd・Ho の酸化物に Bi・Fe を加え、ガーネット基板上へ液相エピタキシャル成長で磁気光学膜を育成"
       }
     },
     "03_alsc_semi": {
@@ -2406,7 +2510,13 @@
     },
     "04_laser_medium": {
       "srcNotes": {
-        "03_yag_crystal": "結晶・セラミックスを切り出し・研磨してロッド・スラブ・ファラデー回転子に"
+        "03_yag_crystal": "YAG・Y₂O₃ の結晶・セラミックスを切り出し・研磨してロッド・スラブに"
+      }
+    },
+    "04_faraday": {
+      "srcNotes": {
+        "03_tb_mo": "TGG セラミックス・Tb 磁気光学ガラスを回転子に加工し、永久磁石と組んで高出力レーザー用の素子に",
+        "03_magneto_garnet": "磁気光学膜を素子寸法に切り出し、偏光子・磁石と組んで光通信用の回転子に"
       }
     },
     "04_target": {
@@ -2464,7 +2574,13 @@
     },
     "05_laser_osc": {
       "srcNotes": {
-        "04_laser_medium": "媒質・アイソレーターを発振器に組み込む"
+        "04_laser_medium": "媒質を発振器に組み込む",
+        "04_faraday": "発振器内のアイソレータとして戻り光を遮る"
+      }
+    },
+    "05_photonics": {
+      "srcNotes": {
+        "04_faraday": "回転子を偏光子・磁石と組み、半導体レーザーへの戻り光を遮る光部品に"
       }
     },
     "05_scaln_film": {
@@ -2492,7 +2608,8 @@
       "srcNotes": {
         "05_scaln_film": "MEMS 慣性・圧電センサ",
         "05_motor": "操舵・シーカー駆動・ジャイロ",
-        "05_electronics": "慣性計測装置（IMU）・誘導制御装置の電子回路・センサ"
+        "05_electronics": "慣性計測装置（IMU）・誘導制御装置の電子回路・センサ",
+        "05_photonics": "光ファイバ誘導弾の機上・地上側の光送受信デバイスに組み込む"
       }
     },
     "06_unmanned": {
@@ -2505,7 +2622,8 @@
     "06_naval": {
       "srcNotes": {
         "05_motor": "航法装置・水中機器の駆動部",
-        "05_electronics": "艦艇・水中機器の電子回路・センサ"
+        "05_electronics": "艦艇・水中機器の電子回路・センサ",
+        "05_photonics": "水中光無線通信装置の送受信部に組み込み、AUV・ROV に搭載する"
       }
     },
     "06_launch": {
@@ -2519,7 +2637,8 @@
       "srcNotes": {
         "05_motor": "リアクションホイール・駆動機構",
         "05_laser_osc": "宇宙ライダー・レーザー測距",
-        "05_electronics": "宇宙用電子部品"
+        "05_electronics": "宇宙用電子部品",
+        "05_photonics": "宇宙光通信向けの高信頼アイソレータ（軌道上での環境試験段階）"
       }
     },
     "06_engine": {
@@ -2561,13 +2680,24 @@
       "srcNotes": {
         "05_scaln_film": "通信機の RF フィルタ",
         "05_tube": "衛星通信・無線の送信管",
-        "05_electronics": "通信機器の電子回路・部品（磁性部品を含む）"
+        "05_electronics": "通信機器の電子回路・部品（磁性部品を含む）",
+        "05_photonics": "光アイソレータ・光サーキュレータとして光伝送装置・海底ケーブル中継器に組み込む"
+      }
+    },
+    "06_optical_net": {
+      "srcNotes": {
+        "05_photonics": "光アイソレータ・光サーキュレータを光伝送装置と海底光中継器に組み込む"
       }
     },
     "06_rf_sensor": {
       "srcNotes": {
         "05_scaln_film": "圧電センサ・高周波デバイス",
         "05_electronics": "計測器・センサの電子部品"
+      }
+    },
+    "03_tb_mo": {
+      "srcNotes": {
+        "02_compound": "高純度 Tb₄O₇ を焼結・溶融の原料に"
       }
     }
   },
