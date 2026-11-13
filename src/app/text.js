@@ -27,19 +27,49 @@ function shortenedLabel(value,limit){
   var chars=Array.from(String(value||""));
   return chars.length>limit?chars.slice(0,limit-1).join("")+"…":chars.join("")
 }
-function flowLabelLines(value,limit){
-  var text=String(value||"").trim();
-  if(!text)return[""];
-  var words=text.split(/\s+/),lines=[],line="";
-  words.forEach(function(word){
-    var chunks=[];
-    while(Array.from(word).length>limit){chunks.push(Array.from(word).slice(0,limit).join(""));word=Array.from(word).slice(limit).join("")}
-    if(word)chunks.push(word);
+function flowLabelTokens(text){
+  // 折り返せる位置で区切る。空白に加えて、日本語・中国語の「・」の後ろと「（」の前でも切れるようにする。
+  // 括弧の中の「・」では切らない（「（膜・基板）」を割らないため）。
+  // glue=true の語は、前の語とのあいだに空白を入れずにつなぐ。
+  var tokens=[],buffer="",glue=false,depth=0;
+  function flush(){if(buffer){tokens.push({text:buffer,glue:glue});buffer="";glue=true}}
+  Array.from(text).forEach(function(ch){
+    if(ch===" "||ch==="\u3000"){flush();glue=false;return}
+    if(ch==="（"||ch==="("){if(!depth)flush();depth+=1}
+    buffer+=ch;
+    if(ch==="）"||ch===")"){if(depth)depth-=1;return}
+    if(ch==="・"&&!depth)flush()
+  });
+  flush();
+  return tokens
+}
+function flowWrapTokens(tokens,limit){
+  var lines=[],line="";
+  tokens.forEach(function(token){
+    var word=token.text,chunks=[],first=true;
+    while(Array.from(word).length>limit){chunks.push({text:Array.from(word).slice(0,limit).join(""),glue:first?token.glue:true});word=Array.from(word).slice(limit).join("");first=false}
+    if(word)chunks.push({text:word,glue:first?token.glue:true});
     chunks.forEach(function(chunk){
-      var candidate=line?line+" "+chunk:chunk;
-      if(line&&Array.from(candidate).length>limit){lines.push(line);line=chunk}else{line=candidate}
+      var candidate=line?(chunk.glue?line+chunk.text:line+" "+chunk.text):chunk.text;
+      if(line&&Array.from(candidate).length>limit){lines.push(line);line=chunk.text}else{line=candidate}
     })
   });
   if(line)lines.push(line);
+  return lines
+}
+function flowLabelLines(value,limit){
+  var text=String(value||"").trim();
+  if(!text)return[""];
+  var tokens=flowLabelTokens(text),lines=flowWrapTokens(tokens,limit);
+  if(lines.length>1){
+    // 行数を増やさない範囲で上限を絞り、「…電解質・／基板」のように最後の行だけ極端に短くなるのを避ける
+    var total=Array.from(lines.join("")).length;
+    // 語の途中で切らないよう、いちばん長い語より狭くはしない
+    var longest=tokens.reduce(function(max,token){return Math.max(max,Array.from(token.text).length)},1);
+    for(var test=Math.max(longest,Math.ceil(total/lines.length));test<limit;test+=1){
+      var candidate=flowWrapTokens(tokens,test);
+      if(candidate.length===lines.length){lines=candidate;break}
+    }
+  }
   return lines.length?lines:[text]
 }

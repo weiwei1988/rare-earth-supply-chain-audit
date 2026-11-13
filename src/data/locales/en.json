@@ -877,14 +877,14 @@
     },
     "seed-10": {
       "name": "Konoshima Chemical",
-      "src": "JSX ／ Y DD ／ https://www.konoshima.co.jp/ceramics/tgg.html",
       "own": "Tokyo Stock Exchange Standard Market (4026)",
-      "rev": "JPY 27.405 billion (fiscal year ended April 2025)",
-      "prod": "Transparent YAG and Y₂O₃ ceramics, laser media, phosphors, and transparent TGG ceramics for optical isolators",
-      "pos": "Regarded as the world's only supplier able to produce large-format and bonded YAG",
-      "def": "High-power lasers, space-debris capture, and laser fusion",
-      "chn": "High. Verify the countries of origin of high-purity Y₂O₃ and dopants such as Nd and Yb.",
-      "note": "A highest-priority candidate for Y-series functional components. / Removed from Stage 04 'solid-state laser oscillators (YAG)' and limited to the YAG crystal and ceramic-material side in Stage 03."
+      "rev": "JPY 27.405 billion (fiscal year ended April 2025), spread across three businesses — building materials, chemicals and ceramics — with no separate figure for ceramics",
+      "prod": "Transparent YAG ceramics (gain media for 100 kW-class lasers), Y₂O₃ ceramics, phosphors and scintillators, transparent TGG (Tb₃Ga₅O₁₂) ceramics for optical isolators, and dense ceramics. Production runs from raw material to finished part in house, and a proprietary bonding technique yields large bonded ceramics",
+      "pos": "Regarded as the world's only supplier of large-format transparent ceramics. No share figure confirmed.",
+      "def": "High-power lasers, space-debris capture and laser fusion. Letters of appreciation from JAXA in 2016 and 2024, and the 17th Laser Society of Japan Industry Award (Excellence) in 2025",
+      "chn": "High. Tb is a framework element of TGG, and Y of YAG and Y₂O₃; both fall under China's export controls on medium and heavy rare earths. The countries of origin of high-purity feedstock and dopants need checking",
+      "note": "The company says that suppressing light-scattering sources let it produce the world's first large-format transparent ceramics, and it treats scale beyond what single crystals allow as its strength. It puts TGG at a Verdet constant of 36 rad/T·m and a thermal conductivity of 5.0 W/m·K, against 20 and 0.7 for Tb-based glass. Because TGG has a small Verdet constant in the visible range and relies on costly Ga, the company is developing Ga-free TAG (Tb₃Al₅O₁₂) ceramics; TAG single crystals can only be grown small and have not reached practical use. About φ50 mm is cited as the practical ceiling for large-aperture TGG ceramics. Removed from Stage 04 'solid-state laser oscillators (YAG)' and confined to the materials side in Stage 03",
+      "src": "JSX ／ Y DD ／ https://www.konoshima.co.jp/ceramics/tgg.html ／ https://www.konoshima.co.jp/ceramics/index.html ／ https://www.konoshima.co.jp/ceramics/about.html ／ https://www.konoshima.co.jp/ceramics/resdev2.html"
     },
     "seed-11": {
       "name": "Shinkosha",
@@ -908,7 +908,7 @@
       "chn": "These DUV products primarily use nonlinear crystals such as BBO. Y exposure cannot be determined until the fundamental light-source BOM is verified.",
       "bom": "The 266 nm QCW product performs two-stage wavelength conversion on an infrared fiber-amplifier source. Fiber dopants and conversion crystals in current products are not disclosed. CW Frequad explicitly uses ultra-high-purity BBO. No YAG medium was verified. / Use of YAG in the relevant DUV oscillator has not been verified.",
       "gap": "Distinguish in-house products from imported products sold by the company, and verify defense and space customers, fundamental-source media, and export-control classification.",
-      "note": "Formally included in Stage 04 based on the solid-state laser oscillator DD category 'candidate for inclusion (oscillator).'"
+      "note": "Formally included in Stage 04 based on the solid-state laser oscillator DD category 'candidate for inclusion (oscillator).' / The 266 nm QCW product converts an infrared fiber-amplified source in two wavelength-conversion stages, and a fiber amplifier stage and multi-stage conversion are normally fitted with an isolator to block back-reflection. The company is itself a maker of Faraday rotators"
     },
     "seed-13": {
       "name": "TOCALO",
@@ -1789,15 +1789,15 @@
       "note": "Consolidation: existing candidate (not subject to parent-company replacement) / Revenue basis: consolidated revenue rounded to the nearest JPY 10 billion"
     },
     "stage05-integrated-34": {
-      "name": "Shimadzu Corporation",
-      "src": "https://www.shimadzu.co.jp/sites/shimadzu.co.jp/files/ir/6dog/srnepvp1yzsd995a.pdf ／ https://www.shimadzu.co.jp/aboutus/company/profile.html",
-      "own": "Listed company / Company stock code: 7701",
-      "rev": "Approx. JPY 560.7 billion (consolidated results, fiscal year ended March 2026)",
-      "prod": "Flight controls, air-conditioning systems, cockpit displays, aircraft-mounted equipment",
-      "pos": "Market share and position not verified in public sources.",
-      "def": "Supplies flight-control systems for defense aircraft such as the P-1 and C-2 and commercial aircraft such as the B747-8.",
-      "chn": "Company-specific rare-earth BOM and exposure to China not verified.",
-      "note": "Consolidation: existing candidate (not subject to parent-company replacement) / Revenue basis: consolidated revenue in the company profile"
+      "name": "Shimadzu",
+      "own": "Listed company / ticker 7701",
+      "rev": "Approx. JPY 560.7 billion / consolidated / FY ended March 2026",
+      "prod": "Flight controls, air-conditioning, cockpit displays, airborne equipment, and the MC100 and MC500 underwater optical wireless communication units (carried on AUVs and ROVs)",
+      "pos": "Market share and standing not confirmed in public sources",
+      "def": "Supplies flight controls for defense aircraft such as the P-1 and C-2 and for commercial aircraft such as the B747-8. / The underwater optical wireless communication units are dual-use technology developed with support from ATLA's Innovative Science and Technology Initiative for Security. In 2024 the company demonstrated a hybrid optical-acoustic underwater communication unit under ATLA's advanced-technology bridging research",
+      "chn": "The company's own rare-earth BOM and China exposure are unconfirmed.",
+      "note": "Integration note: existing candidate (not subject to parent substitution) / Revenue basis: consolidated revenue from the company profile / The MC100 carries 95 Mb/s or more over 10 m or more and withstands 3,500 m depth (launched 2020); the MC500 reaches up to 80 m using laser light (launched 2022). Y and Tb enter through the optical isolator inside the transceiver section",
+      "src": "https://www.shimadzu.co.jp/sites/shimadzu.co.jp/files/ir/6dog/srnepvp1yzsd995a.pdf ／ https://www.shimadzu.co.jp/aboutus/company/profile.html ／ https://www.shimadzu.co.jp/industry/products/underwater/mc500.html ／ https://www.shimadzu.co.jp/products/enviro/technical-overview04.html"
     },
     "stage05-integrated-35": {
       "name": "Daikin Industries Defense Systems Business (Yodogawa Plant)",
@@ -1833,15 +1833,15 @@
       "note": "Consolidation: existing candidate (not subject to parent-company replacement) / Revenue basis: IFRS consolidated revenue"
     },
     "stage05-integrated-40": {
-      "name": "Sumitomo Electric Industries, Ltd.",
-      "src": "https://sumitomoelectric.com/jp/products/optical-devices ／ https://sumitomoelectric.com/jp/ir/financial ／ https://sei.co.jp/id/2020/06/project/id04.html ／ https://newswitch.jp/p/22352 ／ https://www.yolegroup.com/strategy-insights/the-rise-and-rise-of-rf-gan/",
-      "own": "Listed company / Sumitomo Electric Industries, Ltd. (Tokyo Stock Exchange Prime Market, stock code 5802). GaN HEMTs are manufactured by subsidiary Sumitomo Electric Device Innovations (SEDI)",
-      "rev": "Approx. JPY 4.7 trillion (consolidated results, rounded; fiscal year ended March 2026)",
-      "prod": "High-power S-band and X-band GaN HEMTs, RF devices for satellite communications and air-traffic-control radar",
-      "pos": "World-leading share in GaN HEMTs for base stations (reportedly about 70% of sales share for 5G applications). One of the major RF GaN companies.",
-      "def": "Directly linked to air-traffic-control, marine and weather radar, and satellite communications, and adaptable to defense radar and communications.",
-      "chn": "Company-specific rare-earth BOM and exposure to China not verified.",
-      "note": "Consolidation: existing candidate (not subject to parent-company replacement) / Revenue basis: consolidated revenue rounded to the nearest JPY 0.1 trillion"
+      "name": "Sumitomo Electric Industries",
+      "own": "Listed company / Sumitomo Electric Industries, Ltd. (TSE Prime, ticker 5802). GaN HEMTs are manufactured by its subsidiary Sumitomo Electric Device Innovations (SEDI)",
+      "rev": "Approx. JPY 4.7 trillion / consolidated (rounded) / FY ended March 2026",
+      "prod": "Optical transceivers and communication laser semiconductors for data centers, optical access equipment, high-power S-band and X-band GaN HEMTs, and RF devices for satellite communications and air-traffic-control radar",
+      "pos": "Active in both optical semiconductors and RF devices. Holds the top global share in GaN HEMTs for base stations, with a reported sales share of about 70% in 5G.",
+      "def": "Directly tied to air-traffic control, marine and weather radar and satellite communications, and transferable to defense radar and communications.",
+      "chn": "The company's own rare-earth BOM and China exposure are unconfirmed.",
+      "note": "Integration note: existing candidate (not subject to parent substitution) / Revenue basis: consolidated revenue rounded to the nearest JPY 0.1 trillion / The company plans to double capacity for communication laser semiconductors in FY2026 against the prior year and to double it again by FY2029 against FY2026, with JPY 18 billion also going into indium phosphide substrates. Its 2028 medium-term plan allocates JPY 200 billion of a three-year JPY 1 trillion capital-expenditure total to data-center work. Y and Tb enter through the optical isolator inside the transceiver",
+      "src": "https://sumitomoelectric.com/jp/products/optical-devices ／ https://sumitomoelectric.com/jp/ir/financial ／ https://sei.co.jp/id/2020/06/project/id04.html ／ https://newswitch.jp/p/22352 ／ https://www.yolegroup.com/strategy-insights/the-rise-and-rise-of-rf-gan/ ／ https://dempa-digital.com/article/711782 ／ https://www.nikkan.co.jp/articles/view/00781043"
     },
     "stage05-integrated-41": {
       "name": "Murata Manufacturing Co., Ltd.",
@@ -1989,7 +1989,7 @@
       "chn": "Countries of origin for the Nd:YAG crystal and Q-switch material are not disclosed. Structurally exposed to Y raw materials.",
       "bom": "Nd:YAG is explicitly identified on the official page. Passively Q-switched microchip laser. The Q-switch material and crystal supplier are not disclosed. / Y (Nd:YAG explicitly identified)",
       "gap": "Verify the contractual relationship with the Acquisition, Technology & Logistics Agency, aerospace customers, the crystal and Q-switch-material BOM, market share, and annual production volume.",
-      "note": "Formally added to Stage 04 based on its classification as an “adoption candidate (microchip Nd:YAG)” in the solid-state laser oscillator due diligence."
+      "note": "Formally added to Stage 04 based on its classification as an “adoption candidate (microchip Nd:YAG)” in the solid-state laser oscillator due diligence. / Sub-nanosecond, megawatt-class peak power is vulnerable to back-reflection, so an isolator is normally fitted for protection. The company is itself a maker of optical isolators for multicore fiber"
     },
     "laser-dd-sct": {
       "name": "SCT Co., Ltd. (SCT)",
@@ -2315,6 +2315,105 @@
       "bom": "Assessment based on the procured item “microwave wave-height meter, Modification 1.” This equipment may use rare earths in magnets, lasers/ceramics, RF and piezoelectric materials, and other components. No model-specific public BOM was confirmed.",
       "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
       "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Sc. Medium confidence (general industry basis)."
+    },
+    "faraday-granopt": {
+      "name": "Granopt",
+      "own": "Privately held; joint venture of Sumitomo Metal Mining (51%) and Mitsubishi Gas Chemical (49%), founded April 2005",
+      "rev": "Not disclosed (capital 150 million yen; 183 employees as of July 2025)",
+      "prod": "Faraday rotators made from bismuth-substituted rare-earth iron garnet single-crystal film grown by liquid phase epitaxy (0.1–0.5 mm thick). GTD, GLB, GSF, GMF and ETD grades; 1310–1590 nm; 11 mm square standard",
+      "pos": "World-leading share in Faraday rotators for optical communication. METI's 2020 Global Niche Top 100 citation notes that suppliers of this material are limited to roughly two companies",
+      "def": "Not confirmed. Applications are base stations, data centres and submarine cables",
+      "chn": "High. The Y, Tb, Gd and Ho in the film are covered by China's export controls on medium and heavy rare earths. Sales subsidiary in Shenzhen. More than 90% of finished optical isolators are assembled in China",
+      "src": "https://www.granopt.jp/company.html / https://www.granopt.jp/en/images/gnt100_01.pdf / https://www.smm.co.jp/news/release/2026/06/002134.html / https://www.mgc.co.jp/corporate/news/2026/260622.html",
+      "note": "Head office and first plant in Noshiro, Akita; second plant completed in FY2024. Faraday rotator capacity to triple by FY2027 against FY2025. The SGGG substrate that seeds the epitaxial growth is supplied by the Sumitomo Metal Mining group"
+    },
+    "faraday-kohoku": {
+      "name": "Kohoku Kogyo",
+      "own": "Listed (6524). Founded 1959; capital 206 million yen",
+      "rev": "Consolidated 17.45 billion yen (FY ending December 2025), of which the optical component and device business accounted for 8.65 billion yen at a 44.6% operating margin",
+      "prod": "Faraday rotators (1550/1310 nm for optical communication, 1064/1030 nm for industrial lasers, 2000 nm band), in-line and hybrid optical isolators, optical circulators, variable optical attenuators, submarine cable components and multi-core fibre components",
+      "pos": "Reported world share of more than 50% in optical isolators for submarine cables. The company presents integrated production from crystal growth through element fabrication, precision assembly and inspection as its competitive advantage",
+      "def": "Developing high-power optical isolators for space. Environmental testing aboard the International Space Station began in September 2025. Submarine cable components feed undersea communications infrastructure",
+      "chn": "High. The company's own investor materials state that it is securing material inventory and diversifying procurement routes in response to tight rare-earth supply. Its two Chinese sites serve the lead terminal business",
+      "src": "https://www.kohokukogyo.co.jp/product/optical-communication-part-and-device/ / https://www.kohokukogyo.co.jp/assets/doc/ir/20251128_mufg_ir_seminar.pdf / https://www.nikkan.co.jp/articles/view/00740858",
+      "note": "Main plant in Takatsuki, Nagahama, Shiga. Because it covers everything from film growth to finished optical components, it appears in stages 03, 04 and 05. It also holds over 60% of the world market in lead terminals for aluminium electrolytic capacitors"
+    },
+    "faraday-neg": {
+      "name": "Nippon Electric Glass",
+      "own": "Listed on the Tokyo Stock Exchange (5214)",
+      "rev": "JPY 311.402 billion consolidated (fiscal year ended December 2025); no separate figure for Faraday elements",
+      "prod": "Faraday elements made from in-house magneto-optical glass, and the polarization-dependent optical isolators for high-power lasers built around them. Fiber type at 1030 nm, free-space type at 532 nm and 1030 nm. A 110 × 110 mm large-format element was announced in March 2025",
+      "pos": "Glass magneto-optical elements that scale up more easily than single crystals. No share figure confirmed.",
+      "def": "The company names laser fusion, space-debris removal and heavy-ion cancer therapy as applications for the large-format element, which is installed in the large laser at Osaka University's Institute of Laser Engineering",
+      "chn": "Medium. Using glass instead of TGG single crystal holds down the Tb content, but the material is still Tb-based. Feedstock sourcing is undisclosed",
+      "note": "The company states that FM-02 contains at least 60 mol% Tb and has a Verdet constant 1.7 times that of TGG single crystal. A 110 × 110 mm element in a different composition was announced in March 2025. Headquarters in Otsu, Shiga; the plants making the Faraday elements and isolators are undisclosed. One of the few routes in Japan that builds magneto-optical elements from glass rather than single crystal",
+      "src": "https://www.neg.co.jp/products/optical-isolator/index.html ／ https://www.neg.co.jp/news/20250326.html ／ https://eetimes.itmedia.co.jp/ee/articles/2503/28/news005.html"
+    },
+    "faraday-kogaku-giken": {
+      "name": "Kogakugiken",
+      "own": "Unlisted. A wholly owned subsidiary of Nireco (TSE 6863). Founded 1978, capital JPY 75 million, 70 employees",
+      "rev": "Undisclosed",
+      "prod": "Optical isolators and Faraday rotators, in polarization-dependent and polarization-independent as well as free-space and fiber-output forms. The high-damage-threshold 1064 nm line offers 30 dB or more of isolation and withstands 30 W CW. Large-aperture products use magnetic garnet single-crystal film",
+      "pos": "The company highlights apertures larger than competitors offer. No share figure confirmed.",
+      "def": "Not confirmed. Applications are optical measurement, optical communications and laser processing",
+      "chn": "Medium. The source of its Faraday elements is undisclosed",
+      "note": "Large-aperture Faraday rotators use magnetic garnet single-crystal film. Based in Atsugi, Kanagawa. The company states that it designs and builds the magnets, Faraday elements and polarizers in house. In March 2026 it announced that it had stopped taking orders for large-aperture optical isolators and Faraday rotators",
+      "src": "https://www.kogakugiken.co.jp/products/isolator01.html ／ https://www.kogakugiken.co.jp/products/isolator02.html ／ https://www.kogakugiken.co.jp/company"
+    },
+    "optnet-nec": {
+      "name": "NEC",
+      "own": "Listed (6701)",
+      "rev": "Consolidated 3,423.4 billion yen (FY ending March 2025). Optical transmission equipment is not disclosed separately",
+      "prod": "Submarine cable systems (repeaters, terminal equipment, gain equalisers, branching units), SpectralWave WX open optical transport equipment, and optical communication payloads for satellites",
+      "pos": "The only domestic supplier of optical submarine cable systems, and one of three global leaders. Reported share ranges from 21% to roughly 30% depending on the source",
+      "def": "Developed the satellite optical communication payload for JAXA's LUCAS inter-satellite link, which achieved 1.8 Gbps between satellites and transmission to a ground station in January 2025. Submarine cables also carry seafloor seismic observation",
+      "chn": "Medium. The sourcing of optical components built into the equipment is the open question. China is reported to account for much of world shipments of data-centre optical transceivers",
+      "src": "https://jpn.nec.com/submarine/index.html / https://jpn.nec.com/press/202501/20250123_01.html / https://jpn.nec.com/press/202012/20201210_02.html / https://journal.meti.go.jp/p/40663/",
+      "note": "The cable itself is made by its subsidiary OCC in Wakamatsu, Kitakyushu. Submarine repeaters carry an optical isolator every 50 to 100 km, and NEC is named among Kohoku Kogyo's principal customers"
+    },
+    "optnet-1finity": {
+      "name": "1FINITY",
+      "own": "Unlisted. A wholly owned subsidiary of Fujitsu that began operating on 1 July 2025 through a company split",
+      "rev": "Undisclosed (capital JPY 400 million, about 1,800 employees)",
+      "prod": "The 1FINITY optical transport line: the T900 transponder and L900 line system (1.2 Tbps per wavelength) and the disaggregated T250. The unit also sells O-RAN-compliant 5G base-station equipment",
+      "pos": "A principal domestic supplier of optical transport equipment. No share figure confirmed.",
+      "def": "Not confirmed for this business unit. Defense work in the group sits with Fujitsu Defense & National Security",
+      "chn": "Medium. How optical components are sourced is the open question; individual exposure is undisclosed",
+      "note": "Headquartered in Nakahara-ku, Kawasaki. It took over Fujitsu's photonics-systems and mobile-systems network product businesses. A separate legal entity from Fujitsu Defense & National Security, which is listed elsewhere in this audit",
+      "src": "https://www.1finity.co.jp/newsroom/press-release/1finity-a-fujitsu-company-commences-operations-and-reveals-brand-identity ／ https://it.impress.co.jp/articles/-/28071 ／ https://businessnetwork.jp/article/30784/"
+    },
+    "photonics-orbray": {
+      "name": "Orbray",
+      "own": "Unlisted. Renamed from Adamant Namiki Precision Jewel in January 2023",
+      "rev": "Undisclosed",
+      "prod": "Ferrules, sleeves, optical connectors and adapters, pigtails, receptacles and optical modules, fiber arrays, lensed fiber, and MEMS variable optical attenuators and switches. Isolator-equipped receptacles come in φ2.5 mm and φ1.25 mm",
+      "pos": "One of the few domestic firms that lists receptacles with a built-in optical isolator as a product. No share figure confirmed.",
+      "def": "No defense deliveries confirmed. The parts couple optical modules such as TOSAs and ROSAs to connectors",
+      "chn": "Medium. The optical isolator mounted in the receptacle is a Bi-substituted garnet containing Y and Tb. Sourcing is undisclosed",
+      "note": "The company describes isolator-equipped receptacles as custom products: fiber type (SM, MM, PMF or special), overall length, outer diameter and polish angle can be specified, and laminated isolators and AR coating are available. It offers both brazed mounting (metallized or YAG-welded) and adhesive mounting for optical isolators, in cylindrical, surface-mount and receptacle forms. The company has announced a move of its head office to Akita",
+      "src": "https://orbray.com/product/optical/device/receptacles.html ／ https://orbray.com/product/optical/technology/fiber.html ／ https://orbray.com/corporate/profile.html"
+    },
+    "photonics-melco-hakouden": {
+      "name": "Mitsubishi Electric (High Frequency & Optical Device Works)",
+      "own": "An in-house works of Mitsubishi Electric (TSE Prime, 6503)",
+      "rev": "No separate figure for the works. EML shipments were JPY 18.4 billion in 2022",
+      "prod": "Electro-absorption modulated laser (EML) chips and TO-CAN modules, plus 200 Gbps pin-PD receiver chips",
+      "pos": "Ranked first worldwide in optical devices (EMLs) for data centers, with a 42% global share on 2022 results.",
+      "def": "No defense deliveries confirmed. Applications are data-center optical transceivers and FTTH",
+      "chn": "Medium. EML chips are built on indium phosphide and use no rare earths, but Y and Tb enter through the optical isolator inside the module. EMLs are produced only in Japan",
+      "note": "The High Frequency & Optical Device Works in Itami (4-1 Mizuhara, Itami, Hyogo) handles the wafer process and Melco Advanced Device in Nagasaki handles TO-CAN module assembly, so EML production stays entirely in Japan. Data-center EML chips run at 1.5 million units a month for a 50% share, and TO-CAN EML modules for FTTH at 240,000 units a month for a 30% share. The work won the 70th Okochi Memorial Production Prize for fiscal 2023 for developing a semiconductor laser diode with an integrated electro-absorption modulator. Volume production of 200 Gbps (112 Gbaud PAM4) EML chips began in April 2024, and reports describe a plan to more than triple capacity by FY2028–2029",
+      "src": "https://okochi.or.jp/jusho/第70回大河内記念生産賞-5/ ／ https://eetimes.itmedia.co.jp/ee/articles/2408/21/news083_2.html ／ https://www.mitsubishielectric.co.jp/semiconductors/hf/locations/index.html"
+    },
+    "photonics-furukawa": {
+      "name": "Furukawa Electric",
+      "own": "Tokyo Stock Exchange Prime Market (5801)",
+      "rev": "JPY 1,307.5 billion consolidated (fiscal year ended March 2026); no separate figure for optical devices",
+      "prod": "ITLA, Micro-ITLA and Nano ITLA tunable laser modules, pump LD modules for Raman amplifiers, DFB laser chips, and optical fiber and cable",
+      "pos": "One of the few domestic firms producing DFB laser chips. No share figure confirmed.",
+      "def": "No defense deliveries confirmed. Applications are digital coherent optical transmission and data centers",
+      "chn": "Medium. The laser chips are built on indium phosphide and use no rare earths, but Y and Tb enter through the optical isolator inside the laser module",
+      "note": "An ITLA is a tunable laser module with its own control board, and the usual configuration places an optical isolator at the semiconductor laser's output to block back-reflection. The Nano ITLA measures 25 × 15.6 × 6.7 mm. Pump LD modules for Raman amplifiers cover 1330–1520 nm in 400, 500 and 600 mW versions. The company is investing about JPY 100 billion to double optical-fiber capacity across four countries including Japan and the United States (announced August 2026)",
+      "src": "https://www.furukawaelectric.com/release/2021/comm_20210607.html ／ https://www.furukawaelectric.com/release/2019/comm_190920.html ／ https://www.furukawaelectric.com/company/outline/"
     }
   },
   "routes": {
@@ -2349,7 +2448,7 @@
     },
     "03_yag_crystal": {
       "srcNotes": {
-        "02_compound": "Use high-purity Y₂O₃ and Tb₄O₇ as feedstock for crystal growth and sintering"
+        "02_compound": "Use high-purity Y₂O₃ as feedstock for crystal growth and sintering"
       }
     },
     "03_alsc_semi": {
@@ -2406,7 +2505,7 @@
     },
     "04_laser_medium": {
       "srcNotes": {
-        "03_yag_crystal": "Cut and polish crystals and ceramics into rods, slabs, and Faraday rotators"
+        "03_yag_crystal": "Cut and polish YAG and Y₂O₃ crystals and ceramics into rods and slabs"
       }
     },
     "04_target": {
@@ -2464,7 +2563,8 @@
     },
     "05_laser_osc": {
       "srcNotes": {
-        "04_laser_medium": "Integrate gain media and isolators into laser oscillators"
+        "04_laser_medium": "Integrate gain media into oscillators",
+        "04_faraday": "Block back-reflected light as the isolator inside the oscillator"
       }
     },
     "05_scaln_film": {
@@ -2491,8 +2591,9 @@
     "06_guidance": {
       "srcNotes": {
         "05_scaln_film": "MEMS inertial and piezoelectric sensors",
-        "05_motor": "Steering drives, seeker drives, and gyroscopes",
-        "05_electronics": "Electronic circuits and sensors in inertial measurement units (IMUs) and guidance-control systems"
+        "05_motor": "Steering, seeker drives and gyros",
+        "05_electronics": "Electronics and sensors in inertial measurement units and guidance controllers",
+        "05_photonics": "Build into the airborne and ground-side optical transceivers of fiber-optic guided weapons"
       }
     },
     "06_unmanned": {
@@ -2504,8 +2605,9 @@
     },
     "06_naval": {
       "srcNotes": {
-        "05_motor": "Drives for navigation systems and underwater equipment",
-        "05_electronics": "Electronic circuits and sensors in naval vessels and underwater equipment"
+        "05_motor": "Drive units in navigation systems and underwater equipment",
+        "05_electronics": "Electronics and sensors in vessels and underwater equipment",
+        "05_photonics": "Build into the transceiver section of underwater optical wireless units carried on AUVs and ROVs"
       }
     },
     "06_launch": {
@@ -2519,7 +2621,8 @@
       "srcNotes": {
         "05_motor": "Reaction wheels and drive mechanisms",
         "05_laser_osc": "Spaceborne LiDAR and laser ranging",
-        "05_electronics": "Space-grade electronic components"
+        "05_electronics": "Space-grade electronic components",
+        "05_photonics": "High-reliability isolators for space optical communication, at the stage of on-orbit environmental testing"
       }
     },
     "06_engine": {
@@ -2561,13 +2664,40 @@
       "srcNotes": {
         "05_scaln_film": "RF filters in communications equipment",
         "05_tube": "Transmitter tubes for satellite communications and radio systems",
-        "05_electronics": "Electronic circuits and components in communications equipment, including magnetic components"
+        "05_electronics": "Electronic circuits and components in communications equipment, including magnetic components",
+        "05_photonics": "Build into optical transmission equipment and submarine cable repeaters as isolators and circulators"
       }
     },
     "06_rf_sensor": {
       "srcNotes": {
         "05_scaln_film": "Piezoelectric sensors and high-frequency devices",
         "05_electronics": "Electronic components in instruments and sensors"
+      }
+    },
+    "03_magneto_garnet": {
+      "srcNotes": {
+        "02_compound": "Add bismuth and iron to Y, Tb, Gd and Ho oxides and grow magneto-optic film on a garnet substrate by liquid phase epitaxy"
+      }
+    },
+    "04_faraday": {
+      "srcNotes": {
+        "03_tb_mo": "Machine TGG ceramics and Tb magneto-optical glass into rotators and pair them with permanent magnets for high-power laser elements",
+        "03_magneto_garnet": "Cut magneto-optical film to element size and combine it with polarizers and magnets to make rotators for optical communications"
+      }
+    },
+    "05_photonics": {
+      "srcNotes": {
+        "04_faraday": "Combine rotators with polarisers and magnets into components that block light reflected back into semiconductor lasers"
+      }
+    },
+    "06_optical_net": {
+      "srcNotes": {
+        "05_photonics": "Build optical isolators and circulators into optical transmission equipment and submarine repeaters"
+      }
+    },
+    "03_tb_mo": {
+      "srcNotes": {
+        "02_compound": "Use high-purity Tb₄O₇ as feedstock for sintering and melting"
       }
     }
   },

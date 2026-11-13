@@ -6,30 +6,52 @@ function renderElementFlow(){
   if(activeView!=="element-flow")return;
   renderFlowElementControls();
   var frame=root.querySelector("#re-element-flow-frame"),svg=root.querySelector("#re-element-flow-canvas");
-  var W=Math.max(language==="en"?1320:1200,Math.floor(frame.clientWidth||1200)),left=34,right=language==="en"?270:245,top=language==="en"?136:112,bottom=54,nodeGap=language==="en"?34:32,companyScale=5;
+  var W=Math.max(language==="en"?1320:1200,Math.floor(frame.clientWidth||1200)),left=34,right=language==="en"?270:245,bottom=54,nodeGap=language==="en"?34:32,companyScale=5;
   var stageMap=Object.fromEntries(stages.map(function(stage){return[stage.id,stage]}));
   var order={};Object.keys(columnOrder).forEach(function(stage){columnOrder[stage].forEach(function(id,index){order[id]=index})});
   var byStage={};
   for(var stage=2;stage<=6;stage++)byStage[stage]=allSubs.filter(function(item){return item.stage===stage&&item.els.indexOf(flowElement)>=0&&flowCompanyCount(item.id,flowElement)>0}).sort(function(a,b){return flowSortIndex(flowElement,stage,a.id,order)-flowSortIndex(flowElement,stage,b.id,order)});
-  var columnSpans=Object.keys(byStage).map(function(stage){
-    var items=byStage[stage];
-    return items.reduce(function(sum,item){return sum+Math.max(8,flowCompanyCount(item.id,flowElement)*companyScale)},0)+Math.max(0,items.length-1)*nodeGap
-  });
-  var H=Math.max(760,top+bottom+Math.max.apply(null,[1].concat(columnSpans)));
   var step=(W-left-right)/5,positions={},nodes=[];
+  // ラベルは列の幅に収める。文字数の上限を列幅から決め、長い分類名が次の工程に重ならないようにする
+  var labelEm=language==="en"?5.9:11.5,labelLimit=Math.max(language==="en"?16:8,Math.floor((step-25)/labelEm));
+  var lineHeight=language==="en"?11:12;
+  function labelLinesOf(item){return flowLabelLines(subText(item,"label"),labelLimit)}
+  // ラベルは工程の棒の上に伸びるため、折り返した行数のぶんだけ縦の間隔を広げて、上の工程のラベルと重ならないようにする
+  function gapBefore(item){return nodeGap+(labelLinesOf(item).length-1)*lineHeight}
+  // 工程見出しの小さい説明も列の幅に収める
+  var shortEm=language==="en"?5.2:9.5,shortLimit=Math.max(language==="en"?18:10,Math.floor((step-12)/shortEm));
+  function stageLabelLinesOf(stage){return flowLabelLines(stageText(stage,"label"),language==="en"?22:18)}
+  function stageShortLinesOf(stage){return flowLabelLines(stageText(stage,"short"),shortLimit)}
+  function stageCountY(stage){return 56+(stageLabelLinesOf(stage).length-1)*13}
+  function stageShortY(stage){return stageCountY(stage)+38}
+  // 図は、見出しの下端と、工程の棒の上に伸びるラベルの高さを足した位置から始める
+  var headerBottom=Math.max.apply(null,stages.map(function(stage){return stageShortY(stage)+(stageShortLinesOf(stage).length-1)*11}));
+  var topLabelLines=Math.max.apply(null,[1].concat(Object.keys(byStage).map(function(stage){
+    return Math.max.apply(null,[1].concat(byStage[stage].map(function(item){return labelLinesOf(item).length})))
+  })));
+  var top=Math.max(language==="en"?136:112,Math.round(headerBottom+10+topLabelLines*lineHeight));
+  function columnSpan(items){
+    return items.reduce(function(sum,item,index){
+      return sum+Math.max(8,flowCompanyCount(item.id,flowElement)*companyScale)+(index?gapBefore(item):0)
+    },0)
+  }
+  var columnSpans=Object.keys(byStage).map(function(stage){return columnSpan(byStage[stage])});
+  var H=Math.max(760,top+bottom+Math.max.apply(null,[1].concat(columnSpans)));
   function positionColumn(items,stage){
-    var heights=items.map(function(item){return Math.max(8,flowCompanyCount(item.id,flowElement)*companyScale)});
-    var span=heights.reduce(function(sum,height){return sum+height},0)+Math.max(0,items.length-1)*nodeGap;
+    var span=columnSpan(items);
     var cursor=top+(H-top-bottom-span)/2;
     items.forEach(function(item,index){
-      var count=flowCompanyCount(item.id,flowElement),height=heights[index];
+      if(index)cursor+=gapBefore(item);
+      var count=flowCompanyCount(item.id,flowElement),height=Math.max(8,count*companyScale);
       var pos={id:item.id,item:item,stage:stage,count:count,x:left+(stage-1)*step,y:cursor+height/2,h:height,incoming:[],outgoing:[]};
-      cursor+=height+nodeGap;positions[item.id]=pos;nodes.push(pos)
+      cursor+=height;positions[item.id]=pos;nodes.push(pos)
     })
   }
   Object.keys(byStage).forEach(function(stage){positionColumn(byStage[stage],Number(stage))});
   var dep=dependencyRows.find(function(row){return row.tag===flowElement});
-  var source={id:FLOW_SOURCE_ID,stage:1,count:flowStageCount(2,flowElement),x:left,y:H/2,h:Math.max(8,flowStageCount(2,flowElement)*companyScale),incoming:[],outgoing:[]};
+  // 起点は各工程の列と同じ中心線にそろえる（H/2 だと見出しのぶんだけ上にずれる）
+  var axis=top+(H-top-bottom)/2;
+  var source={id:FLOW_SOURCE_ID,stage:1,count:flowStageCount(2,flowElement),x:left,y:axis,h:Math.max(8,flowStageCount(2,flowElement)*companyScale),incoming:[],outgoing:[]};
   positions[source.id]=source;
   var edges=[];
   byStage[2].forEach(function(target){edges.push({from:source.id,to:target.id})});
@@ -58,7 +80,7 @@ function renderElementFlow(){
     return"M"+x1+","+aTop+" C"+mid+","+aTop+" "+mid+","+bTop+" "+x2+","+bTop+" L"+x2+","+bBottom+" C"+mid+","+bBottom+" "+mid+","+aBottom+" "+x1+","+aBottom+" Z"
   }
   function nodeMarkup(node){
-    var label=subText(node.item,"label"),meta=companyCount(node.count),countWidth=20+Array.from(meta).length*6.5,labelLines=flowLabelLines(label,language==="en"?30:16),lineHeight=language==="en"?11:12,labelY=node.y-6-(labelLines.length-1)*lineHeight;
+    var label=subText(node.item,"label"),meta=companyCount(node.count),countWidth=20+Array.from(meta).length*6.5,labelLines=labelLinesOf(node.item),labelY=node.y-6-(labelLines.length-1)*lineHeight;
     return'<g class="re-ef-node'+(flowSelectionId===node.id?' is-selected':'')+'" data-flow-node="'+esc(node.id)+'" tabindex="0" role="button" aria-label="'+esc(label+"、"+meta)+'">'+
       '<rect class="re-ef-node-bar" x="'+node.x+'" y="'+(node.y-node.h/2)+'" width="8" height="'+node.h+'" fill="'+flowColor+'"></rect>'+
       '<text class="re-ef-node-title">'+labelLines.map(function(line,index){return'<tspan x="'+(node.x+15)+'" y="'+(labelY+index*lineHeight)+'">'+esc(line)+'</tspan>'}).join("")+'</text>'+
@@ -71,7 +93,7 @@ function renderElementFlow(){
   root.querySelector(".re-element-flow-swatch").style.setProperty("--flow-color",flowColor);
   var markup='<title>'+esc(tr("flowAria",{element:tagLabel(flowElement)}))+'</title>';
   stages.forEach(function(stage){
-    var x=left+(stage.id-1)*step,stageCount=flowStageCount(stage.id,flowElement),countLabel=companyCount(stageCount),countWidth=26+Array.from(countLabel).length*7.2,labelLines=flowLabelLines(stageText(stage,"label"),language==="en"?22:18),countY=56+(labelLines.length-1)*13,shortY=countY+38,shortLines=flowLabelLines(stageText(stage,"short"),language==="en"?34:28);
+    var x=left+(stage.id-1)*step,stageCount=flowStageCount(stage.id,flowElement),countLabel=companyCount(stageCount),countWidth=26+Array.from(countLabel).length*7.2,labelLines=stageLabelLinesOf(stage),countY=stageCountY(stage),shortY=stageShortY(stage),shortLines=stageShortLinesOf(stage);
     markup+='<text class="re-ef-stage-code" x="'+x+'" y="28">STAGE '+stage.code+'</text><text class="re-ef-stage-label">'+labelLines.map(function(line,index){return'<tspan x="'+x+'" y="'+(48+index*13)+'">'+esc(line)+'</tspan>'}).join("")+'</text><rect class="re-ef-stage-count-bg" x="'+x+'" y="'+countY+'" width="'+countWidth+'" height="21" rx="10.5" fill="'+flowColor+'" stroke="'+flowColor+'"></rect><text class="re-ef-stage-count" x="'+(x+9)+'" y="'+(countY+14.5)+'">'+countLabel+'</text><text class="re-ef-stage-short">'+shortLines.map(function(line,index){return'<tspan x="'+x+'" y="'+(shortY+index*11)+'">'+esc(line)+'</tspan>'}).join("")+'</text>'
   });
   markup+='<g aria-hidden="true">'+edges.map(function(edge){

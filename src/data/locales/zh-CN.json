@@ -113,14 +113,14 @@
     },
     "seed-10": {
       "name": "神岛化学工业",
-      "own": "东京证券交易所标准(4026)",
-      "rev": "274.05亿日元（2025年4月财年）",
-      "prod": "透明YAG、Y₂O₃陶瓷、激光介质、荧光体、光隔离器用 TGG 透明陶瓷",
-      "pos": "在大尺寸、键合YAG领域被称为全球唯一",
-      "def": "高功率激光、空间碎片捕获、激光核聚变",
-      "chn": "高。需确认高纯度Y₂O₃与Nd/Yb等掺杂元素原产国。",
-      "src": "JSX ／ Y DD ／ https://www.konoshima.co.jp/ceramics/tgg.html",
-      "note": "Y系功能部件的最重要候选 / 不计入Stage 04“固体激光振荡器（YAG）”，仅限YAG晶体与陶瓷材料侧的Stage 03"
+      "own": "东证标准市场（4026）",
+      "rev": "274.05亿日元（2025年4月期）。业务分为建材、化成品、陶瓷三块，陶瓷单独数据未公开",
+      "prod": "透明YAG陶瓷（100kW级激光器的增益介质）、Y₂O₃陶瓷、荧光体与闪烁体、光隔离器用TGG（Tb₃Ga₅O₁₂）透明陶瓷、致密陶瓷。从原料到成品一贯自制，并以自有接合技术生产大型接合陶瓷",
+      "pos": "被认为是全球唯一能够制造大型透明陶瓷的企业。份额数值未确认。",
+      "def": "高功率激光、空间碎片捕获、激光聚变。2016年和2024年获宇宙航空研究开发机构感谢状，2025年获第17届激光学会产业奖优秀奖",
+      "chn": "高。TGG以Tb、YAG与Y₂O₃以Y为骨架元素，均属中国中重稀土出口管制对象。需核实高纯原料与掺杂剂的原产国",
+      "note": "公司称通过极力抑制光散射源，在全球率先实现大型透明陶瓷，并以单晶无法达到的大型化为强项。公司给出TGG的韦尔代常数为36 rad/T·m、导热率为5.0 W/m·K，高于Tb系玻璃的20与0.7。由于TGG在可见光区的韦尔代常数偏小且需使用昂贵的Ga，公司正在开发不含Ga的TAG（Tb₃Al₅O₁₂）陶瓷；TAG单晶只能做到较小尺寸，尚未实用化。TGG陶瓷的大口径化一般以φ50mm左右为上限。已从Stage 04的固体激光振荡器（YAG）中剔除，仅保留在材料侧的Stage 03",
+      "src": "JSX ／ Y DD ／ https://www.konoshima.co.jp/ceramics/tgg.html ／ https://www.konoshima.co.jp/ceramics/index.html ／ https://www.konoshima.co.jp/ceramics/about.html ／ https://www.konoshima.co.jp/ceramics/resdev2.html"
     },
     "seed-11": {
       "name": "信光社",
@@ -144,7 +144,7 @@
       "bom": "266nm QCW对红外光纤放大光源进行两级波长转换。现行产品的光纤掺杂材料和转换晶体未披露。CW Frequad明确记载使用超高纯度BBO。未能确认使用YAG介质。/ 该DUV振荡器是否使用YAG尚未确认",
       "gap": "需确认本公司制与进口销售区分、国防、航天客户、基本波源的介质、出口管理是否适用出口管制。",
       "src": "https://www.opt-oxide.com/products-list/laser/ ／ https://www.opt-oxide.com/products-list/laser/qcw-laser/item_LA00008 ／ https://www.opt-oxide.com/v2019/wp-content/uploads/2013/03/266Laser_r12-1.pdf ／ https://www.opt-oxide.com/ir/meeting/meeting26_review/ ／ https://www.opt-oxide.com/products-list/laser/special ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00006",
-      "note": "依据固体激光振荡器尽调中的“候选（振荡器）”，正式列入Stage 04。"
+      "note": "整合处理：根据固体激光振荡器尽职调查中的“采用候选（振荡器）”正式纳入Stage 04。 ／ 266nm QCW产品将红外光纤放大光源经两级波长转换，而光纤放大级与多级转换通常会配置隔离器以阻断回光。该公司本身也是法拉第旋转器的制造商"
     },
     "seed-13": {
       "name": "TOCALO（トーカロ）",
@@ -1026,14 +1026,14 @@
     },
     "stage05-integrated-34": {
       "name": "岛津制作所",
-      "own": "上市公司 / 本公司证券代码：7701",
-      "rev": "约5,607亿日元（合并业绩，2026年3月财年）",
-      "prod": "飞行控制、空调、驾驶舱显示、飞机搭载设备",
-      "pos": "未能通过公开信息确认市场份额和行业地位。",
-      "def": "向P-1/C-2等国防飞机和B747-8等民用飞机供应飞行控制系统。",
-      "chn": "该公司自身的稀土用量构成（BOM）和对华依赖程度尚未确认。",
-      "src": "https://www.shimadzu.co.jp/sites/shimadzu.co.jp/files/ir/6dog/srnepvp1yzsd995a.pdf ／ https://www.shimadzu.co.jp/aboutus/company/profile.html",
-      "note": "合并处理：原有候选（不属于母公司替换对象） / 营收依据：公司简介的合并营业收入"
+      "own": "上市公司 ／ 证券代码：7701",
+      "rev": "约5,607亿日元 ／ 合并实绩 ／ 2026年3月期",
+      "prod": "飞行控制、空调、座舱显示、机载设备，以及水下光无线通信装置MC100与MC500（搭载于AUV与ROV）",
+      "pos": "市场份额与地位在公开信息中未确认",
+      "def": "为P-1、C-2等防务飞机和B747-8等民用飞机提供飞行控制。 ／ 水下光无线通信装置是在防卫装备厅安全保障技术推进制度支持下开发的军民两用技术。2024年在先进技术衔接研究中验证了光／声混合水下通信装置",
+      "chn": "该企业自身的稀土BOM与对华依存度未确认。",
+      "note": "整合处理：既有候选（不属于母公司替换对象） ／ 营收依据：公司概要中的合并销售额 ／ MC100在10m以上距离达到95Mb/s以上，耐压水深3500m（2020年发售）；MC500以激光实现最远80m（2022年发售）。Y与Tb经由收发部内置的光隔离器进入",
+      "src": "https://www.shimadzu.co.jp/sites/shimadzu.co.jp/files/ir/6dog/srnepvp1yzsd995a.pdf ／ https://www.shimadzu.co.jp/aboutus/company/profile.html ／ https://www.shimadzu.co.jp/industry/products/underwater/mc500.html ／ https://www.shimadzu.co.jp/products/enviro/technical-overview04.html"
     },
     "stage05-integrated-35": {
       "name": "Daikin Industries Defense Systems Business (Yodogawa Plant)（ダイキン工業 特機事業（淀川製作所））",
@@ -1070,14 +1070,14 @@
     },
     "stage05-integrated-40": {
       "name": "住友电气工业",
-      "own": "上市公司 / 住友电气工业株式会社（东京证券交易所Prime，证券代码5802）。GaN HEMT由子公司住友电工器件创新（SEDI）制造",
-      "rev": "约4.7万亿日元（合并业绩概数，2026年3月财年）",
-      "prod": "S帯、X帯高功率GaN HEMT、卫星通信、航空管制雷达用RF器件",
-      "pos": "基站用GaN HEMT的全球份额第一（5G用的销售份额据称约七成）。是RF GaN的主要厂商之一。",
-      "def": "直接关系到空中交通管制、船舶与气象雷达和卫星通信，可转用于国防雷达和通信。",
-      "chn": "该公司自身的稀土用量构成（BOM）和对华依赖程度尚未确认。",
-      "src": "https://sumitomoelectric.com/jp/products/optical-devices ／ https://sumitomoelectric.com/jp/ir/financial ／ https://sei.co.jp/id/2020/06/project/id04.html ／ https://newswitch.jp/p/22352 ／ https://www.yolegroup.com/strategy-insights/the-rise-and-rise-of-rf-gan/",
-      "note": "合并处理：原有候选（不属于母公司替换对象） / 营收依据：合并营业收入按0.1万亿日元取整"
+      "own": "上市公司 ／ 住友电气工业株式会社（东证主板，证券代码5802）。GaN HEMT由子公司住友电工器件创新（SEDI）生产",
+      "rev": "约4.7万亿日元 ／ 合并实绩（概数） ／ 2026年3月期",
+      "prod": "面向数据中心的光收发模块与通信用光半导体、光接入设备、S波段与X波段大功率GaN HEMT，以及卫星通信与空管雷达用射频器件",
+      "pos": "同时经营光半导体与射频器件。基站用GaN HEMT居全球首位，5G用销售份额据称约七成。",
+      "def": "直接用于空管、船舶与气象雷达、卫星通信，可转用于防务雷达与通信。",
+      "chn": "该企业自身的稀土BOM与对华依存度未确认。",
+      "note": "整合处理：既有候选（不属于母公司替换对象） ／ 营收依据：合并销售额按0.1万亿日元为单位取整 ／ 通信用激光的光半导体产能计划在2026年度较上年翻倍，并在2029年度前较2026年度再翻一倍，同时向磷化铟衬底投资180亿日元。2028中期经营计划在三年累计1万亿日元的设备投资中，划出2000亿日元用于数据中心相关。Y与Tb经由光收发模块内置的光隔离器进入",
+      "src": "https://sumitomoelectric.com/jp/products/optical-devices ／ https://sumitomoelectric.com/jp/ir/financial ／ https://sei.co.jp/id/2020/06/project/id04.html ／ https://newswitch.jp/p/22352 ／ https://www.yolegroup.com/strategy-insights/the-rise-and-rise-of-rf-gan/ ／ https://dempa-digital.com/article/711782 ／ https://www.nikkan.co.jp/articles/view/00781043"
     },
     "stage05-integrated-41": {
       "name": "村田制作所",
@@ -1225,7 +1225,7 @@
       "bom": "官方页面明确列出Nd:YAG。为被动Q开关型微片激光器。Q开关材料和晶体供应商未披露。/ Y（明确列出Nd:YAG）",
       "gap": "需确认日本防卫装备厅与的合同关係、航空航天客户、结晶、Q开关材BOM、市场份额、年间生产台数。",
       "src": "https://www.optoquest.co.jp/products/325/ ／ https://www.optoquest.co.jp/company/ ／ https://www.optoquest.co.jp/about/ ／ https://www.mod.go.jp/atla/funding/hyouka/r07_seika/R7seika_04riken.pdf",
-      "note": "依据固体激光振荡器尽调中的“候选（微片Nd:YAG）”，正式列入Stage 04。"
+      "note": "根据固体激光振荡器尽职调查中的“采用候选（微片Nd:YAG）”正式纳入Stage 04。 ／ 亚纳秒、兆瓦级峰值功率对回光敏感，通常会配置隔离器加以保护。该公司本身也是多芯光纤用光隔离器的制造商"
     },
     "laser-dd-sct": {
       "name": "SCT Co., Ltd. (SCT)（エスシーティー株式会社（SCT））",
@@ -2315,6 +2315,105 @@
       "def": "以民用半导体制造设备为主，未确认有面向国防的直接供货。",
       "chn": "导电性氧化钇为研发阶段。原料的采购国未披露。",
       "src": "https://www.soc.co.jp/service/development/technology/technology02/ceramics/ ／ https://www.soc.co.jp/news/87192/ ／ https://www.soc.co.jp/sys/wp-content/uploads/2026/05/4cb6c30e2ee6356eaa2d824f4c1e223e.pdf"
+    },
+    "faraday-granopt": {
+      "name": "格兰诺普特（GRANOPT）",
+      "own": "非上市。住友金属矿山51%与三菱瓦斯化学49%的合资公司，2005年4月成立",
+      "rev": "未披露（注册资本1.5亿日元，员工183人，2025年7月时点）",
+      "prod": "以液相外延法生长的铋置换稀土铁石榴石单晶膜（厚0.1〜0.5毫米）制造的法拉第旋转器。GTD、GLB、GSF、GMF、ETD各型号，波长1310〜1590纳米，标准尺寸11毫米见方",
+      "pos": "光通信用法拉第旋转器的全球份额领先。经济产业省2020年版《全球细分领域冠军企业100选》的材料指出，该材料的供应商基本上仅限两家",
+      "def": "未确认。用途为基站、数据中心和海底电缆",
+      "chn": "高。薄膜组成中的Y、Tb、Gd、Ho属于中国中重稀土出口管制对象。在深圳设有销售子公司。成品光隔离器九成以上在中国组装",
+      "src": "https://www.granopt.jp/company.html ／ https://www.granopt.jp/en/images/gnt100_01.pdf ／ https://www.smm.co.jp/news/release/2026/06/002134.html ／ https://www.mgc.co.jp/corporate/news/2026/260622.html",
+      "note": "总部与第一工厂位于秋田县能代市，第二工厂于2024年度竣工。计划到2027年度将法拉第旋转器产能提升至2025年度的3倍。外延生长所需的SGGG衬底由住友金属矿山集团供应"
+    },
+    "faraday-kohoku": {
+      "name": "湖北工业",
+      "own": "上市（6524）。1959年成立，注册资本2.06亿日元",
+      "rev": "合并174.54亿日元（2025年12月期），其中光部件与器件业务86.51亿日元，营业利润率44.6%",
+      "prod": "法拉第旋转器（光通信1550/1310纳米、工业激光1064/1030纳米、2000纳米波段）、在线型与混合型光隔离器、光环行器、可变光衰减器、海底电缆用光部件、多芯光纤用光部件",
+      "pos": "海底电缆用光隔离器的全球份额据称超过50%。公司将从晶体生长、加工到元件制作、精密组装与检验的一贯生产体制列为自身竞争优势",
+      "def": "正在开发面向航天的高功率光隔离器。2025年9月起在国际空间站开展环境试验。海底电缆用部件连接海底通信基础设施",
+      "chn": "高。公司投资者资料明确提出，为应对稀土供需紧张而确保材料库存并推进采购渠道多元化。其中国两处基地从事引线端子业务",
+      "src": "https://www.kohokukogyo.co.jp/product/optical-communication-part-and-device/ ／ https://www.kohokukogyo.co.jp/assets/doc/ir/20251128_mufg_ir_seminar.pdf ／ https://www.nikkan.co.jp/articles/view/00740858",
+      "note": "主力工厂位于滋贺县长浜市高月町。由于从薄膜生长一直做到成品光部件，因此横跨第03、04、05阶段。该公司在铝电解电容器引线端子领域亦占全球六成以上份额"
+    },
+    "faraday-neg": {
+      "name": "日本电气硝子",
+      "own": "东京证券交易所上市（5214）",
+      "rev": "合并3,114.02亿日元（2025年12月期）。法拉第元件单独数据未公开",
+      "prod": "以自研磁光玻璃制成的法拉第元件，以及由其构成的高功率激光用偏振相关型光隔离器。光纤型1030nm，空间型532nm与1030nm。2025年3月发布110×110mm的大型元件",
+      "pos": "比单晶更易大型化的玻璃制磁光元件。份额数值未确认。",
+      "def": "公司将激光聚变、空间碎片清除、重离子癌症治疗列为大型元件的用途，并已装入大阪大学激光科学研究所的大型激光装置",
+      "chn": "中。以玻璃替代TGG单晶可降低Tb含量，但仍属Tb系材料。原料采购来源未公开",
+      "note": "公司公布FM-02的Tb含量在60mol%以上，韦尔代常数为TGG单晶的1.7倍。2025年3月以另一种组分发布110×110mm大型元件。总部位于滋贺县大津市，法拉第元件与隔离器的生产工厂未公开。以玻璃而非单晶制造磁光元件，在日本国内属少见的技术路线",
+      "src": "https://www.neg.co.jp/products/optical-isolator/index.html ／ https://www.neg.co.jp/news/20250326.html ／ https://eetimes.itmedia.co.jp/ee/articles/2503/28/news005.html"
+    },
+    "faraday-kogaku-giken": {
+      "name": "光学技研",
+      "own": "非上市。尼利可（东证6863）的全资子公司。1978年成立，注册资本7,500万日元，员工70人",
+      "rev": "未公开",
+      "prod": "光隔离器与法拉第旋转器，涵盖偏振相关型与偏振无关型、自由空间型与光纤输出型。1064nm高抗损伤产品的隔离度在30dB以上，可承受30W连续波。大口径产品使用磁性石榴石单晶薄膜",
+      "pos": "公司主打同行少有的大口径。份额数值未确认。",
+      "def": "未能确认。用途为光学测量、光通信与激光加工",
+      "chn": "中。法拉第元件的采购来源未公开",
+      "note": "大口径法拉第旋转器使用磁性石榴石单晶薄膜。位于神奈川县厚木市。公司明确表示磁体、法拉第元件与偏振器均由自己从设计做到制造。2026年3月公告停止接受大口径光隔离器与法拉第旋转器的订单",
+      "src": "https://www.kogakugiken.co.jp/products/isolator01.html ／ https://www.kogakugiken.co.jp/products/isolator02.html ／ https://www.kogakugiken.co.jp/company"
+    },
+    "optnet-nec": {
+      "name": "日本电气（NEC）",
+      "own": "上市（6701）",
+      "rev": "合并3万4,234亿日元（2025年3月期）。光传输设备未单独披露",
+      "prod": "海底光缆系统（海底中继器、终端设备、增益均衡器、海底分支装置）、SpectralWave WX开放式光传输设备、卫星用光通信装置",
+      "pos": "海底光缆系统的国内唯一供应商，被视为全球三强之一。份额因出处而异，从21%到约三成不等",
+      "def": "为JAXA的卫星间光通信系统LUCAS开发卫星用光通信装置，2025年1月实现卫星间1.8Gbps光通信并成功传输至地面站。海底电缆亦承载海底地震观测",
+      "chn": "中。装置所用光部件的采购结构是关键问题。数据中心用光收发模块的全球出货量据称大部分来自中国厂商",
+      "src": "https://jpn.nec.com/submarine/index.html ／ https://jpn.nec.com/press/202501/20250123_01.html ／ https://jpn.nec.com/press/202012/20201210_02.html ／ https://journal.meti.go.jp/p/40663/",
+      "note": "海底电缆本体由子公司OCC（北九州市若松区）制造。海底中继器每50〜100公里装有一个光隔离器，NEC被列为湖北工业的主要客户之一"
+    },
+    "optnet-1finity": {
+      "name": "1FINITY",
+      "own": "非上市。富士通的全资子公司，2025年7月1日通过公司分立开始运营",
+      "rev": "未公开（注册资本4亿日元，员工约1,800人）",
+      "prod": "1FINITY系列光传输设备：T900转发器与L900线路系统（单波1.2Tbps），以及解耦型T250。同时经营符合O-RAN的5G基站设备",
+      "pos": "日本国内光传输设备的主要供应商。份额数值未确认。",
+      "def": "该业务单元未能确认。集团的防务业务由富士通防务与国家安全公司承担",
+      "chn": "中。光器件的采购结构是关注点，具体依存度未公开",
+      "note": "总部位于川崎市中原区。承接了富士通的光子系统与移动系统网络产品业务。与本审计中已收录的富士通防务与国家安全公司属不同法人",
+      "src": "https://www.1finity.co.jp/newsroom/press-release/1finity-a-fujitsu-company-commences-operations-and-reveals-brand-identity ／ https://it.impress.co.jp/articles/-/28071 ／ https://businessnetwork.jp/article/30784/"
+    },
+    "photonics-orbray": {
+      "name": "Orbray",
+      "own": "非上市。2023年1月由Adamant Namiki精密宝石更名而来",
+      "rev": "未公开",
+      "prod": "插芯、套管、光连接器与光适配器、尾纤・插座・光模块、光纤阵列、透镜光纤、MEMS可变光衰减器与光开关。带隔离器的插座备有φ2.5mm与φ1.25mm两种",
+      "pos": "国内少数将内置光隔离器的插座作为产品列出的企业。份额数值未确认。",
+      "def": "未确认有防务交付。用途是与TOSA、ROSA等光模块结合的部件",
+      "chn": "中。插座上装配的光隔离器为Bi取代石榴石，含有Y与Tb。采购来源未公开",
+      "note": "公司说明带隔离器的插座基本为定制产品，可选光纤种类（SM、MM、PMF或特种）、总长、外径与研磨角度，并支持层叠型隔离器与增透膜。光隔离器的装配有金属化或YAG焊接的钎焊型与粘接型，形状涵盖圆柱型、表面贴装型与插座型。公司已公告将总部迁往秋田",
+      "src": "https://orbray.com/product/optical/device/receptacles.html ／ https://orbray.com/product/optical/technology/fiber.html ／ https://orbray.com/corporate/profile.html"
+    },
+    "photonics-melco-hakouden": {
+      "name": "三菱电机（高频光器件制作所）",
+      "own": "三菱电机（东证主板6503）的内部制作所",
+      "rev": "制作所单独数据未公开。EML在2022年的出货额为184亿日元",
+      "prod": "电吸收调制集成激光器（EML）的芯片与TO-CAN型模块，以及200Gbps接收用pin-PD芯片",
+      "pos": "面向数据中心的光器件（EML）居全球首位，按2022年实绩全球份额为42%。",
+      "def": "未确认有防务交付。用途为数据中心光收发模块与FTTH",
+      "chn": "中。EML芯片基于磷化铟衬底，本身不用稀土，但Y与Tb经由模块内置的光隔离器进入。EML仅在日本国内生产",
+      "note": "位于伊丹的高频光器件制作所（兵库县伊丹市瑞原四丁目1番地）负责晶圆工艺，位于长崎的Melco Advanced Device株式会社负责TO-CAN型模块封装，EML全部在日本国内生产。面向数据中心的EML芯片月产150万个、份额50%，面向FTTH的TO-CAN型EML模块月产24万个、份额30%。2023年度以“集成电吸收光调制器的半导体激光二极管的开发”获第70届大河内纪念生产奖。2024年4月开始量产200Gbps（112Gbaud PAM4）EML芯片，并有报道称计划在2028至2029年度将产能提高三倍以上",
+      "src": "https://okochi.or.jp/jusho/第70回大河内記念生産賞-5/ ／ https://eetimes.itmedia.co.jp/ee/articles/2408/21/news083_2.html ／ https://www.mitsubishielectric.co.jp/semiconductors/hf/locations/index.html"
+    },
+    "photonics-furukawa": {
+      "name": "古河电气工业",
+      "own": "东证主板（5801）",
+      "rev": "合并1兆3,075亿日元（2026年3月期）。光器件单独数据未公开",
+      "prod": "ITLA、Micro-ITLA与Nano ITLA可调谐激光模块，拉曼放大器用泵浦LD模块，DFB激光芯片，以及光纤与光缆",
+      "pos": "国内少数能够生产DFB激光芯片的企业之一。份额数值未确认。",
+      "def": "未确认有防务交付。用途为数字相干光传输与数据中心",
+      "chn": "中。激光芯片基于磷化铟衬底，本身不用稀土，但Y与Tb经由激光模块内置的光隔离器进入",
+      "note": "ITLA是带控制电路板的可调谐激光模块，通常在半导体激光器输出侧放置光隔离器以阻断回光。Nano ITLA尺寸为25×15.6×6.7mm。拉曼放大器用泵浦LD模块有400、500、600mW三档，覆盖1330至1520nm。公司投资约1000亿日元，在包括日美在内的四个国家将光纤产能提高一倍（2026年8月公布）",
+      "src": "https://www.furukawaelectric.com/release/2021/comm_20210607.html ／ https://www.furukawaelectric.com/release/2019/comm_190920.html ／ https://www.furukawaelectric.com/company/outline/"
     }
   },
   "routes": {
@@ -2349,7 +2448,7 @@
     },
     "03_yag_crystal": {
       "srcNotes": {
-        "02_compound": "将高纯度 Y₂O₃、Tb₄O₇ 用作晶体生长和烧结的原料"
+        "02_compound": "以高纯Y₂O₃作为晶体生长与烧结的原料"
       }
     },
     "03_alsc_semi": {
@@ -2406,7 +2505,7 @@
     },
     "04_laser_medium": {
       "srcNotes": {
-        "03_yag_crystal": "将晶体或陶瓷切割、研磨成棒材、板材及法拉第旋转器"
+        "03_yag_crystal": "将YAG、Y₂O₃的晶体与陶瓷切割、研磨成棒材与板条"
       }
     },
     "04_target": {
@@ -2464,7 +2563,8 @@
     },
     "05_laser_osc": {
       "srcNotes": {
-        "04_laser_medium": "将激光介质和隔离器装入振荡器"
+        "04_laser_medium": "将激光介质装入振荡器",
+        "04_faraday": "作为振荡器内部的隔离器阻断返回光"
       }
     },
     "05_scaln_film": {
@@ -2492,7 +2592,8 @@
       "srcNotes": {
         "05_scaln_film": "用作 MEMS 惯性及压电传感器",
         "05_motor": "用于舵面驱动、导引头驱动和陀螺仪",
-        "05_electronics": "用于惯性测量单元（IMU）和制导控制装置的电子电路及传感器"
+        "05_electronics": "用于惯性测量单元（IMU）和制导控制装置的电子电路及传感器",
+        "05_photonics": "装入光纤制导武器弹上与地面侧的光收发器件"
       }
     },
     "06_unmanned": {
@@ -2505,7 +2606,8 @@
     "06_naval": {
       "srcNotes": {
         "05_motor": "用于导航装置和水下设备的驱动部件",
-        "05_electronics": "用于舰艇和水下设备的电子电路及传感器"
+        "05_electronics": "用于舰艇和水下设备的电子电路及传感器",
+        "05_photonics": "装入水下光无线通信装置的收发部，搭载于AUV与ROV"
       }
     },
     "06_launch": {
@@ -2519,7 +2621,8 @@
       "srcNotes": {
         "05_motor": "用作反作用飞轮和驱动机构",
         "05_laser_osc": "用于航天激光雷达和激光测距",
-        "05_electronics": "用作航天电子元件"
+        "05_electronics": "用作航天电子元件",
+        "05_photonics": "用于空间光通信的高可靠隔离器（处于在轨环境试验阶段）"
       }
     },
     "06_engine": {
@@ -2561,13 +2664,40 @@
       "srcNotes": {
         "05_scaln_film": "用于通信设备的 RF 滤波器",
         "05_tube": "用于卫星通信和无线电设备的发射管",
-        "05_electronics": "用于通信设备的电子电路和元件（包括磁性元件）"
+        "05_electronics": "用于通信设备的电子电路和元件（包括磁性元件）",
+        "05_photonics": "作为光隔离器与光环行器装入光传输设备和海底电缆中继器"
       }
     },
     "06_rf_sensor": {
       "srcNotes": {
         "05_scaln_film": "用作压电传感器和高频器件",
         "05_electronics": "用于测量仪器和传感器的电子元件"
+      }
+    },
+    "03_magneto_garnet": {
+      "srcNotes": {
+        "02_compound": "以Y、Tb、Gd、Ho的氧化物加入铋和铁，用液相外延法在石榴石衬底上生长磁光薄膜"
+      }
+    },
+    "04_faraday": {
+      "srcNotes": {
+        "03_tb_mo": "将TGG陶瓷与Tb磁光玻璃加工成旋转器，与永磁体组合为高功率激光用元件",
+        "03_magneto_garnet": "将磁光薄膜切割至元件尺寸，与偏振器和磁体组合为光通信用旋转器"
+      }
+    },
+    "05_photonics": {
+      "srcNotes": {
+        "04_faraday": "将旋转器与偏振片、磁体组合，制成阻断返回半导体激光器的反射光的光部件"
+      }
+    },
+    "06_optical_net": {
+      "srcNotes": {
+        "05_photonics": "将光隔离器与光环行器装入光传输设备和海底中继器"
+      }
+    },
+    "03_tb_mo": {
+      "srcNotes": {
+        "02_compound": "以高纯Tb₄O₇作为烧结与熔制的原料"
       }
     }
   },

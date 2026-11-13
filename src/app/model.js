@@ -41,17 +41,17 @@ function flowStageCount(stage,element){
 var flowOrderByElement={
   Y:{
     2:["02_compound","02_recycle"],
-    3:["03_ceramic","03_yag_crystal","03_dielectric_additive","03_yttria_powder"],
-    4:["04_elec","04_media","04_tbc_spray","04_laser_medium","04_dielectric","04_plasma_spray","04_ods"],
-    5:["05_sofc","05_tbc","05_electronics","05_laser_osc","05_plasma_parts","05_cladding"],
-    6:["06_energy","06_engine","06_radar","06_comm","06_rf_sensor","06_naval","06_launch","06_guidance","06_aircraft","06_laser","06_space","06_unmanned","06_semi","06_nuclear"]
+    3:["03_ceramic","03_yag_crystal","03_magneto_garnet","03_dielectric_additive","03_yttria_powder"],
+    4:["04_tbc_spray","04_elec","04_media","04_laser_medium","04_faraday","04_dielectric","04_plasma_spray","04_ods"],
+    5:["05_tbc","05_sofc","05_laser_osc","05_electronics","05_photonics","05_plasma_parts","05_cladding"],
+    6:["06_engine","06_energy","06_unmanned","06_laser","06_aircraft","06_launch","06_space","06_radar","06_rf_sensor","06_guidance","06_naval","06_comm","06_optical_net","06_semi","06_nuclear"]
   },
   DyTb:{
-    2:["02_compound","02_metal","02_recycle"],
-    3:["03_yag_crystal","03_dielectric_additive","03_magnet_alloy","03_magnet_powder"],
-    4:["04_laser_medium","04_dielectric","04_mag"],
-    5:["05_laser_osc","05_electronics","05_motor"],
-    6:["06_laser","06_comm","06_aircraft","06_guidance","06_unmanned","06_naval","06_launch","06_space","06_radar","06_energy"]
+    2:["02_compound","02_recycle","02_metal"],
+    3:["03_tb_mo","03_magneto_garnet","03_dielectric_additive","03_magnet_alloy","03_magnet_powder"],
+    4:["04_faraday","04_dielectric","04_mag"],
+    5:["05_laser_osc","05_photonics","05_electronics","05_motor"],
+    6:["06_laser","06_optical_net","06_comm","06_guidance","06_naval","06_space","06_aircraft","06_unmanned","06_launch","06_radar","06_energy"]
   },
   Sm:{
     2:["02_compound","02_metal","02_recycle"],
@@ -65,7 +65,7 @@ var flowOrderByElement={
     3:["03_light_alloy","03_ceramic","03_sam_crystal","03_alsc_semi"],
     4:["04_am_feedstock","04_elec","04_sc_crystal","04_target"],
     5:["05_am","05_sofc","05_electronics","05_scaln_film","05_tube"],
-    6:["06_launch","06_aircraft","06_energy","06_space","06_naval","06_guidance","06_rf_sensor","06_radar","06_comm"]
+    6:["06_launch","06_aircraft","06_energy","06_naval","06_space","06_guidance","06_rf_sensor","06_radar","06_comm"]
   }
 };
 function flowSortIndex(element,stage,id,fallbackOrder){

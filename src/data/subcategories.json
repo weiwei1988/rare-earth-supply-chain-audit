@@ -174,7 +174,49 @@
     "stage": 3,
     "label": "Y 系単結晶・透明セラミックス",
     "header": "03 Y 系単結晶・透明セラミックス",
-    "description": "YAG・Y₂O₃・TGG",
+    "description": "YAG・Y₂O₃",
+    "els": [
+      "Y"
+    ],
+    "src": [
+      "02_compound"
+    ],
+    "srcEls": {
+      "02_compound": [
+        "Y"
+      ]
+    },
+    "srcNotes": {
+      "02_compound": "高純度 Y₂O₃ を結晶育成・焼結の原料に"
+    }
+  },
+  {
+    "id": "03_tb_mo",
+    "stage": 3,
+    "label": "Tb 系磁気光学結晶・ガラス",
+    "header": "03 Tb 系磁気光学結晶・ガラス",
+    "description": "TGG セラミックス・TAG・Tb 磁気光学ガラス",
+    "els": [
+      "DyTb"
+    ],
+    "src": [
+      "02_compound"
+    ],
+    "srcEls": {
+      "02_compound": [
+        "DyTb"
+      ]
+    },
+    "srcNotes": {
+      "02_compound": "高純度 Tb₄O₇ を焼結・溶融の原料に"
+    }
+  },
+  {
+    "id": "03_magneto_garnet",
+    "stage": 3,
+    "label": "磁気光学ガーネット（膜・基板）",
+    "header": "03 磁気光学ガーネット（膜・基板）",
+    "description": "Bi置換希土類鉄ガーネット膜・SGGG 基板",
     "els": [
       "Y",
       "DyTb"
@@ -189,8 +231,9 @@
       ]
     },
     "srcNotes": {
-      "02_compound": "高純度 Y₂O₃・Tb₄O₇ を結晶育成・焼結の原料に"
-    }
+      "02_compound": "Y・Tb・Gd・Ho の酸化物に Bi・Fe を加え、ガーネット基板上へ液相エピタキシャル成長で磁気光学膜を育成"
+    },
+    "note": "LPE の種結晶となる SGGG 基板は、国内で育成を公表している供給元が住友金属鉱山グループに限られる"
   },
   {
     "id": "03_alsc_semi",
@@ -427,22 +470,48 @@
     "stage": 4,
     "label": "レーザー媒質",
     "header": "04 レーザー媒質",
-    "description": "ロッド・スラブ・ファラデー素子",
+    "description": "ロッド・スラブ・透明セラミックス",
     "els": [
-      "Y",
-      "DyTb"
+      "Y"
     ],
     "src": [
       "03_yag_crystal"
     ],
     "srcEls": {
       "03_yag_crystal": [
+        "Y"
+      ]
+    },
+    "srcNotes": {
+      "03_yag_crystal": "YAG・Y₂O₃ の結晶・セラミックスを切り出し・研磨してロッド・スラブに"
+    }
+  },
+  {
+    "id": "04_faraday",
+    "stage": 4,
+    "label": "ファラデー回転子・光アイソレータ",
+    "header": "04 ファラデー回転子・光アイソレータ",
+    "description": "TGG・磁気光学ガラス・磁気光学膜の素子",
+    "els": [
+      "Y",
+      "DyTb"
+    ],
+    "src": [
+      "03_tb_mo",
+      "03_magneto_garnet"
+    ],
+    "srcEls": {
+      "03_tb_mo": [
+        "DyTb"
+      ],
+      "03_magneto_garnet": [
         "Y",
         "DyTb"
       ]
     },
     "srcNotes": {
-      "03_yag_crystal": "結晶・セラミックスを切り出し・研磨してロッド・スラブ・ファラデー回転子に"
+      "03_tb_mo": "TGG セラミックス・Tb 磁気光学ガラスを回転子に加工し、永久磁石と組んで高出力レーザー用の素子に",
+      "03_magneto_garnet": "磁気光学膜を素子寸法に切り出し、偏光子・磁石と組んで光通信用の回転子に"
     }
   },
   {
@@ -697,18 +766,46 @@
       "DyTb"
     ],
     "src": [
-      "04_laser_medium"
+      "04_laser_medium",
+      "04_faraday"
     ],
     "srcEls": {
       "04_laser_medium": [
+        "Y"
+      ],
+      "04_faraday": [
+        "DyTb"
+      ]
+    },
+    "srcNotes": {
+      "04_laser_medium": "媒質を発振器に組み込む",
+      "04_faraday": "発振器内のアイソレータとして戻り光を遮る"
+    },
+    "note": "旧分類では工程4（機能材料・部材）だった。発振器は部材を組み込んだ機器のため、モジュール・機器の段に置いた。"
+  },
+  {
+    "id": "05_photonics",
+    "stage": 5,
+    "label": "光通信部品・光デバイス",
+    "header": "05 光通信部品・光デバイス",
+    "description": "光アイソレータ・光サーキュレータ",
+    "els": [
+      "Y",
+      "DyTb"
+    ],
+    "src": [
+      "04_faraday"
+    ],
+    "srcEls": {
+      "04_faraday": [
         "Y",
         "DyTb"
       ]
     },
     "srcNotes": {
-      "04_laser_medium": "媒質・アイソレーターを発振器に組み込む"
+      "04_faraday": "回転子を偏光子・磁石と組み、半導体レーザーへの戻り光を遮る光部品に"
     },
-    "note": "旧分類では工程4（機能材料・部材）だった。発振器は部材を組み込んだ機器のため、モジュール・機器の段に置いた。"
+    "note": "完成品の光アイソレータは世界の9割以上が中国で組み立てられ、国内に残るのは海底ケーブル・宇宙・高出力レーザー向けの高信頼品。光ファイバ有線ドローンは2024年以降に海外で実戦投入が進むが、国内の開発・調達は確認できていない"
   },
   {
     "id": "05_scaln_film",
@@ -830,7 +927,8 @@
     "src": [
       "05_scaln_film",
       "05_motor",
-      "05_electronics"
+      "05_electronics",
+      "05_photonics"
     ],
     "srcEls": {
       "05_scaln_film": [
@@ -844,12 +942,17 @@
         "Y",
         "DyTb",
         "Sc"
+      ],
+      "05_photonics": [
+        "Y",
+        "DyTb"
       ]
     },
     "srcNotes": {
       "05_scaln_film": "MEMS 慣性・圧電センサ",
       "05_motor": "操舵・シーカー駆動・ジャイロ",
-      "05_electronics": "慣性計測装置（IMU）・誘導制御装置の電子回路・センサ"
+      "05_electronics": "慣性計測装置（IMU）・誘導制御装置の電子回路・センサ",
+      "05_photonics": "光ファイバ誘導弾の機上・地上側の光送受信デバイスに組み込む"
     }
   },
   {
@@ -901,7 +1004,8 @@
     ],
     "src": [
       "05_motor",
-      "05_electronics"
+      "05_electronics",
+      "05_photonics"
     ],
     "srcEls": {
       "05_motor": [
@@ -912,11 +1016,16 @@
         "Y",
         "DyTb",
         "Sc"
+      ],
+      "05_photonics": [
+        "Y",
+        "DyTb"
       ]
     },
     "srcNotes": {
       "05_motor": "航法装置・水中機器の駆動部",
-      "05_electronics": "艦艇・水中機器の電子回路・センサ"
+      "05_electronics": "艦艇・水中機器の電子回路・センサ",
+      "05_photonics": "水中光無線通信装置の送受信部に組み込み、AUV・ROV に搭載する"
     }
   },
   {
@@ -970,7 +1079,8 @@
     "src": [
       "05_motor",
       "05_laser_osc",
-      "05_electronics"
+      "05_electronics",
+      "05_photonics"
     ],
     "srcEls": {
       "05_motor": [
@@ -984,12 +1094,17 @@
         "Y",
         "DyTb",
         "Sc"
+      ],
+      "05_photonics": [
+        "Y",
+        "DyTb"
       ]
     },
     "srcNotes": {
       "05_motor": "リアクションホイール・駆動機構",
       "05_laser_osc": "宇宙ライダー・レーザー測距",
-      "05_electronics": "宇宙用電子部品"
+      "05_electronics": "宇宙用電子部品",
+      "05_photonics": "宇宙光通信向けの高信頼アイソレータ（軌道上での環境試験段階）"
     }
   },
   {
@@ -1172,7 +1287,8 @@
     "src": [
       "05_scaln_film",
       "05_tube",
-      "05_electronics"
+      "05_electronics",
+      "05_photonics"
     ],
     "srcEls": {
       "05_scaln_film": [
@@ -1187,13 +1303,42 @@
         "DyTb",
         "Sm",
         "Sc"
+      ],
+      "05_photonics": [
+        "Y",
+        "DyTb"
       ]
     },
     "srcNotes": {
       "05_scaln_film": "通信機の RF フィルタ",
       "05_tube": "衛星通信・無線の送信管",
-      "05_electronics": "通信機器の電子回路・部品（磁性部品を含む）"
+      "05_electronics": "通信機器の電子回路・部品（磁性部品を含む）",
+      "05_photonics": "光アイソレータ・光サーキュレータとして光伝送装置・海底ケーブル中継器に組み込む"
     }
+  },
+  {
+    "id": "06_optical_net",
+    "stage": 6,
+    "label": "光通信インフラ・光伝送",
+    "header": "06 光通信インフラ・光伝送",
+    "description": "光伝送装置・海底ケーブル・衛星光通信（民生）",
+    "els": [
+      "Y",
+      "DyTb"
+    ],
+    "src": [
+      "05_photonics"
+    ],
+    "srcEls": {
+      "05_photonics": [
+        "Y",
+        "DyTb"
+      ]
+    },
+    "srcNotes": {
+      "05_photonics": "光アイソレータ・光サーキュレータを光伝送装置と海底光中継器に組み込む"
+    },
+    "note": "民生の需要基盤として収録。無線機・情報システムを扱う「通信・情報」とは企業も上流も重ならない"
   },
   {
     "id": "06_rf_sensor",
