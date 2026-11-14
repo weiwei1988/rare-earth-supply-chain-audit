@@ -567,13 +567,14 @@
     },
     "dielectric-toda": {
       "name": "TODA KOGYO CORP.",
-      "src": "https://www.todakogyo.co.jp/product/dielectric.html ／ https://www.todakogyo.co.jp/product/detail/detail126.html ／ https://finance.yahoo.co.jp/quote/4100.T/financials ／ https://diamond.jp/zai/articles/-/281277",
+      "src": "https://www.todakogyo.co.jp/product/dielectric.html ／ https://www.todakogyo.co.jp/product/detail/detail126.html ／ https://finance.yahoo.co.jp/quote/4100.T/financials ／ https://diamond.jp/zai/articles/-/281277 ／ https://www.todakogyo.co.jp/product/magnet.html ／ https://www.todakogyo.co.jp/csr/img/otake_2023.pdf",
       "own": "Listed company / TODA KOGYO CORP. (Tokyo Stock Exchange, securities code 4100)",
       "rev": "Consolidated net sales: approximately JPY 28.0 billion (fiscal year ended March 2026). Company forecast for fiscal year ending March 2027: JPY 29.0 billion, up 3.4%.",
-      "prod": "Barium titanate for MLCCs (for dielectric layers and electrode-layer co-material, supplied as powders and dispersions), high-dielectric-constant/high-refractive-index fillers, piezoelectric-device materials, iron oxides, and other powder materials",
+      "prod": "Barium titanate for MLCCs (for dielectric layers and electrode-layer co-material, supplied as powders and dispersions), high-dielectric-constant/high-refractive-index fillers, piezoelectric-device materials, iron oxides, and other powder materials, and FEROTOP bonded-magnet compounds (isotropic and anisotropic NdFeB in PA12, PPS and EEA) together with anisotropic NdFeB powder",
       "pos": "Supplies wet-synthesized fine barium titanate with a narrow particle-size distribution in both powder and dispersion (slurry) forms.",
       "def": "Indirectly linked to defense and aerospace electronics through MLCCs; no direct defense deliveries verified.",
-      "chn": "Barium titanate itself contains no rare earths. MLCC dielectrics commonly add rare-earth oxides such as Dy, Ho and Y, and imports of the heavy rare earths Dy and Tb depend heavily on China. The company does not disclose which of its products contain rare earths, or where it sources them."
+      "chn": "Barium titanate itself contains no rare earths. MLCC dielectrics commonly add rare-earth oxides such as Dy, Ho and Y, and imports of the heavy rare earths Dy and Tb depend heavily on China. The company does not disclose which of its products contain rare earths, or where it sources them.",
+      "note": "The Otake works (Otake, Hiroshima) lists \"design, development and manufacture of rare-earth anisotropic powder and rare-earth bonded-magnet compounds\" among its activities. Only the anisotropic NdFeB powder is made in house; the isotropic grade is bought in"
     },
     "dielectric-nippon-chem": {
       "name": "Nippon Chemical Industrial Co., Ltd.",
@@ -789,14 +790,14 @@
     },
     "seed-2": {
       "name": "Santoku (a Proterial Magnetics subsidiary)",
-      "src": "JSX ／ DyTb DD ／ Sm DD ／ https://www.santoku-corp.co.jp/news/20260701_1.html ／ https://www.santoku-corp.co.jp/company/about.html",
+      "src": "JSX ／ DyTb DD ／ Sm DD ／ https://www.santoku-corp.co.jp/news/20260701_1.html ／ https://www.santoku-corp.co.jp/company/about.html ／ https://www.santoku-corp.co.jp/business/jisyaku.html",
       "own": "Privately held subsidiary of Proterial Magnetics (transferred on July 1, 2026)",
       "rev": "Approximately JPY 23.9 billion (fiscal year ended March 2018)",
-      "prod": "Nd magnet alloys, Sm magnet alloys, high-purity rare-earth metals, and magnet recycling",
+      "prod": "Nd magnet alloys, Sm magnet alloys, high-purity rare-earth metals, and magnet recycling, samarium magnet powders and bonded-magnet compounds",
       "pos": "An upstream chokepoint reportedly holding approximately 65% of Japan's Nd magnet-alloy market",
       "def": "Upstream of high-performance magnet manufacturers; a key node in domestic circularity and recycling",
       "chn": "High. Verify Dy/Tb/Sm feedstock, routes through Chinese joint ventures, and export licenses.",
-      "note": "The official corporate name is Santoku Corporation. In an intragroup reorganization on July 1, 2026, it moved from Proterial, Ltd. to become a subsidiary of Proterial Magnetics, Ltd. Included as a legal entity separate from Proterial itself."
+      "note": "The official corporate name is Santoku Corporation. In an intragroup reorganization on July 1, 2026, it moved from Proterial, Ltd. to become a subsidiary of Proterial Magnetics, Ltd. Included as a legal entity separate from Proterial itself. / The company states that it makes samarium magnet material for both sintered and bonded magnets, and that the bonded-magnet line runs from alloy to finished product in house"
     },
     "seed-3": {
       "name": "Shin-Etsu Chemical",
@@ -864,17 +865,6 @@
       "chn": "Low to medium for Sc, as an alternative supply route from the Philippines to Japan; high for Sm. Verify HPAL operating rates, concentration of refining sites, and Sm feedstock.",
       "note": "Combined the parent company's Sc business and the manufacturing subsidiary's Sm business in one row."
     },
-    "seed-9": {
-      "name": "Magnequench (Neo Performance Materials)",
-      "src": "JSX ／ DyTb DD",
-      "own": "Foreign-owned; part of Canada's Neo Performance Materials",
-      "rev": "Foreign company; included for reference",
-      "prod": "MQP/MQ3 magnetic powders for bonded NdFeB magnets and reduced-heavy-rare-earth magnetic powders",
-      "pos": "A global player in magnetic powders for bonded NdFeB magnets",
-      "def": "Compact high-performance motors, aerospace auxiliaries, and robotics",
-      "chn": "High. Verify sites in China, Thailand, and elsewhere, feedstock countries of origin, and licenses.",
-      "note": "Not a Japanese company, but an important supply source in Japanese-side BOMs."
-    },
     "seed-10": {
       "name": "Konoshima Chemical",
       "own": "Tokyo Stock Exchange Standard Market (4026)",
@@ -899,16 +889,16 @@
     },
     "seed-12": {
       "name": "Oxide Corporation",
-      "src": "https://www.opt-oxide.com/products-list/laser/ ／ https://www.opt-oxide.com/products-list/laser/qcw-laser/item_LA00008 ／ https://www.opt-oxide.com/v2019/wp-content/uploads/2013/03/266Laser_r12-1.pdf ／ https://www.opt-oxide.com/ir/meeting/meeting26_review/ ／ https://www.opt-oxide.com/products-list/laser/special ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00006",
+      "src": "https://www.opt-oxide.com/products-list/laser/ ／ https://www.opt-oxide.com/products-list/laser/qcw-laser/item_LA00008 ／ https://www.opt-oxide.com/v2019/wp-content/uploads/2013/03/266Laser_r12-1.pdf ／ https://www.opt-oxide.com/ir/meeting/meeting26_review/ ／ https://www.opt-oxide.com/products-list/laser/special ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00006 / https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00017",
       "own": "Securities code: 6521",
       "rev": "JPY 10.04 billion (consolidated, fiscal year ended February 2026)",
-      "prod": "266 nm and 193 nm all-solid-state deep-ultraviolet lasers; CW, QCW, and picosecond lasers; wavelength-conversion modules; and BBO and CLBO single crystals for wavelength conversion",
+      "prod": "266 nm and 193 nm all-solid-state deep-ultraviolet lasers; CW, QCW, and picosecond lasers; wavelength-conversion modules; and BBO and CLBO single crystals for wavelength conversion / TGG (Tb₃Ga₅O₁₂) crystals and LPE-grown Bi:RIG for optical isolators; Bi:RIG rare-earth composition is undisclosed",
       "pos": "More than 30% global share in deep-ultraviolet lasers and more than 95% in wavelength-conversion single crystals, according to company estimates.",
       "def": "Deep-ultraviolet lasers underpin advanced semiconductor inspection and micromachining. The company also handles specialty lasers for aircraft, drones, and satellites, but those products are manufactured by U.S.-based Areté. Defense deliveries of its own deep-ultraviolet lasers have not been verified. / This review of public information identified no direct contract.",
       "chn": "These DUV products primarily use nonlinear crystals such as BBO. Y exposure cannot be determined until the fundamental light-source BOM is verified.",
       "bom": "The 266 nm QCW product performs two-stage wavelength conversion on an infrared fiber-amplifier source. Fiber dopants and conversion crystals in current products are not disclosed. CW Frequad explicitly uses ultra-high-purity BBO. No YAG medium was verified. / Use of YAG in the relevant DUV oscillator has not been verified.",
       "gap": "Distinguish in-house products from imported products sold by the company, and verify defense and space customers, fundamental-source media, and export-control classification.",
-      "note": "Formally included in Stage 04 based on the solid-state laser oscillator DD category 'candidate for inclusion (oscillator).' / The 266 nm QCW product converts an infrared fiber-amplified source in two wavelength-conversion stages, and a fiber amplifier stage and multi-stage conversion are normally fitted with an isolator to block back-reflection. The company is itself a maker of Faraday rotators"
+      "note": "Formally included in Stage 04 based on the solid-state laser oscillator DD category 'candidate for inclusion (oscillator).' / The 266 nm QCW product converts an infrared fiber-amplified source in two wavelength-conversion stages, and a fiber amplifier stage and multi-stage conversion are normally fitted with an isolator to block back-reflection. The company is itself a maker of Faraday rotators / Flags indicate relevance to the optical application chain; product-specific Y/Dy/Tb content and component suppliers are undisclosed. They do not establish confirmed material content."
     },
     "seed-13": {
       "name": "TOCALO",
@@ -1036,33 +1026,33 @@
       "src": "JSX ／ DyTb DD ／ Sm DD",
       "own": "Privately held member of the Daido Steel Group",
       "rev": "Approximately JPY 11.3 billion (fiscal 2024)",
-      "prod": "Hot-deformed NdFeB magnets and NdFeB/SmFeN bonded magnets and magnetic powders",
+      "prod": "Hot-deformed NdFeB magnets (NEOQUENCH-D) and compression- and injection-moulded NdFeB and SmFeN bonded magnets",
       "pos": "A rare producer of heavy-rare-earth-free hot-deformed magnets and mass-produced SmFeN",
       "def": "Compact high-output motors, robots, and aerospace actuators",
       "chn": "Medium to high. Verify Nd/Pr/Sm, Magnequench-derived magnetic powders, and product-level BOMs.",
-      "note": "Combines a Dy/Tb-avoidance position with exposure to Sm controls."
+      "note": "Combines a Dy/Tb-avoidance position with exposure to Sm controls. / Daido Steel states that it makes and sells the powders and compounds itself, while this subsidiary handles the moulded parts"
     },
     "seed-25": {
       "name": "Aichi Steel",
-      "src": "JSX ／ DyTb DD",
+      "src": "JSX ／ DyTb DD ／ https://www.aichi-steel.co.jp/products/smart_company/magfine/lineup/ ／ https://www.aichi-steel.co.jp/news_item/20180227_News2.pdf",
       "own": "Tokyo Stock Exchange Prime Market (5482); Toyota Group",
       "rev": "Exceeds JPY 100 billion",
-      "prod": "MAGFINE anisotropic bonded NdFeB magnets free of Dy, Tb, and Co",
+      "prod": "MAGFINE anisotropic NdFeB bonded-magnet powders (MF15P and MF18P, d-HDDR process, free of Dy, Tb and Co), injection-moulding pellets, and compression-moulded magnets",
       "pos": "A supplier of alternatives that do not use heavy rare earths",
       "def": "Automotive equipment, robots, unmanned-aircraft auxiliaries, and compact motors",
       "chn": "Medium. Dependence on Dy and Tb is reduced, but dependence on Chinese Nd and Pr remains.",
-      "note": "A candidate alternative technology during supply disruptions."
+      "note": "A candidate alternative technology during supply disruptions. / The powder is made at the Seki plant in Gifu and the company states it can also ship in pellet form. No domestic compounding site could be confirmed in public sources; reports describe powder going to its consolidated Chinese subsidiary Zhejiang Aizhi for moulding there"
     },
     "seed-26": {
       "name": "Tamagawa Seiki",
-      "src": "JSX ／ DyTb DD ／ Sm DD",
+      "src": "JSX ／ DyTb DD ／ Sm DD / https://www.tamagawa-seiki.co.jp/products/gyro/",
       "own": "Privately held",
       "rev": "Approximately JPY 48.1 billion standalone / JPY 82.2 billion consolidated",
-      "prod": "Resolvers, gyroscopes, servos, reaction wheels, and aircraft electromechanical actuators (EMAs)",
+      "prod": "Resolvers, gyroscopes, servos, reaction wheels, and aircraft electromechanical actuators (EMAs) / FOG and satellite IRU; magneto-optic garnet content is unverified",
       "pos": "Approximately 70% of Japan's HEV resolver market and a core supplier to the aerospace and defense sectors",
       "def": "Satellite attitude control, aircraft electric actuators, and inertial instruments",
       "chn": "Medium. Verify NdFeB/SmCo materials, magnet manufacturers, countries of origin, and overseas sites.",
-      "note": "Skill transfer, not only magnets, is also an issue."
+      "note": "Skill transfer, not only magnets, is also an issue. / Flags indicate relevance to the optical application chain; product-specific Y/Dy/Tb content and component suppliers are undisclosed. They do not establish confirmed material content."
     },
     "seed-27": {
       "name": "Tokyo Keiki",
@@ -2364,12 +2354,12 @@
       "name": "NEC",
       "own": "Listed (6701)",
       "rev": "Consolidated 3,423.4 billion yen (FY ending March 2025). Optical transmission equipment is not disclosed separately",
-      "prod": "Submarine cable systems (repeaters, terminal equipment, gain equalisers, branching units), SpectralWave WX open optical transport equipment, and optical communication payloads for satellites",
+      "prod": "Submarine cable systems (repeaters, terminal equipment, gain equalisers, branching units), SpectralWave WX open optical transport equipment, and optical communication payloads for satellites / LUCAS satellite optical communication terminals",
       "pos": "The only domestic supplier of optical submarine cable systems, and one of three global leaders. Reported share ranges from 21% to roughly 30% depending on the source",
       "def": "Developed the satellite optical communication payload for JAXA's LUCAS inter-satellite link, which achieved 1.8 Gbps between satellites and transmission to a ground station in January 2025. Submarine cables also carry seafloor seismic observation",
       "chn": "Medium. The sourcing of optical components built into the equipment is the open question. China is reported to account for much of world shipments of data-centre optical transceivers",
-      "src": "https://jpn.nec.com/submarine/index.html / https://jpn.nec.com/press/202501/20250123_01.html / https://jpn.nec.com/press/202012/20201210_02.html / https://journal.meti.go.jp/p/40663/",
-      "note": "The cable itself is made by its subsidiary OCC in Wakamatsu, Kitakyushu. Submarine repeaters carry an optical isolator every 50 to 100 km, and NEC is named among Kohoku Kogyo's principal customers"
+      "src": "https://jpn.nec.com/submarine/index.html / https://jpn.nec.com/press/202501/20250123_01.html / https://jpn.nec.com/press/202012/20201210_02.html / https://journal.meti.go.jp/p/40663/ / https://www.nec.com/en/press/202501/global_20250123_01.html",
+      "note": "The cable itself is made by its subsidiary OCC in Wakamatsu, Kitakyushu. Submarine repeaters carry an optical isolator every 50 to 100 km, and NEC is named among Kohoku Kogyo's principal customers / Flags indicate relevance to the optical application chain; product-specific Y/Dy/Tb content and component suppliers are undisclosed. They do not establish confirmed material content."
     },
     "optnet-1finity": {
       "name": "1FINITY",
@@ -2394,15 +2384,15 @@
       "src": "https://orbray.com/product/optical/device/receptacles.html ／ https://orbray.com/product/optical/technology/fiber.html ／ https://orbray.com/corporate/profile.html"
     },
     "photonics-melco-hakouden": {
-      "name": "Mitsubishi Electric (High Frequency & Optical Device Works)",
+      "name": "Mitsubishi Electric (optical devices, transmission and space communications)",
       "own": "An in-house works of Mitsubishi Electric (TSE Prime, 6503)",
       "rev": "No separate figure for the works. EML shipments were JPY 18.4 billion in 2022",
-      "prod": "Electro-absorption modulated laser (EML) chips and TO-CAN modules, plus 200 Gbps pin-PD receiver chips",
+      "prod": "Electro-absorption modulated laser (EML) chips and TO-CAN modules, plus 200 Gbps pin-PD receiver chips / Separate Mitsubishi Electric businesses supply optical transmission systems and space optical communication laser modules",
       "pos": "Ranked first worldwide in optical devices (EMLs) for data centers, with a 42% global share on 2022 results.",
       "def": "No defense deliveries confirmed. Applications are data-center optical transceivers and FTTH",
       "chn": "Medium. EML chips are built on indium phosphide and use no rare earths, but Y and Tb enter through the optical isolator inside the module. EMLs are produced only in Japan",
-      "note": "The High Frequency & Optical Device Works in Itami (4-1 Mizuhara, Itami, Hyogo) handles the wafer process and Melco Advanced Device in Nagasaki handles TO-CAN module assembly, so EML production stays entirely in Japan. Data-center EML chips run at 1.5 million units a month for a 50% share, and TO-CAN EML modules for FTTH at 240,000 units a month for a 30% share. The work won the 70th Okochi Memorial Production Prize for fiscal 2023 for developing a semiconductor laser diode with an integrated electro-absorption modulator. Volume production of 200 Gbps (112 Gbaud PAM4) EML chips began in April 2024, and reports describe a plan to more than triple capacity by FY2028–2029",
-      "src": "https://okochi.or.jp/jusho/第70回大河内記念生産賞-5/ ／ https://eetimes.itmedia.co.jp/ee/articles/2408/21/news083_2.html ／ https://www.mitsubishielectric.co.jp/semiconductors/hf/locations/index.html"
+      "note": "The High Frequency & Optical Device Works in Itami (4-1 Mizuhara, Itami, Hyogo) handles the wafer process and Melco Advanced Device in Nagasaki handles TO-CAN module assembly, so EML production stays entirely in Japan. Data-center EML chips run at 1.5 million units a month for a 50% share, and TO-CAN EML modules for FTTH at 240,000 units a month for a 30% share. The work won the 70th Okochi Memorial Production Prize for fiscal 2023 for developing a semiconductor laser diode with an integrated electro-absorption modulator. Volume production of 200 Gbps (112 Gbaud PAM4) EML chips began in April 2024, and reports describe a plan to more than triple capacity by FY2028–2029 / Flags indicate relevance to the optical application chain; product-specific Y/Dy/Tb content and component suppliers are undisclosed. They do not establish confirmed material content.",
+      "src": "https://okochi.or.jp/jusho/第70回大河内記念生産賞-5/ ／ https://eetimes.itmedia.co.jp/ee/articles/2408/21/news083_2.html ／ https://www.mitsubishielectric.co.jp/semiconductors/hf/locations/index.html / https://www.mitsubishielectric.com/en/pr/2024/0919-a/"
     },
     "photonics-furukawa": {
       "name": "Furukawa Electric",
@@ -2414,6 +2404,138 @@
       "chn": "Medium. The laser chips are built on indium phosphide and use no rare earths, but Y and Tb enter through the optical isolator inside the laser module",
       "note": "An ITLA is a tunable laser module with its own control board, and the usual configuration places an optical isolator at the semiconductor laser's output to block back-reflection. The Nano ITLA measures 25 × 15.6 × 6.7 mm. Pump LD modules for Raman amplifiers cover 1330–1520 nm in 400, 500 and 600 mW versions. The company is investing about JPY 100 billion to double optical-fiber capacity across four countries including Japan and the United States (announced August 2026)",
       "src": "https://www.furukawaelectric.com/release/2021/comm_20210607.html ／ https://www.furukawaelectric.com/release/2019/comm_190920.html ／ https://www.furukawaelectric.com/company/outline/"
+    },
+    "optics-carlit": {
+      "name": "Carlit Co., Ltd.",
+      "own": "See source for corporate and business information",
+      "rev": "Revenue of the relevant business is unknown",
+      "prod": "Manufactures YIG (Y₃Fe₅O₁₂) single crystals using a proprietary floating-zone process, with integrated high-purity crystal production, custom elemental substitution and made-to-order specifications.",
+      "chn": "Y in YIG is confirmed; procurement origins and China exposure are undisclosed",
+      "src": "https://www.carlit.co.jp/silicon/technology.html",
+      "note": "Published product information identifies YIG as Y₃Fe₅O₁₂",
+      "def": "Upstream material for optical isolators and magnetic-resonance filters in communications equipment; the source does not identify adoption in specific defense equipment."
+    },
+    "optics-crystalsystem": {
+      "name": "Crystal Systems Corporation",
+      "own": "See source for corporate and business information",
+      "rev": "Revenue of the relevant business is unknown",
+      "prod": "Grows and sells YIG single crystals using its own halogen optical floating-zone equipment, listed as materials for 2050/4550 nm optical isolators.",
+      "chn": "Y in YIG is confirmed; procurement origins and China exposure are undisclosed",
+      "src": "https://www.crystalsys.co.jp/product/crystals/yig/",
+      "note": "Published product information identifies YIG as Y₃Fe₅O₁₂",
+      "def": "Supplies optical-isolator materials for the mid-infrared region and combines crystal-growth capabilities with growth-equipment manufacturing."
+    },
+    "optics-smmp": {
+      "name": "SMM Precision Co., Ltd.",
+      "own": "See source for corporate and business information",
+      "rev": "Revenue of the relevant business is unknown",
+      "prod": "Cylindrical, surface-mount and magnet-free optical isolators for communications, inline isolators for fiber lasers, and SGGG substrates.",
+      "chn": "Flags indicate relevance to the optical application chain; product-specific Y/Dy/Tb content and component suppliers are undisclosed. They do not establish confirmed material content.",
+      "src": "https://www.smm.co.jp/business/material/products/optical_isolator/ / https://www.smmp.co.jp/smmprecision/all/WZE_1_1_AOID%2CID/CLcorporate.htm",
+      "note": "Optical-isolator manufacturing began in 1996; the FR business transferred to Granopt in 2005 and SGGG substrate sales began in 2020. Gd-based SGGG must be distinguished from Y/Dy/Tb content.",
+      "def": "Components support optical-network branching/amplification sections and fiber lasers; specific defense customers are not disclosed in the reviewed sources."
+    },
+    "optics-santec-aoc": {
+      "name": "Santec AOC Corporation",
+      "own": "See source for corporate and business information",
+      "rev": "Revenue of the relevant business is unknown",
+      "prod": "INTP integrates an optical isolator and tap photodetector in a 1.2 × 1.2 × 12 mm package, supporting C/L bands and high-density QSFP-DD/OSFP optical modules.",
+      "chn": "Flags indicate relevance to the optical application chain; product-specific Y/Dy/Tb content and component suppliers are undisclosed. They do not establish confirmed material content.",
+      "src": "https://aoc.santec.com/en/assets/doc/INTP-C-E.pdf",
+      "note": "Flags indicate relevance to the optical application chain; product-specific Y/Dy/Tb content and component suppliers are undisclosed. They do not establish confirmed material content.",
+      "def": "Component combines optical-power monitoring with reverse-light isolation in optical communications modules; the reviewed datasheet identifies no defense or space project."
+    },
+    "optics-tatsuta": {
+      "name": "TATSUTA Electric Wire & Cable Co., Ltd.",
+      "own": "See source for corporate and business information",
+      "rev": "Revenue of the relevant business is unknown",
+      "prod": "Broadband polarization-independent optical isolators with low wavelength dependence; application-specific prototypes can be discussed from one unit with selectable wavelength, port length and connectors.",
+      "chn": "Flags indicate relevance to the optical application chain; product-specific Y/Dy/Tb content and component suppliers are undisclosed. They do not establish confirmed material content.",
+      "src": "https://www.tatsuta.co.jp/product/sensor_medical/optical/isorator/",
+      "note": "Flags indicate relevance to the optical application chain; product-specific Y/Dy/Tb content and component suppliers are undisclosed. They do not establish confirmed material content.",
+      "def": "Fiber-optic components protect sources from return-light damage and reflection-related problems; reviewed sources do not identify adoption in specific defense or space equipment."
+    },
+    "optics-space-compass": {
+      "name": "Space Compass Corporation",
+      "own": "See source for corporate and business information",
+      "rev": "Revenue of the relevant business is unknown",
+      "prod": "GEO optical communications demonstration and space optical relay network integration",
+      "chn": "Flags indicate relevance to the optical application chain; product-specific Y/Dy/Tb content and component suppliers are undisclosed. They do not establish confirmed material content.",
+      "src": "https://www.mod.go.jp/j/press/news/2025/03/31c.html",
+      "note": "A Ministry of Defense demonstration contract is confirmed; this does not establish completed demonstration or operational procurement, and is distinct from ATLA procurement.",
+      "def": "Contracted by Japan’s Ministry of Defense on March 31, 2025 for a GEO optical communications demonstration, linking a maneuvering satellite near GEO with an optical relay satellite to transmit large SDA datasets."
+    },
+    "optics-warpspace": {
+      "name": "WARPSPACE Inc.",
+      "own": "See source for corporate and business information",
+      "rev": "Revenue of the relevant business is unknown",
+      "prod": "Space optical terminals, intersatellite optical networks and terminal interoperability",
+      "chn": "Flags indicate relevance to the optical application chain; product-specific Y/Dy/Tb content and component suppliers are undisclosed. They do not establish confirmed material content.",
+      "src": "https://warpspace.jp/posts/wAFzFjRv",
+      "note": "Fund selection supports technology development; it is distinct from satellite launch, commercial service operation or defense delivery.",
+      "def": "Announced selection on January 27, 2026 for Japan’s Space Strategy Fund program on interoperability technologies to expand satellite optical communications, developing connectivity between different optical terminals."
+    },
+    "optics-sony-space": {
+      "name": "Sony Space Communications Corporation (US, Sony group)",
+      "own": "US company that began business in June 2022 as a wholly owned subsidiary of Sony Corporation of America.",
+      "rev": "Revenue of the relevant business is unknown",
+      "prod": "Development of laser communication equipment and services for small satellites and ground links",
+      "chn": "Flags indicate relevance to the optical application chain; product-specific Y/Dy/Tb content and component suppliers are undisclosed. They do not establish confirmed material content.",
+      "src": "https://www.sony.com/en/SonyInfo/News/Press/202206/22-023E/",
+      "note": "SOLISS results predate SSC’s establishment and are group research achievements, not SSC delivery records.",
+      "def": "The technical predecessor is Sony CSL/JAXA’s SOLISS: bidirectional laser links and HD-image transfer from ISS Kibo to an NICT ground station in 2020, followed by an optical downlink to a commercial Greek ground station in 2021."
+    },
+    "optics-ooi": {
+      "name": "Oi Electric Co., Ltd.",
+      "own": "See source for corporate and business information",
+      "rev": "Revenue of the relevant business is unknown",
+      "prod": "ODN-181: single-fiber bidirectional 16-wavelength C-band WDM supporting STM-1/4/16/64 and GbE/10G/100G LAN. ODN-623: up to four-channel CWDM. The transmission range covers approximately 10–100 km across the product family.",
+      "chn": "Flags indicate relevance to the optical application chain; product-specific Y/Dy/Tb content and component suppliers are undisclosed. They do not establish confirmed material content.",
+      "src": "https://www.ooi.co.jp/product/transmission/optical",
+      "note": "Flags indicate relevance to the optical application chain; product-specific Y/Dy/Tb content and component suppliers are undisclosed. They do not establish confirmed material content.",
+      "def": "Optical transport equipment supports high-capacity communications infrastructure; the reviewed product page does not identify specific defense or space projects."
+    },
+    "optics-apresia": {
+      "name": "APRESIA Systems, Ltd.",
+      "own": "See source for corporate and business information",
+      "rev": "Revenue of the relevant business is unknown",
+      "prod": "In-house APRESIA Transport and ApresiaLightMC products plus OPX-4140DW 40-wavelength DWDM units, serving carriers, data centers and CATV networks; also supplies Infinera products.",
+      "chn": "Flags indicate relevance to the optical application chain; product-specific Y/Dy/Tb content and component suppliers are undisclosed. They do not establish confirmed material content.",
+      "src": "https://www.apresia.jp/products/transmission/",
+      "note": "Distinguish in-house products from third-party resale and integration. The page also lists discontinued models; consult current model status."
+    },
+    "powder-mate": {
+      "name": "MATE",
+      "own": "Unlisted. Capital JPY 95 million, 120 employees",
+      "rev": "Undisclosed",
+      "prod": "Plastic magnet materials for injection moulding: isotropic and anisotropic neodymium grades, samarium-cobalt (SmCo) grades, samarium-iron (SmFeN) grades and hybrid grades (NdFeB with ferrite), in PA12, PPS, PA6 and EEA",
+      "pos": "An independent specialist, and the only domestic supplier offering bonded-magnet compounds across all four rare-earth systems. No share figure confirmed.",
+      "def": "No defense deliveries confirmed. Applications are small motors and sensors",
+      "chn": "High. The powders are bought in from undisclosed suppliers, and NdFeB, SmCo and SmFeN all contain elements under China's export controls on medium and heavy rare earths",
+      "note": "All plants are in Wake, Okayama (head office plant, Yonezawa, Yatabe and Fukutomi). In-house work runs from selecting the magnetic material through fine milling and surface treatment to compounding with resin. Its history records the start of construction of a rare-earth plastic-magnet compound line in March 1990",
+      "src": "https://www.mate.co.jp/product/hard-magnetic-compound/ ／ https://www.mate.co.jp/aboutus/history/"
+    },
+    "powder-nichia": {
+      "name": "Nichia",
+      "own": "Unlisted. Headquartered in Anan, Tokushima",
+      "rev": "No separate figure for magnetic materials",
+      "prod": "Injection-moulding compounds of SmFeN anisotropic bonded-magnet material: the A series (PA12, standard) and R series (PP, water-resistant). A development grade reaches Br 0.85 T",
+      "pos": "Publishes a best-in-class bonded-magnet field strength for SmFeN, which uses neither Nd nor heavy rare earths. No share figure confirmed.",
+      "def": "No defense deliveries confirmed. Applications are motors and sensors",
+      "chn": "Medium. Sm falls under China's export controls on medium and heavy rare earths. The powder is made in house but feedstock sourcing is undisclosed",
+      "note": "The company describes a proprietary colloid-chemistry route that yields spherical powder about 3 μm across with a narrow size distribution, each grain given a heat-resistant coating so the finished magnet needs no anti-corrosion coating. No sale of the powder on its own could be confirmed; it is supplied as compound",
+      "src": "https://www.nichia.co.jp/jp/product/magnet.html ／ https://www.nichia.co.jp/jp/about_nichia/system.html"
+    },
+    "powder-daido-steel": {
+      "name": "Daido Steel",
+      "own": "Tokyo Stock Exchange Prime Market (5471). Bonded-magnet mouldings are made by its wholly owned subsidiary Daido Electronics",
+      "rev": "No separate figure for magnet materials",
+      "prod": "Isotropic SmFeN powders (SFN2M and SFN3H) and injection-moulding compounds (PPS grades such as SC-6LR, with PA grades such as SC-8L added in May 2026)",
+      "pos": "A domestic producer of isotropic SmFeN by rapid quenching and nitriding. No share figure confirmed.",
+      "def": "No defense deliveries confirmed. Applications are motors in vehicles and industrial equipment",
+      "chn": "Medium. Sm falls under China's export controls on medium and heavy rare earths. Feedstock sourcing is undisclosed",
+      "note": "Powder is produced at the Technical Research & Development Center (Minami-ku, Nagoya) and compounding at the Tsukiji Techno Center (Minato-ku, Nagoya), where a large mixer was installed in December 2025. The company states that Daido Electronics makes and sells the bonded-magnet mouldings. It targets a market of about 200 tonnes a year for SmFeN magnet material by 2030",
+      "src": "https://www.daido.co.jp/products/isotropic_SmFeN/ ／ https://www.daido.co.jp/about/release/2026/260511_smfen.html"
     }
   },
   "routes": {
@@ -2676,13 +2798,12 @@
     },
     "03_magneto_garnet": {
       "srcNotes": {
-        "02_compound": "Add bismuth and iron to Y, Tb, Gd and Ho oxides and grow magneto-optic film on a garnet substrate by liquid phase epitaxy"
+        "02_compound": "Grow YIG/TGG crystals from high-purity Y/Tb oxides, or grow magneto-optic films on garnet substrates by LPE."
       }
     },
     "04_faraday": {
       "srcNotes": {
-        "03_tb_mo": "Machine TGG ceramics and Tb magneto-optical glass into rotators and pair them with permanent magnets for high-power laser elements",
-        "03_magneto_garnet": "Cut magneto-optical film to element size and combine it with polarizers and magnets to make rotators for optical communications"
+        "03_magneto_garnet": "Process YIG/TGG crystals or magneto-optic films into rotators and combine with polarizers and magnets for laser and communications optical isolators."
       }
     },
     "05_photonics": {
@@ -2693,11 +2814,6 @@
     "06_optical_net": {
       "srcNotes": {
         "05_photonics": "Build optical isolators and circulators into optical transmission equipment and submarine repeaters"
-      }
-    },
-    "03_tb_mo": {
-      "srcNotes": {
-        "02_compound": "Use high-purity Tb₄O₇ as feedstock for sintering and melting"
       }
     }
   },

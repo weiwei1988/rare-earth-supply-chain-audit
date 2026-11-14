@@ -27,12 +27,12 @@
       "name": "三徳（プロテリアルマグネティクス傘下）",
       "own": "プロテリアルマグネティクス子会社・非上場（2026年7月1日移行）",
       "rev": "約239億円（2018年3月期）",
-      "prod": "Nd磁石合金、Sm磁石合金、高純度希土類金属、磁石リサイクル",
+      "prod": "Nd磁石合金、Sm磁石合金、高純度希土類金属、磁石リサイクル、サマリウム磁石の磁粉とボンド磁石用コンパウンド",
       "pos": "国内Nd磁石合金市場シェア約65%とされる上流チョークポイント",
       "def": "高性能磁石メーカーの上流。国内循環・リサイクルの要",
       "chn": "高。Dy/Tb/Sm原料と中国JV経路、輸出許可を確認",
-      "src": "JSX ／ DyTb DD ／ Sm DD ／ https://www.santoku-corp.co.jp/news/20260701_1.html ／ https://www.santoku-corp.co.jp/company/about.html",
-      "note": "正式商号は株式会社三徳。2026年7月1日のグループ内再編で株式会社プロテリアルから株式会社プロテリアルマグネティクスの子会社へ移行。プロテリアル本体とは別法人として収録"
+      "src": "JSX ／ DyTb DD ／ Sm DD ／ https://www.santoku-corp.co.jp/news/20260701_1.html ／ https://www.santoku-corp.co.jp/company/about.html ／ https://www.santoku-corp.co.jp/business/jisyaku.html",
+      "note": "正式商号は株式会社三徳。2026年7月1日のグループ内再編で株式会社プロテリアルから株式会社プロテリアルマグネティクスの子会社へ移行。プロテリアル本体とは別法人として収録 ／ サマリウム磁石は焼結用とボンド磁石用の両方を製造し、ボンド磁石用は合金から製品まで一貫生産すると自社が明記"
     },
     "seed-3": {
       "name": "信越化学工業",
@@ -100,17 +100,6 @@
       "src": "JSX ／ Sm DD ／ Sc DD ／ https://www.smm.co.jp/business/refining/products/scandium/",
       "note": "親会社のSc事業と実製造子会社のSm事業を1行に統合"
     },
-    "seed-9": {
-      "name": "Magnequench（Neo Performance Materials）",
-      "own": "外資・カナダNeo Performance Materials傘下",
-      "rev": "外資・参考",
-      "prod": "ボンドNdFeB用磁粉MQP/MQ3、重希土類低減磁粉",
-      "pos": "ボンドNdFeB磁粉の世界的プレイヤー",
-      "def": "小型高性能モータ、航空宇宙補機、ロボティクス",
-      "chn": "高。中国・タイ等の拠点、原料原産国、ライセンスを確認",
-      "src": "JSX ／ DyTb DD",
-      "note": "日本企業ではないが日本側BOM上の重要供給源"
-    },
     "seed-10": {
       "name": "神島化学工業",
       "own": "東証スタンダード(4026)",
@@ -137,14 +126,14 @@
       "name": "オキサイド",
       "own": "証券コード：6521",
       "rev": "100.4億円（2026年2月期・連結）",
-      "prod": "266nm・193nm全固体深紫外レーザー、CW／QCW／ピコ秒レーザー、波長変換モジュール、波長変換用単結晶（BBO・CLBO）",
+      "prod": "266nm・193nm全固体深紫外レーザー、CW／QCW／ピコ秒レーザー、波長変換モジュール、波長変換用単結晶（BBO・CLBO） / TGG単結晶（Tb₃Ga₅O₁₂）とLPE育成Bi:RIG。TGGは光アイソレータ用、Bi:RIGの希土類内訳は非開示",
       "pos": "深紫外レーザー世界シェア30%以上、波長変換単結晶95%以上（会社推計）。",
       "def": "深紫外レーザーは先端半導体検査・微細加工の基盤。航空機・ドローン・衛星向け特殊レーザーも扱うが、同製品は米Areté製。自社深紫外レーザーの防衛納入は未確認。 ／ 今回の公開情報確認では直接契約を特定できず。",
       "chn": "当該DUV製品はBBO等の非線形結晶が主要。Y曝露は基本波源BOMを確認するまで確定不可。",
       "bom": "266nm QCWは赤外ファイバー増幅光源を2段波長変換。現行製品のファイバー添加材・変換結晶は非開示。CW Frequadは超高純度BBOを明記。YAG媒質は確認できない。 ／ 当該DUV発振器のYAG使用は未確認",
       "gap": "自社製と輸入販売を区別し、防衛・宇宙顧客、基本波源の媒質、輸出管理該非を確認。",
-      "src": "https://www.opt-oxide.com/products-list/laser/ ／ https://www.opt-oxide.com/products-list/laser/qcw-laser/item_LA00008 ／ https://www.opt-oxide.com/v2019/wp-content/uploads/2013/03/266Laser_r12-1.pdf ／ https://www.opt-oxide.com/ir/meeting/meeting26_review/ ／ https://www.opt-oxide.com/products-list/laser/special ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00006",
-      "note": "固体レーザー発振器DDの「採用候補（発振器）」に基づきStage 04へ正式採用。 ／ 266nm QCW は赤外ファイバー増幅光源を2段波長変換する構成で、ファイバ増幅段と多段変換には戻り光を遮るアイソレータを置くのが一般的。同社自身がファラデー回転子のメーカーでもある"
+      "src": "https://www.opt-oxide.com/products-list/laser/ ／ https://www.opt-oxide.com/products-list/laser/qcw-laser/item_LA00008 ／ https://www.opt-oxide.com/v2019/wp-content/uploads/2013/03/266Laser_r12-1.pdf ／ https://www.opt-oxide.com/ir/meeting/meeting26_review/ ／ https://www.opt-oxide.com/products-list/laser/special ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00006 / https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00017",
+      "note": "固体レーザー発振器DDの「採用候補（発振器）」に基づきStage 04へ正式採用。 ／ 266nm QCW は赤外ファイバー増幅光源を2段波長変換する構成で、ファイバ増幅段と多段変換には戻り光を遮るアイソレータを置くのが一般的。同社自身がファラデー回転子のメーカーでもある / 光学経路上の製品・用途に基づく関連フラグ。個別製品のY・Dy・Tb含有、部材供給元は非開示であり、搭載確認を意味しない。"
     },
     "seed-13": {
       "name": "トーカロ",
@@ -271,34 +260,34 @@
       "name": "ダイドー電子（大同特殊鋼グループ）",
       "own": "大同特殊鋼グループ・非上場",
       "rev": "約113億円（2024年度）",
-      "prod": "熱間加工NdFeB、NdFeB/SmFeNボンド磁石・磁粉",
+      "prod": "熱間加工 NdFeB 磁石（NEOQUENCH-D）、NdFeB・SmFeN ボンド磁石の圧縮成形品・射出成形品",
       "pos": "重希土類フリー熱間加工磁石、SmFeN量産の希少プレイヤー",
       "def": "小型高出力モータ、ロボット、航空宇宙アクチュエータ",
       "chn": "中～高。Nd/Pr/Sm、Magnequench系磁粉、製品別BOMを確認",
       "src": "JSX ／ DyTb DD ／ Sm DD",
-      "note": "Dy/Tb回避側とSm規制曝露側を併有"
+      "note": "Dy/Tb回避側とSm規制曝露側を併有 ／ 磁粉とコンパウンドの製造販売は親会社の大同特殊鋼が担い、同社は成形体を担当すると大同特殊鋼が明記"
     },
     "seed-25": {
       "name": "愛知製鋼",
       "own": "東証プライム(5482)・トヨタグループ",
       "rev": "1,000億円超",
-      "prod": "Dy/Tb/Coフリー異方性NdFeBボンド磁石MAGFINE",
+      "prod": "異方性 NdFeB ボンド磁石用磁粉 MAGFINE（MF15P・MF18P、d-HDDR 法、Dy・Tb・Co フリー）と射出成形用ペレット、圧縮成形磁石",
       "pos": "重希土類フリーの代替側プレイヤー",
       "def": "車載、ロボット、無人機補機、小型モータ",
       "chn": "中。Dy/Tb依存は低減するがNd/Pr中国依存は残存",
-      "src": "JSX ／ DyTb DD",
-      "note": "供給途絶時の代替技術候補"
+      "src": "JSX ／ DyTb DD ／ https://www.aichi-steel.co.jp/products/smart_company/magfine/lineup/ ／ https://www.aichi-steel.co.jp/news_item/20180227_News2.pdf",
+      "note": "供給途絶時の代替技術候補 ／ 磁粉は関工場（岐阜県関市）で製造し、ペレットでも納入すると自社が明記。コンパウンド混練の国内拠点は公開情報で確認できず、中国の連結子会社・浙江愛智機電へ磁粉を供給して現地で成形する流れが報じられている"
     },
     "seed-26": {
       "name": "多摩川精機",
       "own": "非上場",
       "rev": "単体約481億円／連結約822億円",
-      "prod": "レゾルバ、ジャイロ、サーボ、リアクションホイール、航空機EMA",
+      "prod": "レゾルバ、ジャイロ、サーボ、リアクションホイール、航空機EMA / FOG・衛星用IRU。磁気光学ガーネット搭載は未確認",
       "pos": "HEVレゾルバ国内約7割、航空宇宙・防衛の中核",
       "def": "衛星姿勢制御、航空機電動アクチュエータ、慣性機器",
       "chn": "中。NdFeB/SmCo材質、磁石メーカー、原産国、海外拠点を確認",
-      "src": "JSX ／ DyTb DD ／ Sm DD",
-      "note": "磁石だけでなく技能継承も論点"
+      "src": "JSX ／ DyTb DD ／ Sm DD / https://www.tamagawa-seiki.co.jp/products/gyro/",
+      "note": "磁石だけでなく技能継承も論点 / 光学経路上の製品・用途に基づく関連フラグ。個別製品のY・Dy・Tb含有、部材供給元は非開示であり、搭載確認を意味しない。"
     },
     "seed-27": {
       "name": "東京計器",
@@ -2120,11 +2109,12 @@
       "name": "戸田工業",
       "own": "上場企業 ／ 戸田工業株式会社（東証、証券コード4100）",
       "rev": "連結売上高 約280億円（2026年3月期。2027年3月期の会社予想は290億円、前期比3.4%増）",
-      "prod": "MLCC 用チタン酸バリウム（誘電体層用・電極層向け共材用、粉体・分散体）、高誘電率・高屈折率フィラー、圧電デバイス用材料、酸化鉄など粉体材料",
+      "prod": "MLCC 用チタン酸バリウム（誘電体層用・電極層向け共材用、粉体・分散体）、高誘電率・高屈折率フィラー、圧電デバイス用材料、酸化鉄など粉体材料、ボンド磁石用コンパウンド FEROTOP（NdFeB 等方性・異方性、PA12・PPS・EEA）と異方性 NdFeB 磁粉",
       "pos": "湿式合成法による微粒子・粒度分布の狭いチタン酸バリウムを、粉体と分散体（スラリー）の両形態で供給。",
       "def": "MLCC を通じて、防衛・航空宇宙の電子機器全般に間接的につながる（防衛向けの直接納入は未確認）。",
       "chn": "チタン酸バリウム自体は希土類を含まない。MLCC の誘電体では Dy・Ho・Y などの希土類酸化物を添加するのが一般的で、重希土類（Dy・Tb）の輸入は中国依存が高い。同社の希土類添加品と原料の調達国は非開示。",
-      "src": "https://www.todakogyo.co.jp/product/dielectric.html ／ https://www.todakogyo.co.jp/product/detail/detail126.html ／ https://finance.yahoo.co.jp/quote/4100.T/financials ／ https://diamond.jp/zai/articles/-/281277"
+      "src": "https://www.todakogyo.co.jp/product/dielectric.html ／ https://www.todakogyo.co.jp/product/detail/detail126.html ／ https://finance.yahoo.co.jp/quote/4100.T/financials ／ https://diamond.jp/zai/articles/-/281277 ／ https://www.todakogyo.co.jp/product/magnet.html ／ https://www.todakogyo.co.jp/csr/img/otake_2023.pdf",
+      "note": "大竹事業所（広島県大竹市）の事業概要に「希土類異方性粉末及び希土類ボンド磁石用コンパウンドの設計・開発及び製造」と明記。自社で作るのは異方性 NdFeB 磁粉のみで、等方性は外部調達"
     },
     "dielectric-nippon-chem": {
       "name": "日本化学工業",
@@ -2364,12 +2354,12 @@
       "name": "日本電気（NEC）",
       "own": "東証上場（6701）",
       "rev": "連結3兆4,234億円（2025年3月期）。光伝送装置単独は非開示",
-      "prod": "光海底ケーブルシステム（海底光中継器、端局装置、利得等化装置、海底分岐装置）、オープン光トランスポート装置 SpectralWave WX シリーズ、衛星用光通信装置",
+      "prod": "光海底ケーブルシステム（海底光中継器、端局装置、利得等化装置、海底分岐装置）、オープン光トランスポート装置 SpectralWave WX シリーズ、衛星用光通信装置 / LUCAS衛星用光通信ターミナル",
       "pos": "光海底ケーブルで国内唯一の供給者。世界3強の一角とされ、シェアは出典により21%から約3割まで幅がある",
       "def": "JAXA の光衛星間通信システム LUCAS 向けに衛星用光通信装置を開発し、2025年1月に衛星間 1.8Gbps の光通信と地上局への伝送に成功。海底ケーブルは海底地震観測にも接続",
       "chn": "中。装置に組み込む光部品の調達構造が論点。データセンター向け光トランシーバは中国勢が世界出荷量の多くを占めるとされる",
-      "src": "https://jpn.nec.com/submarine/index.html ／ https://jpn.nec.com/press/202501/20250123_01.html ／ https://jpn.nec.com/press/202012/20201210_02.html ／ https://journal.meti.go.jp/p/40663/",
-      "note": "海底ケーブル本体は子会社オーシーシー（北九州市若松区）が製造。海底光中継器には50〜100km ごとに光アイソレータが入り、湖北工業の主要顧客として名が挙がる"
+      "src": "https://jpn.nec.com/submarine/index.html ／ https://jpn.nec.com/press/202501/20250123_01.html ／ https://jpn.nec.com/press/202012/20201210_02.html ／ https://journal.meti.go.jp/p/40663/ / https://www.nec.com/en/press/202501/global_20250123_01.html",
+      "note": "海底ケーブル本体は子会社オーシーシー（北九州市若松区）が製造。海底光中継器には50〜100km ごとに光アイソレータが入り、湖北工業の主要顧客として名が挙がる / 光学経路上の製品・用途に基づく関連フラグ。個別製品のY・Dy・Tb含有、部材供給元は非開示であり、搭載確認を意味しない。"
     },
     "optnet-1finity": {
       "name": "1FINITY",
@@ -2394,15 +2384,15 @@
       "note": "アイソレータ付きレセプタクルは基本がカスタム対応で、ファイバ種（SM・MM・PMF・特殊）、全長、外径、研磨角度を選べ、ラミネート型アイソレータの搭載と AR コートにも対応すると自社で記載。光アイソレータの実装には、メタライズや YAG 溶接によるロウ付けタイプと接着タイプがあり、円筒型・表面実装型・レセプタクル型の形状に対応。本社を秋田へ移すと告知"
     },
     "photonics-melco-hakouden": {
-      "name": "三菱電機（高周波光デバイス製作所）",
+      "name": "三菱電機（光デバイス・光伝送・宇宙光通信）",
       "own": "東証プライム（6503）三菱電機の社内製作所",
       "rev": "製作所単独は非開示。EML は2022年実績で出荷額184億円",
-      "prod": "電界吸収型変調器集積レーザ（EML）のチップと TO-CAN 型モジュール、200Gbps 受信用 pin-PD チップ",
+      "prod": "電界吸収型変調器集積レーザ（EML）のチップと TO-CAN 型モジュール、200Gbps 受信用 pin-PD チップ / 三菱電機の別事業として光伝送装置・宇宙光通信レーザー光源モジュール",
       "pos": "データセンター向け光デバイス（EML）で世界シェア1位。2022年実績の世界シェアは42%。",
       "def": "防衛向けの納入は確認できない。用途はデータセンター向け光トランシーバと FTTH",
       "chn": "中。EML チップはインジウムリン基板で希土類を使わないが、モジュールに内蔵する光アイソレータ経由で Y・Tb に触れる。EML の生産は国内のみ",
-      "src": "https://okochi.or.jp/jusho/第70回大河内記念生産賞-5/ ／ https://eetimes.itmedia.co.jp/ee/articles/2408/21/news083_2.html ／ https://www.mitsubishielectric.co.jp/semiconductors/hf/locations/index.html",
-      "note": "伊丹の高周波光デバイス製作所（兵庫県伊丹市瑞原四丁目1番地）がウエハプロセス、長崎のメルコアドバンストデバイス（株）が TO-CAN 型のモジュール化を担当し、EML の生産は国内のみ。データセンター向け EML チップは月産150万個でシェア50%、FTTH 向け TO-CAN 型 EML モジュールは月産24万個でシェア30%。2023年度の第70回大河内記念生産賞を「電界吸収型光変調器を集積した半導体レーザーダイオードの開発」で受賞。2024年4月に200Gbps（112Gbaud PAM4）EML チップの量産を開始し、生産能力を2028〜2029年度に3倍超へ引き上げる計画が報じられている"
+      "src": "https://okochi.or.jp/jusho/第70回大河内記念生産賞-5/ ／ https://eetimes.itmedia.co.jp/ee/articles/2408/21/news083_2.html ／ https://www.mitsubishielectric.co.jp/semiconductors/hf/locations/index.html / https://www.mitsubishielectric.com/en/pr/2024/0919-a/",
+      "note": "伊丹の高周波光デバイス製作所（兵庫県伊丹市瑞原四丁目1番地）がウエハプロセス、長崎のメルコアドバンストデバイス（株）が TO-CAN 型のモジュール化を担当し、EML の生産は国内のみ。データセンター向け EML チップは月産150万個でシェア50%、FTTH 向け TO-CAN 型 EML モジュールは月産24万個でシェア30%。2023年度の第70回大河内記念生産賞を「電界吸収型光変調器を集積した半導体レーザーダイオードの開発」で受賞。2024年4月に200Gbps（112Gbaud PAM4）EML チップの量産を開始し、生産能力を2028〜2029年度に3倍超へ引き上げる計画が報じられている / 光学経路上の製品・用途に基づく関連フラグ。個別製品のY・Dy・Tb含有、部材供給元は非開示であり、搭載確認を意味しない。"
     },
     "photonics-furukawa": {
       "name": "古河電気工業",
@@ -2414,6 +2404,138 @@
       "chn": "中。レーザチップはインジウムリン基板で希土類を使わないが、レーザモジュールに内蔵する光アイソレータ経由で Y・Tb に触れる",
       "src": "https://www.furukawaelectric.com/release/2021/comm_20210607.html ／ https://www.furukawaelectric.com/release/2019/comm_190920.html ／ https://www.furukawaelectric.com/company/outline/",
       "note": "ITLA は制御回路基板付きの波長可変レーザモジュールで、半導体レーザーの出力側に光アイソレータを置いて戻り光を遮るのが一般的な構成。Nano ITLA は25×15.6×6.7mm。ラマン増幅器用ポンプ LD モジュールは400／500／600mW 品で1330〜1520nm に対応。光ファイバの増産に約1000億円を投じ、日米など4カ国で生産能力を2倍にする計画（2026年8月発表）"
+    },
+    "optics-carlit": {
+      "name": "カーリット",
+      "own": "法人・事業情報は参照元を参照",
+      "rev": "対象事業の売上規模は不明",
+      "prod": "YIG（Y₃Fe₅O₁₂）単結晶をFZ法による独自プロセスで製造。高純度単結晶の一貫生産、特殊元素置換・オーダーメイド仕様に対応。",
+      "chn": "YIGのY使用を確認。原料調達国・中国依存比率は非開示",
+      "src": "https://www.carlit.co.jp/silicon/technology.html",
+      "note": "YIG組成Y₃Fe₅O₁₂を公開製品情報で確認",
+      "def": "光アイソレータ・磁気共鳴フィルタなど通信機器部品の上流材料。個別の防衛装備への採用は出典に記載されていない。"
+    },
+    "optics-crystalsystem": {
+      "name": "クリスタルシステム",
+      "own": "法人・事業情報は参照元を参照",
+      "rev": "対象事業の売上規模は不明",
+      "prod": "自社製ハロゲン型光学式浮遊帯域溶融装置でYIG単結晶を育成・販売。2050／4550nm光アイソレータ用材料として掲載。",
+      "chn": "YIGのY使用を確認。原料調達国・中国依存比率は非開示",
+      "src": "https://www.crystalsys.co.jp/product/crystals/yig/",
+      "note": "YIG組成Y₃Fe₅O₁₂を公開製品情報で確認",
+      "def": "中赤外域の光アイソレータ材料供給を担う。装置製造技術と結晶育成の双方を保有する。"
+    },
+    "optics-smmp": {
+      "name": "SMMプレシジョン",
+      "own": "法人・事業情報は参照元を参照",
+      "rev": "対象事業の売上規模は不明",
+      "prod": "光通信用の円筒・表面実装・磁石フリー型光アイソレータ、ファイバーレーザー用インライン型、SGGG基板。",
+      "chn": "光学経路上の製品・用途に基づく関連フラグ。個別製品のY・Dy・Tb含有、部材供給元は非開示であり、搭載確認を意味しない。",
+      "src": "https://www.smm.co.jp/business/material/products/optical_isolator/ / https://www.smmp.co.jp/smmprecision/all/WZE_1_1_AOID%2CID/CLcorporate.htm",
+      "note": "1996年に光アイソレータ製造開始。2005年にFR事業をグラノプトへ移管、2020年にSGGG基板販売開始。SGGGはGd系でありY・Dy・Tb使用とは区別する。",
+      "def": "光伝送網の分岐・増幅部やファイバーレーザーを支える部材供給。個別の防衛向け納入先は確認した資料で非開示。"
+    },
+    "optics-santec-aoc": {
+      "name": "santec AOC",
+      "own": "法人・事業情報は参照元を参照",
+      "rev": "対象事業の売上規模は不明",
+      "prod": "INTPは光アイソレータとタップ光検出器を1.2×1.2×12mmに統合。C／L-band対応、QSFP-DD・OSFP等の高密度小型光モジュールを想定。",
+      "chn": "光学経路上の製品・用途に基づく関連フラグ。個別製品のY・Dy・Tb含有、部材供給元は非開示であり、搭載確認を意味しない。",
+      "src": "https://aoc.santec.com/en/assets/doc/INTP-C-E.pdf",
+      "note": "光学経路上の製品・用途に基づく関連フラグ。個別製品のY・Dy・Tb含有、部材供給元は非開示であり、搭載確認を意味しない。",
+      "def": "光通信モジュール内の光量監視・逆方向光の遮断に関わる部品。確認した仕様書では防衛・宇宙案件は記載されていない。"
+    },
+    "optics-tatsuta": {
+      "name": "タツタ電線",
+      "own": "法人・事業情報は参照元を参照",
+      "rev": "対象事業の売上規模は不明",
+      "prod": "波長依存性の小さい広帯域・偏光無依存型光アイソレータ。波長・ポート長・コネクタを指定する用途別試作は1個から相談可能。",
+      "chn": "光学経路上の製品・用途に基づく関連フラグ。個別製品のY・Dy・Tb含有、部材供給元は非開示であり、搭載確認を意味しない。",
+      "src": "https://www.tatsuta.co.jp/product/sensor_medical/optical/isorator/",
+      "note": "光学経路上の製品・用途に基づく関連フラグ。個別製品のY・Dy・Tb含有、部材供給元は非開示であり、搭載確認を意味しない。",
+      "def": "光源の戻り光損傷や反射に起因する誤動作を抑える光ファイバ部品。個別の防衛・宇宙装備への採用は確認した資料に記載なし。"
+    },
+    "optics-space-compass": {
+      "name": "Space Compass",
+      "own": "法人・事業情報は参照元を参照",
+      "rev": "対象事業の売上規模は不明",
+      "prod": "静止軌道間光通信実証、宇宙光中継ネットワーク・サービス統合",
+      "chn": "光学経路上の製品・用途に基づく関連フラグ。個別製品のY・Dy・Tb含有、部材供給元は非開示であり、搭載確認を意味しない。",
+      "src": "https://www.mod.go.jp/j/press/news/2025/03/31c.html",
+      "note": "防衛省との実証契約を確認。実証の完了・量産装備への採用を意味しない。防衛装備庁調達実績とは区別する。",
+      "def": "2025年3月31日、防衛省「静止軌道間光通信技術実証」を契約。SDA活動で取得する大容量データを、静止軌道近傍の機動衛星から光中継衛星へ伝送する能力を実証する事業。"
+    },
+    "optics-warpspace": {
+      "name": "ワープスペース",
+      "own": "法人・事業情報は参照元を参照",
+      "rev": "対象事業の売上規模は不明",
+      "prod": "宇宙用光通信端末、衛星間光通信ネットワーク、端末間相互接続技術",
+      "chn": "光学経路上の製品・用途に基づく関連フラグ。個別製品のY・Dy・Tb含有、部材供給元は非開示であり、搭載確認を意味しない。",
+      "src": "https://warpspace.jp/posts/wAFzFjRv",
+      "note": "基金採択は技術開発の支援実績。衛星打上げ・商用サービス稼働や防衛省納入とは区別する。",
+      "def": "2026年1月27日、宇宙戦略基金「衛星光通信の導入・活用拡大に向けた端末間相互接続技術等の開発」への採択を公表。異なる光通信端末間の相互接続技術を開発する。"
+    },
+    "optics-sony-space": {
+      "name": "Sony Space Communications（ソニーグループ・米国法人）",
+      "own": "Sony Corporation of Americaの100%子会社として2022年6月に事業開始した米国法人。ソニーグループ。",
+      "rev": "対象事業の売上規模は不明",
+      "prod": "小型衛星間・衛星地上レーザー通信装置とサービスの開発",
+      "chn": "光学経路上の製品・用途に基づく関連フラグ。個別製品のY・Dy・Tb含有、部材供給元は非開示であり、搭載確認を意味しない。",
+      "src": "https://www.sony.com/en/SonyInfo/News/Press/202206/22-023E/",
+      "note": "SOLISSの成果は会社設立前のグループ研究実績。SSC自身の納入実績とは区別する。",
+      "def": "技術的前身はSony CSLとJAXAのSOLISS。2020年にISS「きぼう」からNICT地上局へ双方向レーザー通信・高精細画像伝送、2021年にギリシャ商用地上局との光ダウンリンクを実証。"
+    },
+    "optics-ooi": {
+      "name": "大井電気",
+      "own": "法人・事業情報は参照元を参照",
+      "rev": "対象事業の売上規模は不明",
+      "prod": "ODN-181：C-bandの1心双方向16波WDM、STM-1／4／16／64とGbE・10G／100G-LANを収容。ODN-623：最大4chのCWDM。光伝送装置群は概ね10～100kmの回線に対応。",
+      "chn": "光学経路上の製品・用途に基づく関連フラグ。個別製品のY・Dy・Tb含有、部材供給元は非開示であり、搭載確認を意味しない。",
+      "src": "https://www.ooi.co.jp/product/transmission/optical",
+      "note": "光学経路上の製品・用途に基づく関連フラグ。個別製品のY・Dy・Tb含有、部材供給元は非開示であり、搭載確認を意味しない。",
+      "def": "大容量データ伝送・通信インフラを支える光伝送装置。確認した製品ページには個別の防衛・宇宙案件の記載はない。"
+    },
+    "optics-apresia": {
+      "name": "APRESIA Systems",
+      "own": "法人・事業情報は参照元を参照",
+      "rev": "対象事業の売上規模は不明",
+      "prod": "自社開発APRESIA Transport、ApresiaLightMC、40波DWDMユニットOPX-4140DW。通信事業者・データセンター・CATV向け長距離伝送を提供し、Infinera製品も取り扱う。",
+      "chn": "光学経路上の製品・用途に基づく関連フラグ。個別製品のY・Dy・Tb含有、部材供給元は非開示であり、搭載確認を意味しない。",
+      "src": "https://www.apresia.jp/products/transmission/",
+      "note": "自社開発製品と他社製品の販売・統合を製品別に区別。公開ページに販売終了機種もあるため現行機種を参照。"
+    },
+    "powder-mate": {
+      "name": "メイト",
+      "own": "非上場。資本金9,500万円、従業員120名",
+      "rev": "非開示",
+      "prod": "射出成形用のプラスチックマグネット材料。ネオジム等方性材・ネオジム異方性材・サマコバ材（SmCo）・サマ鉄材（SmFeN）・ハイブリッド材（NdFeB＋フェライト）を PA12・PPS・PA6・EEA ベースでそろえる",
+      "pos": "希土類4系統のボンド磁石用コンパウンドをそろえる国内の独立系専業。シェアの数値は未確認。",
+      "def": "防衛向けの納入は確認できない。用途は小型モータ・センサ",
+      "chn": "高。磁粉は外部調達で仕入先は非開示。NdFeB・SmCo・SmFeN いずれも中国の中重希土類輸出管理の対象元素を含む",
+      "src": "https://www.mate.co.jp/product/hard-magnetic-compound/ ／ https://www.mate.co.jp/aboutus/history/",
+      "note": "工場はすべて岡山県和気郡和気町（本社工場・米澤工場・矢田部工場・福富工場）。自社工程は磁性材料の選択から微粉砕・表面処理・樹脂との混練まで。沿革に「1990年3月 希土類系プラマグコンパウンド生産設備着工」"
+    },
+    "powder-nichia": {
+      "name": "日亜化学工業",
+      "own": "非上場。本社は徳島県阿南市",
+      "rev": "磁性材料単独は非開示",
+      "prod": "SmFeN 異方性ボンド磁石材料の射出成形用コンパウンド。A シリーズ（PA12、標準）と R シリーズ（PP、耐水性）。開発品で Br 0.85T",
+      "pos": "Nd と重希土類を使わない SmFeN で、ボンド磁石として最高クラスの磁力を公表。シェアの数値は未確認。",
+      "def": "防衛向けの納入は確認できない。用途はモータ・センサ",
+      "chn": "中。Sm は中国の中重希土類輸出管理の対象。磁粉は自社製だが原料の調達先は非開示",
+      "src": "https://www.nichia.co.jp/jp/product/magnet.html ／ https://www.nichia.co.jp/jp/about_nichia/system.html",
+      "note": "磁粉はコロイド化学を応用した独自製法で、直径約3μm の球形・粒径のそろった粉を作り、1粒ごとに耐熱コートを施すため磁石本体への防錆コートが要らないと自社が説明。磁粉単体の外販は確認できず、コンパウンドで供給する"
+    },
+    "powder-daido-steel": {
+      "name": "大同特殊鋼",
+      "own": "東証プライム（5471）。ボンド磁石の成形体は100%子会社の株式会社ダイドー電子",
+      "rev": "磁石材料単独は非開示",
+      "prod": "等方性 SmFeN 磁粉（SFN2M・SFN3H）と射出成形用コンパウンド（PPS 系 SC-6LR ほか、2026年5月に PA 系 SC-8L ほかを追加）",
+      "pos": "超急冷法と窒化処理による等方性 SmFeN の国内メーカー。シェアの数値は未確認。",
+      "def": "防衛向けの納入は確認できない。用途は自動車・産業機器のモータ",
+      "chn": "中。Sm は中国の中重希土類輸出管理の対象。原料の調達先は非開示",
+      "src": "https://www.daido.co.jp/products/isotropic_SmFeN/ ／ https://www.daido.co.jp/about/release/2026/260511_smfen.html",
+      "note": "磁粉の量産は技術開発研究所（名古屋市南区）、コンパウンドの混練は築地テクノセンター（名古屋市港区、2025年12月に大型混練機を導入）。ボンド磁石成形体はダイドー電子が製造販売すると自社が明記。SmFeN 磁石材料で2030年に年間200トン規模の市場展開を目標"
     }
   },
   "routes": {
@@ -2453,7 +2575,7 @@
     },
     "03_magneto_garnet": {
       "srcNotes": {
-        "02_compound": "Y・Tb・Gd・Ho の酸化物に Bi・Fe を加え、ガーネット基板上へ液相エピタキシャル成長で磁気光学膜を育成"
+        "02_compound": "Y・Tb等の高純度酸化物からYIG・TGG等の結晶を育成、またはガーネット基板上へLPE法で磁気光学膜を成長"
       }
     },
     "03_alsc_semi": {
@@ -2515,8 +2637,7 @@
     },
     "04_faraday": {
       "srcNotes": {
-        "03_tb_mo": "TGG セラミックス・Tb 磁気光学ガラスを回転子に加工し、永久磁石と組んで高出力レーザー用の素子に",
-        "03_magneto_garnet": "磁気光学膜を素子寸法に切り出し、偏光子・磁石と組んで光通信用の回転子に"
+        "03_magneto_garnet": "YIG・TGG等の結晶や磁気光学膜を回転子素子に加工し、偏光子・磁石と組んでレーザー・光通信用の光アイソレータを構成"
       }
     },
     "04_target": {
@@ -2693,11 +2814,6 @@
       "srcNotes": {
         "05_scaln_film": "圧電センサ・高周波デバイス",
         "05_electronics": "計測器・センサの電子部品"
-      }
-    },
-    "03_tb_mo": {
-      "srcNotes": {
-        "02_compound": "高純度 Tb₄O₇ を焼結・溶融の原料に"
       }
     }
   },

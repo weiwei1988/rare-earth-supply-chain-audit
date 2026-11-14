@@ -191,32 +191,11 @@
     }
   },
   {
-    "id": "03_tb_mo",
-    "stage": 3,
-    "label": "Tb 系磁気光学結晶・ガラス",
-    "header": "03 Tb 系磁気光学結晶・ガラス",
-    "description": "TGG セラミックス・TAG・Tb 磁気光学ガラス",
-    "els": [
-      "DyTb"
-    ],
-    "src": [
-      "02_compound"
-    ],
-    "srcEls": {
-      "02_compound": [
-        "DyTb"
-      ]
-    },
-    "srcNotes": {
-      "02_compound": "高純度 Tb₄O₇ を焼結・溶融の原料に"
-    }
-  },
-  {
     "id": "03_magneto_garnet",
     "stage": 3,
-    "label": "磁気光学ガーネット（膜・基板）",
-    "header": "03 磁気光学ガーネット（膜・基板）",
-    "description": "Bi置換希土類鉄ガーネット膜・SGGG 基板",
+    "label": "磁気光学ガーネット（結晶・膜・基板）",
+    "header": "03 磁気光学ガーネット（結晶・膜・基板）",
+    "description": "YIG・TGG結晶、磁気光学膜・SGGG基板",
     "els": [
       "Y",
       "DyTb"
@@ -231,7 +210,7 @@
       ]
     },
     "srcNotes": {
-      "02_compound": "Y・Tb・Gd・Ho の酸化物に Bi・Fe を加え、ガーネット基板上へ液相エピタキシャル成長で磁気光学膜を育成"
+      "02_compound": "Y・Tb等の高純度酸化物からYIG・TGG等の結晶を育成、またはガーネット基板上へLPE法で磁気光学膜を成長"
     },
     "note": "LPE の種結晶となる SGGG 基板は、国内で育成を公表している供給元が住友金属鉱山グループに限られる"
   },
@@ -497,21 +476,16 @@
       "DyTb"
     ],
     "src": [
-      "03_tb_mo",
       "03_magneto_garnet"
     ],
     "srcEls": {
-      "03_tb_mo": [
-        "DyTb"
-      ],
       "03_magneto_garnet": [
         "Y",
         "DyTb"
       ]
     },
     "srcNotes": {
-      "03_tb_mo": "TGG セラミックス・Tb 磁気光学ガラスを回転子に加工し、永久磁石と組んで高出力レーザー用の素子に",
-      "03_magneto_garnet": "磁気光学膜を素子寸法に切り出し、偏光子・磁石と組んで光通信用の回転子に"
+      "03_magneto_garnet": "YIG・TGG等の結晶や磁気光学膜を回転子素子に加工し、偏光子・磁石と組んでレーザー・光通信用の光アイソレータを構成"
     }
   },
   {
