@@ -27,12 +27,12 @@
       "name": "三德（Proterial Magnetics旗下）",
       "own": "Proterial Magnetics的子公司，非上市（2026年7月1日起）",
       "rev": "约239亿日元（2018年3月财年）",
-      "prod": "Nd磁体合金、Sm磁体合金、高纯度稀土金属、磁体回收再利用",
+      "prod": "Nd磁体合金、Sm磁体合金、高纯度稀土金属、磁体回收再利用、钐磁体的磁粉与粘结磁体用复合材料",
       "pos": "日本国内Nd磁体合金份额约65%，是上游的关键瓶颈",
       "def": "高性能磁体厂商的上游。日本国内循环与回收的关键环节",
       "chn": "高。需确认Dy/Tb/Sm原料与中国JV渠道、出口许可。",
-      "src": "JSX ／ DyTb DD ／ Sm DD ／ https://www.santoku-corp.co.jp/news/20260701_1.html ／ https://www.santoku-corp.co.jp/company/about.html",
-      "note": "正式商号为株式会社三德。2026年7月1日集团内重组后，由株式会社Proterial旗下转为株式会社Proterial Magnetics的子公司。Proterial本体作为另一法人单独收录"
+      "src": "JSX ／ DyTb DD ／ Sm DD ／ https://www.santoku-corp.co.jp/news/20260701_1.html ／ https://www.santoku-corp.co.jp/company/about.html ／ https://www.santoku-corp.co.jp/business/jisyaku.html",
+      "note": "正式商号为株式会社三德。2026年7月1日集团内重组后，由株式会社Proterial旗下转为株式会社Proterial Magnetics的子公司。Proterial本体作为另一法人单独收录 / 公司明确表示钐磁体材料同时生产烧结用与粘结磁体用，且粘结磁体用从合金到成品一贯生产"
     },
     "seed-3": {
       "name": "信越化学工业",
@@ -100,17 +100,6 @@
       "src": "JSX ／ Sm DD ／ Sc DD ／ https://www.smm.co.jp/business/refining/products/scandium/",
       "note": "将母公司的Sc业务与实际制造子公司的Sm业务合并为一行"
     },
-    "seed-9": {
-      "name": "Magnequench（Neo Performance Materials）",
-      "own": "外资企业，隶属加拿大Neo Performance Materials",
-      "rev": "外资企业，仅供参考",
-      "prod": "粘结NdFeB用磁粉MQP/MQ3、重稀土降低磁粉",
-      "pos": "粘结NdFeB磁粉的全球主要厂商",
-      "def": "小型高性能电机、航空航天辅机、机器人",
-      "chn": "高。需确认中国、泰国等的基地、原料原产国、许可。",
-      "src": "JSX ／ DyTb DD",
-      "note": "虽非日本企业，但为日本侧BOM上的重要供应源"
-    },
     "seed-10": {
       "name": "神岛化学工业",
       "own": "东证标准市场（4026）",
@@ -137,14 +126,14 @@
       "name": "Oxide Corporation（オキサイド）",
       "own": "证券代码：6521",
       "rev": "100.4亿日元（2026年2月财年，合并报表）",
-      "prod": "266nm、193nm全固体深紫外激光、CW / QCW / 皮秒激光、波长变换模块、波长变换用单晶（BBO·CLBO）",
+      "prod": "266nm、193nm全固体深紫外激光、CW / QCW / 皮秒激光、波长变换模块、波长变换用单晶（BBO·CLBO） / TGG（Tb₃Ga₅O₁₂）单晶及LPE生长Bi:RIG，用于光隔离器；Bi:RIG稀土组成未公开",
       "pos": "深紫外激光的全球份额在30%以上，波长转换单晶在95%以上（公司估算）。",
       "def": "深紫外激光是先进半导体检测和微细加工的基础。也经销面向飞机、无人机、卫星的特殊激光，但该产品由美国Areté制造。公司自产深紫外激光的国防供货尚未确认。/ 本次公开信息核查未能确认直接合同。",
       "chn": "该DUV产品以BBO等非线性晶体为主。Y的使用情况需核对基本波源的BOM，目前无法确定。",
       "bom": "266nm QCW对红外光纤放大光源进行两级波长转换。现行产品的光纤掺杂材料和转换晶体未披露。CW Frequad明确记载使用超高纯度BBO。未能确认使用YAG介质。/ 该DUV振荡器是否使用YAG尚未确认",
       "gap": "需确认本公司制与进口销售区分、国防、航天客户、基本波源的介质、出口管理是否适用出口管制。",
-      "src": "https://www.opt-oxide.com/products-list/laser/ ／ https://www.opt-oxide.com/products-list/laser/qcw-laser/item_LA00008 ／ https://www.opt-oxide.com/v2019/wp-content/uploads/2013/03/266Laser_r12-1.pdf ／ https://www.opt-oxide.com/ir/meeting/meeting26_review/ ／ https://www.opt-oxide.com/products-list/laser/special ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00006",
-      "note": "整合处理：根据固体激光振荡器尽职调查中的“采用候选（振荡器）”正式纳入Stage 04。 ／ 266nm QCW产品将红外光纤放大光源经两级波长转换，而光纤放大级与多级转换通常会配置隔离器以阻断回光。该公司本身也是法拉第旋转器的制造商"
+      "src": "https://www.opt-oxide.com/products-list/laser/ ／ https://www.opt-oxide.com/products-list/laser/qcw-laser/item_LA00008 ／ https://www.opt-oxide.com/v2019/wp-content/uploads/2013/03/266Laser_r12-1.pdf ／ https://www.opt-oxide.com/ir/meeting/meeting26_review/ ／ https://www.opt-oxide.com/products-list/laser/special ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00006 / https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00017",
+      "note": "整合处理：根据固体激光振荡器尽职调查中的“采用候选（振荡器）”正式纳入Stage 04。 ／ 266nm QCW产品将红外光纤放大光源经两级波长转换，而光纤放大级与多级转换通常会配置隔离器以阻断回光。该公司本身也是法拉第旋转器的制造商 / 标记表示与光学应用链相关，不代表已确认具体产品含有Y／Dy／Tb；材料成分及部件供应商未公开。"
     },
     "seed-13": {
       "name": "TOCALO（トーカロ）",
@@ -271,34 +260,34 @@
       "name": "Daido Electronics (Daido Steel Group)（ダイドー電子（大同特殊鋼グループ））",
       "own": "大同特殊钢集团、非上市",
       "rev": "约113亿日元（2024财年）",
-      "prod": "热间加工NdFeB、NdFeB/SmFeN粘结磁体、磁粉",
+      "prod": "热加工NdFeB磁体（NEOQUENCH-D）、NdFeB与SmFeN粘结磁体的压缩成型品与注射成型品",
       "pos": "无重稀土热加工磁体和SmFeN量产的稀缺厂商",
       "def": "小型大功率电机、机器人、航空航天执行器",
       "chn": "中至高。需确认Nd/Pr/Sm、Magnequench系磁粉、按产品划分的BOM。",
       "src": "JSX ／ DyTb DD ／ Sm DD",
-      "note": "兼具规避Dy、Tb与暴露于Sm管制两方面"
+      "note": "兼具规避Dy、Tb与暴露于Sm管制两方面 / 大同特殊钢明确表示磁粉与复合材料由其本体制造销售，本公司负责成型体"
     },
     "seed-25": {
       "name": "爱知制钢",
       "own": "东京证券交易所Prime(5482)、丰田集团",
       "rev": "超过1,000亿日元",
-      "prod": "Dy/Tb/Co无各向异性NdFeB粘结磁体MAGFINE",
+      "prod": "各向异性NdFeB粘结磁体用磁粉MAGFINE（MF15P、MF18P，d-HDDR法，不含Dy、Tb、Co）、注射成型用颗粒料，以及压缩成型磁体",
       "pos": "无重稀土路线的替代方案厂商",
       "def": "车载、机器人、无人机辅机、小型电机",
       "chn": "中。对Dy、Tb的依赖已降低，但对Nd、Pr的中国依赖仍然存在。",
-      "src": "JSX ／ DyTb DD",
-      "note": "供应中断时的替代技术候选"
+      "src": "JSX ／ DyTb DD ／ https://www.aichi-steel.co.jp/products/smart_company/magfine/lineup/ ／ https://www.aichi-steel.co.jp/news_item/20180227_News2.pdf",
+      "note": "供应中断时的替代技术候选 / 磁粉在关工厂（岐阜县关市）生产，公司明确表示也可以颗粒形式交货。未能在公开资料中确认国内的混炼据点；有报道称磁粉供给中国并表子公司浙江爱智机电，在当地成型"
     },
     "seed-26": {
       "name": "多摩川精机",
       "own": "非上市公司",
       "rev": "单体约481亿日元 / 合并约822亿日元",
-      "prod": "旋转变压器、陀螺仪、伺服、反作用飞轮、飞机EMA",
+      "prod": "旋转变压器、陀螺仪、伺服、反作用飞轮、飞机EMA / FOG及卫星用IRU；磁光石榴石搭载情况未确认",
       "pos": "HEV旋转变压器在日本国内约占七成，是航空航天与国防领域的核心",
       "def": "卫星姿态控制、飞机电动执行器、惯性设备",
       "chn": "中。需确认NdFeB/SmCo材质、磁体制造商、原产国、海外基地。",
-      "src": "JSX ／ DyTb DD ／ Sm DD",
-      "note": "除磁体外，技能传承也是关注点"
+      "src": "JSX ／ DyTb DD ／ Sm DD / https://www.tamagawa-seiki.co.jp/products/gyro/",
+      "note": "除磁体外，技能传承也是关注点 / 标记表示与光学应用链相关，不代表已确认具体产品含有Y／Dy／Tb；材料成分及部件供应商未公开。"
     },
     "seed-27": {
       "name": "东京计器",
@@ -2120,11 +2109,12 @@
       "name": "户田工业",
       "own": "上市公司 / 戸田工业株式会社（东京证券交易所、证券代码4100）",
       "rev": "合并营业收入约280亿日元（2026年3月财年。2027年3月财年的公司预测为290亿日元、前期比3.4%增）",
-      "prod": "MLCC 用钛酸钡（介电材料层用·电極层用共材用·粉体·分散体）、高誘电率、高屈折率填料、压电器件用材料、酸化铁等粉体材料",
+      "prod": "MLCC 用钛酸钡（介电材料层用·电極层用共材用·粉体·分散体）、高誘电率、高屈折率填料、压电器件用材料、酸化铁等粉体材料，以及粘结磁体用复合材料FEROTOP（各向同性与各向异性NdFeB，PA12、PPS、EEA）和各向异性NdFeB磁粉",
       "pos": "以湿法合成生产颗粒细、粒度分布窄的钛酸钡，并以粉体和分散体（浆料）两种形态供应。",
       "def": "通过 MLCC 间接关联到国防和航空航天的各类电子设备（未确认有面向国防的直接供货）。",
       "chn": "钛酸钡本身不含稀土。MLCC 的介电材料通常会添加 Dy、Ho、Y 等稀土氧化物，而重稀土（Dy、Tb）的进口对中国依赖度很高。该公司添加稀土的产品及其原料采购国均未披露。",
-      "src": "https://www.todakogyo.co.jp/product/dielectric.html ／ https://www.todakogyo.co.jp/product/detail/detail126.html ／ https://finance.yahoo.co.jp/quote/4100.T/financials ／ https://diamond.jp/zai/articles/-/281277"
+      "src": "https://www.todakogyo.co.jp/product/dielectric.html ／ https://www.todakogyo.co.jp/product/detail/detail126.html ／ https://finance.yahoo.co.jp/quote/4100.T/financials ／ https://diamond.jp/zai/articles/-/281277 ／ https://www.todakogyo.co.jp/product/magnet.html ／ https://www.todakogyo.co.jp/csr/img/otake_2023.pdf",
+      "note": "大竹事业所（广岛县大竹市）的事业概要中明确记载「稀土各向异性粉末及稀土粘结磁体用复合材料的设计、开发与制造」。自制的只有各向异性NdFeB磁粉，各向同性为外部采购"
     },
     "dielectric-nippon-chem": {
       "name": "日本化学工业",
@@ -2364,12 +2354,12 @@
       "name": "日本电气（NEC）",
       "own": "上市（6701）",
       "rev": "合并3万4,234亿日元（2025年3月期）。光传输设备未单独披露",
-      "prod": "海底光缆系统（海底中继器、终端设备、增益均衡器、海底分支装置）、SpectralWave WX开放式光传输设备、卫星用光通信装置",
+      "prod": "海底光缆系统（海底中继器、终端设备、增益均衡器、海底分支装置）、SpectralWave WX开放式光传输设备、卫星用光通信装置 / LUCAS卫星光通信终端",
       "pos": "海底光缆系统的国内唯一供应商，被视为全球三强之一。份额因出处而异，从21%到约三成不等",
       "def": "为JAXA的卫星间光通信系统LUCAS开发卫星用光通信装置，2025年1月实现卫星间1.8Gbps光通信并成功传输至地面站。海底电缆亦承载海底地震观测",
       "chn": "中。装置所用光部件的采购结构是关键问题。数据中心用光收发模块的全球出货量据称大部分来自中国厂商",
-      "src": "https://jpn.nec.com/submarine/index.html ／ https://jpn.nec.com/press/202501/20250123_01.html ／ https://jpn.nec.com/press/202012/20201210_02.html ／ https://journal.meti.go.jp/p/40663/",
-      "note": "海底电缆本体由子公司OCC（北九州市若松区）制造。海底中继器每50〜100公里装有一个光隔离器，NEC被列为湖北工业的主要客户之一"
+      "src": "https://jpn.nec.com/submarine/index.html ／ https://jpn.nec.com/press/202501/20250123_01.html ／ https://jpn.nec.com/press/202012/20201210_02.html ／ https://journal.meti.go.jp/p/40663/ / https://www.nec.com/en/press/202501/global_20250123_01.html",
+      "note": "海底电缆本体由子公司OCC（北九州市若松区）制造。海底中继器每50〜100公里装有一个光隔离器，NEC被列为湖北工业的主要客户之一 / 标记表示与光学应用链相关，不代表已确认具体产品含有Y／Dy／Tb；材料成分及部件供应商未公开。"
     },
     "optnet-1finity": {
       "name": "1FINITY",
@@ -2394,15 +2384,15 @@
       "src": "https://orbray.com/product/optical/device/receptacles.html ／ https://orbray.com/product/optical/technology/fiber.html ／ https://orbray.com/corporate/profile.html"
     },
     "photonics-melco-hakouden": {
-      "name": "三菱电机（高频光器件制作所）",
+      "name": "三菱电机（光器件、光传输与空间光通信）",
       "own": "三菱电机（东证主板6503）的内部制作所",
       "rev": "制作所单独数据未公开。EML在2022年的出货额为184亿日元",
-      "prod": "电吸收调制集成激光器（EML）的芯片与TO-CAN型模块，以及200Gbps接收用pin-PD芯片",
+      "prod": "电吸收调制集成激光器（EML）的芯片与TO-CAN型模块，以及200Gbps接收用pin-PD芯片 / 三菱电机其他业务部门提供光传输设备及空间光通信激光光源模块",
       "pos": "面向数据中心的光器件（EML）居全球首位，按2022年实绩全球份额为42%。",
       "def": "未确认有防务交付。用途为数据中心光收发模块与FTTH",
       "chn": "中。EML芯片基于磷化铟衬底，本身不用稀土，但Y与Tb经由模块内置的光隔离器进入。EML仅在日本国内生产",
-      "note": "位于伊丹的高频光器件制作所（兵库县伊丹市瑞原四丁目1番地）负责晶圆工艺，位于长崎的Melco Advanced Device株式会社负责TO-CAN型模块封装，EML全部在日本国内生产。面向数据中心的EML芯片月产150万个、份额50%，面向FTTH的TO-CAN型EML模块月产24万个、份额30%。2023年度以“集成电吸收光调制器的半导体激光二极管的开发”获第70届大河内纪念生产奖。2024年4月开始量产200Gbps（112Gbaud PAM4）EML芯片，并有报道称计划在2028至2029年度将产能提高三倍以上",
-      "src": "https://okochi.or.jp/jusho/第70回大河内記念生産賞-5/ ／ https://eetimes.itmedia.co.jp/ee/articles/2408/21/news083_2.html ／ https://www.mitsubishielectric.co.jp/semiconductors/hf/locations/index.html"
+      "note": "位于伊丹的高频光器件制作所（兵库县伊丹市瑞原四丁目1番地）负责晶圆工艺，位于长崎的Melco Advanced Device株式会社负责TO-CAN型模块封装，EML全部在日本国内生产。面向数据中心的EML芯片月产150万个、份额50%，面向FTTH的TO-CAN型EML模块月产24万个、份额30%。2023年度以“集成电吸收光调制器的半导体激光二极管的开发”获第70届大河内纪念生产奖。2024年4月开始量产200Gbps（112Gbaud PAM4）EML芯片，并有报道称计划在2028至2029年度将产能提高三倍以上 / 标记表示与光学应用链相关，不代表已确认具体产品含有Y／Dy／Tb；材料成分及部件供应商未公开。",
+      "src": "https://okochi.or.jp/jusho/第70回大河内記念生産賞-5/ ／ https://eetimes.itmedia.co.jp/ee/articles/2408/21/news083_2.html ／ https://www.mitsubishielectric.co.jp/semiconductors/hf/locations/index.html / https://www.mitsubishielectric.com/en/pr/2024/0919-a/"
     },
     "photonics-furukawa": {
       "name": "古河电气工业",
@@ -2414,6 +2404,138 @@
       "chn": "中。激光芯片基于磷化铟衬底，本身不用稀土，但Y与Tb经由激光模块内置的光隔离器进入",
       "note": "ITLA是带控制电路板的可调谐激光模块，通常在半导体激光器输出侧放置光隔离器以阻断回光。Nano ITLA尺寸为25×15.6×6.7mm。拉曼放大器用泵浦LD模块有400、500、600mW三档，覆盖1330至1520nm。公司投资约1000亿日元，在包括日美在内的四个国家将光纤产能提高一倍（2026年8月公布）",
       "src": "https://www.furukawaelectric.com/release/2021/comm_20210607.html ／ https://www.furukawaelectric.com/release/2019/comm_190920.html ／ https://www.furukawaelectric.com/company/outline/"
+    },
+    "optics-carlit": {
+      "name": "卡力特（Carlit）",
+      "own": "法人及业务信息见来源",
+      "rev": "相关业务营收不明",
+      "prod": "以自主浮区熔融工艺制造YIG（Y₃Fe₅O₁₂）单晶，提供高纯单晶一体化生产、特殊元素置换及定制规格。",
+      "chn": "已确认YIG含Y；原料产地及对中国依赖比例未公开",
+      "src": "https://www.carlit.co.jp/silicon/technology.html",
+      "note": "公开产品信息明确YIG组成为Y₃Fe₅O₁₂",
+      "def": "位于通信设备光隔离器及磁共振滤波器部件的上游材料环节；来源未列明具体国防装备采用情况。"
+    },
+    "optics-crystalsystem": {
+      "name": "Crystal Systems Corporation（クリスタルシステム）",
+      "own": "法人及业务信息见来源",
+      "rev": "相关业务营收不明",
+      "prod": "利用自主卤素型光学浮区熔融设备生长并销售YIG单晶，列为2050／4550nm光隔离器材料。",
+      "chn": "已确认YIG含Y；原料产地及对中国依赖比例未公开",
+      "src": "https://www.crystalsys.co.jp/product/crystals/yig/",
+      "note": "公开产品信息明确YIG组成为Y₃Fe₅O₁₂",
+      "def": "供应中红外光隔离器材料，同时拥有晶体生长与生长设备制造能力。"
+    },
+    "optics-smmp": {
+      "name": "SMM Precision Co., Ltd.（SMMプレシジョン）",
+      "own": "法人及业务信息见来源",
+      "rev": "相关业务营收不明",
+      "prod": "光通信用圆筒型、表面贴装型、无磁铁型光隔离器，光纤激光器用在线型隔离器及SGGG衬底。",
+      "chn": "标记表示与光学应用链相关，不代表已确认具体产品含有Y／Dy／Tb；材料成分及部件供应商未公开。",
+      "src": "https://www.smm.co.jp/business/material/products/optical_isolator/ / https://www.smmp.co.jp/smmprecision/all/WZE_1_1_AOID%2CID/CLcorporate.htm",
+      "note": "1996年开始制造光隔离器，2005年将FR业务转移至Granopt，2020年开始销售SGGG衬底。SGGG为Gd系，应与Y／Dy／Tb使用区分。",
+      "def": "供应支撑光网络分支、放大环节及光纤激光器的部件；所查资料未披露具体国防客户。"
+    },
+    "optics-santec-aoc": {
+      "name": "Santec AOC",
+      "own": "法人及业务信息见来源",
+      "rev": "相关业务营收不明",
+      "prod": "INTP将光隔离器与分光探测器集成于1.2×1.2×12mm封装，支持C／L波段，面向QSFP-DD、OSFP高密度小型光模块。",
+      "chn": "标记表示与光学应用链相关，不代表已确认具体产品含有Y／Dy／Tb；材料成分及部件供应商未公开。",
+      "src": "https://aoc.santec.com/en/assets/doc/INTP-C-E.pdf",
+      "note": "标记表示与光学应用链相关，不代表已确认具体产品含有Y／Dy／Tb；材料成分及部件供应商未公开。",
+      "def": "集成光通信模块的光功率监测与反向光隔离功能；所查规格书未列明国防或航天项目。"
+    },
+    "optics-tatsuta": {
+      "name": "立井电线（TATSUTA）",
+      "own": "法人及业务信息见来源",
+      "rev": "相关业务营收不明",
+      "prod": "低波长依赖的宽带偏振无关光隔离器；可按波长、端口长度及连接器需求洽谈，支持从1件起的用途定制试制。",
+      "chn": "标记表示与光学应用链相关，不代表已确认具体产品含有Y／Dy／Tb；材料成分及部件供应商未公开。",
+      "src": "https://www.tatsuta.co.jp/product/sensor_medical/optical/isorator/",
+      "note": "标记表示与光学应用链相关，不代表已确认具体产品含有Y／Dy／Tb；材料成分及部件供应商未公开。",
+      "def": "光纤部件用于抑制回光损伤光源及反射引发的问题；所查资料未列明具体国防或航天装备采用情况。"
+    },
+    "optics-space-compass": {
+      "name": "Space Compass",
+      "own": "法人及业务信息见来源",
+      "rev": "相关业务营收不明",
+      "prod": "静止轨道间光通信验证及空间光中继网络服务集成",
+      "chn": "标记表示与光学应用链相关，不代表已确认具体产品含有Y／Dy／Tb；材料成分及部件供应商未公开。",
+      "src": "https://www.mod.go.jp/j/press/news/2025/03/31c.html",
+      "note": "已确认防卫省验证合同；不代表验证完成或装备量产采用，亦不同于防卫装备厅采购实绩。",
+      "def": "2025年3月31日与日本防卫省签订静止轨道间光通信技术验证合同，验证近静止轨道机动卫星向光中继卫星传输大容量空间态势感知数据的能力。"
+    },
+    "optics-warpspace": {
+      "name": "WARPSPACE Inc.（ワープスペース）",
+      "own": "法人及业务信息见来源",
+      "rev": "相关业务营收不明",
+      "prod": "空间光通信终端、星间光通信网络及终端互联技术",
+      "chn": "标记表示与光学应用链相关，不代表已确认具体产品含有Y／Dy／Tb；材料成分及部件供应商未公开。",
+      "src": "https://warpspace.jp/posts/wAFzFjRv",
+      "note": "基金入选属于技术开发支持，与卫星发射、商业服务运营及防卫交付分别看待。",
+      "def": "2026年1月27日公布入选日本宇宙战略基金卫星光通信终端互联技术开发项目，开发不同光通信终端之间的互联技术。"
+    },
+    "optics-sony-space": {
+      "name": "Sony Space Communications（索尼集团美国法人）",
+      "own": "2022年6月开始运营的美国法人，为Sony Corporation of America全资子公司，隶属索尼集团。",
+      "rev": "相关业务营收不明",
+      "prod": "开发小型卫星星间及星地激光通信设备与服务",
+      "chn": "标记表示与光学应用链相关，不代表已确认具体产品含有Y／Dy／Tb；材料成分及部件供应商未公开。",
+      "src": "https://www.sony.com/en/SonyInfo/News/Press/202206/22-023E/",
+      "note": "SOLISS成果属于SSC设立前的集团研发实绩，不等同于SSC自身交付记录。",
+      "def": "技术前身为Sony CSL与JAXA的SOLISS：2020年从国际空间站希望号舱向NICT地面站完成双向激光通信及高清图像传输，2021年完成至希腊商业地面站的光下行链路验证。"
+    },
+    "optics-ooi": {
+      "name": "大井电气",
+      "own": "法人及业务信息见来源",
+      "rev": "相关业务营收不明",
+      "prod": "ODN-181：C波段单纤双向16波WDM，支持STM-1／4／16／64及GbE、10G／100G-LAN。ODN-623：最多4通道CWDM。产品系列覆盖约10～100公里传输。",
+      "chn": "标记表示与光学应用链相关，不代表已确认具体产品含有Y／Dy／Tb；材料成分及部件供应商未公开。",
+      "src": "https://www.ooi.co.jp/product/transmission/optical",
+      "note": "标记表示与光学应用链相关，不代表已确认具体产品含有Y／Dy／Tb；材料成分及部件供应商未公开。",
+      "def": "光传输设备支撑大容量通信基础设施；所查产品页面未列出具体国防或航天项目。"
+    },
+    "optics-apresia": {
+      "name": "APRESIA Systems",
+      "own": "法人及业务信息见来源",
+      "rev": "相关业务营收不明",
+      "prod": "自主开发APRESIA Transport、ApresiaLightMC及OPX-4140DW 40波DWDM单元，面向运营商、数据中心及有线电视长距离传输，亦提供Infinera产品。",
+      "chn": "标记表示与光学应用链相关，不代表已确认具体产品含有Y／Dy／Tb；材料成分及部件供应商未公开。",
+      "src": "https://www.apresia.jp/products/transmission/",
+      "note": "需区分自主产品与第三方产品销售集成；页面亦含停售型号，应按具体型号核对在售状态。"
+    },
+    "powder-mate": {
+      "name": "MATE",
+      "own": "非上市。注册资本9,500万日元，员工120人",
+      "rev": "未公开",
+      "prod": "注射成型用塑料磁体材料：钕各向同性材、钕各向异性材、钐钴（SmCo）材、钐铁（SmFeN）材、混合材（NdFeB＋铁氧体），基体树脂为PA12、PPS、PA6、EEA",
+      "pos": "独立的专业厂商，是国内唯一同时备齐四个稀土体系粘结磁体复合材料的企业。份额数值未确认。",
+      "def": "未确认有防务交付。用途为小型电机与传感器",
+      "chn": "高。磁粉外部采购且供应商未公开，NdFeB、SmCo、SmFeN均含有中国中重稀土出口管制对象元素",
+      "note": "工厂全部位于冈山县和气郡和气町（总部工厂、米泽工厂、矢田部工厂、福富工厂）。自有工序涵盖磁性材料选择、微粉碎、表面处理直至与树脂混炼。沿革中记载1990年3月开工建设稀土系塑料磁体复合材料生产设备",
+      "src": "https://www.mate.co.jp/product/hard-magnetic-compound/ ／ https://www.mate.co.jp/aboutus/history/"
+    },
+    "powder-nichia": {
+      "name": "日亚化学工业",
+      "own": "非上市。总部位于德岛县阿南市",
+      "rev": "磁性材料单独数据未公开",
+      "prod": "SmFeN各向异性粘结磁体材料的注射成型用复合材料：A系列（PA12，标准）与R系列（PP，耐水）。开发品的Br达0.85T",
+      "pos": "以不含Nd与重稀土的SmFeN，公布了粘结磁体中最高水平的磁力。份额数值未确认。",
+      "def": "未确认有防务交付。用途为电机与传感器",
+      "chn": "中。钐属于中国中重稀土出口管制对象。磁粉为自制，但原料采购来源未公开",
+      "note": "公司说明采用胶体化学的独自制法，制成直径约3μm、粒径均一的球形粉末，并对每一颗粒施加耐热涂层，因此磁体本体无需防锈涂层。未能确认磁粉单独外销，以复合材料形式供应",
+      "src": "https://www.nichia.co.jp/jp/product/magnet.html ／ https://www.nichia.co.jp/jp/about_nichia/system.html"
+    },
+    "powder-daido-steel": {
+      "name": "大同特殊钢",
+      "own": "东证主板（5471）。粘结磁体成型体由全资子公司大同电子制造",
+      "rev": "磁体材料单独数据未公开",
+      "prod": "各向同性SmFeN磁粉（SFN2M、SFN3H）与注射成型用复合材料（PPS系SC-6LR等，2026年5月追加PA系SC-8L等）",
+      "pos": "以超急冷法与氮化处理生产各向同性SmFeN的国内厂商。份额数值未确认。",
+      "def": "未确认有防务交付。用途为汽车与工业设备的电机",
+      "chn": "中。钐属于中国中重稀土出口管制对象。原料采购来源未公开",
+      "note": "磁粉量产在技术开发研究所（名古屋市南区），复合材料混炼在筑地Techno Center（名古屋市港区，2025年12月引入大型混炼机）。公司明确表示粘结磁体成型体由大同电子制造销售。SmFeN磁体材料的目标是2030年形成年约200吨规模的市场",
+      "src": "https://www.daido.co.jp/products/isotropic_SmFeN/ ／ https://www.daido.co.jp/about/release/2026/260511_smfen.html"
     }
   },
   "routes": {
@@ -2676,13 +2798,12 @@
     },
     "03_magneto_garnet": {
       "srcNotes": {
-        "02_compound": "以Y、Tb、Gd、Ho的氧化物加入铋和铁，用液相外延法在石榴石衬底上生长磁光薄膜"
+        "02_compound": "由高纯Y、Tb氧化物生长YIG、TGG晶体，或在石榴石衬底上以LPE法生长磁光薄膜。"
       }
     },
     "04_faraday": {
       "srcNotes": {
-        "03_tb_mo": "将TGG陶瓷与Tb磁光玻璃加工成旋转器，与永磁体组合为高功率激光用元件",
-        "03_magneto_garnet": "将磁光薄膜切割至元件尺寸，与偏振器和磁体组合为光通信用旋转器"
+        "03_magneto_garnet": "将YIG、TGG晶体或磁光薄膜加工为旋转器元件，与偏振器及磁铁组合成激光和光通信用光隔离器。"
       }
     },
     "05_photonics": {
@@ -2693,11 +2814,6 @@
     "06_optical_net": {
       "srcNotes": {
         "05_photonics": "将光隔离器与光环行器装入光传输设备和海底中继器"
-      }
-    },
-    "03_tb_mo": {
-      "srcNotes": {
-        "02_compound": "以高纯Tb₄O₇作为烧结与熔制的原料"
       }
     }
   },

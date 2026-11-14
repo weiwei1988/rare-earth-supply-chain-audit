@@ -48,7 +48,7 @@ var flowOrderByElement={
   },
   DyTb:{
     2:["02_compound","02_recycle","02_metal"],
-    3:["03_tb_mo","03_magneto_garnet","03_dielectric_additive","03_magnet_alloy","03_magnet_powder"],
+    3:["03_magneto_garnet","03_dielectric_additive","03_magnet_alloy","03_magnet_powder"],
     4:["04_faraday","04_dielectric","04_mag"],
     5:["05_laser_osc","05_photonics","05_electronics","05_motor"],
     6:["06_laser","06_optical_net","06_comm","06_guidance","06_naval","06_space","06_aircraft","06_unmanned","06_launch","06_radar","06_energy"]

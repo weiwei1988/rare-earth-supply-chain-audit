@@ -24,17 +24,17 @@ report.subcategories = dataset.subcategories.length;
 report.stages = dataset.stages.length;
 
 // --- 構造・公開データ ------------------------------------------------------
-check("6工程・52分類・206社", dataset.stages.length === 6 && dataset.subcategories.length === 52 && dataset.companies.length === 206);
+check("6工程・51分類・218社", dataset.stages.length === 6 && dataset.subcategories.length === 51 && dataset.companies.length === 218);
 check(
   "工程名称を6工程構造へ更新",
   sameJson(dataset.stages.map((stage) => stage.label), ["海外の資源・分離", "素材", "材料", "部材", "モジュール・機器", "装備・システム"]),
 );
 check(
   "工程別の延べ企業数",
-  sameJson(Object.fromEntries([2, 3, 4, 5, 6].map((stage) => [stage, dataset.companies.filter((company) => company.stages.includes(stage)).length])), { 2: 8, 3: 20, 4: 43, 5: 72, 6: 104 }),
+  sameJson(Object.fromEntries([2, 3, 4, 5, 6].map((stage) => [stage, dataset.companies.filter((company) => company.stages.includes(stage)).length])), { 2: 8, 3: 26, 4: 43, 5: 75, 6: 111 }),
 );
 check(
-  "列順が全52分類を工程ごとに一度ずつ指定",
+  "列順が全51分類を工程ごとに一度ずつ指定",
   sameJson(Object.values(dataset.columnOrder).flat().sort(), dataset.subcategories.map((sub) => sub.id).sort()),
 );
 check("全分類に簡潔な解説文を収録", dataset.subcategories.every((sub) => sub.description.length >= 8 && sub.description.length <= 40));
@@ -45,7 +45,7 @@ check("希土類対象外企業を収録しない", dataset.companies.every((com
 const routeCount = dataset.subcategories.reduce((sum, sub) => sum + (sub.src?.length ?? 0), 0);
 const routeKeys = dataset.subcategories.flatMap((sub) => (sub.src ?? []).flatMap((source) => (sub.srcEls[source] ?? []).map((element) => source + "|" + sub.id + "|" + element)));
 const skippedRoutes = dataset.subcategories.flatMap((sub) => Object.keys(sub.srcSkip ?? {}).map((source) => source + "|" + sub.id));
-check("87本の監査済みカテゴリー接続", routeCount === 87);
+check("85本の監査済みカテゴリー接続", routeCount === 85);
 check("元素別接続に重複なし", routeKeys.length === new Set(routeKeys).size);
 check(
   "全工程の接続に元素と根拠を定義",
