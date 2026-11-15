@@ -2,6 +2,31 @@
 // index.html のひとつの即時実行関数に連結される（scripts/build.mjs）。
 // ファイル間で同じスコープを共有するため、import は使わない。
 
+// Share levels are scoped to company, category and element, rather than company-wide.
+function shareEntry(companyId,nodeId,element){
+  return companyShares.entries.filter(function(e){return e.company===companyId&&e.node===nodeId&&(!element||!e.els||!e.els.length||e.els.indexOf(element)>=0)}).sort(function(a,b){return b.level-a.level})[0]||{company:companyId,node:nodeId,level:1};
+}
+function criticalityPoints(){
+  var points=[];
+  elements.forEach(function(element){
+    var active=allSubs.filter(function(s){return s.els.indexOf(element)>=0&&flowCompanyCount(s.id,element)>0}),ids=new Set(active.map(function(s){return s.id})),edges=[];
+    active.forEach(function(s){(s.src||[]).forEach(function(from){if(ids.has(from)&&(s.srcEls[from]||[]).indexOf(element)>=0)edges.push([from,s.id])})});
+    function walk(start,reverse){var seen=new Set(),stack=[start];while(stack.length){var id=stack.pop();edges.forEach(function(e){if(e[reverse?1:0]===id&&!seen.has(e[reverse?0:1])){seen.add(e[reverse?0:1]);stack.push(e[reverse?0:1])}})}return seen}
+    var reachable=new Set();active.filter(function(s){return s.stage===2}).forEach(function(s){reachable.add(s.id);walk(s.id,false).forEach(function(id){reachable.add(id)})});
+    var finals=new Set(active.filter(function(s){return s.stage===6}).map(function(s){return s.id}));
+    var path=new Set(active.filter(function(s){return reachable.has(s.id)&&(finals.has(s.id)||Array.from(walk(s.id,false)).some(function(id){return finals.has(id)}))}).map(function(s){return s.id}));
+    active.filter(function(s){return s.stage<6}).forEach(function(s){
+      var down=walk(s.id,false),companies=data.filter(function(c){return c.tags.indexOf(element)>=0&&c.subs.some(function(id){return down.has(id)&&path.has(id)})});
+      var members=data.filter(function(c){return c.tags.indexOf(element)>=0&&c.subs.indexOf(s.id)>=0}),level=1;
+      members.forEach(function(c){level=Math.max(level,shareEntry(c.id,s.id,element).level)});
+      points.push({node:s.id,element:element,downstream:path.has(s.id)?companies.length:0,level:level,score:null,onPath:path.has(s.id)});
+    });
+  });
+  var max=Math.max.apply(null,[1].concat(points.map(function(p){return p.downstream})));
+  points.forEach(function(p){if(p.onPath)p.score=100*Math.sqrt(p.downstream/max*p.level/4);p.maximum=max});return points;
+}
+var criticalityCache;
+function criticalityPoint(id,element){if(!criticalityCache)criticalityCache=criticalityPoints();return criticalityCache.find(function(p){return p.node===id&&p.element===element})}
 function visible(){
   return data.filter(function(c){
     var tags=Array.isArray(c.tags)?c.tags:[];

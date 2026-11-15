@@ -2,9 +2,19 @@
 // index.html のひとつの即時実行関数に連結される（scripts/build.mjs）。
 // ファイル間で同じスコープを共有するため、import は使わない。
 
+function criticalText(key){var labels={ja:{score:'クリティカル度',share:'シェア水準',levels:['未確認','国内上位','世界上位／国内首位','世界首位級'],formula:'クリティカル度＝100 × √［（下流の収録企業・事業単位数 ÷ 全元素・全採点対象の最大値）×（シェア水準 ÷ 4）］。Stage 02〜05を採点し、同じ元素で起点から最終工程までつながる経路を集計します。下流企業は重複排除し、自カテゴリーを含めません。シェア水準は所属企業の最高値、未確認は水準1。市場シェアの実数や中国依存度・在庫・代替可能性を直接示す指標ではありません。',source:'出典（原文）'},en:{score:'Criticality',share:'Share level',levels:['Unverified','Domestic leader group','Global leader group / domestic No. 1','Global No. 1 class'],formula:'Criticality = 100 × √[(downstream listed companies/business units ÷ maximum across all elements and scored categories) × (share level ÷ 4)]. Stages 02–05 are scored on same-element paths from origin to final systems. Downstream companies are deduplicated; the current category is excluded. The highest member share level is used; unverified = level 1. This relative index does not directly measure actual market share, China dependency, inventories or substitutability.',source:'Source (original language)'},'zh-CN':{score:'关键度',share:'份额等级',levels:['未确认','国内领先群体','全球领先群体／国内第一','全球首位级'],formula:'关键度＝100 × √［（下游收录企业及业务单位数 ÷ 全元素全部评分分类的最大值）×（份额等级 ÷ 4）］。评分范围为Stage 02～05，仅统计同一元素从起点连至最终系统的路径。下游企业去重，不含本分类；采用成员企业最高份额等级，未确认为等级1。本相对指标不直接衡量实际市场份额、中国依赖、库存或可替代性。',source:'来源（原文）'}};return labels[language][key]}
+function criticalDefinition(){return language==='en'?'Criticality: an indicator of how widely a shutdown at a process could affect the downstream supply chain.':language==='zh-CN'?'关键度：衡量某一工序停运后，会对供应链下游产生多大范围影响的指标。':'クリティカル度：その工程が止まるとサプライチェーンの下流にどれだけ広範な影響が出るのか？を表す指標'}
+function shareRows(company){
+  var node=activeView==='element-flow'?flowSelectionId:selection.type==='sub'?selection.id:null;
+  var els=activeView==='element-flow'?[flowElement]:selectedElements;
+  return company.subs.filter(function(id){return Number(id.slice(0,2))<6&&(!node||id===node)}).flatMap(function(id){return els.filter(function(el){return company.tags.indexOf(el)>=0}).map(function(el){return{entry:shareEntry(company.id,id,el),node:id,element:el}})});
+}
+function shareBadgesHtml(company){return shareRows(company).map(function(row){var e=row.entry;return'<span class="re-tag re-share-level" title="'+esc(subLabel(row.node)+' / '+tagLabel(row.element))+'">'+esc(subLabel(row.node)+' · '+tagLabel(row.element)+' · '+criticalText('share')+' '+e.level+'：'+criticalText('levels')[e.level-1])+'</span>'}).join('')}
+function shareEvidenceHtml(company){return shareRows(company).map(function(row){var e=row.entry;return'<div class="re-dossier-row"><dt>'+esc(subLabel(row.node)+' / '+tagLabel(row.element))+'</dt><dd>'+esc(criticalText('share')+' '+e.level+' · '+criticalText('levels')[e.level-1])+(e.product?'<p>'+esc(e.product+'：'+e.share)+'</p>':'')+(e.source?'<a href="'+esc(e.source)+'" target="_blank" rel="noopener noreferrer">'+esc(criticalText('source'))+'</a>':'')+(e.note?'<p>'+esc(e.note)+'</p>':'')+'</dd></div>'}).join('')}
 function companyCardHtml(company,attribute,activeId){
   var tagHtml=company.tags.map(function(tag){return'<span class="re-tag" style="color:'+colors[tag]+';border-color:'+colors[tag]+'">'+tagLabel(tag)+'</span>'}).join("");
   if(company.atlaProcurement)tagHtml+='<span class="re-tag re-atla-badge">'+esc(tr("atla"))+'</span>';
+  tagHtml+=shareBadgesHtml(company);
   var summary=companySummary(company);
   return'<button type="button" class="re-company" '+attribute+'="'+esc(company.id)+'" aria-pressed="'+(activeId===company.id)+'"><div class="re-company-name">'+esc(companyText(company,"name"))+'</div><div class="re-tags">'+tagHtml+'</div><div class="re-company-pos" title="'+esc(summary.full)+'">'+esc(summary.short)+'</div></button>'
 }
@@ -31,7 +41,7 @@ function dossierMarkup(company){
     var display=(row[0]===fields[2]||row[0]===fields[4])?summarizeItems(row[1],5):{short:row[1],full:row[1],hidden:0};
     var more=display.hidden?'<details class="re-more"><summary>'+esc(tr("more",{count:display.hidden+5}))+'</summary><div>'+esc(display.full)+'</div></details>':'';
     return'<div class="re-dossier-row"><dt>'+esc(row[0])+'</dt><dd>'+esc(display.short)+more+'</dd></div>'
-  }).join("")+'</dl></div>'
+  }).join("")+shareEvidenceHtml(company)+'</dl></div>'
 }
 function dependencyDashboardHtml(elements){
   var shown=elements||selectedElements;

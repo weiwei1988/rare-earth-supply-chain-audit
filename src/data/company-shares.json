@@ -1,0 +1,1902 @@
+{
+  "title": "STAGE 02〜05 の企業×工程（×元素）別 主力製品のシェア水準",
+  "checkedAt": "2026-11-15",
+  "method": "Sandbox share assessments imported by exact category label and validated company placement. Missing assessments default to level 1. Scores are recalculated from production routes.",
+  "levels": [
+    {
+      "level": 4,
+      "label": "世界首位級",
+      "rule": "世界シェア40%以上。数値がない場合は、世界首位・世界唯一とされるもの"
+    },
+    {
+      "level": 3,
+      "label": "世界上位／国内首位",
+      "rule": "世界シェア10〜40%、または国内シェア50%以上（国内唯一の量産拠点を含む）"
+    },
+    {
+      "level": 2,
+      "label": "国内上位",
+      "rule": "国内シェア10〜50%、国内数社の一角、または世界市場で主要企業として名前が挙がる（数値10%未満を含む）"
+    },
+    {
+      "level": 1,
+      "label": "未確認",
+      "rule": "公開情報でシェアを確認できない、非開示、または性能・技術面の記載のみ"
+    }
+  ],
+  "entries": [
+    {
+      "company": "seed-8",
+      "name": "住友金属鉱山／住鉱国富電子",
+      "node": "02_compound",
+      "els": [
+        "Sc"
+      ],
+      "product": "高純度 Sc₂O₃（フィリピン産ニッケル中間体から回収）",
+      "level": 3,
+      "share": "日本でスカンジウムを大規模に供給できるのは同社だけ。世界供給のうち日本製は約1割",
+      "scope": "国内",
+      "basis": "公開情報",
+      "source": "https://jfs.or.jp/jfs-cs/rare-earth-03/",
+      "sourceLabel": "ジャパン・フォー・サステナビリティ 希土類関連記事（2026年11月確認）",
+      "note": "「日本製は1割」は日本全体の数字で同社単独の世界シェアではない。同社の製品ページ側にはシェアの記述はなく「世界的に生産量が少なく」「当社の安定供給」という記述のみ"
+    },
+    {
+      "company": "seed-1",
+      "name": "三井金属鉱業（レアマテリアル事業部）",
+      "node": "02_compound",
+      "els": [
+        "Y"
+      ],
+      "product": "高純度 Y₂O₃・YF₃・YOF、YSZ 用 Y 化合物ほか希土類酸化物",
+      "level": 2,
+      "share": "軽希土から重希土まで全元素を扱う日本でも数少ないレアアース総合メーカーの一角",
+      "scope": "国内",
+      "basis": "公開情報",
+      "source": "https://www.nihon-ma.co.jp/news/20250115_5706-5/",
+      "sourceLabel": "日本イットリウム吸収合併の報道（2025年1月15日発表、2026年11月確認）",
+      "note": "数値シェアは非開示。三井金属の製品ページには「日本で最初に量産精製を行った」とあるが、これは先行性の記述でシェアではない"
+    },
+    {
+      "company": "seed-1",
+      "name": "三井金属鉱業（レアマテリアル事業部）",
+      "node": "02_compound",
+      "els": [
+        "DyTb"
+      ],
+      "product": "Dy₂O₃・Tb₄O₇・Tb₂O₃ ほか重希土類酸化物",
+      "level": 2,
+      "share": "重希土まで全元素を扱う日本でも数少ないレアアース総合メーカーの一角",
+      "scope": "国内",
+      "basis": "公開情報",
+      "source": "https://www.nihon-ma.co.jp/news/20250115_5706-5/",
+      "sourceLabel": "日本イットリウム吸収合併の報道（2025年1月15日発表、2026年11月確認）",
+      "note": "数値シェアは非開示。製品ページで Dy₂O₃・Tb₄O₇・Tb₂O₃ の標準品の取扱いを確認した"
+    },
+    {
+      "company": "seed-3",
+      "name": "信越化学工業",
+      "node": "02_compound",
+      "els": [
+        "Y"
+      ],
+      "product": "希土類の分離・精製（Y₂O₃・溶射用イットリア ほか）",
+      "level": 2,
+      "share": "国内で希土類製錬を手がける数社の一角。武生工場は国内トップクラスの生産能力",
+      "scope": "国内",
+      "basis": "公開情報",
+      "source": "https://www.jiji.com/jc/article?k=2026061100578&g=eco",
+      "sourceLabel": "時事通信「信越化学、福井で希土類製錬の新工場」（2026年6月11日、2026年11月確認）",
+      "note": "記事の「国内トップクラスの生産能力」は希土類製錬全体に対する記述で、元素別・Y単独の内訳は非開示。同社の希土類製品ページ（rare-earth.jp）で取扱元素表に Y が含まれることを確認した"
+    },
+    {
+      "company": "seed-3",
+      "name": "信越化学工業",
+      "node": "02_compound",
+      "els": [
+        "DyTb"
+      ],
+      "product": "希土類の分離・精製（Dy・Tb 系酸化物ほか）",
+      "level": 2,
+      "share": "国内で希土類製錬を手がける数社の一角。武生工場は国内トップクラスの生産能力",
+      "scope": "国内",
+      "basis": "公開情報",
+      "source": "https://www.jiji.com/jc/article?k=2026061100578&g=eco",
+      "sourceLabel": "時事通信「信越化学、福井で希土類製錬の新工場」（2026年6月11日、2026年11月確認）",
+      "note": "「国内トップクラスの生産能力」は希土類製錬全体に対する記述。元素別の内訳は非開示。rare-earth.jp の取扱元素表に Tb・Dy が含まれることを確認した"
+    },
+    {
+      "company": "seed-2",
+      "name": "三徳（プロテリアルマグネティクス傘下）",
+      "node": "02_metal",
+      "els": [
+        "DyTb"
+      ],
+      "product": "高純度希土類金属（溶融塩電解による還元）",
+      "level": 3,
+      "share": "溶融塩電解による高品質希土類金属の製造法は国内唯一とされる",
+      "scope": "国内",
+      "basis": "公開情報",
+      "source": "https://web.pref.hyogo.lg.jp/sr07/onlyone/documents/santokucorporation.pdf",
+      "sourceLabel": "兵庫県「ひょうごオンリーワン企業」会社プロフィール（2026年11月確認）",
+      "note": "現データの「国内Nd磁石合金市場シェア約65%」は公開情報では裏づけられなかったため、根拠を国内唯一の溶融塩電解法に差し替えた。記述自体は兵庫県が掲載する会社プロフィールに基づく自社説明"
+    },
+    {
+      "company": "seed-2",
+      "name": "三徳（プロテリアルマグネティクス傘下）",
+      "node": "02_metal",
+      "els": [
+        "Sm"
+      ],
+      "product": "高純度希土類金属（SmCo 合金用の Sm 系金属）",
+      "level": 2,
+      "share": "国内唯一のレア・アース専業メーカーとして希土類金属を工業生産する国内数社の一角",
+      "scope": "国内",
+      "basis": "公開情報",
+      "source": "https://web.pref.hyogo.lg.jp/sr07/onlyone/documents/santoku_1.pdf",
+      "sourceLabel": "兵庫県「ひょうごオンリーワン企業」再認定資料（令和3年度、2026年11月確認）",
+      "note": "Sm 金属に限ったシェア・国内唯一の記述はない。会社プロフィールでは事業の先頭に「Samarium cobalt alloys … for permanent magnets」が挙げられている"
+    },
+    {
+      "company": "seed-3",
+      "name": "信越化学工業",
+      "node": "02_metal",
+      "els": [
+        "DyTb"
+      ],
+      "product": "希土類金属（還元）",
+      "level": 2,
+      "share": "国内で希土類製錬を手がける数社の一角。武生工場は国内トップクラスの生産能力",
+      "scope": "国内",
+      "basis": "公開情報",
+      "source": "https://www.jiji.com/jc/article?k=2026061100578&g=eco",
+      "sourceLabel": "時事通信「信越化学、福井で希土類製錬の新工場」（2026年6月11日、2026年11月確認）",
+      "note": "記事は「製錬」としており、金属還元工程単独の能力・シェアの内訳は非開示"
+    },
+    {
+      "company": "seed-2",
+      "name": "三徳（プロテリアルマグネティクス傘下）",
+      "node": "02_recycle",
+      "els": [
+        "DyTb"
+      ],
+      "product": "磁石リサイクル（磁石スクラップ→酸化物→溶融塩電解で金属還元→SC法薄片）",
+      "level": 3,
+      "share": "磁石スクラップを溶融塩電解で金属に戻す循環リサイクルは国内唯一の取り組みとされる",
+      "scope": "国内",
+      "basis": "公開情報",
+      "source": "https://web.pref.hyogo.lg.jp/sr07/onlyone/documents/santokucorporation.pdf",
+      "sourceLabel": "兵庫県「ひょうごオンリーワン企業」会社プロフィール（2026年11月確認）",
+      "note": "処理量・国内シェアの数値は非開示。記述は兵庫県が掲載する会社プロフィールの自社説明に基づく"
+    },
+    {
+      "company": "seed-1",
+      "name": "三井金属鉱業（レアマテリアル事業部）",
+      "node": "02_recycle",
+      "els": [
+        "Y"
+      ],
+      "product": "リサイクル原料の活用（希土類リサイクル）",
+      "level": 2,
+      "share": "日本でも数少ないレアアース総合メーカーで、JOGMECと共同でリサイクル供給網の技術開発",
+      "scope": "国内",
+      "basis": "公開情報",
+      "source": "https://www.nihon-ma.co.jp/news/20250115_5706-5/",
+      "sourceLabel": "日本イットリウム吸収合併の報道（2025年1月15日発表、2026年11月確認）",
+      "note": "リサイクル事業単独の処理量・シェアは非開示。三井金属の適時開示PDF（JPX）は403で直接取得できなかったため、開示内容を伝える記事で確認した"
+    },
+    {
+      "company": "seed-2",
+      "name": "三徳（プロテリアルマグネティクス傘下）",
+      "node": "02_recycle",
+      "els": [
+        "Sm"
+      ],
+      "product": "磁石リサイクル",
+      "level": 2,
+      "share": "希土類磁石スクラップの循環リサイクルを国内で手がける数少ない事業者",
+      "scope": "国内",
+      "basis": "公開情報",
+      "source": "https://web.pref.hyogo.lg.jp/sr07/onlyone/documents/santokucorporation.pdf",
+      "sourceLabel": "兵庫県「ひょうごオンリーワン企業」会社プロフィール（2026年11月確認）",
+      "note": "出典は「希土類磁石の廃材」と総称しており、Sm 系磁石スクラップを対象に含むかは明示されていない"
+    },
+    {
+      "company": "seed-2",
+      "name": "三徳（プロテリアルマグネティクス傘下）",
+      "node": "03_magnet_alloy",
+      "els": [
+        "DyTb"
+      ],
+      "product": "Nd 磁石合金（Dy・Tb 添加）",
+      "level": 3,
+      "share": "国内唯一のレア・アース専業メーカーで、磁石合金のSC法は世界標準の製造法",
+      "scope": "国内",
+      "basis": "公開情報",
+      "source": "https://web.pref.hyogo.lg.jp/sr07/onlyone/documents/santoku_1.pdf",
+      "sourceLabel": "兵庫県「ひょうごオンリーワン企業」再認定資料（令和3年度、2026年11月確認）",
+      "note": "現データの「国内Nd磁石合金市場シェア約65%」は、JPX開示・経産省資料・業界紙・調査会社のいずれでも裏づけられなかったため、シェア記述から外した。SC法が世界標準というのは製造法の普及に関する記述で市場占有率ではない"
+    },
+    {
+      "company": "seed-2",
+      "name": "三徳（プロテリアルマグネティクス傘下）",
+      "node": "03_magnet_alloy",
+      "els": [
+        "Sm"
+      ],
+      "product": "サマリウム磁石合金（焼結用・ボンド磁石用）",
+      "level": 2,
+      "share": "国内唯一のレア・アース専業メーカーで、SmCo 合金を事業の筆頭に挙げる国内数社の一角",
+      "scope": "国内",
+      "basis": "公開情報",
+      "source": "https://web.pref.hyogo.lg.jp/sr07/onlyone/documents/santokucorporation.pdf",
+      "sourceLabel": "兵庫県「ひょうごオンリーワン企業」会社プロフィール（2026年11月確認）",
+      "note": "Sm 磁石合金に限ったシェアの数値や国内唯一の記述はない。Nd 磁石合金の国内シェア（約65%）は Sm 合金には当てていない"
+    },
+    {
+      "company": "seed-2",
+      "name": "三徳（プロテリアルマグネティクス傘下）",
+      "node": "03_magnet_powder",
+      "els": [
+        "Sm"
+      ],
+      "product": "サマリウム磁石の磁粉とボンド磁石用コンパウンド",
+      "level": 2,
+      "share": "国内唯一のレア・アース専業メーカーで、Sm 磁粉・コンパウンドを合金から一貫生産する国内数社の一角",
+      "scope": "国内",
+      "basis": "公開情報",
+      "source": "https://www.santoku-corp.co.jp/business/jisyaku.html",
+      "sourceLabel": "三徳 磁石材料事業ページ（2026年11月確認）",
+      "note": "同ページにシェアの記述はなく、ボンド磁石用は「合金から製品まで一貫生産」との記述のみ。位置づけは兵庫県資料の「国内唯一のレア・アース専業メーカー」に依拠"
+    },
+    {
+      "company": "seed-8",
+      "name": "住友金属鉱山／住鉱国富電子",
+      "node": "03_magnet_powder",
+      "els": [
+        "Sm"
+      ],
+      "product": "SmFeN 磁石粉 Wellmax、ボンド磁石用コンパウンド（住鉱国富電子）",
+      "level": 2,
+      "share": "SmFeN 磁石で世界の主要3社の一角として名前が挙がる（3社計で世界の95%超とされる）",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.gii.tw/report/qyr1874297-smfen-magnets-global-market-share-ranking-overall.html",
+      "sourceLabel": "QYResearch「SmFeN磁石 世界市場シェア・ランキング」レポート概要（2026年11月確認）",
+      "note": "グループ内の住鉱国富電子がコンパウンドを担う。個社別シェアは非開示"
+    },
+    {
+      "company": "powder-mate",
+      "name": "メイト",
+      "node": "03_magnet_powder",
+      "els": [
+        "DyTb"
+      ],
+      "product": "希土類4系統の射出成形用コンパウンド（NdFeB 系ほか）",
+      "level": 2,
+      "share": "主力のプラスチックマグネット材料で国内トップシェアとされるが、希土類系に限った内訳は不明",
+      "scope": "国内",
+      "basis": "公開情報",
+      "source": "https://www.pref.okayama.lg.jp/site/micro/598064.html",
+      "sourceLabel": "岡山県 企業紹介ページ（2026年11月確認）",
+      "note": "「国内トップシェア」の対象は「フェライト・希土類系プラスチックマグネット材料」全体で、量の多いフェライト系を含む。順位の根拠となる調査元・年次・数値は示されていない"
+    },
+    {
+      "company": "powder-mate",
+      "name": "メイト",
+      "node": "03_magnet_powder",
+      "els": [
+        "Sm"
+      ],
+      "product": "希土類4系統の射出成形用コンパウンド（Sm 系を含む）",
+      "level": 2,
+      "share": "主力のプラスチックマグネット材料で国内トップシェアとされるが、希土類系に限った内訳は不明",
+      "scope": "国内",
+      "basis": "公開情報",
+      "source": "https://www.pref.okayama.lg.jp/site/micro/598064.html",
+      "sourceLabel": "岡山県 企業紹介ページ（2026年11月確認）",
+      "note": "「国内トップシェア」の対象はフェライト・希土類系プラスチックマグネット材料全体。Sm 系コンパウンド単独のシェアは不明"
+    },
+    {
+      "company": "powder-nichia",
+      "name": "日亜化学工業",
+      "node": "03_magnet_powder",
+      "els": [
+        "Sm"
+      ],
+      "product": "SmFeN 異方性コンパウンド A・R シリーズ",
+      "level": 2,
+      "share": "SmFeN 磁石で世界の主要3社の一角として名前が挙がる（3社計で世界の95%超とされる）",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.gii.tw/report/qyr1874297-smfen-magnets-global-market-share-ranking-overall.html",
+      "sourceLabel": "QYResearch「SmFeN磁石 世界市場シェア・ランキング」レポート概要（2026年11月確認）",
+      "note": "3社の内訳（個社別シェア）は概要ページでは非開示。別の調査会社の概要では主要企業にTDK・日立・三井グループが挙がるなど、資料間で主要企業の記載が一致しない"
+    },
+    {
+      "company": "powder-daido-steel",
+      "name": "大同特殊鋼",
+      "node": "03_magnet_powder",
+      "els": [
+        "Sm"
+      ],
+      "product": "等方性 SmFeN 磁粉 SFN2M・SFN3H とコンパウンド",
+      "level": 2,
+      "share": "SmFeN 磁石で世界の主要3社の一角として名前が挙がる（3社計で世界の95%超とされる）",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.gii.tw/report/qyr1874297-smfen-magnets-global-market-share-ranking-overall.html",
+      "sourceLabel": "QYResearch「SmFeN磁石 世界市場シェア・ランキング」レポート概要（2026年11月確認）",
+      "note": "出典が挙げる社名は100%子会社の「大同電子（ダイドー電子）」で、グループ内の別会社名での記載。個社別シェアは非開示"
+    },
+    {
+      "company": "seed-5",
+      "name": "東ソー",
+      "node": "03_ceramic",
+      "els": [
+        "Y"
+      ],
+      "product": "安定化ジルコニア粉末",
+      "level": 4,
+      "share": "会社説明資料に「ジルコニア粉末（世界シェアNo.1）」と明記",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.tosoh.co.jp/ir/assets/d3887e10659179a31f24c47d38147918cc63a03f.pdf",
+      "sourceLabel": "東ソー IR 会社説明資料（2026年11月確認）",
+      "note": "同資料は高機能材料の主生成物として「ジルコニア粉末（世界シェアNo.1）」と記載。別途2021年のプレスリリースでも「世界で初めてジルコニア量産化に成功して以降、ファインセラミックス分野での世界トップメーカーを維持」と述べている。"
+    },
+    {
+      "company": "seed-6",
+      "name": "第一稀元素化学工業",
+      "node": "03_ceramic",
+      "els": [
+        "Y"
+      ],
+      "product": "イットリア安定化ジルコニア粉末（HSY 系）",
+      "level": 3,
+      "share": "ジルコニウム化合物全体で世界トップメーカーだが、安定化ジルコニア粉末単独のシェアは非開示",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://finance.logmi.jp/articles/378635",
+      "sourceLabel": "logmi Finance／第一稀元素化学工業 決算説明会書き起こし（2026年11月確認）",
+      "note": "日経の見出しも「世界首位素材のジルコニウム化合物」であり、首位は上位カテゴリ（ジルコニウム化合物）に対する記述。安定化ジルコニア粉末では東ソーがIRで世界シェアNo.1を明記しており、同一市場の首位が両立しないため上位カテゴリのシェアを分類に流用しない。"
+    },
+    {
+      "company": "seed-6",
+      "name": "第一稀元素化学工業",
+      "node": "03_ceramic",
+      "els": [
+        "Sc"
+      ],
+      "product": "スカンジア安定化ジルコニア粉末（DSZ-95・10Sc1CeSZ-R2）",
+      "level": 2,
+      "share": "ScSZ 粉末を商用ラインアップに持つ国内数社の一角。シェア数値は公開情報で確認できない",
+      "scope": "国内",
+      "basis": "公開情報",
+      "source": "https://www.dkkk.co.jp/products/functions.html",
+      "sourceLabel": "第一稀元素化学工業 製品一覧（燃料電池用ジルコニア DSZ-95／10Sc1CeSZ-R2）（2026年11月確認）",
+      "note": "有価証券報告書本文に「スカンジ」を含む記述がないことも確認済み。ScSZ 固有のシェアは未確認。 2026-11-15 に公開情報を追加で確認したが、ScSZ の数量・占有率を示す記述は IR・中期計画・報道のいずれにもない。証券レポートの「ジルコニウムの原鉱石から製品まで一貫生産できる世界で唯一の企業」は生産体制の記述でシェアではない"
+    },
+    {
+      "company": "seed-10",
+      "name": "神島化学工業",
+      "node": "03_yag_crystal",
+      "els": [
+        "Y"
+      ],
+      "product": "透明 YAG・Y₂O₃ セラミックス",
+      "level": 4,
+      "share": "レーザー増幅に使える高品質の透明セラミックスを製造・販売する世界で唯一のメーカーと自社開示",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://konoshima.co.jp/topics/file/00307.pdf",
+      "sourceLabel": "神島化学工業 開示資料「大阪大学レーザー科学研究所に『神島化学工業先端レーザーセラミックス共同研究部門』設立について」2023年12月1日（2026年11月確認）",
+      "note": "数値シェアではなく「世界で唯一のメーカー」という供給者としての自社表現。多結晶YAGセラミックス一般にはJX金属など他社も存在するため、大型・レーザー級の高品質品に限った表現と解すべき。"
+    },
+    {
+      "company": "seed-11",
+      "name": "信光社",
+      "node": "03_yag_crystal",
+      "els": [
+        "Y"
+      ],
+      "product": "YAG 単結晶の育成",
+      "level": 1,
+      "share": "公開情報でシェアを確認できていない",
+      "scope": "",
+      "basis": "公開情報",
+      "source": "https://www.shinkosha.com/",
+      "sourceLabel": "信光社 公式サイト（2026年11月確認）",
+      "note": "公式サイトの主力はサファイア・ルチル・SrTiO₃で、YAG単結晶の製品掲載は確認できなかった。"
+    },
+    {
+      "company": "seed-44",
+      "name": "JX金属",
+      "node": "03_yag_crystal",
+      "els": [
+        "Y"
+      ],
+      "product": "Nd:YAG・Yb:YAG 透明セラミックス（最大6インチ）",
+      "level": 1,
+      "share": "公開情報でシェアを確認できていない",
+      "scope": "",
+      "basis": "公開情報",
+      "source": "https://www.jx-nmm.com/products/development/yag/",
+      "sourceLabel": "JX金属 開発中の製品「YAGセラミックス」（2026年11月確認）",
+      "note": "同ページは開発中製品（Products Under Development）としての掲載で、担当事業部・製造拠点も非開示。"
+    },
+    {
+      "company": "faraday-granopt",
+      "name": "グラノプト",
+      "node": "03_magneto_garnet",
+      "els": [
+        "Y"
+      ],
+      "product": "Bi置換希土類鉄ガーネットの単結晶膜（LPE法、厚さ0.1〜0.5mm）",
+      "level": 4,
+      "share": "ファラデーローテータ（Bi置換希土類鉄ガーネット単結晶膜）で世界トップシェアと親会社が開示",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.mgc.co.jp/corporate/news/files/230731.pdf",
+      "sourceLabel": "三菱ガス化学 ニュースリリース「株式会社グラノプト新工場竣工のお知らせ」2023年7月31日（2026年11月確認）",
+      "note": "住友金属鉱山51%・三菱ガス化学49%の合弁会社のシェアで、出典は親会社（三菱ガス化学）の開示。経産省「新グローバルニッチトップ企業100選」選定資料（https://www.granopt.jp/en/images/gnt100_01.pdf）も「FR供給者がほぼ2社に限られる特殊な材料」「世界トップシェアを確保するに至りました」と記す。"
+    },
+    {
+      "company": "faraday-granopt",
+      "name": "グラノプト",
+      "node": "03_magneto_garnet",
+      "els": [
+        "DyTb"
+      ],
+      "product": "Bi置換希土類鉄ガーネットの単結晶膜（LPE法、厚さ0.1〜0.5mm）",
+      "level": 4,
+      "share": "ファラデーローテータ（Bi置換希土類鉄ガーネット単結晶膜）で世界トップシェアと親会社が開示",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.mgc.co.jp/corporate/news/files/230731.pdf",
+      "sourceLabel": "三菱ガス化学 ニュースリリース「株式会社グラノプト新工場竣工のお知らせ」2023年7月31日（2026年11月確認）",
+      "note": "住友金属鉱山51%・三菱ガス化学49%の合弁会社のシェア。出典は希土類の内訳を示しておらず「希土類鉄ガーネット」としての記述で、Tb系置換を含む材料系全体に対する首位と読んでいる。"
+    },
+    {
+      "company": "seed-3",
+      "name": "信越化学工業",
+      "node": "03_magneto_garnet",
+      "els": [
+        "Y"
+      ],
+      "product": "ファラデー回転子用ガーネット結晶（鉛フリー化）と非磁性ガーネット基板（NOG・NGG）",
+      "level": 1,
+      "share": "公開情報でシェアを確認できていない",
+      "scope": "",
+      "basis": "公開情報",
+      "source": "https://www.shinetsu.co.jp/jp/products/electronics-and-functional-materials-business/optical-isolators/",
+      "sourceLabel": "信越化学工業 光アイソレータ用材料 製品ページ（2026年11月確認）",
+      "note": "経産省GNT100のグラノプト選定資料は「FR供給者がほぼ2社に限られる」と記すが、残る1社の社名は明記されておらず、信越化学に当てる根拠にはならない。"
+    },
+    {
+      "company": "seed-3",
+      "name": "信越化学工業",
+      "node": "03_magneto_garnet",
+      "els": [
+        "DyTb"
+      ],
+      "product": "ファラデー回転子用ガーネット結晶（鉛フリー化）と非磁性ガーネット基板（NOG・NGG）",
+      "level": 1,
+      "share": "公開情報でシェアを確認できていない",
+      "scope": "",
+      "basis": "公開情報",
+      "source": "https://www.shinetsu.co.jp/jp/products/electronics-and-functional-materials-business/optical-isolators/",
+      "sourceLabel": "信越化学工業 光アイソレータ用材料 製品ページ（2026年11月確認）",
+      "note": "経産省GNT100のグラノプト選定資料の「FR供給者がほぼ2社」の他方が同社である可能性はあるが、公開資料に社名の明記がないため水準に反映していない。"
+    },
+    {
+      "company": "seed-10",
+      "name": "神島化学工業",
+      "node": "03_magneto_garnet",
+      "els": [
+        "DyTb"
+      ],
+      "product": "光アイソレーター用 TGG 透明セラミックス",
+      "level": 1,
+      "share": "公開情報でシェアを確認できていない",
+      "scope": "",
+      "basis": "公開情報",
+      "source": "https://www.konoshima.co.jp/ceramics/tgg.html",
+      "sourceLabel": "神島化学工業 光アイソレーター（TGG）製品ページ（2026年11月確認）",
+      "note": "同社開示の「世界で唯一」はレーザー増幅用透明セラミックスについての表現で、光アイソレータ用TGGの分類には当てていない。"
+    },
+    {
+      "company": "seed-12",
+      "name": "オキサイド",
+      "node": "03_magneto_garnet",
+      "els": [
+        "Y"
+      ],
+      "product": "TGG 単結晶と LPE 育成の Bi:RIG",
+      "level": 1,
+      "share": "公開情報でシェアを確認できていない",
+      "scope": "",
+      "basis": "公開情報",
+      "source": "https://www.opt-oxide.com/ir/meeting/meeting26_review/",
+      "sourceLabel": "オキサイド IR 決算説明（2026年11月確認）",
+      "note": "同社の公表シェア（波長変換単結晶95%以上、深紫外レーザー30%以上）はいずれも半導体ウェハ検査装置向けの別分類で、磁気光学単結晶には当てられない。"
+    },
+    {
+      "company": "seed-12",
+      "name": "オキサイド",
+      "node": "03_magneto_garnet",
+      "els": [
+        "DyTb"
+      ],
+      "product": "TGG 単結晶と LPE 育成の Bi:RIG",
+      "level": 1,
+      "share": "公開情報でシェアを確認できていない",
+      "scope": "",
+      "basis": "公開情報",
+      "source": "https://www.opt-oxide.com/ir/meeting/meeting26_review/",
+      "sourceLabel": "オキサイド IR 決算説明（2026年11月確認）",
+      "note": "TGGはTb系材料だが、同社が公表するシェアは波長変換単結晶と深紫外レーザーのみ。"
+    },
+    {
+      "company": "faraday-kohoku",
+      "name": "湖北工業",
+      "node": "03_magneto_garnet",
+      "els": [
+        "Y"
+      ],
+      "product": "ファラデー回転子用の磁気光学膜（結晶育成・加工から自社一貫）",
+      "level": 1,
+      "share": "公開情報でシェアを確認できていない",
+      "scope": "",
+      "basis": "公開情報",
+      "source": "https://www.kohokukogyo.co.jp/assets/doc/ir/20251128_mufg_ir_seminar.pdf",
+      "sourceLabel": "湖北工業 MUFG IRセミナー説明資料 2025年11月28日（2026年11月確認）",
+      "note": "同社の公表シェアは素子・部品である光アイソレータ（金額ベース世界50%）に対するもので、材料である磁気光学膜は自社の光アイソレータ向け内製材料。外販市場でのシェアは確認できない。"
+    },
+    {
+      "company": "faraday-kohoku",
+      "name": "湖北工業",
+      "node": "03_magneto_garnet",
+      "els": [
+        "DyTb"
+      ],
+      "product": "ファラデー回転子用の磁気光学膜（結晶育成・加工から自社一貫）",
+      "level": 1,
+      "share": "公開情報でシェアを確認できていない",
+      "scope": "",
+      "basis": "公開情報",
+      "source": "https://www.kohokukogyo.co.jp/assets/doc/ir/20251128_mufg_ir_seminar.pdf",
+      "sourceLabel": "湖北工業 MUFG IRセミナー説明資料 2025年11月28日（2026年11月確認）",
+      "note": "膜の組成（Tb置換の有無・比率）は非開示。公表シェアは素子である光アイソレータに対するもの。"
+    },
+    {
+      "company": "optics-carlit",
+      "name": "カーリット",
+      "node": "03_magneto_garnet",
+      "els": [
+        "Y"
+      ],
+      "product": "YIG（Y₃Fe₅O₁₂）単結晶（FZ法）",
+      "level": 1,
+      "share": "公開情報でシェアを確認できていない",
+      "scope": "",
+      "basis": "公開情報",
+      "source": "https://www.carlit.co.jp/silicon/technology.html",
+      "sourceLabel": "カーリット シリコン事業 技術ページ（2026年11月確認）",
+      "note": "旧・連結子会社シリコンテクノロジー（2024年10月にカーリットへ合併）が2024年8月にYIG単結晶で磁気光学材料分野へ新規参入すると発表した段階。"
+    },
+    {
+      "company": "optics-crystalsystem",
+      "name": "クリスタルシステム",
+      "node": "03_magneto_garnet",
+      "els": [
+        "Y"
+      ],
+      "product": "YIG 単結晶（光学式浮遊帯域溶融法）",
+      "level": 1,
+      "share": "公開情報でシェアを確認できていない",
+      "scope": "",
+      "basis": "公開情報",
+      "source": "https://www.crystalsys.co.jp/product/crystals/yig/",
+      "sourceLabel": "クリスタルシステム YIG 製品ページ（2026年11月確認）",
+      "note": ""
+    },
+    {
+      "company": "optics-smmp",
+      "name": "SMMプレシジョン",
+      "node": "03_magneto_garnet",
+      "els": [
+        "Y"
+      ],
+      "product": "SGGG 基板",
+      "level": 1,
+      "share": "公開情報でシェアを確認できていない",
+      "scope": "",
+      "basis": "公開情報",
+      "source": "https://www.smm.co.jp/business/material/products/optical_isolator/",
+      "sourceLabel": "住友金属鉱山 光アイソレータ用材料 製品ページ（2026年11月確認）",
+      "note": "住友金属鉱山グループ会社。親会社はFRで世界トップシェアのグラノプトにも51%出資するが、SGGG基板自体のシェアは別途確認できていないため、グラノプトのシェアは当てていない。"
+    },
+    {
+      "company": "seed-1",
+      "name": "三井金属鉱業（レアマテリアル事業部）",
+      "node": "03_dielectric_additive",
+      "els": [
+        "Y"
+      ],
+      "product": "MLCC 用途の希土類酸化物（粒径を整えた微粉）・希土類塩",
+      "level": 2,
+      "share": "全希土類を扱う国内では数少ない希土類総合メーカーと報じられる一角",
+      "scope": "国内",
+      "basis": "公開情報",
+      "source": "https://www.nihon-ma.co.jp/news/20250115_5706-5/",
+      "sourceLabel": "M&A情報ニュース「三井金属鉱業、子会社の日本イットリウムを吸収合併」2025年1月（2026年11月確認）",
+      "note": "記述は希土類の分離精製・総合メーカーとしての位置づけであり、MLCC用誘電体添加剤に限ったシェアではない。MLCC用途の製品ライン自体は同社の電子材料向けページで確認できる。"
+    },
+    {
+      "company": "seed-1",
+      "name": "三井金属鉱業（レアマテリアル事業部）",
+      "node": "03_dielectric_additive",
+      "els": [
+        "DyTb"
+      ],
+      "product": "MLCC 用途の希土類酸化物（粒径を整えた微粉）・希土類塩",
+      "level": 2,
+      "share": "全希土類を扱う国内では数少ない希土類総合メーカーと報じられる一角",
+      "scope": "国内",
+      "basis": "公開情報",
+      "source": "https://www.nihon-ma.co.jp/news/20250115_5706-5/",
+      "sourceLabel": "M&A情報ニュース「三井金属鉱業、子会社の日本イットリウムを吸収合併」2025年1月（2026年11月確認）",
+      "note": "重希土を含む全希土類を扱う点が記述されており、Dy・Tbの酸化物も同社の標準品ラインナップ（Dy2O3、Tb4O7等）で確認できる。MLCC添加剤に限ったシェアではない。"
+    },
+    {
+      "company": "seed-3",
+      "name": "信越化学工業",
+      "node": "04_mag",
+      "els": [
+        "DyTb"
+      ],
+      "product": "NdFeB 焼結磁石",
+      "level": 2,
+      "share": "日本のネオジム磁石市場で約19.86%（国内2位）",
+      "scope": "国内",
+      "basis": "公開情報",
+      "source": "https://www.atpress.ne.jp/news/5451602",
+      "sourceLabel": "アットプレス「日本のネオジム鉄ボロン磁石市場」調査リリース（2026年11月確認）",
+      "note": "同リリースは市場調査会社の推計で、シェアの分母（国内／世界）と調査年が明記されていない点に留意。別途、経産省資料では日本企業のネオジム磁石の世界シェアは2021年で約15%とされ、個社別の内訳はない。"
+    },
+    {
+      "company": "seed-3",
+      "name": "信越化学工業",
+      "node": "04_mag",
+      "els": [
+        "Sm"
+      ],
+      "product": "SmCo（Sm2Co17）焼結磁石",
+      "level": 2,
+      "share": "サマコバ磁石を生産する国内数社の一角として社名が挙がる",
+      "scope": "国内",
+      "basis": "公開情報",
+      "source": "https://newswitch.jp/p/35989",
+      "sourceLabel": "ニュースイッチ（日刊工業新聞 2023年2月23日）「サマコバ磁石」記事（2026年11月確認）",
+      "note": "同記事は国内生産者として信越化学工業・東芝マテリアル・トーキンの3社を挙げる。日本全体のサマコバ世界シェアは10%未満（経産省推定）で、個社の占有率は非公表。"
+    },
+    {
+      "company": "seed-18",
+      "name": "プロテリアル",
+      "node": "04_mag",
+      "els": [
+        "DyTb"
+      ],
+      "product": "NEOMAX NdFeB 焼結磁石、低 Dy 化磁石",
+      "level": 2,
+      "share": "日本のネオジム磁石市場で約26.46%（国内首位）",
+      "scope": "国内",
+      "basis": "公開情報",
+      "source": "https://www.atpress.ne.jp/news/5451602",
+      "sourceLabel": "アットプレス「日本のネオジム鉄ボロン磁石市場」調査リリース（2026年11月確認）",
+      "note": "判定基準では国内首位でも水準3は国内シェア50%以上が要件のため、26.46%は水準2にとどめた。市場調査会社の推計で分母・調査年が明記されていない点に留意。"
+    },
+    {
+      "company": "seed-19",
+      "name": "TDK",
+      "node": "04_mag",
+      "els": [
+        "DyTb"
+      ],
+      "product": "NdFeB 焼結磁石（HAL 工法、Dy 削減品）",
+      "level": 2,
+      "share": "ネオジム磁石の世界市場の主要メーカーの一社として社名が挙がる",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.dri.co.jp/auto/report/qyr/240911-neodymium-magnet-global-market-share-and.html",
+      "sourceLabel": "データリソース（QYResearch）「ネオジム磁石の世界市場シェアとランキング」レポート紹介（2026年11月確認）",
+      "note": "同紹介ページの企業別セグメントに Proterial・Shin-Etsu・TDK・VAC・中国各社が並ぶ。個社のシェア数値は有料本体にあり未確認。経産省資料では日本企業のネオジム磁石世界シェアは約15%（2021年）。"
+    },
+    {
+      "company": "seed-20",
+      "name": "東芝マテリアル",
+      "node": "04_mag",
+      "els": [
+        "Sm"
+      ],
+      "product": "SmCo 磁石（約 300℃ 級）",
+      "level": 2,
+      "share": "サマコバ磁石を生産する国内数社の一角として社名が挙がる",
+      "scope": "国内",
+      "basis": "公開情報",
+      "source": "https://newswitch.jp/p/35989",
+      "sourceLabel": "ニュースイッチ（日刊工業新聞 2023年2月23日）「サマコバ磁石」記事（2026年11月確認）",
+      "note": "同記事は国内生産者として信越化学工業・東芝マテリアル（横浜市磯子区）・トーキン（宮城県白石市）を挙げる。個社の生産量・占有率は非公表。なお同社株式は2024年11月に日本特殊陶業への譲渡が発表されており、資本関係の記述は別途確認が必要。"
+    },
+    {
+      "company": "seed-21",
+      "name": "トーキン",
+      "node": "04_mag",
+      "els": [
+        "Sm"
+      ],
+      "product": "SmCo 磁石",
+      "level": 2,
+      "share": "サマコバ磁石を生産する国内数社の一角として社名が挙がる",
+      "scope": "国内",
+      "basis": "公開情報",
+      "source": "https://newswitch.jp/p/35989",
+      "sourceLabel": "ニュースイッチ（日刊工業新聞 2023年2月23日）「サマコバ磁石」記事（2026年11月確認）",
+      "note": "同記事は生産拠点を宮城県白石市と明記。日本全体のサマコバ世界シェアは10%未満（経産省推定）で、個社の占有率は非公表。"
+    },
+    {
+      "company": "seed-23",
+      "name": "セイコーインスツル",
+      "node": "04_mag",
+      "els": [
+        "Sm"
+      ],
+      "product": "SmCo 磁石 DIANET、微小ローター磁石",
+      "level": 2,
+      "share": "時計用ローター磁石で世界の市場リーダーの一社と自社サイトに表示",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.sii.co.jp/en/me/dianet/support/features/",
+      "sourceLabel": "セイコーインスツル DIANET 製品サイト「A Global Market Leader of Rotor Magnet for Watches」（2026年11月確認）",
+      "note": "自社サイトの表明で、第三者の数値による裏づけはない。対象は時計用ローター磁石というニッチに限られ、SmCo磁石全体のシェアではない。"
+    },
+    {
+      "company": "seed-24",
+      "name": "ダイドー電子（大同特殊鋼グループ）",
+      "node": "04_mag",
+      "els": [
+        "DyTb"
+      ],
+      "product": "熱間加工 NdFeB 磁石（重希土類フリー）",
+      "level": 1,
+      "share": "公開情報でシェアを確認できていない",
+      "scope": "",
+      "basis": "公開情報",
+      "source": "https://www.daido.co.jp/info/2020/200701_selection.html",
+      "sourceLabel": "大同特殊鋼 お知らせ（2020年7月1日）",
+      "note": "経済産業省のグローバルニッチトップ企業100選に選ばれているが、選定対象は「重希土類完全フリーのネオジム磁石」で「重希土類を一切含まない」と明記されており、Dy・Tb を使う製品のシェアではないため水準の根拠にしない"
+    },
+    {
+      "company": "seed-25",
+      "name": "愛知製鋼",
+      "node": "04_mag",
+      "els": [
+        "DyTb"
+      ],
+      "product": "異方性 NdFeB ボンド磁石 MAGFINE（Dy・Tb・Co フリー）",
+      "level": 1,
+      "share": "公開情報でシェアを確認できていない",
+      "scope": "",
+      "basis": "公開情報",
+      "source": "https://www.aichi-steel.co.jp/news_item/20160830_release.pdf",
+      "sourceLabel": "愛知製鋼 ニュースリリース（2016年8月30日）",
+      "note": "経済産業省のグローバルニッチトップ企業100選に「Nd系異方性ボンド磁石」で選ばれているが、その製品 MAGFINE は同社リリースで Dy・Tb を使わない磁石と明記されており、Dy・Tb を使う製品のシェアではないため水準の根拠にしない"
+    },
+    {
+      "company": "seed-37",
+      "name": "東洋アルミニウム",
+      "node": "04_am_feedstock",
+      "els": [
+        "Sc"
+      ],
+      "product": "Scalmalloy® AM 用球状粉末（AlMg4.5Sc0.7Zr0.3）",
+      "level": 2,
+      "share": "Scalmalloy 粉末の世界のライセンス生産者2社の一つとして権利者サイトに掲載",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.apworks.de/scalmalloy-powder",
+      "sourceLabel": "APWORKS「Scalmalloy Powder」公式ページ（2026年11月確認）",
+      "note": "権利者 APWORKS のページは、Scalmalloy 粉末は APWORKS またはライセンス生産者からのみ入手可能とし、生産者として Toyal Europe（東洋アルミニウムのフランス子会社）と CNPC の2社を掲載。数値シェアの記載はない。"
+    },
+    {
+      "company": "seed-45",
+      "name": "Linde AMT Japan",
+      "node": "04_tbc_spray",
+      "els": [
+        "Y"
+      ],
+      "product": "YSZ 系 TBC 材料",
+      "level": 2,
+      "share": "溶射分野の世界の主要企業として競合他社のIR資料に名前が挙がる（数値は非開示）",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.oerlikon.com/ecoma/files/2026-2-24-Oerlikon_Equity-Story.pdf",
+      "sourceLabel": "Oerlikon Equity Story（2026年2月、溶射の競合として Praxair (Linde) を明記）（2026年11月確認）",
+      "note": "判定はLindeグループ（旧Praxair Surface Technologies）全体の世界的な地位に基づくもので、日本法人（Linde AMT Japan）単独のシェアは公開情報では分からない。YSZ 溶射粉末単独のシェア数値も確認できていない。"
+    },
+    {
+      "company": "seed-48",
+      "name": "エリコンジャパン／Oerlikon Metco",
+      "node": "04_tbc_spray",
+      "els": [
+        "Y"
+      ],
+      "product": "8YSZ・MCrAlY 溶射粉末",
+      "level": 2,
+      "share": "表面処理ソリューションで世界首位を自称し、溶射分野の主要企業として名前が挙がる（YSZ 粉末単独の数値は非開示）",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.oerlikon.com/ecoma/files/2026-2-24-Oerlikon_Equity-Story.pdf",
+      "sourceLabel": "Oerlikon Equity Story（2026年2月、「#1 Market leader in surface solutions」）（2026年11月確認）",
+      "note": "判定はOerlikonグループ全体の地位に基づくもので、エリコンジャパン単独のシェアは公開情報では分からない。資料の市場浸透率（欧州25〜40%、米州10〜25%、アジア太平洋20〜30%）は表面処理ソリューション全体かつ用途依存の数値で、8YSZ 溶射粉末のシェアではない。"
+    },
+    {
+      "company": "seed-7",
+      "name": "フジミインコーポレーテッド",
+      "node": "04_tbc_spray",
+      "els": [
+        "Y"
+      ],
+      "product": "YSZ 系遮熱用溶射材料",
+      "level": 1,
+      "share": "公開情報でシェアを確認できていない（有報のシェア記述は超精密研磨材のもの）",
+      "scope": "",
+      "basis": "公開情報",
+      "source": "https://edinetdb.jp/company/E01207/text?fy=2026",
+      "sourceLabel": "フジミインコーポレーテッド 有価証券報告書 本文（FY2026、2026年11月確認）",
+      "note": "有価証券報告書（FY2026）本文を確認した。「世界ナンバーワンのマーケットシェアを維持しており」は半導体基板向け超精密研磨材についての記述で、溶射材には「溶射用途向けに、主にサーメット、セラミックス等の溶射材を研究開発し製造販売する事業」とあるだけでシェア・順位の記載はない。従前データの水準2は企業カードの記述のみが根拠だった"
+    },
+    {
+      "company": "seed-40",
+      "name": "日本触媒",
+      "node": "04_elec",
+      "els": [
+        "Y",
+        "Sc"
+      ],
+      "product": "SOFC／SOEC 用ジルコニア電解質シート",
+      "level": 1,
+      "share": "公開情報でシェアを確認できていない。中期経営計画でも量産プラント建設・生産能力増強の段階",
+      "scope": "",
+      "basis": "公開情報",
+      "source": "https://www.shokubai.co.jp/ja/docs/ir/vision/mid-term_managementplan.pdf",
+      "sourceLabel": "日本触媒グループ 中期経営計画2027（2026年11月確認）",
+      "note": "本文を抽出して確認した。電解質シートの記載は「販売本格化に備えた生産能力増強」「低コスト化プロセスの開発加速」「量産プラントの建設」で、シェア・順位の記述はない。同計画で「No.1」と書かれているのは国内シェアの高吸水性樹脂・ポリマーで、電解質シートではない。製品ページの「高い導電率、機械的強度」も性能の記述"
+    },
+    {
+      "company": "seed-7",
+      "name": "フジミインコーポレーテッド",
+      "node": "04_plasma_spray",
+      "els": [
+        "Y"
+      ],
+      "product": "半導体・液晶製造装置向けの高純度セラミックス溶射材",
+      "level": 1,
+      "share": "公開情報でシェアを確認できていない（有報のシェア記述は超精密研磨材のもの）",
+      "scope": "",
+      "basis": "公開情報",
+      "source": "https://edinetdb.jp/company/E01207/text?fy=2026",
+      "sourceLabel": "フジミインコーポレーテッド 有価証券報告書 本文（FY2026、2026年11月確認）",
+      "note": "有価証券報告書（FY2026）本文を確認した。「世界ナンバーワンのマーケットシェアを維持しており」は半導体基板向け超精密研磨材についての記述で、溶射材には「溶射用途向けに、主にサーメット、セラミックス等の溶射材を研究開発し製造販売する事業」とあるだけでシェア・順位の記載はない。従前データの水準2は企業カードの記述のみが根拠だった"
+    },
+    {
+      "company": "seed-10",
+      "name": "神島化学工業",
+      "node": "04_laser_medium",
+      "els": [
+        "Y"
+      ],
+      "product": "レーザー媒質用の透明 YAG・Y₂O₃ セラミックス",
+      "level": 4,
+      "share": "レーザー増幅に使える高品質の透明セラミックスを製造・販売する世界で唯一のメーカーと自社開示",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://konoshima.co.jp/topics/file/00307.pdf",
+      "sourceLabel": "神島化学工業 開示資料「大阪大学レーザー科学研究所に『神島化学工業先端レーザーセラミックス共同研究部門』設立について」2023年12月1日（2026年11月確認）",
+      "note": "数値シェアではなく「世界で唯一のメーカー」「レーザーセラミックスの世界的リーディングカンパニー」という自社表現。レーザー増幅用の高品質品に限った記述と解すべき。"
+    },
+    {
+      "company": "seed-11",
+      "name": "信光社",
+      "node": "04_laser_medium",
+      "els": [
+        "Y"
+      ],
+      "product": "YAG 単結晶ロッド・光学部材",
+      "level": 1,
+      "share": "公開情報でシェアを確認できていない",
+      "scope": "",
+      "basis": "公開情報",
+      "source": "https://www.shinkosha.com/",
+      "sourceLabel": "信光社 公式サイト（2026年11月確認）",
+      "note": "公式サイトの主力はサファイア・ルチル・SrTiO₃で、YAG単結晶ロッドの製品掲載は確認できなかった。"
+    },
+    {
+      "company": "seed-44",
+      "name": "JX金属",
+      "node": "04_laser_medium",
+      "els": [
+        "Y"
+      ],
+      "product": "Nd:YAG・Yb:YAG 透明セラミックスのレーザー媒質",
+      "level": 1,
+      "share": "公開情報でシェアを確認できていない",
+      "scope": "",
+      "basis": "公開情報",
+      "source": "https://www.jx-nmm.com/products/development/yag/",
+      "sourceLabel": "JX金属 開発中の製品「YAGセラミックス」（2026年11月確認）",
+      "note": "開発中製品としての掲載で、担当事業部・製造拠点も非開示。"
+    },
+    {
+      "company": "faraday-granopt",
+      "name": "グラノプト",
+      "node": "04_faraday",
+      "els": [
+        "Y"
+      ],
+      "product": "GTD・GLB・GSF・GMF・ETD 各品種のファラデー回転子（1310〜1590nm）",
+      "level": 4,
+      "share": "光通信用ファラデーローテータで世界トップシェア。供給者はほぼ2社に限られると経産省資料が記す",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.mgc.co.jp/corporate/news/files/230731.pdf",
+      "sourceLabel": "三菱ガス化学 ニュースリリース「株式会社グラノプト新工場竣工のお知らせ」2023年7月31日（2026年11月確認）",
+      "note": "住友金属鉱山51%・三菱ガス化学49%の合弁会社のシェアで、出典は親会社（三菱ガス化学）の開示。経産省「新グローバルニッチトップ企業100選」選定資料（https://www.granopt.jp/en/images/gnt100_01.pdf）でも「世界トップシェアを確保するに至りました」「FR供給者がほぼ2社に限られる特殊な材料」を確認。"
+    },
+    {
+      "company": "faraday-granopt",
+      "name": "グラノプト",
+      "node": "04_faraday",
+      "els": [
+        "DyTb"
+      ],
+      "product": "GTD・GLB・GSF・GMF・ETD 各品種のファラデー回転子（1310〜1590nm）",
+      "level": 4,
+      "share": "光通信用ファラデーローテータで世界トップシェア。供給者はほぼ2社に限られると経産省資料が記す",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.mgc.co.jp/corporate/news/files/230731.pdf",
+      "sourceLabel": "三菱ガス化学 ニュースリリース「株式会社グラノプト新工場竣工のお知らせ」2023年7月31日（2026年11月確認）",
+      "note": "住友金属鉱山51%・三菱ガス化学49%の合弁会社のシェア。材料は「ビスマス置換希土類鉄ガーネット」と記されるのみで、Tb等の個別元素の内訳は非開示。"
+    },
+    {
+      "company": "faraday-kohoku",
+      "name": "湖北工業",
+      "node": "04_faraday",
+      "els": [
+        "Y"
+      ],
+      "product": "ファラデー回転子（光通信1550/1310nm、産業用レーザー1064/1030nm、2000nm帯）",
+      "level": 4,
+      "share": "光アイソレータ（金額ベース）で世界シェア50%と自社IR資料が明記",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.kohokukogyo.co.jp/assets/doc/ir/20251128_mufg_ir_seminar.pdf",
+      "sourceLabel": "湖北工業 MUFG IRセミナー説明資料 2025年11月28日（2026年11月確認）",
+      "note": "海底光ファイバ通信ケーブル用デバイスを中心とする光アイソレータの金額ベース世界シェア。ファラデー回転子は結晶育成・加工から素子づくり・精密組立まで自社一貫。"
+    },
+    {
+      "company": "faraday-kohoku",
+      "name": "湖北工業",
+      "node": "04_faraday",
+      "els": [
+        "DyTb"
+      ],
+      "product": "ファラデー回転子（光通信1550/1310nm、産業用レーザー1064/1030nm、2000nm帯）",
+      "level": 4,
+      "share": "光アイソレータ（金額ベース）で世界シェア50%と自社IR資料が明記",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.kohokukogyo.co.jp/assets/doc/ir/20251128_mufg_ir_seminar.pdf",
+      "sourceLabel": "湖北工業 MUFG IRセミナー説明資料 2025年11月28日（2026年11月確認）",
+      "note": "磁気光学膜の組成（Tb置換の有無）は非開示だが、ファラデー回転子用の磁気光学材料を自社で組成設計・育成している点はIR資料に明記されている。"
+    },
+    {
+      "company": "seed-3",
+      "name": "信越化学工業",
+      "node": "04_faraday",
+      "els": [
+        "Y"
+      ],
+      "product": "ファラデー回転子、光アイソレータ（結晶製造から組立まで一貫）",
+      "level": 1,
+      "share": "公開情報でシェアを確認できていない",
+      "scope": "",
+      "basis": "公開情報",
+      "source": "https://www.shinetsu.co.jp/jp/products/electronics-and-functional-materials-business/optical-isolators/",
+      "sourceLabel": "信越化学工業 光アイソレータ用材料 製品ページ（2026年11月確認）",
+      "note": "経産省GNT100のグラノプト選定資料は「FR供給者がほぼ2社に限られる」と記すが社名は挙げていないため、同社に当てていない。"
+    },
+    {
+      "company": "seed-3",
+      "name": "信越化学工業",
+      "node": "04_faraday",
+      "els": [
+        "DyTb"
+      ],
+      "product": "ファラデー回転子、光アイソレータ（結晶製造から組立まで一貫）",
+      "level": 1,
+      "share": "公開情報でシェアを確認できていない",
+      "scope": "",
+      "basis": "公開情報",
+      "source": "https://www.shinetsu.co.jp/jp/products/electronics-and-functional-materials-business/optical-isolators/",
+      "sourceLabel": "信越化学工業 光アイソレータ用材料 製品ページ（2026年11月確認）",
+      "note": ""
+    },
+    {
+      "company": "seed-11",
+      "name": "信光社",
+      "node": "04_faraday",
+      "els": [
+        "DyTb"
+      ],
+      "product": "ファイバレーザー用光アイソレータの素子",
+      "level": 1,
+      "share": "公開情報でシェアを確認できていない",
+      "scope": "",
+      "basis": "公開情報",
+      "source": "https://www.shinkosha.com/product/isolator/",
+      "sourceLabel": "信光社 光アイソレータ 製品ページ（2026年11月確認）",
+      "note": "素子材料（TGG・TSAG など）の明示もなく、Tb系材料の使用はカタログで確認できていない。"
+    },
+    {
+      "company": "seed-12",
+      "name": "オキサイド",
+      "node": "04_faraday",
+      "els": [
+        "DyTb"
+      ],
+      "product": "光トランシーバ用光アイソレータ向けのファラデー回転子（第6工場で増産）",
+      "level": 1,
+      "share": "公開情報でシェアを確認できていない",
+      "scope": "",
+      "basis": "公開情報",
+      "source": "https://www.opt-oxide.com/ir/meeting/meeting26_review/",
+      "sourceLabel": "オキサイド IR 決算説明（2026年11月確認）",
+      "note": "2026年10月に第6工場（山梨県北杜市）へ8億4100万円の追加設備投資を公表し、2027年2月期下半期中の稼働を見込む。増産の開示はシェアを示さない。"
+    },
+    {
+      "company": "faraday-neg",
+      "name": "日本電気硝子",
+      "node": "04_faraday",
+      "els": [
+        "DyTb"
+      ],
+      "product": "磁気光学ガラス製ファラデー素子",
+      "level": 1,
+      "share": "公開情報でシェアを確認できていない",
+      "scope": "",
+      "basis": "公開情報",
+      "source": "https://www.neg.co.jp/products/optical-isolator/index.html",
+      "sourceLabel": "日本電気硝子 光アイソレーター 製品ページ（2026年11月確認）",
+      "note": "「世界最小レベル」は高出力ファイバー型の小型化に関する比較表現で、シェアではない。"
+    },
+    {
+      "company": "faraday-kogaku-giken",
+      "name": "光学技研",
+      "node": "04_faraday",
+      "els": [
+        "Y"
+      ],
+      "product": "ファラデーローテーター",
+      "level": 1,
+      "share": "公開情報でシェアを確認できていない",
+      "scope": "",
+      "basis": "公開情報",
+      "source": "https://www.kogakugiken.co.jp/products/isolator02.html",
+      "sourceLabel": "光学技研 大口径光アイソレーター・ファラデーローテーター 製品ページ（2026年11月確認）",
+      "note": "大口径品は受注停止中（ページ内に「現在、受注を停止しております」と明記）。素子材料は「磁性ガーネット結晶」とのみ記され、具体的な材料名は非開示。"
+    },
+    {
+      "company": "faraday-kogaku-giken",
+      "name": "光学技研",
+      "node": "04_faraday",
+      "els": [
+        "DyTb"
+      ],
+      "product": "ファラデーローテーター",
+      "level": 1,
+      "share": "公開情報でシェアを確認できていない",
+      "scope": "",
+      "basis": "公開情報",
+      "source": "https://www.kogakugiken.co.jp/products/isolator02.html",
+      "sourceLabel": "光学技研 大口径光アイソレーター・ファラデーローテーター 製品ページ（2026年11月確認）",
+      "note": "素子材料は「磁性ガーネット結晶」とのみ記載され、Tb系材料の使用は公開情報で特定できない。"
+    },
+    {
+      "company": "dielectric-kcm",
+      "name": "共立マテリアル",
+      "node": "04_dielectric",
+      "els": [
+        "Y"
+      ],
+      "product": "MLCC 用微粒子チタン酸バリウム（誘電体材料）",
+      "level": 3,
+      "share": "MLCC 用誘電体材料で世界トップシェアと自社が説明。国内のチタン酸バリウム供給5社の一角",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://job.mynavi.jp/28/pc/search/corp113155/outline.html",
+      "sourceLabel": "共立マテリアル 会社概要（採用情報、2026年11月確認）",
+      "note": "世界トップシェアの記述は採用媒体での自社説明のみで、同社サイトの会社概要と親会社ノリタケの開示には記載がなく、第三者の裏づけも確認できない。そのため世界首位（水準4）とはせず、世界上位（水準3）に留める。ノリタケの100%子会社"
+    },
+    {
+      "company": "dielectric-kcm",
+      "name": "共立マテリアル",
+      "node": "04_dielectric",
+      "els": [
+        "DyTb"
+      ],
+      "product": "MLCC 用微粒子チタン酸バリウム（誘電体材料）",
+      "level": 3,
+      "share": "MLCC 用誘電体材料で世界トップシェアと自社が説明。国内のチタン酸バリウム供給5社の一角",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://job.mynavi.jp/28/pc/search/corp113155/outline.html",
+      "sourceLabel": "共立マテリアル 会社概要（採用情報、2026年11月確認）",
+      "note": "世界トップシェアの記述は採用媒体での自社説明のみで、同社サイトの会社概要と親会社ノリタケの開示には記載がなく、第三者の裏づけも確認できない。そのため世界首位（水準4）とはせず、世界上位（水準3）に留める。ノリタケの100%子会社"
+    },
+    {
+      "company": "dielectric-sakai",
+      "name": "堺化学工業",
+      "node": "04_dielectric",
+      "els": [
+        "Y"
+      ],
+      "product": "MLCC 用チタン酸バリウム系誘電体材料（水熱合成）",
+      "level": 2,
+      "share": "村田・太陽誘電などMLCC大手に数十年供給する国内数社の一角",
+      "scope": "国内",
+      "basis": "公開情報",
+      "source": "https://theedgemalaysia.com/node/819565",
+      "sourceLabel": "The Edge Malaysia（Bloomberg配信）「From geisha face paint to servers, Sakai Chemical emerges as AI linchpin」2026年9月28日（2026年11月確認）",
+      "note": "数値シェアも「世界首位」の記述もない。記事の「linchpin（要衝）」は記者の表現で、顧客に村田製作所・太陽誘電が挙がる点は採用実績であってシェアではない。"
+    },
+    {
+      "company": "dielectric-sakai",
+      "name": "堺化学工業",
+      "node": "04_dielectric",
+      "els": [
+        "DyTb"
+      ],
+      "product": "MLCC 用チタン酸バリウム系誘電体材料（水熱合成）",
+      "level": 2,
+      "share": "村田・太陽誘電などMLCC大手に数十年供給する国内数社の一角",
+      "scope": "国内",
+      "basis": "公開情報",
+      "source": "https://theedgemalaysia.com/node/819565",
+      "sourceLabel": "The Edge Malaysia（Bloomberg配信）「From geisha face paint to servers, Sakai Chemical emerges as AI linchpin」2026年9月28日（2026年11月確認）",
+      "note": "Y・Dy·Tbはいずれも同じMLCC誘電体（チタン酸バリウム系）への添加希土類であり、製品単位では区別されないため同水準とした。数値シェアはない。"
+    },
+    {
+      "company": "dielectric-fujititan",
+      "name": "富士チタン工業",
+      "node": "04_dielectric",
+      "els": [
+        "Y"
+      ],
+      "product": "MLCC 用チタン酸バリウム",
+      "level": 2,
+      "share": "世界首位のMLCCメーカー村田製作所がチタン酸バリウム供給元の1社と明記",
+      "scope": "国内",
+      "basis": "公開情報",
+      "source": "https://corporate.murata.com/-/media/corporate/about/newsroom/news/irnews/irnews/2023/0317/20230317-j.ashx",
+      "sourceLabel": "村田製作所「石原産業株式会社および富士チタン工業株式会社との合弁会社の設立に関するお知らせ」2023年3月17日（2026年11月確認）",
+      "note": "村田が合弁会社MFマテリアル（富士チタン55%／村田35%／石原産業10%、宮崎県延岡市に新工場）に出資しており、供給体制上の重要性は高いが数値シェアの開示はない。"
+    },
+    {
+      "company": "dielectric-fujititan",
+      "name": "富士チタン工業",
+      "node": "04_dielectric",
+      "els": [
+        "DyTb"
+      ],
+      "product": "MLCC 用チタン酸バリウム",
+      "level": 2,
+      "share": "世界首位のMLCCメーカー村田製作所がチタン酸バリウム供給元の1社と明記",
+      "scope": "国内",
+      "basis": "公開情報",
+      "source": "https://corporate.murata.com/-/media/corporate/about/newsroom/news/irnews/irnews/2023/0317/20230317-j.ashx",
+      "sourceLabel": "村田製作所「石原産業株式会社および富士チタン工業株式会社との合弁会社の設立に関するお知らせ」2023年3月17日（2026年11月確認）",
+      "note": "Y・Dy·Tbは同じMLCC誘電体への添加希土類で、製品単位では区別されない。数値シェアの開示はない。"
+    },
+    {
+      "company": "dielectric-toda",
+      "name": "戸田工業",
+      "node": "04_dielectric",
+      "els": [
+        "Y"
+      ],
+      "product": "MLCC 用チタン酸バリウム（誘電体層用・電極層共材用）",
+      "level": 2,
+      "share": "チタン酸バリウムを手がける国内数社の一角（数値シェアは非開示）",
+      "scope": "国内",
+      "basis": "公開情報",
+      "source": "https://diamond.jp/zai/articles/-/281277",
+      "sourceLabel": "ダイヤモンド・ザイ「『チタン酸バリウム』関連銘柄を解説！」2021年9月3日公開・2022年3月29日更新（2026年11月確認）",
+      "note": "同記事はチタン酸バリウムを手がける国内メーカー5社を列挙しているだけで、各社のシェア・順位は示していない。水準2は「国内数社の一角」という基準のみに依拠しており、確度は高くない。"
+    },
+    {
+      "company": "dielectric-toda",
+      "name": "戸田工業",
+      "node": "04_dielectric",
+      "els": [
+        "DyTb"
+      ],
+      "product": "MLCC 用チタン酸バリウム（誘電体層用・電極層共材用）",
+      "level": 2,
+      "share": "チタン酸バリウムを手がける国内数社の一角（数値シェアは非開示）",
+      "scope": "国内",
+      "basis": "公開情報",
+      "source": "https://diamond.jp/zai/articles/-/281277",
+      "sourceLabel": "ダイヤモンド・ザイ「『チタン酸バリウム』関連銘柄を解説！」2021年9月3日公開・2022年3月29日更新（2026年11月確認）",
+      "note": "Y・Dy·Tbは同じMLCC誘電体への添加希土類で製品単位では区別されない。有価証券報告書にもシェアの記載はない。"
+    },
+    {
+      "company": "dielectric-nippon-chem",
+      "name": "日本化学工業",
+      "node": "04_dielectric",
+      "els": [
+        "Y"
+      ],
+      "product": "MLCC 用チタン酸バリウム（福島第一工場）",
+      "level": 2,
+      "share": "チタン酸バリウムを量産する国内数社の一角。AI向け対応力を約1.5倍に増強",
+      "scope": "国内",
+      "basis": "公開情報",
+      "source": "https://www.nippon-chem.co.jp/wp-content/uploads/%E3%83%81%E3%82%BF%E3%83%B3%E9%85%B8%E3%83%90%E3%83%AA%E3%82%A6%E3%83%A0%E3%81%AE%E7%94%9F%E7%94%A3%E8%83%BD%E5%8A%9B%E5%A2%97%E5%BC%B7%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6.pdf",
+      "sourceLabel": "日本化学工業「チタン酸バリウムの生産能力増強について」2026年8月18日（2026年11月確認）",
+      "note": "発表にシェアの記述はない。「微粒子合成技術や粒径制御技術」「国内外のお客様で採用が拡大」は技術と採用実績の記述でシェアではない。2026年4月にTDKとの合弁（TDK-NCI アドバンスドマテリアルズ）を設立している。"
+    },
+    {
+      "company": "dielectric-nippon-chem",
+      "name": "日本化学工業",
+      "node": "04_dielectric",
+      "els": [
+        "DyTb"
+      ],
+      "product": "MLCC 用チタン酸バリウム（福島第一工場）",
+      "level": 2,
+      "share": "チタン酸バリウムを量産する国内数社の一角。AI向け対応力を約1.5倍に増強",
+      "scope": "国内",
+      "basis": "公開情報",
+      "source": "https://www.nippon-chem.co.jp/wp-content/uploads/%E3%83%81%E3%82%BF%E3%83%B3%E9%85%B8%E3%83%90%E3%83%AA%E3%82%A6%E3%83%A0%E3%81%AE%E7%94%9F%E7%94%A3%E8%83%BD%E5%8A%9B%E5%A2%97%E5%BC%B7%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6.pdf",
+      "sourceLabel": "日本化学工業「チタン酸バリウムの生産能力増強について」2026年8月18日（2026年11月確認）",
+      "note": "Y・Dy·Tbは同じMLCC誘電体への添加希土類で製品単位では区別されない。発表にシェアの記述はない。"
+    },
+    {
+      "company": "seed-26",
+      "name": "多摩川精機",
+      "node": "05_motor",
+      "els": [
+        "DyTb"
+      ],
+      "product": "HEV 向け角度センサ（VR レゾルバ）・サーボモータ",
+      "level": 4,
+      "share": "HEV用角度センサで国内8割近く、海外も約7割近くを占めると同社が説明",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.jetro.go.jp/biz/areareports/special/2025/0301/cbf04f3ed55c287d.html",
+      "sourceLabel": "JETRO 地域・分析レポート「多摩川精機、EPA活用を語る」（2026年11月確認）",
+      "note": "数値は同社説明としてJETROが記載。別途2012年取材記事（サイプラス）では「ハイブリッド車向け角度センサーで世界で90%以上」とされ、長期にわたり寡占的地位が報じられている。"
+    },
+    {
+      "company": "seed-30",
+      "name": "ハーモニック・ドライブ・システムズ",
+      "node": "05_motor",
+      "els": [
+        "DyTb"
+      ],
+      "product": "波動歯車減速機・減速機一体型 AC サーボアクチュエータ",
+      "level": 4,
+      "share": "小型精密減速機で世界シェア首位とされ、有価証券報告書も「世界市場で高いシェア」と記載",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://toyokeizai.net/articles/-/937653",
+      "sourceLabel": "東洋経済オンライン「ハーモニック・ドライブ・システムズ」記事（2026年11月確認）",
+      "note": "補助出典：https://edinetdb.jp/company/E01712/text （有価証券報告書テキスト）。東洋経済の記事本文冒頭と写真キャプションで「小型精密減速機の分野で世界シェア首位」と明記。記事の目次に「世界シェア80～90％を維持」の見出しがあるが本文は有料部分のため数値自体は未確認。有価証券報告書（最新）の「当社グループの強みや特長」にも「世界市場で高いシェアを獲得しています」と記載がある。"
+    },
+    {
+      "company": "seed-59",
+      "name": "ニデック／Nidec Aerospace",
+      "node": "05_motor",
+      "els": [
+        "DyTb"
+      ],
+      "product": "HDD 用スピンドルモータ（精密小型ブラシレスモータ）／eVTOL 用電動推進ユニット",
+      "level": 4,
+      "share": "HDD 用スピンドルモータで世界No.1のシェア、同ページに世界シェア80%の記載",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.nidec.com/jp/technology/casestudy/hdd/",
+      "sourceLabel": "ニデック 技術情報「HDD用モータ」（2026年11月確認）",
+      "note": "同ページ冒頭で HDD 用スピンドルモータについて「世界No.1のシェア」、末尾で「世界シェア80%」と記載（末尾の80%は対象製品の明示がやや曖昧）。eVTOL 用電動推進ユニットなど航空製品のシェアは未確立で、航空推進JV（Nidec Aerospace）設立段階。"
+    },
+    {
+      "company": "seed-32",
+      "name": "シンフォニアテクノロジー",
+      "node": "05_motor",
+      "els": [
+        "DyTb"
+      ],
+      "product": "ロケット TVC アクチュエータ、航空機用サーボ・推進モータ",
+      "level": 3,
+      "share": "国内唯一の航空機用電源システムメーカーとされる（1920年に国産初の航空機用発電機を製造）",
+      "scope": "国内",
+      "basis": "公開情報",
+      "source": "https://www.sjac.or.jp/pdf/publication/backnumber/202310/20231001.pdf",
+      "sourceLabel": "日本航空宇宙工業会 機関誌（2023年10月号）",
+      "note": "この分類での製品に「航空機発電機・電源」が含まれるため、国内唯一の地位を水準3の根拠とした。ただし発電機に使う希土類磁石の種類・量は非開示。ロケットTVC・高出力密度モータは開発段階の記述にとどまる"
+    },
+    {
+      "company": "seed-32",
+      "name": "シンフォニアテクノロジー",
+      "node": "05_motor",
+      "els": [
+        "Sm"
+      ],
+      "product": "ロケット TVC アクチュエータ、航空機用サーボ（SmCo 系）",
+      "level": 3,
+      "share": "国内唯一の航空機用電源システムメーカーとされる（1920年に国産初の航空機用発電機を製造）",
+      "scope": "国内",
+      "basis": "公開情報",
+      "source": "https://www.sjac.or.jp/pdf/publication/backnumber/202310/20231001.pdf",
+      "sourceLabel": "日本航空宇宙工業会 機関誌（2023年10月号）",
+      "note": "この分類での製品に「航空機発電機・電源」が含まれるため、国内唯一の地位を水準3の根拠とした。ただし発電機に使う希土類磁石の種類・量は非開示。ロケットTVC・高出力密度モータは開発段階の記述にとどまる"
+    },
+    {
+      "company": "seed-63",
+      "name": "日本ムーグ",
+      "node": "05_motor",
+      "els": [
+        "Sm"
+      ],
+      "product": "SmCo 選択可能な DC トルクモータ、航空・防衛用アクチュエータ",
+      "level": 2,
+      "share": "民間・軍用航空機向け飛行制御／ユーティリティアクチュエーションの世界的リーダーと自社公表",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.moog.co.jp/products/actuators-servoactuators/aircraft.html",
+      "sourceLabel": "日本ムーグ 製品情報「航空機用アクチュエータ」（2026年11月確認）",
+      "note": "日本法人単独のシェアは非公表のため、Moog グループ全体の世界的地位で判定している。記述は自社による位置づけで、世界シェアの数値も「唯一」の記載もない。SmCo 選択可能な DC トルクモータ自体のシェアは未確認。参考として Moog Inc. の 1996 年 10-K は米国向け軍用機の飛行制御アクチュエーションの約40%を供給と自己申告しているが、30年前の数値で、かつ主に油圧アクチュエーションを含むため採用しなかった。"
+    },
+    {
+      "company": "seed-31",
+      "name": "ナブテスコ",
+      "node": "05_motor",
+      "els": [
+        "DyTb"
+      ],
+      "product": "精密減速機（RV シリーズ）／サーボアクチュエータ",
+      "level": 1,
+      "share": "公開情報でシェアを確認できていない",
+      "scope": "",
+      "basis": "公開情報",
+      "source": "https://precision.nabtesco.com/products/",
+      "sourceLabel": "ナブテスコ 精密減速機 製品ページ（2026年11月確認）",
+      "note": "同社が世界シェア約60%（自社推計）を公表しているのは中大型産業用ロボットの関節用途精密減速機で、この分類での製品（航空機フライトコントロール・アクチュエーション）のシェアではない。航空機側のシェアは有価証券報告書・業界資料でも確認できない"
+    },
+    {
+      "company": "atla-7010001045862",
+      "name": "日清紡マイクロデバイス株式会社",
+      "node": "05_tube",
+      "els": [
+        "Sm"
+      ],
+      "product": "マイクロ波電子管 TL399・M1628・W435（マグネトロン）",
+      "level": 3,
+      "share": "船舶用レーダー向けマグネトロンで世界トップクラスのシェアと報じられている",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://newswitch.jp/p/50372",
+      "sourceLabel": "ニュースイッチ（日刊工業新聞）「『マグネトロン』大出力化…」2026年9月（2026年11月確認）",
+      "note": "数値シェアの開示はなく、「世界トップクラス」という報道表現にとどまる。総務省資料では船舶用レーダー自体が日本メーカーで世界の6〜7割とされるが、これは完成品の国別シェアで同社個別の数字ではない。"
+    },
+    {
+      "company": "atla-8010001032091",
+      "name": "リチャードソンエレクトロニクス株式会社",
+      "node": "05_tube",
+      "els": [
+        "Sm"
+      ],
+      "product": "マイクロ波電子管（捜索レーダ送受信機モジュール）",
+      "level": 2,
+      "share": "親会社の年次報告書がマイクロ波管の世界有力供給者と記載し、多くが独占販売契約",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.sec.gov/Archives/edgar/data/355948/000156459020035424/rell-10k_20200530.htm",
+      "sourceLabel": "Richardson Electronics, Ltd. Form 10-K（米SEC、FY2020／2026年11月確認）",
+      "note": "日本法人のシェアは公開情報で不明なため、親会社 Richardson Electronics, Ltd.（NASDAQ: RELL）のグループ全体の記載で判定した。数値シェアの開示はない。"
+    },
+    {
+      "company": "atla-8010001032091",
+      "name": "リチャードソンエレクトロニクス株式会社",
+      "node": "05_tube",
+      "els": [
+        "Sc"
+      ],
+      "product": "マイクロ波電子管（捜索レーダ送受信機モジュール）",
+      "level": 2,
+      "share": "親会社の年次報告書がマイクロ波管の世界有力供給者と記載し、多くが独占販売契約",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.sec.gov/Archives/edgar/data/355948/000156459020035424/rell-10k_20200530.htm",
+      "sourceLabel": "Richardson Electronics, Ltd. Form 10-K（米SEC、FY2020／2026年11月確認）",
+      "note": "日本法人のシェアは不明でグループ全体の記載による判定。10-Kの記述は「power grid and microwave tubes」とマイクロ波管全般（マグネトロン・クライストロン・進行波管を含む系列）を対象としており、Sc添加陰極に限定した記述はない。"
+    },
+    {
+      "company": "seed-13",
+      "name": "トーカロ",
+      "node": "05_tbc",
+      "els": [
+        "Y"
+      ],
+      "product": "YSZ 遮熱皮膜（TBC）の溶射施工",
+      "level": 2,
+      "share": "世界の溶射サービス市場の主要企業として名前が挙がる",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.giiresearch.com/report/gmi2101869-thermal-spray-service-market-opportunity-growth.html",
+      "sourceLabel": "Global Market Insights「溶射サービス市場」レポート紹介ページ（2026年11月確認）",
+      "note": "出典は Oerlikon Metco・TOCALO・StandardAero・Praxair／Linde Surface Tech.・Chromalloy Gas Turbine を主要企業とし、ガス・蒸気タービン部品が用途セグメントの60%、遮熱皮膜（YSZ）が材料として挙がる。ただし溶射サービス全体の記述で、TBC分野に限った企業別シェアではない（分野を区別していない出典）。現データの「表面改質の国内シェア44%」は裏づけを確認できなかった。"
+    },
+    {
+      "company": "seed-45",
+      "name": "Linde AMT Japan",
+      "node": "05_tbc",
+      "els": [
+        "Y"
+      ],
+      "product": "APS・EB-PVD・SPS 等の TBC コーティング施工",
+      "level": 2,
+      "share": "溶射市場の上位企業として名前が挙がる（上位5社計約6%、2025年）",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.gminsights.com/industry-analysis/thermal-spray-coating-market",
+      "sourceLabel": "Global Market Insights「Thermal Spray Coating Market」（2026年11月確認）",
+      "note": "同ページは Oerlikon Metco・Linde・Höganäs・Sulzer・H.C. Starck を上位5社とし計約6%（2025年）、Linde の TBC 製品にも触れている。別の溶射サービス市場レポート紹介ページ（https://www.giiresearch.com/report/gmi2101869-thermal-spray-service-market-opportunity-growth.html ）でも Praxair／Linde Surface Tech.・Linde Advanced Material Technologies が主要企業に挙がる。いずれもグループ全体の位置づけで、日本法人（Linde AMT Japan）のシェアは不明。"
+    },
+    {
+      "company": "seed-48",
+      "name": "エリコンジャパン／Oerlikon Metco",
+      "node": "05_tbc",
+      "els": [
+        "Y"
+      ],
+      "product": "航空エンジン TBC のコーティングサービス・材料",
+      "level": 2,
+      "share": "溶射コーティング市場で首位だがシェアは2.8%超（2025年）",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.gminsights.com/industry-analysis/thermal-spray-coating-market",
+      "sourceLabel": "Global Market Insights「Thermal Spray Coating Market」（2026年11月確認）",
+      "note": "同ページの原文は「Oerlikon Metco led with over 2.8% market share in 2025」。上位5社（Oerlikon Metco・Linde・Höganäs・Sulzer・H.C. Starck）計でも約6%で、市場は分散している。TBC／EBC 材料や SPS も市場トレンドとして扱われているが、企業別のTBCシェアは示されていない。日本法人のシェアは不明でグループ基準。"
+    },
+    {
+      "company": "sofc-dd-mhi",
+      "name": "三菱重工業（エナジードメイン）",
+      "node": "05_sofc",
+      "els": [
+        "Y"
+      ],
+      "product": "円筒横縞型 SOFC・SOEC セルスタック、カートリッジ",
+      "level": 2,
+      "share": "世界のSOFC市場の主要企業として名前が挙がる",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.dri.co.jp/auto/report/tsci/240802-solid-oxide-fuel-cell-market-global.html",
+      "sourceLabel": "TechSci Research「固体酸化物形燃料電池の世界市場」レポート紹介ページ（2026年11月確認）",
+      "note": "同ページの主要企業（Key Market Players）10社に Mitsubishi Heavy Industries, Ltd が含まれる（他は Siemens、Bloom Energy、FuelCell Energy、Rolls-Royce、Sunfire、Bosch Thermotechnik、Acumentrics、日本ケミコン、GE）。企業別シェアの数値はない。SOFC-MGTハイブリッド「MEGAMIE」は2017年夏に販売開始し、三菱地所ビル・ハザマ安藤（つくば）・アサヒビール茨城工場などに商用納入実績がある（量産段階と判断）。電解質材料（YSZ／ScSZ）の区別は出典にないため、YSZを前提とするY側にのみ当てた。400kW級SOECデモ機は実証段階でシェアとはみなさない。"
+    },
+    {
+      "company": "seed-13",
+      "name": "トーカロ",
+      "node": "05_plasma_parts",
+      "els": [
+        "Y"
+      ],
+      "product": "耐プラズマ用イットリア系溶射皮膜（Y₂O₃・YF₃）",
+      "level": 2,
+      "share": "半導体製造装置向けの機能皮膜で国内トップクラスの実績を持つ表面改質の専業メーカー",
+      "scope": "国内",
+      "basis": "公開情報",
+      "source": "https://www.gyokaidigest.com/companies/tocalo",
+      "sourceLabel": "統合報告書2025 の要約（2026年11月確認）",
+      "note": "統合報告書の表現は「国内トップクラス」で、国内首位や国内シェア50%以上を示す記述は確認できない。従来データの「表面改質の国内シェア44%」も決算資料・統合報告書・溶射市場レポートのいずれでも裏づけられなかったため記述から外した"
+    },
+    {
+      "company": "seed-15",
+      "name": "京セラ",
+      "node": "05_plasma_parts",
+      "els": [
+        "Y"
+      ],
+      "product": "Y₂O₃ ファインセラミックス、耐プラズマ工程部品",
+      "level": 2,
+      "share": "半導体製造装置用セラミックスの主要メーカーとして名前が挙がる（上位5社計約69%）",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.dri.co.jp/auto/report/qyr/251011-ceramics-for-semiconductor-manufacturing.html",
+      "sourceLabel": "QYResearch「半導体製造装置用セラミックス」市場レポート紹介ページ（2026年11月確認）",
+      "note": "同ページは日本ガイシ・京セラ・フェローテック・TOTOアドバンストセラミックス・Niterra・CoorsTek を主要メーカーとし、上位5社計約69%と記す。材料別はアルミナ43%・AlN37%で、イットリアの内訳は示されていない（分野・材料を区別していない出典）。別途 EE Times Japan（2026年8月31日、https://eetimes.itmedia.co.jp/ee/articles/2608/31/news049_2.html ）に「構造部品の市場シェアは40〜50%」という同社説明があるが、ページの文字化けで正確な引用ができず、対象が静電チャック・ヒーター・ウエハーハンド等の構造部品全般で、世界／国内の区別も明記されていない。"
+    },
+    {
+      "company": "plasma-toto",
+      "name": "TOTO",
+      "node": "05_plasma_parts",
+      "els": [
+        "Y"
+      ],
+      "product": "AD 法のイットリア膜（半導体製造装置チャンバー内部材）",
+      "level": 2,
+      "share": "半導体製造装置用セラミックスの主要メーカーとして名前が挙がる（上位5社計約69%）",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.dri.co.jp/auto/report/qyr/251011-ceramics-for-semiconductor-manufacturing.html",
+      "sourceLabel": "QYResearch「半導体製造装置用セラミックス」市場レポート紹介ページ（2026年11月確認）",
+      "note": "出典は「TOTOアドバンストセラミックス」としてTOTOのセラミック事業を主要メーカーに挙げており、AD法イットリア膜に限った数値ではない。AD法イットリア膜は低発塵性が評価されエッチング装置内壁コーティングとして製品化済みで、静電チャック・AD部材の増販でセラミック事業は増収、茅ヶ崎の新研究開発棟（170億円）・福岡の新生産棟（約600億円、2029年度上期生産開始予定）が公表されている。これらは投資・技術の記述でシェアではない。"
+    },
+    {
+      "company": "plasma-ntk-ceratec",
+      "name": "NTKセラテック",
+      "node": "05_plasma_parts",
+      "els": [
+        "Y"
+      ],
+      "product": "Y₂O₃ 溶射（エッチャー・CVD 装置のチャンバー内部材）",
+      "level": 2,
+      "share": "半導体製造装置用セラミックスの主要メーカーとして Niterra 群が名前が挙がる",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.dri.co.jp/auto/report/qyr/251011-ceramics-for-semiconductor-manufacturing.html",
+      "sourceLabel": "QYResearch「半導体製造装置用セラミックス」市場レポート紹介ページ（2026年11月確認）",
+      "note": "主要メーカーとして挙がるのは親会社側の「Niterra Co., Ltd.」で、NTKセラテック単独のシェアではない。同社名は別のQYResearchレポート紹介ページ（https://www.dri.co.jp/auto/report/qyr/250214-semiconductor-engineering-ceramics-global.html ）の掲載企業一覧に「日本ガイシスパークプラグ（NTKセラテック）」として登場するが、こちらは26社の列挙でシェア数値はない。Y₂O₃溶射に限ったシェアは未確認。"
+    },
+    {
+      "company": "plasma-coorstek",
+      "name": "クアーズテック",
+      "node": "05_plasma_parts",
+      "els": [
+        "Y"
+      ],
+      "product": "プラズマエッチング装置用のイットリア部材・コーティング",
+      "level": 2,
+      "share": "半導体製造装置用セラミックスの主要メーカーとして名前が挙がる（上位5社計約69%）",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.dri.co.jp/auto/report/qyr/251011-ceramics-for-semiconductor-manufacturing.html",
+      "sourceLabel": "QYResearch「半導体製造装置用セラミックス」市場レポート紹介ページ（2026年11月確認）",
+      "note": "出典が挙げるのは米 CoorsTek（コルステック）で、日本法人クアーズテック合同会社のシェアは不明なためグループ全体の位置づけで判定した。CoorsTek の日本語版半導体アプリケーションガイドでは、エッチング・成膜装置のチャンバー部品材料として Y₂O₃ イットリアがアルミナ・AlN・石英等と並んで挙げられており、イットリア部材を扱っていることは確認できるが、イットリア単独のシェアは確認できていない。"
+    },
+    {
+      "company": "seed-12",
+      "name": "オキサイド",
+      "node": "05_laser_osc",
+      "els": [
+        "Y"
+      ],
+      "product": "266nm・193nm 全固体深紫外レーザー（Nd:YAG 基本波＋波長変換）",
+      "level": 3,
+      "share": "半導体検査装置向け深紫外レーザーで世界シェア30%超（同社調べ）",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://forbesjapan.com/articles/detail/102192",
+      "sourceLabel": "Forbes JAPAN「オキサイド」記事（2026年11月確認）",
+      "note": "数値は同社調べ。独立した第三者調査による裏づけは確認できていない。"
+    },
+    {
+      "company": "seed-58",
+      "name": "トルンプ（TRUMPF日本法人）",
+      "node": "05_laser_osc",
+      "els": [
+        "Y"
+      ],
+      "product": "Yb:YAG ディスクレーザー TruDisk ほか産業用レーザー加工システム",
+      "level": 3,
+      "share": "産業用レーザーシステムの世界市場で2025年に24%超の首位シェア（調査会社推計）",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.gminsights.com/ja/industry-analysis/industrial-laser-systems-market",
+      "sourceLabel": "Global Market Insights「産業用レーザーシステム市場」（2026年11月確認）",
+      "note": "日本法人単独のシェアは不明で、TRUMPF グループ全体の世界シェアで判定した。数値は調査会社の推計で、対象はレーザー光源・光学系・制御装置を統合した産業用レーザー加工システム市場全体（ディスクレーザー単独の数値ではない）。"
+    },
+    {
+      "company": "faraday-kohoku",
+      "name": "湖北工業",
+      "node": "05_photonics",
+      "els": [
+        "Y"
+      ],
+      "product": "インライン型・ハイブリッド型光アイソレータ、光サーキュレータ、海底ケーブル用光部品",
+      "level": 4,
+      "share": "光アイソレータ（金額ベース）で世界シェア50%",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.kohokukogyo.co.jp/assets/doc/ir/20251128_mufg_ir_seminar.pdf",
+      "sourceLabel": "湖北工業 MUFG IR セミナー資料 2025年11月28日（2026年11月確認）",
+      "note": "同資料は海底光ファイバ通信ケーブル用デバイスでも世界シェア60%としており、ファラデー回転子の結晶育成から素子づくり・精密組立までの一貫生産を競争優位として挙げている。"
+    },
+    {
+      "company": "faraday-kohoku",
+      "name": "湖北工業",
+      "node": "05_photonics",
+      "els": [
+        "DyTb"
+      ],
+      "product": "インライン型・ハイブリッド型光アイソレータ、光サーキュレータ、海底ケーブル用光部品",
+      "level": 4,
+      "share": "光アイソレータ（金額ベース）で世界シェア50%",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.kohokukogyo.co.jp/assets/doc/ir/20251128_mufg_ir_seminar.pdf",
+      "sourceLabel": "湖北工業 MUFG IR セミナー資料 2025年11月28日（2026年11月確認）",
+      "note": "同資料はファラデー回転子を機能材料のコア技術として位置づけ、生産能力拡大による売上増を報告している。Y 系・Tb 系いずれの磁気光学結晶も同じ光アイソレータ製品に関わる。"
+    },
+    {
+      "company": "photonics-melco-hakouden",
+      "name": "三菱電機（光デバイス・光伝送・宇宙光通信）",
+      "node": "05_photonics",
+      "els": [
+        "Y"
+      ],
+      "product": "EML チップと TO-CAN 型 EML モジュール",
+      "level": 4,
+      "share": "データセンター向け EML で世界シェア1位、送信用 EML チップは50%超（当社調べ）",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.mitsubishielectric.co.jp/semiconductors/work-people/spotlights/datacenters.html",
+      "sourceLabel": "三菱電機 半導体・デバイス サイト（2026年11月確認）",
+      "note": "いずれも三菱電機の自社調査。公式サイトは「データセンター向け EML において世界シェアNo.1（23年度実績、当社調べ）」と注記。EE Times の記事では2022年度の自社調査として送信用 EML チップの世界シェア50%超が挙げられている。"
+    },
+    {
+      "company": "photonics-melco-hakouden",
+      "name": "三菱電機（光デバイス・光伝送・宇宙光通信）",
+      "node": "05_photonics",
+      "els": [
+        "DyTb"
+      ],
+      "product": "EML チップと TO-CAN 型 EML モジュール（光アイソレータ内蔵）",
+      "level": 4,
+      "share": "データセンター向け EML で世界シェア1位、送信用 EML チップは50%超（当社調べ）",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.mitsubishielectric.co.jp/semiconductors/work-people/spotlights/datacenters.html",
+      "sourceLabel": "三菱電機 半導体・デバイス サイト（2026年11月確認）",
+      "note": "シェアは EML 製品のもので、Y・Dy·Tb はいずれもモジュールに組み込む磁気光学結晶（ファラデー回転子）としての関与。素子単体のシェアではない。"
+    },
+    {
+      "company": "photonics-furukawa",
+      "name": "古河電気工業",
+      "node": "05_photonics",
+      "els": [
+        "Y"
+      ],
+      "product": "波長可変レーザモジュール ITLA、ラマン増幅器用ポンプ LD モジュール",
+      "level": 3,
+      "share": "波長可変レーザモジュール ITLA で世界首位（2017年の業界紙記事で世界シェア50%以上）",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://newswitch.jp/p/8630",
+      "sourceLabel": "ニュースイッチ（日刊工業新聞）2017年4月11日（2026年11月確認）",
+      "note": "数値の出典は2017年の日刊工業新聞記事で、現時点の水準を示すものではない。近年の同社 IR・報道では ITLA やポンプ LD のシェア数値を確認できなかったため、現時点で確実に支持できる水準として3を充てている。"
+    },
+    {
+      "company": "photonics-furukawa",
+      "name": "古河電気工業",
+      "node": "05_photonics",
+      "els": [
+        "DyTb"
+      ],
+      "product": "波長可変レーザモジュール ITLA、ラマン増幅器用ポンプ LD モジュール（光アイソレータ内蔵）",
+      "level": 3,
+      "share": "波長可変レーザモジュール ITLA で世界首位（2017年の業界紙記事で世界シェア50%以上）",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://newswitch.jp/p/8630",
+      "sourceLabel": "ニュースイッチ（日刊工業新聞）2017年4月11日（2026年11月確認）",
+      "note": "Y 系・Tb 系いずれの磁気光学結晶もモジュール内の光アイソレータとして同一製品に関わるため、Y と同じ根拠・水準とした。数値は2017年時点のもの。"
+    },
+    {
+      "company": "stage05-integrated-40",
+      "name": "住友電気工業",
+      "node": "05_photonics",
+      "els": [
+        "Y"
+      ],
+      "product": "データセンター向け光トランシーバと通信用光半導体",
+      "level": 2,
+      "share": "光トランシーバ世界市場の主要企業として社名が挙がる（シェア数値は非公表）",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.gminsights.com/ja/industry-analysis/optical-transceiver-market",
+      "sourceLabel": "Global Market Insights「光トランシーバ市場」（2026年11月確認）",
+      "note": "同ページでシェア数値が示されているのは Coherent 22.2%、Cisco 17.4%、Broadcom 14.3%、Lumentum 12.1%、Accelink 6.2% で、住友電気工業は主要企業一覧に名前があるのみ。2017年の日刊工業新聞系記事には「光トランシーバーは住友電工が世界シェアトップ」とあるが、その後日米勢の多くが撤退し中国勢中心の市場構成に変わったとされるため、現時点の根拠としては採用していない。"
+    },
+    {
+      "company": "stage05-integrated-40",
+      "name": "住友電気工業",
+      "node": "05_photonics",
+      "els": [
+        "DyTb"
+      ],
+      "product": "データセンター向け光トランシーバと通信用光半導体（光アイソレータ内蔵）",
+      "level": 2,
+      "share": "光トランシーバ世界市場の主要企業として社名が挙がる（シェア数値は非公表）",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.gminsights.com/ja/industry-analysis/optical-transceiver-market",
+      "sourceLabel": "Global Market Insights「光トランシーバ市場」（2026年11月確認）",
+      "note": "Y 系・Tb 系いずれの磁気光学結晶も光トランシーバ内の光アイソレータとして同一製品に関わるため、Y と同じ根拠・水準とした。"
+    },
+    {
+      "company": "stage05-integrated-41",
+      "name": "村田製作所",
+      "node": "05_electronics",
+      "els": [
+        "Y"
+      ],
+      "product": "積層セラミックコンデンサ（MLCC）",
+      "level": 4,
+      "share": "セラミックコンデンサで世界シェア首位（自社サイト）。市場推計では約4割とされる",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.murata.com/en-us/products/capacitor/ceramiccapacitor/overview/strength",
+      "sourceLabel": "村田製作所「セラミックコンデンサの強み」（2026年11月確認）",
+      "note": "自社サイトは「world's No.1 market share」と記すが数値はない。約40%という数値は市場調査・報道ベースの推計で、一次資料では確認できなかった。"
+    },
+    {
+      "company": "stage05-integrated-41",
+      "name": "村田製作所",
+      "node": "05_electronics",
+      "els": [
+        "DyTb"
+      ],
+      "product": "積層セラミックコンデンサ（MLCC）",
+      "level": 4,
+      "share": "セラミックコンデンサで世界シェア首位（自社サイト）。市場推計では約4割とされる",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.murata.com/en-us/products/capacitor/ceramiccapacitor/overview/strength",
+      "sourceLabel": "村田製作所「セラミックコンデンサの強み」（2026年11月確認）",
+      "note": "Dy·Tb も MLCC 誘電体への添加としての用途なので、Y と同じ MLCC のシェアで判定した。"
+    },
+    {
+      "company": "stage05-integrated-3",
+      "name": "日本電波工業（NDK）",
+      "node": "05_electronics",
+      "els": [
+        "Y"
+      ],
+      "product": "水晶振動子・発振器（宇宙用を含む水晶デバイス）",
+      "level": 3,
+      "share": "自社サイトで車載向け水晶デバイスの世界シェアNo.1と記載、5G基地局用OCXOは日系唯一の量産",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.ndk.com/jp/company/business/",
+      "sourceLabel": "日本電波工業「事業紹介」（2026年11月確認）",
+      "note": "数値シェアは自社サイトにない。販売代理店（オリナス）の2017年の製品ニュースは「車載分野世界シェア第1位」「世界シェア60％獲得」と記載するが第三者検証はない。水晶デバイス全体のシェア数値は未確認。"
+    },
+    {
+      "company": "mlcc-taiyo-yuden",
+      "name": "太陽誘電",
+      "node": "05_electronics",
+      "els": [
+        "Y"
+      ],
+      "product": "積層セラミックコンデンサ（MLCC）",
+      "level": 3,
+      "share": "MLCC で世界シェア第3位（2023年度、同社調べ・統合報告書2024）",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://pdf.irpocket.com/C6976/Bv1s/F9vx/RgmG.pdf",
+      "sourceLabel": "太陽誘電 統合報告書2024（2026年11月確認）",
+      "note": "同報告書に数値シェアの記載はなく「世界シェア第3位（2023年度（当社調べ））」のみ。既存記述の「約1割」は同社開示ではなく報道・推計ベース。"
+    },
+    {
+      "company": "mlcc-taiyo-yuden",
+      "name": "太陽誘電",
+      "node": "05_electronics",
+      "els": [
+        "DyTb"
+      ],
+      "product": "積層セラミックコンデンサ（MLCC）",
+      "level": 3,
+      "share": "MLCC で世界シェア第3位（2023年度、同社調べ・統合報告書2024）",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://pdf.irpocket.com/C6976/Bv1s/F9vx/RgmG.pdf",
+      "sourceLabel": "太陽誘電 統合報告書2024（2026年11月確認）",
+      "note": "Dy·Tb も MLCC 誘電体への添加としての用途なので、Y と同じ MLCC のシェアで判定した。"
+    },
+    {
+      "company": "seed-15",
+      "name": "京セラ",
+      "node": "05_electronics",
+      "els": [
+        "Y"
+      ],
+      "product": "積層セラミックコンデンサ（MLCC）",
+      "level": 2,
+      "share": "MLCC 市場の主要企業の一角として京セラ AVX が挙げられる",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.mordorintelligence.com/industry-reports/multi-layer-ceramic-capacitor-mlcc-market/companies",
+      "sourceLabel": "Mordor Intelligence「MLCC 市場 主要企業」（2026年11月確認）",
+      "note": "同ページは Kyocera AVX Components を主要企業として挙げるが、数値シェアは一切示していない。既存記述の「世界シェア5〜6%」は同ページでは裏づけられない。"
+    },
+    {
+      "company": "seed-15",
+      "name": "京セラ",
+      "node": "05_electronics",
+      "els": [
+        "DyTb"
+      ],
+      "product": "積層セラミックコンデンサ（MLCC）",
+      "level": 2,
+      "share": "MLCC 市場の主要企業の一角として京セラ AVX が挙げられる",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.mordorintelligence.com/industry-reports/multi-layer-ceramic-capacitor-mlcc-market/companies",
+      "sourceLabel": "Mordor Intelligence「MLCC 市場 主要企業」（2026年11月確認）",
+      "note": "Dy·Tb も MLCC 誘電体への添加としての用途なので、Y と同じ MLCC のシェアで判定した。既存記述の「世界シェア5〜6%」は出典では確認できない。"
+    },
+    {
+      "company": "seed-19",
+      "name": "TDK",
+      "node": "05_electronics",
+      "els": [
+        "Y"
+      ],
+      "product": "積層セラミックコンデンサ（MLCC）",
+      "level": 2,
+      "share": "MLCC の世界主要5社の一角（村田製作所・サムスン電機・太陽誘電・TDK・ヤゲオ）",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.mordorintelligence.com/industry-reports/multi-layer-ceramic-capacitor-mlcc-market/companies",
+      "sourceLabel": "Mordor Intelligence「MLCC 市場 主要企業」（2026年11月確認）",
+      "note": "同ページは2024年シェアに基づく上位5社として TDK を挙げるが、数値シェアは有料提供で非公開。"
+    },
+    {
+      "company": "seed-19",
+      "name": "TDK",
+      "node": "05_electronics",
+      "els": [
+        "DyTb"
+      ],
+      "product": "積層セラミックコンデンサ（MLCC）",
+      "level": 2,
+      "share": "MLCC の世界主要5社の一角（村田製作所・サムスン電機・太陽誘電・TDK・ヤゲオ）",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://www.mordorintelligence.com/industry-reports/multi-layer-ceramic-capacitor-mlcc-market/companies",
+      "sourceLabel": "Mordor Intelligence「MLCC 市場 主要企業」（2026年11月確認）",
+      "note": "Dy·Tb も MLCC 誘電体への添加としての用途なので、Y と同じ MLCC のシェアで判定した。"
+    },
+    {
+      "company": "stage05-integrated-37",
+      "name": "ルネサス エレクトロニクス",
+      "node": "05_electronics",
+      "els": [
+        "Y"
+      ],
+      "product": "耐放射線・高信頼 IC（マイコンを中心とする半導体）",
+      "level": 2,
+      "share": "車載マイコンで世界市場シェア2位（業界メディア報道）",
+      "scope": "世界",
+      "basis": "公開情報",
+      "source": "https://monoist.itmedia.co.jp/mn/articles/2606/30/news081_2.html",
+      "sourceLabel": "MONOist「ルネサスが2035年の売上高3倍増も視野に」（2026年11月確認）",
+      "note": "シェアは車載マイコンという事業分野のもので、当分類の製品（耐放射線・高信頼 IC）単独のシェアではない。第三者推計の18%／約30%という数値は出所がまちまちで採用しなかった。"
+    }
+  ]
+}
