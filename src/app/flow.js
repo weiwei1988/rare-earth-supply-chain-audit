@@ -84,7 +84,7 @@ function renderElementFlow(){
     var point=criticalityPoint(node.id,flowElement),score=point&&point.score!==null?Math.round(point.score):null;
     var scoreMarkup='';
     if(score!==null){
-      var tier=score<40?1:score<65?3:4;
+      var tier=criticalityTier(score);
       var scorePrefix=meta+' · '+criticalText('score')+(language==='en'?': ':'：');
       var scoreLabel=scorePrefix+score;
       var prefixWidth=Array.from(scorePrefix).reduce(function(width,ch){return width+(/[\u2e80-\uffef]/.test(ch)?11:6.3)},0);
@@ -115,6 +115,16 @@ function renderElementFlow(){
   markup+=nodes.map(nodeMarkup).join("");
   svg.setAttribute("viewBox","0 0 "+W+" "+H);
   svg.setAttribute("width",W);svg.setAttribute("height",H);svg.style.height=H+"px";svg.classList.toggle("is-tracing",!!flowSelectionId);svg.classList.toggle("is-english",language==="en");svg.innerHTML=markup;
+  // 実際のフォント幅でバッジを配置し、英語の狭い文字にも追随する。
+  svg.querySelectorAll('g.re-criticality').forEach(function(badge){
+    var prefix=badge.previousElementSibling;
+    if(!prefix||prefix.tagName.toLowerCase()!=='text')return;
+    var width=prefix.getComputedTextLength();
+    if(!Number.isFinite(width)||width<=0)return;
+    var x=Number(prefix.getAttribute('x'))+width+4;
+    badge.querySelector('rect').setAttribute('x',x);
+    badge.querySelector('text').setAttribute('x',x+14.5);
+  });
   root.querySelector("#re-element-flow-stats").textContent=tagLabel(flowElement)+" · "+metricCount(nodes.length,"category")+" · "+metricCount(edges.length,"connection")+" · "+companyUnitCount(data.filter(function(company){return company.tags.indexOf(flowElement)>=0}).length);
   function openNode(id){
     flowSelectionId=id;flowSelectedId=null;refresh("flow");
@@ -125,6 +135,8 @@ function renderElementFlow(){
     node.addEventListener("keydown",function(event){if(event.key==="Enter"||event.key===" "){event.preventDefault();openNode(node.dataset.flowNode)}})
   })
 }
+// 元素別フローのシェア根拠は、選んでいる工程とその元素で絞る
+function flowShareScope(){return{node:flowSelectionId,elements:[flowElement]}}
 function renderFlowCompanyResults(){
   var section=root.querySelector("#re-element-flow-results");
   var main=section.querySelector(".re-main");
@@ -141,15 +153,15 @@ function renderFlowCompanyResults(){
   }
   main.classList.remove("is-dependency");
   var sub=allSubs.find(function(item){return item.id===flowSelectionId});
-  var items=data.filter(function(company){return company.tags.indexOf(flowElement)>=0&&company.subs.indexOf(flowSelectionId)>=0});
+  var items=data.filter(function(company){return companyHasElement(company,flowSelectionId,flowElement)});
   root.querySelector("#re-flow-list-title").textContent=tagLabel(flowElement)+" — "+(sub?subText(sub,"label"):flowSelectionId);
   root.querySelector("#re-flow-list-count").textContent=companyUnitCount(items.length);
   var box=root.querySelector("#re-flow-companies");
   box.innerHTML=items.length?items.map(function(company){
-    return companyCardHtml(company,"data-flow-company",flowSelectedId)
+    return companyCardHtml(company,"data-flow-company",flowSelectedId,flowShareScope())
   }).join(""):'<div class="re-empty">'+esc(tr("emptyFlowCompanies"))+'</div>';
   var dossier=root.querySelector("#re-flow-dossier");
-  dossier.innerHTML=dossierMarkup(data.find(function(company){return company.id===flowSelectedId}));
+  dossier.innerHTML=dossierMarkup(data.find(function(company){return company.id===flowSelectedId}),flowShareScope());
   box.querySelectorAll("[data-flow-company]").forEach(function(button){button.addEventListener("click",function(){
     flowSelectedId=button.dataset.flowCompany;renderFlowCompanyResults();
     requestAnimationFrame(function(){

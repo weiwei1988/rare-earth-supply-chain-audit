@@ -195,6 +195,25 @@ export async function loadDataset() {
     assertSubset(company.subs, subIds, `${company.name} の subs`);
     assertSubset(company.stages, stageIds, `${company.name} の stages`);
     assertSubset(company.tags, ELEMENTS, `${company.name} の tags`);
+    // subEls は「その企業が、そのサブカテゴリーで、どの元素に関わるか」。tags はその和集合になる。
+    if (!company.subEls || typeof company.subEls !== "object" || Array.isArray(company.subEls)) {
+      throw new ValidationError(`${company.name} に subEls がありません（サブカテゴリーごとの元素）。`);
+    }
+    const subElKeys = Object.keys(company.subEls);
+    if (JSON.stringify([...subElKeys].sort()) !== JSON.stringify([...company.subs].sort())) {
+      throw new ValidationError(`${company.name} の subEls のキーが subs と一致しません（subs: ${company.subs.join(",")} / subEls: ${subElKeys.join(",")}）。`);
+    }
+    const subElUnion = new Set();
+    for (const subId of company.subs) {
+      const els = company.subEls[subId];
+      if (!Array.isArray(els) || !els.length) throw new ValidationError(`${company.name} の subEls.${subId} に元素がありません。`);
+      assertSubset(els, ELEMENTS, `${company.name} の subEls.${subId}`);
+      assertSubset(els, subcategories.find((sub) => sub.id === subId).els, `${company.name} の subEls.${subId}（サブカテゴリーが扱う元素）`);
+      for (const el of els) subElUnion.add(el);
+    }
+    if (JSON.stringify([...subElUnion].sort()) !== JSON.stringify([...company.tags].sort())) {
+      throw new ValidationError(`${company.name} の tags が subEls の和集合と一致しません（tags: ${company.tags.join(",")} / subEls: ${[...subElUnion].join(",")}）。`);
+    }
     if (!EVALUATION_PATTERN.test(String(company.ev ?? "").trim())) throw new ValidationError(`${company.name} の評価表記 ${company.ev} を解釈できません（A/B/C/X に ± を付けた表記か「参考」）。`);
     const privateAtlaFields = ["row", "sourceUrl", "userReason", "spreadsheetId", "sheetId"].filter((key) => company.atla?.[key] !== undefined);
     if (privateAtlaFields.length) throw new ValidationError(`${company.name} の公開データに内部シート情報があります: ${privateAtlaFields.join(", ")}`);

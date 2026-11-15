@@ -16,10 +16,11 @@ function criticalityPoints(){
     var finals=new Set(active.filter(function(s){return s.stage===6}).map(function(s){return s.id}));
     var path=new Set(active.filter(function(s){return reachable.has(s.id)&&(finals.has(s.id)||Array.from(walk(s.id,false)).some(function(id){return finals.has(id)}))}).map(function(s){return s.id}));
     active.filter(function(s){return s.stage<6}).forEach(function(s){
-      var down=walk(s.id,false),companies=data.filter(function(c){return c.tags.indexOf(element)>=0&&c.subs.some(function(id){return down.has(id)&&path.has(id)})});
-      var members=data.filter(function(c){return c.tags.indexOf(element)>=0&&c.subs.indexOf(s.id)>=0}),level=1;
+      var down=walk(s.id,false),companies=data.filter(function(c){return c.subs.some(function(id){return down.has(id)&&path.has(id)&&companyHasElement(c,id,element)})});
+      var members=data.filter(function(c){return companyHasElement(c,s.id,element)}),level=1;
       members.forEach(function(c){level=Math.max(level,shareEntry(c.id,s.id,element).level)});
-      points.push({node:s.id,element:element,downstream:path.has(s.id)?companies.length:0,level:level,score:null,onPath:path.has(s.id)});
+      var representative=members.find(function(c){return shareEntry(c.id,s.id,element).level===level});
+      points.push({node:s.id,element:element,downstream:path.has(s.id)?companies.length:0,level:level,score:null,onPath:path.has(s.id),companies:members,downstreamCompanies:path.has(s.id)?companies:[],downstreamNodes:Array.from(down).filter(function(id){return path.has(id)}),representative:representative});
     });
   });
   var max=Math.max.apply(null,[1].concat(points.map(function(p){return p.downstream})));
@@ -33,10 +34,15 @@ function visible(){
     return tags.some(function(tag){return selectedElements.indexOf(tag)>=0})
   })
 }
+// 選んだ元素を、その企業がその工程（サブカテゴリー）で扱うか。企業単位の tags は
+// 各工程の元素の和集合なので、工程を絞って数えるときは必ず subEls で判定する。
+function matchesSelectedElement(company,id){
+  return selectedElements.some(function(element){return companyHasElement(company,id,element)})
+}
 function inSelection(c){
   if(selection.type==="all")return true;
-  if(selection.type==="stage")return c.stages.indexOf(Number(selection.id))>=0;
-  if(selection.type==="sub")return c.subs.indexOf(selection.id)>=0;
+  if(selection.type==="stage")return c.subs.some(function(id){return subStage(id)===Number(selection.id)&&matchesSelectedElement(c,id)});
+  if(selection.type==="sub")return matchesSelectedElement(c,selection.id);
   return false
 }
 function normalizeSearch(value){return String(value||"").normalize("NFKC").toLocaleLowerCase("ja")}
@@ -49,20 +55,23 @@ function list(){
     return terms.every(function(term){return text.includes(term)})
   })
 }
-function countStage(id){return visible().filter(function(c){return c.stages.indexOf(id)>=0}).length}
+function countStage(id){return data.filter(function(c){return c.subs.some(function(sub){return subStage(sub)===id&&matchesSelectedElement(c,sub)})}).length}
 function totalStageCount(id){return data.filter(function(c){return c.stages.indexOf(id)>=0}).length}
-function countSub(id){return visible().filter(function(c){return c.subs.indexOf(id)>=0}).length}
+function countSub(id){return data.filter(function(c){return matchesSelectedElement(c,id)}).length}
 function totalSubCount(id){return data.filter(function(c){return c.subs.indexOf(id)>=0}).length}
-function subElementCount(id,element){return data.filter(function(c){return c.subs.indexOf(id)>=0&&Array.isArray(c.tags)&&c.tags.indexOf(element)>=0}).length}
+// 元素の所属はサブカテゴリーごとに持つ（subEls）。企業の tags はその和集合なので、工程別に数えるときは使わない。
+function companyHasElement(company,id,element){var els=company.subEls&&company.subEls[id];return Array.isArray(els)&&els.indexOf(element)>=0}
+function subElementCount(id,element){return data.filter(function(c){return companyHasElement(c,id,element)}).length}
 function activeEls(item){var forced=item.forceEls||[];return item.els.filter(function(element){return forced.indexOf(element)>=0||subElementCount(item.id,element)>0})}
 
 function subLabel(id){var sub=allSubs.find(function(item){return item.id===id});return sub?subText(sub,"label"):id}
 function flowCompanyCount(id,element){
-  return data.filter(function(company){return company.tags.indexOf(element)>=0&&company.subs.indexOf(id)>=0}).length
+  return data.filter(function(company){return companyHasElement(company,id,element)}).length
 }
 function flowStageCount(stage,element){
-  return data.filter(function(company){return company.tags.indexOf(element)>=0&&company.stages.indexOf(stage)>=0}).length
+  return data.filter(function(company){return company.subs.some(function(id){return companyHasElement(company,id,element)&&subStage(id)===stage})}).length
 }
+function subStage(id){var sub=allSubs.find(function(item){return item.id===id});return sub?sub.stage:null}
 var flowOrderByElement={
   Y:{
     2:["02_compound","02_recycle"],
