@@ -276,7 +276,9 @@ check(
     html.includes(".re-column-label-count{grid-column:2") &&
     html.includes("function stageLabel(stage,x)") &&
     html.includes("companyCount(countStage(stage.id))") &&
-    html.includes("function countStage(id){return visible().filter"),
+    html.includes("function countStage(id){return data.filter") &&
+    // 工程の企業数は、その工程のサブカテゴリーで選択中の元素を扱う企業だけを数える
+    html.includes("subStage(sub)===id&&matchesSelectedElement(c,sub)"),
 );
 check(
   "日本語・英語・簡体字中国語を両表示モードで切替",

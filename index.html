@@ -545,10 +545,15 @@ button[aria-pressed="true"]{color:var(--text);border-color:var(--text);backgroun
       return tags.some(function(tag){return selectedElements.indexOf(tag)>=0})
     })
   }
+  // 選んだ元素を、その企業がその工程（サブカテゴリー）で扱うか。企業単位の tags は
+  // 各工程の元素の和集合なので、工程を絞って数えるときは必ず subEls で判定する。
+  function matchesSelectedElement(company,id){
+    return selectedElements.some(function(element){return companyHasElement(company,id,element)})
+  }
   function inSelection(c){
     if(selection.type==="all")return true;
-    if(selection.type==="stage")return c.stages.indexOf(Number(selection.id))>=0;
-    if(selection.type==="sub")return c.subs.indexOf(selection.id)>=0;
+    if(selection.type==="stage")return c.subs.some(function(id){return subStage(id)===Number(selection.id)&&matchesSelectedElement(c,id)});
+    if(selection.type==="sub")return matchesSelectedElement(c,selection.id);
     return false
   }
   function normalizeSearch(value){return String(value||"").normalize("NFKC").toLocaleLowerCase("ja")}
@@ -561,9 +566,9 @@ button[aria-pressed="true"]{color:var(--text);border-color:var(--text);backgroun
       return terms.every(function(term){return text.includes(term)})
     })
   }
-  function countStage(id){return visible().filter(function(c){return c.stages.indexOf(id)>=0}).length}
+  function countStage(id){return data.filter(function(c){return c.subs.some(function(sub){return subStage(sub)===id&&matchesSelectedElement(c,sub)})}).length}
   function totalStageCount(id){return data.filter(function(c){return c.stages.indexOf(id)>=0}).length}
-  function countSub(id){return visible().filter(function(c){return c.subs.indexOf(id)>=0}).length}
+  function countSub(id){return data.filter(function(c){return matchesSelectedElement(c,id)}).length}
   function totalSubCount(id){return data.filter(function(c){return c.subs.indexOf(id)>=0}).length}
   // 元素の所属はサブカテゴリーごとに持つ（subEls）。企業の tags はその和集合なので、工程別に数えるときは使わない。
   function companyHasElement(company,id,element){var els=company.subEls&&company.subEls[id];return Array.isArray(els)&&els.indexOf(element)>=0}
