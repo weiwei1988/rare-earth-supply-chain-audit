@@ -11,11 +11,12 @@ function setView(view){
   });
   root.querySelector("#re-view-overview").hidden=view!=="overview";
   root.querySelector("#re-view-element-flow").hidden=view!=="element-flow";
+  root.querySelector('#re-view-criticality').hidden=view!=='criticality';
   // 表示に切り替えた側をここで描き直す。clientWidth の読み出しでレイアウトが確定するため、
   // requestAnimationFrame を待たずに描いてよい。待つと、背面タブなどで rAF が止まっている間
   // 図が空のままになる。
   if(view==="overview"){if(flowLayoutStale)renderFlow()}
-  else refresh("flow")
+  else refresh(view==='criticality'?'criticality':'flow')
 }
 function applyStaticTranslations(){
   document.documentElement.lang=language;
@@ -24,6 +25,7 @@ function applyStaticTranslations(){
   root.querySelector(".re-view-tabs").setAttribute("aria-label",tr("viewMode"));
   root.querySelector("#re-tab-overview").textContent=tr("overview");
   root.querySelector("#re-tab-element-flow").textContent=tr("elementFlow");
+  root.querySelector('#re-tab-criticality').textContent=crText('tab');
   root.querySelector('[data-element="all"]').textContent=tr("showAll");
   root.querySelector(".re-overview-element-controls").setAttribute("aria-label",tr("elementSelect"));
   root.querySelector(".re-element-flow-controls").setAttribute("aria-label",tr("elementSelectOne"));
@@ -37,8 +39,9 @@ function applyStaticTranslations(){
   root.querySelector("#re-search-help").textContent=tr("searchHelp");
   root.querySelector(".re-element-flow-lead").textContent=tr("flowLead");
   root.querySelector("#re-flow-to-overview").textContent=tr("viewOverview");
-  root.querySelector(".re-element-flow-note > div").innerHTML=esc(tr("flowNote"))+'<p><strong>'+esc(criticalDefinition())+'</strong></p><p>'+esc(criticalText('formula'))+'</p><p>'+esc(criticalText('score'))+'：'+[{label:'0–39',tier:1},{label:'40–64',tier:3},{label:'65–100',tier:4}].map(function(item){return'<span class="re-criticality re-criticality-'+item.tier+' re-criticality-legend">'+item.label+'</span>'}).join(' ')+'</p><div class="re-element-flow-stats" id="re-element-flow-stats"></div>';
+  root.querySelector(".re-element-flow-note > div").innerHTML=esc(tr("flowNote"))+'<p><strong>'+esc(criticalDefinition())+'</strong></p><p>'+esc(criticalText('formula'))+'</p><p>'+esc(criticalText('score'))+'：'+[{label:'0–24',tier:1},{label:'25–44',tier:2},{label:'45–64',tier:3},{label:'65–100',tier:4}].map(function(item){return'<span class="re-criticality re-criticality-'+item.tier+' re-criticality-legend">'+item.label+'</span>'}).join(' ')+'</p><div class="re-element-flow-stats" id="re-element-flow-stats"></div>';
   root.querySelector("#re-language-switch").setAttribute("aria-label",tr("language"));
+  root.querySelector(".re-element-flow-note > div").insertAdjacentHTML('beforeend',shareCriteriaHtml());
   root.querySelectorAll("[data-language]").forEach(function(button){button.setAttribute("aria-pressed",String(button.dataset.language===language))});
   root.querySelector("#re-status").textContent=tr("prepared",{count:data.length});
 }
@@ -57,6 +60,7 @@ function setLanguage(next){
 //   "flowList" … 元素別フローの企業一覧とドシエだけ
 //   "all"      … 両タブ
 function refresh(scope){
+  if((scope==='criticality'||scope==='all')&&activeView==='criticality')renderCriticality();
   if(scope==="overview"||scope==="all"){
     renderOverviewElementControls();
     root.querySelectorAll("[data-element]").forEach(function(btn){

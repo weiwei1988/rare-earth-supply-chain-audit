@@ -11,7 +11,7 @@ const NOTICE = "scripts/build.mjs が src/data/*.json から生成。直接編�
 const APP_NOTICE = "scripts/build.mjs が src/app/*.js から生成。直接編集せず、src/app を編集して npm run build を実行すること。";
 
 // 連結する順番。var の初期化はこの順に実行されるため、並べ替えるときは依存を確かめること。
-const APP_FILES = ["state", "i18n", "text", "model", "graph", "parts", "overview", "flow", "view"];
+const APP_FILES = ["state", "i18n", "text", "model", "graph", "parts", "overview", "flow", "criticality", "view"];
 
 const htmlUrl = new URL("../index.html", import.meta.url);
 const appDir = new URL("../src/app/", import.meta.url);
@@ -61,6 +61,14 @@ async function appRegion() {
     if (entry.source) {
       const url = new URL(entry.source);
       if (url.protocol !== 'https:' || url.username || url.password) throw new Error('Invalid share source URL');
+    }
+    // 日本語が正本。en / zh-CN は product・share を必ず持ち、note は正本にあるときだけ持つ。
+    for (const locale of ['en', 'zh-CN']) {
+      const translated = entry.i18n?.[locale];
+      if (!translated?.product?.trim() || !translated?.share?.trim()) throw new Error(`Missing ${locale} share translation: ${entry.company}/${entry.node}`);
+      if (Boolean(entry.note) !== Boolean(translated.note?.trim())) throw new Error(`Mismatched ${locale} share note: ${entry.company}/${entry.node}`);
+      const extra = Object.keys(translated).filter((key) => !['product', 'share', 'note'].includes(key));
+      if (extra.length) throw new Error(`Unexpected ${locale} share fields: ${entry.company}/${entry.node} (${extra.join(',')})`);
     }
   }
   const names = (await fs.readdir(appDir)).filter((name) => name.endsWith(".js")).map((name) => name.slice(0, -3)).sort();
