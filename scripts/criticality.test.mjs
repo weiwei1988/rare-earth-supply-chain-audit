@@ -19,3 +19,23 @@ test('production matrix and ranking render in all locales with shared flow score
  for(const sort of ['score','down','share']){const ranked=s.crSorted(sort);const key=sort==='down'?'downstream':sort==='share'?'level':'score';assert.ok(ranked.every((p,i)=>!i||ranked[i-1][key]>=p[key]));}
  assert.equal(s.crPoints().length,60);assert.equal(s.criticalityPoint('02_compound','Y').score,s.crPoints().find(p=>p.node==='02_compound'&&p.element==='Y').score);
 });
+test('シェア根拠は呼び出し元が渡した条件だけで決まる（別画面の選択が混ざらない）',()=>{
+ const read=name=>JSON.parse(fs.readFileSync(new URL('../src/data/'+name+'.json',import.meta.url),'utf8'));
+ const elements=['Y','DyTb','Sm','Sc'];
+ const s={elements,allElements:elements,data:read('companies'),allSubs:read('subcategories'),companyShares:read('company-shares'),
+  language:'ja',activeView:'overview',selection:{type:'all',id:'all'},selectedElements:elements.slice(),
+  flowElement:'Y',flowSelectionId:null,crSelected:()=>null,criticalText:()=>'',subLabel:id=>id,tagLabel:t=>t,esc:v=>String(v),companyText:(c,k)=>c[k],tr:()=>''};
+ vm.createContext(s);for(const file of ['text','model','parts'])vm.runInContext(fs.readFileSync(new URL('../src/app/'+file+'.js',import.meta.url),'utf8'),s);
+ const company=s.data.find(c=>c.id==='seed-3');
+ const overview={node:null,elements};
+ const baseline=s.shareRows(company,overview).length;
+ assert.ok(baseline>1);
+ // 別画面を開いていても、渡した条件が同じなら結果は変わらない（言語切替での再描画を模す）
+ for(const view of ['criticality','element-flow','overview']){
+  s.activeView=view;s.flowSelectionId='03_ceramic';s.flowElement='Sm';s.crSelected=()=>({node:'03_ceramic',element:'Y'});
+  assert.equal(s.shareRows(company,overview).length,baseline);
+ }
+ // 条件を変えれば、その範囲だけに絞られる
+ assert.deepEqual(s.shareRows(company,{node:'04_faraday',elements:['Y']}).map(r=>r.node+'|'+r.element),['04_faraday|Y']);
+ assert.equal(s.shareRows(company,{node:'04_faraday',elements}).length,2);
+});

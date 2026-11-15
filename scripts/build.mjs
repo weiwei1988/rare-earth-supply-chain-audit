@@ -55,6 +55,13 @@ function htmlRegion(dataset) {
 async function appRegion() {
   const shares = JSON.parse(await fs.readFile(new URL('../src/data/company-shares.json', import.meta.url), 'utf8'));
   const checked = await loadDataset();
+  // 水準の呼び方・判定基準は日本語が正本。en / zh-CN の訳が欠けたらビルドを止める。
+  for (const level of shares.levels) {
+    for (const locale of ['en', 'zh-CN']) {
+      const translated = level.i18n?.[locale];
+      if (!translated?.label?.trim() || !translated?.rule?.trim()) throw new Error(`Missing ${locale} share level translation: ${level.level}`);
+    }
+  }
   for (const entry of shares.entries) {
     const company = checked.companies.find(c => c.id === entry.company);
     if (!company?.subs.includes(entry.node) || ![1,2,3,4].includes(entry.level) || (entry.els || []).some(el => !ELEMENTS.includes(el))) throw new Error('Invalid share assessment: ' + entry.company + '/' + entry.node);

@@ -172,6 +172,8 @@ function renderRouteNote(){
   holder.innerHTML='<div class="re-route-note-title">'+esc(tr("routeTitle",{count:rows.length}))+'</div>'+rows.map(function(row){return'<div class="re-route-row"><span class="re-route-pair">'+esc(subLabel(row.from))+' → '+esc(subLabel(row.to))+'</span><span class="re-route-elements">'+tagsHtml(row.elements)+'</span><span>'+esc(row.note)+'</span></div>'}).join("")
 }
 
+// 全体像のシェア根拠は、選んでいるサブカテゴリーと元素フィルターで絞る
+function overviewShareScope(){return{node:selection.type==="sub"?selection.id:null,elements:selectedElements}}
 function renderList(){
   var dependency=selection.type==="stage"&&Number(selection.id)===1;
   root.querySelector(".re-company-search").hidden=dependency;
@@ -188,7 +190,7 @@ function renderList(){
   var box=root.querySelector("#re-companies");
   if(!items.length){box.innerHTML='<div class="re-empty">'+esc(tr("emptyCompanies"))+'</div>';return}
   box.innerHTML=items.map(function(company){
-    return companyCardHtml(company,"data-company",selectedId)
+    return companyCardHtml(company,"data-company",selectedId,overviewShareScope())
   }).join("");
   root.querySelectorAll("[data-company]").forEach(function(btn){btn.addEventListener("click",function(){
     selectedId=btn.dataset.company;refresh("list");
@@ -206,6 +208,6 @@ function renderList(){
 function renderDossier(){
   var host=root.querySelector("#re-dossier");
   if(selection.type==="stage"&&Number(selection.id)===1){host.innerHTML="";return}
-  host.innerHTML=dossierMarkup(data.find(function(company){return company.id===selectedId}))
+  host.innerHTML=dossierMarkup(data.find(function(company){return company.id===selectedId}),overviewShareScope())
 }
 

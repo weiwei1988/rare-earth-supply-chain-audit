@@ -84,7 +84,7 @@ function renderElementFlow(){
     var point=criticalityPoint(node.id,flowElement),score=point&&point.score!==null?Math.round(point.score):null;
     var scoreMarkup='';
     if(score!==null){
-      var tier=score>=65?4:score>=45?3:score>=25?2:1;
+      var tier=criticalityTier(score);
       var scorePrefix=meta+' · '+criticalText('score')+(language==='en'?': ':'：');
       var scoreLabel=scorePrefix+score;
       var prefixWidth=Array.from(scorePrefix).reduce(function(width,ch){return width+(/[\u2e80-\uffef]/.test(ch)?11:6.3)},0);
@@ -135,6 +135,8 @@ function renderElementFlow(){
     node.addEventListener("keydown",function(event){if(event.key==="Enter"||event.key===" "){event.preventDefault();openNode(node.dataset.flowNode)}})
   })
 }
+// 元素別フローのシェア根拠は、選んでいる工程とその元素で絞る
+function flowShareScope(){return{node:flowSelectionId,elements:[flowElement]}}
 function renderFlowCompanyResults(){
   var section=root.querySelector("#re-element-flow-results");
   var main=section.querySelector(".re-main");
@@ -156,10 +158,10 @@ function renderFlowCompanyResults(){
   root.querySelector("#re-flow-list-count").textContent=companyUnitCount(items.length);
   var box=root.querySelector("#re-flow-companies");
   box.innerHTML=items.length?items.map(function(company){
-    return companyCardHtml(company,"data-flow-company",flowSelectedId)
+    return companyCardHtml(company,"data-flow-company",flowSelectedId,flowShareScope())
   }).join(""):'<div class="re-empty">'+esc(tr("emptyFlowCompanies"))+'</div>';
   var dossier=root.querySelector("#re-flow-dossier");
-  dossier.innerHTML=dossierMarkup(data.find(function(company){return company.id===flowSelectedId}));
+  dossier.innerHTML=dossierMarkup(data.find(function(company){return company.id===flowSelectedId}),flowShareScope());
   box.querySelectorAll("[data-flow-company]").forEach(function(button){button.addEventListener("click",function(){
     flowSelectedId=button.dataset.flowCompany;renderFlowCompanyResults();
     requestAnimationFrame(function(){

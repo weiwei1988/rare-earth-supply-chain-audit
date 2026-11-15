@@ -6,22 +6,62 @@
   {
    "level": 4,
    "label": "世界首位級",
-   "rule": "世界シェア40%以上。数値がない場合は、世界首位・世界唯一とされるもの"
+   "rule": "世界シェア40%以上。数値がない場合は、世界首位・世界唯一とされるもの",
+   "i18n": {
+    "en": {
+     "label": "Global No. 1 class",
+     "rule": "Market share of at least 40% worldwide; where numerical data is unavailable, described as the global No. 1 or sole global supplier."
+    },
+    "zh-CN": {
+     "label": "全球首位级",
+     "rule": "全球份额40%以上；缺少数值时，依据全球第一或全球唯一供应商的公开表述。"
+    }
+   }
   },
   {
    "level": 3,
    "label": "世界上位／国内首位",
-   "rule": "世界シェア10〜40%、または国内シェア50%以上（国内唯一の量産拠点を含む）"
+   "rule": "世界シェア10〜40%、または国内シェア50%以上（国内唯一の量産拠点を含む）",
+   "i18n": {
+    "en": {
+     "label": "Global leader group / domestic No. 1",
+     "rule": "World share of 10–40%, or domestic share of at least 50%, including the sole domestic mass-production site."
+    },
+    "zh-CN": {
+     "label": "全球领先群体／国内第一",
+     "rule": "全球份额10～40%，或国内份额50%以上（包括国内唯一量产基地）。"
+    }
+   }
   },
   {
    "level": 2,
    "label": "国内上位",
-   "rule": "国内シェア10〜50%、国内数社の一角、または世界市場で主要企業として名前が挙がる（数値10%未満を含む）"
+   "rule": "国内シェア10〜50%、国内数社の一角、または世界市場で主要企業として名前が挙がる（数値10%未満を含む）",
+   "i18n": {
+    "en": {
+     "label": "Domestic leader group",
+     "rule": "Domestic share of 10–50%, one of a small number of domestic suppliers, or named as a major global supplier (including reported shares below 10%)."
+    },
+    "zh-CN": {
+     "label": "国内领先群体",
+     "rule": "国内份额10～50%、国内少数供应商之一，或被列为全球主要企业（包括数值低于10%的情况）。"
+    }
+   }
   },
   {
    "level": 1,
    "label": "未確認",
-   "rule": "公開情報でシェアを確認できない、非開示、または性能・技術面の記載のみ"
+   "rule": "公開情報でシェアを確認できない、非開示、または性能・技術面の記載のみ",
+   "i18n": {
+    "en": {
+     "label": "Unverified",
+     "rule": "Market share cannot be verified from public information, is undisclosed, or only performance/technology claims are available."
+    },
+    "zh-CN": {
+     "label": "未确认",
+     "rule": "公开信息无法确认份额、未披露，或仅有性能和技术方面的说明。"
+    }
+   }
   }
  ],
  "entries": [

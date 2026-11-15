@@ -39,7 +39,7 @@ function applyStaticTranslations(){
   root.querySelector("#re-search-help").textContent=tr("searchHelp");
   root.querySelector(".re-element-flow-lead").textContent=tr("flowLead");
   root.querySelector("#re-flow-to-overview").textContent=tr("viewOverview");
-  root.querySelector(".re-element-flow-note > div").innerHTML=esc(tr("flowNote"))+'<p><strong>'+esc(criticalDefinition())+'</strong></p><p>'+esc(criticalText('formula'))+'</p><p>'+esc(criticalText('score'))+'：'+[{label:'0–24',tier:1},{label:'25–44',tier:2},{label:'45–64',tier:3},{label:'65–100',tier:4}].map(function(item){return'<span class="re-criticality re-criticality-'+item.tier+' re-criticality-legend">'+item.label+'</span>'}).join(' ')+'</p><div class="re-element-flow-stats" id="re-element-flow-stats"></div>';
+  root.querySelector(".re-element-flow-note > div").innerHTML=esc(tr("flowNote"))+'<p><strong>'+esc(criticalDefinition())+'</strong></p><p>'+esc(criticalText('formula'))+'</p><p>'+esc(criticalText('score'))+'：'+criticalityBands.map(function(band){return'<span class="re-criticality re-criticality-'+band.tier+' re-criticality-legend">'+band.label+'</span>'}).join(' ')+'</p><div class="re-element-flow-stats" id="re-element-flow-stats"></div>';
   root.querySelector("#re-language-switch").setAttribute("aria-label",tr("language"));
   root.querySelector(".re-element-flow-note > div").insertAdjacentHTML('beforeend',shareCriteriaHtml());
   root.querySelectorAll("[data-language]").forEach(function(button){button.setAttribute("aria-pressed",String(button.dataset.language===language))});
