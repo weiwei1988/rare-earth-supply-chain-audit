@@ -53,12 +53,23 @@ function htmlRegion(dataset) {
 // src/app/*.js をひとつの即時実行関数の中身として連結する。各ファイルは同じスコープを共有するため
 // import を持たない。行頭に2スペースを足して、index.html の中のインデントにそろえる。
 async function appRegion() {
+  const shares = JSON.parse(await fs.readFile(new URL('../src/data/company-shares.json', import.meta.url), 'utf8'));
+  const checked = await loadDataset();
+  for (const entry of shares.entries) {
+    const company = checked.companies.find(c => c.id === entry.company);
+    if (!company?.subs.includes(entry.node) || ![1,2,3,4].includes(entry.level) || (entry.els || []).some(el => !ELEMENTS.includes(el))) throw new Error('Invalid share assessment: ' + entry.company + '/' + entry.node);
+    if (entry.source) {
+      const url = new URL(entry.source);
+      if (url.protocol !== 'https:' || url.username || url.password) throw new Error('Invalid share source URL');
+    }
+  }
   const names = (await fs.readdir(appDir)).filter((name) => name.endsWith(".js")).map((name) => name.slice(0, -3)).sort();
   const listed = [...APP_FILES].sort();
   if (names.join(",") !== listed.join(",")) {
     fatal(new Error(`src/app のファイルと APP_FILES が一致しません（src/app: ${names.join(",")} / APP_FILES: ${listed.join(",")}）。`));
   }
   const parts = [`  /* ${APP_REGION} START — ${APP_NOTICE} */`];
+  parts.push('  var companyShares=' + serializeGeneratedJson(shares) + ';');
   for (const name of APP_FILES) {
     const source = await fs.readFile(new URL(`${name}.js`, appDir), "utf8");
     const body = source.replace(/^\/\/[^\n]*\n(?:\/\/[^\n]*\n)*\n/, "").trimEnd();

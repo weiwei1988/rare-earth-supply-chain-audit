@@ -81,11 +81,21 @@ function renderElementFlow(){
   }
   function nodeMarkup(node){
     var label=subText(node.item,"label"),meta=companyCount(node.count),countWidth=20+Array.from(meta).length*6.5,labelLines=labelLinesOf(node.item),labelY=node.y-6-(labelLines.length-1)*lineHeight;
+    var point=criticalityPoint(node.id,flowElement),score=point&&point.score!==null?Math.round(point.score):null;
+    var scoreMarkup='';
+    if(score!==null){
+      var tier=score<40?1:score<65?3:4;
+      var scorePrefix=meta+' · '+criticalText('score')+(language==='en'?': ':'：');
+      var scoreLabel=scorePrefix+score;
+      var prefixWidth=Array.from(scorePrefix).reduce(function(width,ch){return width+(/[\u2e80-\uffef]/.test(ch)?11:6.3)},0);
+      var badgeX=node.x+15+prefixWidth;
+      scoreMarkup='<g><title>'+esc(scoreLabel+' / '+point.downstream+' / '+criticalText('share')+' '+point.level)+'</title><text x="'+(node.x+15)+'" y="'+(node.y+14)+'" style="font:11px sans-serif;fill:var(--sub)">'+esc(scorePrefix)+'</text><g class="re-criticality re-criticality-'+tier+'"><rect x="'+badgeX+'" y="'+(node.y+1)+'" width="29" height="18" rx="7"></rect><text x="'+(badgeX+14.5)+'" y="'+(node.y+14)+'" text-anchor="middle">'+score+'</text></g></g>';
+    }
     return'<g class="re-ef-node'+(flowSelectionId===node.id?' is-selected':'')+'" data-flow-node="'+esc(node.id)+'" tabindex="0" role="button" aria-label="'+esc(label+"、"+meta)+'">'+
       '<rect class="re-ef-node-bar" x="'+node.x+'" y="'+(node.y-node.h/2)+'" width="8" height="'+node.h+'" fill="'+flowColor+'"></rect>'+
       '<text class="re-ef-node-title">'+labelLines.map(function(line,index){return'<tspan x="'+(node.x+15)+'" y="'+(labelY+index*lineHeight)+'">'+esc(line)+'</tspan>'}).join("")+'</text>'+
-      '<rect class="re-ef-node-count-bg" x="'+(node.x+14)+'" y="'+(node.y+2)+'" width="'+countWidth+'" height="18" rx="9" fill="'+flowColor+'" stroke="'+flowColor+'"></rect>'+
-      '<text class="re-ef-node-count" x="'+(node.x+21)+'" y="'+(node.y+14.5)+'">'+meta+'</text></g>'
+      (scoreMarkup||('<rect class="re-ef-node-count-bg" x="'+(node.x+14)+'" y="'+(node.y+2)+'" width="'+countWidth+'" height="17" rx="6" fill="'+flowColor+'" stroke="'+flowColor+'"></rect>'+
+      '<text class="re-ef-node-count" x="'+(node.x+21)+'" y="'+(node.y+13.5)+'">'+esc(meta)+'</text>'))+'</g>'
   }
   var title=tr("flowTitle",{element:tagLabel(flowElement)});
   root.querySelector("#re-element-flow-title").textContent=title;
