@@ -33,7 +33,7 @@ function crCellHtml(sub,element,point){
   var detail=score===null?crText('unavailable'):crText('downShort')+' '+point.downstream+' / '+crText('shareShort')+' '+point.level;
   var aria=subText(sub,'label')+' / '+tagLabel(element)+' / '+(score===null?crText('unavailable'):crText('score')+' '+score+' · '+crText('downstream')+' '+point.downstream+' · '+criticalText('share')+' '+point.level);
   return'<td><button type="button" class="re-cr-cell'+(score===null?'':' re-criticality re-criticality-'+criticalityTier(score))+'" data-cr-key="'+esc(crKey(point))+'" aria-pressed="'+(criticalState.key===crKey(point))+'" aria-label="'+esc(aria)+'">'+
-    '<span class="re-cr-cell-score">'+(score===null?'—':score)+'</span><small>'+esc(detail)+'</small></button></td>'
+    '<span class="re-cr-cell-score">'+(score===null?'—':score)+'</span><small>'+(score===null?esc(detail):'<span class="re-cr-cell-detail">'+esc(crText('downShort')+' '+point.downstream)+'</span><span class="re-cr-cell-detail">'+esc(crText('shareShort')+' '+point.level)+'</span>')+'</small></button></td>'
 }
 function crMatrixRowHtml(id,points){
   var sub=allSubs.find(function(item){return item.id===id}),note=subText(sub,'description');
@@ -50,7 +50,7 @@ function crMatrixHtml(points){
 }
 function crLegendHtml(){
   return'<div class="re-cr-legend"><span class="re-cr-legend-title">'+esc(crText('legend'))+'</span>'+criticalityBands.map(function(band){
-    return'<span class="re-criticality re-criticality-'+band.tier+' re-criticality-legend">'+band.label+'</span><span class="re-cr-legend-text">'+esc(crText('bands')[band.tier-1])+'</span>'
+    return'<span class="re-cr-legend-item"><span class="re-criticality re-criticality-'+band.tier+' re-criticality-legend">'+band.label+'</span><span class="re-cr-legend-text">'+esc(crText('bands')[band.tier-1])+'</span></span>'
   }).join('')+'</div>'
 }
 // 広い画面では2つを横に並べ、狭い画面ではこのボタンで片方ずつ出す。
@@ -102,7 +102,7 @@ function crFactsHtml(point){
   var score=point.score===null?crText('unavailable'):'100 × √('+point.downstream+'/'+point.maximum+' × '+point.level+'/4)';
   return'<div class="re-cr-facts">'+
     '<div>'+esc(criticalText('score'))+'<strong>'+crBadge(point.score)+'</strong><small>'+esc(score)+'</small></div>'+
-    '<div>'+esc(crText('downstream'))+'<strong>'+point.downstream+'</strong></div>'+
+    '<div>'+esc(crText('downstream'))+'<strong>'+point.downstream+'</strong><small>'+esc(language==='en'?'companies / business units':'社')+'</small></div>'+
     '<div>'+esc(crText('maximum'))+'<strong>'+point.level+'</strong><small>'+esc(point.representative?companyText(point.representative,'name'):'—')+'</small></div></div>'
 }
 function crBreakdownHtml(point,sub){
@@ -121,7 +121,7 @@ function crEvidenceHtml(point){
       (e.source?'<a target="_blank" rel="noopener noreferrer" href="'+esc(e.source)+'">'+esc(criticalText('source'))+'</a>':'')+
       (e.note?'<p>'+esc(shareText(e,'note'))+'</p>':'')+'</td></tr>'
   }).join('');
-  return'<div class="re-cr-scroll"><table class="re-cr-table"><thead><tr><th>'+esc(crText('company'))+'</th><th>'+esc(crText('original'))+'</th></tr></thead><tbody>'+rows+'</tbody></table></div>'
+  return'<div class="re-cr-scroll"><table class="re-cr-table re-cr-evidence"><colgroup><col class="re-cr-evidence-company"><col></colgroup><thead><tr><th>'+esc(crText('company'))+'</th><th>'+esc(crText('original'))+'</th></tr></thead><tbody>'+rows+'</tbody></table></div>'
 }
 function crDownNodesHtml(point){
   return'<ul class="re-cr-downnodes">'+point.downstreamNodes.slice().sort(function(a,b){return subStage(a)-subStage(b)}).map(function(id){

@@ -633,23 +633,23 @@
     "Y"
    ],
    "product": "イットリア安定化ジルコニア粉末（HSY 系）",
-   "level": 3,
-   "share": "ジルコニウム化合物全体で世界トップメーカーだが、安定化ジルコニア粉末単独のシェアは非開示",
+   "level": 4,
+   "share": "ジルコニウム化合物の世界シェア約40%（同社公表）。2020年版グローバルニッチトップ企業100選に選定",
    "scope": "世界",
-   "basis": "公開情報",
-   "source": "https://finance.logmi.jp/articles/378635",
-   "sourceLabel": "logmi Finance／第一稀元素化学工業 決算説明会書き起こし（2026年11月確認）",
-   "note": "日経の見出しも「世界首位素材のジルコニウム化合物」であり、首位は上位カテゴリ（ジルコニウム化合物）に対する記述。安定化ジルコニア粉末では東ソーがIRで世界シェアNo.1を明記しており、同一市場の首位が両立しないため上位カテゴリのシェアを分類に流用しない。",
+   "basis": "企業公式情報に基づく評価",
+   "source": "https://www.dkkk.co.jp/summary/",
+   "sourceLabel": "第一稀元素化学工業「すぐわかる第一稀元素」（2026年11月16日確認）",
+   "note": "約40%はジルコニウム化合物全体の会社公表値で、HSY系・YSZ粉末単独のシェアではない。ユーザー採用方針により、同社の上位製品分野の地位を本分類のY向け評価に適用して水準4とする。ScSZ固有の判定は変更しない。",
    "i18n": {
     "en": {
      "product": "Yttria-stabilized zirconia powder (HSY series)",
-     "share": "World-leading maker of zirconium compounds overall, but the share for stabilized zirconia powder alone is undisclosed",
-     "note": "The Nikkei headline also reads \"zirconium compounds, a world-leading material\", so the leadership refers to the broader category. For stabilized zirconia powder Tosoh states a No. 1 world share in its IR material; two firms cannot both lead the same market, so the broader-category share is not carried over to this classification."
+     "share": "Approximately 40% global share in zirconium compounds (company-reported); selected for Japan’s 2020 Global Niche Top Companies 100.",
+     "note": "The approximately 40% figure covers zirconium compounds overall, not HSY/YSZ powder alone. Under the adopted assessment policy, this broader product-market position is applied to the Y assessment in this category at level 4. The ScSZ-specific assessment remains unchanged."
     },
     "zh-CN": {
      "product": "氧化钇稳定氧化锆粉末（HSY系列）",
-     "share": "在锆化合物整体上是全球领先厂商，但仅稳定氧化锆粉末的份额未公开",
-     "note": "日经的标题亦为\"全球首位素材锆化合物\"，首位针对的是上位类别。在稳定氧化锆粉末方面，东曹在IR资料中明确称全球份额第一，同一市场的首位不能并存，故不将上位类别的份额挪用于本分类。"
+     "share": "锆化合物全球份额约40%（公司公布），入选日本2020年全球利基顶尖企业100强。",
+     "note": "约40%为锆化合物整体的公司公布值，并非HSY／YSZ粉末单独份额。按所采纳的评价方针，将这一上位产品领域的市场地位用于本分类Y的等级4评价。ScSZ专项评价不变。"
     }
    }
   },
