@@ -85,7 +85,7 @@ function renderElementFlow(){
     var scoreMarkup='';
     if(score!==null){
       var tier=criticalityTier(score);
-      var scorePrefix=meta+' · '+criticalText('score')+(language==='en'?': ':'：');
+      var scorePrefix=meta+' · '+criticalText('score')+colon();
       var scoreLabel=scorePrefix+score;
       var prefixWidth=Array.from(scorePrefix).reduce(function(width,ch){return width+(/[\u2e80-\uffef]/.test(ch)?11:6.3)},0);
       var badgeX=node.x+15+prefixWidth;
@@ -127,6 +127,7 @@ function renderElementFlow(){
   });
   root.querySelector("#re-element-flow-stats").textContent=tagLabel(flowElement)+" · "+metricCount(nodes.length,"category")+" · "+metricCount(edges.length,"connection")+" · "+companyUnitCount(data.filter(function(company){return company.tags.indexOf(flowElement)>=0}).length);
   function openNode(id){
+    rememberMapPosition();
     flowSelectionId=id;flowSelectedId=null;refresh("flow");
     requestAnimationFrame(function(){var heading=root.querySelector("#re-flow-list-title");if(heading)heading.scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"})})
   }

@@ -28,11 +28,11 @@
       "own": "Proterial Magnetics的子公司，非上市（2026年7月1日起）",
       "rev": "约239亿日元（2018年3月财年）",
       "prod": "Nd磁体合金、Sm磁体合金、高纯度稀土金属、磁体回收再利用、钐磁体的磁粉与粘结磁体用复合材料",
-      "pos": "日本国内Nd磁体合金份额约65%，是上游的关键瓶颈",
+      "pos": "钕磁体合金在日本国内的份额为25%；在日本国内独家开展磁体制造过程中固体废料及研磨粉的回收业务（DBJ于2016年12月8日发布时的信息）。",
       "def": "高性能磁体厂商的上游。日本国内循环与回收的关键环节",
       "chn": "高。需确认Dy/Tb/Sm原料与中国JV渠道、出口许可。",
-      "src": "JSX ／ DyTb DD ／ Sm DD ／ https://www.santoku-corp.co.jp/news/20260701_1.html ／ https://www.santoku-corp.co.jp/company/about.html ／ https://www.santoku-corp.co.jp/business/jisyaku.html",
-      "note": "正式商号为株式会社三德。2026年7月1日集团内重组后，由株式会社Proterial旗下转为株式会社Proterial Magnetics的子公司。Proterial本体作为另一法人单独收录 / 公司明确表示钐磁体材料同时生产烧结用与粘结磁体用，且粘结磁体用从合金到成品一贯生产"
+      "src": "JSX ／ DyTb DD ／ Sm DD ／ https://www.santoku-corp.co.jp/news/20260701_1.html ／ https://www.santoku-corp.co.jp/company/about.html ／ https://www.santoku-corp.co.jp/business/jisyaku.html ／ https://www.dbj.jp/topics/branch_news/2016/files/0000024934_file1.pdf",
+      "note": "正式商号为株式会社三德。2026年7月1日集团内重组后，由株式会社Proterial旗下转为株式会社Proterial Magnetics的子公司。Proterial本体作为另一法人单独收录 / 公司明确表示钐磁体材料同时生产烧结用与粘结磁体用，且粘结磁体用从合金到成品一贯生产 / DBJ于2016年12月8日发布的融资公告介绍了公司在稀土金属及合金制造领域拥有的多项专利、向日本国内外合金厂商提供技术许可，以及自主研发的镁锂合金“Sanmaria（サンマリア）”。"
     },
     "seed-3": {
       "name": "信越化学工业",
