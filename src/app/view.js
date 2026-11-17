@@ -19,6 +19,7 @@ function setView(view){
   else refresh(view==='criticality'?'criticality':'flow')
 }
 function applyStaticTranslations(){
+  root.querySelectorAll('[data-return-map]').forEach(function(button){button.textContent=mapReturnLabel()});
   document.documentElement.lang=language;
   document.title=tr("pageTitle");
   root.querySelector("#re-page-title").textContent=tr("pageTitle");
@@ -39,7 +40,7 @@ function applyStaticTranslations(){
   root.querySelector("#re-search-help").textContent=tr("searchHelp");
   root.querySelector(".re-element-flow-lead").textContent=tr("flowLead");
   root.querySelector("#re-flow-to-overview").textContent=tr("viewOverview");
-  root.querySelector(".re-element-flow-note > div").innerHTML=esc(tr("flowNote"))+'<p><strong>'+esc(criticalDefinition())+'</strong></p><p>'+esc(criticalText('formula'))+'</p><p>'+esc(criticalText('score'))+'：'+criticalityBands.map(function(band){return'<span class="re-criticality re-criticality-'+band.tier+' re-criticality-legend">'+band.label+'</span>'}).join(' ')+'</p><div class="re-element-flow-stats" id="re-element-flow-stats"></div>';
+  root.querySelector(".re-element-flow-note > div").innerHTML=esc(tr("flowNote"))+'<p><strong>'+esc(criticalDefinition())+'</strong></p><p>'+esc(criticalText('formula'))+'</p><p>'+esc(criticalText('score'))+esc(colon())+criticalityBands.map(function(band){return'<span class="re-criticality re-criticality-'+band.tier+' re-criticality-legend">'+band.label+'</span>'}).join(' ')+'</p><div class="re-element-flow-stats" id="re-element-flow-stats"></div>';
   root.querySelector("#re-language-switch").setAttribute("aria-label",tr("language"));
   root.querySelector(".re-element-flow-note > div").insertAdjacentHTML('beforeend',shareCriteriaHtml());
   root.querySelectorAll("[data-language]").forEach(function(button){button.setAttribute("aria-pressed",String(button.dataset.language===language))});
@@ -127,4 +128,6 @@ function updateSearch(){selectedId=null;refresh("list")}
 searchInput.addEventListener("input",function(event){if(!event.isComposing)updateSearch()});
 searchInput.addEventListener("compositionend",updateSearch);
 root.querySelector("#re-search-clear").addEventListener("click",function(){searchInput.value="";updateSearch();searchInput.focus()});
+root.addEventListener('click',function(event){if(event.target.closest('[data-return-map]'))returnToMap()});
+['.re-detail-head','.re-element-flow-results-head'].forEach(function(selector){var heading=root.querySelector(selector);if(heading)heading.insertAdjacentHTML('beforeend',mapReturnButton())});
 applyStaticTranslations();refresh("overview");initResponsiveMap()

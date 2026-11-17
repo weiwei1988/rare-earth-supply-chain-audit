@@ -790,14 +790,14 @@
     },
     "seed-2": {
       "name": "Santoku (a Proterial Magnetics subsidiary)",
-      "src": "JSX ／ DyTb DD ／ Sm DD ／ https://www.santoku-corp.co.jp/news/20260701_1.html ／ https://www.santoku-corp.co.jp/company/about.html ／ https://www.santoku-corp.co.jp/business/jisyaku.html",
+      "src": "JSX ／ DyTb DD ／ Sm DD ／ https://www.santoku-corp.co.jp/news/20260701_1.html ／ https://www.santoku-corp.co.jp/company/about.html ／ https://www.santoku-corp.co.jp/business/jisyaku.html ／ https://www.dbj.jp/topics/branch_news/2016/files/0000024934_file1.pdf",
       "own": "Privately held subsidiary of Proterial Magnetics (transferred on July 1, 2026)",
       "rev": "Approximately JPY 23.9 billion (fiscal year ended March 2018)",
       "prod": "Nd magnet alloys, Sm magnet alloys, high-purity rare-earth metals, and magnet recycling, samarium magnet powders and bonded-magnet compounds",
-      "pos": "An upstream chokepoint reportedly holding approximately 65% of Japan's Nd magnet-alloy market",
+      "pos": "Domestic share of 25% in neodymium magnet alloys; the only operator in Japan recycling solid scrap and grinding powder from magnet manufacturing (DBJ release, December 8, 2016).",
       "def": "Upstream of high-performance magnet manufacturers; a key node in domestic circularity and recycling",
       "chn": "High. Verify Dy/Tb/Sm feedstock, routes through Chinese joint ventures, and export licenses.",
-      "note": "The official corporate name is Santoku Corporation. In an intragroup reorganization on July 1, 2026, it moved from Proterial, Ltd. to become a subsidiary of Proterial Magnetics, Ltd. Included as a legal entity separate from Proterial itself. / The company states that it makes samarium magnet material for both sintered and bonded magnets, and that the bonded-magnet line runs from alloy to finished product in house"
+      "note": "The official corporate name is Santoku Corporation. In an intragroup reorganization on July 1, 2026, it moved from Proterial, Ltd. to become a subsidiary of Proterial Magnetics, Ltd. Included as a legal entity separate from Proterial itself. / The company states that it makes samarium magnet material for both sintered and bonded magnets, and that the bonded-magnet line runs from alloy to finished product in house / DBJ’s December 8, 2016 financing release highlights numerous patents for rare-earth metal and alloy production, licenses to alloy manufacturers in Japan and abroad, and the independently developed magnesium–lithium alloy Sanmaria."
     },
     "seed-3": {
       "name": "Shin-Etsu Chemical",

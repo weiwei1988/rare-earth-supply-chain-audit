@@ -2,9 +2,9 @@
 var criticalState={sort:'score',key:null,company:null,pane:'matrix',expanded:false};
 function crText(key){
   var labels={
-    ja:{bands:['下流への影響は限定的','下流への影響はやや広い','下流への影響は広い','下流への影響が最も広い'],downShort:'下流',shareShort:'水準',legend:'色の読み方',view:'表示',showAll:'全体を表示',collapse:'折りたたむ',tab:'クリティカル度マップ',matrix:'工程 × 元素のクリティカル度',ranking:'ランキング',score:'クリティカル度が高い順',down:'下流企業が多い順',share:'シェア水準が高い順',downstream:'下流の収録企業・事業単位',maximum:'主力製品のシェア（最大値）',breakdown:'下流の内訳',evidence:'この工程の企業とシェア根拠',nodes:'下流の工程',companies:'この工程の企業',choose:'マトリックスのセル、またはランキングから選択してください。',unavailable:'経路外・算出対象外',none:'該当する企業はありません。',stage:'工程',company:'企業',original:'評価根拠'},
-    en:{bands:['Limited downstream reach','Moderately wide reach','Wide downstream reach','Widest downstream reach'],downShort:'Downstream',shareShort:'Share',legend:'Reading the colours',view:'View',showAll:'Show all',collapse:'Collapse',tab:'Criticality Map',matrix:'Criticality by category and element',ranking:'Ranking',score:'Highest criticality',down:'Most downstream companies',share:'Highest share level',downstream:'Downstream listed companies / business units',maximum:'Highest product share level',breakdown:'Downstream breakdown',evidence:'Category companies and share evidence',nodes:'Downstream categories',companies:'Companies in this category',choose:'Select a matrix cell or ranking entry.',unavailable:'Off-path / not scored',none:'No matching companies.',stage:'Stage',company:'Company',original:'Assessment evidence'},
-    'zh-CN':{bands:['对下游影响有限','对下游影响较广','对下游影响广泛','对下游影响最广'],downShort:'下游',shareShort:'等级',legend:'颜色的含义',view:'显示',showAll:'显示全部',collapse:'收起',tab:'关键度地图',matrix:'工序 × 元素关键度',ranking:'排名',score:'关键度从高到低',down:'下游企业数从多到少',share:'份额等级从高到低',downstream:'下游收录企业及业务单位',maximum:'主要产品最高份额等级',breakdown:'下游构成',evidence:'本工序企业及份额依据',nodes:'下游工序',companies:'本工序企业',choose:'请选择矩阵单元格或排名条目。',unavailable:'路径外／不评分',none:'无符合条件的企业。',stage:'工序',company:'企业',original:'评价依据'}
+    ja:{bands:['下流への影響は限定的','下流への影響はやや広い','下流への影響は広い','下流への影響が最も広い'],downShort:'下流',shareShort:'水準',legend:'色の読み方',view:'表示',showAll:'全体を表示',collapse:'折りたたむ',tab:'クリティカル度マップ',matrix:'工程 × 元素のクリティカル度',ranking:'ランキング',score:'クリティカル度が高い順',down:'下流企業が多い順',share:'シェア水準が高い順',downstream:'下流の収録企業・事業単位',maximum:'主力製品のシェア（最大値）',breakdown:'下流の内訳',evidence:'この工程の企業とシェア根拠',nodes:'下流の工程',choose:'マトリックスのセル、またはランキングから選択してください。',unavailable:'経路外・算出対象外',none:'該当する企業はありません。',stage:'工程'},
+    en:{bands:['Limited downstream reach','Moderately wide reach','Wide downstream reach','Widest downstream reach'],downShort:'Downstream',shareShort:'Share',legend:'Reading the colours',view:'View',showAll:'Show all',collapse:'Collapse',tab:'Criticality Map',matrix:'Criticality by category and element',ranking:'Ranking',score:'Highest criticality',down:'Most downstream companies',share:'Highest share level',downstream:'Downstream listed companies / business units',maximum:'Highest product share level',breakdown:'Downstream breakdown',evidence:'Category companies and share evidence',nodes:'Downstream categories',choose:'Select a matrix cell or ranking entry.',unavailable:'Off-path / not scored',none:'No matching companies.',stage:'Stage'},
+    'zh-CN':{bands:['对下游影响有限','对下游影响较广','对下游影响广泛','对下游影响最广'],downShort:'下游',shareShort:'等级',legend:'颜色的含义',view:'显示',showAll:'显示全部',collapse:'收起',tab:'关键度地图',matrix:'工序 × 元素关键度',ranking:'排名',score:'关键度从高到低',down:'下游企业数从多到少',share:'份额等级从高到低',downstream:'下游收录企业及业务单位',maximum:'主要产品最高份额等级',breakdown:'下游构成',evidence:'本工序企业及份额依据',nodes:'下游工序',choose:'请选择矩阵单元格或排名条目。',unavailable:'路径外／不评分',none:'无符合条件的企业。',stage:'工序'}
   };return labels[language][key];
 }
 function crKey(p){return p.node+'|'+p.element}
@@ -18,7 +18,7 @@ function crBadge(score){return score===null?'—':'<span class="re-criticality r
 function crPoints(){if(!criticalityCache)criticalityCache=criticalityPoints();return criticalityCache}
 function crSelected(){return crPoints().find(function(p){return crKey(p)===criticalState.key})}
 function crSorted(sort){return crPoints().filter(function(p){return p.score!==null}).slice().sort(function(a,b){return(sort==='down'?b.downstream-a.downstream:sort==='share'?b.level-a.level:b.score-a.score)||b.score-a.score||b.downstream-a.downstream||crKey(a).localeCompare(crKey(b))})}
-function crSelect(key){criticalState.key=key;criticalState.company=null;refresh('criticality');var heading=root.querySelector('#re-cr-selection');heading.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'})}
+function crSelect(key){rememberMapPosition();criticalState.key=key;criticalState.company=null;refresh('criticality');var heading=root.querySelector('#re-cr-selection');heading.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'})}
 function crMembers(id,element){return data.filter(function(c){return companyHasElement(c,id,element)})}
 // --- 画面の組み立て。HTML の生成は役割ごとに小さく分ける ---
 function crMatrixHeadHtml(){
@@ -92,7 +92,7 @@ function renderCriticality(){
   host.innerHTML='<h2>'+esc(crText('tab'))+'</h2><p>'+esc(criticalDefinition())+'</p>'+crTabsHtml()+
     '<div class="re-cr-panes" data-pane="'+criticalState.pane+'" data-expanded="'+criticalState.expanded+'">'+crMatrixPaneHtml(points)+crRankPaneHtml(ranked)+'</div>'+
     '<section id="re-cr-selection" tabindex="-1"></section>'+
-    '<section><h3>'+esc(crText('companies'))+'</h3><div class="re-main"><div id="re-cr-companies" class="re-company-grid"></div><aside id="re-cr-dossier"></aside></div></section>'+
+    '<section id="re-cr-dossier" class="re-cr-company-detail" aria-live="polite"></section>'+
     '<section class="re-cr-explanation"><p>'+esc(criticalText('formula'))+'</p>'+shareCriteriaHtml()+'</section>';
   renderCriticalSelection();
   crBindEvents(host);
@@ -102,30 +102,31 @@ function crFactsHtml(point){
   var score=point.score===null?crText('unavailable'):'100 × √('+point.downstream+'/'+point.maximum+' × '+point.level+'/4)';
   return'<div class="re-cr-facts">'+
     '<div>'+esc(criticalText('score'))+'<strong>'+crBadge(point.score)+'</strong><small>'+esc(score)+'</small></div>'+
-    '<div>'+esc(crText('downstream'))+'<strong>'+point.downstream+'</strong><small>'+esc(language==='en'?'companies / business units':'社')+'</small></div>'+
-    '<div>'+esc(crText('maximum'))+'<strong>'+point.level+'</strong><small>'+esc(point.representative?companyText(point.representative,'name'):'—')+'</small></div></div>'
+    '<div>'+esc(crText('downstream'))+'<strong>'+point.downstream+'</strong><small>'+esc(tr('companyShort'))+'</small></div>'+
+    '<div>'+esc(crText('maximum'))+'<strong class="re-share-summary"><span class="re-cr-share-badge re-share-'+point.level+'">'+esc(shareLevelSummary(point.level))+'</span></strong><small>'+esc(point.representative?companyText(point.representative,'name'):'—')+'</small></div></div>'
 }
 function crBreakdownHtml(point,sub){
   var down=new Set(point.downstreamNodes);
-  return'<ul>'+stages.filter(function(stage){return stage.id>sub.stage}).map(function(stage){
+  return'<ul class="re-cr-downnodes">'+stages.filter(function(stage){return stage.id>sub.stage}).map(function(stage){
     var members=point.downstreamCompanies.filter(function(c){return c.subs.some(function(id){return down.has(id)&&subStage(id)===stage.id&&companyHasElement(c,id,point.element)})});
-    return members.length?'<li>STAGE '+esc(stage.code)+' '+esc(stageText(stage,'label'))+(language==='en'?': ':'：')+members.length+'</li>':''
+    return members.length?'<li>STAGE '+esc(stage.code)+' '+esc(stageText(stage,'label'))+colon()+members.length+'</li>':''
   }).join('')+'</ul>'
 }
 function crEvidenceHtml(point){
   var members=point.companies.slice().sort(function(a,b){return shareEntry(b.id,point.node,point.element).level-shareEntry(a.id,point.node,point.element).level});
   var rows=members.map(function(company){
     var e=shareEntry(company.id,point.node,point.element);
-    return'<tr><th>'+esc(companyText(company,'name'))+'</th><td>'+esc(criticalText('share')+' '+e.level+' · '+shareLevelText(e.level,'label'))+
+    return'<div class="re-cr-evidence-row">'+companyCardHtml(company,'data-cr-company',criticalState.company,{node:point.node,elements:[point.element]})+'<article class="re-cr-evidence-note"><span class="re-cr-share-badge re-share-'+e.level+'">'+esc(criticalText('share')+' '+e.level+' · '+shareLevelText(e.level,'label'))+'</span>'+
+      (e.level===1?'<p>'+esc(language==='en'?"The market share of this company’s relevant product could not be confirmed.":language==='zh-CN'?'未能确认该企业相关产品的市场份额。':'当該企業製品のシェアは確認できず')+'</p>':'')+
       (e.product?'<p>'+esc(shareText(e,'product')+' / '+shareText(e,'share'))+'</p>':'')+
       (e.source?'<a target="_blank" rel="noopener noreferrer" href="'+esc(e.source)+'">'+esc(criticalText('source'))+'</a>':'')+
-      (e.note?'<p>'+esc(shareText(e,'note'))+'</p>':'')+'</td></tr>'
+      (e.note?'<p>'+esc(shareText(e,'note'))+'</p>':'')+'</article></div>'
   }).join('');
-  return'<div class="re-cr-scroll"><table class="re-cr-table re-cr-evidence"><colgroup><col class="re-cr-evidence-company"><col></colgroup><thead><tr><th>'+esc(crText('company'))+'</th><th>'+esc(crText('original'))+'</th></tr></thead><tbody>'+rows+'</tbody></table></div>'
+  return'<div class="re-cr-evidence-cards">'+rows+'</div>'
 }
 function crDownNodesHtml(point){
   return'<ul class="re-cr-downnodes">'+point.downstreamNodes.slice().sort(function(a,b){return subStage(a)-subStage(b)}).map(function(id){
-    return'<li>'+esc(subLabel(id))+' ('+crMembers(id,point.element).length+')</li>'
+    return'<li>STAGE '+esc(String(subStage(id)).padStart(2,'0'))+' · '+esc(subLabel(id))+' ('+crMembers(id,point.element).length+')</li>'
   }).join('')+'</ul>'
 }
 function renderCriticalSelection(){
@@ -134,7 +135,7 @@ function renderCriticalSelection(){
   var sub=allSubs.find(function(item){return item.id===point.node});
   section.innerHTML='<h3>'+esc(tagLabel(point.element)+' · '+subText(sub,'label'))+'</h3>'+crFactsHtml(point)+
     '<h4>'+esc(crText('breakdown'))+'</h4>'+crBreakdownHtml(point,sub)+
-    '<h4>'+esc(crText('evidence'))+'</h4>'+crEvidenceHtml(point)+
+    '<div class="re-company-section-head"><h4>'+esc(crText('evidence'))+'</h4>'+mapReturnButton()+'</div><div id="re-cr-companies"></div>'+
     '<h4>'+esc(crText('nodes'))+'</h4>'+crDownNodesHtml(point);
   renderCriticalCompanies();
 }
@@ -142,7 +143,7 @@ function renderCriticalCompanies(){
   var p=crSelected();if(!p)return;
   var box=root.querySelector('#re-cr-companies'),dossier=root.querySelector('#re-cr-dossier');
   var scope={node:p.node,elements:[p.element]};
-  box.innerHTML=p.companies.map(function(c){return companyCardHtml(c,'data-cr-company',criticalState.company,scope)}).join('')||'<p>'+esc(crText('none'))+'</p>';
+  box.innerHTML=p.companies.length?crEvidenceHtml(p):'<p>'+esc(crText('none'))+'</p>';
   dossier.innerHTML=dossierMarkup(p.companies.find(function(c){return c.id===criticalState.company}),scope);
   box.querySelectorAll('[data-cr-company]').forEach(function(button){button.addEventListener('click',function(){criticalState.company=button.dataset.crCompany;renderCriticalCompanies();var title=dossier.querySelector('.re-dossier-title');if(title){var rect=title.getBoundingClientRect();if(rect.top<0||rect.bottom>window.innerHeight||rect.right>window.innerWidth)dossier.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'})}})});
 }

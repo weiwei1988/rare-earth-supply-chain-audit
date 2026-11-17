@@ -129,6 +129,7 @@ function renderFlow(){
   traceEdges(traceNodeId);
   root.querySelectorAll("[data-type]").forEach(function(btn){btn.addEventListener("click",function(event){
     event.stopPropagation();
+    rememberMapPosition();
     var traceable=btn.dataset.type==="sub";
     traceNodeId=traceable?btn.dataset.id:null;
     selection={type:btn.dataset.type,id:btn.dataset.id};selectedId=null;refresh("overview");

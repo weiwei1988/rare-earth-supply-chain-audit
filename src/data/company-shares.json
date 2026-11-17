@@ -219,17 +219,17 @@
    "basis": "公開情報",
    "source": "https://web.pref.hyogo.lg.jp/sr07/onlyone/documents/santokucorporation.pdf",
    "sourceLabel": "兵庫県「ひょうごオンリーワン企業」会社プロフィール（2026年11月確認）",
-   "note": "現データの「国内Nd磁石合金市場シェア約65%」は公開情報では裏づけられなかったため、根拠を国内唯一の溶融塩電解法に差し替えた。記述自体は兵庫県が掲載する会社プロフィールに基づく自社説明",
+   "note": "兵庫県掲載の会社プロフィールに基づく、溶融塩電解法による製造技術の位置づけ。",
    "i18n": {
     "en": {
      "product": "High-purity rare-earth metals (reduction by molten-salt electrolysis)",
      "share": "Said to be the only company in Japan producing high-quality rare-earth metal by molten-salt electrolysis",
-     "note": "The previous figure of \"about 65% of the domestic Nd magnet alloy market\" could not be substantiated in public sources, so the basis was replaced with the domestically unique molten-salt electrolysis route. The statement itself is the company's own, as published in a Hyogo Prefecture company profile."
+     "note": "The positioning concerns molten-salt electrolysis technology, as described in the company profile published by Hyogo Prefecture."
     },
     "zh-CN": {
      "product": "高纯稀土金属（熔盐电解还原）",
      "share": "据称是日本国内唯一采用熔盐电解法制造高品质稀土金属的企业",
-     "note": "原数据中\"国内钕磁体合金市场份额约65%\"在公开信息中无法佐证，故将依据替换为国内唯一的熔盐电解法。该表述本身出自兵库县刊载的公司简介中的自我说明。"
+     "note": "该定位针对熔盐电解制造技术，依据兵库县刊载的公司简介。"
     }
    }
   },
@@ -298,22 +298,22 @@
    ],
    "product": "磁石リサイクル（磁石スクラップ→酸化物→溶融塩電解で金属還元→SC法薄片）",
    "level": 3,
-   "share": "磁石スクラップを溶融塩電解で金属に戻す循環リサイクルは国内唯一の取り組みとされる",
+   "share": "磁石製造時の固形屑・研磨粉のリサイクル事業を国内で唯一実施（DBJ、2016年12月8日公表時点）",
    "scope": "国内",
    "basis": "公開情報",
-   "source": "https://web.pref.hyogo.lg.jp/sr07/onlyone/documents/santokucorporation.pdf",
-   "sourceLabel": "兵庫県「ひょうごオンリーワン企業」会社プロフィール（2026年11月確認）",
-   "note": "処理量・国内シェアの数値は非開示。記述は兵庫県が掲載する会社プロフィールの自社説明に基づく",
+   "source": "https://www.dbj.jp/topics/branch_news/2016/files/0000024934_file1.pdf",
+   "sourceLabel": "日本政策投資銀行 三徳への融資リリース（2016年12月8日）",
+   "note": "DBJが公表した国内唯一の事業という位置づけを水準3の根拠とする。対象は磁石製造くずのリサイクル全体。",
    "i18n": {
     "en": {
      "product": "Magnet recycling (magnet scrap → oxide → metal by molten-salt electrolysis → strip-cast flakes)",
-     "share": "Said to be the only closed-loop recycling in Japan that returns magnet scrap to metal by molten-salt electrolysis",
-     "note": "Volumes handled and domestic share are not disclosed. The statement is the company's own, as published in a Hyogo Prefecture company profile."
+     "share": "Japan’s sole operator recycling solid scrap and grinding powder from magnet manufacturing (DBJ release dated December 8, 2016)",
+     "note": "Level 3 is based on DBJ’s description of the business as unique in Japan at publication. The scope is magnet-manufacturing scrap recycling overall."
     },
     "zh-CN": {
      "product": "磁体回收（磁体废料→氧化物→熔盐电解还原为金属→SC法薄片）",
-     "share": "据称是日本唯一通过熔盐电解将磁体废料还原为金属的循环回收体系",
-     "note": "处理量与国内份额未公开。该表述出自兵库县刊载的公司简介中的自我说明。"
+     "share": "日本国内唯一开展磁体制造过程中固体废料及研磨粉回收业务的企业（DBJ于2016年12月8日发布时的信息）",
+     "note": "依据DBJ发布时所述的日本国内唯一业务定位评为水准3，范围为磁体制造废料回收整体。"
     }
    }
   },
@@ -381,23 +381,23 @@
     "DyTb"
    ],
    "product": "Nd 磁石合金（Dy・Tb 添加）",
-   "level": 3,
-   "share": "国内唯一のレア・アース専業メーカーで、磁石合金のSC法は世界標準の製造法",
+   "level": 2,
+   "share": "ネオジム磁石合金の国内シェア25%（DBJ、2016年12月8日公表時点）",
    "scope": "国内",
    "basis": "公開情報",
-   "source": "https://web.pref.hyogo.lg.jp/sr07/onlyone/documents/santoku_1.pdf",
-   "sourceLabel": "兵庫県「ひょうごオンリーワン企業」再認定資料（令和3年度、2026年11月確認）",
-   "note": "現データの「国内Nd磁石合金市場シェア約65%」は、JPX開示・経産省資料・業界紙・調査会社のいずれでも裏づけられなかったため、シェア記述から外した。SC法が世界標準というのは製造法の普及に関する記述で市場占有率ではない",
+   "source": "https://www.dbj.jp/topics/branch_news/2016/files/0000024934_file1.pdf",
+   "sourceLabel": "日本政策投資銀行「三徳に対し、地域元気プログラムに基づく融資を実施」（2016年12月8日）",
+   "note": "国内シェア25%を基準に水準2と評価。対象はネオジム磁石合金全体で、Dy・Tb添加品だけのシェアではない。",
    "i18n": {
     "en": {
      "product": "Nd magnet alloy (with Dy and Tb added)",
-     "share": "The only rare-earth specialist in Japan; its strip-casting route for magnet alloy is the world-standard process",
-     "note": "The previous figure of \"about 65% of the domestic Nd magnet alloy market\" could not be substantiated in JPX disclosures, METI materials, trade press or research-firm reports, so it was removed from the share statement. Strip casting being the world standard describes how widely the process is adopted, not market share."
+     "share": "25% of Japan’s neodymium magnet-alloy market (DBJ release dated December 8, 2016)",
+     "note": "Rated level 2 based on a 25% domestic share. The figure covers neodymium magnet alloys as a whole, rather than Dy- or Tb-added grades alone."
     },
     "zh-CN": {
      "product": "钕磁体合金（添加Dy、Tb）",
-     "share": "日本唯一的稀土专业厂商，其磁体合金的SC法是世界标准制造方法",
-     "note": "原数据中\"国内钕磁体合金市场份额约65%\"在JPX披露、经产省资料、行业报纸与调查公司资料中均无法佐证，故已从份额表述中删除。SC法为世界标准是关于制造方法普及程度的表述，并非市场占有率。"
+     "share": "钕磁体合金在日本国内的份额为25%（DBJ于2016年12月8日发布时的信息）",
+     "note": "依据国内份额25%评为水准2。该份额针对钕磁体合金整体，并非仅添加Dy、Tb的牌号。"
     }
    }
   },
@@ -415,17 +415,17 @@
    "basis": "公開情報",
    "source": "https://web.pref.hyogo.lg.jp/sr07/onlyone/documents/santokucorporation.pdf",
    "sourceLabel": "兵庫県「ひょうごオンリーワン企業」会社プロフィール（2026年11月確認）",
-   "note": "Sm 磁石合金に限ったシェアの数値や国内唯一の記述はない。Nd 磁石合金の国内シェア（約65%）は Sm 合金には当てていない",
+   "note": "SmCo合金を事業の筆頭に挙げる会社プロフィールに基づく。",
    "i18n": {
     "en": {
      "product": "Samarium magnet alloy (for sintered and bonded magnets)",
      "share": "The only rare-earth specialist in Japan and one of a few domestic firms that list SmCo alloy at the head of their business",
-     "note": "There is no figure or claim of domestic uniqueness limited to Sm magnet alloy. The domestic share for Nd magnet alloy (about 65%) has not been applied to Sm alloy."
+     "note": "Based on the company profile, which lists SmCo alloy first among its businesses."
     },
     "zh-CN": {
      "product": "钐磁体合金（烧结用、粘结磁体用）",
      "share": "日本唯一的稀土专业厂商，是将SmCo合金列为业务之首的国内少数企业之一",
-     "note": "没有仅限于Sm磁体合金的份额数值或国内唯一的表述。钕磁体合金的国内份额（约65%）未适用于Sm合金。"
+     "note": "依据将SmCo合金列为业务之首的公司简介。"
     }
    }
   },
