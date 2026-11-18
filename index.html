@@ -560,6 +560,41 @@ button[aria-pressed="true"]{color:var(--text);border-color:var(--text);backgroun
     }
     return lines.length?lines:[text]
   }
+  // ---- src/app/supply-graph.js ----
+  function buildSupplyGraph(subcategories,companies,element){
+    var members=new Map();
+    subcategories.forEach(function(sub){members.set(sub.id,[])});
+    companies.forEach(function(company){
+      members.forEach(function(list,id){
+        if(element?companyHasElement(company,id,element):company.subs.indexOf(id)>=0)list.push(company)
+      })
+    });
+    var nodes=subcategories.filter(function(sub){return !element||(sub.els.indexOf(element)>=0&&members.get(sub.id).length>0)});
+    var byId=new Map(),incoming=new Map(),outgoing=new Map(),edges=[];
+    nodes.forEach(function(sub){byId.set(sub.id,sub);incoming.set(sub.id,[]);outgoing.set(sub.id,[])});
+    nodes.forEach(function(target){
+      (target.src||[]).forEach(function(from){
+        var allowed=(target.srcEls&&target.srcEls[from])||[];
+        if(!byId.has(from)||(element&&allowed.indexOf(element)<0))return;
+        var edge={from:from,to:target.id,elements:allowed.slice()};
+        edges.push(edge);incoming.get(target.id).push(edge);outgoing.get(from).push(edge)
+      })
+    });
+    return{nodes:nodes,byId:byId,edges:edges,incoming:incoming,outgoing:outgoing,members:members}
+  }
+  function supplyGraphReachable(graph,start,reverse){
+    var seen=new Set(),stack=[start],adjacent=reverse?graph.incoming:graph.outgoing;
+    while(stack.length){
+      var id=stack.pop();
+      (adjacent.get(id)||[]).forEach(function(edge){
+        var next=reverse?edge.from:edge.to;
+        if(!seen.has(next)){seen.add(next);stack.push(next)}
+      })
+    }
+    return seen
+  }
+  // 入力接続を先、出力接続を後に並べる。根拠の翻訳・HTML 化は表示層で行う。
+  function supplyGraphRoutes(graph,id){return(graph.incoming.get(id)||[]).concat(graph.outgoing.get(id)||[])}
   // ---- src/app/model.js ----
   // Share levels are scoped to company, category and element, rather than company-wide.
   function shareEntry(companyId,nodeId,element){
@@ -568,15 +603,14 @@ button[aria-pressed="true"]{color:var(--text);border-color:var(--text);backgroun
   function criticalityPoints(){
     var points=[];
     elements.forEach(function(element){
-      var active=allSubs.filter(function(s){return s.els.indexOf(element)>=0&&flowCompanyCount(s.id,element)>0}),ids=new Set(active.map(function(s){return s.id})),edges=[];
-      active.forEach(function(s){(s.src||[]).forEach(function(from){if(ids.has(from)&&(s.srcEls[from]||[]).indexOf(element)>=0)edges.push([from,s.id])})});
-      function walk(start,reverse){var seen=new Set(),stack=[start];while(stack.length){var id=stack.pop();edges.forEach(function(e){if(e[reverse?1:0]===id&&!seen.has(e[reverse?0:1])){seen.add(e[reverse?0:1]);stack.push(e[reverse?0:1])}})}return seen}
+      var graph=elementSupplyGraph(element),active=graph.nodes;
+      function walk(start,reverse){return supplyGraphReachable(graph,start,reverse)}
       var reachable=new Set();active.filter(function(s){return s.stage===2}).forEach(function(s){reachable.add(s.id);walk(s.id,false).forEach(function(id){reachable.add(id)})});
       var finals=new Set(active.filter(function(s){return s.stage===6}).map(function(s){return s.id}));
       var path=new Set(active.filter(function(s){return reachable.has(s.id)&&(finals.has(s.id)||Array.from(walk(s.id,false)).some(function(id){return finals.has(id)}))}).map(function(s){return s.id}));
       active.filter(function(s){return s.stage<6}).forEach(function(s){
         var down=walk(s.id,false),companies=data.filter(function(c){return c.subs.some(function(id){return down.has(id)&&path.has(id)&&companyHasElement(c,id,element)})});
-        var members=data.filter(function(c){return companyHasElement(c,s.id,element)}),level=1;
+        var members=graph.members.get(s.id),level=1;
         members.forEach(function(c){level=Math.max(level,shareEntry(c.id,s.id,element).level)});
         var representative=members.find(function(c){return shareEntry(c.id,s.id,element).level===level});
         points.push({node:s.id,element:element,downstream:path.has(s.id)?companies.length:0,level:level,score:null,onPath:path.has(s.id),companies:members,downstreamCompanies:path.has(s.id)?companies:[],downstreamNodes:Array.from(down).filter(function(id){return path.has(id)}),representative:representative});
@@ -674,6 +708,9 @@ button[aria-pressed="true"]{color:var(--text);border-color:var(--text);backgroun
     if(selection.type==="sub"){var q=allSubs.find(function(x){return x.id===selection.id});return tr("stage")+" "+q.stage+" — "+subText(q,"label")}
     return tr("allSelection")
   }
+
+  // 入力を明示して構築するため、画面の選択や言語によるキャッシュの混入がない。
+  function elementSupplyGraph(element){return buildSupplyGraph(allSubs,data,element)}
   // ---- src/app/graph.js ----
   function curve(x1,y1,x2,y2){var dx=(x2-x1)*.55;return"M "+x1+" "+y1+" C "+(x1+dx)+" "+y1+", "+(x2-dx)+" "+y2+", "+x2+" "+y2}
   function path(d,color,dim,meta){
@@ -784,6 +821,18 @@ button[aria-pressed="true"]{color:var(--text);border-color:var(--text);backgroun
       '<div class="re-dep-note">'+esc(tr("dependencyNote"))+'</div>'+
     '</section>'
   }
+
+
+  // 接続説明は両画面で共用。全体像は企業未登録の分類も含む監査済み接続を表示する。
+  function routeRows(id,graph){
+    graph=graph||buildSupplyGraph(allSubs,data);
+    return supplyGraphRoutes(graph,id).map(function(edge){
+      return{from:edge.from,to:edge.to,elements:edge.elements,note:routeText(graph.byId.get(edge.to),edge.from)}
+    })
+  }
+  function routeRowsHtml(rows){
+    return'<div class="re-route-note-title">'+esc(tr("routeTitle",{count:rows.length}))+'</div>'+rows.map(function(row){return'<div class="re-route-row"><span class="re-route-pair">'+esc(subLabel(row.from))+' → '+esc(subLabel(row.to))+'</span><span class="re-route-elements">'+tagsHtml(row.elements)+'</span><span>'+esc(row.note)+'</span></div>'}).join("")
+  }
   // ---- src/app/overview.js ----
   function renderFlow(){
     // 非表示のパネルは clientWidth が 0 になり、最小幅で固定されたまま残るため描画を保留する。
@@ -854,10 +903,9 @@ button[aria-pressed="true"]{color:var(--text);border-color:var(--text);backgroun
     columns.filter(function(column){return column.stage===2}).forEach(function(column){
       column.nodes.forEach(function(item){connect(source,nodeMap[item.id],nodeMap[item.id].els)})
     });
-    columns.filter(function(column){return column.stage>2}).forEach(function(column){
-      column.nodes.forEach(function(item){
-        (item.src||[]).forEach(function(sourceId){connect(nodeMap[sourceId],nodeMap[item.id],item.srcEls&&item.srcEls[sourceId],routeText(item,sourceId))})
-      })
+    var graph=buildSupplyGraph(allSubs,data);
+    graph.edges.forEach(function(edge){
+      connect(nodeMap[edge.from],nodeMap[edge.to],edge.elements,routeText(graph.byId.get(edge.to),edge.from))
     });
     svg+='</svg>';
 
@@ -940,17 +988,6 @@ button[aria-pressed="true"]{color:var(--text);border-color:var(--text);backgroun
     else window.addEventListener("resize",handleViewportResize)
   }
 
-  // 選んだサブカテゴリーの上流・下流の監査済み接続。keep を渡すと、その条件に合う接続だけにする（元素別フロー用）
-  function routeRows(id,keep){
-    var rows=[],selected=allSubs.find(function(item){return item.id===id});
-    if(!selected)return rows;
-    (selected.src||[]).forEach(function(source){rows.push({from:source,to:selected.id,elements:selected.srcEls[source],note:routeText(selected,source)})});
-    allSubs.forEach(function(target){if((target.src||[]).indexOf(selected.id)>=0)rows.push({from:selected.id,to:target.id,elements:target.srcEls[selected.id],note:routeText(target,selected.id)})});
-    return keep?rows.filter(keep):rows
-  }
-  function routeRowsHtml(rows){
-    return'<div class="re-route-note-title">'+esc(tr("routeTitle",{count:rows.length}))+'</div>'+rows.map(function(row){return'<div class="re-route-row"><span class="re-route-pair">'+esc(subLabel(row.from))+' → '+esc(subLabel(row.to))+'</span><span class="re-route-elements">'+tagsHtml(row.elements)+'</span><span>'+esc(row.note)+'</span></div>'}).join("")
-  }
   function renderRouteNote(){
     var holder=root.querySelector("#re-route-note"),rows=selection.type==="sub"?routeRows(selection.id):[];
     if(!rows.length){
@@ -1006,8 +1043,8 @@ button[aria-pressed="true"]{color:var(--text);border-color:var(--text);backgroun
     var W=Math.max(language==="en"?1320:1200,Math.floor(frame.clientWidth||1200)),left=34,right=language==="en"?270:245,bottom=54,nodeGap=language==="en"?34:32,companyScale=5;
     var stageMap=Object.fromEntries(stages.map(function(stage){return[stage.id,stage]}));
     var order={};Object.keys(columnOrder).forEach(function(stage){columnOrder[stage].forEach(function(id,index){order[id]=index})});
-    var byStage={};
-    for(var stage=2;stage<=6;stage++)byStage[stage]=allSubs.filter(function(item){return item.stage===stage&&item.els.indexOf(flowElement)>=0&&flowCompanyCount(item.id,flowElement)>0}).sort(function(a,b){return flowSortIndex(flowElement,stage,a.id,order)-flowSortIndex(flowElement,stage,b.id,order)});
+    var graph=elementSupplyGraph(flowElement),byStage={};
+    for(var stage=2;stage<=6;stage++)byStage[stage]=graph.nodes.filter(function(item){return item.stage===stage}).sort(function(a,b){return flowSortIndex(flowElement,stage,a.id,order)-flowSortIndex(flowElement,stage,b.id,order)});
     var step=(W-left-right)/5,positions={},nodes=[];
     // ラベルは列の幅に収める。文字数の上限を列幅から決め、長い分類名が次の工程に重ならないようにする
     var labelEm=language==="en"?5.9:11.5,labelLimit=Math.max(language==="en"?16:8,Math.floor((step-25)/labelEm));
@@ -1029,7 +1066,7 @@ button[aria-pressed="true"]{color:var(--text);border-color:var(--text);backgroun
     var top=Math.max(language==="en"?136:112,Math.round(headerBottom+10+topLabelLines*lineHeight));
     function columnSpan(items){
       return items.reduce(function(sum,item,index){
-        return sum+Math.max(8,flowCompanyCount(item.id,flowElement)*companyScale)+(index?gapBefore(item):0)
+        return sum+Math.max(8,graph.members.get(item.id).length*companyScale)+(index?gapBefore(item):0)
       },0)
     }
     var columnSpans=Object.keys(byStage).map(function(stage){return columnSpan(byStage[stage])});
@@ -1039,7 +1076,7 @@ button[aria-pressed="true"]{color:var(--text);border-color:var(--text);backgroun
       var cursor=top+(H-top-bottom-span)/2;
       items.forEach(function(item,index){
         if(index)cursor+=gapBefore(item);
-        var count=flowCompanyCount(item.id,flowElement),height=Math.max(8,count*companyScale);
+        var count=graph.members.get(item.id).length,height=Math.max(8,count*companyScale);
         var pos={id:item.id,item:item,stage:stage,count:count,x:left+(stage-1)*step,y:cursor+height/2,h:height,incoming:[],outgoing:[]};
         cursor+=height;positions[item.id]=pos;nodes.push(pos)
       })
@@ -1052,11 +1089,8 @@ button[aria-pressed="true"]{color:var(--text);border-color:var(--text);backgroun
     positions[source.id]=source;
     var edges=[];
     byStage[2].forEach(function(target){edges.push({from:source.id,to:target.id})});
-    nodes.forEach(function(target){
-      if(target.stage<=2)return;
-      var incoming=(target.item.src||[]).filter(function(sourceId){return positions[sourceId]&&(target.item.srcEls[sourceId]||[]).indexOf(flowElement)>=0});
-      incoming.forEach(function(sourceId){edges.push({from:sourceId,to:target.id})})
-    });
+    // 描画座標や帯の幅は共通モデルを変更せず、描画用のコピーだけに追加する。
+    graph.edges.forEach(function(edge){edges.push({from:edge.from,to:edge.to})});
     edges.forEach(function(edge){
       edge.a=positions[edge.from];edge.b=positions[edge.to];edge.a.outgoing.push(edge);edge.b.incoming.push(edge)
     });
@@ -1134,15 +1168,9 @@ button[aria-pressed="true"]{color:var(--text);border-color:var(--text);backgroun
     })
   }
   // 選んだ工程の前後の接続根拠。図に描いている線（その元素が流れ、両端に該当企業がいる接続）だけを出す
-  function flowDrawsSub(id){
-    var sub=allSubs.find(function(item){return item.id===id});
-    return!!sub&&sub.els.indexOf(flowElement)>=0&&flowCompanyCount(id,flowElement)>0
-  }
   function renderFlowRouteNote(){
     var holder=root.querySelector("#re-flow-route-note");
-    var rows=flowSelectionId===FLOW_SOURCE_ID?[]:routeRows(flowSelectionId,function(row){
-      return(row.elements||[]).indexOf(flowElement)>=0&&flowDrawsSub(row.from)&&flowDrawsSub(row.to)
-    });
+    var rows=routeRows(flowSelectionId,elementSupplyGraph(flowElement));
     holder.hidden=!rows.length;
     holder.innerHTML=rows.length?routeRowsHtml(rows):""
   }

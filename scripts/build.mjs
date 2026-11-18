@@ -11,7 +11,7 @@ const NOTICE = "scripts/build.mjs が src/data/*.json から生成。直接編�
 const APP_NOTICE = "scripts/build.mjs が src/app/*.js から生成。直接編集せず、src/app を編集して npm run build を実行すること。";
 
 // 連結する順番。var の初期化はこの順に実行されるため、並べ替えるときは依存を確かめること。
-const APP_FILES = ["state", "i18n", "text", "model", "graph", "parts", "overview", "flow", "criticality", "view"];
+const APP_FILES = ["state", "i18n", "text", "supply-graph", "model", "graph", "parts", "overview", "flow", "criticality", "view"];
 
 const htmlUrl = new URL("../index.html", import.meta.url);
 const appDir = new URL("../src/app/", import.meta.url);

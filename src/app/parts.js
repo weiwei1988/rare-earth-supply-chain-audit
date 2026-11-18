@@ -84,3 +84,14 @@ function dependencyDashboardHtml(elements){
   '</section>'
 }
 
+
+// 接続説明は両画面で共用。全体像は企業未登録の分類も含む監査済み接続を表示する。
+function routeRows(id,graph){
+  graph=graph||buildSupplyGraph(allSubs,data);
+  return supplyGraphRoutes(graph,id).map(function(edge){
+    return{from:edge.from,to:edge.to,elements:edge.elements,note:routeText(graph.byId.get(edge.to),edge.from)}
+  })
+}
+function routeRowsHtml(rows){
+  return'<div class="re-route-note-title">'+esc(tr("routeTitle",{count:rows.length}))+'</div>'+rows.map(function(row){return'<div class="re-route-row"><span class="re-route-pair">'+esc(subLabel(row.from))+' → '+esc(subLabel(row.to))+'</span><span class="re-route-elements">'+tagsHtml(row.elements)+'</span><span>'+esc(row.note)+'</span></div>'}).join("")
+}

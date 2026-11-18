@@ -9,8 +9,8 @@ function renderElementFlow(){
   var W=Math.max(language==="en"?1320:1200,Math.floor(frame.clientWidth||1200)),left=34,right=language==="en"?270:245,bottom=54,nodeGap=language==="en"?34:32,companyScale=5;
   var stageMap=Object.fromEntries(stages.map(function(stage){return[stage.id,stage]}));
   var order={};Object.keys(columnOrder).forEach(function(stage){columnOrder[stage].forEach(function(id,index){order[id]=index})});
-  var byStage={};
-  for(var stage=2;stage<=6;stage++)byStage[stage]=allSubs.filter(function(item){return item.stage===stage&&item.els.indexOf(flowElement)>=0&&flowCompanyCount(item.id,flowElement)>0}).sort(function(a,b){return flowSortIndex(flowElement,stage,a.id,order)-flowSortIndex(flowElement,stage,b.id,order)});
+  var graph=elementSupplyGraph(flowElement),byStage={};
+  for(var stage=2;stage<=6;stage++)byStage[stage]=graph.nodes.filter(function(item){return item.stage===stage}).sort(function(a,b){return flowSortIndex(flowElement,stage,a.id,order)-flowSortIndex(flowElement,stage,b.id,order)});
   var step=(W-left-right)/5,positions={},nodes=[];
   // ラベルは列の幅に収める。文字数の上限を列幅から決め、長い分類名が次の工程に重ならないようにする
   var labelEm=language==="en"?5.9:11.5,labelLimit=Math.max(language==="en"?16:8,Math.floor((step-25)/labelEm));
@@ -32,7 +32,7 @@ function renderElementFlow(){
   var top=Math.max(language==="en"?136:112,Math.round(headerBottom+10+topLabelLines*lineHeight));
   function columnSpan(items){
     return items.reduce(function(sum,item,index){
-      return sum+Math.max(8,flowCompanyCount(item.id,flowElement)*companyScale)+(index?gapBefore(item):0)
+      return sum+Math.max(8,graph.members.get(item.id).length*companyScale)+(index?gapBefore(item):0)
     },0)
   }
   var columnSpans=Object.keys(byStage).map(function(stage){return columnSpan(byStage[stage])});
@@ -42,7 +42,7 @@ function renderElementFlow(){
     var cursor=top+(H-top-bottom-span)/2;
     items.forEach(function(item,index){
       if(index)cursor+=gapBefore(item);
-      var count=flowCompanyCount(item.id,flowElement),height=Math.max(8,count*companyScale);
+      var count=graph.members.get(item.id).length,height=Math.max(8,count*companyScale);
       var pos={id:item.id,item:item,stage:stage,count:count,x:left+(stage-1)*step,y:cursor+height/2,h:height,incoming:[],outgoing:[]};
       cursor+=height;positions[item.id]=pos;nodes.push(pos)
     })
@@ -55,11 +55,8 @@ function renderElementFlow(){
   positions[source.id]=source;
   var edges=[];
   byStage[2].forEach(function(target){edges.push({from:source.id,to:target.id})});
-  nodes.forEach(function(target){
-    if(target.stage<=2)return;
-    var incoming=(target.item.src||[]).filter(function(sourceId){return positions[sourceId]&&(target.item.srcEls[sourceId]||[]).indexOf(flowElement)>=0});
-    incoming.forEach(function(sourceId){edges.push({from:sourceId,to:target.id})})
-  });
+  // 描画座標や帯の幅は共通モデルを変更せず、描画用のコピーだけに追加する。
+  graph.edges.forEach(function(edge){edges.push({from:edge.from,to:edge.to})});
   edges.forEach(function(edge){
     edge.a=positions[edge.from];edge.b=positions[edge.to];edge.a.outgoing.push(edge);edge.b.incoming.push(edge)
   });
@@ -137,15 +134,9 @@ function renderElementFlow(){
   })
 }
 // 選んだ工程の前後の接続根拠。図に描いている線（その元素が流れ、両端に該当企業がいる接続）だけを出す
-function flowDrawsSub(id){
-  var sub=allSubs.find(function(item){return item.id===id});
-  return!!sub&&sub.els.indexOf(flowElement)>=0&&flowCompanyCount(id,flowElement)>0
-}
 function renderFlowRouteNote(){
   var holder=root.querySelector("#re-flow-route-note");
-  var rows=flowSelectionId===FLOW_SOURCE_ID?[]:routeRows(flowSelectionId,function(row){
-    return(row.elements||[]).indexOf(flowElement)>=0&&flowDrawsSub(row.from)&&flowDrawsSub(row.to)
-  });
+  var rows=routeRows(flowSelectionId,elementSupplyGraph(flowElement));
   holder.hidden=!rows.length;
   holder.innerHTML=rows.length?routeRowsHtml(rows):""
 }

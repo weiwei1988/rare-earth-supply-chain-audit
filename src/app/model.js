@@ -9,15 +9,14 @@ function shareEntry(companyId,nodeId,element){
 function criticalityPoints(){
   var points=[];
   elements.forEach(function(element){
-    var active=allSubs.filter(function(s){return s.els.indexOf(element)>=0&&flowCompanyCount(s.id,element)>0}),ids=new Set(active.map(function(s){return s.id})),edges=[];
-    active.forEach(function(s){(s.src||[]).forEach(function(from){if(ids.has(from)&&(s.srcEls[from]||[]).indexOf(element)>=0)edges.push([from,s.id])})});
-    function walk(start,reverse){var seen=new Set(),stack=[start];while(stack.length){var id=stack.pop();edges.forEach(function(e){if(e[reverse?1:0]===id&&!seen.has(e[reverse?0:1])){seen.add(e[reverse?0:1]);stack.push(e[reverse?0:1])}})}return seen}
+    var graph=elementSupplyGraph(element),active=graph.nodes;
+    function walk(start,reverse){return supplyGraphReachable(graph,start,reverse)}
     var reachable=new Set();active.filter(function(s){return s.stage===2}).forEach(function(s){reachable.add(s.id);walk(s.id,false).forEach(function(id){reachable.add(id)})});
     var finals=new Set(active.filter(function(s){return s.stage===6}).map(function(s){return s.id}));
     var path=new Set(active.filter(function(s){return reachable.has(s.id)&&(finals.has(s.id)||Array.from(walk(s.id,false)).some(function(id){return finals.has(id)}))}).map(function(s){return s.id}));
     active.filter(function(s){return s.stage<6}).forEach(function(s){
       var down=walk(s.id,false),companies=data.filter(function(c){return c.subs.some(function(id){return down.has(id)&&path.has(id)&&companyHasElement(c,id,element)})});
-      var members=data.filter(function(c){return companyHasElement(c,s.id,element)}),level=1;
+      var members=graph.members.get(s.id),level=1;
       members.forEach(function(c){level=Math.max(level,shareEntry(c.id,s.id,element).level)});
       var representative=members.find(function(c){return shareEntry(c.id,s.id,element).level===level});
       points.push({node:s.id,element:element,downstream:path.has(s.id)?companies.length:0,level:level,score:null,onPath:path.has(s.id),companies:members,downstreamCompanies:path.has(s.id)?companies:[],downstreamNodes:Array.from(down).filter(function(id){return path.has(id)}),representative:representative});
@@ -116,3 +115,5 @@ function selectionLabel(){
   return tr("allSelection")
 }
 
+// 入力を明示して構築するため、画面の選択や言語によるキャッシュの混入がない。
+function elementSupplyGraph(element){return buildSupplyGraph(allSubs,data,element)}

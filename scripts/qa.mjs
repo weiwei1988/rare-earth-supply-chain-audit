@@ -307,7 +307,7 @@ check(
     !html.includes("shortenedLabel(label,16)") &&
     !html.includes("shortenedLabel(stageText(stage,\"short\"),28)"),
 );
-check("接続線は全工程のsrcElsと多言語srcNotesから描画", html.includes("item.srcEls&&item.srcEls[sourceId]") && html.includes("routeText(item,sourceId)") && html.includes("function routeText(target,source)") && html.includes("curve(a.x+a.w,a.y+lane[element],b.x,b.y+lane[element])") && html.includes("width:'+pos.w+'px") && html.includes("width:'+source.w+'px"));
+check("接続線は全工程のsrcElsと多言語srcNotesから描画", html.includes("connect(nodeMap[edge.from],nodeMap[edge.to],edge.elements,routeText(graph.byId.get(edge.to),edge.from))") && html.includes("function routeText(target,source)") && html.includes("curve(a.x+a.w,a.y+lane[element],b.x,b.y+lane[element])") && html.includes("width:'+pos.w+'px") && html.includes("width:'+source.w+'px"));
 check(
   "企業カードと検索は言語別オーバーレイを参照",
   html.includes("function companyText(company,key)") &&
@@ -320,7 +320,7 @@ check(
   "全体では全接続線、分類選択時は全上流・全下流を強調",
   html.includes("function traceLinkedEdges(edges,startId,reader,elementList)") &&
     html.includes("traceLinkedEdges(edges,id,edgeReader,selectedElements)") &&
-    html.includes("allSubs.forEach(function(target){if((target.src||[]).indexOf(selected.id)>=0)"),
+    html.includes("supplyGraphRoutes(graph,id).map(function(edge)"),
 );
 check("工程全体とサブカテゴリーの高さを所属会社数に比例", html.includes("minCardHeight=100,columnGap=8,columnBaseSpan=220,perStageCompany=16.6,perCardScaleCompany=.8,maxColumnSpan=1580") && html.includes("minimumSpan+stageCompanyCount*perCardScaleCompany") && html.includes("columnBaseSpan+stageCompanyCount*perStageCompany") && html.includes("extraHeight*weights[index]/weightTotal") && html.includes(".re-sub-card{width:176px;min-height:100px") && html.includes(".re-card-description{font-size:9.5px") && !html.includes("is-compact .re-card-description{display:none}"));
 check(
@@ -343,7 +343,7 @@ check(
     html.includes('data-view="element-flow"') &&
     html.includes('id="re-element-flow-canvas"') &&
     html.includes("function renderElementFlow()") &&
-    html.includes("target.item.srcEls[sourceId]") &&
+    html.includes("var graph=elementSupplyGraph(flowElement),byStage={}") &&
     html.includes("各カテゴリーに出入りする帯の合計幅は、そのカテゴリーに所属する該当元素企業数に比例します") &&
     html.includes("traceLinkedEdges(edges,flowSelectionId,flowEdgeReader,null)") &&
     html.includes("linkedEdges.has(edge)?' is-linked':'") &&
