@@ -25,7 +25,8 @@
     "04_plasma_spray",
     "04_ods",
     "04_laser_medium",
-    "04_faraday",
+    "04_faraday_laser",
+    "04_faraday_tele",
     "04_target",
     "04_sc_crystal",
     "04_dielectric"

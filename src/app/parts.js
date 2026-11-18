@@ -19,7 +19,7 @@ function shareCriteriaHtml(){
   var title=language==='en'?'Share-level assessment criteria':language==='zh-CN'?'份额等级判定标准':'シェア水準の判定基準';
   var note=language==='en'?'Numerical market shares take precedence; leadership or sole-supplier claims are used only when figures are unavailable. Technical performance alone is not market share. Assessments apply to the specified product, category and element; missing assessments default to level 1. At overlapping boundaries, the higher level takes precedence.':language==='zh-CN'?'优先采用数值份额，仅在缺少数值时使用第一或唯一供应商等表述；技术性能不等于市场份额。判定限定于对应产品、分类及元素，缺失判定按等级1处理。边界重叠时优先采用较高等级。':'数値のシェアを優先し、「首位」「唯一」等の表現は数値がない場合のみ用います。性能・技術面の記載はシェアとみなしません。判定は対象製品・サブカテゴリ・元素に限定し、判定がない場合は水準1とします。境界が重なる場合は上位水準を優先します。';
   var items=companyShares.levels.slice().sort(function(a,b){return b.level-a.level});
-  return '<section class="re-share-criteria"><p><strong>'+esc(title)+'</strong></p><ul>'+items.map(function(item){return'<li><strong class="re-cr-share-badge re-share-'+item.level+'">'+esc(criticalText('share')+' '+item.level+colon()+shareLevelText(item.level,'label'))+'</strong> — '+esc(shareLevelText(item.level,'rule'))+'</li>'}).join('')+'</ul><p>'+esc(note)+'</p></section>';
+  return '<section class="re-share-criteria"><p class="re-share-criteria-title">'+esc(title)+'</p><dl class="re-share-legend">'+items.map(function(item){return'<dt><span class="re-cr-share-badge re-share-'+item.level+'">'+esc(criticalText('share')+' '+item.level+colon()+shareLevelText(item.level,'label'))+'</span></dt><dd>'+esc(shareLevelText(item.level,'rule'))+'</dd>'}).join('')+'</dl><p class="re-share-criteria-note">'+esc(note)+'</p></section>';
 }
 // シェア判定の文面は日本語が正本。en / zh-CN は company-shares.json の i18n に持ち、無ければ日本語に戻す。
 function shareText(entry,key){if(!entry)return'';var t=entry.i18n&&entry.i18n[language];return t&&t[key]?t[key]:(entry[key]||'')}
@@ -84,3 +84,14 @@ function dependencyDashboardHtml(elements){
   '</section>'
 }
 
+
+// 接続説明は両画面で共用。全体像は企業未登録の分類も含む監査済み接続を表示する。
+function routeRows(id,graph){
+  graph=graph||buildSupplyGraph(allSubs,data);
+  return supplyGraphRoutes(graph,id).map(function(edge){
+    return{from:edge.from,to:edge.to,elements:edge.elements,note:routeText(graph.byId.get(edge.to),edge.from)}
+  })
+}
+function routeRowsHtml(rows){
+  return'<div class="re-route-note-title">'+esc(tr("routeTitle",{count:rows.length}))+'</div>'+rows.map(function(row){return'<div class="re-route-row"><span class="re-route-pair">'+esc(subLabel(row.from))+' → '+esc(subLabel(row.to))+'</span><span class="re-route-elements">'+tagsHtml(row.elements)+'</span><span>'+esc(row.note)+'</span></div>'}).join("")
+}

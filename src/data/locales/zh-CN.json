@@ -2538,8 +2538,48 @@
       "src": "https://www.daido.co.jp/products/isotropic_SmFeN/ ／ https://www.daido.co.jp/about/release/2026/260511_smfen.html"
     }
   },
-  "routes": {
+  "stages": {
+    "1": {
+      "label": "海外资源与分离",
+      "short": "采矿、分离精炼与出口管理"
+    },
+    "2": {
+      "label": "素材",
+      "short": "氧化物、盐、金属与再生利用"
+    },
+    "3": {
+      "label": "材料",
+      "short": "合金、粉末与晶体"
+    },
+    "4": {
+      "label": "部件",
+      "short": "磁体、喷涂材料、靶材、电解质与基板"
+    },
+    "5": {
+      "label": "模块与设备",
+      "short": "电机、涂层施工、激光器与电池堆"
+    },
+    "6": {
+      "label": "装备与系统",
+      "short": "系统集成、装备部件与交付"
+    }
+  },
+  "subcategories": {
+    "02_compound": {
+      "label": "稀土氧化物、盐与化合物",
+      "description": "Y₂O₃、Sc₂O₃、硝酸盐、氟化物等"
+    },
+    "02_metal": {
+      "label": "稀土金属（还原）",
+      "description": "将氧化物和氟化物还原为金属"
+    },
+    "02_recycle": {
+      "label": "回收再利用",
+      "description": "从工序废料和废旧磁体中回收"
+    },
     "03_magnet_alloy": {
+      "label": "磁体合金",
+      "description": "NdFeB与SmCo磁体用合金",
       "srcNotes": {
         "02_metal": "将金属熔炼成 NdFeB、SmCo 合金",
         "02_compound": "将 Dy、Tb 的氧化物和氟化物用作磁体合金及晶界扩散材料的原料",
@@ -2547,154 +2587,240 @@
       }
     },
     "03_magnet_powder": {
+      "label": "磁粉与复合材料",
+      "description": "粘结磁体用（NdFeB、SmFeN）",
       "srcNotes": {
         "02_compound": "以 Sm 化合物为原料制造 SmFeN 磁粉",
         "02_metal": "将稀土金属熔炼、快速冷却，制成粘结磁体用磁粉"
       }
     },
     "03_light_alloy": {
+      "label": "Al–Sc中间合金（结构材料）",
+      "description": "面向运输设备和增材制造的铝合金",
       "srcNotes": {
         "02_compound": "在铝中还原 Sc₂O₃，制成结构材料用中间合金"
       }
     },
     "03_ceramic": {
+      "label": "稳定氧化锆粉末",
+      "description": "YSZ与ScSZ粉末",
       "srcNotes": {
         "02_compound": "将 Y₂O₃、Sc₂O₃ 用作氧化锆稳定剂"
       }
     },
     "03_yttria_powder": {
+      "label": "高纯Y₂O₃与YF₃粉末",
+      "description": "用于烧结、喷涂和ODS的微粉",
       "srcNotes": {
         "02_recycle": "将回收的 Y 用作高纯度 Y₂O₃ 的原料",
         "02_compound": "将分离精炼后的 Y₂O₃ 制成高纯度微粉，并进一步加工为 YF₃、YOF（氟氧化物）"
       }
     },
     "03_yag_crystal": {
+      "label": "激光用光学晶体与透明陶瓷",
+      "description": "YAG与Y₂O₃、TGG与Tb系玻璃",
       "srcNotes": {
-        "02_compound": "以高纯Y₂O₃作为晶体生长与烧结的原料"
+        "02_compound": "以高纯Y₂O₃、Tb₄O₇作为晶体生长与烧结的原料"
+      }
+    },
+    "03_magneto_garnet": {
+      "label": "磁性石榴石（铋取代薄膜与YIG）",
+      "description": "铋取代稀土铁石榴石薄膜、YIG单晶与SGGG衬底",
+      "srcNotes": {
+        "02_compound": "由高纯Y、Tb、Gd等氧化物，在石榴石衬底上以LPE法生长铋取代磁性石榴石薄膜，或生长YIG单晶"
       }
     },
     "03_alsc_semi": {
+      "label": "Al–Sc合金（半导体用途）",
+      "description": "靶材用低氧Al–Sc合金",
       "srcNotes": {
         "02_compound": "在铝中还原 Sc₂O₃，制成半导体用 Al–Sc 合金",
         "02_metal": "将 Sc 金属与铝熔炼并制成合金"
       }
     },
     "03_sam_crystal": {
+      "label": "SAM单晶",
+      "description": "ScAlMgO₄晶体生长",
       "srcNotes": {
         "02_compound": "将 Sc₂O₃ 用作 SAM 晶体的原料"
       }
     },
     "03_dielectric_additive": {
+      "label": "介电材料用稀土添加剂",
+      "description": "MLCC用稀土微粉、盐与溶液",
       "srcNotes": {
         "02_compound": "将分离精炼后的 Dy₂O₃、Tb₄O₇、Y₂O₃ 加工成粒径可控的微粉，以及硝酸盐等盐类或溶液"
       }
     },
     "04_mag": {
+      "label": "永磁体",
+      "description": "烧结NdFeB、SmCo与粘结磁体",
       "srcNotes": {
         "03_magnet_alloy": "将合金粉碎、成型并烧结为磁体",
         "03_magnet_powder": "以树脂固结磁粉，制成粘结磁体"
       }
     },
     "04_am_feedstock": {
+      "label": "增材制造粉末与丝材",
+      "description": "Scalmalloy与WAAM丝材",
       "srcNotes": {
         "03_light_alloy": "将中间合金加工成粉末或线材"
       }
     },
     "04_tbc_spray": {
+      "label": "热障喷涂材料",
+      "description": "YSZ喷涂粉末",
       "srcNotes": {
         "03_ceramic": "将 YSZ 造粒成热障涂层用热喷涂粉末"
       }
     },
     "04_elec": {
+      "label": "固体电解质与基板",
+      "description": "YSZ/ScSZ薄片与传感器基板",
       "srcNotes": {
         "03_ceramic": "将 YSZ、ScSZ 烧结成片材或基板"
       }
     },
     "04_media": {
+      "label": "研磨与分散介质",
+      "description": "制造工序用YSZ球",
       "srcNotes": {
         "03_ceramic": "将 YSZ 烧结成球体或微珠"
       }
     },
     "04_plasma_spray": {
+      "label": "耐等离子体喷涂材料",
+      "description": "Y₂O₃、YF₃与YOF喷涂颗粒",
       "srcNotes": {
         "03_yttria_powder": "将 Y₂O₃、YF₃、YOF 造粒成热喷涂颗粒"
       }
     },
     "04_ods": {
+      "label": "ODS合金（Y₂O₃弥散强化）",
+      "description": "弥散Y₂O₃强化合金材料",
       "srcNotes": {
         "03_yttria_powder": "将 Y₂O₃ 微粉作为弥散颗粒掺入合金粉末"
       }
     },
     "04_laser_medium": {
+      "label": "激光介质",
+      "description": "棒材、板条与透明陶瓷",
       "srcNotes": {
         "03_yag_crystal": "将YAG、Y₂O₃的晶体与陶瓷切割、研磨成棒材与板条"
       }
     },
+    "04_faraday_laser": {
+      "label": "法拉第旋转器与光隔离器（激光波长）",
+      "description": "532〜1064nm，TGG与Tb系玻璃元件",
+      "srcNotes": {
+        "03_yag_crystal": "将TGG晶体、透明陶瓷或Tb系玻璃加工为旋转器元件，并与磁体、偏振器组合"
+      }
+    },
+    "04_faraday_tele": {
+      "label": "法拉第旋转器与光隔离器（通信波长）",
+      "description": "1310/1550nm，铋取代石榴石薄膜元件",
+      "srcNotes": {
+        "03_magneto_garnet": "将磁性石榴石薄膜、YIG晶体加工为旋转器元件"
+      }
+    },
     "04_target": {
+      "label": "溅射靶材",
+      "description": "Al–Sc溅射靶材",
       "srcNotes": {
         "03_alsc_semi": "将低氧 Al–Sc 合金加工成靶材"
       }
     },
     "04_sc_crystal": {
+      "label": "SAM晶圆与模板",
+      "description": "GaN生长用基板和模板",
       "srcNotes": {
         "03_sam_crystal": "将晶体加工成晶圆，用作 GaN 生长的衬底"
       }
     },
     "04_dielectric": {
+      "label": "介电材料",
+      "description": "钛酸钡加稀土添加剂",
       "srcNotes": {
         "03_dielectric_additive": "向钛酸钡中添加辅助成分（混入氧化物微粉，或使用盐溶液包覆颗粒表面）"
       }
     },
     "05_motor": {
+      "label": "电机与执行器",
+      "description": "伺服、轮式机构与电动化",
       "srcNotes": {
         "04_mag": "装入转子或执行器"
       }
     },
     "05_tube": {
+      "label": "微波电子管",
+      "description": "发射管（仅公开型号）",
       "srcNotes": {
         "04_mag": "使用 SmCo 磁体聚焦电子束",
         "04_target": "形成阴极或电极薄膜（如钪酸盐阴极）"
       }
     },
     "05_am": {
+      "label": "金属增材制造零件",
+      "description": "火箭与飞机轻量化零件",
       "srcNotes": {
         "04_am_feedstock": "使用粉末或线材进行增材制造"
       }
     },
     "05_tbc": {
+      "label": "热障涂层（TBC）",
+      "description": "发动机高温部件喷涂施工",
       "srcNotes": {
         "03_ceramic": "将 YSZ（氧化钇稳定氧化锆）用作热障涂层原料",
         "04_tbc_spray": "热喷涂 YSZ 粉末，形成热障涂层"
       }
     },
     "05_sofc": {
+      "label": "SOFC电池堆",
+      "description": "固体氧化物发电与电解",
       "srcNotes": {
         "04_elec": "作为固体电解质装入电池堆"
       }
     },
     "05_plasma_parts": {
+      "label": "耐等离子体涂层与部件",
+      "description": "半导体制造设备腔体部件",
       "srcNotes": {
         "03_yttria_powder": "将 Y₂O₃ 微粉成型、烧结为耐等离子体部件",
         "04_plasma_spray": "热喷涂 Y₂O₃、YF₃ 粉末，形成耐等离子体涂层"
       }
     },
     "05_cladding": {
+      "label": "燃料包壳管（ODS钢）",
+      "description": "事故容错燃料用（开发阶段）",
       "srcNotes": {
         "04_ods": "将 ODS 材料挤压、轧制成包壳管"
       }
     },
     "05_laser_osc": {
+      "label": "固体激光器",
+      "description": "Nd:YAG与Yb:YAG",
       "srcNotes": {
         "04_laser_medium": "将激光介质装入振荡器",
-        "04_faraday": "作为振荡器内部的隔离器阻断返回光"
+        "04_faraday_laser": "作为振荡器内部的隔离器阻断返回光"
+      }
+    },
+    "05_photonics": {
+      "label": "光通信部件与光器件",
+      "description": "光隔离器与光环行器",
+      "srcNotes": {
+        "04_faraday_tele": "将旋转器与偏振片、磁体组合，制成阻断返回半导体激光器的反射光的光部件（1310/1550nm）"
       }
     },
     "05_scaln_film": {
+      "label": "ScAlN压电薄膜",
+      "description": "面向RF滤波器和MEMS的成膜",
       "srcNotes": {
         "04_target": "通过溅射沉积 ScAlN 压电薄膜"
       }
     },
     "05_electronics": {
+      "label": "电子元件与半导体",
+      "description": "MLCC、GaN HEMT、IC与石英器件",
       "srcNotes": {
         "04_media": "用于 MLCC 等电子元件生产中的粉碎和分散工序",
         "04_target": "沉积 Al–Sc 互连层、ScAlN 薄膜等（用于半导体和电子元件）",
@@ -2704,6 +2830,8 @@
       }
     },
     "06_aircraft": {
+      "label": "飞机与飞行控制",
+      "description": "机体、操纵、起落架与电动化",
       "srcNotes": {
         "05_am": "用作飞机的轻量化结构件",
         "05_motor": "用作飞行控制执行器、发电机和电动推进系统",
@@ -2711,6 +2839,8 @@
       }
     },
     "06_guidance": {
+      "label": "制导与惯性导航",
+      "description": "制导武器、IMU与陀螺仪",
       "srcNotes": {
         "05_scaln_film": "用作 MEMS 惯性及压电传感器",
         "05_motor": "用于舵面驱动、导引头驱动和陀螺仪",
@@ -2719,6 +2849,8 @@
       }
     },
     "06_unmanned": {
+      "label": "无人系统与机器人",
+      "description": "无人机、UGV与机器人",
       "srcNotes": {
         "05_motor": "用作推进电机、云台和关节机构",
         "05_laser_osc": "用作激光测量（激光雷达）的光源",
@@ -2726,6 +2858,8 @@
       }
     },
     "06_naval": {
+      "label": "舰艇、水下与导航",
+      "description": "陀螺罗经与水声设备",
       "srcNotes": {
         "05_motor": "用于导航装置和水下设备的驱动部件",
         "05_electronics": "用于舰艇和水下设备的电子电路及传感器",
@@ -2733,6 +2867,8 @@
       }
     },
     "06_launch": {
+      "label": "火箭与发射",
+      "description": "运载火箭与火箭弹",
       "srcNotes": {
         "05_am": "用作火箭部件（UACJ、JAXA、三菱重工共同开发）",
         "05_motor": "用作推力矢量控制（TVC）执行器",
@@ -2740,6 +2876,8 @@
       }
     },
     "06_space": {
+      "label": "卫星与航天器",
+      "description": "卫星、探测器与在轨服务",
       "srcNotes": {
         "05_motor": "用作反作用飞轮和驱动机构",
         "05_laser_osc": "用于航天激光雷达和激光测距",
@@ -2748,33 +2886,45 @@
       }
     },
     "06_engine": {
+      "label": "航空发动机与燃气轮机",
+      "description": "发动机、燃气轮机及零部件",
       "srcNotes": {
         "05_tbc": "用于燃烧室和涡轮高温部件的热障涂层"
       }
     },
     "06_energy": {
+      "label": "能源与电源",
+      "description": "SOFC/SOEC系统与发电机",
       "srcNotes": {
         "05_motor": "用作发电机（永磁式）",
         "05_sofc": "用于发电和水电解系统"
       }
     },
     "06_semi": {
+      "label": "半导体制造设备",
+      "description": "刻蚀与沉积设备（民用）",
       "srcNotes": {
         "05_plasma_parts": "用作刻蚀设备的腔体部件"
       }
     },
     "06_nuclear": {
+      "label": "核燃料",
+      "description": "燃料组件与辐照试验",
       "srcNotes": {
         "05_cladding": "用作燃料棒包壳管（事故容错燃料和快堆燃料，尚处于开发阶段）"
       }
     },
     "06_laser": {
+      "label": "激光装备与照射",
+      "description": "测距、照射与高功率",
       "srcNotes": {
         "05_laser_osc": "用作测距、照射和加工光源",
         "05_electronics": "用于交战训练激光收发器等设备的半导体激光器和电子电路"
       }
     },
     "06_radar": {
+      "label": "雷达",
+      "description": "搜索、监视与气象雷达",
       "srcNotes": {
         "05_scaln_film": "用作 RF 滤波器和谐振器",
         "05_tube": "用作发射管（TWT、磁控管等）",
@@ -2783,6 +2933,8 @@
       }
     },
     "06_comm": {
+      "label": "通信与信息",
+      "description": "无线电、卫星通信与信息系统",
       "srcNotes": {
         "05_scaln_film": "用于通信设备的 RF 滤波器",
         "05_tube": "用于卫星通信和无线电设备的发射管",
@@ -2790,30 +2942,19 @@
         "05_photonics": "作为光隔离器与光环行器装入光传输设备和海底电缆中继器"
       }
     },
+    "06_optical_net": {
+      "label": "光通信基础设施与光传输",
+      "description": "光传输设备、海底电缆与卫星光通信（民用）",
+      "srcNotes": {
+        "05_photonics": "将光隔离器与光环行器装入光传输设备和海底中继器"
+      }
+    },
     "06_rf_sensor": {
+      "label": "RF与压电传感、测量",
+      "description": "高频测量、压电评估与传感器",
       "srcNotes": {
         "05_scaln_film": "用作压电传感器和高频器件",
         "05_electronics": "用于测量仪器和传感器的电子元件"
-      }
-    },
-    "03_magneto_garnet": {
-      "srcNotes": {
-        "02_compound": "由高纯Y、Tb氧化物生长YIG、TGG晶体，或在石榴石衬底上以LPE法生长磁光薄膜。"
-      }
-    },
-    "04_faraday": {
-      "srcNotes": {
-        "03_magneto_garnet": "将YIG、TGG晶体或磁光薄膜加工为旋转器元件，与偏振器及磁铁组合成激光和光通信用光隔离器。"
-      }
-    },
-    "05_photonics": {
-      "srcNotes": {
-        "04_faraday": "将旋转器与偏振片、磁体组合，制成阻断返回半导体激光器的反射光的光部件"
-      }
-    },
-    "06_optical_net": {
-      "srcNotes": {
-        "05_photonics": "将光隔离器与光环行器装入光传输设备和海底中继器"
       }
     }
   },

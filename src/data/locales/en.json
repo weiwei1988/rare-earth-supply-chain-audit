@@ -2538,8 +2538,48 @@
       "src": "https://www.daido.co.jp/products/isotropic_SmFeN/ ／ https://www.daido.co.jp/about/release/2026/260511_smfen.html"
     }
   },
-  "routes": {
+  "stages": {
+    "1": {
+      "label": "Overseas resources & separation",
+      "short": "Mining, separation/refining & export controls"
+    },
+    "2": {
+      "label": "Feedstocks",
+      "short": "Oxides, salts, metals & recycling"
+    },
+    "3": {
+      "label": "Materials",
+      "short": "Alloys, powders & crystals"
+    },
+    "4": {
+      "label": "Components",
+      "short": "Magnets, spray materials, targets, electrolytes & substrates"
+    },
+    "5": {
+      "label": "Modules & equipment",
+      "short": "Motors, coatings, lasers & cell stacks"
+    },
+    "6": {
+      "label": "Systems & platforms",
+      "short": "System integration, equipment components & delivery"
+    }
+  },
+  "subcategories": {
+    "02_compound": {
+      "label": "Rare-earth oxides, salts & compounds",
+      "description": "Y₂O₃, Sc₂O₃, nitrates, fluorides and more"
+    },
+    "02_metal": {
+      "label": "Rare-earth metals (reduction)",
+      "description": "Reducing oxides and fluorides to metals"
+    },
+    "02_recycle": {
+      "label": "Recycling",
+      "description": "Recovery from process scrap and used magnets"
+    },
     "03_magnet_alloy": {
+      "label": "Magnet alloys",
+      "description": "Alloys for NdFeB and SmCo magnets",
       "srcNotes": {
         "02_metal": "Melt metals to produce NdFeB and SmCo alloys",
         "02_compound": "Use Dy and Tb oxides and fluorides as feedstock for magnet alloys and grain-boundary diffusion materials",
@@ -2547,154 +2587,240 @@
       }
     },
     "03_magnet_powder": {
+      "label": "Magnetic powders & compounds",
+      "description": "For bonded magnets (NdFeB and SmFeN)",
       "srcNotes": {
         "02_compound": "Produce SmFeN magnetic powder from Sm compounds",
         "02_metal": "Melt and rapidly quench rare-earth metals to produce magnetic powder for bonded magnets"
       }
     },
     "03_light_alloy": {
+      "label": "Al–Sc master alloys (structural)",
+      "description": "Aluminum alloys for transport and additive manufacturing",
       "srcNotes": {
         "02_compound": "Reduce Sc₂O₃ in aluminum to produce master alloy for structural applications"
       }
     },
     "03_ceramic": {
+      "label": "Stabilized zirconia powders",
+      "description": "YSZ and ScSZ powders",
       "srcNotes": {
         "02_compound": "Use Y₂O₃ and Sc₂O₃ as zirconia stabilizers"
       }
     },
     "03_yttria_powder": {
+      "label": "High-purity Y₂O₃ & YF₃ powders",
+      "description": "Fine powders for sintering, spraying and ODS",
       "srcNotes": {
         "02_recycle": "Use recovered Y as feedstock for high-purity Y₂O₃",
         "02_compound": "Refine separated Y₂O₃ into high-purity fine powder and process it into YF₃ and YOF (oxyfluoride)"
       }
     },
     "03_yag_crystal": {
+      "label": "Laser optical crystals & transparent ceramics",
+      "description": "YAG and Y₂O₃; TGG and Tb-based glass",
       "srcNotes": {
-        "02_compound": "Use high-purity Y₂O₃ as feedstock for crystal growth and sintering"
+        "02_compound": "Use high-purity Y₂O₃ and Tb₄O₇ as feedstock for crystal growth and sintering"
+      }
+    },
+    "03_magneto_garnet": {
+      "label": "Magnetic garnets (Bi-substituted films & YIG)",
+      "description": "Bi-substituted rare-earth iron garnet films, YIG single crystals and SGGG substrates",
+      "srcNotes": {
+        "02_compound": "Grow bismuth-substituted magnetic garnet films by LPE on garnet substrates, or grow YIG single crystals, from high-purity Y, Tb, Gd and other oxides"
       }
     },
     "03_alsc_semi": {
+      "label": "Al–Sc alloys (semiconductor)",
+      "description": "Low-oxygen Al–Sc alloys for targets",
       "srcNotes": {
         "02_compound": "Reduce Sc₂O₃ in aluminum to produce Al–Sc alloy for semiconductor applications",
         "02_metal": "Melt and alloy Sc metal with aluminum"
       }
     },
     "03_sam_crystal": {
+      "label": "SAM single crystals",
+      "description": "ScAlMgO₄ crystal growth",
       "srcNotes": {
         "02_compound": "Use Sc₂O₃ as feedstock for SAM crystals"
       }
     },
     "03_dielectric_additive": {
+      "label": "Rare-earth dielectric additives",
+      "description": "Rare-earth powders, salts and solutions for MLCCs",
       "srcNotes": {
         "02_compound": "Process separated and refined Dy₂O₃, Tb₄O₇, and Y₂O₃ into size-controlled fine powders or into salts and solutions such as nitrates"
       }
     },
     "04_mag": {
+      "label": "Permanent magnets",
+      "description": "Sintered NdFeB, SmCo and bonded magnets",
       "srcNotes": {
         "03_magnet_alloy": "Crush, form, and sinter alloys into magnets",
         "03_magnet_powder": "Bind magnetic powder with resin to produce bonded magnets"
       }
     },
     "04_am_feedstock": {
+      "label": "AM powders & wires",
+      "description": "Scalmalloy and WAAM wire",
       "srcNotes": {
         "03_light_alloy": "Process master alloy into powder or wire"
       }
     },
     "04_tbc_spray": {
+      "label": "Thermal-barrier spray materials",
+      "description": "YSZ thermal-spray powders",
       "srcNotes": {
         "03_ceramic": "Granulate YSZ into thermal-spray powder for thermal barrier coatings"
       }
     },
     "04_elec": {
+      "label": "Solid electrolytes & substrates",
+      "description": "YSZ/ScSZ sheets and sensor substrates",
       "srcNotes": {
         "03_ceramic": "Sinter YSZ and ScSZ into sheets and substrates"
       }
     },
     "04_media": {
+      "label": "Grinding & dispersion media",
+      "description": "YSZ balls used in manufacturing",
       "srcNotes": {
         "03_ceramic": "Sinter YSZ into balls and beads"
       }
     },
     "04_plasma_spray": {
+      "label": "Plasma-resistant spray materials",
+      "description": "Y₂O₃, YF₃ and YOF spray granules",
       "srcNotes": {
         "03_yttria_powder": "Granulate Y₂O₃, YF₃, and YOF into thermal-spray granules"
       }
     },
     "04_ods": {
+      "label": "ODS alloys (Y₂O₃ dispersion strengthened)",
+      "description": "Alloys strengthened with dispersed Y₂O₃",
       "srcNotes": {
         "03_yttria_powder": "Mix fine Y₂O₃ powder into alloy powder as dispersion particles"
       }
     },
     "04_laser_medium": {
+      "label": "Laser media",
+      "description": "Rods, slabs and transparent ceramics",
       "srcNotes": {
         "03_yag_crystal": "Cut and polish YAG and Y₂O₃ crystals and ceramics into rods and slabs"
       }
     },
+    "04_faraday_laser": {
+      "label": "Faraday rotators & optical isolators (laser wavelengths)",
+      "description": "532–1064 nm; elements of TGG and Tb-based glass",
+      "srcNotes": {
+        "03_yag_crystal": "Process TGG crystals, transparent ceramics and Tb-based glass into rotator elements and combine them with magnets and polarisers"
+      }
+    },
+    "04_faraday_tele": {
+      "label": "Faraday rotators & optical isolators (telecom wavelengths)",
+      "description": "1310/1550 nm; elements of Bi-substituted garnet film",
+      "srcNotes": {
+        "03_magneto_garnet": "Process magnetic garnet films and YIG crystals into rotator elements"
+      }
+    },
     "04_target": {
+      "label": "Sputtering targets",
+      "description": "Al–Sc sputtering targets",
       "srcNotes": {
         "03_alsc_semi": "Process low-oxygen Al–Sc alloy into targets"
       }
     },
     "04_sc_crystal": {
+      "label": "SAM wafers & templates",
+      "description": "Substrates and templates for GaN growth",
       "srcNotes": {
         "03_sam_crystal": "Process crystals into wafers that serve as substrates for GaN growth"
       }
     },
     "04_dielectric": {
+      "label": "Dielectric materials",
+      "description": "Barium titanate with rare-earth additives",
       "srcNotes": {
         "03_dielectric_additive": "Add secondary constituents to barium titanate by mixing oxide fine powders or coating particle surfaces with salt solutions"
       }
     },
     "05_motor": {
+      "label": "Motors & actuators",
+      "description": "Servos, wheels and electrification",
       "srcNotes": {
         "04_mag": "Integrate into rotors and actuators"
       }
     },
     "05_tube": {
+      "label": "Microwave electron tubes",
+      "description": "Transmitter tubes (publicly listed models only)",
       "srcNotes": {
         "04_mag": "Focus electron beams with SmCo magnets",
         "04_target": "Form thin films for cathodes and electrodes, including scandate cathodes"
       }
     },
     "05_am": {
+      "label": "Metal AM parts",
+      "description": "Lightweight rocket and aircraft parts",
       "srcNotes": {
         "04_am_feedstock": "Additively manufacture with powder or wire"
       }
     },
     "05_tbc": {
+      "label": "Thermal barrier coatings (TBC)",
+      "description": "Spray coatings for high-temperature engine parts",
       "srcNotes": {
         "03_ceramic": "Use YSZ (yttria-stabilized zirconia) as feedstock for thermal barrier coatings",
         "04_tbc_spray": "Thermally spray YSZ powder to form thermal barrier coatings"
       }
     },
     "05_sofc": {
+      "label": "SOFC cell stacks",
+      "description": "Solid-oxide power generation and electrolysis",
       "srcNotes": {
         "04_elec": "Integrate into cell stacks as the solid electrolyte"
       }
     },
     "05_plasma_parts": {
+      "label": "Plasma-resistant coatings & parts",
+      "description": "Chamber components for semiconductor equipment",
       "srcNotes": {
         "03_yttria_powder": "Form and sinter fine Y₂O₃ powder into plasma-resistant components",
         "04_plasma_spray": "Thermally spray Y₂O₃ and YF₃ powders to form plasma-resistant coatings"
       }
     },
     "05_cladding": {
+      "label": "Fuel cladding tubes (ODS steel)",
+      "description": "For accident-tolerant fuel (under development)",
       "srcNotes": {
         "04_ods": "Extrude and roll ODS material into cladding tubes"
       }
     },
     "05_laser_osc": {
+      "label": "Solid-state laser oscillators",
+      "description": "Nd:YAG and Yb:YAG",
       "srcNotes": {
         "04_laser_medium": "Integrate gain media into oscillators",
-        "04_faraday": "Block back-reflected light as the isolator inside the oscillator"
+        "04_faraday_laser": "Block back-reflected light as the isolator inside the oscillator"
+      }
+    },
+    "05_photonics": {
+      "label": "Optical communication components & devices",
+      "description": "Optical isolators and circulators",
+      "srcNotes": {
+        "04_faraday_tele": "Combine rotators with polarisers and magnets into components that block light reflected back into semiconductor lasers (1310/1550 nm)"
       }
     },
     "05_scaln_film": {
+      "label": "ScAlN piezoelectric films",
+      "description": "Deposition for RF filters and MEMS",
       "srcNotes": {
         "04_target": "Deposit ScAlN piezoelectric films by sputtering"
       }
     },
     "05_electronics": {
+      "label": "Electronic components & semiconductors",
+      "description": "MLCCs, GaN HEMTs, ICs and quartz devices",
       "srcNotes": {
         "04_media": "Use in milling and dispersion processes for electronic components such as MLCCs",
         "04_target": "Deposit Al–Sc interconnects, ScAlN films, and related layers for semiconductors and electronic components",
@@ -2704,6 +2830,8 @@
       }
     },
     "06_aircraft": {
+      "label": "Aircraft & flight control",
+      "description": "Airframes, control surfaces, landing gear and electrification",
       "srcNotes": {
         "05_am": "Lightweight structural components for aircraft",
         "05_motor": "Flight-control actuators, generators, and electric propulsion",
@@ -2711,6 +2839,8 @@
       }
     },
     "06_guidance": {
+      "label": "Guidance & inertial navigation",
+      "description": "Guided weapons, IMUs and gyros",
       "srcNotes": {
         "05_scaln_film": "MEMS inertial and piezoelectric sensors",
         "05_motor": "Steering, seeker drives and gyros",
@@ -2719,6 +2849,8 @@
       }
     },
     "06_unmanned": {
+      "label": "Uncrewed systems & robotics",
+      "description": "Drones, UGVs and robots",
       "srcNotes": {
         "05_motor": "Propulsion motors, gimbals, and joints",
         "05_laser_osc": "Light sources for laser ranging (LiDAR)",
@@ -2726,6 +2858,8 @@
       }
     },
     "06_naval": {
+      "label": "Naval, underwater & navigation",
+      "description": "Gyrocompasses and underwater acoustics",
       "srcNotes": {
         "05_motor": "Drive units in navigation systems and underwater equipment",
         "05_electronics": "Electronics and sensors in vessels and underwater equipment",
@@ -2733,6 +2867,8 @@
       }
     },
     "06_launch": {
+      "label": "Rockets & launch",
+      "description": "Launch vehicles and rocket projectiles",
       "srcNotes": {
         "05_am": "Rocket components jointly developed by UACJ, JAXA, and Mitsubishi Heavy Industries",
         "05_motor": "Thrust-vector-control (TVC) actuators",
@@ -2740,6 +2876,8 @@
       }
     },
     "06_space": {
+      "label": "Satellites & spacecraft",
+      "description": "Satellites, probes and on-orbit services",
       "srcNotes": {
         "05_motor": "Reaction wheels and drive mechanisms",
         "05_laser_osc": "Spaceborne LiDAR and laser ranging",
@@ -2748,33 +2886,45 @@
       }
     },
     "06_engine": {
+      "label": "Aero engines & gas turbines",
+      "description": "Engines, gas turbines and parts",
       "srcNotes": {
         "05_tbc": "Thermal barrier coatings for combustors and hot-section turbine components"
       }
     },
     "06_energy": {
+      "label": "Energy & power",
+      "description": "SOFC/SOEC systems and generators",
       "srcNotes": {
         "05_motor": "Permanent-magnet generators",
         "05_sofc": "Power-generation and water-electrolysis systems"
       }
     },
     "06_semi": {
+      "label": "Semiconductor manufacturing equipment",
+      "description": "Etching and deposition equipment (commercial)",
       "srcNotes": {
         "05_plasma_parts": "Chamber components for etch systems"
       }
     },
     "06_nuclear": {
+      "label": "Nuclear fuel",
+      "description": "Fuel assemblies and irradiation tests",
       "srcNotes": {
         "05_cladding": "Fuel-rod cladding for accident-tolerant and fast-reactor fuels (under development)"
       }
     },
     "06_laser": {
+      "label": "Laser systems & irradiation",
+      "description": "Ranging, irradiation and high power",
       "srcNotes": {
         "05_laser_osc": "Light sources for ranging, irradiation, and processing",
         "05_electronics": "Semiconductor lasers and electronic circuits, including laser transceivers for engagement training"
       }
     },
     "06_radar": {
+      "label": "Radar",
+      "description": "Search, surveillance and weather radar",
       "srcNotes": {
         "05_scaln_film": "RF filters and resonators",
         "05_tube": "Transmitter tubes, including TWTs and magnetrons",
@@ -2783,6 +2933,8 @@
       }
     },
     "06_comm": {
+      "label": "Communications & information",
+      "description": "Radios, satellite communications and information systems",
       "srcNotes": {
         "05_scaln_film": "RF filters in communications equipment",
         "05_tube": "Transmitter tubes for satellite communications and radio systems",
@@ -2790,30 +2942,19 @@
         "05_photonics": "Build into optical transmission equipment and submarine cable repeaters as isolators and circulators"
       }
     },
+    "06_optical_net": {
+      "label": "Optical network infrastructure",
+      "description": "Optical transport, submarine cables and satellite optical links (commercial)",
+      "srcNotes": {
+        "05_photonics": "Build optical isolators and circulators into optical transmission equipment and submarine repeaters"
+      }
+    },
     "06_rf_sensor": {
+      "label": "RF & piezoelectric sensing",
+      "description": "RF measurement, piezo evaluation and sensors",
       "srcNotes": {
         "05_scaln_film": "Piezoelectric sensors and high-frequency devices",
         "05_electronics": "Electronic components in instruments and sensors"
-      }
-    },
-    "03_magneto_garnet": {
-      "srcNotes": {
-        "02_compound": "Grow YIG/TGG crystals from high-purity Y/Tb oxides, or grow magneto-optic films on garnet substrates by LPE."
-      }
-    },
-    "04_faraday": {
-      "srcNotes": {
-        "03_magneto_garnet": "Process YIG/TGG crystals or magneto-optic films into rotators and combine with polarizers and magnets for laser and communications optical isolators."
-      }
-    },
-    "05_photonics": {
-      "srcNotes": {
-        "04_faraday": "Combine rotators with polarisers and magnets into components that block light reflected back into semiconductor lasers"
-      }
-    },
-    "06_optical_net": {
-      "srcNotes": {
-        "05_photonics": "Build optical isolators and circulators into optical transmission equipment and submarine repeaters"
       }
     }
   },

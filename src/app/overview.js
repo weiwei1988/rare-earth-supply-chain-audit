@@ -71,10 +71,9 @@ function renderFlow(){
   columns.filter(function(column){return column.stage===2}).forEach(function(column){
     column.nodes.forEach(function(item){connect(source,nodeMap[item.id],nodeMap[item.id].els)})
   });
-  columns.filter(function(column){return column.stage>2}).forEach(function(column){
-    column.nodes.forEach(function(item){
-      (item.src||[]).forEach(function(sourceId){connect(nodeMap[sourceId],nodeMap[item.id],item.srcEls&&item.srcEls[sourceId],routeText(item,sourceId))})
-    })
+  var graph=buildSupplyGraph(allSubs,data);
+  graph.edges.forEach(function(edge){
+    connect(nodeMap[edge.from],nodeMap[edge.to],edge.elements,routeText(graph.byId.get(edge.to),edge.from))
   });
   svg+='</svg>';
 
@@ -158,19 +157,12 @@ function initResponsiveMap(){
 }
 
 function renderRouteNote(){
-  var holder=root.querySelector("#re-route-note"),rows=[];
-  if(selection.type==="sub"){
-    var selected=allSubs.find(function(item){return item.id===selection.id});
-    if(selected){
-      (selected.src||[]).forEach(function(source){rows.push({from:source,to:selected.id,elements:selected.srcEls[source],note:routeText(selected,source)})});
-      allSubs.forEach(function(target){if((target.src||[]).indexOf(selected.id)>=0)rows.push({from:selected.id,to:target.id,elements:target.srcEls[selected.id],note:routeText(target,selected.id)})})
-    }
-  }
+  var holder=root.querySelector("#re-route-note"),rows=selection.type==="sub"?routeRows(selection.id):[];
   if(!rows.length){
     holder.innerHTML='<div class="re-route-note-title">END-TO-END ROUTE TRACE</div>'+esc(tr("routeDefault"));
     return
   }
-  holder.innerHTML='<div class="re-route-note-title">'+esc(tr("routeTitle",{count:rows.length}))+'</div>'+rows.map(function(row){return'<div class="re-route-row"><span class="re-route-pair">'+esc(subLabel(row.from))+' → '+esc(subLabel(row.to))+'</span><span class="re-route-elements">'+tagsHtml(row.elements)+'</span><span>'+esc(row.note)+'</span></div>'}).join("")
+  holder.innerHTML=routeRowsHtml(rows)
 }
 
 // 全体像のシェア根拠は、選んでいるサブカテゴリーと元素フィルターで絞る

@@ -24,17 +24,17 @@ report.subcategories = dataset.subcategories.length;
 report.stages = dataset.stages.length;
 
 // --- 構造・公開データ ------------------------------------------------------
-check("6工程・51分類・218社", dataset.stages.length === 6 && dataset.subcategories.length === 51 && dataset.companies.length === 218);
+check("6工程・52分類・218社", dataset.stages.length === 6 && dataset.subcategories.length === 52 && dataset.companies.length === 218);
 check(
   "工程名称を6工程構造へ更新",
   sameJson(dataset.stages.map((stage) => stage.label), ["海外の資源・分離", "素材", "材料", "部材", "モジュール・機器", "装備・システム"]),
 );
 check(
   "工程別の延べ企業数",
-  sameJson(Object.fromEntries([2, 3, 4, 5, 6].map((stage) => [stage, dataset.companies.filter((company) => company.stages.includes(stage)).length])), { 2: 8, 3: 26, 4: 43, 5: 75, 6: 111 }),
+  sameJson(Object.fromEntries([2, 3, 4, 5, 6].map((stage) => [stage, dataset.companies.filter((company) => company.stages.includes(stage)).length])), { 2: 8, 3: 26, 4: 43, 5: 73, 6: 111 }),
 );
 check(
-  "列順が全51分類を工程ごとに一度ずつ指定",
+  "列順が全52分類を工程ごとに一度ずつ指定",
   sameJson(Object.values(dataset.columnOrder).flat().sort(), dataset.subcategories.map((sub) => sub.id).sort()),
 );
 check("全分類に簡潔な解説文を収録", dataset.subcategories.every((sub) => sub.description.length >= 8 && sub.description.length <= 40));
@@ -45,7 +45,7 @@ check("希土類対象外企業を収録しない", dataset.companies.every((com
 const routeCount = dataset.subcategories.reduce((sum, sub) => sum + (sub.src?.length ?? 0), 0);
 const routeKeys = dataset.subcategories.flatMap((sub) => (sub.src ?? []).flatMap((source) => (sub.srcEls[source] ?? []).map((element) => source + "|" + sub.id + "|" + element)));
 const skippedRoutes = dataset.subcategories.flatMap((sub) => Object.keys(sub.srcSkip ?? {}).map((source) => source + "|" + sub.id));
-check("85本の監査済みカテゴリー接続", routeCount === 85);
+check("86本の監査済みカテゴリー接続", routeCount === 86);
 check("元素別接続に重複なし", routeKeys.length === new Set(routeKeys).size);
 check(
   "全工程の接続に元素と根拠を定義",
@@ -137,13 +137,10 @@ check(
 const translatedRouteCount = dataset.subcategories.filter((sub) => sub.srcNotes).length;
 check(
   "サブカテゴリー間接続説明を3言語で全件収録",
-  ["ja", "en", "zh-CN"].every((locale) => Object.keys(dataset.locales[locale].routes).length === translatedRouteCount),
+  ["ja", "en", "zh-CN"].every((locale) => Object.values(dataset.locales[locale].subcategories).filter((sub) => sub.srcNotes).length === translatedRouteCount),
 );
 
-// --- 画面側の手書きテーブルがJSONを網羅しているか ---------------------------
-// uiStrings / stageTranslations / subTranslations / flowOrderByElement は生成領域の外に
-// 手書きされているため、JSONへ工程・サブカテゴリー・元素を足しても自動では追随しない。
-// 画面側は未定義なら日本語へ黙ってフォールバックするので、ここで網羅を検査する。
+// UI 文言と表示順は画面固有のテーブル。工程・分類翻訳は loadDataset() が検証する。
 function inlineBlock(source, opener) {
   const start = source.indexOf(opener);
   if (start < 0) return "";
@@ -178,32 +175,19 @@ const TRANSLATED_LOCALES = [
   { locale: "zh-CN", opener: '"zh-CN":{' },
 ];
 
-const subTranslationBlock = inlineBlock(html, "var subTranslations={");
-const missingSubTranslations = [];
-for (const { locale, opener } of TRANSLATED_LOCALES) {
-  const localeBlock = inlineBlock(subTranslationBlock, opener);
-  for (const sub of dataset.subcategories) {
-    if (!localeBlock.includes('"' + sub.id + '":[')) missingSubTranslations.push(locale + "/" + sub.id);
-  }
-}
 check(
   "サブカテゴリー名称を英語・簡体中文で全件翻訳",
-  missingSubTranslations.length === 0,
-  "index.html の subTranslations に未定義: " + missingSubTranslations.join(", "),
+  PUBLISHED_LOCALES.every((locale) => dataset.subcategories.every((sub) => {
+    const translated = dataset.locales[locale].subcategories[sub.id];
+    return translated.label && translated.description;
+  })),
 );
-
-const stageTranslationBlock = inlineBlock(html, "var stageTranslations={");
-const missingStageTranslations = [];
-for (const { locale, opener } of TRANSLATED_LOCALES) {
-  const localeBlock = inlineBlock(stageTranslationBlock, opener);
-  for (const stage of dataset.stages) {
-    if (!localeBlock.includes(stage.id + ":[")) missingStageTranslations.push(locale + "/" + stage.id);
-  }
-}
 check(
   "工程名称を英語・簡体中文で全件翻訳",
-  missingStageTranslations.length === 0,
-  "index.html の stageTranslations に未定義: " + missingStageTranslations.join(", "),
+  PUBLISHED_LOCALES.every((locale) => dataset.stages.every((stage) => {
+    const translated = dataset.locales[locale].stages[stage.id];
+    return translated.label && translated.short;
+  })),
 );
 
 const uiStringBlock = inlineBlock(html, "var uiStrings={");
@@ -284,8 +268,8 @@ check(
   "日本語・英語・簡体字中国語を両表示モードで切替",
   ["ja", "en", "zh-CN"].every((language) => html.includes(`data-language="${language}"`)) &&
     html.includes("var uiStrings={") &&
-    html.includes("var stageTranslations={") &&
-    html.includes("var subTranslations={") &&
+    html.includes('translatedText("stages",stage,key)') &&
+    html.includes('translatedText("subcategories",sub,key)') &&
     html.includes("function setLanguage(next)") &&
     html.includes('localStorage.setItem("rareEarthLanguage",language)') &&
     html.includes("document.documentElement.lang=language") &&
@@ -307,7 +291,7 @@ check(
     !html.includes("shortenedLabel(label,16)") &&
     !html.includes("shortenedLabel(stageText(stage,\"short\"),28)"),
 );
-check("接続線は全工程のsrcElsと多言語srcNotesから描画", html.includes("item.srcEls&&item.srcEls[sourceId]") && html.includes("routeText(item,sourceId)") && html.includes("function routeText(target,source)") && html.includes("curve(a.x+a.w,a.y+lane[element],b.x,b.y+lane[element])") && html.includes("width:'+pos.w+'px") && html.includes("width:'+source.w+'px"));
+check("接続線は全工程のsrcElsと多言語srcNotesから描画", html.includes("connect(nodeMap[edge.from],nodeMap[edge.to],edge.elements,routeText(graph.byId.get(edge.to),edge.from))") && html.includes("function routeText(target,source)") && html.includes("curve(a.x+a.w,a.y+lane[element],b.x,b.y+lane[element])") && html.includes("width:'+pos.w+'px") && html.includes("width:'+source.w+'px"));
 check(
   "企業カードと検索は言語別オーバーレイを参照",
   html.includes("function companyText(company,key)") &&
@@ -320,7 +304,7 @@ check(
   "全体では全接続線、分類選択時は全上流・全下流を強調",
   html.includes("function traceLinkedEdges(edges,startId,reader,elementList)") &&
     html.includes("traceLinkedEdges(edges,id,edgeReader,selectedElements)") &&
-    html.includes("allSubs.forEach(function(target){if((target.src||[]).indexOf(selected.id)>=0)"),
+    html.includes("supplyGraphRoutes(graph,id).map(function(edge)"),
 );
 check("工程全体とサブカテゴリーの高さを所属会社数に比例", html.includes("minCardHeight=100,columnGap=8,columnBaseSpan=220,perStageCompany=16.6,perCardScaleCompany=.8,maxColumnSpan=1580") && html.includes("minimumSpan+stageCompanyCount*perCardScaleCompany") && html.includes("columnBaseSpan+stageCompanyCount*perStageCompany") && html.includes("extraHeight*weights[index]/weightTotal") && html.includes(".re-sub-card{width:176px;min-height:100px") && html.includes(".re-card-description{font-size:9.5px") && !html.includes("is-compact .re-card-description{display:none}"));
 check(
@@ -343,7 +327,7 @@ check(
     html.includes('data-view="element-flow"') &&
     html.includes('id="re-element-flow-canvas"') &&
     html.includes("function renderElementFlow()") &&
-    html.includes("target.item.srcEls[sourceId]") &&
+    html.includes("var graph=elementSupplyGraph(flowElement),byStage={}") &&
     html.includes("各カテゴリーに出入りする帯の合計幅は、そのカテゴリーに所属する該当元素企業数に比例します") &&
     html.includes("traceLinkedEdges(edges,flowSelectionId,flowEdgeReader,null)") &&
     html.includes("linkedEdges.has(edge)?' is-linked':'") &&
@@ -362,7 +346,7 @@ check(
     html.includes("countWidth=20+Array.from(meta).length*6.5") &&
     html.includes("var flowOrderByElement={") &&
     html.includes('3:["03_ceramic","03_yag_crystal","03_magneto_garnet","03_dielectric_additive","03_yttria_powder"]') &&
-    html.includes('4:["04_faraday","04_dielectric","04_mag"]') &&
+    html.includes('4:["04_faraday_laser","04_faraday_tele","04_dielectric","04_mag"]') &&
     html.includes('3:["03_magnet_powder","03_magnet_alloy"]') &&
     html.includes('5:["05_am","05_sofc","05_electronics","05_scaln_film","05_tube"]') &&
     html.includes("flowSortIndex(flowElement,stage,a.id,order)-flowSortIndex(flowElement,stage,b.id,order)") &&
