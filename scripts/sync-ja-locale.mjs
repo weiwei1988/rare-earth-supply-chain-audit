@@ -1,15 +1,17 @@
 // 日本語の正規データから、多言語オーバーレイと同じ形の ja.json を同期する。
 // 英語・簡体中文との差分確認用であり、事実データの正本は従来どおり companies.json / subcategories.json。
 import fs from "node:fs/promises";
+import { canonicalGraphLocale } from "./lib/graph-locales.mjs";
 
 const dataDir = new URL("../src/data/", import.meta.url);
 const localeDir = new URL("../src/data/locales/", import.meta.url);
 const COMPANY_TEXT_FIELDS = ["name", "own", "rev", "prod", "pos", "def", "chn", "bom", "gap", "src", "note"];
 
-const [companies, subcategories, dependency] = await Promise.all([
+const [companies, subcategories, dependency, stages] = await Promise.all([
   fs.readFile(new URL("companies.json", dataDir), "utf8").then(JSON.parse),
   fs.readFile(new URL("subcategories.json", dataDir), "utf8").then(JSON.parse),
   fs.readFile(new URL("dependency.json", dataDir), "utf8").then(JSON.parse),
+  fs.readFile(new URL("stages.json", dataDir), "utf8").then(JSON.parse),
 ]);
 
 const overlay = {
@@ -20,9 +22,7 @@ const overlay = {
       .filter((field) => typeof company[field] === "string" && company[field].trim())
       .map((field) => [field, company[field]])),
   ])),
-  routes: Object.fromEntries(subcategories
-    .filter((sub) => sub.srcNotes)
-    .map((sub) => [sub.id, { srcNotes: sub.srcNotes }])),
+  ...canonicalGraphLocale(stages, subcategories),
   dependency: Object.fromEntries(dependency.map((row) => [row.id, {
     quality: row.quality,
     metric: row.metric,
@@ -37,6 +37,7 @@ await fs.writeFile(new URL("ja.json", localeDir), `${JSON.stringify(overlay, nul
 console.log(JSON.stringify({
   locale: overlay.locale,
   companies: Object.keys(overlay.companies).length,
-  routes: Object.keys(overlay.routes).length,
+  stages: Object.keys(overlay.stages).length,
+  subcategories: Object.keys(overlay.subcategories).length,
   dependency: Object.keys(overlay.dependency).length,
 }));

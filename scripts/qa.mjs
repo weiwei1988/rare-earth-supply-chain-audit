@@ -137,13 +137,10 @@ check(
 const translatedRouteCount = dataset.subcategories.filter((sub) => sub.srcNotes).length;
 check(
   "サブカテゴリー間接続説明を3言語で全件収録",
-  ["ja", "en", "zh-CN"].every((locale) => Object.keys(dataset.locales[locale].routes).length === translatedRouteCount),
+  ["ja", "en", "zh-CN"].every((locale) => Object.values(dataset.locales[locale].subcategories).filter((sub) => sub.srcNotes).length === translatedRouteCount),
 );
 
-// --- 画面側の手書きテーブルがJSONを網羅しているか ---------------------------
-// uiStrings / stageTranslations / subTranslations / flowOrderByElement は生成領域の外に
-// 手書きされているため、JSONへ工程・サブカテゴリー・元素を足しても自動では追随しない。
-// 画面側は未定義なら日本語へ黙ってフォールバックするので、ここで網羅を検査する。
+// UI 文言と表示順は画面固有のテーブル。工程・分類翻訳は loadDataset() が検証する。
 function inlineBlock(source, opener) {
   const start = source.indexOf(opener);
   if (start < 0) return "";
@@ -178,32 +175,19 @@ const TRANSLATED_LOCALES = [
   { locale: "zh-CN", opener: '"zh-CN":{' },
 ];
 
-const subTranslationBlock = inlineBlock(html, "var subTranslations={");
-const missingSubTranslations = [];
-for (const { locale, opener } of TRANSLATED_LOCALES) {
-  const localeBlock = inlineBlock(subTranslationBlock, opener);
-  for (const sub of dataset.subcategories) {
-    if (!localeBlock.includes('"' + sub.id + '":[')) missingSubTranslations.push(locale + "/" + sub.id);
-  }
-}
 check(
   "サブカテゴリー名称を英語・簡体中文で全件翻訳",
-  missingSubTranslations.length === 0,
-  "index.html の subTranslations に未定義: " + missingSubTranslations.join(", "),
+  PUBLISHED_LOCALES.every((locale) => dataset.subcategories.every((sub) => {
+    const translated = dataset.locales[locale].subcategories[sub.id];
+    return translated.label && translated.description;
+  })),
 );
-
-const stageTranslationBlock = inlineBlock(html, "var stageTranslations={");
-const missingStageTranslations = [];
-for (const { locale, opener } of TRANSLATED_LOCALES) {
-  const localeBlock = inlineBlock(stageTranslationBlock, opener);
-  for (const stage of dataset.stages) {
-    if (!localeBlock.includes(stage.id + ":[")) missingStageTranslations.push(locale + "/" + stage.id);
-  }
-}
 check(
   "工程名称を英語・簡体中文で全件翻訳",
-  missingStageTranslations.length === 0,
-  "index.html の stageTranslations に未定義: " + missingStageTranslations.join(", "),
+  PUBLISHED_LOCALES.every((locale) => dataset.stages.every((stage) => {
+    const translated = dataset.locales[locale].stages[stage.id];
+    return translated.label && translated.short;
+  })),
 );
 
 const uiStringBlock = inlineBlock(html, "var uiStrings={");
@@ -284,8 +268,8 @@ check(
   "日本語・英語・簡体字中国語を両表示モードで切替",
   ["ja", "en", "zh-CN"].every((language) => html.includes(`data-language="${language}"`)) &&
     html.includes("var uiStrings={") &&
-    html.includes("var stageTranslations={") &&
-    html.includes("var subTranslations={") &&
+    html.includes('translatedText("stages",stage,key)') &&
+    html.includes('translatedText("subcategories",sub,key)') &&
     html.includes("function setLanguage(next)") &&
     html.includes('localStorage.setItem("rareEarthLanguage",language)') &&
     html.includes("document.documentElement.lang=language") &&

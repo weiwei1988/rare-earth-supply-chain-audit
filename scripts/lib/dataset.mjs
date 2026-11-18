@@ -1,6 +1,7 @@
 // src/data/*.json を読み込み、表示用画面とQAが共有する正規化済みデータセットを返す。
 // ここを通らないデータ参照を作らないこと（index.html と JSX の同期はこの1点に依存する）。
 import fs from "node:fs/promises";
+import { canonicalGraphLocale, validateGraphLocale } from "./graph-locales.mjs";
 
 export const ELEMENTS = ["Y", "DyTb", "Sm", "Sc"];
 // 画面側の ev() と同じ正規化。生の評価表記（A- / B+ / C / 参考 など）を A / B / X に畳む。
@@ -232,14 +233,13 @@ export async function loadDataset() {
 
   const localeData = Object.fromEntries(LOCALES.map((locale, index) => [locale, localeRows[index]]));
   const canonicalCompanyById = new Map(companies.map((company) => [company.id, company]));
-  const routeSubcategories = subcategories.filter((sub) => sub.srcNotes);
-  const routeSubcategoryById = new Map(routeSubcategories.map((sub) => [sub.id, sub]));
+  const graphLocale = canonicalGraphLocale(stages, subcategories);
   for (const locale of LOCALES) {
     const overlay = localeData[locale];
     if (!overlay || typeof overlay !== "object" || Array.isArray(overlay)) throw new ValidationError(`${locale} の翻訳データが不正です。`);
     const topKeys = Object.keys(overlay).sort();
-    if (JSON.stringify(topKeys) !== JSON.stringify(["companies", "dependency", "locale", "routes"])) {
-      throw new ValidationError(`${locale} の翻訳データは locale / companies / routes / dependency だけを持つ必要があります。`);
+    if (JSON.stringify(topKeys) !== JSON.stringify(["companies", "dependency", "locale", "stages", "subcategories"])) {
+      throw new ValidationError(`${locale} の翻訳データは locale / companies / stages / subcategories / dependency だけを持つ必要があります。`);
     }
     if (overlay.locale !== locale) throw new ValidationError(`${locale} の locale 値が一致しません: ${overlay.locale}`);
     if (!overlay.companies || typeof overlay.companies !== "object" || Array.isArray(overlay.companies)) {
@@ -274,34 +274,10 @@ export async function loadDataset() {
         }
       }
     }
-    if (!overlay.routes || typeof overlay.routes !== "object" || Array.isArray(overlay.routes)) {
-      throw new ValidationError(`${locale} の routes が不正です。`);
-    }
-    const translatedRouteIds = Object.keys(overlay.routes);
-    const canonicalRouteIds = routeSubcategories.map((sub) => sub.id);
-    const missingRoutes = canonicalRouteIds.filter((id) => !translatedRouteIds.includes(id));
-    const extraRoutes = translatedRouteIds.filter((id) => !routeSubcategoryById.has(id));
-    if (missingRoutes.length || extraRoutes.length) {
-      throw new ValidationError(`${locale} の接続説明IDが正本と一致しません（不足: ${missingRoutes.join(", ") || "なし"} / 余分: ${extraRoutes.join(", ") || "なし"}）。`);
-    }
-    for (const id of canonicalRouteIds) {
-      const translatedRoute = overlay.routes[id];
-      if (!translatedRoute || Object.keys(translatedRoute).length !== 1 || !translatedRoute.srcNotes || typeof translatedRoute.srcNotes !== "object" || Array.isArray(translatedRoute.srcNotes)) {
-        throw new ValidationError(`${locale} の ${id} は srcNotes だけを持つ必要があります。`);
-      }
-      const canonicalNotes = routeSubcategoryById.get(id).srcNotes;
-      const canonicalSources = Object.keys(canonicalNotes);
-      const translatedSources = Object.keys(translatedRoute.srcNotes);
-      const missingSources = canonicalSources.filter((source) => !translatedSources.includes(source));
-      const extraSources = translatedSources.filter((source) => !canonicalSources.includes(source));
-      if (missingSources.length || extraSources.length) {
-        throw new ValidationError(`${locale} の ${id}.srcNotes が正本と一致しません（不足: ${missingSources.join(", ") || "なし"} / 余分: ${extraSources.join(", ") || "なし"}）。`);
-      }
-      for (const source of canonicalSources) {
-        const note = translatedRoute.srcNotes[source];
-        if (typeof note !== "string" || !note.trim()) throw new ValidationError(`${locale} の ${id}.srcNotes.${source} に翻訳文がありません。`);
-        if (locale === "ja" && note !== canonicalNotes[source]) throw new ValidationError(`ja の ${id}.srcNotes.${source} が日本語正本と同期していません。`);
-      }
+    try {
+      validateGraphLocale(overlay, graphLocale, locale);
+    } catch (error) {
+      throw new ValidationError(error.message);
     }
   }
   // 中国依存カード（工程01）の翻訳。見出し・指標・根拠・出典と、構成比の区分名を持つ。

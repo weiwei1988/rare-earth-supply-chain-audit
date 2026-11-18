@@ -195,3 +195,14 @@ npm test
 `npm test`では、生成物の同期、データ構造、企業・分類件数、元素フラグ、工程間接続、多言語データ、クリティカル度の計算・描画・ランキング、公開前のセキュリティ検査をまとめて実行します。
 
 企業や分類を変更する場合は、該当する正本JSONと各言語ロケールを更新してください。新しい接続には対象元素と根拠を記録し、未確認のBOM、調達国、防衛契約、企業関係を推測で確定しないでください。
+
+### 工程・分類の翻訳を更新する
+
+日本語の工程名は `src/data/stages.json`、分類名・説明・接続根拠は `src/data/subcategories.json` が正本です。
+英語・簡体中文は `src/data/locales/en.json` と `zh-CN.json` を編集します。
+`stages[工程ID]` に `label` / `short`、`subcategories[分類ID]` に `label` / `description` / `srcNotes[接続元ID]` をまとめています。
+分類追加時に `src/app/i18n.js` を編集する必要はありません。UI固有のボタン名などは引き続き同ファイルで管理します。
+
+日本語を変更したら `npm run locales:sync-ja`、翻訳更新後は `npm run build` と `npm test` を実行してください。
+ビルドは、翻訳のID・項目・接続元の不足と余分なキー、空の翻訳文、日本語同期漏れを検査します。
+共用の翻訳参照は `i18n.js`、接続説明の組み立てとHTML化は `parts.js`、接続関係の計算は `supply-graph.js` が担当します。
