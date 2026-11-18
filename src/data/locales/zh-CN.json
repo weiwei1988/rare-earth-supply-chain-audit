@@ -2570,7 +2570,7 @@
     },
     "03_yag_crystal": {
       "srcNotes": {
-        "02_compound": "以高纯Y₂O₃作为晶体生长与烧结的原料"
+        "02_compound": "以高纯Y₂O₃、Tb₄O₇作为晶体生长与烧结的原料"
       }
     },
     "03_alsc_semi": {
@@ -2686,7 +2686,7 @@
     "05_laser_osc": {
       "srcNotes": {
         "04_laser_medium": "将激光介质装入振荡器",
-        "04_faraday": "作为振荡器内部的隔离器阻断返回光"
+        "04_faraday_laser": "作为振荡器内部的隔离器阻断返回光"
       }
     },
     "05_scaln_film": {
@@ -2798,17 +2798,22 @@
     },
     "03_magneto_garnet": {
       "srcNotes": {
-        "02_compound": "由高纯Y、Tb氧化物生长YIG、TGG晶体，或在石榴石衬底上以LPE法生长磁光薄膜。"
+        "02_compound": "由高纯Y、Tb、Gd等氧化物，在石榴石衬底上以LPE法生长铋取代磁性石榴石薄膜，或生长YIG单晶"
       }
     },
-    "04_faraday": {
+    "04_faraday_laser": {
       "srcNotes": {
-        "03_magneto_garnet": "将YIG、TGG晶体或磁光薄膜加工为旋转器元件，与偏振器及磁铁组合成激光和光通信用光隔离器。"
+        "03_yag_crystal": "将TGG晶体、透明陶瓷或Tb系玻璃加工为旋转器元件，并与磁体、偏振器组合"
+      }
+    },
+    "04_faraday_tele": {
+      "srcNotes": {
+        "03_magneto_garnet": "将磁性石榴石薄膜、YIG晶体加工为旋转器元件"
       }
     },
     "05_photonics": {
       "srcNotes": {
-        "04_faraday": "将旋转器与偏振片、磁体组合，制成阻断返回半导体激光器的反射光的光部件"
+        "04_faraday_tele": "将旋转器与偏振片、磁体组合，制成阻断返回半导体激光器的反射光的光部件（1310/1550nm）"
       }
     },
     "06_optical_net": {

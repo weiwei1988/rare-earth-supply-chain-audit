@@ -157,20 +157,24 @@ function initResponsiveMap(){
   else window.addEventListener("resize",handleViewportResize)
 }
 
+// 選んだサブカテゴリーの上流・下流の監査済み接続。keep を渡すと、その条件に合う接続だけにする（元素別フロー用）
+function routeRows(id,keep){
+  var rows=[],selected=allSubs.find(function(item){return item.id===id});
+  if(!selected)return rows;
+  (selected.src||[]).forEach(function(source){rows.push({from:source,to:selected.id,elements:selected.srcEls[source],note:routeText(selected,source)})});
+  allSubs.forEach(function(target){if((target.src||[]).indexOf(selected.id)>=0)rows.push({from:selected.id,to:target.id,elements:target.srcEls[selected.id],note:routeText(target,selected.id)})});
+  return keep?rows.filter(keep):rows
+}
+function routeRowsHtml(rows){
+  return'<div class="re-route-note-title">'+esc(tr("routeTitle",{count:rows.length}))+'</div>'+rows.map(function(row){return'<div class="re-route-row"><span class="re-route-pair">'+esc(subLabel(row.from))+' → '+esc(subLabel(row.to))+'</span><span class="re-route-elements">'+tagsHtml(row.elements)+'</span><span>'+esc(row.note)+'</span></div>'}).join("")
+}
 function renderRouteNote(){
-  var holder=root.querySelector("#re-route-note"),rows=[];
-  if(selection.type==="sub"){
-    var selected=allSubs.find(function(item){return item.id===selection.id});
-    if(selected){
-      (selected.src||[]).forEach(function(source){rows.push({from:source,to:selected.id,elements:selected.srcEls[source],note:routeText(selected,source)})});
-      allSubs.forEach(function(target){if((target.src||[]).indexOf(selected.id)>=0)rows.push({from:selected.id,to:target.id,elements:target.srcEls[selected.id],note:routeText(target,selected.id)})})
-    }
-  }
+  var holder=root.querySelector("#re-route-note"),rows=selection.type==="sub"?routeRows(selection.id):[];
   if(!rows.length){
     holder.innerHTML='<div class="re-route-note-title">END-TO-END ROUTE TRACE</div>'+esc(tr("routeDefault"));
     return
   }
-  holder.innerHTML='<div class="re-route-note-title">'+esc(tr("routeTitle",{count:rows.length}))+'</div>'+rows.map(function(row){return'<div class="re-route-row"><span class="re-route-pair">'+esc(subLabel(row.from))+' → '+esc(subLabel(row.to))+'</span><span class="re-route-elements">'+tagsHtml(row.elements)+'</span><span>'+esc(row.note)+'</span></div>'}).join("")
+  holder.innerHTML=routeRowsHtml(rows)
 }
 
 // 全体像のシェア根拠は、選んでいるサブカテゴリーと元素フィルターで絞る

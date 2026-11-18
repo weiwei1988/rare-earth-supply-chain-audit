@@ -17,7 +17,7 @@ test('production matrix and ranking render in all locales with shared flow score
  vm.createContext(s);for(const file of ['text','model','parts','criticality'])vm.runInContext(fs.readFileSync(new URL('../src/app/'+file+'.js',import.meta.url),'utf8'),s);
  for(const language of ['ja','en','zh-CN']){s.language=language;s.renderCriticality();assert.match(nodes.get('#re-view-criticality').innerHTML,/data-cr-key/);assert.match(nodes.get('#re-cr-selection').innerHTML,/re-cr-facts/);assert.ok(nodes.get('#re-cr-companies').innerHTML.includes('data-cr-company'));}
  for(const sort of ['score','down','share']){const ranked=s.crSorted(sort);const key=sort==='down'?'downstream':sort==='share'?'level':'score';assert.ok(ranked.every((p,i)=>!i||ranked[i-1][key]>=p[key]));}
- assert.equal(s.crPoints().length,60);assert.equal(s.criticalityPoint('02_compound','Y').score,s.crPoints().find(p=>p.node==='02_compound'&&p.element==='Y').score);
+ assert.equal(s.crPoints().length,62);assert.equal(s.criticalityPoint('02_compound','Y').score,s.crPoints().find(p=>p.node==='02_compound'&&p.element==='Y').score);
 });
 test('シェア根拠は呼び出し元が渡した条件だけで決まる（別画面の選択が混ざらない）',()=>{
  const read=name=>JSON.parse(fs.readFileSync(new URL('../src/data/'+name+'.json',import.meta.url),'utf8'));
@@ -36,6 +36,6 @@ test('シェア根拠は呼び出し元が渡した条件だけで決まる（�
   assert.equal(s.shareRows(company,overview).length,baseline);
  }
  // 条件を変えれば、その範囲だけに絞られる
- assert.deepEqual(s.shareRows(company,{node:'04_faraday',elements:['Y']}).map(r=>r.node+'|'+r.element),['04_faraday|Y']);
- assert.equal(s.shareRows(company,{node:'04_faraday',elements}).length,2);
+ assert.deepEqual(s.shareRows(company,{node:'04_faraday_tele',elements:['Y']}).map(r=>r.node+'|'+r.element),['04_faraday_tele|Y']);
+ assert.equal(s.shareRows(company,{node:'04_faraday_tele',elements}).length,2);
 });

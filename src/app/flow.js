@@ -136,6 +136,19 @@ function renderElementFlow(){
     node.addEventListener("keydown",function(event){if(event.key==="Enter"||event.key===" "){event.preventDefault();openNode(node.dataset.flowNode)}})
   })
 }
+// 選んだ工程の前後の接続根拠。図に描いている線（その元素が流れ、両端に該当企業がいる接続）だけを出す
+function flowDrawsSub(id){
+  var sub=allSubs.find(function(item){return item.id===id});
+  return!!sub&&sub.els.indexOf(flowElement)>=0&&flowCompanyCount(id,flowElement)>0
+}
+function renderFlowRouteNote(){
+  var holder=root.querySelector("#re-flow-route-note");
+  var rows=flowSelectionId===FLOW_SOURCE_ID?[]:routeRows(flowSelectionId,function(row){
+    return(row.elements||[]).indexOf(flowElement)>=0&&flowDrawsSub(row.from)&&flowDrawsSub(row.to)
+  });
+  holder.hidden=!rows.length;
+  holder.innerHTML=rows.length?routeRowsHtml(rows):""
+}
 // 元素別フローのシェア根拠は、選んでいる工程とその元素で絞る
 function flowShareScope(){return{node:flowSelectionId,elements:[flowElement]}}
 function renderFlowCompanyResults(){
@@ -143,6 +156,7 @@ function renderFlowCompanyResults(){
   var main=section.querySelector(".re-main");
   if(!flowSelectionId){section.hidden=true;return}
   section.hidden=false;
+  renderFlowRouteNote();
   // 海外の起点には国内企業がないため、全体像の STAGE 01 と同じ中国依存カードを出す。
   if(flowSelectionId===FLOW_SOURCE_ID){
     main.classList.add("is-dependency");

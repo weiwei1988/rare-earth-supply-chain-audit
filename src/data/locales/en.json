@@ -2570,7 +2570,7 @@
     },
     "03_yag_crystal": {
       "srcNotes": {
-        "02_compound": "Use high-purity Y₂O₃ as feedstock for crystal growth and sintering"
+        "02_compound": "Use high-purity Y₂O₃ and Tb₄O₇ as feedstock for crystal growth and sintering"
       }
     },
     "03_alsc_semi": {
@@ -2686,7 +2686,7 @@
     "05_laser_osc": {
       "srcNotes": {
         "04_laser_medium": "Integrate gain media into oscillators",
-        "04_faraday": "Block back-reflected light as the isolator inside the oscillator"
+        "04_faraday_laser": "Block back-reflected light as the isolator inside the oscillator"
       }
     },
     "05_scaln_film": {
@@ -2798,17 +2798,22 @@
     },
     "03_magneto_garnet": {
       "srcNotes": {
-        "02_compound": "Grow YIG/TGG crystals from high-purity Y/Tb oxides, or grow magneto-optic films on garnet substrates by LPE."
+        "02_compound": "Grow bismuth-substituted magnetic garnet films by LPE on garnet substrates, or grow YIG single crystals, from high-purity Y, Tb, Gd and other oxides"
       }
     },
-    "04_faraday": {
+    "04_faraday_laser": {
       "srcNotes": {
-        "03_magneto_garnet": "Process YIG/TGG crystals or magneto-optic films into rotators and combine with polarizers and magnets for laser and communications optical isolators."
+        "03_yag_crystal": "Process TGG crystals, transparent ceramics and Tb-based glass into rotator elements and combine them with magnets and polarisers"
+      }
+    },
+    "04_faraday_tele": {
+      "srcNotes": {
+        "03_magneto_garnet": "Process magnetic garnet films and YIG crystals into rotator elements"
       }
     },
     "05_photonics": {
       "srcNotes": {
-        "04_faraday": "Combine rotators with polarisers and magnets into components that block light reflected back into semiconductor lasers"
+        "04_faraday_tele": "Combine rotators with polarisers and magnets into components that block light reflected back into semiconductor lasers (1310/1550 nm)"
       }
     },
     "06_optical_net": {

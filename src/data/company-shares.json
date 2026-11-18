@@ -880,7 +880,7 @@
   {
    "company": "seed-10",
    "name": "神島化学工業",
-   "node": "03_magneto_garnet",
+   "node": "03_yag_crystal",
    "els": [
     "DyTb"
    ],
@@ -912,7 +912,7 @@
    "els": [
     "Y"
    ],
-   "product": "TGG 単結晶と LPE 育成の Bi:RIG",
+   "product": "LPE 育成の Bi 置換希土類鉄ガーネット（Bi:RIG）",
    "level": 1,
    "share": "公開情報でシェアを確認できていない",
    "scope": "",
@@ -922,12 +922,12 @@
    "note": "同社の公表シェア（波長変換単結晶95%以上、深紫外レーザー30%以上）はいずれも半導体ウェハ検査装置向けの別分類で、磁気光学単結晶には当てられない。",
    "i18n": {
     "en": {
-     "product": "TGG single crystals and LPE-grown Bi:RIG",
+     "product": "LPE-grown bismuth-substituted rare-earth iron garnet (Bi:RIG)",
      "share": "No share could be confirmed in public sources",
      "note": "The shares the company does publish (over 95% in wavelength-conversion single crystals, over 30% in deep-ultraviolet lasers) both belong to a different classification aimed at semiconductor wafer inspection equipment and cannot be applied to magneto-optical single crystals."
     },
     "zh-CN": {
-     "product": "TGG单晶与LPE生长的Bi:RIG",
+     "product": "LPE法生长的铋取代稀土铁石榴石（Bi:RIG）",
      "share": "公开信息中无法确认份额",
      "note": "该公司公布的份额（波长转换单晶95%以上、深紫外激光30%以上）均属于面向半导体晶圆检测设备的其他分类，无法适用于磁光单晶。"
     }
@@ -940,7 +940,35 @@
    "els": [
     "DyTb"
    ],
-   "product": "TGG 単結晶と LPE 育成の Bi:RIG",
+   "product": "LPE 育成の Bi 置換希土類鉄ガーネット（Bi:RIG）",
+   "level": 1,
+   "share": "公開情報でシェアを確認できていない",
+   "scope": "",
+   "basis": "公開情報",
+   "source": "https://www.opt-oxide.com/ir/meeting/meeting26_review/",
+   "sourceLabel": "オキサイド IR 決算説明（2026年11月確認）",
+   "note": "Bi:RIG の希土類の内訳は非開示（通信用は Tb を共置換するのが一般的）。同社が公表するシェアは波長変換単結晶と深紫外レーザーのみ。",
+   "i18n": {
+    "en": {
+     "product": "LPE-grown bismuth-substituted rare-earth iron garnet (Bi:RIG)",
+     "share": "No share could be confirmed in public sources",
+     "note": "The rare-earth composition of its Bi:RIG is not disclosed (Tb co-substitution is common in telecom grades). The only shares the company publishes are for wavelength-conversion crystals and deep-UV lasers."
+    },
+    "zh-CN": {
+     "product": "LPE法生长的铋取代稀土铁石榴石（Bi:RIG）",
+     "share": "公开信息中无法确认份额",
+     "note": "其Bi:RIG的稀土构成未公开（通信用产品通常共取代Tb）。该公司公布的份额仅限于波长转换单晶和深紫外激光器。"
+    }
+   }
+  },
+  {
+   "company": "seed-12",
+   "name": "オキサイド",
+   "node": "03_yag_crystal",
+   "els": [
+    "DyTb"
+   ],
+   "product": "TGG（Tb₃Ga₅O₁₂）単結晶",
    "level": 1,
    "share": "公開情報でシェアを確認できていない",
    "scope": "",
@@ -950,14 +978,14 @@
    "note": "TGGはTb系材料だが、同社が公表するシェアは波長変換単結晶と深紫外レーザーのみ。",
    "i18n": {
     "en": {
-     "product": "TGG single crystals and LPE-grown Bi:RIG",
+     "product": "TGG (Tb₃Ga₅O₁₂) single crystals",
      "share": "No share could be confirmed in public sources",
-     "note": "TGG is a Tb-based material, but the only shares the company publishes are for wavelength-conversion single crystals and deep-ultraviolet lasers."
+     "note": "TGG is a Tb-based material, but the only shares the company publishes are for wavelength-conversion crystals and deep-UV lasers."
     },
     "zh-CN": {
-     "product": "TGG单晶与LPE生长的Bi:RIG",
+     "product": "TGG（Tb₃Ga₅O₁₂）单晶",
      "share": "公开信息中无法确认份额",
-     "note": "TGG属Tb系材料，但该公司公布的份额仅限波长转换单晶与深紫外激光。"
+     "note": "TGG属于Tb系材料，但该公司公布的份额仅限于波长转换单晶和深紫外激光器。"
     }
    }
   },
@@ -1068,34 +1096,6 @@
     "zh-CN": {
      "product": "YIG单晶（光学浮区熔融法）",
      "share": "公开信息中无法确认份额"
-    }
-   }
-  },
-  {
-   "company": "optics-smmp",
-   "name": "SMMプレシジョン",
-   "node": "03_magneto_garnet",
-   "els": [
-    "Y"
-   ],
-   "product": "SGGG 基板",
-   "level": 1,
-   "share": "公開情報でシェアを確認できていない",
-   "scope": "",
-   "basis": "公開情報",
-   "source": "https://www.smm.co.jp/business/material/products/optical_isolator/",
-   "sourceLabel": "住友金属鉱山 光アイソレータ用材料 製品ページ（2026年11月確認）",
-   "note": "住友金属鉱山グループ会社。親会社はFRで世界トップシェアのグラノプトにも51%出資するが、SGGG基板自体のシェアは別途確認できていないため、グラノプトのシェアは当てていない。",
-   "i18n": {
-    "en": {
-     "product": "SGGG substrates",
-     "share": "No share could be confirmed in public sources",
-     "note": "A Sumitomo Metal Mining group company. The parent also holds 51% of Granopt, which leads the world in Faraday rotators, but the share for SGGG substrates themselves could not be confirmed separately, so Granopt's share has not been applied here."
-    },
-    "zh-CN": {
-     "product": "SGGG基板",
-     "share": "公开信息中无法确认份额",
-     "note": "住友金属矿山集团公司。母公司亦对在法拉第旋转器上居全球首位的Granopt出资51%，但SGGG基板本身的份额无法另行确认，故未适用Granopt的份额。"
     }
    }
   },
@@ -1663,7 +1663,7 @@
   {
    "company": "faraday-granopt",
    "name": "グラノプト",
-   "node": "04_faraday",
+   "node": "04_faraday_tele",
    "els": [
     "Y"
    ],
@@ -1691,7 +1691,7 @@
   {
    "company": "faraday-granopt",
    "name": "グラノプト",
-   "node": "04_faraday",
+   "node": "04_faraday_tele",
    "els": [
     "DyTb"
    ],
@@ -1719,11 +1719,11 @@
   {
    "company": "faraday-kohoku",
    "name": "湖北工業",
-   "node": "04_faraday",
+   "node": "04_faraday_tele",
    "els": [
     "Y"
    ],
-   "product": "ファラデー回転子（光通信1550/1310nm、産業用レーザー1064/1030nm、2000nm帯）",
+   "product": "ファラデー回転子（光通信 1550／1310nm、2000nm 帯）",
    "level": 4,
    "share": "光アイソレータ（金額ベース）で世界シェア50%と自社IR資料が明記",
    "scope": "世界",
@@ -1733,12 +1733,12 @@
    "note": "海底光ファイバ通信ケーブル用デバイスを中心とする光アイソレータの金額ベース世界シェア。ファラデー回転子は結晶育成・加工から素子づくり・精密組立まで自社一貫。",
    "i18n": {
     "en": {
-     "product": "Faraday rotators (optical communications 1550/1310 nm, industrial lasers 1064/1030 nm, 2000 nm band)",
+     "product": "Faraday rotators (optical communications 1550/1310 nm, 2000 nm band)",
      "share": "Its own IR material states a 50% world share in optical isolators by value",
      "note": "This is the world share by value for optical isolators, centred on devices for submarine optical-fibre cable. Faraday rotators are made in house throughout, from crystal growth and finishing to element fabrication and precision assembly."
     },
     "zh-CN": {
-     "product": "法拉第旋转器（光通信1550/1310nm、工业激光1064/1030nm、2000nm波段）",
+     "product": "法拉第旋转器（光通信1550/1310nm、2000nm波段）",
      "share": "公司IR资料明确记载光隔离器（金额基准）全球份额50%",
      "note": "这是以海底光纤通信电缆用器件为中心的光隔离器的金额基准全球份额。法拉第旋转器从晶体生长、加工到器件制作与精密组装均为自社一贯。"
     }
@@ -1747,11 +1747,11 @@
   {
    "company": "faraday-kohoku",
    "name": "湖北工業",
-   "node": "04_faraday",
+   "node": "04_faraday_tele",
    "els": [
     "DyTb"
    ],
-   "product": "ファラデー回転子（光通信1550/1310nm、産業用レーザー1064/1030nm、2000nm帯）",
+   "product": "ファラデー回転子（光通信 1550／1310nm、2000nm 帯）",
    "level": 4,
    "share": "光アイソレータ（金額ベース）で世界シェア50%と自社IR資料が明記",
    "scope": "世界",
@@ -1761,21 +1761,49 @@
    "note": "磁気光学膜の組成（Tb置換の有無）は非開示だが、ファラデー回転子用の磁気光学材料を自社で組成設計・育成している点はIR資料に明記されている。",
    "i18n": {
     "en": {
-     "product": "Faraday rotators (optical communications 1550/1310 nm, industrial lasers 1064/1030 nm, 2000 nm band)",
+     "product": "Faraday rotators (optical communications 1550/1310 nm, 2000 nm band)",
      "share": "Its own IR material states a 50% world share in optical isolators by value",
      "note": "The composition of the magneto-optical film (whether it uses Tb substitution) is not disclosed, but the IR material does state that the company designs and grows the magneto-optical material for its Faraday rotators in house."
     },
     "zh-CN": {
-     "product": "法拉第旋转器（光通信1550/1310nm、工业激光1064/1030nm、2000nm波段）",
+     "product": "法拉第旋转器（光通信1550/1310nm、2000nm波段）",
      "share": "公司IR资料明确记载光隔离器（金额基准）全球份额50%",
      "note": "磁光膜的组成（是否含Tb置换）未公开，但IR资料明确载明其自行进行法拉第旋转器用磁光材料的组成设计与生长。"
     }
    }
   },
   {
+   "company": "faraday-kohoku",
+   "name": "湖北工業",
+   "node": "04_faraday_laser",
+   "els": [
+    "DyTb"
+   ],
+   "product": "産業用レーザー向けファラデー回転子（1064／1030nm）",
+   "level": 1,
+   "share": "公開情報でシェアを確認できていない",
+   "scope": "",
+   "basis": "公開情報",
+   "source": "https://www.kohokukogyo.co.jp/assets/doc/ir/20251128_mufg_ir_seminar.pdf",
+   "sourceLabel": "湖北工業 MUFG IRセミナー説明資料 2025年11月28日（2026年11月確認）",
+   "note": "自社 IR の「光アイソレータ世界シェア50%」は通信用を主とする全体の数値で、レーザー用に限った値は開示がない。",
+   "i18n": {
+    "en": {
+     "product": "Faraday rotators for industrial lasers (1064/1030 nm)",
+     "share": "No share could be confirmed in public sources",
+     "note": "The 50% world share in optical isolators in its IR material covers the whole business, mainly communications; no figure is disclosed for laser isolators alone."
+    },
+    "zh-CN": {
+     "product": "工业激光用法拉第旋转器（1064/1030nm）",
+     "share": "公开信息中无法确认份额",
+     "note": "公司IR资料中的\"光隔离器全球份额50%\"是以通信用为主的整体数值，未公开仅限激光用途的数值。"
+    }
+   }
+  },
+  {
    "company": "seed-3",
    "name": "信越化学工業",
-   "node": "04_faraday",
+   "node": "04_faraday_tele",
    "els": [
     "Y"
    ],
@@ -1803,7 +1831,7 @@
   {
    "company": "seed-3",
    "name": "信越化学工業",
-   "node": "04_faraday",
+   "node": "04_faraday_tele",
    "els": [
     "DyTb"
    ],
@@ -1829,7 +1857,7 @@
   {
    "company": "seed-11",
    "name": "信光社",
-   "node": "04_faraday",
+   "node": "04_faraday_laser",
    "els": [
     "DyTb"
    ],
@@ -1857,7 +1885,7 @@
   {
    "company": "seed-12",
    "name": "オキサイド",
-   "node": "04_faraday",
+   "node": "04_faraday_tele",
    "els": [
     "DyTb"
    ],
@@ -1885,7 +1913,35 @@
   {
    "company": "faraday-neg",
    "name": "日本電気硝子",
-   "node": "04_faraday",
+   "node": "03_yag_crystal",
+   "els": [
+    "DyTb"
+   ],
+   "product": "Tb 系磁気光学ガラス（自社開発）",
+   "level": 1,
+   "share": "公開情報でシェアを確認できていない",
+   "scope": "",
+   "basis": "公開情報",
+   "source": "https://www.neg.co.jp/products/optical-isolator/index.html",
+   "sourceLabel": "日本電気硝子 光アイソレーター 製品ページ（2026年11月確認）",
+   "note": "「世界最小レベル」は高出力ファイバー型の小型化に関する比較表現で、シェアではない。",
+   "i18n": {
+    "en": {
+     "product": "Tb-based magneto-optical glass (developed in house)",
+     "share": "No share could be confirmed in public sources",
+     "note": "\"World's smallest class\" is a comparative statement about miniaturising the high-power fibre type, not a share."
+    },
+    "zh-CN": {
+     "product": "Tb系磁光玻璃（自主开发）",
+     "share": "公开信息中无法确认份额",
+     "note": "\"世界最小级别\"是关于高功率光纤型小型化的比较表述，并非份额。"
+    }
+   }
+  },
+  {
+   "company": "faraday-neg",
+   "name": "日本電気硝子",
+   "node": "04_faraday_laser",
    "els": [
     "DyTb"
    ],
@@ -1913,7 +1969,7 @@
   {
    "company": "faraday-kogaku-giken",
    "name": "光学技研",
-   "node": "04_faraday",
+   "node": "04_faraday_tele",
    "els": [
     "Y"
    ],
@@ -1941,7 +1997,7 @@
   {
    "company": "faraday-kogaku-giken",
    "name": "光学技研",
-   "node": "04_faraday",
+   "node": "04_faraday_tele",
    "els": [
     "DyTb"
    ],
@@ -1963,6 +2019,34 @@
      "product": "法拉第旋转器",
      "share": "公开信息中无法确认份额",
      "note": "器件材料仅记为\"磁性石榴石晶体\"，公开信息无法确定是否使用Tb系材料。"
+    }
+   }
+  },
+  {
+   "company": "faraday-kogaku-giken",
+   "name": "光学技研",
+   "node": "04_faraday_laser",
+   "els": [
+    "DyTb"
+   ],
+   "product": "1064nm 高光耐力の光アイソレータ・ファラデーローテーター",
+   "level": 1,
+   "share": "公開情報でシェアを確認できていない",
+   "scope": "",
+   "basis": "公開情報",
+   "source": "https://www.kogakugiken.co.jp/products/isolator02.html",
+   "sourceLabel": "光学技研 大口径光アイソレーター・ファラデーローテーター 製品ページ（2026年11月確認）",
+   "note": "1064nm 用素子の材料は非開示。鉄ガーネットは 1μm 帯で不透明なため、この波長の素子は TGG などの Tb 系材料とみて Dy・Tb を付けた。",
+   "i18n": {
+    "en": {
+     "product": "High-damage-threshold 1064 nm optical isolators and Faraday rotators",
+     "share": "No share could be confirmed in public sources",
+     "note": "The material of its 1064 nm elements is not disclosed. Iron garnets are opaque in the 1 μm band, so elements for this wavelength are taken to be Tb-based materials such as TGG, and Dy/Tb is flagged."
+    },
+    "zh-CN": {
+     "product": "1064nm高光损伤阈值光隔离器与法拉第旋转器",
+     "share": "公开信息中无法确认份额",
+     "note": "1064nm用元件的材料未公开。铁石榴石在1μm波段不透明，因此将该波长的元件视为TGG等Tb系材料，并标注Dy・Tb。"
     }
    }
   },

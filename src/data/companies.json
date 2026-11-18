@@ -151,7 +151,7 @@
       "03_yag_crystal",
       "03_yttria_powder",
       "03_magneto_garnet",
-      "04_faraday"
+      "04_faraday_tele"
     ],
     "subEls": {
       "02_compound": [
@@ -188,7 +188,7 @@
         "Y",
         "DyTb"
       ],
-      "04_faraday": [
+      "04_faraday_tele": [
         "Y",
         "DyTb"
       ]
@@ -396,14 +396,11 @@
     ],
     "subs": [
       "03_yag_crystal",
-      "03_magneto_garnet",
       "04_laser_medium"
     ],
     "subEls": {
       "03_yag_crystal": [
-        "Y"
-      ],
-      "03_magneto_garnet": [
+        "Y",
         "DyTb"
       ],
       "04_laser_medium": [
@@ -431,14 +428,12 @@
     "jsx": "信光社",
     "stages": [
       3,
-      4,
-      5
+      4
     ],
     "subs": [
       "03_yag_crystal",
       "04_laser_medium",
-      "04_faraday",
-      "05_photonics"
+      "04_faraday_laser"
     ],
     "subEls": {
       "03_yag_crystal": [
@@ -447,10 +442,7 @@
       "04_laser_medium": [
         "Y"
       ],
-      "04_faraday": [
-        "DyTb"
-      ],
-      "05_photonics": [
+      "04_faraday_laser": [
         "DyTb"
       ]
     },
@@ -480,19 +472,23 @@
     ],
     "subs": [
       "05_laser_osc",
-      "04_faraday",
-      "03_magneto_garnet"
+      "04_faraday_tele",
+      "03_magneto_garnet",
+      "03_yag_crystal"
     ],
     "subEls": {
       "05_laser_osc": [
         "Y",
         "DyTb"
       ],
-      "04_faraday": [
-        "DyTb"
-      ],
       "03_magneto_garnet": [
         "Y",
+        "DyTb"
+      ],
+      "04_faraday_tele": [
+        "DyTb"
+      ],
+      "03_yag_crystal": [
         "DyTb"
       ]
     },
@@ -8587,14 +8583,14 @@
     "jsx": "グラノプト",
     "subs": [
       "03_magneto_garnet",
-      "04_faraday"
+      "04_faraday_tele"
     ],
     "subEls": {
       "03_magneto_garnet": [
         "Y",
         "DyTb"
       ],
-      "04_faraday": [
+      "04_faraday_tele": [
         "Y",
         "DyTb"
       ]
@@ -8624,20 +8620,24 @@
     "jsx": "湖北工業",
     "subs": [
       "03_magneto_garnet",
-      "04_faraday",
-      "05_photonics"
+      "04_faraday_tele",
+      "05_photonics",
+      "04_faraday_laser"
     ],
     "subEls": {
       "03_magneto_garnet": [
         "Y",
         "DyTb"
       ],
-      "04_faraday": [
+      "05_photonics": [
         "Y",
         "DyTb"
       ],
-      "05_photonics": [
+      "04_faraday_tele": [
         "Y",
+        "DyTb"
+      ],
+      "04_faraday_laser": [
         "DyTb"
       ]
     },
@@ -8666,14 +8666,14 @@
     "name": "日本電気硝子",
     "jsx": "日本電気硝子",
     "subs": [
-      "04_faraday",
-      "05_photonics"
+      "03_yag_crystal",
+      "04_faraday_laser"
     ],
     "subEls": {
-      "04_faraday": [
+      "04_faraday_laser": [
         "DyTb"
       ],
-      "05_photonics": [
+      "03_yag_crystal": [
         "DyTb"
       ]
     },
@@ -8691,8 +8691,8 @@
     "src": "https://www.neg.co.jp/products/optical-isolator/index.html ／ https://www.neg.co.jp/news/20250326.html ／ https://eetimes.itmedia.co.jp/ee/articles/2503/28/news005.html",
     "note": "FM-02 は Tb 含有量60mol%以上で、ベルデ定数は TGG 単結晶の1.7倍と自社公表。2025年3月に別組成で110×110mm の大型素子を発表。本社は滋賀県大津市。ファラデー素子・アイソレータの製造工場は非開示。単結晶ではなくガラスで磁気光学素子を作る国内では例の少ない経路",
     "stages": [
-      4,
-      5
+      3,
+      4
     ]
   },
   {
@@ -8700,16 +8700,20 @@
     "name": "光学技研",
     "jsx": "光学技研",
     "subs": [
-      "04_faraday",
-      "05_photonics"
+      "04_faraday_tele",
+      "05_photonics",
+      "04_faraday_laser"
     ],
     "subEls": {
-      "04_faraday": [
+      "05_photonics": [
         "Y",
         "DyTb"
       ],
-      "05_photonics": [
+      "04_faraday_tele": [
         "Y",
+        "DyTb"
+      ],
+      "04_faraday_laser": [
         "DyTb"
       ]
     },
@@ -8961,17 +8965,12 @@
     "id": "optics-smmp",
     "name": "SMMプレシジョン",
     "stages": [
-      3,
       5
     ],
     "subs": [
-      "03_magneto_garnet",
       "05_photonics"
     ],
     "subEls": {
-      "03_magneto_garnet": [
-        "Y"
-      ],
       "05_photonics": [
         "Y",
         "DyTb"

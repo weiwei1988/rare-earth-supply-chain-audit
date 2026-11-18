@@ -76,14 +76,14 @@ var flowOrderByElement={
   Y:{
     2:["02_compound","02_recycle"],
     3:["03_ceramic","03_yag_crystal","03_magneto_garnet","03_dielectric_additive","03_yttria_powder"],
-    4:["04_tbc_spray","04_elec","04_media","04_laser_medium","04_faraday","04_dielectric","04_plasma_spray","04_ods"],
+    4:["04_tbc_spray","04_elec","04_media","04_laser_medium","04_faraday_tele","04_dielectric","04_plasma_spray","04_ods"],
     5:["05_tbc","05_sofc","05_laser_osc","05_electronics","05_photonics","05_plasma_parts","05_cladding"],
     6:["06_engine","06_energy","06_unmanned","06_laser","06_aircraft","06_launch","06_space","06_radar","06_rf_sensor","06_guidance","06_naval","06_comm","06_optical_net","06_semi","06_nuclear"]
   },
   DyTb:{
     2:["02_compound","02_recycle","02_metal"],
-    3:["03_magneto_garnet","03_dielectric_additive","03_magnet_alloy","03_magnet_powder"],
-    4:["04_faraday","04_dielectric","04_mag"],
+    3:["03_yag_crystal","03_magneto_garnet","03_dielectric_additive","03_magnet_alloy","03_magnet_powder"],
+    4:["04_faraday_laser","04_faraday_tele","04_dielectric","04_mag"],
     5:["05_laser_osc","05_photonics","05_electronics","05_motor"],
     6:["06_laser","06_optical_net","06_comm","06_guidance","06_naval","06_space","06_aircraft","06_unmanned","06_launch","06_radar","06_energy"]
   },
