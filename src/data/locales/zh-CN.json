@@ -20,8 +20,8 @@
       "pos": "日本国内Y系分离精炼的源头。能处理全部稀土元素的日本国内稀缺节点",
       "def": "耐等离子体、TBC、激光、磁体的上游。面向国防电子和航天用半导体",
       "chn": "中至高。需确认原料的中国原产比例、非中国、回收再利用原料、库存月数。",
-      "src": "JSX ／ Y DD ／ DyTb DD ／ Sm DD ／ https://em.mitsui-kinzoku.com/products/applications/electronics/mlcc/ ／ https://em.mitsui-kinzoku.com/rare-material/products/oxide-rare-earth-compounds/",
-      "note": "按法人而非事业部单位收录。营收条件属例外"
+      "src": "JSX ／ Y DD ／ DyTb DD ／ Sm DD ／ https://em.mitsui-kinzoku.com/products/applications/electronics/mlcc/ ／ https://em.mitsui-kinzoku.com/rare-material/products/oxide-rare-earth-compounds/ ／ https://www.recycle-ken.or.jp/activite/rareearth.html",
+      "note": "按法人而非事业部单位收录。营收条件属例外 ／ 2026-11-20：在福冈县合作项目中（与原日本钇共同参与）从废荧光灯管的荧光体中溶解、萃取、精制稀土，回收对象的绿色荧光体含Tb，因此在再资源化中加入Dy、Tb。Tb回收量未公开。"
     },
     "seed-2": {
       "name": "三德（Proterial Magnetics旗下）",
@@ -38,12 +38,12 @@
       "name": "信越化学工业",
       "own": "上市公司 / 信越化学工业株式会社（东京证券交易所Prime，证券代码4063）。稀土的分离精炼和磁体由武生工厂（福井县越前市）承担，磁体合金由信越（长汀）科技（中国福建省，年产3,000吨）承担，分离精炼和烧结磁体由信越磁性材料越南公司（海防，磁体年产2,200吨）承担",
       "rev": "合并营业收入25,739亿日元，其中电子材料 10,157亿日元（2026年3月财年）。稀土磁体包含在电子材料业务中",
-      "prod": "稀土的分离精炼（氧化物纯度3N～6N。从数十纳米的微粉到热喷涂用的大粒径粉 QU·PQ 类型。另有氢氧化物·氟化物·复合氧化物）；耐等离子体涂层用的Y₂O₃·YOF热喷涂材料；钕磁体N系列（通过晶界扩散减少Dy·Tb的高矫顽力产品）；钐磁体R系列（Sm₂Co₁₇）；磁体合金；以及从磁体磨削粉和废旧HDD·电机中回收再利用",
+      "prod": "稀土的分离精炼（氧化物纯度3N～6N。从数十纳米的微粉到热喷涂用的大粒径粉 QU·PQ 类型。另有氢氧化物·氟化物·复合氧化物）；耐等离子体涂层用的Y₂O₃·YOF热喷涂材料；钕磁体N系列（通过晶界扩散减少Dy·Tb的高矫顽力产品）；钐磁体R系列（Sm₂Co₁₇）；磁体合金；以及从磁体磨削粉和废旧HDD·电机中回收再利用；法拉第旋转器与光隔离器（通信波长用，以及1μm波段高功率光纤激光器用）",
       "pos": "在日本国内屈指可数地实现从稀土分离精炼到合金、磁体的一体化生产，磁体产能居日本国内前列。Sm₂Co₁₇磁体领先同业率先量产，用于高温和航天领域。2026年6月宣布在福井县新建时隔18年的分离精炼工厂，投资规模350亿日元（其中175亿日元为政府补助），以提升日本国内的冶炼能力。在越南则实现分离精炼与烧结磁体的一体化生产",
       "def": "耐高温的Sm系磁体用于航空航天，Y₂O₃热喷涂材料用于半导体制造设备的耐等离子体涂层，磁体则连接到电机、执行器和国防电子元件。面向国防的直接供货未披露",
       "chn": "磁体合金的一部分在中国（福建省）生产。Dy、Tb等重稀土对中国依赖度高，公司正在推进从磨削粉（磁体加工中约产生两成）和废旧HDD、电机中回收，并确保中国以外的原料。企业自身的使用量和供应商未披露。",
-      "src": "JSX ／ Y DD ／ DyTb DD ／ Sm DD ／ https://www.rare-earth.jp/product.html ／ https://www.shinetsu.co.jp/sec/takefu/ ／ https://www.shinetsu-rare-earth-magnet.jp/ ／ https://www.shinetsu.co.jp/en/news/news-release/shin-etsu-chemical-to-set-up-a-base-in-china-to-manufacture-magnet-alloys-for-rare-earth-magnets/ ／ https://www.shinetsu.co.jp/en/news/news-release/shin-etsu-chemical-to-double-its-production-capacity-of-rare-earth-magnets-in-vietnam/ ／ https://www.shinetsu.co.jp/wp-content/uploads/2025/07/20260428_con_J.pdf ／ https://www.jiji.com/jc/article?k=2026061100578&g=eco ／ https://www.fukuishimbun.co.jp/articles/-/2623075 ／ https://xtech.nikkei.com/atcl/nxt/mag/nmc/18/00012/00279/ ／ https://www.shinetsu.co.jp/en/sustainability/esg_environment/resource_saving/",
-      "note": "将JSX的两个节点合并收录。第02阶段、3为包含海外子公司和海外工厂在内的信越化学集团一体化生产范围 / 2026-09-23：补充电子材料分部的营收、产品等级、生产基地与产能、福井新工厂和回收再利用"
+      "src": "JSX ／ Y DD ／ DyTb DD ／ Sm DD ／ https://www.rare-earth.jp/product.html ／ https://www.shinetsu.co.jp/sec/takefu/ ／ https://www.shinetsu-rare-earth-magnet.jp/ ／ https://www.shinetsu.co.jp/en/news/news-release/shin-etsu-chemical-to-set-up-a-base-in-china-to-manufacture-magnet-alloys-for-rare-earth-magnets/ ／ https://www.shinetsu.co.jp/en/news/news-release/shin-etsu-chemical-to-double-its-production-capacity-of-rare-earth-magnets-in-vietnam/ ／ https://www.shinetsu.co.jp/wp-content/uploads/2025/07/20260428_con_J.pdf ／ https://www.jiji.com/jc/article?k=2026061100578&g=eco ／ https://www.fukuishimbun.co.jp/articles/-/2623075 ／ https://xtech.nikkei.com/atcl/nxt/mag/nmc/18/00012/00279/ ／ https://www.shinetsu.co.jp/en/sustainability/esg_environment/resource_saving/ ／ https://patents.google.com/patent/JP5276640B2/ja ／ https://www.microsi.com/?p=11285",
+      "note": "将JSX的两个节点合并收录。第02阶段、3为包含海外子公司和海外工厂在内的信越化学集团一体化生产范围 / 2026-09-23：补充电子材料分部的营收、产品等级、生产基地与产能、福井新工厂和回收再利用 / 2026-11-19：补充1μm波段高功率光纤激光器用光隔离器（Tb系氧化物旋转器）"
     },
     "seed-4": {
       "name": "高纯度化学研究所",
@@ -126,14 +126,14 @@
       "name": "Oxide Corporation（オキサイド）",
       "own": "证券代码：6521",
       "rev": "100.4亿日元（2026年2月财年，合并报表）",
-      "prod": "266nm、193nm全固体深紫外激光、CW / QCW / 皮秒激光、波长变换模块、波长变换用单晶（BBO·CLBO） / TGG（Tb₃Ga₅O₁₂）单晶及LPE生长Bi:RIG，用于光隔离器；Bi:RIG稀土组成未公开",
+      "prod": "单晶：波长转换用（CLBO、Mg:SLN、Mg:SLT、LBGO）、偏振与电光用（LB4、KTN）、磁光用（TSAG、YIG及LPE生长的Bi:RIG，用作光隔离器旋转器材料）、量子存储用RE:YSO、PET用闪烁体（LGSO、GSO等）、功率半导体用晶体 / 激光：CW深紫外激光Frequad（213〜302nm）、QCW深紫外激光Kalama（266nm、193nm）、真空紫外激光PEV；飞秒光纤激光Jasper（波兰Fluence制）与小型YAG激光（美国Areté制）为进口销售 / 光器件：QPM波长转换器件（PP-Mg:SLT、PP-Mg:LN）、THz元件、电光器件、光隔离器用磁光器件（面向光收发模块的法拉第旋转器在第6工厂增产） / 光模块：光纤耦合波长转换器、电光模块、量子纠缠光子对光源 / 试制与服务：单晶试制开发（DC-CZ、CZ、EFG、TSSG、FZ、VB、助熔剂法、微下拉法）、波长转换器试制、飞秒激光直写波导加工",
       "pos": "深紫外激光的全球份额在30%以上，波长转换单晶在95%以上（公司估算）。",
       "def": "深紫外激光是先进半导体检测和微细加工的基础。也经销面向飞机、无人机、卫星的特殊激光，但该产品由美国Areté制造。公司自产深紫外激光的国防供货尚未确认。/ 本次公开信息核查未能确认直接合同。",
-      "chn": "该DUV产品以BBO等非线性晶体为主。Y的使用情况需核对基本波源的BOM，目前无法确定。",
-      "bom": "266nm QCW对红外光纤放大光源进行两级波长转换。现行产品的光纤掺杂材料和转换晶体未披露。CW Frequad明确记载使用超高纯度BBO。未能确认使用YAG介质。/ 该DUV振荡器是否使用YAG尚未确认",
-      "gap": "需确认本公司制与进口销售区分、国防、航天客户、基本波源的介质、出口管理是否适用出口管制。",
-      "src": "https://www.opt-oxide.com/products-list/laser/ ／ https://www.opt-oxide.com/products-list/laser/qcw-laser/item_LA00008 ／ https://www.opt-oxide.com/v2019/wp-content/uploads/2013/03/266Laser_r12-1.pdf ／ https://www.opt-oxide.com/ir/meeting/meeting26_review/ ／ https://www.opt-oxide.com/products-list/laser/special ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00006 / https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00017",
-      "note": "整合处理：根据固体激光振荡器尽职调查中的“采用候选（振荡器）”正式纳入Stage 04。 ／ 266nm QCW产品将红外光纤放大光源经两级波长转换，而光纤放大级与多级转换通常会配置隔离器以阻断回光。该公司本身也是法拉第旋转器的制造商 / 标记表示与光学应用链相关，不代表已确认具体产品含有Y／Dy／Tb；材料成分及部件供应商未公开。"
+      "chn": "深紫外激光的波长转换以BBO、CLBO等不含稀土的晶体为主。稀土涉及磁光晶体（TSAG中的Tb、Sc，YIG、Bi:RIG中的Y等）以及激光的基本波源和隔离器。原料采购来源未公开。",
+      "bom": "Kalama 266nm将红外光纤放大光源经两级波长转换，Frequad以超高纯度BBO进行波长转换。基本波源介质未公开，未能确认自产激光使用YAG（明确记载YAG的仅为进口销售的Areté产品）。TSAG在1μm波段的透过率高于TGG，磁光常数约大两成，是高强度激光隔离器材料。Bi:RIG用于1.3〜1.55μm通信隔离器。",
+      "gap": "需确认本公司制与进口销售区分、国防、航天客户、基本波源的介质、出口管理是否适用出口管制。磁光器件的品类（单独旋转器还是隔离器组装品、是否含磁体）以及TSAG所用Sc原料的采购来源也尚未确认。",
+      "src": "https://www.opt-oxide.com/products/ ／ https://www.opt-oxide.com/products/optical-device/ ／ https://www.opt-oxide.com/products/optical-module/ ／ https://www.opt-oxide.com/products-list/laser/ ／ https://www.opt-oxide.com/products-list/laser/cw-laser/item_LA00003 ／ https://www.opt-oxide.com/products-list/laser/qcw-laser/item_LA00008 ／ https://www.opt-oxide.com/products-list/laser/femto-laser/item_LA00012_1 ／ https://www.opt-oxide.com/products-list/laser/special/item_LA00016 ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00006 ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00013 ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00014 ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00015 ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00017 ／ https://www.opt-oxide.com/products-list/single-crystal/scintillator ／ https://www.opt-oxide.com/products-list/optical-device/qpm ／ https://www.opt-oxide.com/v2019/wp-content/uploads/2013/03/266Laser_r12-1.pdf ／ https://www.opt-oxide.com/ir/meeting/meeting26_review/ ／ https://www.opt-oxide.com/products/single-crystal/ ／ https://www.opt-oxide.com/products/laser/ ／ https://www.opt-oxide.com/products/prototype-service/",
+      "note": "整合处理：根据固体激光振荡器尽职调查中的“采用候选（振荡器）”正式纳入Stage 04。 ／ 266nm QCW产品将红外光纤放大光源经两级波长转换，而光纤放大级与多级转换通常会配置隔离器以阻断回光。该公司本身也是法拉第旋转器的制造商 / 标记表示与光学应用链相关，不代表已确认具体产品含有Y／Dy／Tb；材料成分及部件供应商未公开。 ／ 2026-11-20：按产品一览（单晶、激光、光器件、光模块）更新产品栏。TGG不在现行产品一览中，磁光晶体改为TSAG、YIG、Bi:RIG。根据光隔离器用磁光器件与TSAG，同时归入法拉第旋转器与隔离器（激光）。 ／ 2026-11-20：对照产品一览的5个类别（晶体、激光、光器件、光模块、试制服务），在产品栏中补充试制与服务。"
     },
     "seed-13": {
       "name": "TOCALO（トーカロ）",
@@ -470,12 +470,12 @@
       "name": "电装",
       "own": "东京证券交易所Prime(6902)",
       "rev": "超过1,000亿日元（例外）",
-      "prod": "产总研与的ScAlN高压电薄膜、高温传感器共同研究",
-      "pos": "承担ScAlN早期日本国内器件研究的下游候选企业",
-      "def": "飞机、发电机、汽车、化工装置用高温振动与压力传感器",
-      "chn": "中～有待确认。需确认现行量产品的ScAlN采用、靶材供应商、Sc原产国BOM。",
-      "src": "Sc DD ／ https://www.aist.go.jp/aist_j/press_release/pr2008/pr20081121/pr20081121.html",
-      "note": "尚未确认量产中采用Sc。属研发与下游观察节点"
+      "prod": "电机与执行器：起动机、交流发电机、雨刮、鼓风机、电动车窗等车载小型电机、电动助力转向用电机、电动水泵、电动车驱动用电动发电机与逆变器（通过与爱信的合资公司BluE Nexus提供e-Axle） / ScAlN：与产综研合作研究ScAlN高压电薄膜与高温传感器",
+      "pos": "全球领先的汽车零部件厂商，车载电机品种众多。2021年公布开发出铁与镍在原子级有序排列的超晶格结构无稀土磁体，目标在5〜10年内产品化。在ScAlN方面承担了早期国内器件研究",
+      "def": "车载电机面向汽车。ScAlN系高温振动、压力传感器面向飞机、发电机、汽车与化工厂",
+      "chn": "中～高。驱动用、电动助力转向用等高性能电机通常使用钕磁体，并为耐热添加Dy、Tb，无稀土磁体的开发旨在替代它们。磁体采购来源未公开。ScAlN需确认量产品采用情况、靶材供应商与Sc原产国",
+      "src": "Sc DD ／ https://www.aist.go.jp/aist_j/press_release/pr2008/pr20081121/pr20081121.html ／ https://www.denso.com/jp/ja/about-us/corporate-info/profile/ ／ https://monoist.itmedia.co.jp/mn/articles/2111/22/news049_2.html ／ https://www.denso.com/jp/ja/-/media/global/business/innovation/review/24/24-doc-13-paper-08.pdf ／ https://www.chunichi.co.jp/article/394595",
+      "note": "尚未确认量产中采用Sc。属研发与下游观察节点 ／ 2026-11-20：补充车载电机与执行器的记述，并同时归入“电机与执行器”。元素标记依据使用钕磁体的电机的一般构成。"
     },
     "seed-44": {
       "name": "JX金属",
@@ -753,12 +753,12 @@
       "name": "Anritsu（アンリツ）",
       "own": "上市公司 / 本公司证券代码：6754",
       "rev": "约1,175亿日元（合并业绩，2026年3月财年）",
-      "prod": "微波、毫米波、光通信、雷达评估设备、干扰波监测",
+      "prod": "微波、毫米波、光通信、雷达评估设备、干扰波监测 / 光器件（子公司Anritsu Devices，厚木制造）：SLD模块（1.31／1.55／1.65µm波段，蝶形封装，内置光隔离器）、EDFA与拉曼放大器用泵浦LD模块、SOA",
       "pos": "未能通过公开信息确认市场份额和行业地位。",
-      "def": "直接连接到卫星、国防、航空、船舶的通信、雷达和干扰波评估。与民用5G测量共享技术基础。",
-      "chn": "该公司自身的稀土用量构成（BOM）和对华依赖程度尚未确认。",
-      "src": "https://www.anritsu.com/ja-jp/test-measurement/solutions/aerospace-lp ／ https://www.anritsu.com/ja-jp/about-anritsu/corporate-information/profile",
-      "note": "合并处理：原有候选（不属于母公司替换对象） / 营收依据：公司简介的合并营业收入"
+      "def": "直接连接到卫星、国防、航空、船舶的通信、雷达和干扰波评估。与民用5G测量共享技术基础。 SLD用作光纤陀螺（姿态控制）、OCT与光纤传感器的光源，可经陀螺与航空、航天、国防相连。",
+      "chn": "在光器件方面，通过SLD模块内置的光隔离器（Bi取代石榴石旋转器与磁体）涉及Y、Tb、Sm。隔离器采购来源未公开。测量仪器的稀土BOM未确认。",
+      "src": "https://www.anritsu.com/ja-jp/test-measurement/solutions/aerospace-lp ／ https://www.anritsu.com/ja-jp/about-anritsu/corporate-information/profile ／ https://dl.cdn-anritsu.com/anritsu-sensing-devices/ja-jp/products/sld/as5b320em50m-j-c-3.pdf ／ https://dl.cdn-anritsu.com/anritsu-sensing-devices/ja-jp/products/sld/as3b119gm10m-j-c-2.pdf ／ https://dl.cdn-anritsu.com/anritsu-sensing-devices/ja-jp/products/sld/as6b118gm50m-j-c-2.pdf ／ https://www.sbbit.jp/article/refers/69109",
+      "note": "合并处理：原有候选（不属于母公司替换对象） / 营收依据：公司简介的合并营业收入 ／ 2026-11-20：规格书明确记载SLD模块内置光隔离器，因此同时归入“光部件与光器件”。"
     },
     "stage05-integrated-2": {
       "name": "TOYO Corporation（東陽テクニカ）",
@@ -1201,7 +1201,7 @@
       "bom": "官方产品页面明确列出Nd:YAG。制造包含泵浦LD、谐振腔和SHG在内的振荡器。YAG晶体的供应商未披露。/ Y（明确列出Nd:YAG）",
       "gap": "需确认国防客户、YAG结晶供应商、年间生产台数、航天、国防认证、SL18X以外的现行高功率型式。",
       "src": "https://www.laserfront.jp/company-data/ ／ https://www.laserfront.jp/product-10/ ／ https://www.towajapan.co.jp/jp/wp-content/uploads/sites/2/2026/05/2025FY_annual.pdf ／ https://www.laserfront.jp/topics/%E5%9B%BD%E7%AB%8B%E5%A4%A7%E5%AD%A6%E6%B3%95%E4%BA%BA%E5%A4%A7%E9%98%AA%E5%A4%A7%E5%AD%A6%E3%81%A8%E6%A0%B8%E8%9E%8D%E5%90%88%E7%87%83%E7%84%BC%E6%A8%A1%E6%93%AC%E8%A9%A6%E9%A8%93%E8%A3%85%E7%BD%AE/ ／ https://www.laserfront.jp/",
-      "note": "依据固体激光振荡器尽调中的“候选（现行Nd:YAG振荡器）”，正式列入Stage 04。"
+      "note": "依据固体激光振荡器尽调中的“候选（现行Nd:YAG振荡器）”，正式列入Stage 04。 ／ 2026-11-21：因生产激光修调机、晶圆打标机、微细加工・焊接装置，同时归入“激光装备・照射”。"
     },
     "laser-dd-optoquest": {
       "name": "Optoquest Co., Ltd.（株式会社オプトクエスト）",
@@ -2220,11 +2220,12 @@
       "name": "Panasonic Connect Co., Ltd.（パナソニック コネクト）",
       "own": "非上市 / 松下 控股株式会社（东京证券交易所Prime、证券代码6752）的全资子公司",
       "rev": "Connect、业务板块营业收入 13,803亿日元（2026年3月财年，松下 HD 的披露）",
-      "prod": "干法刻蚀设备（APX300）、等离子体切割机（APX300-DM·PD）、等离子体清洗机、电子元件实装机",
+      "prod": "干法刻蚀设备（APX300）、等离子体切割机（APX300-DM·PD）、等离子体清洗机、电子元件实装机 / 激光焊接机・激光焊接机器人系统（Panasonic Production Engineering）",
       "pos": "电子元件贴装机的大型企业。干法刻蚀设备面向LED、化合物半导体、功率、高频和MEMS，并以等离子切割机延伸到后道工序。",
       "def": "以民用半导体制造为主，未确认有面向国防的直接供货。属于日本国内半导体制造（经济安全保障）的基础。",
-      "chn": "干法刻蚀设备、等离子体切割机的腔体零部件通常使用 Y₂O₃ 系耐等离子体材料。部件的供应商与原料的采购国未披露。",
-      "src": "https://connect.panasonic.com/jp-ja/products-services_fa/solutions/device-related/dry-etcher ／ https://connect.panasonic.com/jp-ja/products-services_fa_concept_plazma-dicer ／ https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20260512/20260512524367.pdf"
+      "chn": "干法刻蚀设备、等离子体切割机的腔体零部件通常使用 Y₂O₃ 系耐等离子体材料。部件的供应商与原料的采购国未披露。 激光焊接机采用光纤・半导体激光光源，经输出端光隔离器（TGG等旋转器与磁体）涉及Tb、Sm（一般构成）。",
+      "src": "https://connect.panasonic.com/jp-ja/products-services_fa/solutions/device-related/dry-etcher ／ https://connect.panasonic.com/jp-ja/products-services_fa_concept_plazma-dicer ／ https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20260512/20260512524367.pdf ／ https://www.panasonic.com/jp/company/ppe/jigyo/laserwelding/laserwelder.html",
+      "note": "2026-11-21：因生产激光焊接机，同时归入“激光装备・照射”。"
     },
     "ods-kobelco-kaken": {
       "name": "KOBELCO Research Institute, Inc.（コベルコ科研）",
@@ -2354,12 +2355,12 @@
       "name": "日本电气（NEC）",
       "own": "上市（6701）",
       "rev": "合并3万4,234亿日元（2025年3月期）。光传输设备未单独披露",
-      "prod": "海底光缆系统（海底中继器、终端设备、增益均衡器、海底分支装置）、SpectralWave WX开放式光传输设备、卫星用光通信装置 / LUCAS卫星光通信终端",
+      "prod": "光器件：对外销售光收发模块（400G QSFP-DD DCO与CFP2-DCO、100G QSFP28 DCO、10G／25G可调谐SFP、25G 80km BiDi、AOC，搭载自有硅光子可调谐光源） / 海底光缆系统（海底中继器、终端设备、增益均衡器、海底分支装置）、SpectralWave WX开放式光传输设备、卫星用光通信装置 / LUCAS卫星光通信终端",
       "pos": "海底光缆系统的国内唯一供应商，被视为全球三强之一。份额因出处而异，从21%到约三成不等",
-      "def": "为JAXA的卫星间光通信系统LUCAS开发卫星用光通信装置，2025年1月实现卫星间1.8Gbps光通信并成功传输至地面站。海底电缆亦承载海底地震观测",
+      "def": "为JAXA的卫星间光通信系统LUCAS开发卫星用光通信装置，2025年1月实现卫星间1.8Gbps光通信并成功传输至地面站。海底电缆亦承载海底地震观测 海底电缆相关设备（含中继器）全部在国内3个基地生产。",
       "chn": "中。装置所用光部件的采购结构是关键问题。数据中心用光收发模块的全球出货量据称大部分来自中国厂商",
-      "src": "https://jpn.nec.com/submarine/index.html ／ https://jpn.nec.com/press/202501/20250123_01.html ／ https://jpn.nec.com/press/202012/20201210_02.html ／ https://journal.meti.go.jp/p/40663/ / https://www.nec.com/en/press/202501/global_20250123_01.html",
-      "note": "海底电缆本体由子公司OCC（北九州市若松区）制造。海底中继器每50〜100公里装有一个光隔离器，NEC被列为湖北工业的主要客户之一 / 标记表示与光学应用链相关，不代表已确认具体产品含有Y／Dy／Tb；材料成分及部件供应商未公开。"
+      "src": "https://jpn.nec.com/submarine/index.html ／ https://jpn.nec.com/press/202501/20250123_01.html ／ https://jpn.nec.com/press/202012/20201210_02.html ／ https://journal.meti.go.jp/p/40663/ / https://www.nec.com/en/press/202501/global_20250123_01.html ／ https://jpn.nec.com/products/fod/index.html ／ https://www.nedo.go.jp/content/800075667.pdf ／ https://toyokeizai.net/articles/-/941884",
+      "note": "海底电缆本体由子公司OCC（北九州市若松区）制造。海底中继器每50〜100公里装有一个光隔离器，NEC被列为湖北工业的主要客户之一 / 标记表示与光学应用链相关，不代表已确认具体产品含有Y／Dy／Tb；材料成分及部件供应商未公开。 ／ 2026-11-20：作为部件对外销售光收发模块，并在NEC Platforms大月事业所生产海底光中继器（光放大器），因此同时归入“光部件与光器件”。隔离器内置依据一般构成推定。"
     },
     "optnet-1finity": {
       "name": "1FINITY",
@@ -2398,12 +2399,12 @@
       "name": "古河电气工业",
       "own": "东证主板（5801）",
       "rev": "合并1兆3,075亿日元（2026年3月期）。光器件单独数据未公开",
-      "prod": "ITLA、Micro-ITLA与Nano ITLA可调谐激光模块，拉曼放大器用泵浦LD模块，DFB激光芯片，以及光纤与光缆",
+      "prod": "ITLA、Micro-ITLA与Nano ITLA可调谐激光模块，拉曼放大器用泵浦LD模块，DFB激光芯片，以及光纤与光缆；以及原富士通光器件（2024年12月取得全部股份）的LN调制器、集成相干接收器、相干收发模块（CFP2-ACO、800G CFP2-DCO） / 工业用高功率光纤激光（关键部件在集团内生产，也可加工纯铜等高反射材料）。激光二极管模块也由与FANUC的合资公司FF Laser生产",
       "pos": "国内少数能够生产DFB激光芯片的企业之一。份额数值未确认。",
       "def": "未确认有防务交付。用途为数字相干光传输与数据中心",
-      "chn": "中。激光芯片基于磷化铟衬底，本身不用稀土，但Y与Tb经由激光模块内置的光隔离器进入",
-      "note": "ITLA是带控制电路板的可调谐激光模块，通常在半导体激光器输出侧放置光隔离器以阻断回光。Nano ITLA尺寸为25×15.6×6.7mm。拉曼放大器用泵浦LD模块有400、500、600mW三档，覆盖1330至1520nm。公司投资约1000亿日元，在包括日美在内的四个国家将光纤产能提高一倍（2026年8月公布）",
-      "src": "https://www.furukawaelectric.com/release/2021/comm_20210607.html ／ https://www.furukawaelectric.com/release/2019/comm_190920.html ／ https://www.furukawaelectric.com/company/outline/"
+      "chn": "中。激光芯片基于磷化铟衬底，本身不用稀土，但Y与Tb经由激光模块内置的光隔离器进入 光纤激光经输出端光隔离器（TGG等旋转器与磁体）涉及Tb、Sm（一般构成）。",
+      "note": "ITLA是带控制电路板的可调谐激光模块，通常在半导体激光器输出侧放置光隔离器以阻断回光。Nano ITLA尺寸为25×15.6×6.7mm。拉曼放大器用泵浦LD模块有400、500、600mW三档，覆盖1330至1520nm。公司投资约1000亿日元，在包括日美在内的四个国家将光纤产能提高一倍（2026年8月公布） ／ 2026-11-20：将富士通光器件（川崎）作为古河电工集团的光器件业务并入本卡片。 ／ 2026-11-21：因生产工业用光纤激光，同时归入“固体激光振荡器”。",
+      "src": "https://www.furukawaelectric.com/release/2021/comm_20210607.html ／ https://www.furukawaelectric.com/release/2019/comm_190920.html ／ https://www.furukawaelectric.com/company/outline/ ／ https://www.nihon-ma.co.jp/news/20241212_5801-9/ ／ https://www.fujitsu.com/jp/group/foc/en/products/coherent-modules/cfp2-aco/indexgig5.html ／ https://www.fujitsu.com/jp/group/foc/en/news/indexgig5.html ／ https://pr.mono.ipros.com/narasaki/product/detail/2000341197/ ／ https://newswitch.jp/p/4258"
     },
     "optics-carlit": {
       "name": "卡力特（Carlit）",
@@ -2427,32 +2428,33 @@
     },
     "optics-smmp": {
       "name": "SMM Precision Co., Ltd.（SMMプレシジョン）",
-      "own": "法人及业务信息见来源",
-      "rev": "相关业务营收不明",
-      "prod": "光通信用圆筒型、表面贴装型、无磁铁型光隔离器，光纤激光器用在线型隔离器及SGGG衬底。",
-      "chn": "标记表示与光学应用链相关，不代表已确认具体产品含有Y／Dy／Tb；材料成分及部件供应商未公开。",
-      "src": "https://www.smm.co.jp/business/material/products/optical_isolator/ / https://www.smmp.co.jp/smmprecision/all/WZE_1_1_AOID%2CID/CLcorporate.htm",
-      "note": "1996年开始制造光隔离器，2005年将FR业务转移至Granopt，2020年开始销售SGGG衬底。SGGG为Gd系，应与Y／Dy／Tb使用区分。",
-      "def": "供应支撑光网络分支、放大环节及光纤激光器的部件；所查资料未披露具体国防客户。"
+      "own": "非上市。住友金属矿山100%出资的集团公司；总部与工厂位于秋田县能代市",
+      "rev": "未公开",
+      "prod": "光隔离器（光通信用圆筒型、表面贴装型、无磁体型；光纤激光器用在线型）。光纤激光器用产品为1030／1064nm、2W（CW）级，以带光纤、带外壳和隔离器芯三种形式量产，1550nm产品处于试制。SGGG（置换型钆镓石榴石）晶体与晶圆（3、4英寸）",
+      "chn": "旋转器为在SGGG衬底上以LPE法生长的Bi取代稀土铁石榴石单晶膜（SGGG为Gd系，与Y、Dy、Tb的使用区分）。法拉第旋转器业务已于2005年转移至Granopt，相关咨询也由Granopt受理。石榴石的稀土组成与原料采购来源未公开。",
+      "src": "https://www.smm.co.jp/business/material/products/optical_isolator/ ／ https://www.smm.co.jp/business/material/products/faraday_rotator/ ／ https://www.smm.co.jp/business/material/products/sggg/ ／ https://www.smmp.co.jp/ ／ https://www.smmp.co.jp/smmprecision/all/WZH_1_1000_AOID,ID/CLentry_flow.htm ／ https://www.smmp.co.jp/s/sm/smmprecision/images/fl_promotion_material20230728.pdf",
+      "note": "1996年开始生产光隔离器；2005年将FR业务转移至Granopt，2020年开始销售SGGG衬底。SGGG为Gd系，与Y、Dy、Tb的使用区分。 ／ 2026-11-20：根据产品页面与公开资料《Optical Isolator for Fiber Laser Application》（2023年7月）确认1μm波段光纤激光器用隔离器已量产，因此同时归入“法拉第旋转器与隔离器（激光）”。1550nm产品使用传统RIG。元素标记依据Bi取代稀土铁石榴石旋转器及配套磁体的一般构成。",
+      "def": "为光传输网的分支、放大部位及光纤激光器供应部件。光纤激光器用产品称满足MIL-STD-883的冲击与振动试验条件，但国防客户未公开。",
+      "pos": "1996年开始生产光隔离器。光纤激光器用产品采用在1μm波段插入损耗低于传统RIG的自有旋转器材料（LLR），作为比TGG、TSAG方案小得多的低功率隔离器推广。份额数值未确认。"
     },
     "optics-santec-aoc": {
       "name": "Santec AOC",
-      "own": "法人及业务信息见来源",
-      "rev": "相关业务营收不明",
-      "prod": "INTP将光隔离器与分光探测器集成于1.2×1.2×12mm封装，支持C／L波段，面向QSFP-DD、OSFP高密度小型光模块。",
-      "chn": "标记表示与光学应用链相关，不代表已确认具体产品含有Y／Dy／Tb；材料成分及部件供应商未公开。",
-      "src": "https://aoc.santec.com/en/assets/doc/INTP-C-E.pdf",
-      "note": "标记表示与光学应用链相关，不代表已确认具体产品含有Y／Dy／Tb；材料成分及部件供应商未公开。",
-      "def": "集成光通信模块的光功率监测与反向光隔离功能；所查规格书未列明国防或航天项目。"
+      "own": "非上市。santec Holdings（东证，证券代码6777）集团公司，负责光通信用部件与光学器件；总部位于爱知县小牧市",
+      "rev": "公司单独营收未公开。santec Holdings合并营收为240.3亿日元（2025年3月期）",
+      "prod": "空间光调制器（LCOS-SLM：SLM-200、210、250、300、310等）、光谱整形器（LCOS型可编程光滤波器WSS-2000）、光功率监测器（带分光功能的光电探测器NTP、UTP、MTP、IPD，内置光隔离器的INTP，多通道光功率监测器MPA）、光衰减器（MEMS驱动的COVA-1）、光滤波器（MEMS可调滤波器MTF系列）、光子系统（定制光模块）",
+      "chn": "涉及稀土的只有内置光隔离器的INTP（C／L波段分光光电探测器）。隔离器旋转器与磁体的材料及采购来源未公开。空间光调制器、滤波器、衰减器、功率监测器本体未见使用稀土的构成。",
+      "src": "https://aoc.santec.com/jp/ ／ https://aoc.santec.com/jp/products/slm/ ／ https://aoc.santec.com/jp/products/monitor/ ／ https://aoc.santec.com/jp/products/monitor/intp/ ／ https://aoc.santec.com/jp/products/voa/ ／ https://aoc.santec.com/jp/products/filter/ ／ https://aoc.santec.com/en/assets/doc/INTP-C-E.pdf",
+      "note": "没有单独的光隔离器产品，而是生产内置隔离器的分光光电探测器INTP（面向QSFP-DD光收发模块，Preliminary），因此归入“光部件与光器件”。元素标记依据INTP内置隔离器的一般构成（Bi:RIG、YIG旋转器与SmCo磁体），不代表已确认含有。 ／ 2026-11-20：对照产品一览（空间光调制器、光谱整形器、光功率监测器、光衰减器、光滤波器、光子系统）与产品指南2025核实，从“法拉第旋转器与隔离器（光通信）”移出。",
+      "def": "用于光通信模块内光功率监测与反向光阻断的部件；所查产品页面与规格书未列明国防或航天项目。"
     },
     "optics-tatsuta": {
       "name": "立井电线（TATSUTA）",
       "own": "法人及业务信息见来源",
       "rev": "相关业务营收不明",
-      "prod": "低波长依赖的宽带偏振无关光隔离器；可按波长、端口长度及连接器需求洽谈，支持从1件起的用途定制试制。",
+      "prod": "波长依赖性小的宽带、偏振无关型光隔离器，以及宽带光环行器（光纤部件）。可就指定波长、端口长度和连接器的定制试制进行咨询，最少1个起。",
       "chn": "标记表示与光学应用链相关，不代表已确认具体产品含有Y／Dy／Tb；材料成分及部件供应商未公开。",
-      "src": "https://www.tatsuta.co.jp/product/sensor_medical/optical/isorator/",
-      "note": "标记表示与光学应用链相关，不代表已确认具体产品含有Y／Dy／Tb；材料成分及部件供应商未公开。",
+      "src": "https://www.tatsuta.co.jp/product/sensor_medical/optical/isorator/ ／ https://www.tatsuta.co.jp/product/sensor_medical/optical/cirlulator/",
+      "note": "标记表示与光学应用链相关，不代表已确认具体产品含有Y／Dy／Tb；材料成分及部件供应商未公开。 ／ 2026-11-20：根据光隔离器与光环行器的产品页面确认，归入“法拉第旋转器与隔离器（光通信）”。旋转器是自制还是外购尚未确认。",
       "def": "光纤部件用于抑制回光损伤光源及反射引发的问题；所查资料未列明具体国防或航天装备采用情况。"
     },
     "optics-space-compass": {
@@ -2536,6 +2538,292 @@
       "chn": "中。钐属于中国中重稀土出口管制对象。原料采购来源未公开",
       "note": "磁粉量产在技术开发研究所（名古屋市南区），复合材料混炼在筑地Techno Center（名古屋市港区，2025年12月引入大型混炼机）。公司明确表示粘结磁体成型体由大同电子制造销售。SmFeN磁体材料的目标是2030年形成年约200吨规模的市场",
       "src": "https://www.daido.co.jp/products/isotropic_SmFeN/ ／ https://www.daido.co.jp/about/release/2026/260511_smfen.html"
+    },
+    "fujikura": {
+      "name": "藤仓",
+      "own": "上市公司 / 株式会社藤仓（东证Prime市场，证券代码5803）",
+      "rev": "合并营收1兆1,824亿日元，其中信息通信6,530亿日元（2026年3月期）",
+      "prod": "光纤、光缆、光连接器；光纤激光器用光纤器件（光纤布拉格光栅、泵浦光合束器与耦合器）；Yb光纤激光器及其内置的光隔离器旋转器（TSAG单晶，与NIMS共同开发）",
+      "pos": "光纤与光部件的大型企业。与NIMS共同就将TSAG（Tb·Sc系石榴石）单晶用作1μm波段激光隔离器旋转器的技术取得专利，并将其装入自家的Yb光纤激光器。旋转器与隔离器的份额未经确认。",
+      "def": "未能确认。光纤激光器主要用于加工用途。",
+      "chn": "作为TSAG原料的Tb、Sc的采购来源未公开。Tb对中国依赖度高。",
+      "src": "https://patents.google.com/patent/US8804240B2/en ／ https://www.nims.go.jp/electr-opt/OPCRY_e.html ／ https://www.optic-product.fujikura.com/wp-content/uploads/2025/06/CPJ70A_71A_79A.pdf ／ https://www2.jpx.co.jp/disc/58030/081220260514532598_tse-acedjpsm-58030-20260514358030-ixbrl.htm",
+      "note": "2026-11-19：在对激光波长用法拉第旋转器与光隔离器的追加调查中新增收录 ／ 2026-11-21：因生产自有Yb光纤激光器，同时归入“固体激光振荡器”（Sc按装入自有TSAG旋转器的隔离器计入）。"
+    },
+    "compound-kisankinzoku": {
+      "name": "稀产金属",
+      "own": "非上市。总部位于大阪市西淀川区，东京营业所位于千代田区。1959年成立",
+      "rev": "未公开。提出销售额100亿日元的目标",
+      "prod": "稀有金属化合物（Ga、In、W、Mo、Bi、Sb、Te、Li、Cs等的氧化物、氯化物等）、蒸镀与薄膜材料（Ta₂O₅、SnO₂、MgF₂、ITO等）、受托生产无机药品、有价金属与废催化剂回收。经营元素包括Nd、Dy、Tb",
+      "pos": "稀有金属化合物与薄膜材料的专业厂商，正在秋田县潟上市建设新工厂（目标2026年秋投产）。稀土经营量与份额未确认",
+      "def": "未能确认。薄膜材料与化合物主要面向电子元件和半导体",
+      "chn": "Dy、Tb仅作为经营元素记载，品类、数量与采购来源未公开",
+      "src": "https://www.kisankinzoku.co.jp/product ／ https://www.kisankinzoku.co.jp/page1",
+      "note": "2026-11-20：作为日本稀土材料厂商新收录。产品一览中未列出稀土品类，Dy、Tb标记依据经营元素的记载，证据较弱，评价定为C。"
+    },
+    "motor-mabuchi": {
+      "name": "Mabuchi Motor（マブチモーター）",
+      "own": "上市公司 / 万宝至马达株式会社（东证Prime市场，证券代码6592）。总部位于千叶县松户市",
+      "rev": "合并营收2,004亿日元（2025年12月期）",
+      "prod": "小型直流电机（有刷与无刷）、高扭矩小型轻量电机。用于汽车电装（后视镜、门锁、格栅百叶等）、机器人与移动体、精密与办公设备、家电与工具、医疗",
+      "pos": "小型直流电机的专业大厂。自2012年起致力于减少电机的稀土用量并实现小型轻量化。按磁体种类的构成与份额未确认",
+      "def": "未能确认。用途以汽车电装、民用与医疗为主",
+      "chn": "无刷电机等高性能产品通常使用钕磁体，并为耐热添加Dy、Tb。磁体采购来源未公开",
+      "src": "https://www.mabuchi-motor.co.jp/ ／ https://www.mabuchi-motor.co.jp/product/knowledge/classification/customized.html ／ https://www.mabuchi-motor.co.jp/csr/pdf/env2012.pdf ／ https://www2.jpx.co.jp/disc/65920/081220251211517737_tse-acedjpsm-65920-20251211517737-ixbrl.htm",
+      "note": "2026-11-20：作为稀土磁体需求侧（电机）新收录。元素标记依据使用钕磁体的电机的一般构成。"
+    },
+    "motor-mitsuba": {
+      "name": "Mitsuba（ミツバ）",
+      "own": "上市公司 / 株式会社Mitsuba（东证Prime市场，证券代码7280）。总部位于群马县桐生市",
+      "rev": "合并营收3,486亿日元（2026年3月期）",
+      "prod": "四轮电装品（雨刮与洗涤器、电动车窗、电动座椅、电动滑门、电动尾门用电机、起动机、风扇、电动油泵、电子节气门、电动助力转向用无刷电机）、二轮电装品、小型移动工具产品",
+      "pos": "以雨刮、电动车窗等车身系统电装电机为主力，约一半面向本田集团。拥有雨刮领域全球首个实现无刷化与去稀土化的控制电机。自2012年起改用抑制电机内部发热的结构以减少高性能磁体中的Dy，自2013年起还导入了不使用永磁体的SR电机",
+      "def": "未能确认。用途为汽车、二轮车与小型移动工具",
+      "chn": "在使用钕磁体的电机中，通过结构设计减少用于耐热的Dy、Tb用量。磁体采购来源未公开",
+      "src": "https://www.mitsuba.co.jp/jp/products/index.html ／ https://www.mitsuba.co.jp/jp/products/autoelectricalsystems.html ／ https://www.nikkei.com/article/DGXNASFB21043_R20C12A2L60000/ ／ https://www2.jpx.co.jp/disc/72800/081220260514532041_tse-acedjpsm-72800-20260515372800-ixbrl.htm",
+      "note": "2026-11-20：作为稀土磁体需求侧（电机）新收录。元素标记依据使用钕磁体的电机的一般构成。"
+    },
+    "motor-yaskawa": {
+      "name": "安川电机",
+      "own": "上市公司 / 株式会社安川电机（东证Prime市场，证券代码6506）。总部位于北九州市",
+      "rev": "合并营收5,421亿日元，其中运动控制2,361亿日元、机器人2,470亿日元（2026年2月期）",
+      "prod": "AC伺服电机与伺服驱动器（Σ系列）、变频器、工业机器人（MOTOMAN）、系统工程（电气系统）",
+      "pos": "伺服电机、变频器与工业机器人的大型企业。2013年开发了不使用钕磁体、采用铁氧体磁体IPM结构的EV驱动电机。伺服电机的磁体种类与份额未确认",
+      "def": "未能确认。用途包括机床、电子元件与半导体制造设备、物流、汽车制造等",
+      "chn": "高响应伺服电机通常使用钕磁体，并为耐热添加Dy、Tb。磁体种类与采购来源未公开",
+      "src": "https://www.yaskawa.co.jp/product/servomotor ／ https://www.yaskawa.co.jp/newsrelease/product/6079 ／ https://www.e-mechatronics.com/ ／ https://www.yaskawa.co.jp/wp-content/uploads/2026/07/20260710.pdf",
+      "note": "2026-11-20：作为稀土磁体需求侧（电机）新收录。元素标记依据使用钕磁体的伺服电机的一般构成。"
+    },
+    "photonics-fiberlabs": {
+      "name": "FiberLabs（ファイバーラボ）",
+      "own": "非上市。2000年作为KDDI研究所的内部创业公司成立。总部及研发生产基地位于埼玉县富士见野市（KDDI综合研究所内）",
+      "rev": "未公开",
+      "prod": "光纤放大器（C波段EDFA、S波段TDFA、采用氟化物光纤的O波段PDFA，台式），以及光纤激光光源。也经销其他公司的无源光部件（光隔离器等）",
+      "pos": "为数不多的生产采用氟化物光纤的O、S波段光放大器的日本厂商。份额未确认",
+      "def": "未能确认。用途为光通信的研发与评估以及传感",
+      "chn": "规格表明确记载所有放大器型号的输入输出端均内置光隔离器，经其旋转器（Bi取代石榴石）与磁体涉及Y、Tb、Sm。隔离器采购来源未公开。放大用掺Er、Tm、Pr光纤不在本数据的对象元素范围内",
+      "src": "https://www.fiberlabs.co.jp/ ／ https://www.city.fujimino.saitama.jp/material/files/group/20/faibarabo202601.pdf ／ https://www.lambdaphoto.co.uk/fiberlabs-c-band-amplifier-edfa-bench-top.html",
+      "note": "2026-11-20：在光部件与光器件的追加调查中新收录。1064nm波段光隔离器为其他公司产品的经销，因此不归入隔离器工序。"
+    },
+    "laser-melco-fa": {
+      "name": "三菱电机（FA・激光加工机）",
+      "own": "东证Prime上市。激光加工机属于FA系统业务",
+      "rev": "未能确认（加工机单独销售额未公开）",
+      "prod": "MF系列光纤激光振荡器、CO₂激光振荡器、二维与三维激光加工机（含搭载自有12kW级振荡器的机型）、搭载355nm紫外激光振荡器的印制电路板激光钻孔机GTW5-UVF20系列",
+      "pos": "加工机本体、振荡器、控制装置均自主开发的日本大型厂商。份额未确认",
+      "def": "未能确认。用途为钣金、汽车、电子部件加工",
+      "chn": "光纤振荡器经输出端光隔离器（TGG等旋转器与磁体）涉及Tb、Sm（一般构成）。紫外激光振荡器为固体激光的三倍频，经YAG・YVO₄介质涉及Y（介质种类未公开）。CO₂激光不使用对象元素。",
+      "note": "2026-11-21：在工业激光调查中新收录。与光器件・国防的三菱电机业务不同，因此另设卡片。",
+      "src": "https://www.mitsubishielectric.co.jp/fa/products/mecha/laser/ ／ https://www.mitsubishielectric.co.jp/fa/products/mecha/fiber-oscillator/pmerit/fiber/mf/index.html ／ https://www.mitsubishielectric.co.jp/fa/products/mecha/laser/pmerit/drilling/gtw5-uvf20/index.html ／ https://www.mitsubishielectric.co.jp/news/2020/0128-b.html"
+    },
+    "laser-amada": {
+      "name": "AMADA（激光加工机・焊接机）",
+      "own": "东证Prime上市。焊接机由子公司AMADA WELD TECH（アマダウエルドテック，原Miyachi Technos・Amada Miyachi）生产",
+      "rev": "未能确认（激光业务单独销售额未公开）",
+      "prod": "光纤激光加工机（钣金切割）、光纤激光焊接机（用于车载电池铝・铜焊接的MF-C2000A等）、YAG激光焊接机（自Amada Miyachi时期起）",
+      "pos": "日本钣金加工机大型厂商。原Miyachi是精密焊接用YAG激光的老牌厂商。份额未确认",
+      "def": "未能确认。用途为钣金、汽车、电池、电子部件加工",
+      "chn": "YAG焊接机经Nd:YAG介质涉及Y（现行机型构成需确认）。光纤激光经输出端光隔离器（TGG等旋转器与磁体）涉及Tb、Sm（一般构成）。是否自产光纤振荡器未确认。",
+      "note": "2026-11-21：在工业激光调查中新收录。同一产品群的AMADA WELD TECH并入本卡片。生产印制电路板钻孔机的子公司Via Mechanics产品不同，另设卡片。",
+      "src": "https://www.marklines.com/ja/product/14376 ／ https://www.nikkan.co.jp/articles/view/00380251"
+    },
+    "laser-keyence": {
+      "name": "Keyence（キーエンス，基恩士）",
+      "own": "东证Prime上市。总部位于大阪市。传感器、测量仪器与图像处理设备厂商",
+      "rev": "未能确认（打标机单独销售额未公开）",
+      "prod": "MD-X系列三轴混合激光打标机（以光纤放大YVO₄主振荡器的自有振荡器S-MOPA，平均输出25W级），以及光纤、CO₂、紫外激光打标机",
+      "pos": "日本激光打标机大型厂商。份额未确认",
+      "def": "未能确认。用途为在部件与产品上打印代码・文字及微细加工",
+      "chn": "MD-X在YVO₄晶体（Nd:YVO₄）中振荡，因此涉及Y。经光纤放大部与输出端光隔离器（TGG等旋转器与磁体）涉及Tb、Sm（一般构成）。",
+      "note": "2026-11-21：在工业激光调查中新收录。因属于测量仪器・传感器厂商，设备归入“RF・压电传感器・测量”。",
+      "src": "https://www.keyence.com/products/marker/fiber-yvo4-yag-laser/md-x1000_1500/ ／ https://www.keyence.com/landing/marker/lp_md-x_modal01.jsp"
+    },
+    "laser-spectronix": {
+      "name": "Spectronix（スペクトロニクス）",
+      "own": "非上市。总部位于大阪府",
+      "rev": "未能确认",
+      "prod": "工业・研究用固体激光振荡器：绿光（532nm）皮秒激光器、深紫外（266nm）皮秒脉冲激光器LDH-X0810（与NEDO共同开发，输出8W）",
+      "pos": "日本短脉冲固体激光振荡器厂商。份额未确认",
+      "def": "未能确认。用途为微细加工与研发",
+      "chn": "绿光・深紫外振荡器采用固体激光波长转换，很可能经YAG・YVO₄介质涉及Y（介质种类未确认；深紫外机型组合DFB半导体激光与光纤・块状放大部）。经光隔离器涉及Tb、Sm（一般构成）。",
+      "note": "2026-11-21：在工业激光调查中新收录。增益晶体未确认。",
+      "src": "https://monoist.itmedia.co.jp/mn/articles/2004/20/news026.html ／ https://www.nikkan.co.jp/articles/view/00368176"
+    },
+    "laser-fanuc": {
+      "name": "FANUC（ファナック，发那科）",
+      "own": "东证Prime上市。总部位于山梨县忍野村。激光二极管模块由与古河电工各出资一半的FF Laser（山梨县山中湖村）生产",
+      "rev": "未能确认（激光业务单独销售额未公开）",
+      "prod": "光纤激光振荡器（2015年进入，至6kW级的FF6000i-model A等）、CO₂激光振荡器，与CNC・机器人组合供应给加工机厂商",
+      "pos": "全球大型机床CNC厂商。激光振荡器份额未确认",
+      "def": "未能确认。用途为面向加工机厂商的振荡器",
+      "chn": "光纤激光器的增益介质（掺Yb光纤）不在本数据的对象元素范围内。经输出端的光隔离器（TGG等旋转器与磁体）涉及Tb、Sm（一般构成）。CO₂激光不使用对象元素。",
+      "note": "2026-11-21：在工业激光调查中新收录。报道为2015〜2017年，现行机型构成需确认。",
+      "src": "https://newswitch.jp/p/7761 ／ https://newswitch.jp/p/4258"
+    },
+    "laser-mhi-defense": {
+      "name": "三菱重工业（国防・航天：高功率激光）",
+      "own": "东证Prime上市。国防・航天板块",
+      "rev": "未能确认（激光业务单独销售额未公开）",
+      "prod": "车载高功率激光演示装置（10kW级，应对小型无人机。防卫装备厅研究试制，2021〜2024财年试制，2024年10月完成），以及与NTT共同开发的、用光子晶体光纤传输数十米kW级单模激光的技术",
+      "pos": "承担日本高功率激光武器研究试制的两家企业之一",
+      "def": "防卫装备厅研究试制。据称可瞄准约1.2km外的无人机",
+      "chn": "光源种类与采购来源未公开。若以kW级光纤激光为光源，经输出端光隔离器（TGG等旋转器与磁体）涉及Tb、Sm（一般构成）。光束指向装置的驱动电机（NdFeB磁体）也可能涉及Dy、Tb。",
+      "note": "2026-11-21：在激光装备调查中新收录。与能源・航空发动机的三菱重工业务不同，另设卡片。",
+      "src": "https://www.mod.go.jp/atla/research/ats2024/pdf_oral_matl/1113_1330_ss17.pdf ／ https://www.mod.go.jp/atla/research/ats2024/pdf_exhi_pos/p-24.pdf ／ https://www.mhi.com/jp/news/18042503.html"
+    },
+    "laser-khi-defense": {
+      "name": "川崎重工业（国防：高功率激光）",
+      "own": "东证Prime上市。航空航天系统公司的国防业务",
+      "rev": "未能确认（激光业务单独销售额未公开）",
+      "prod": "电驱动高功率激光系统（100kW级，应对小型无人机与迫击炮弹。防卫装备厅研究试制，2023年2月交付，由两个40英尺集装箱构成）。据报道由10台国产10kW级光纤激光合束而成，2025年底有报道称已装上试验舰“飞鸟”号",
+      "pos": "承担日本高功率激光武器研究试制的两家企业之一",
+      "def": "防卫装备厅研究试制。处于舰载试验阶段",
+      "chn": "经光纤激光输出端的光隔离器（TGG・TSAG等旋转器与磁体）涉及Tb、Sm（一般构成）。国产光纤激光的供应方未公开。",
+      "note": "2026-11-21：在激光装备调查中新收录。与喷气发动机的川崎重工业务不同，另设卡片。舰载情况来自海外报道，未确认官方发布。",
+      "src": "https://www.mod.go.jp/atla/research/ats2024/pdf_oral_matl/1113_1330_ss17.pdf ／ https://armyrecognition.com/news/navy-news/2025/exclusive-japan-installs-100kw-laser-weapon-on-japanese-navy-js-asuka-warship-ahead-of-sea-trials"
+    },
+    "space-orbital-lasers": {
+      "name": "Orbital Lasers（オービタルレーザーズ）",
+      "own": "非上市。2024年1月作为SKY Perfect JSAT的内部创业公司成立",
+      "rev": "未能确认",
+      "prod": "卫星搭载激光：使碎片停止旋转的载荷（DTB）与碎片清除（ADR，计划2029财年开始），采用与理研共同开发的固体脉冲激光的激光烧蚀方式；以及卫星搭载激光雷达的地表观测",
+      "pos": "似为日本唯一将激光式碎片处理商业化的企业。份额不适用",
+      "def": "在防卫省“轨道上本国卫星的监视・防护技术研究”中承接激光测距（2025年11月，约20.5亿日元）",
+      "chn": "固体脉冲激光的介质未公开。若为一般的Nd:YAG则涉及Y，并经光隔离器的旋转器与磁体涉及Tb、Sm（一般构成）。",
+      "note": "2026-11-21：在激光装备调查中新收录。因激光搭载于卫星，归入“卫星・航天器”。",
+      "src": "https://www.mod.go.jp/j/press/news/2026/03/06c.html ／ https://news.mynavi.jp/techplus/article/20240131-2873557/ ／ https://www.watch.impress.co.jp/docs/news/1565176.html"
+    },
+    "laser-vtec": {
+      "name": "V Technology（ブイ・テクノロジー）",
+      "own": "东证Prime上市。总部位于横滨市",
+      "rev": "未能确认（激光设备单独销售额未公开）",
+      "prod": "FPD制造用激光退火装置（配备Nd:YAG长脉冲1064nm与短脉冲二倍频532nm），以及FPD检测・修复装置",
+      "pos": "日本FPD制造设备厂商。份额未确认",
+      "def": "未能确认。用途为FPD・半导体制造",
+      "chn": "经Nd:YAG介质涉及Y，经光隔离器的旋转器与磁体涉及Tb、Sm（一般构成）。是否自产振荡器未确认。",
+      "note": "2026-11-21：在工业激光调查中新收录。",
+      "src": "https://www.yz.yamagata-u.ac.jp/AnalysisCenter/pdf/FROM/LAS-3747.pdf ／ https://www.jst.go.jp/pr/info/info1361/index.html"
+    },
+    "laser-viamechanics": {
+      "name": "Via Mechanics（ビアメカニクス）",
+      "own": "2025年由AMADA收购全部股份（收购价510亿日元）。总部位于神奈川县",
+      "rev": "未能确认",
+      "prod": "印制电路板钻孔机：紫外激光加工机LU-2QS252（用于FPC・封装基板，可选纳秒或皮秒振荡器，孔径15μm）、CO₂激光加工机、机械钻孔机",
+      "pos": "印制电路板钻孔机大型厂商。份额未确认",
+      "def": "未能确认。用途为电子基板制造",
+      "chn": "紫外激光采用固体激光波长转换，很可能经YAG・YVO₄介质涉及Y（介质种类与振荡器采购来源未公开）。经光隔离器的旋转器与磁体涉及Tb、Sm（一般构成）。CO₂激光不使用对象元素。",
+      "note": "2026-11-21：在工业激光调查中新收录。与母公司AMADA产品不同，另设卡片。",
+      "src": "https://eetimes.itmedia.co.jp/ee/articles/2406/25/news118.html ／ https://monoist.itmedia.co.jp/mn/spv/2504/21/news057.html"
+    },
+    "laser-shibuya": {
+      "name": "澁谷工业（Shibuya）",
+      "own": "东证Prime上市。总部位于金泽市。激光加工机为机电一体化统辖本部的产品",
+      "rev": "未能确认（激光设备单独销售额未公开）",
+      "prod": "超短脉冲激光加工机（搭载绿光・紫外振荡器，加工金属、树脂、陶瓷、FPC）、超精密光纤激光加工机SPF3907A",
+      "pos": "以灌装系统为主，也生产激光加工机。份额未确认",
+      "def": "未能确认。用途为电子部件・医疗器械的微细加工",
+      "chn": "绿光・紫外超短脉冲振荡器采用固体激光波长转换，很可能经YAG・YVO₄介质涉及Y（介质种类与振荡器采购来源未公开）。经光隔离器的旋转器与磁体涉及Tb、Sm（一般构成）。",
+      "note": "2026-11-21：在工业激光调查中新收录。",
+      "src": "https://pr.mono.ipros.com/en/shibuya/product/detail/2000451611 ／ https://pr.mono.ipros.com/en/shibuya/product/detail/2000450495"
+    },
+    "laser-shi": {
+      "name": "住友重机械工业（激光设备）",
+      "own": "东证Prime上市。激光退火装置由住友重机械Material Solutions生产，光纤激光系统由住友重机械Mechatronics生产",
+      "rev": "未能确认（激光设备单独销售额未公开）",
+      "prod": "功率半导体（IGBT・SiC）用激光退火装置、光纤激光系统（焊接・远程焊接・切割・钎焊）",
+      "pos": "功率半导体用激光退火装置据称需求很大。份额未确认",
+      "def": "未能确认。用途为功率半导体制造与焊接・切割",
+      "chn": "振荡器从外部采购。经所装振荡器输出端的隔离器（TGG等旋转器与磁体）涉及Tb、Sm（一般构成）。振荡器采购来源未公开。退火装置的光源种类未确认。",
+      "note": "2026-11-21：在工业激光调查中新收录。将拥有激光设备业务的两家集团公司并入本卡片。",
+      "src": "https://newswitch.jp/p/43912 ／ https://hrmos.co/pages/shi-sms/jobs/26tech4"
+    },
+    "laser-accretech": {
+      "name": "东京精密（ACCRETECH）",
+      "own": "东证Prime上市。总部位于东京都八王子市。测量仪器与半导体制造设备厂商",
+      "rev": "未能确认（划片设备单独销售额未公开）",
+      "prod": "隐形切割装置（激光划片机ML3200：用于φ300mm晶圆，以红外激光在硅内部形成改质层；技术来自滨松光子），以及三坐标测量机・表面粗糙度测量仪",
+      "pos": "日本测量仪器与半导体制造设备大型厂商。份额未确认",
+      "def": "未能确认。用途为半导体制造与精密测量",
+      "chn": "红外激光光源未公开。若为隐形切割用固体激光，则经YAG・YVO₄介质涉及Y，经光隔离器的旋转器与磁体涉及Tb、Sm（一般构成）。",
+      "note": "2026-11-21：在工业激光调查中新收录。因属于测量仪器厂商，归入“RF・压电传感器・测量”。",
+      "src": "https://www.accretech.com/en/product/semicon/semi/dicer_semi/ml3200.html ／ https://www.hamamatsu.com/jp/ja/product/lasers/laser-related-products/stealth-dicing-technology.html"
+    },
+    "laser-disco": {
+      "name": "DISCO（ディスコ，迪思科）",
+      "own": "东证Prime上市。总部位于东京都大田区",
+      "rev": "未能确认（激光设备单独销售额未公开）",
+      "prod": "晶圆激光划片装置（含隐形切割的激光切割机）、刀片划片装置、研磨机",
+      "pos": "全球划片设备大型厂商。份额未确认",
+      "def": "未能确认。用途为半导体制造",
+      "chn": "激光切割机光源未公开。若为固体激光，则经YAG・YVO₄介质涉及Y，经光隔离器的旋转器与磁体涉及Tb、Sm（一般构成）。",
+      "note": "2026-11-21：在工业激光调查中新收录。光源种类未确认。",
+      "src": "https://monoist.itmedia.co.jp/mn/spv/1311/27/news034.html ／ https://www.hamamatsu.com/jp/ja/product/lasers/laser-related-products/stealth-dicing-technology.html"
+    },
+    "laser-mazak": {
+      "name": "Yamazaki Mazak（ヤマザキマザック，山崎马扎克）",
+      "own": "非上市。总部位于爱知县大口町",
+      "rev": "未能确认",
+      "prod": "OPTIPLEX系列光纤激光加工机（搭载15kW振荡器的3015 NEO、厚板用3015 HP・4220 HP等）、自动化系统",
+      "pos": "日本机床大型厂商。份额未确认",
+      "def": "未能确认。用途为钣金切割",
+      "chn": "振荡器从外部采购。经所装振荡器输出端的隔离器（TGG等旋转器与磁体）涉及Tb、Sm（一般构成）。振荡器采购来源未公开。",
+      "note": "2026-11-21：在工业激光调查中新收录。",
+      "src": "https://monoist.itmedia.co.jp/mn/articles/2203/30/news074.html ／ https://monoist.itmedia.co.jp/mn/spv/2508/26/news044.html"
+    },
+    "laser-panasonic-industry": {
+      "name": "松下工业（Panasonic Industry，激光打标机）",
+      "own": "Panasonic Holdings旗下事业公司。激光打标机属于控制设备产品",
+      "rev": "未能确认（打标机单独销售额未公开）",
+      "prod": "激光打标机：光纤式（FAYb，1060nm）的LP-RF・LP-ZV等，以及CO₂式（10,600nm）。不提供YAG晶体式",
+      "pos": "日本激光打标机大型厂商之一。份额未确认",
+      "def": "未能确认。用途为部件・产品打标",
+      "chn": "光纤激光器的增益介质（掺Yb光纤）不在本数据的对象元素范围内。经输出端的光隔离器（TGG等旋转器与磁体）涉及Tb、Sm（一般构成）。CO₂式不使用对象元素。",
+      "note": "2026-11-21：在工业激光调查中新收录。与Panasonic Connect事业公司不同，另设卡片。",
+      "src": "https://industry.panasonic.com/ac/j/fasys/special/tech_lasermarker/faq/index.jsp ／ https://industry.panasonic.com/jp/ja/products/fasys/lasermarker/lasermarker/lp-zv"
+    },
+    "laser-kataoka": {
+      "name": "片冈制作所（Kataoka）",
+      "own": "非上市。总部位于京都市南区。由NITTOKU支持重建",
+      "rev": "未能确认",
+      "prod": "激光加工系统（钙钛矿太阳能电池激光划线装置，计划投资69亿日元于2029年将产能提至每年32台）、电池壳焊接装置、二次电池检测系统",
+      "pos": "在钙钛矿太阳能电池激光划线装置领域领先的日本厂商。份额未确认",
+      "def": "未能确认。用途为太阳能电池・二次电池制造",
+      "chn": "光源种类与采购来源未公开。若划线・焊接采用固体・光纤激光，则经输出端光隔离器的旋转器与磁体涉及Tb、Sm（一般构成）。",
+      "note": "2026-11-21：在工业激光调查中新收录。光源种类未确认。",
+      "src": "https://newswitch.jp/p/44746"
+    },
+    "laser-muratec": {
+      "name": "村田机械（Murata Machinery）",
+      "own": "非上市。总部位于京都市",
+      "rev": "未能确认",
+      "prod": "光纤激光加工机（LS3015GC：额定2.5〜6kW，钣金切割）、冲压・激光复合机LS3015HL",
+      "pos": "日本钣金加工机厂商。份额未确认",
+      "def": "未能确认。用途为钣金・钢材切割",
+      "chn": "振荡器从外部采购。经所装振荡器输出端的隔离器（TGG等旋转器与磁体）涉及Tb、Sm（一般构成）。振荡器采购来源未公开。",
+      "note": "2026-11-21：在工业激光调查中新收录。光纤激光机的现行构成需确认。",
+      "src": "https://monoist.itmedia.co.jp/mn/articles/1804/27/news011.html"
+    },
+    "laser-komatsu-sanki": {
+      "name": "小松产机（Komatsu Industries）",
+      "own": "小松（小松制作所）的子公司。总部位于石川县金泽市",
+      "rev": "未能确认",
+      "prod": "光纤激光加工机（水下切割的TWCL10-1・TWCL08-1、三维TLH510-2等）、等离子切割机TFPL、冲压机械",
+      "pos": "日本冲压机械大型厂商，也生产激光切割机。份额未确认",
+      "def": "未能确认。用途为钣金・钢材切割",
+      "chn": "振荡器从外部采购。经所装振荡器输出端的隔离器（TGG等旋转器与磁体）涉及Tb、Sm（一般构成）。振荡器采购来源未公开。",
+      "note": "2026-11-21：在工业激光调查中新收录。光纤激光机的现行构成需确认。",
+      "src": "https://monoist.itmedia.co.jp/mn/articles/2303/15/news145.html ／ https://www.komatsu.jp/en/newsroom/2020/20200821"
+    },
+    "laser-koike": {
+      "name": "小池酸素工业（Koike Sanso Kogyo）",
+      "own": "非上市。总部位于东京都墨田区",
+      "rev": "未能确认",
+      "prod": "光纤激光切割机（FIBERTEX系列）、等离子・气体切割机",
+      "pos": "日本切割机大型厂商。份额未确认",
+      "def": "未能确认。用途为钣金・钢材切割",
+      "chn": "振荡器从外部采购。经所装振荡器输出端的隔离器（TGG等旋转器与磁体）涉及Tb、Sm（一般构成）。振荡器采购来源未公开。",
+      "note": "2026-11-21：在工业激光调查中新收录。光纤激光机的现行构成需确认。",
+      "src": "https://koike-japan.com/site/koike/get/params_E449791033_Dattachment/289468/FIBERTEX-Zero1.pdf"
     }
   },
   "stages": {
@@ -2618,14 +2906,14 @@
     },
     "03_yag_crystal": {
       "label": "激光用光学晶体与透明陶瓷",
-      "description": "YAG与Y₂O₃、TGG与Tb系玻璃",
+      "description": "YAG与Y₂O₃、TGG、TSAG与Tb系玻璃",
       "srcNotes": {
-        "02_compound": "以高纯Y₂O₃、Tb₄O₇作为晶体生长与烧结的原料"
+        "02_compound": "以高纯Y₂O₃、Tb₄O₇、Sc₂O₃作为晶体生长与烧结的原料（Sc用于TSAG）"
       }
     },
     "03_magneto_garnet": {
       "label": "磁性石榴石（铋取代薄膜与YIG）",
-      "description": "铋取代稀土铁石榴石薄膜、YIG单晶与SGGG衬底",
+      "description": "Bi:RIG膜・YIG单晶・SGGG基板",
       "srcNotes": {
         "02_compound": "由高纯Y、Tb、Gd等氧化物，在石榴石衬底上以LPE法生长铋取代磁性石榴石薄膜，或生长YIG单晶"
       }
@@ -2710,17 +2998,19 @@
       }
     },
     "04_faraday_laser": {
-      "label": "法拉第旋转器与光隔离器（激光波长）",
-      "description": "532〜1064nm，TGG与Tb系玻璃元件",
+      "label": "法拉第旋转器与隔离器（激光）",
+      "description": "532〜1064nm，TGG・TSAG・Tb系玻璃",
       "srcNotes": {
-        "03_yag_crystal": "将TGG晶体、透明陶瓷或Tb系玻璃加工为旋转器元件，并与磁体、偏振器组合"
+        "03_yag_crystal": "将TGG、TSAG晶体、透明陶瓷或Tb系玻璃加工为旋转器",
+        "04_mag": "组装NdFeB（添加Dy）或SmCo磁体，作为使TGG、Tb系玻璃旋转器饱和的强磁场源，制成旋转器单元与光隔离器"
       }
     },
     "04_faraday_tele": {
-      "label": "法拉第旋转器与光隔离器（通信波长）",
-      "description": "1310/1550nm，铋取代石榴石薄膜元件",
+      "label": "法拉第旋转器与隔离器（光通信）",
+      "description": "1310/1550nm，Bi:RIG・YIG",
       "srcNotes": {
-        "03_magneto_garnet": "将磁性石榴石薄膜、YIG晶体加工为旋转器元件"
+        "03_magneto_garnet": "将磁性石榴石薄膜、YIG晶体加工为旋转器芯片",
+        "04_mag": "将SmCo磁体置于旋转器芯片周围，并与偏振片、双折射晶体组合成光隔离器与光环行器（通信用途因温度特性通常采用SmCo）"
       }
     },
     "04_target": {
@@ -2798,17 +3088,17 @@
     },
     "05_laser_osc": {
       "label": "固体激光器",
-      "description": "Nd:YAG与Yb:YAG",
+      "description": "Nd:YAG・Yb:YAG・Nd:YVO₄・光纤",
       "srcNotes": {
-        "04_laser_medium": "将激光介质装入振荡器",
-        "04_faraday_laser": "作为振荡器内部的隔离器阻断返回光"
+        "04_laser_medium": "将Nd:YAG・Yb:YAG・Nd:YVO₄晶体与陶瓷作为介质装入固体激光振荡器（光纤激光器不经过此连接）",
+        "04_faraday_laser": "将光隔离器装在振荡器输出端，阻断返回光。固体激光器与光纤激光器均使用，kW级高功率产品组合TGG・TSAG旋转器与强磁体"
       }
     },
     "05_photonics": {
-      "label": "光通信部件与光器件",
-      "description": "光隔离器与光环行器",
+      "label": "光部件与光器件",
+      "description": "TOSA、EML、ITLA、光收发模块与光放大器",
       "srcNotes": {
-        "04_faraday_tele": "将旋转器与偏振片、磁体组合，制成阻断返回半导体激光器的反射光的光部件（1310/1550nm）"
+        "04_faraday_tele": "将光隔离器装入TOSA、EML、ITLA、光收发模块和光放大器，阻断返回半导体激光器的反射光（1310/1550nm）"
       }
     },
     "05_scaln_film": {
@@ -2880,9 +3170,9 @@
       "description": "卫星、探测器与在轨服务",
       "srcNotes": {
         "05_motor": "用作反作用飞轮和驱动机构",
-        "05_laser_osc": "用于航天激光雷达和激光测距",
+        "05_laser_osc": "空间激光雷达・激光测距，以及卫星搭载的碎片清除用脉冲激光（Tb・Sm经光隔离器的旋转器与磁体）",
         "05_electronics": "用作航天电子元件",
-        "05_photonics": "用于空间光通信的高可靠隔离器（处于在轨环境试验阶段）"
+        "05_photonics": "用于空间光通信的光收发器件（内置高可靠隔离器，处于在轨环境试验阶段）"
       }
     },
     "06_engine": {
@@ -2916,9 +3206,9 @@
     },
     "06_laser": {
       "label": "激光装备与照射",
-      "description": "测距、照射与高功率",
+      "description": "测距・照射・高功率・工业加工机",
       "srcNotes": {
-        "05_laser_osc": "用作测距、照射和加工光源",
+        "05_laser_osc": "测距・照射・高功率激光的光源，以及激光加工机・打标机・焊接机・退火装置的光源",
         "05_electronics": "用于交战训练激光收发器等设备的半导体激光器和电子电路"
       }
     },
@@ -2939,22 +3229,23 @@
         "05_scaln_film": "用于通信设备的 RF 滤波器",
         "05_tube": "用于卫星通信和无线电设备的发射管",
         "05_electronics": "用于通信设备的电子电路和元件（包括磁性元件）",
-        "05_photonics": "作为光隔离器与光环行器装入光传输设备和海底电缆中继器"
+        "05_photonics": "作为光收发模块与光放大器装入光传输设备和海底电缆中继器"
       }
     },
     "06_optical_net": {
       "label": "光通信基础设施与光传输",
       "description": "光传输设备、海底电缆与卫星光通信（民用）",
       "srcNotes": {
-        "05_photonics": "将光隔离器与光环行器装入光传输设备和海底中继器"
+        "05_photonics": "将光收发模块与光放大器装入光传输设备和海底中继器"
       }
     },
     "06_rf_sensor": {
       "label": "RF与压电传感、测量",
-      "description": "高频测量、压电评估与传感器",
+      "description": "高频测量・压电评估・传感器・激光测量",
       "srcNotes": {
         "05_scaln_film": "用作压电传感器和高频器件",
-        "05_electronics": "用于测量仪器和传感器的电子元件"
+        "05_electronics": "用于测量仪器和传感器的电子元件",
+        "05_laser_osc": "装入检测・测量设备、隐形切割装置与激光打标机的激光光源（Tb・Sm经光隔离器的旋转器与磁体）"
       }
     }
   },

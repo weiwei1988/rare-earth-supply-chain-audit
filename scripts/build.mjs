@@ -23,6 +23,7 @@ function subcatForHtml(sub) {
   if (sub.srcEls) out.srcEls = sub.srcEls;
   if (sub.srcNotes) out.srcNotes = sub.srcNotes;
   if (sub.srcSkip) out.srcSkip = sub.srcSkip;
+  if (sub.srcAssembly) out.srcAssembly = sub.srcAssembly;
   if (sub.note) out.note = sub.note;
   return out;
 }

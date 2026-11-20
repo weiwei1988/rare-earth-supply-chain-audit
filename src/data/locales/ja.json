@@ -20,8 +20,8 @@
       "pos": "国内Y系分離精製の根元。全希土類を扱う国内希少ノード",
       "def": "耐プラズマ、TBC、レーザー、磁石の上流。防衛電子・宇宙用半導体",
       "chn": "中～高。原料の中国原産比率、非中国・リサイクル原料、在庫月数を確認",
-      "src": "JSX ／ Y DD ／ DyTb DD ／ Sm DD ／ https://em.mitsui-kinzoku.com/products/applications/electronics/mlcc/ ／ https://em.mitsui-kinzoku.com/rare-material/products/oxide-rare-earth-compounds/",
-      "note": "法人ではなく事業部単位。売上条件は例外"
+      "src": "JSX ／ Y DD ／ DyTb DD ／ Sm DD ／ https://em.mitsui-kinzoku.com/products/applications/electronics/mlcc/ ／ https://em.mitsui-kinzoku.com/rare-material/products/oxide-rare-earth-compounds/ ／ https://www.recycle-ken.or.jp/activite/rareearth.html",
+      "note": "法人ではなく事業部単位。売上条件は例外 ／ 2026-11-20：使用済み蛍光管の蛍光体からレアアースを溶解・抽出・精製する福岡県の共同事業（旧日本イットリウムと参加）で、回収対象の緑色蛍光体に Tb が含まれるため、再資源化に Dy・Tb を加えた。Tb の回収量は非開示。"
     },
     "seed-2": {
       "name": "三徳（プロテリアルマグネティクス傘下）",
@@ -38,12 +38,12 @@
       "name": "信越化学工業",
       "own": "上場企業 ／ 信越化学工業株式会社（東証プライム、証券コード4063）。希土類の分離・精製と磁石は武生工場（福井県越前市）、磁石合金は信越（長汀）テクノロジー（中国・福建省、年産3,000トン）、分離・精製と焼結磁石は信越マグネティック・マテリアルズ・ベトナム（ハイフォン、磁石は年産2,200トン）が担う",
       "rev": "連結売上高 2兆5,739億円、うち電子材料 1兆157億円（2026年3月期）。希土類磁石は電子材料事業に含む",
-      "prod": "希土類の分離・精製（酸化物は純度3N〜6N、数10nm の微粉から溶射用の大粒径粉 QU・PQ タイプまで、ほかに水酸化物・フッ化物・複合酸化物）、耐プラズマ皮膜用の Y₂O₃・YOF 溶射材料、ネオジム磁石 N シリーズ（粒界拡散で Dy・Tb を減らした高保磁力品）、サマリウム磁石 R シリーズ（Sm₂Co₁₇）、磁石合金、磁石の研削粉や使用済み HDD・モータからの再資源化",
+      "prod": "希土類の分離・精製（酸化物は純度3N〜6N、数10nm の微粉から溶射用の大粒径粉 QU・PQ タイプまで、ほかに水酸化物・フッ化物・複合酸化物）、耐プラズマ皮膜用の Y₂O₃・YOF 溶射材料、ネオジム磁石 N シリーズ（粒界拡散で Dy・Tb を減らした高保磁力品）、サマリウム磁石 R シリーズ（Sm₂Co₁₇）、磁石合金、磁石の研削粉や使用済み HDD・モータからの再資源化、ファラデー回転子・光アイソレータ（通信波長用と、1μm 帯の高出力ファイバーレーザー用）",
       "pos": "希土類の分離・精製から合金・磁石まで一貫して手がける国内では数少ない企業で、磁石の生産能力は国内トップクラス。Sm₂Co₁₇ 磁石は他社に先駆けて量産し、高温・宇宙用途に使われる。2026年6月に福井県で18年ぶりの分離・精製工場の新設を公表し、350億円規模（うち175億円は国の補助）を投じて国内の製錬能力を高める。ベトナムでは分離・精製と焼結磁石を一貫生産する",
       "def": "高温に耐える Sm 系磁石は航空宇宙用途に使われ、Y₂O₃ 溶射材料は半導体製造装置の耐プラズマ皮膜に、磁石はモータ・アクチュエータや防衛電子部品につながる。防衛向けの直接納入は非開示",
       "chn": "磁石合金の一部は中国（福建省）で製造する。Dy・Tb など重希土類は中国依存が高く、研削粉（磁石加工で約2割出る）や使用済み HDD・モータからの回収と、中国以外の原料確保を進めている。企業固有の使用量と調達先は非開示",
-      "src": "JSX ／ Y DD ／ DyTb DD ／ Sm DD ／ https://www.rare-earth.jp/product.html ／ https://www.shinetsu.co.jp/sec/takefu/ ／ https://www.shinetsu-rare-earth-magnet.jp/ ／ https://www.shinetsu.co.jp/en/news/news-release/shin-etsu-chemical-to-set-up-a-base-in-china-to-manufacture-magnet-alloys-for-rare-earth-magnets/ ／ https://www.shinetsu.co.jp/en/news/news-release/shin-etsu-chemical-to-double-its-production-capacity-of-rare-earth-magnets-in-vietnam/ ／ https://www.shinetsu.co.jp/wp-content/uploads/2025/07/20260428_con_J.pdf ／ https://www.jiji.com/jc/article?k=2026061100578&g=eco ／ https://www.fukuishimbun.co.jp/articles/-/2623075 ／ https://xtech.nikkei.com/atcl/nxt/mag/nmc/18/00012/00279/ ／ https://www.shinetsu.co.jp/en/sustainability/esg_environment/resource_saving/",
-      "note": "JSXの2ノードを重複統合。工程2・3は海外子会社・海外工場を含む信越化学グループとしての一貫生産範囲 ／ 2026-09-23：電子材料セグメントの売上、製品グレード、生産拠点と能力、福井の新工場、リサイクルを追記"
+      "src": "JSX ／ Y DD ／ DyTb DD ／ Sm DD ／ https://www.rare-earth.jp/product.html ／ https://www.shinetsu.co.jp/sec/takefu/ ／ https://www.shinetsu-rare-earth-magnet.jp/ ／ https://www.shinetsu.co.jp/en/news/news-release/shin-etsu-chemical-to-set-up-a-base-in-china-to-manufacture-magnet-alloys-for-rare-earth-magnets/ ／ https://www.shinetsu.co.jp/en/news/news-release/shin-etsu-chemical-to-double-its-production-capacity-of-rare-earth-magnets-in-vietnam/ ／ https://www.shinetsu.co.jp/wp-content/uploads/2025/07/20260428_con_J.pdf ／ https://www.jiji.com/jc/article?k=2026061100578&g=eco ／ https://www.fukuishimbun.co.jp/articles/-/2623075 ／ https://xtech.nikkei.com/atcl/nxt/mag/nmc/18/00012/00279/ ／ https://www.shinetsu.co.jp/en/sustainability/esg_environment/resource_saving/ ／ https://patents.google.com/patent/JP5276640B2/ja ／ https://www.microsi.com/?p=11285",
+      "note": "JSXの2ノードを重複統合。工程2・3は海外子会社・海外工場を含む信越化学グループとしての一貫生産範囲 ／ 2026-09-23：電子材料セグメントの売上、製品グレード、生産拠点と能力、福井の新工場、リサイクルを追記 ／ 2026-11-19：1μm 帯の高出力ファイバーレーザー用光アイソレータ（Tb 系酸化物の回転子）を追記"
     },
     "seed-4": {
       "name": "高純度化学研究所",
@@ -126,14 +126,14 @@
       "name": "オキサイド",
       "own": "証券コード：6521",
       "rev": "100.4億円（2026年2月期・連結）",
-      "prod": "266nm・193nm全固体深紫外レーザー、CW／QCW／ピコ秒レーザー、波長変換モジュール、波長変換用単結晶（BBO・CLBO） / TGG単結晶（Tb₃Ga₅O₁₂）とLPE育成Bi:RIG。TGGは光アイソレータ用、Bi:RIGの希土類内訳は非開示",
+      "prod": "単結晶：波長変換用（CLBO・Mg:SLN・Mg:SLT・LBGO）、偏光・電気光学用（LB4・KTN）、磁気光学用（TSAG・YIG・LPE 育成の Bi:RIG。光アイソレータの回転子材料）、量子メモリ用の RE:YSO、PET 用シンチレータ（LGSO・GSO ほか）、パワー半導体用結晶 / レーザー：CW 深紫外レーザー Frequad（213〜302nm）、QCW 深紫外レーザー Kalama（266nm・193nm）、真空紫外レーザー PEV。フェムト秒ファイバーレーザー Jasper（ポーランド Fluence 製）と小型 YAG レーザー（米 Areté 製）は輸入販売 / 光デバイス：QPM 波長変換デバイス（PP-Mg:SLT・PP-Mg:LN）、THz 素子、電気光学デバイス、光アイソレータ用の磁気光学デバイス（光トランシーバ向けファラデー回転子は第6工場で増産） / 光モジュール：ファイバー結合の波長変換器、電気光学モジュール、量子もつれ光子対の光源 / 試作・サービス：単結晶の試作開発（DC-CZ・CZ・EFG・TSSG・FZ・VB・フラックス・マイクロ引き下げ法）、波長変換器の試作、フェムト秒レーザー描画による導波路加工",
       "pos": "深紫外レーザー世界シェア30%以上、波長変換単結晶95%以上（会社推計）。",
       "def": "深紫外レーザーは先端半導体検査・微細加工の基盤。航空機・ドローン・衛星向け特殊レーザーも扱うが、同製品は米Areté製。自社深紫外レーザーの防衛納入は未確認。 ／ 今回の公開情報確認では直接契約を特定できず。",
-      "chn": "当該DUV製品はBBO等の非線形結晶が主要。Y曝露は基本波源BOMを確認するまで確定不可。",
-      "bom": "266nm QCWは赤外ファイバー増幅光源を2段波長変換。現行製品のファイバー添加材・変換結晶は非開示。CW Frequadは超高純度BBOを明記。YAG媒質は確認できない。 ／ 当該DUV発振器のYAG使用は未確認",
-      "gap": "自社製と輸入販売を区別し、防衛・宇宙顧客、基本波源の媒質、輸出管理該非を確認。",
-      "src": "https://www.opt-oxide.com/products-list/laser/ ／ https://www.opt-oxide.com/products-list/laser/qcw-laser/item_LA00008 ／ https://www.opt-oxide.com/v2019/wp-content/uploads/2013/03/266Laser_r12-1.pdf ／ https://www.opt-oxide.com/ir/meeting/meeting26_review/ ／ https://www.opt-oxide.com/products-list/laser/special ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00006 / https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00017",
-      "note": "固体レーザー発振器DDの「採用候補（発振器）」に基づきStage 04へ正式採用。 ／ 266nm QCW は赤外ファイバー増幅光源を2段波長変換する構成で、ファイバ増幅段と多段変換には戻り光を遮るアイソレータを置くのが一般的。同社自身がファラデー回転子のメーカーでもある / 光学経路上の製品・用途に基づく関連フラグ。個別製品のY・Dy・Tb含有、部材供給元は非開示であり、搭載確認を意味しない。"
+      "chn": "深紫外レーザーの波長変換は BBO・CLBO など希土類を含まない結晶が中心。希土類は磁気光学結晶（TSAG の Tb・Sc、YIG・Bi:RIG の Y ほか）と、レーザーの基本波源・アイソレータに関わる。原料の調達先は非開示。",
+      "bom": "Kalama 266nm は赤外のファイバー増幅光源を2段で波長変換し、Frequad は超高純度 BBO で波長変換する。基本波源の媒質は非開示で、自社レーザーでの YAG の使用は確認できない（YAG を明示するのは輸入販売の Areté 製のみ）。TSAG は TGG より 1μm 帯の透過率が高く磁気光学定数が約2割大きい、高強度レーザー用アイソレータの材料。Bi:RIG は 1.3〜1.55μm の通信用アイソレータ向け。",
+      "gap": "自社製と輸入販売を区別し、防衛・宇宙顧客、基本波源の媒質、輸出管理該非を確認。磁気光学デバイスの品目（回転子単体かアイソレータ組立品か、磁石を含むか）と、TSAG の Sc 原料の調達先も未確認。",
+      "src": "https://www.opt-oxide.com/products/ ／ https://www.opt-oxide.com/products/optical-device/ ／ https://www.opt-oxide.com/products/optical-module/ ／ https://www.opt-oxide.com/products-list/laser/ ／ https://www.opt-oxide.com/products-list/laser/cw-laser/item_LA00003 ／ https://www.opt-oxide.com/products-list/laser/qcw-laser/item_LA00008 ／ https://www.opt-oxide.com/products-list/laser/femto-laser/item_LA00012_1 ／ https://www.opt-oxide.com/products-list/laser/special/item_LA00016 ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00006 ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00013 ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00014 ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00015 ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00017 ／ https://www.opt-oxide.com/products-list/single-crystal/scintillator ／ https://www.opt-oxide.com/products-list/optical-device/qpm ／ https://www.opt-oxide.com/v2019/wp-content/uploads/2013/03/266Laser_r12-1.pdf ／ https://www.opt-oxide.com/ir/meeting/meeting26_review/ ／ https://www.opt-oxide.com/products/single-crystal/ ／ https://www.opt-oxide.com/products/laser/ ／ https://www.opt-oxide.com/products/prototype-service/",
+      "note": "固体レーザー発振器DDの「採用候補（発振器）」に基づきStage 04へ正式採用。 ／ 266nm QCW は赤外ファイバー増幅光源を2段波長変換する構成で、ファイバ増幅段と多段変換には戻り光を遮るアイソレータを置くのが一般的。同社自身がファラデー回転子のメーカーでもある / 光学経路上の製品・用途に基づく関連フラグ。個別製品のY・Dy・Tb含有、部材供給元は非開示であり、搭載確認を意味しない。 ／ 2026-11-20：製品一覧（単結晶・レーザー・光デバイス・光モジュール）に合わせて製品欄を更新。TGG は現行の製品一覧になく、磁気光学結晶を TSAG・YIG・Bi:RIG に改めた。光アイソレータ用の磁気光学デバイスと TSAG から、レーザー用のファラデー回転子・アイソレータにも置いた。 ／ 2026-11-20：製品一覧の5分類（結晶・レーザー・光デバイス・光モジュール・試作サービス）と照合し、試作・サービスを製品欄に追加。"
     },
     "seed-13": {
       "name": "トーカロ",
@@ -470,12 +470,12 @@
       "name": "デンソー",
       "own": "東証プライム(6902)",
       "rev": "1,000億円超（例外）",
-      "prod": "産総研とのScAlN高圧電薄膜・高温センサー共同研究",
-      "pos": "ScAlNの初期国内デバイス研究を担った下流候補",
-      "def": "航空機、発電機、自動車、化学プラント用高温振動・圧力センサー",
-      "chn": "中～要確認。現行量産品のScAlN採用、ターゲット供給元、Sc原産国をBOM確認",
-      "src": "Sc DD ／ https://www.aist.go.jp/aist_j/press_release/pr2008/pr20081121/pr20081121.html",
-      "note": "量産Sc採用は未確認。R&D・下流監視ノード"
+      "prod": "モータ・アクチュエータ：スタータ、オルタネータ、ワイパー・ブロワ・パワーウインドウなどの車載小型モータ、電動パワーステアリング用モータ、電動ウォーターポンプ、電動車の駆動用モータジェネレータとインバータ（アイシンとの合弁 BluE Nexus で e-Axle） / ScAlN：産総研との ScAlN 高圧電薄膜・高温センサーの共同研究",
+      "pos": "世界有数の自動車部品メーカーで、車載モータの品種が多い。2021年に鉄とニッケルを原子レベルで規則配列させた超格子構造のレアアースフリー磁石の開発を公表し、5〜10年での製品化を目指す。ScAlN では初期の国内デバイス研究を担った",
+      "def": "車載モータは自動車向け。ScAlN 系の高温振動・圧力センサーは航空機、発電機、自動車、化学プラント向け",
+      "chn": "中～高。電動車の駆動用・電動パワーステアリング用などの高性能モータはネオジム磁石を使い、耐熱性のために Dy・Tb を添加する構成が一般的で、レアアースフリー磁石の開発はその置き換えを狙う。磁石の調達先は非開示。ScAlN は量産品の採用、ターゲット供給元、Sc 原産国を要確認",
+      "src": "Sc DD ／ https://www.aist.go.jp/aist_j/press_release/pr2008/pr20081121/pr20081121.html ／ https://www.denso.com/jp/ja/about-us/corporate-info/profile/ ／ https://monoist.itmedia.co.jp/mn/articles/2111/22/news049_2.html ／ https://www.denso.com/jp/ja/-/media/global/business/innovation/review/24/24-doc-13-paper-08.pdf ／ https://www.chunichi.co.jp/article/394595",
+      "note": "量産Sc採用は未確認。R&D・下流監視ノード ／ 2026-11-20：車載モータ・アクチュエータの記述を追加し、「モータ・アクチュエータ」にも置いた。元素フラグはネオジム磁石を使うモータの一般的な構成による。"
     },
     "seed-44": {
       "name": "JX金属",
@@ -753,12 +753,12 @@
       "name": "アンリツ",
       "own": "上場企業 ／ 自社証券コード：6754",
       "rev": "約1,175億円 ／ 連結実績 ／ 2026/3期",
-      "prod": "マイクロ波・ミリ波・光通信・レーダー評価装置、妨害波監視",
+      "prod": "マイクロ波・ミリ波・光通信・レーダー評価装置、妨害波監視 / 光デバイス（子会社アンリツデバイス、厚木）：SLD モジュール（1.31／1.55／1.65µm 帯、バタフライ型、光アイソレータ内蔵）、EDFA・ラマン増幅器の励起用 LD モジュール、SOA",
       "pos": "市場シェア・地位は公開情報で未確認",
-      "def": "衛星・防衛・航空・船舶の通信、レーダー、妨害波評価に直接接続。民生5G計測と技術基盤を共有。",
-      "chn": "企業固有の希土類BOM・中国依存は未確認。",
-      "src": "https://www.anritsu.com/ja-jp/test-measurement/solutions/aerospace-lp ／ https://www.anritsu.com/ja-jp/about-anritsu/corporate-information/profile",
-      "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：会社概要の連結売上高"
+      "def": "衛星・防衛・航空・船舶の通信、レーダー、妨害波評価に直接接続。民生5G計測と技術基盤を共有。 SLD は光ファイバジャイロ（姿勢制御）・OCT・光ファイバセンサの光源で、ジャイロを通じて航空・宇宙・防衛に接続し得る。",
+      "chn": "光デバイスでは、SLD モジュールに内蔵する光アイソレータ（Bi 置換ガーネットの回転子と磁石）を通じて Y・Tb・Sm に触れる。アイソレータの調達先は非開示。計測器の希土類 BOM は未確認。",
+      "src": "https://www.anritsu.com/ja-jp/test-measurement/solutions/aerospace-lp ／ https://www.anritsu.com/ja-jp/about-anritsu/corporate-information/profile ／ https://dl.cdn-anritsu.com/anritsu-sensing-devices/ja-jp/products/sld/as5b320em50m-j-c-3.pdf ／ https://dl.cdn-anritsu.com/anritsu-sensing-devices/ja-jp/products/sld/as3b119gm10m-j-c-2.pdf ／ https://dl.cdn-anritsu.com/anritsu-sensing-devices/ja-jp/products/sld/as6b118gm50m-j-c-2.pdf ／ https://www.sbbit.jp/article/refers/69109",
+      "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：会社概要の連結売上高 ／ 2026-11-20：SLD モジュールが光アイソレータ内蔵と仕様書に明記されているため、「光部品・光デバイス」にも置いた。"
     },
     "stage05-integrated-2": {
       "name": "東陽テクニカ",
@@ -1201,7 +1201,7 @@
       "bom": "Nd:YAGを公式製品ページで明示。励起LD・共振器・SHGを含む発振器として製造。YAG結晶の供給元は非開示。 ／ Y（Nd:YAGを明示）",
       "gap": "防衛顧客、YAG結晶供給元、年間生産台数、宇宙・防衛認証、SL18X以外の現行高出力型式を確認。",
       "src": "https://www.laserfront.jp/company-data/ ／ https://www.laserfront.jp/product-10/ ／ https://www.towajapan.co.jp/jp/wp-content/uploads/sites/2/2026/05/2025FY_annual.pdf ／ https://www.laserfront.jp/topics/%E5%9B%BD%E7%AB%8B%E5%A4%A7%E5%AD%A6%E6%B3%95%E4%BA%BA%E5%A4%A7%E9%98%AA%E5%A4%A7%E5%AD%A6%E3%81%A8%E6%A0%B8%E8%9E%8D%E5%90%88%E7%87%83%E7%84%BC%E6%A8%A1%E6%93%AC%E8%A9%A6%E9%A8%93%E8%A3%85%E7%BD%AE/ ／ https://www.laserfront.jp/",
-      "note": "固体レーザー発振器DDの「採用候補（現行Nd:YAG発振器）」に基づきStage 04へ正式採用。"
+      "note": "固体レーザー発振器DDの「採用候補（現行Nd:YAG発振器）」に基づきStage 04へ正式採用。 ／ 2026-11-21：レーザートリマー・ウェハーマーカー・微細加工・溶接装置を作るため、「レーザー装備・照射」にも置いた。"
     },
     "laser-dd-optoquest": {
       "name": "株式会社オプトクエスト",
@@ -2220,11 +2220,12 @@
       "name": "パナソニック コネクト",
       "own": "非上場 ／ パナソニック ホールディングス株式会社（東証プライム、証券コード6752）の完全子会社",
       "rev": "コネクト・セグメント売上高 1兆3,803億円（2026年3月期、パナソニック HD の開示）",
-      "prod": "ドライエッチング装置（APX300）、プラズマダイサー（APX300-DM・PD）、プラズマクリーナー、電子部品実装機",
+      "prod": "ドライエッチング装置（APX300）、プラズマダイサー（APX300-DM・PD）、プラズマクリーナー、電子部品実装機 / レーザー溶接機・レーザー溶接ロボットシステム（パナソニック プロダクションエンジニアリング）",
       "pos": "電子部品実装機の大手。ドライエッチング装置は LED・化合物半導体・パワー・高周波・MEMS 向けで、プラズマダイサーで後工程にも広げている。",
       "def": "民生の半導体製造が中心で、防衛向けの直接納入は未確認。国内の半導体製造（経済安全保障）の基盤。",
-      "chn": "ドライエッチング装置・プラズマダイサーのチャンバー部品に Y₂O₃ 系の耐プラズマ部材を使うのが一般的。部材の調達先と原料の調達国は非開示。",
-      "src": "https://connect.panasonic.com/jp-ja/products-services_fa/solutions/device-related/dry-etcher ／ https://connect.panasonic.com/jp-ja/products-services_fa_concept_plazma-dicer ／ https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20260512/20260512524367.pdf"
+      "chn": "ドライエッチング装置・プラズマダイサーのチャンバー部品に Y₂O₃ 系の耐プラズマ部材を使うのが一般的。部材の調達先と原料の調達国は非開示。 レーザー溶接機はファイバー・半導体レーザーの光源で、出力側の光アイソレータ（TGG などの回転子と磁石）を通じて Tb・Sm に触れる（一般的な構成）。",
+      "src": "https://connect.panasonic.com/jp-ja/products-services_fa/solutions/device-related/dry-etcher ／ https://connect.panasonic.com/jp-ja/products-services_fa_concept_plazma-dicer ／ https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20260512/20260512524367.pdf ／ https://www.panasonic.com/jp/company/ppe/jigyo/laserwelding/laserwelder.html",
+      "note": "2026-11-21：レーザー溶接機を作るため、「レーザー装備・照射」にも置いた。"
     },
     "ods-kobelco-kaken": {
       "name": "コベルコ科研",
@@ -2354,12 +2355,12 @@
       "name": "日本電気（NEC）",
       "own": "東証上場（6701）",
       "rev": "連結3兆4,234億円（2025年3月期）。光伝送装置単独は非開示",
-      "prod": "光海底ケーブルシステム（海底光中継器、端局装置、利得等化装置、海底分岐装置）、オープン光トランスポート装置 SpectralWave WX シリーズ、衛星用光通信装置 / LUCAS衛星用光通信ターミナル",
+      "prod": "光デバイス：光トランシーバの外販（400G QSFP-DD DCO・CFP2-DCO、100G QSFP28 DCO、10G／25G 波長可変 SFP、25G 80km BiDi、AOC。自社のシリコンフォトニクス波長可変光源を搭載） / 光海底ケーブルシステム（海底光中継器、端局装置、利得等化装置、海底分岐装置）、オープン光トランスポート装置 SpectralWave WX シリーズ、衛星用光通信装置 / LUCAS衛星用光通信ターミナル",
       "pos": "光海底ケーブルで国内唯一の供給者。世界3強の一角とされ、シェアは出典により21%から約3割まで幅がある",
-      "def": "JAXA の光衛星間通信システム LUCAS 向けに衛星用光通信装置を開発し、2025年1月に衛星間 1.8Gbps の光通信と地上局への伝送に成功。海底ケーブルは海底地震観測にも接続",
+      "def": "JAXA の光衛星間通信システム LUCAS 向けに衛星用光通信装置を開発し、2025年1月に衛星間 1.8Gbps の光通信と地上局への伝送に成功。海底ケーブルは海底地震観測にも接続 海底ケーブル関連機器は中継器を含め国内3拠点で製造する。",
       "chn": "中。装置に組み込む光部品の調達構造が論点。データセンター向け光トランシーバは中国勢が世界出荷量の多くを占めるとされる",
-      "src": "https://jpn.nec.com/submarine/index.html ／ https://jpn.nec.com/press/202501/20250123_01.html ／ https://jpn.nec.com/press/202012/20201210_02.html ／ https://journal.meti.go.jp/p/40663/ / https://www.nec.com/en/press/202501/global_20250123_01.html",
-      "note": "海底ケーブル本体は子会社オーシーシー（北九州市若松区）が製造。海底光中継器には50〜100km ごとに光アイソレータが入り、湖北工業の主要顧客として名が挙がる / 光学経路上の製品・用途に基づく関連フラグ。個別製品のY・Dy・Tb含有、部材供給元は非開示であり、搭載確認を意味しない。"
+      "src": "https://jpn.nec.com/submarine/index.html ／ https://jpn.nec.com/press/202501/20250123_01.html ／ https://jpn.nec.com/press/202012/20201210_02.html ／ https://journal.meti.go.jp/p/40663/ / https://www.nec.com/en/press/202501/global_20250123_01.html ／ https://jpn.nec.com/products/fod/index.html ／ https://www.nedo.go.jp/content/800075667.pdf ／ https://toyokeizai.net/articles/-/941884",
+      "note": "海底ケーブル本体は子会社オーシーシー（北九州市若松区）が製造。海底光中継器には50〜100km ごとに光アイソレータが入り、湖北工業の主要顧客として名が挙がる / 光学経路上の製品・用途に基づく関連フラグ。個別製品のY・Dy・Tb含有、部材供給元は非開示であり、搭載確認を意味しない。 ／ 2026-11-20：光トランシーバを部品として外販し、海底光中継器（光増幅器）を NECプラットフォームズ大月事業所で製造するため、「光部品・光デバイス」にも置いた。アイソレータ内蔵は一般的な構成からの推定。"
     },
     "optnet-1finity": {
       "name": "1FINITY",
@@ -2398,12 +2399,12 @@
       "name": "古河電気工業",
       "own": "東証プライム（5801）",
       "rev": "連結1兆3,075億円（2026年3月期）。光デバイス単独は非開示",
-      "prod": "波長可変レーザモジュール ITLA・Micro-ITLA・Nano ITLA、ラマン増幅器用ポンプ LD モジュール、DFB レーザチップ、光ファイバ・光ケーブル",
+      "prod": "波長可変レーザモジュール ITLA・Micro-ITLA・Nano ITLA、ラマン増幅器用ポンプ LD モジュール、DFB レーザチップ、光ファイバ・光ケーブル、旧富士通オプティカルコンポーネンツ（2024年12月に全株式を取得）の LN 変調器・集積コヒーレント受信器・コヒーレントトランシーバ（CFP2-ACO、800G CFP2-DCO） / 産業用の高出力ファイバーレーザー（基幹部品をグループ内で製造し、純銅などの高反射材も加工できる）。レーザーダイオードモジュールはファナックとの合弁 FF レーザでも作る",
       "pos": "DFB レーザチップを作る数少ない国内企業の一社。シェアの数値は未確認。",
       "def": "防衛向けの納入は確認できない。用途は光デジタルコヒーレント伝送とデータセンター",
-      "chn": "中。レーザチップはインジウムリン基板で希土類を使わないが、レーザモジュールに内蔵する光アイソレータ経由で Y・Tb に触れる",
-      "src": "https://www.furukawaelectric.com/release/2021/comm_20210607.html ／ https://www.furukawaelectric.com/release/2019/comm_190920.html ／ https://www.furukawaelectric.com/company/outline/",
-      "note": "ITLA は制御回路基板付きの波長可変レーザモジュールで、半導体レーザーの出力側に光アイソレータを置いて戻り光を遮るのが一般的な構成。Nano ITLA は25×15.6×6.7mm。ラマン増幅器用ポンプ LD モジュールは400／500／600mW 品で1330〜1520nm に対応。光ファイバの増産に約1000億円を投じ、日米など4カ国で生産能力を2倍にする計画（2026年8月発表）"
+      "chn": "中。レーザチップはインジウムリン基板で希土類を使わないが、レーザモジュールに内蔵する光アイソレータ経由で Y・Tb に触れる ファイバーレーザーは出力側の光アイソレータ（TGG などの回転子と磁石）を通じて Tb・Sm に触れる（一般的な構成）。",
+      "src": "https://www.furukawaelectric.com/release/2021/comm_20210607.html ／ https://www.furukawaelectric.com/release/2019/comm_190920.html ／ https://www.furukawaelectric.com/company/outline/ ／ https://www.nihon-ma.co.jp/news/20241212_5801-9/ ／ https://www.fujitsu.com/jp/group/foc/en/products/coherent-modules/cfp2-aco/indexgig5.html ／ https://www.fujitsu.com/jp/group/foc/en/news/indexgig5.html ／ https://pr.mono.ipros.com/narasaki/product/detail/2000341197/ ／ https://newswitch.jp/p/4258",
+      "note": "ITLA は制御回路基板付きの波長可変レーザモジュールで、半導体レーザーの出力側に光アイソレータを置いて戻り光を遮るのが一般的な構成。Nano ITLA は25×15.6×6.7mm。ラマン増幅器用ポンプ LD モジュールは400／500／600mW 品で1330〜1520nm に対応。光ファイバの増産に約1000億円を投じ、日米など4カ国で生産能力を2倍にする計画（2026年8月発表） ／ 2026-11-20：富士通オプティカルコンポーネンツ（川崎）を古河電工グループの光デバイスとして統合した。 ／ 2026-11-21：産業用ファイバーレーザーを作るため、「固体レーザー発振器」にも置いた。"
     },
     "optics-carlit": {
       "name": "カーリット",
@@ -2427,33 +2428,34 @@
     },
     "optics-smmp": {
       "name": "SMMプレシジョン",
-      "own": "法人・事業情報は参照元を参照",
-      "rev": "対象事業の売上規模は不明",
-      "prod": "光通信用の円筒・表面実装・磁石フリー型光アイソレータ、ファイバーレーザー用インライン型、SGGG基板。",
-      "def": "光伝送網の分岐・増幅部やファイバーレーザーを支える部材供給。個別の防衛向け納入先は確認した資料で非開示。",
-      "chn": "光学経路上の製品・用途に基づく関連フラグ。個別製品のY・Dy・Tb含有、部材供給元は非開示であり、搭載確認を意味しない。",
-      "src": "https://www.smm.co.jp/business/material/products/optical_isolator/ / https://www.smmp.co.jp/smmprecision/all/WZE_1_1_AOID%2CID/CLcorporate.htm",
-      "note": "1996年に光アイソレータ製造開始。2005年にFR事業をグラノプトへ移管、2020年にSGGG基板販売開始。SGGGはGd系でありY・Dy・Tb使用とは区別する。"
+      "own": "非上場。住友金属鉱山の100%出資のグループ会社。本社・工場は秋田県能代市",
+      "rev": "非開示",
+      "prod": "光アイソレータ（光通信用の円筒タイプ・表面実装タイプ・磁石フリータイプ、ファイバーレーザー用インラインタイプ）。ファイバーレーザー用は 1030／1064nm の 2W（CW）級で、ファイバ付き・筐体付き・アイソレータコアの形で量産し、1550nm 品も試作する。SGGG（置換型ガリウムガドリニウムガーネット）の結晶・ウエハ（3・4インチ）",
+      "pos": "1996年に光アイソレータの製造を始めた。ファイバーレーザー用は、1μm 帯で従来の RIG より挿入損失が小さい独自の回転子材料（LLR）を使い、TGG・TSAG より大幅に小型な低出力向けアイソレータとして訴求する。シェアの数値は未確認。",
+      "def": "光伝送網の分岐・増幅部やファイバーレーザーを支える部材供給。ファイバーレーザー用は MIL-STD-883 の衝撃・振動試験条件を満たすと記載するが、防衛向けの納入先は非開示。",
+      "chn": "回転子は Bi 置換希土類鉄ガーネットの LPE 単結晶膜で、SGGG 基板の上に育成する（SGGG は Gd 系で、Y・Dy・Tb とは区別する）。ファラデー回転子の事業は2005年にグラノプトへ移し、問い合わせ先もグラノプト。ガーネットの希土類内訳と原料の調達先は非開示。",
+      "src": "https://www.smm.co.jp/business/material/products/optical_isolator/ ／ https://www.smm.co.jp/business/material/products/faraday_rotator/ ／ https://www.smm.co.jp/business/material/products/sggg/ ／ https://www.smmp.co.jp/ ／ https://www.smmp.co.jp/smmprecision/all/WZH_1_1000_AOID,ID/CLentry_flow.htm ／ https://www.smmp.co.jp/s/sm/smmprecision/images/fl_promotion_material20230728.pdf",
+      "note": "1996年に光アイソレータ製造開始。2005年にFR事業をグラノプトへ移管、2020年にSGGG基板販売開始。SGGGはGd系でありY・Dy・Tb使用とは区別する。 ／ 2026-11-20：同社の製品ページと公開資料「Optical Isolator for Fiber Laser Application」（2023年7月）で、1μm 帯のファイバーレーザー用アイソレータの量産を確認し、「ファラデー回転子・アイソレータ（レーザー）」にも置いた。1550nm 品は従来の RIG を使う。元素フラグは Bi 置換希土類鉄ガーネットの回転子と、組み合わせる磁石の一般的な構成による。"
     },
     "optics-santec-aoc": {
       "name": "santec AOC",
-      "own": "法人・事業情報は参照元を参照",
-      "rev": "対象事業の売上規模は不明",
-      "prod": "INTPは光アイソレータとタップ光検出器を1.2×1.2×12mmに統合。C／L-band対応、QSFP-DD・OSFP等の高密度小型光モジュールを想定。",
-      "def": "光通信モジュール内の光量監視・逆方向光の遮断に関わる部品。確認した仕様書では防衛・宇宙案件は記載されていない。",
-      "chn": "光学経路上の製品・用途に基づく関連フラグ。個別製品のY・Dy・Tb含有、部材供給元は非開示であり、搭載確認を意味しない。",
-      "src": "https://aoc.santec.com/en/assets/doc/INTP-C-E.pdf",
-      "note": "光学経路上の製品・用途に基づく関連フラグ。個別製品のY・Dy・Tb含有、部材供給元は非開示であり、搭載確認を意味しない。"
+      "own": "非上場。santec Holdings（東証、証券コード6777）のグループ会社で、光通信用部品・光学デバイスを担う。本社は愛知県小牧市",
+      "rev": "会社単独の売上は非開示。santec Holdings の連結売上高は240.3億円（2025年3月期）",
+      "prod": "空間光変調器（LCOS-SLM：SLM-200・210・250・300・310 ほか）、スペクトル整形器（LCOS 型プログラマブル光フィルタ WSS-2000）、光パワーモニタ（タップ機能付きフォトディテクタ NTP・UTP・MTP・IPD、光アイソレータ内蔵の INTP、マルチチャンネル光パワーモニタ MPA）、光アッテネータ（MEMS 駆動の COVA-1）、光フィルタ（MEMS 波長可変フィルタ MTF シリーズ）、光サブシステム（カスタム光モジュール）",
+      "def": "光通信モジュール内の光量監視・逆方向光の遮断に関わる部品。確認した製品ページ・仕様書では防衛・宇宙案件は記載されていない。",
+      "chn": "希土類が関わるのは、光アイソレータを内蔵する INTP（C／L バンドのタップフォトディテクタ）だけ。アイソレータの回転子・磁石の材料と調達先は非開示。空間光変調器・フィルタ・アッテネータ・パワーモニタの本体には希土類を使う構成は確認できない。",
+      "src": "https://aoc.santec.com/jp/ ／ https://aoc.santec.com/jp/products/slm/ ／ https://aoc.santec.com/jp/products/monitor/ ／ https://aoc.santec.com/jp/products/monitor/intp/ ／ https://aoc.santec.com/jp/products/voa/ ／ https://aoc.santec.com/jp/products/filter/ ／ https://aoc.santec.com/en/assets/doc/INTP-C-E.pdf",
+      "note": "光アイソレータそのものの製品はなく、アイソレータを組み込んだタップフォトディテクタ INTP（QSFP-DD 光トランシーバ向け、Preliminary）を作るため、「光部品・光デバイス」に置く。元素フラグは INTP 内蔵アイソレータの一般的な構成（Bi:RIG・YIG の回転子と SmCo 磁石）によるもので、搭載確認を意味しない。 ／ 2026-11-20：製品一覧（空間光変調器・スペクトル整形器・光パワーモニタ・光アッテネータ・光フィルタ・光サブシステム）とプロダクトガイド2025で確認し、分類を「ファラデー回転子・アイソレータ（光通信）」から移した。"
     },
     "optics-tatsuta": {
       "name": "タツタ電線",
       "own": "法人・事業情報は参照元を参照",
       "rev": "対象事業の売上規模は不明",
-      "prod": "波長依存性の小さい広帯域・偏光無依存型光アイソレータ。波長・ポート長・コネクタを指定する用途別試作は1個から相談可能。",
+      "prod": "波長依存性の小さい広帯域・偏光無依存型の光アイソレータと、広帯域の光サーキュレータ（光ファイバ部品）。波長・ポート長・コネクタを指定する用途別試作は1個から相談可能。",
       "def": "光源の戻り光損傷や反射に起因する誤動作を抑える光ファイバ部品。個別の防衛・宇宙装備への採用は確認した資料に記載なし。",
       "chn": "光学経路上の製品・用途に基づく関連フラグ。個別製品のY・Dy・Tb含有、部材供給元は非開示であり、搭載確認を意味しない。",
-      "src": "https://www.tatsuta.co.jp/product/sensor_medical/optical/isorator/",
-      "note": "光学経路上の製品・用途に基づく関連フラグ。個別製品のY・Dy・Tb含有、部材供給元は非開示であり、搭載確認を意味しない。"
+      "src": "https://www.tatsuta.co.jp/product/sensor_medical/optical/isorator/ ／ https://www.tatsuta.co.jp/product/sensor_medical/optical/cirlulator/",
+      "note": "光学経路上の製品・用途に基づく関連フラグ。個別製品のY・Dy・Tb含有、部材供給元は非開示であり、搭載確認を意味しない。 ／ 2026-11-20：光アイソレータ・光サーキュレータの製品ページで確認し、「ファラデー回転子・アイソレータ（光通信）」に置く。回転子を自社で作るか調達するかは未確認。"
     },
     "optics-space-compass": {
       "name": "Space Compass",
@@ -2536,6 +2538,292 @@
       "chn": "中。Sm は中国の中重希土類輸出管理の対象。原料の調達先は非開示",
       "src": "https://www.daido.co.jp/products/isotropic_SmFeN/ ／ https://www.daido.co.jp/about/release/2026/260511_smfen.html",
       "note": "磁粉の量産は技術開発研究所（名古屋市南区）、コンパウンドの混練は築地テクノセンター（名古屋市港区、2025年12月に大型混練機を導入）。ボンド磁石成形体はダイドー電子が製造販売すると自社が明記。SmFeN 磁石材料で2030年に年間200トン規模の市場展開を目標"
+    },
+    "fujikura": {
+      "name": "フジクラ",
+      "own": "上場企業 ／ 株式会社フジクラ（東証プライム、証券コード5803）",
+      "rev": "連結売上高 1兆1,824億円、うち情報通信 6,530億円（2026年3月期）",
+      "prod": "光ファイバ・光ケーブル・光コネクタ、ファイバーレーザー用の光ファイバデバイス（ファイバブラッググレーティング、励起光のコンバイナ・カプラ）、Yb ファイバーレーザーと、それに組み込む光アイソレータの回転子（TSAG 単結晶、NIMS と共同開発）",
+      "pos": "光ファイバ・光部品の大手。TSAG（Tb・Sc 系ガーネット）単結晶を 1μm 帯レーザー用アイソレータの回転子に使う技術を NIMS と共同で特許化し、自社の Yb ファイバーレーザーに組み込んでいる。回転子・アイソレータのシェアは未確認",
+      "def": "確認できず。ファイバーレーザーは加工用途が中心",
+      "chn": "TSAG の原料となる Tb・Sc の調達先は非開示。Tb は中国依存が高い",
+      "src": "https://patents.google.com/patent/US8804240B2/en ／ https://www.nims.go.jp/electr-opt/OPCRY_e.html ／ https://www.optic-product.fujikura.com/wp-content/uploads/2025/06/CPJ70A_71A_79A.pdf ／ https://www2.jpx.co.jp/disc/58030/081220260514532598_tse-acedjpsm-58030-20260514358030-ixbrl.htm",
+      "note": "2026-11-19：レーザー波長のファラデー回転子・光アイソレータの追加調査で新規に収録 ／ 2026-11-21：自社の Yb ファイバーレーザーを作るため、「固体レーザー発振器」にも置いた（Sc は自社の TSAG 回転子を組み込むアイソレータとして含む）。"
+    },
+    "compound-kisankinzoku": {
+      "name": "稀産金属",
+      "own": "非上場。本社は大阪市西淀川区、東京営業所は千代田区。1959年設立",
+      "rev": "非開示。売上高100億円を目標に掲げる",
+      "prod": "希少金属の化合物（Ga・In・W・Mo・Bi・Sb・Te・Li・Cs ほかの酸化物・塩化物など）、蒸着・薄膜材料（Ta₂O₅・SnO₂・MgF₂・ITO ほか）、受注による無機薬品の製造、有価金属・廃触媒の回収。取扱元素に Nd・Dy・Tb を含む",
+      "pos": "希少金属化合物と薄膜材料の専門メーカー。秋田県潟上市に新工場を建設中（2026年秋稼働目標）。希土類の取扱量・シェアは未確認",
+      "def": "確認できず。薄膜材料・化合物は電子部品・半導体向けが中心",
+      "chn": "Dy・Tb の取り扱いは取扱元素としての記載のみで、品目・量・調達先は非開示",
+      "src": "https://www.kisankinzoku.co.jp/product ／ https://www.kisankinzoku.co.jp/page1",
+      "note": "2026-11-20：日本の希土類の素材メーカーとして新規収録。製品一覧に希土類の品目は載っておらず、Dy・Tb は取扱元素としての記載に基づく弱い根拠のため評価を C とした。"
+    },
+    "motor-mabuchi": {
+      "name": "マブチモーター",
+      "own": "上場企業 ／ マブチモーター株式会社（東証プライム、証券コード6592）。本社は千葉県松戸市",
+      "rev": "連結売上高 2,004億円（2025年12月期）",
+      "prod": "小型直流モータ（ブラシ付き・ブラシレス）、高トルク小型軽量モータ。自動車電装（ミラー・ドアロック・グリルシャッターなど）、ロボット・移動体、精密・事務機器、家電・工具、医療向け",
+      "pos": "小型直流モータの専業大手。2012年からモータの希土類使用量の削減と小型・軽量化に取り組む。磁石の種類別の構成とシェアは未確認",
+      "def": "確認できず。用途は自動車電装・民生・医療が中心",
+      "chn": "ブラシレスモータなどの高性能品はネオジム磁石を使い、耐熱性のために Dy・Tb を添加する構成が一般的。磁石の調達先は非開示",
+      "src": "https://www.mabuchi-motor.co.jp/ ／ https://www.mabuchi-motor.co.jp/product/knowledge/classification/customized.html ／ https://www.mabuchi-motor.co.jp/csr/pdf/env2012.pdf ／ https://www2.jpx.co.jp/disc/65920/081220251211517737_tse-acedjpsm-65920-20251211517737-ixbrl.htm",
+      "note": "2026-11-20：日本の希土類磁石の需要側（モータ）として新規収録。元素フラグはネオジム磁石を使うモータの一般的な構成による。"
+    },
+    "motor-mitsuba": {
+      "name": "ミツバ",
+      "own": "上場企業 ／ 株式会社ミツバ（東証プライム、証券コード7280）。本社は群馬県桐生市",
+      "rev": "連結売上高 3,486億円（2026年3月期）",
+      "prod": "四輪電装品（ワイパー・ウォッシャー、パワーウインドウ・パワーシート・パワースライドドア・パワーテールゲート用モータ、スタータ、ファン、電動オイルポンプ、電子スロットル、電動パワーステアリング用ブラシレスモータ）、二輪電装品、小型モビリティ製品",
+      "pos": "ワイパー・パワーウインドウなどボディ系の電装モータが主力で、ホンダグループ向けが約半分。ワイパーで世界初のブラシレス化と脱レアアース化を実現した制御モータを持つ。2012年から高性能磁石の Dy を減らすため、モータ内部の発熱を抑える構造に切り替え、2013年から永久磁石を使わない SR モータも導入した",
+      "def": "確認できず。用途は自動車・二輪・小型モビリティ",
+      "chn": "ネオジム磁石を使うモータでは、耐熱性のための Dy・Tb の使用量を構造の工夫で減らしている。磁石の調達先は非開示",
+      "src": "https://www.mitsuba.co.jp/jp/products/index.html ／ https://www.mitsuba.co.jp/jp/products/autoelectricalsystems.html ／ https://www.nikkei.com/article/DGXNASFB21043_R20C12A2L60000/ ／ https://www2.jpx.co.jp/disc/72800/081220260514532041_tse-acedjpsm-72800-20260515372800-ixbrl.htm",
+      "note": "2026-11-20：日本の希土類磁石の需要側（モータ）として新規収録。元素フラグはネオジム磁石を使うモータの一般的な構成による。"
+    },
+    "motor-yaskawa": {
+      "name": "安川電機",
+      "own": "上場企業 ／ 株式会社安川電機（東証プライム、証券コード6506）。本社は北九州市",
+      "rev": "連結売上収益 5,421億円、うちモーションコントロール 2,361億円・ロボット 2,470億円（2026年2月期）",
+      "prod": "AC サーボモータ・サーボパック（Σ シリーズ）、インバータ、産業用ロボット（MOTOMAN）、システムエンジニアリング（電機システム）",
+      "pos": "サーボモータ・インバータ・産業用ロボットの大手。2013年にネオジム磁石を使わずフェライト磁石の IPM 構造とした EV 駆動用モータを開発した。サーボモータの磁石の種類とシェアは未確認",
+      "def": "確認できず。用途は工作機械・電子部品製造・半導体製造装置・物流・自動車製造など",
+      "chn": "高応答のサーボモータはネオジム磁石を使い、耐熱性のために Dy・Tb を添加する構成が一般的。磁石の種類と調達先は非開示",
+      "src": "https://www.yaskawa.co.jp/product/servomotor ／ https://www.yaskawa.co.jp/newsrelease/product/6079 ／ https://www.e-mechatronics.com/ ／ https://www.yaskawa.co.jp/wp-content/uploads/2026/07/20260710.pdf",
+      "note": "2026-11-20：日本の希土類磁石の需要側（モータ）として新規収録。元素フラグはネオジム磁石を使うサーボモータの一般的な構成による。"
+    },
+    "photonics-fiberlabs": {
+      "name": "ファイバーラボ",
+      "own": "非上場。2000年に KDDI 研究所の社内ベンチャーとして創業。本社・開発製造拠点は埼玉県ふじみ野市（KDDI 総合研究所内）",
+      "rev": "非開示",
+      "prod": "光ファイバ増幅器（C 帯 EDFA、S 帯 TDFA、ふっ化物ファイバによる O 帯 PDFA。ベンチトップ型）、ファイバレーザ光源。パッシブ光部品（光アイソレータなど）は他社製品も扱う",
+      "pos": "ふっ化物ファイバを使う O・S 帯の光増幅器を手がける数少ない国内メーカー。シェアは未確認",
+      "def": "確認できず。用途は光通信の研究開発・評価とセンシング",
+      "chn": "光増幅器は全機種で入出力に光アイソレータを内蔵すると仕様表に明記されており、その回転子（Bi 置換ガーネット）と磁石を通じて Y・Tb・Sm に触れる。アイソレータの調達先は非開示。増幅用の Er・Tm・Pr 添加ファイバはこのデータの対象元素に入らない",
+      "src": "https://www.fiberlabs.co.jp/ ／ https://www.city.fujimino.saitama.jp/material/files/group/20/faibarabo202601.pdf ／ https://www.lambdaphoto.co.uk/fiberlabs-c-band-amplifier-edfa-bench-top.html",
+      "note": "2026-11-20：光部品・光デバイスの追加調査で新規収録。1064nm 帯の光アイソレータは他社製品の取り扱いのため、アイソレータの工程には置かない。"
+    },
+    "laser-melco-fa": {
+      "name": "三菱電機（FA・レーザー加工機）",
+      "own": "東証プライム上場。レーザー加工機は FA システム事業の製品",
+      "rev": "未確認（加工機単独の売上は非開示）",
+      "prod": "ファイバーレーザー発振器 MF シリーズ、CO₂ レーザー発振器、2次元・3次元のレーザー加工機（12kW 級の自社発振器を搭載する機種を含む）、波長 355nm の UV レーザー発振器を載せたプリント基板用レーザー穴あけ機 GTW5-UVF20 シリーズ",
+      "pos": "加工機本体・発振器・制御装置をすべて自社で開発する国内の大手。シェアは未確認",
+      "def": "確認できず。用途は板金・自動車・電子部品の加工",
+      "chn": "ファイバー発振器は出力側の光アイソレータ（TGG などの回転子と磁石）を通じて Tb・Sm に触れる（一般的な構成）。UV レーザー発振器は固体レーザーの3倍波で、YAG・YVO₄ の媒質を通じて Y に触れる（媒質の種類は非開示）。CO₂ レーザーは対象元素を使わない。",
+      "src": "https://www.mitsubishielectric.co.jp/fa/products/mecha/laser/ ／ https://www.mitsubishielectric.co.jp/fa/products/mecha/fiber-oscillator/pmerit/fiber/mf/index.html ／ https://www.mitsubishielectric.co.jp/fa/products/mecha/laser/pmerit/drilling/gtw5-uvf20/index.html ／ https://www.mitsubishielectric.co.jp/news/2020/0128-b.html",
+      "note": "2026-11-21：産業用レーザーの調査で新規収録。光デバイス・防衛の三菱電機とは事業が違うため、別のカードにした。"
+    },
+    "laser-amada": {
+      "name": "アマダ（レーザー加工機・溶接機）",
+      "own": "東証プライム上場。溶接機は子会社アマダウエルドテック（旧ミヤチテクノス・アマダミヤチ）",
+      "rev": "未確認（レーザー機単独の売上は非開示）",
+      "prod": "ファイバーレーザー加工機（板金の切断）、ファイバーレーザー溶接機（車載電池のアルミ・銅の溶接用 MF-C2000A など）、YAG レーザー溶接機（アマダミヤチ時代から）",
+      "pos": "板金加工機の国内大手。旧ミヤチは精密溶接用 YAG レーザーの老舗。シェアは未確認",
+      "def": "確認できず。用途は板金・自動車・電池・電子部品の加工",
+      "chn": "YAG 溶接機は Nd:YAG の媒質を通じて Y に触れる（現行の機種構成は要確認）。ファイバーレーザーは出力側の光アイソレータ（TGG などの回転子と磁石）を通じて Tb・Sm に触れる（一般的な構成）。ファイバー発振器を自社で作るかは未確認。",
+      "src": "https://www.marklines.com/ja/product/14376 ／ https://www.nikkan.co.jp/articles/view/00380251",
+      "note": "2026-11-21：産業用レーザーの調査で新規収録。同じ製品群のアマダウエルドテックはこのカードにまとめた。プリント基板の穴あけ機を作る子会社ビアメカニクスは製品が違うため別のカードにした。"
+    },
+    "laser-keyence": {
+      "name": "キーエンス",
+      "own": "東証プライム上場。本社は大阪市。センサ・計測機器・画像処理機器のメーカー",
+      "rev": "未確認（マーカー単独の売上は非開示）",
+      "prod": "3軸ハイブリッドレーザーマーカー MD-X シリーズ（YVO₄ のマスター発振器をファイバーで増幅する自社の発振器 S-MOPA、平均出力 25W 級）、ファイバー・CO₂・UV のレーザーマーカー",
+      "pos": "レーザーマーカーの国内大手。シェアは未確認",
+      "def": "確認できず。用途は部品・製品へのコード・文字の印字と微細加工",
+      "chn": "MD-X は YVO₄ 結晶（Nd:YVO₄）で発振するため Y に触れる。ファイバー増幅部と出力側の光アイソレータ（TGG などの回転子と磁石）を通じて Tb・Sm に触れる（一般的な構成）。",
+      "src": "https://www.keyence.com/products/marker/fiber-yvo4-yag-laser/md-x1000_1500/ ／ https://www.keyence.com/landing/marker/lp_md-x_modal01.jsp",
+      "note": "2026-11-21：産業用レーザーの調査で新規収録。計測機器・センサのメーカーのため、装置は「RF・圧電センサ・計測」に置いた。"
+    },
+    "laser-spectronix": {
+      "name": "スペクトロニクス",
+      "own": "非上場。本社は大阪府",
+      "rev": "未確認",
+      "prod": "産業・研究用の固体レーザー発振器：緑色（532nm）のピコ秒レーザー、深紫外（266nm）ピコ秒パルスレーザー LDH-X0810（NEDO と共同開発、出力 8W）",
+      "pos": "国産の短パルス固体レーザー発振器メーカー。シェアは未確認",
+      "def": "確認できず。用途は微細加工と研究開発",
+      "chn": "緑色・深紫外の発振器は固体レーザーの波長変換で、YAG・YVO₄ の媒質を通じて Y に触れる可能性が高い（媒質の種類は未確認。深紫外の機種は DFB 半導体レーザーとファイバー・固体の増幅部を組む）。光アイソレータを通じて Tb・Sm に触れる（一般的な構成）。",
+      "src": "https://monoist.itmedia.co.jp/mn/articles/2004/20/news026.html ／ https://www.nikkan.co.jp/articles/view/00368176",
+      "note": "2026-11-21：産業用レーザーの調査で新規収録。媒質の結晶は未確認。"
+    },
+    "laser-fanuc": {
+      "name": "ファナック",
+      "own": "東証プライム上場。本社は山梨県忍野村。レーザーダイオードモジュールは古河電工との折半出資の FF レーザ（山梨県山中湖村）が作る",
+      "rev": "未確認（レーザー単独の売上は非開示）",
+      "prod": "ファイバーレーザー発振器（2015年に参入、6kW 級の FF6000i-モデルA など）、CO₂ レーザー発振器。CNC・ロボットと組んで加工機メーカーに供給",
+      "pos": "工作機械用 CNC の世界大手。レーザー発振器のシェアは未確認",
+      "def": "確認できず。用途は加工機メーカー向けの発振器",
+      "chn": "ファイバーレーザーの媒質（Yb 添加ファイバー）は対象元素に入らない。出力側の光アイソレータ（TGG などの回転子と磁石）を通じて Tb・Sm に触れる（一般的な構成）。CO₂ レーザーは対象元素を使わない。",
+      "src": "https://newswitch.jp/p/7761 ／ https://newswitch.jp/p/4258",
+      "note": "2026-11-21：産業用レーザーの調査で新規収録。報道は2015〜2017年のもので、現行の機種構成は要確認。"
+    },
+    "laser-mhi-defense": {
+      "name": "三菱重工業（防衛・宇宙：高出力レーザ）",
+      "own": "東証プライム上場。防衛・宇宙セグメント",
+      "rev": "未確認（レーザー単独の売上は非開示）",
+      "prod": "車両搭載の高出力レーザ実証装置（10kW 級、小型ドローン対処。防衛装備庁の研究試作で2021〜2024年度に試作し、2024年10月に完成）。kW 級のシングルモードレーザー光をフォトニック結晶ファイバで数十 m 伝送する技術（NTT と共同）",
+      "pos": "国内の高出力レーザ兵器の研究試作を担う2社の一つ",
+      "def": "防衛装備庁の研究試作。約1.2km 先の無人機を狙えるとされる",
+      "chn": "光源の種類と調達先は非開示。kW 級のファイバーレーザーを光源とする場合、出力側の光アイソレータ（TGG などの回転子と磁石）を通じて Tb・Sm に触れる（一般的な構成）。ビーム指向装置の駆動モータ（NdFeB 磁石）も Dy・Tb に関わり得る。",
+      "src": "https://www.mod.go.jp/atla/research/ats2024/pdf_oral_matl/1113_1330_ss17.pdf ／ https://www.mod.go.jp/atla/research/ats2024/pdf_exhi_pos/p-24.pdf ／ https://www.mhi.com/jp/news/18042503.html",
+      "note": "2026-11-21：レーザー装備の調査で新規収録。エネルギー・航空エンジンの三菱重工とは事業が違うため、別のカードにした。"
+    },
+    "laser-khi-defense": {
+      "name": "川崎重工業（防衛：高出力レーザ）",
+      "own": "東証プライム上場。航空宇宙システムカンパニーの防衛事業",
+      "rev": "未確認（レーザー単独の売上は非開示）",
+      "prod": "電気駆動型の高出力レーザシステム（100kW 級、小型ドローンと迫撃砲弾への対処。防衛装備庁の研究試作で2023年2月に納入。40フィートコンテナ2台で構成）。国産の 10kW 級ファイバーレーザー10基の光を束ねる構成と報じられ、2025年末に試験艦「あすか」への搭載が報じられた",
+      "pos": "国内の高出力レーザ兵器の研究試作を担う2社の一つ",
+      "def": "防衛装備庁の研究試作。艦艇搭載の試験段階",
+      "chn": "ファイバーレーザーの出力側の光アイソレータ（TGG・TSAG などの回転子と磁石）を通じて Tb・Sm に触れる（一般的な構成）。国産ファイバーレーザーの供給元は非開示。",
+      "src": "https://www.mod.go.jp/atla/research/ats2024/pdf_oral_matl/1113_1330_ss17.pdf ／ https://armyrecognition.com/news/navy-news/2025/exclusive-japan-installs-100kw-laser-weapon-on-japanese-navy-js-asuka-warship-ahead-of-sea-trials",
+      "note": "2026-11-21：レーザー装備の調査で新規収録。ジェットエンジンの川崎重工とは事業が違うため、別のカードにした。艦艇搭載は海外報道によるもので、公式発表は未確認。"
+    },
+    "space-orbital-lasers": {
+      "name": "Orbital Lasers（オービタルレーザーズ）",
+      "own": "非上場。2024年1月にスカパーJSAT の社内スタートアップとして設立",
+      "rev": "未確認",
+      "prod": "衛星に積むレーザー：デブリの回転を止めるペイロード（DTB）とデブリ除去（ADR、2029年度開始予定）。理研と共同開発する固体パルスレーザーによるレーザーアブレーション方式。衛星搭載ライダーによる地表観測",
+      "pos": "国内でレーザー式のデブリ対処を事業化する唯一の企業とみられる。シェアは該当なし",
+      "def": "防衛省の「軌道上での自国衛星の監視・防御技術に関する研究」でレーザ測距を受注（2025年11月、約20.5億円）",
+      "chn": "固体パルスレーザーの媒質は非開示。一般的な Nd:YAG であれば Y に触れ、光アイソレータの回転子と磁石を通じて Tb・Sm に触れる（一般的な構成）。",
+      "src": "https://www.mod.go.jp/j/press/news/2026/03/06c.html ／ https://news.mynavi.jp/techplus/article/20240131-2873557/ ／ https://www.watch.impress.co.jp/docs/news/1565176.html",
+      "note": "2026-11-21：レーザー装備の調査で新規収録。衛星に積むレーザーのため「衛星・宇宙機」に置いた。"
+    },
+    "laser-vtec": {
+      "name": "ブイ・テクノロジー",
+      "own": "東証プライム上場。本社は横浜市",
+      "rev": "未確認（レーザー装置単独の売上は非開示）",
+      "prod": "FPD 製造用のレーザーアニール装置（Nd:YAG のロングパルス 1064nm と、ショートパルスの2倍波 532nm を備える構成）、FPD の検査・リペア装置",
+      "pos": "FPD 製造装置の国内メーカー。シェアは未確認",
+      "def": "確認できず。用途は FPD・半導体の製造",
+      "chn": "Nd:YAG の媒質を通じて Y に触れる。光アイソレータの回転子と磁石を通じて Tb・Sm に触れる（一般的な構成）。発振器を自社で作るかは未確認。",
+      "src": "https://www.yz.yamagata-u.ac.jp/AnalysisCenter/pdf/FROM/LAS-3747.pdf ／ https://www.jst.go.jp/pr/info/info1361/index.html",
+      "note": "2026-11-21：産業用レーザーの調査で新規収録。"
+    },
+    "laser-viamechanics": {
+      "name": "ビアメカニクス",
+      "own": "2025年にアマダが全株式を取得（取得価格 510億円）。本社は神奈川県",
+      "rev": "未確認",
+      "prod": "プリント基板の穴あけ機：UV レーザー加工機 LU-2QS252（FPC・パッケージ基板用、ナノ秒・ピコ秒の発振器を選べる、穴径 15μm）、CO₂ レーザー加工機、ドリル穴あけ機",
+      "pos": "プリント基板穴あけ機の大手。シェアは未確認",
+      "def": "確認できず。用途は電子基板の製造",
+      "chn": "UV レーザーは固体レーザーの波長変換で、YAG・YVO₄ の媒質を通じて Y に触れる可能性が高い（媒質の種類と発振器の調達先は非開示）。光アイソレータの回転子と磁石を通じて Tb・Sm に触れる（一般的な構成）。CO₂ レーザーは対象元素を使わない。",
+      "src": "https://eetimes.itmedia.co.jp/ee/articles/2406/25/news118.html ／ https://monoist.itmedia.co.jp/mn/spv/2504/21/news057.html",
+      "note": "2026-11-21：産業用レーザーの調査で新規収録。親会社アマダとは製品が違うため、別のカードにした。"
+    },
+    "laser-shibuya": {
+      "name": "澁谷工業",
+      "own": "東証プライム上場。本社は金沢市。レーザー加工機はメカトロ統轄本部の製品",
+      "rev": "未確認（レーザー装置単独の売上は非開示）",
+      "prod": "超短パルスレーザー加工機（緑・UV の発振器を搭載し、金属・樹脂・セラミックス・FPC を加工）、超精密ファイバーレーザー加工機 SPF3907A",
+      "pos": "ボトリングシステムが主力で、レーザー加工機も手がける。シェアは未確認",
+      "def": "確認できず。用途は電子部品・医療機器の微細加工",
+      "chn": "緑・UV の超短パルス発振器は固体レーザーの波長変換で、YAG・YVO₄ の媒質を通じて Y に触れる可能性が高い（媒質の種類と発振器の調達先は非開示）。光アイソレータの回転子と磁石を通じて Tb・Sm に触れる（一般的な構成）。",
+      "src": "https://pr.mono.ipros.com/en/shibuya/product/detail/2000451611 ／ https://pr.mono.ipros.com/en/shibuya/product/detail/2000450495",
+      "note": "2026-11-21：産業用レーザーの調査で新規収録。"
+    },
+    "laser-shi": {
+      "name": "住友重機械工業（レーザー装置）",
+      "own": "東証プライム上場。レーザーアニール装置は住友重機械マテリアルソリューションズ、ファイバーレーザーのシステムは住友重機械メカトロニクス",
+      "rev": "未確認（レーザー装置単独の売上は非開示）",
+      "prod": "パワー半導体（IGBT・SiC）用のレーザーアニール装置、ファイバーレーザーのシステム（溶接・リモート溶接・切断・ろう付け）",
+      "pos": "パワー半導体向けレーザーアニール装置で需要が大きいとされる。シェアは未確認",
+      "def": "確認できず。用途はパワー半導体の製造と溶接・切断",
+      "chn": "発振器は外部から調達する。元素は、組み込む発振器の出力アイソレータ（TGG などの回転子と磁石）を通じて Tb・Sm に触れる（一般的な構成）。発振器の調達先は非開示。アニール装置の光源の種類は未確認。",
+      "src": "https://newswitch.jp/p/43912 ／ https://hrmos.co/pages/shi-sms/jobs/26tech4",
+      "note": "2026-11-21：産業用レーザーの調査で新規収録。同じレーザー装置の事業を持つ2社をこのカードにまとめた。"
+    },
+    "laser-accretech": {
+      "name": "東京精密",
+      "own": "東証プライム上場。本社は東京都八王子市。計測機器と半導体製造装置のメーカー",
+      "rev": "未確認（ダイシング装置単独の売上は非開示）",
+      "prod": "ステルスダイシング装置（レーザーダイサー ML3200：φ300mm ウェーハ用、IR レーザーでシリコン内部に改質層を作る。技術は浜松ホトニクス）、三次元測定機・表面粗さ測定機",
+      "pos": "計測機器と半導体製造装置の国内大手。シェアは未確認",
+      "def": "確認できず。用途は半導体の製造と精密計測",
+      "chn": "IR レーザーの光源は非開示。ステルスダイシング用の固体レーザーであれば YAG・YVO₄ の媒質を通じて Y に触れ、光アイソレータの回転子と磁石を通じて Tb・Sm に触れる（一般的な構成）。",
+      "src": "https://www.accretech.com/en/product/semicon/semi/dicer_semi/ml3200.html ／ https://www.hamamatsu.com/jp/ja/product/lasers/laser-related-products/stealth-dicing-technology.html",
+      "note": "2026-11-21：産業用レーザーの調査で新規収録。計測機器メーカーのため「RF・圧電センサ・計測」に置いた。"
+    },
+    "laser-disco": {
+      "name": "ディスコ",
+      "own": "東証プライム上場。本社は東京都大田区",
+      "rev": "未確認（レーザー装置単独の売上は非開示）",
+      "prod": "ウェーハのレーザーダイシング装置（ステルスダイシングを含むレーザーソー）、ブレードダイシング装置、グラインダ",
+      "pos": "ダイシング装置の世界大手。シェアは未確認",
+      "def": "確認できず。用途は半導体の製造",
+      "chn": "レーザーソーの光源は非開示。固体レーザーであれば YAG・YVO₄ の媒質を通じて Y に触れ、光アイソレータの回転子と磁石を通じて Tb・Sm に触れる（一般的な構成）。",
+      "src": "https://monoist.itmedia.co.jp/mn/spv/1311/27/news034.html ／ https://www.hamamatsu.com/jp/ja/product/lasers/laser-related-products/stealth-dicing-technology.html",
+      "note": "2026-11-21：産業用レーザーの調査で新規収録。光源の種類は未確認。"
+    },
+    "laser-mazak": {
+      "name": "ヤマザキマザック",
+      "own": "非上場。本社は愛知県大口町",
+      "rev": "未確認",
+      "prod": "ファイバーレーザー加工機 OPTIPLEX シリーズ（15kW 発振器の 3015 NEO、厚板用の 3015 HP・4220 HP など）、自動化システム",
+      "pos": "工作機械の国内大手。シェアは未確認",
+      "def": "確認できず。用途は板金の切断",
+      "chn": "発振器は外部から調達する。元素は、組み込む発振器の出力アイソレータ（TGG などの回転子と磁石）を通じて Tb・Sm に触れる（一般的な構成）。発振器の調達先は非開示。",
+      "src": "https://monoist.itmedia.co.jp/mn/articles/2203/30/news074.html ／ https://monoist.itmedia.co.jp/mn/spv/2508/26/news044.html",
+      "note": "2026-11-21：産業用レーザーの調査で新規収録。"
+    },
+    "laser-panasonic-industry": {
+      "name": "パナソニック インダストリー（レーザーマーカー）",
+      "own": "パナソニック ホールディングスの事業会社。レーザーマーカーは制御機器の製品",
+      "rev": "未確認（マーカー単独の売上は非開示）",
+      "prod": "レーザーマーカー：ファイバー方式（FAYb、1060nm）の LP-RF・LP-ZV など、CO₂ 方式（10,600nm）。YAG 結晶の方式は扱っていない",
+      "pos": "レーザーマーカーの国内大手の一つ。シェアは未確認",
+      "def": "確認できず。用途は部品・製品への印字",
+      "chn": "ファイバーレーザーの媒質（Yb 添加ファイバー）は対象元素に入らない。出力側の光アイソレータ（TGG などの回転子と磁石）を通じて Tb・Sm に触れる（一般的な構成）。CO₂ 方式は対象元素を使わない。",
+      "src": "https://industry.panasonic.com/ac/j/fasys/special/tech_lasermarker/faq/index.jsp ／ https://industry.panasonic.com/jp/ja/products/fasys/lasermarker/lasermarker/lp-zv",
+      "note": "2026-11-21：産業用レーザーの調査で新規収録。パナソニック コネクトとは事業会社が違うため、別のカードにした。"
+    },
+    "laser-kataoka": {
+      "name": "片岡製作所",
+      "own": "非上場。本社は京都市南区。NITTOKU が再建を支援",
+      "rev": "未確認",
+      "prod": "レーザー加工システム（ペロブスカイト太陽電池のレーザーパターニング装置。生産能力を2029年に年32台へ増やす計画、投資額69億円）、電池缶の溶接装置、二次電池の検査システム",
+      "pos": "ペロブスカイト太陽電池用のレーザーパターニング装置で先行する国内メーカー。シェアは未確認",
+      "def": "確認できず。用途は太陽電池・二次電池の製造",
+      "chn": "光源の種類と調達先は非開示。パターニング・溶接用の固体・ファイバーレーザーであれば、出力側の光アイソレータの回転子と磁石を通じて Tb・Sm に触れる（一般的な構成）。",
+      "src": "https://newswitch.jp/p/44746",
+      "note": "2026-11-21：産業用レーザーの調査で新規収録。光源の種類は未確認。"
+    },
+    "laser-muratec": {
+      "name": "村田機械",
+      "own": "非上場。本社は京都市",
+      "rev": "未確認",
+      "prod": "ファイバーレーザー加工機（LS3015GC：定格 2.5〜6kW、板金の切断）、パンチ・レーザー複合機 LS3015HL",
+      "pos": "板金加工機の国内メーカー。シェアは未確認",
+      "def": "確認できず。用途は板金・鋼材の切断",
+      "chn": "発振器は外部から調達する。元素は、組み込む発振器の出力アイソレータ（TGG などの回転子と磁石）を通じて Tb・Sm に触れる（一般的な構成）。発振器の調達先は非開示。",
+      "src": "https://monoist.itmedia.co.jp/mn/articles/1804/27/news011.html",
+      "note": "2026-11-21：産業用レーザーの調査で新規収録。ファイバーレーザー機の現行の構成は要確認。"
+    },
+    "laser-komatsu-sanki": {
+      "name": "コマツ産機",
+      "own": "コマツ（小松製作所）の子会社。本社は石川県金沢市",
+      "rev": "未確認",
+      "prod": "ファイバーレーザー加工機（水中で切断する TWCL10-1・TWCL08-1、3次元の TLH510-2 など）、プラズマ切断機 TFPL、プレス機械",
+      "pos": "プレス機械の国内大手で、レーザー切断機も作る。シェアは未確認",
+      "def": "確認できず。用途は板金・鋼材の切断",
+      "chn": "発振器は外部から調達する。元素は、組み込む発振器の出力アイソレータ（TGG などの回転子と磁石）を通じて Tb・Sm に触れる（一般的な構成）。発振器の調達先は非開示。",
+      "src": "https://monoist.itmedia.co.jp/mn/articles/2303/15/news145.html ／ https://www.komatsu.jp/en/newsroom/2020/20200821",
+      "note": "2026-11-21：産業用レーザーの調査で新規収録。ファイバーレーザー機の現行の構成は要確認。"
+    },
+    "laser-koike": {
+      "name": "小池酸素工業",
+      "own": "非上場。本社は東京都墨田区",
+      "rev": "未確認",
+      "prod": "ファイバーレーザー切断機（FIBERTEX シリーズ）、プラズマ・ガス切断機",
+      "pos": "切断機の国内大手。シェアは未確認",
+      "def": "確認できず。用途は板金・鋼材の切断",
+      "chn": "発振器は外部から調達する。元素は、組み込む発振器の出力アイソレータ（TGG などの回転子と磁石）を通じて Tb・Sm に触れる（一般的な構成）。発振器の調達先は非開示。",
+      "src": "https://koike-japan.com/site/koike/get/params_E449791033_Dattachment/289468/FIBERTEX-Zero1.pdf",
+      "note": "2026-11-21：産業用レーザーの調査で新規収録。ファイバーレーザー機の現行の構成は要確認。"
     }
   },
   "stages": {
@@ -2618,14 +2906,14 @@
     },
     "03_yag_crystal": {
       "label": "レーザー用光学結晶・透明セラミックス",
-      "description": "YAG・Y₂O₃、TGG・Tb 系ガラス",
+      "description": "YAG・Y₂O₃、TGG・TSAG・Tb 系ガラス",
       "srcNotes": {
-        "02_compound": "高純度 Y₂O₃・Tb₄O₇ を結晶育成・焼結の原料に"
+        "02_compound": "高純度 Y₂O₃・Tb₄O₇・Sc₂O₃ を結晶育成・焼結の原料に（Sc は TSAG 用）"
       }
     },
     "03_magneto_garnet": {
       "label": "磁性ガーネット（Bi 置換膜・YIG）",
-      "description": "Bi 置換希土類鉄ガーネット膜、YIG 単結晶、SGGG 基板",
+      "description": "Bi:RIG 膜・YIG 単結晶・SGGG 基板",
       "srcNotes": {
         "02_compound": "Y・Tb・Gd 等の高純度酸化物から、ガーネット基板上へ LPE 法で Bi 置換磁性ガーネット膜を成長、または YIG 単結晶を育成"
       }
@@ -2710,17 +2998,19 @@
       }
     },
     "04_faraday_laser": {
-      "label": "ファラデー回転子・光アイソレータ（レーザー波長）",
-      "description": "532〜1064nm、TGG・Tb 系ガラスの素子",
+      "label": "ファラデー回転子・アイソレータ（レーザー）",
+      "description": "532〜1064nm、TGG・TSAG・Tb 系ガラス",
       "srcNotes": {
-        "03_yag_crystal": "TGG 結晶・透明セラミックスや Tb 系ガラスを回転子素子に加工し、磁石・偏光子と組む"
+        "03_yag_crystal": "TGG・TSAG 結晶、透明セラミックスや Tb 系ガラスを回転子に加工",
+        "04_mag": "TGG・Tb 系ガラスの回転子を飽和させる強い磁界源として、NdFeB（Dy 添加）または SmCo の磁石を組み、回転子ユニット・光アイソレータにする"
       }
     },
     "04_faraday_tele": {
-      "label": "ファラデー回転子・光アイソレータ（通信波長）",
-      "description": "1310／1550nm、Bi 置換ガーネット膜の素子",
+      "label": "ファラデー回転子・アイソレータ（光通信）",
+      "description": "1310／1550nm、Bi:RIG・YIG",
       "srcNotes": {
-        "03_magneto_garnet": "磁性ガーネット膜・YIG 結晶を回転子素子に加工"
+        "03_magneto_garnet": "磁性ガーネット膜・YIG 結晶を回転子チップに加工",
+        "04_mag": "SmCo 磁石を回転子チップの周りに置き、偏光子・複屈折結晶と組んで光アイソレータ・光サーキュレータにする（通信用は温度特性から SmCo が一般的）"
       }
     },
     "04_target": {
@@ -2798,17 +3088,17 @@
     },
     "05_laser_osc": {
       "label": "固体レーザー発振器",
-      "description": "Nd:YAG・Yb:YAG",
+      "description": "Nd:YAG・Yb:YAG・Nd:YVO₄・ファイバー",
       "srcNotes": {
-        "04_laser_medium": "媒質を発振器に組み込む",
-        "04_faraday_laser": "発振器内のアイソレータとして戻り光を遮る"
+        "04_laser_medium": "Nd:YAG・Yb:YAG・Nd:YVO₄ の結晶・セラミックスを媒質として固体レーザー発振器に組み込む（ファイバーレーザーはこの線を通らない）",
+        "04_faraday_laser": "光アイソレータを発振器の出力側に組み込み、戻り光を遮る。固体レーザーとファイバーレーザーの両方で使い、kW 級の高出力品は TGG・TSAG の回転子と強い磁石を組む"
       }
     },
     "05_photonics": {
-      "label": "光通信部品・光デバイス",
-      "description": "光アイソレータ・光サーキュレータ",
+      "label": "光部品・光デバイス",
+      "description": "TOSA・EML・ITLA・光トランシーバ・光増幅器",
       "srcNotes": {
-        "04_faraday_tele": "回転子を偏光子・磁石と組み、半導体レーザーへの戻り光を遮る光部品に（1310／1550nm）"
+        "04_faraday_tele": "光アイソレータを TOSA・EML・ITLA・光トランシーバ・光増幅器に組み込み、半導体レーザーへの戻り光を遮る（1310／1550nm）"
       }
     },
     "05_scaln_film": {
@@ -2880,9 +3170,9 @@
       "description": "衛星・探査機・軌道上サービス",
       "srcNotes": {
         "05_motor": "リアクションホイール・駆動機構",
-        "05_laser_osc": "宇宙ライダー・レーザー測距",
+        "05_laser_osc": "宇宙ライダー・レーザー測距と、衛星に積むデブリ除去用のパルスレーザー（Tb・Sm は光アイソレータの回転子と磁石）",
         "05_electronics": "宇宙用電子部品",
-        "05_photonics": "宇宙光通信向けの高信頼アイソレータ（軌道上での環境試験段階）"
+        "05_photonics": "宇宙光通信向けの光送受信デバイス（高信頼アイソレータを内蔵、軌道上での環境試験段階）"
       }
     },
     "06_engine": {
@@ -2916,9 +3206,9 @@
     },
     "06_laser": {
       "label": "レーザー装備・照射",
-      "description": "測距・照射・高出力",
+      "description": "測距・照射・高出力・産業用加工機",
       "srcNotes": {
-        "05_laser_osc": "測距・照射・加工用の光源",
+        "05_laser_osc": "測距・照射・高出力レーザーの光源と、レーザー加工機・マーカー・溶接機・アニール装置の光源",
         "05_electronics": "交戦訓練用のレーザ送受信器などの半導体レーザー・電子回路"
       }
     },
@@ -2939,22 +3229,23 @@
         "05_scaln_film": "通信機の RF フィルタ",
         "05_tube": "衛星通信・無線の送信管",
         "05_electronics": "通信機器の電子回路・部品（磁性部品を含む）",
-        "05_photonics": "光アイソレータ・光サーキュレータとして光伝送装置・海底ケーブル中継器に組み込む"
+        "05_photonics": "光トランシーバ・光増幅器として光伝送装置・海底ケーブル中継器に組み込む"
       }
     },
     "06_optical_net": {
       "label": "光通信インフラ・光伝送",
       "description": "光伝送装置・海底ケーブル・衛星光通信（民生）",
       "srcNotes": {
-        "05_photonics": "光アイソレータ・光サーキュレータを光伝送装置と海底光中継器に組み込む"
+        "05_photonics": "光トランシーバ・光増幅器を光伝送装置と海底光中継器に組み込む"
       }
     },
     "06_rf_sensor": {
       "label": "RF・圧電センサ・計測",
-      "description": "高周波計測・圧電評価・センサ",
+      "description": "高周波計測・圧電評価・センサ・レーザー計測",
       "srcNotes": {
         "05_scaln_film": "圧電センサ・高周波デバイス",
-        "05_electronics": "計測器・センサの電子部品"
+        "05_electronics": "計測器・センサの電子部品",
+        "05_laser_osc": "検査・計測装置、ステルスダイシング装置、レーザーマーカーに組み込むレーザー光源（Tb・Sm は光アイソレータの回転子と磁石）"
       }
     }
   },

@@ -5,7 +5,7 @@ import vm from 'node:vm';
 test('criticality deduplicates downstream companies and scopes share by element',()=>{
  const s={elements:['Y','Sc'],data:[{id:'a',tags:['Y','Sc'],subs:['02_a'],subEls:{'02_a':['Y','Sc']}},{id:'b',tags:['Y','Sc'],subs:['03_b','06_c'],subEls:{'03_b':['Y','Sc'],'06_c':['Y','Sc']}},{id:'c',tags:['Y','Sc'],subs:['06_c'],subEls:{'06_c':['Y','Sc']}}],allSubs:[{id:'02_a',stage:2,els:['Y','Sc']},{id:'03_b',stage:3,els:['Y','Sc'],src:['02_a'],srcEls:{'02_a':['Y','Sc']}},{id:'06_c',stage:6,els:['Y','Sc'],src:['03_b'],srcEls:{'03_b':['Y','Sc']}}],companyShares:{entries:[{company:'a',node:'02_a',els:['Y'],level:4}]}};
  vm.createContext(s);for(const file of ['supply-graph','model'])vm.runInContext(fs.readFileSync(new URL('../src/app/'+file+'.js',import.meta.url),'utf8'),s);
- const p=s.criticalityPoints();assert.equal(p.find(p=>p.node==='02_a'&&p.element==='Y').downstream,2);assert.equal(p.find(p=>p.node==='02_a'&&p.element==='Y').score,100);assert.equal(p.find(p=>p.node==='02_a'&&p.element==='Sc').score,50);assert.ok(p.every(p=>p.maximum===2&&p.score>=0&&p.score<=100));
+ const p=s.criticalityPoints();assert.equal(p.find(p=>p.node==='02_a'&&p.element==='Y').downstream,2);assert.equal(p.find(p=>p.node==='02_a'&&p.element==='Y').score,100);assert.equal(p.find(p=>p.node==='02_a'&&p.element==='Sc').score,100*Math.sqrt(3/6));assert.ok(p.every(p=>p.maximum===2&&p.score>=0&&p.score<=100));
 });
 test('production matrix and ranking render in all locales with shared flow scores',()=>{
  const read=name=>JSON.parse(fs.readFileSync(new URL('../src/data/'+name+'.json',import.meta.url),'utf8'));
@@ -17,7 +17,10 @@ test('production matrix and ranking render in all locales with shared flow score
  vm.createContext(s);for(const file of ['text','supply-graph','model','parts','criticality'])vm.runInContext(fs.readFileSync(new URL('../src/app/'+file+'.js',import.meta.url),'utf8'),s);
  for(const language of ['ja','en','zh-CN']){s.language=language;s.renderCriticality();assert.match(nodes.get('#re-view-criticality').innerHTML,/data-cr-key/);assert.match(nodes.get('#re-cr-selection').innerHTML,/re-cr-facts/);assert.ok(nodes.get('#re-cr-companies').innerHTML.includes('data-cr-company'));}
  for(const sort of ['score','down','share']){const ranked=s.crSorted(sort);const key=sort==='down'?'downstream':sort==='share'?'level':'score';assert.ok(ranked.every((p,i)=>!i||ranked[i-1][key]>=p[key]));}
- assert.equal(s.crPoints().length,62);assert.equal(s.criticalityPoint('02_compound','Y').score,s.crPoints().find(p=>p.node==='02_compound'&&p.element==='Y').score);
+ // 工程別の内訳は下流企業数と同じ集合から作る（同じ工程の中の組み込みの先にいる企業も漏らさない）
+ for(const p of s.crPoints().filter(p=>p.onPath)){const ids=new Set(p.downstreamByStage.flatMap(r=>r.companies.map(c=>c.id)));assert.equal(ids.size,p.downstream,p.node+'|'+p.element);}
+ for(const element of ['DyTb','Sm']){const mag=s.criticalityPoint('04_mag',element);assert.ok(mag.downstreamByStage.some(r=>r.stage===4&&r.companies.length>0),'04_mag '+element);}
+ assert.equal(s.crPoints().length,69);assert.equal(s.criticalityPoint('02_compound','Y').score,s.crPoints().find(p=>p.node==='02_compound'&&p.element==='Y').score);
 });
 test('シェア根拠は呼び出し元が渡した条件だけで決まる（別画面の選択が混ざらない）',()=>{
  const read=name=>JSON.parse(fs.readFileSync(new URL('../src/data/'+name+'.json',import.meta.url),'utf8'));
@@ -37,5 +40,5 @@ test('シェア根拠は呼び出し元が渡した条件だけで決まる（�
  }
  // 条件を変えれば、その範囲だけに絞られる
  assert.deepEqual(s.shareRows(company,{node:'04_faraday_tele',elements:['Y']}).map(r=>r.node+'|'+r.element),['04_faraday_tele|Y']);
- assert.equal(s.shareRows(company,{node:'04_faraday_tele',elements}).length,2);
+ assert.equal(s.shareRows(company,{node:'04_faraday_tele',elements}).length,3);
 });

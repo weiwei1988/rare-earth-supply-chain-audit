@@ -3,7 +3,7 @@
 // ファイル間で同じスコープを共有するため、import は使わない。
 
 // クリティカル度の段。境界と表示ラベルはここだけで定義し、元素別フロー・マップ・凡例が共有する。
-var criticalityBands=[{tier:1,min:0,label:'0–24'},{tier:2,min:25,label:'25–44'},{tier:3,min:45,label:'45–64'},{tier:4,min:65,label:'65–100'}];
+var criticalityBands=[{tier:1,min:0,label:'0–29'},{tier:2,min:30,label:'30–49'},{tier:3,min:50,label:'50–69'},{tier:4,min:70,label:'70–100'}];
 function criticalityTier(score){var found=criticalityBands[0];criticalityBands.forEach(function(band){if(score>=band.min)found=band});return found.tier}
 // 水準の呼び方と判定基準は company-shares.json の levels が正本。日本語は label / rule、
 // 英語・簡体中国語は i18n に持つ（言語ごとの文言を JS 側に二重で持たない）。
@@ -13,7 +13,7 @@ function shareLevelText(level,key){var item=shareLevel(level);if(!item)return'';
 function colon(){return language==='en'?': ':'：'}
 // 「水準4（世界首位級）」の形。括弧と語順は言語ごとに合わせる。
 function shareLevelSummary(level){var label=shareLevelText(level,'label');return language==='en'?'Level '+level+' ('+label+')':(language==='zh-CN'?'等级':'水準')+level+'（'+label+'）'}
-function criticalText(key){var labels={ja:{score:'クリティカル度',share:'シェア水準',formula:'クリティカル度＝100 × √［（下流の収録企業・事業単位数 ÷ 全元素・全採点対象の最大値）×（シェア水準 ÷ 4）］。Stage 02〜05を採点し、同じ元素で起点から最終工程までつながる経路を集計します。下流企業は重複排除し、自カテゴリーを含めません。シェア水準は所属企業の最高値、未確認は水準1。市場シェアの実数や中国依存度・在庫・代替可能性を直接示す指標ではありません。',source:'出典（原文）'},en:{score:'Criticality',share:'Share level',formula:'Criticality = 100 × √[(downstream listed companies/business units ÷ maximum across all elements and scored categories) × (share level ÷ 4)]. Stages 02–05 are scored on same-element paths from origin to final systems. Downstream companies are deduplicated; the current category is excluded. The highest member share level is used; unverified = level 1. This relative index does not directly measure actual market share, China dependency, inventories or substitutability.',source:'Source (original language)'},'zh-CN':{score:'关键度',share:'份额等级',formula:'关键度＝100 × √［（下游收录企业及业务单位数 ÷ 全元素全部评分分类的最大值）×（份额等级 ÷ 4）］。评分范围为Stage 02～05，仅统计同一元素从起点连至最终系统的路径。下游企业去重，不含本分类；采用成员企业最高份额等级，未确认为等级1。本相对指标不直接衡量实际市场份额、中国依赖、库存或可替代性。',source:'来源（原文）'}};return labels[language][key]}
+function criticalText(key){var labels={ja:{score:'クリティカル度',share:'シェア水準',formula:'クリティカル度＝100 × √［（下流の収録企業・事業単位数 ÷ 全元素・全採点対象の最大値）×（（シェア水準 ＋ 2）÷ 6）］。Stage 02〜05を採点し、同じ元素で起点から最終工程までつながる経路を集計します。下流企業は重複排除し、自カテゴリーを含めません。シェア水準は所属企業の最高値、未確認は水準1。市場シェアの実数や中国依存度・在庫・代替可能性を直接示す指標ではありません。',source:'出典（原文）'},en:{score:'Criticality',share:'Share level',formula:'Criticality = 100 × √[(downstream listed companies/business units ÷ maximum across all elements and scored categories) × ((share level + 2) ÷ 6)]. Stages 02–05 are scored on same-element paths from origin to final systems. Downstream companies are deduplicated; the current category is excluded. The highest member share level is used; unverified = level 1. This relative index does not directly measure actual market share, China dependency, inventories or substitutability.',source:'Source (original language)'},'zh-CN':{score:'关键度',share:'份额等级',formula:'关键度＝100 × √［（下游收录企业及业务单位数 ÷ 全元素全部评分分类的最大值）×（（份额等级 ＋ 2）÷ 6）］。评分范围为Stage 02～05，仅统计同一元素从起点连至最终系统的路径。下游企业去重，不含本分类；采用成员企业最高份额等级，未确认为等级1。本相对指标不直接衡量实际市场份额、中国依赖、库存或可替代性。',source:'来源（原文）'}};return labels[language][key]}
 function criticalDefinition(){return language==='en'?'Criticality: an indicator of how widely a shutdown at a process could affect the downstream supply chain.':language==='zh-CN'?'关键度：衡量某一工序停运后，会对供应链下游产生多大范围影响的指标。':'クリティカル度：その工程が止まるとサプライチェーンの下流にどれだけ広範な影響が出るのか？を表す指標'}
 function shareCriteriaHtml(){
   var title=language==='en'?'Share-level assessment criteria':language==='zh-CN'?'份额等级判定标准':'シェア水準の判定基準';
@@ -89,9 +89,9 @@ function dependencyDashboardHtml(elements){
 function routeRows(id,graph){
   graph=graph||buildSupplyGraph(allSubs,data);
   return supplyGraphRoutes(graph,id).map(function(edge){
-    return{from:edge.from,to:edge.to,elements:edge.elements,note:routeText(graph.byId.get(edge.to),edge.from)}
+    return{from:edge.from,to:edge.to,elements:edge.elements,assembly:edge.assembly,note:routeText(graph.byId.get(edge.to),edge.from)}
   })
 }
 function routeRowsHtml(rows){
-  return'<div class="re-route-note-title">'+esc(tr("routeTitle",{count:rows.length}))+'</div>'+rows.map(function(row){return'<div class="re-route-row"><span class="re-route-pair">'+esc(subLabel(row.from))+' → '+esc(subLabel(row.to))+'</span><span class="re-route-elements">'+tagsHtml(row.elements)+'</span><span>'+esc(row.note)+'</span></div>'}).join("")
+  return'<div class="re-route-note-title">'+esc(tr("routeTitle",{count:rows.length}))+'</div>'+rows.map(function(row){return'<div class="re-route-row"><span class="re-route-pair">'+esc(subLabel(row.from))+' → '+esc(subLabel(row.to))+'</span><span class="re-route-elements">'+tagsHtml(row.elements)+'</span><span>'+(row.assembly?'<span class="re-route-chip">'+esc(tr("routeAssembly"))+'</span>':'')+esc(row.note)+'</span></div>'}).join("")
 }

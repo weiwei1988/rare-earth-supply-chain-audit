@@ -99,17 +99,17 @@ function renderCriticality(){
 }
 // 選んだマスの内訳。算式・下流の構成・所属企業の根拠に分ける
 function crFactsHtml(point){
-  var score=point.score===null?crText('unavailable'):'100 × √('+point.downstream+'/'+point.maximum+' × '+point.level+'/4)';
+  var score=point.score===null?crText('unavailable'):'100 × √('+point.downstream+'/'+point.maximum+' × ('+point.level+'+2)/6)';
   return'<div class="re-cr-facts">'+
     '<div>'+esc(criticalText('score'))+'<strong>'+crBadge(point.score)+'</strong><small>'+esc(score)+'</small></div>'+
     '<div>'+esc(crText('downstream'))+'<strong>'+point.downstream+'</strong><small>'+esc(tr('companyShort'))+'</small></div>'+
     '<div>'+esc(crText('maximum'))+'<strong class="re-share-summary"><span class="re-cr-share-badge re-share-'+point.level+'">'+esc(shareLevelSummary(point.level))+'</span></strong><small>'+esc(point.representative?companyText(point.representative,'name'):'—')+'</small></div></div>'
 }
-function crBreakdownHtml(point,sub){
-  var down=new Set(point.downstreamNodes);
-  return'<ul class="re-cr-downnodes">'+stages.filter(function(stage){return stage.id>sub.stage}).map(function(stage){
-    var members=point.downstreamCompanies.filter(function(c){return c.subs.some(function(id){return down.has(id)&&subStage(id)===stage.id&&companyHasElement(c,id,point.element)})});
-    return members.length?'<li>STAGE '+esc(stage.code)+' '+esc(stageText(stage,'label'))+colon()+members.length+'</li>':''
+// 工程別の内訳は共通モデル（downstreamByStage）の値をそのまま描く
+function crBreakdownHtml(point){
+  return'<ul class="re-cr-downnodes">'+(point.downstreamByStage||[]).map(function(row){
+    var stage=stages.find(function(item){return item.id===row.stage});
+    return'<li>STAGE '+esc(stage.code)+' '+esc(stageText(stage,'label'))+colon()+row.companies.length+'</li>'
   }).join('')+'</ul>'
 }
 function crEvidenceHtml(point){
@@ -134,7 +134,7 @@ function renderCriticalSelection(){
   if(!point){section.textContent=crText('choose');return}
   var sub=allSubs.find(function(item){return item.id===point.node});
   section.innerHTML='<h3>'+esc(tagLabel(point.element)+' · '+subText(sub,'label'))+'</h3>'+crFactsHtml(point)+
-    '<h4>'+esc(crText('breakdown'))+'</h4>'+crBreakdownHtml(point,sub)+
+    '<h4>'+esc(crText('breakdown'))+'</h4>'+crBreakdownHtml(point)+
     '<div class="re-company-section-head"><h4>'+esc(crText('evidence'))+'</h4>'+mapReturnButton()+'</div><div id="re-cr-companies"></div>'+
     '<h4>'+esc(crText('nodes'))+'</h4>'+crDownNodesHtml(point);
   renderCriticalCompanies();

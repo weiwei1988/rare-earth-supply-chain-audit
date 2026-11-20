@@ -56,24 +56,37 @@ function renderElementFlow(){
   var edges=[];
   byStage[2].forEach(function(target){edges.push({from:source.id,to:target.id})});
   // 描画座標や帯の幅は共通モデルを変更せず、描画用のコピーだけに追加する。
-  graph.edges.forEach(function(edge){edges.push({from:edge.from,to:edge.to})});
+  graph.edges.forEach(function(edge){edges.push({from:edge.from,to:edge.to,assembly:edge.assembly})});
+  // 各工程の棒の縁に帯の口を積む。右の縁は下流へ出る帯、左の縁は上流から入る帯。
+  // 同じ列の中の組み込みは、送り手・受け手とも入口（左の縁）につなぎ、U 字の帯で結ぶ。
   edges.forEach(function(edge){
-    edge.a=positions[edge.from];edge.b=positions[edge.to];edge.a.outgoing.push(edge);edge.b.incoming.push(edge)
+    edge.a=positions[edge.from];edge.b=positions[edge.to];
+    (edge.assembly?edge.a.incoming:edge.a.outgoing).push({edge:edge,end:"from",other:edge.b});
+    edge.b.incoming.push({edge:edge,end:"to",other:edge.a})
   });
   var flowEdgeReader={from:function(edge){return edge.from},to:function(edge){return edge.to}};
   var linkedEdges=flowSelectionId?traceLinkedEdges(edges,flowSelectionId,flowEdgeReader,null).linked:new Set();
-  [source].concat(nodes).forEach(function(node){
-    node.outgoing.sort(function(a,b){return a.b.y-b.b.y});
-    node.incoming.sort(function(a,b){return a.a.y-b.a.y});
-    var outgoingWeight=node.outgoing.reduce(function(sum,edge){return sum+edge.b.count},0),outCursor=node.y-node.h/2;
-    node.outgoing.forEach(function(edge){edge.fromH=node.h*edge.b.count/Math.max(1,outgoingWeight);edge.fromY=outCursor+edge.fromH/2;outCursor+=edge.fromH});
-    var incomingWeight=node.incoming.reduce(function(sum,edge){return sum+edge.a.count},0),inCursor=node.y-node.h/2;
-    node.incoming.forEach(function(edge){edge.toH=node.h*edge.a.count/Math.max(1,incomingWeight);edge.toY=inCursor+edge.toH/2;inCursor+=edge.toH})
-  });
+  // 口の並び：相手の上下の位置で並べる。U 字の口は、上にいる相手へ向かうものを縁の上端に、下にいる相手へ向かうものを下端に寄せ、
+  // 近い相手ほど内側にして入れ子にする
+  function slotKey(node,slot){
+    if(!slot.edge.assembly)return[1,slot.other.y];
+    return slot.other.y<node.y?[0,-slot.other.y]:[2,-slot.other.y]
+  }
+  function stack(node,slots){
+    slots.sort(function(p,q){var a=slotKey(node,p),b=slotKey(node,q);return a[0]-b[0]||a[1]-b[1]});
+    var weight=slots.reduce(function(sum,slot){return sum+slot.other.count},0),cursor=node.y-node.h/2;
+    slots.forEach(function(slot){
+      var h=node.h*slot.other.count/Math.max(1,weight);
+      if(slot.end==="from"){slot.edge.fromH=h;slot.edge.fromY=cursor+h/2}else{slot.edge.toH=h;slot.edge.toY=cursor+h/2}
+      cursor+=h
+    })
+  }
+  [source].concat(nodes).forEach(function(node){stack(node,node.outgoing);stack(node,node.incoming)});
   var flowColor=colors[flowElement];
   function ribbon(edge){
     var x1=edge.a.x+8,x2=edge.b.x,mid=x1+(x2-x1)*.5;
     var aTop=edge.fromY-edge.fromH/2,aBottom=edge.fromY+edge.fromH/2,bTop=edge.toY-edge.toH/2,bBottom=edge.toY+edge.toH/2;
+    if(edge.assembly)return uRibbonPath(edge.a.x,aTop,aBottom,bTop,bBottom,-1);
     return"M"+x1+","+aTop+" C"+mid+","+aTop+" "+mid+","+bTop+" "+x2+","+bTop+" L"+x2+","+bBottom+" C"+mid+","+bBottom+" "+mid+","+aBottom+" "+x1+","+aBottom+" Z"
   }
   function nodeMarkup(node){
@@ -105,11 +118,18 @@ function renderElementFlow(){
   });
   markup+='<g aria-hidden="true">'+edges.map(function(edge){
     var from=edge.from===source.id?stageText(stageMap[1],"label"):subText(edge.a.item,"label"),to=subText(edge.b.item,"label");
-    return'<path class="re-ef-link'+(linkedEdges.has(edge)?' is-linked':'')+'" d="'+ribbon(edge)+'" fill="'+flowColor+'"><title>'+esc(from+" "+companyCount(edge.a.count)+" → "+to+" "+companyCount(edge.b.count)+" / "+tagLabel(flowElement))+'</title></path>'
+    var linked=linkedEdges.has(edge)?' is-linked':'';
+    var link='<path class="re-ef-link'+(edge.assembly?' is-assembly':'')+linked+'" d="'+ribbon(edge)+'" fill="'+flowColor+'"><title>'+esc(from+" "+companyCount(edge.a.count)+" → "+to+" "+companyCount(edge.b.count)+" / "+tagLabel(flowElement)+(edge.assembly?" — "+tr("routeAssembly"):""))+'</title></path>';
+    return link
   }).join("")+'</g>';
+  // U 字の帯の向きの印は、工程のラベル・バッジに隠れないよう、工程より手前に描く
+  var assemblyMarks=edges.filter(function(edge){return edge.assembly}).map(function(edge){
+    var marks=uRibbonMarks(edge.a.x,edge.fromY-edge.fromH/2,edge.fromY+edge.fromH/2,edge.toY-edge.toH/2,edge.toY+edge.toH/2,-1);
+    return'<g class="re-ef-assembly-mark'+(linkedEdges.has(edge)?' is-linked':'')+'" aria-hidden="true"><path class="re-ef-assembly-head" d="'+marks.head+'" fill="'+flowColor+'"></path><path class="re-ef-assembly-chevron" d="'+marks.chevron+'"></path></g>'
+  }).join("");
   var chinaText=dep?tr("chinaRatio",{value:dep.china}):tr("chinaReference");
   markup+='<g class="re-ef-node re-ef-source'+(flowSelectionId===source.id?' is-selected':'')+'" data-flow-node="'+esc(source.id)+'" tabindex="0" role="button" aria-label="'+esc(tr("stageSource")+"、"+chinaText)+'"><rect class="re-ef-node-bar" x="'+source.x+'" y="'+(source.y-source.h/2)+'" width="8" height="'+source.h+'" fill="'+flowColor+'"></rect><text class="re-ef-source-title" x="'+(source.x+15)+'" y="'+(source.y-4)+'">'+esc(tr("stageSource"))+'</text><text class="re-ef-node-meta" x="'+(source.x+15)+'" y="'+(source.y+13)+'">'+esc(chinaText)+'</text></g>';
-  markup+=nodes.map(nodeMarkup).join("");
+  markup+=nodes.map(nodeMarkup).join("")+assemblyMarks;
   svg.setAttribute("viewBox","0 0 "+W+" "+H);
   svg.setAttribute("width",W);svg.setAttribute("height",H);svg.style.height=H+"px";svg.classList.toggle("is-tracing",!!flowSelectionId);svg.classList.toggle("is-english",language==="en");svg.innerHTML=markup;
   // 実際のフォント幅でバッジを配置し、英語の狭い文字にも追随する。

@@ -678,13 +678,14 @@
     },
     "semi-panasonic-connect": {
       "name": "Panasonic Connect Co., Ltd.",
-      "src": "https://connect.panasonic.com/jp-ja/products-services_fa/solutions/device-related/dry-etcher ／ https://connect.panasonic.com/jp-ja/products-services_fa_concept_plazma-dicer ／ https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20260512/20260512524367.pdf",
+      "src": "https://connect.panasonic.com/jp-ja/products-services_fa/solutions/device-related/dry-etcher ／ https://connect.panasonic.com/jp-ja/products-services_fa_concept_plazma-dicer ／ https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20260512/20260512524367.pdf ／ https://www.panasonic.com/jp/company/ppe/jigyo/laserwelding/laserwelder.html",
       "own": "Privately held / Wholly owned subsidiary of Panasonic Holdings Corporation (Tokyo Stock Exchange Prime Market, securities code 6752)",
       "rev": "Connect segment net sales: JPY 1.3803 trillion (fiscal year ended March 2026, Panasonic Holdings disclosure)",
-      "prod": "APX300 dry etch systems, APX300-DM and PD plasma dicers, plasma cleaners, and electronic-component placement machines",
+      "prod": "APX300 dry etch systems, APX300-DM and PD plasma dicers, plasma cleaners, and electronic-component placement machines / Laser welders and laser welding robot systems (Panasonic Production Engineering)",
       "pos": "A major electronic-component placement equipment supplier. Its dry etch systems serve LED, compound semiconductor, power, RF, and MEMS applications, and plasma dicers extend its reach into back-end processing.",
       "def": "Primarily commercial semiconductor manufacturing; no direct defense deliveries verified. Part of Japan's domestic semiconductor manufacturing base (economic security).",
-      "chn": "Y₂O₃-based plasma-resistant components are commonly used in dry-etch-system and plasma-dicer chambers. Component suppliers and countries of raw-material procurement are not disclosed."
+      "chn": "Y₂O₃-based plasma-resistant components are commonly used in dry-etch-system and plasma-dicer chambers. Component suppliers and countries of raw-material procurement are not disclosed. Its laser welders use fiber and semiconductor laser sources and touch Tb and Sm through output-side optical isolators (TGG or similar rotators and magnets; typical configuration).",
+      "note": "2026-11-21: Also placed under laser systems & irradiation because it makes laser welders."
     },
     "ods-kobelco-kaken": {
       "name": "KOBELCO Research Institute, Inc.",
@@ -779,14 +780,14 @@
     },
     "seed-1": {
       "name": "Mitsui Mining & Smelting (Rare Materials Division)",
-      "src": "JSX ／ Y DD ／ DyTb DD ／ Sm DD ／ https://em.mitsui-kinzoku.com/products/applications/electronics/mlcc/ ／ https://em.mitsui-kinzoku.com/rare-material/products/oxide-rare-earth-compounds/",
+      "src": "JSX ／ Y DD ／ DyTb DD ／ Sm DD ／ https://em.mitsui-kinzoku.com/products/applications/electronics/mlcc/ ／ https://em.mitsui-kinzoku.com/rare-material/products/oxide-rare-earth-compounds/ ／ https://www.recycle-ken.or.jp/activite/rareearth.html",
       "own": "A division of Mitsui Mining & Smelting. Former Japan Yttrium was absorbed in an April 2025 merger.",
       "rev": "Division revenue not disclosed / parent company approximately JPY 700 billion",
       "prod": "High-purity Y₂O₃, YF₃, and YOF; Y₂O₃ and YOF granules for sintering and thermal spraying, including plasma-resistant components for semiconductor manufacturing equipment; Y compounds for YSZ; SmCo magnetic-alloy powder; Tb-Gd alloy; rare-earth salts and processed products for MLCC applications, including nitrate solutions and acetates; and resource recovery from recycled feedstock",
       "pos": "An upstream anchor for Y-series separation and refining in Japan, and a rare domestic node handling all rare-earth elements",
       "def": "Upstream of plasma-resistant materials, TBCs, lasers, and magnets; defense electronics and space-grade semiconductors",
       "chn": "Medium to high. Verify the Chinese-origin share of feedstock, non-Chinese and recycled feedstock, and months of inventory.",
-      "note": "Division-level rather than a separate legal entity. Revenue-screen exception."
+      "note": "Division-level rather than a separate legal entity. Revenue-screen exception. / 2026-11-20: Dy/Tb was added to recycling because the Fukuoka Prefecture joint project, in which the company (with the former Nippon Yttrium) dissolves, extracts and refines rare earths from phosphors recovered from used fluorescent tubes, covers green phosphors containing Tb. Tb recovery volumes are not disclosed."
     },
     "seed-2": {
       "name": "Santoku (a Proterial Magnetics subsidiary)",
@@ -801,14 +802,14 @@
     },
     "seed-3": {
       "name": "Shin-Etsu Chemical",
-      "src": "JSX ／ Y DD ／ DyTb DD ／ Sm DD ／ https://www.rare-earth.jp/product.html ／ https://www.shinetsu.co.jp/sec/takefu/ ／ https://www.shinetsu-rare-earth-magnet.jp/ ／ https://www.shinetsu.co.jp/en/news/news-release/shin-etsu-chemical-to-set-up-a-base-in-china-to-manufacture-magnet-alloys-for-rare-earth-magnets/ ／ https://www.shinetsu.co.jp/en/news/news-release/shin-etsu-chemical-to-double-its-production-capacity-of-rare-earth-magnets-in-vietnam/ ／ https://www.shinetsu.co.jp/wp-content/uploads/2025/07/20260428_con_J.pdf ／ https://www.jiji.com/jc/article?k=2026061100578&g=eco ／ https://www.fukuishimbun.co.jp/articles/-/2623075 ／ https://xtech.nikkei.com/atcl/nxt/mag/nmc/18/00012/00279/ ／ https://www.shinetsu.co.jp/en/sustainability/esg_environment/resource_saving/",
+      "src": "JSX ／ Y DD ／ DyTb DD ／ Sm DD ／ https://www.rare-earth.jp/product.html ／ https://www.shinetsu.co.jp/sec/takefu/ ／ https://www.shinetsu-rare-earth-magnet.jp/ ／ https://www.shinetsu.co.jp/en/news/news-release/shin-etsu-chemical-to-set-up-a-base-in-china-to-manufacture-magnet-alloys-for-rare-earth-magnets/ ／ https://www.shinetsu.co.jp/en/news/news-release/shin-etsu-chemical-to-double-its-production-capacity-of-rare-earth-magnets-in-vietnam/ ／ https://www.shinetsu.co.jp/wp-content/uploads/2025/07/20260428_con_J.pdf ／ https://www.jiji.com/jc/article?k=2026061100578&g=eco ／ https://www.fukuishimbun.co.jp/articles/-/2623075 ／ https://xtech.nikkei.com/atcl/nxt/mag/nmc/18/00012/00279/ ／ https://www.shinetsu.co.jp/en/sustainability/esg_environment/resource_saving/ ／ https://patents.google.com/patent/JP5276640B2/ja ／ https://www.microsi.com/?p=11285",
       "own": "Listed company / Shin-Etsu Chemical Co., Ltd. (Tokyo Stock Exchange Prime Market, securities code 4063). Rare-earth separation and refining and magnet production are handled at the Takefu Plant in Echizen, Fukui; magnet alloys at Shin-Etsu (Changting) Technology in Fujian, China, with annual capacity of 3,000 tonnes; and separation and refining and sintered magnets at Shin-Etsu Magnetic Materials Vietnam in Haiphong, with annual magnet capacity of 2,200 tonnes.",
       "rev": "Consolidated net sales: JPY 2,573.9 billion, including JPY 1,015.7 billion from Electronic Materials (fiscal year ended March 2026). Rare-earth magnets are included in the Electronic Materials business.",
-      "prod": "Rare-earth separation and refining: oxides at 3N to 6N purity, from fine powders measuring several tens of nanometers to large-particle QU and PQ grades for thermal spraying, as well as hydroxides, fluorides, and composite oxides; Y₂O₃ and YOF spray materials for plasma-resistant coatings; N Series neodymium magnets, including high-coercivity grades that reduce Dy and Tb through grain-boundary diffusion; R Series samarium magnets (Sm₂Co₁₇); magnet alloys; and recycling of magnet grinding swarf and end-of-life HDDs and motors",
+      "prod": "Rare-earth separation and refining: oxides at 3N to 6N purity, from fine powders measuring several tens of nanometers to large-particle QU and PQ grades for thermal spraying, as well as hydroxides, fluorides, and composite oxides; Y₂O₃ and YOF spray materials for plasma-resistant coatings; N Series neodymium magnets, including high-coercivity grades that reduce Dy and Tb through grain-boundary diffusion; R Series samarium magnets (Sm₂Co₁₇); magnet alloys; and recycling of magnet grinding swarf and end-of-life HDDs and motors; Faraday rotators and optical isolators (for telecom wavelengths and for 1 µm-band high-power fiber lasers)",
       "pos": "One of the few Japanese companies integrated from rare-earth separation and refining through alloys and magnets, with magnet production capacity among Japan's largest. It mass-produced Sm₂Co₁₇ magnets ahead of competitors; they are used in high-temperature and space applications. In June 2026, it announced its first new separation and refining plant in 18 years, to be built in Fukui Prefecture with an investment of approximately JPY 35 billion, including JPY 17.5 billion in government subsidies, to strengthen domestic smelting capacity. In Vietnam, it integrates separation and refining with sintered-magnet production.",
       "def": "Heat-resistant Sm magnets are used in aerospace applications; Y₂O₃ spray materials are used for plasma-resistant coatings in semiconductor manufacturing equipment; and magnets connect to motors, actuators, and defense-electronics components. Direct deliveries to defense customers are not disclosed.",
       "chn": "Some magnet alloys are manufactured in Fujian, China. Dependence on China is high for heavy rare earths such as Dy and Tb. The company is advancing recovery from grinding swarf, which accounts for approximately 20% of magnet processing, and from end-of-life HDDs and motors, while securing non-Chinese feedstock. Company-specific consumption volumes and suppliers are not disclosed.",
-      "note": "Merged two overlapping JSX nodes. Stages 2 and 3 represent Shin-Etsu Chemical Group's integrated production scope, including overseas subsidiaries and plants. / 2026-09-23: Added Electronic Materials segment sales, product grades, production sites and capacity, the new Fukui plant, and recycling."
+      "note": "Merged two overlapping JSX nodes. Stages 2 and 3 represent Shin-Etsu Chemical Group's integrated production scope, including overseas subsidiaries and plants. / 2026-09-23: Added Electronic Materials segment sales, product grades, production sites and capacity, the new Fukui plant, and recycling. / 2026-11-19: Added optical isolators for 1 µm-band high-power fiber lasers (rotators made of Tb-based oxide)."
     },
     "seed-4": {
       "name": "Kojundo Chemical Laboratory",
@@ -889,16 +890,16 @@
     },
     "seed-12": {
       "name": "Oxide Corporation",
-      "src": "https://www.opt-oxide.com/products-list/laser/ ／ https://www.opt-oxide.com/products-list/laser/qcw-laser/item_LA00008 ／ https://www.opt-oxide.com/v2019/wp-content/uploads/2013/03/266Laser_r12-1.pdf ／ https://www.opt-oxide.com/ir/meeting/meeting26_review/ ／ https://www.opt-oxide.com/products-list/laser/special ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00006 / https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00017",
+      "src": "https://www.opt-oxide.com/products/ ／ https://www.opt-oxide.com/products/optical-device/ ／ https://www.opt-oxide.com/products/optical-module/ ／ https://www.opt-oxide.com/products-list/laser/ ／ https://www.opt-oxide.com/products-list/laser/cw-laser/item_LA00003 ／ https://www.opt-oxide.com/products-list/laser/qcw-laser/item_LA00008 ／ https://www.opt-oxide.com/products-list/laser/femto-laser/item_LA00012_1 ／ https://www.opt-oxide.com/products-list/laser/special/item_LA00016 ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00006 ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00013 ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00014 ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00015 ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00017 ／ https://www.opt-oxide.com/products-list/single-crystal/scintillator ／ https://www.opt-oxide.com/products-list/optical-device/qpm ／ https://www.opt-oxide.com/v2019/wp-content/uploads/2013/03/266Laser_r12-1.pdf ／ https://www.opt-oxide.com/ir/meeting/meeting26_review/ ／ https://www.opt-oxide.com/products/single-crystal/ ／ https://www.opt-oxide.com/products/laser/ ／ https://www.opt-oxide.com/products/prototype-service/",
       "own": "Securities code: 6521",
       "rev": "JPY 10.04 billion (consolidated, fiscal year ended February 2026)",
-      "prod": "266 nm and 193 nm all-solid-state deep-ultraviolet lasers; CW, QCW, and picosecond lasers; wavelength-conversion modules; and BBO and CLBO single crystals for wavelength conversion / TGG (Tb₃Ga₅O₁₂) crystals and LPE-grown Bi:RIG for optical isolators; Bi:RIG rare-earth composition is undisclosed",
+      "prod": "Single crystals: for wavelength conversion (CLBO, Mg:SLN, Mg:SLT, LBGO), for polarisation and electro-optics (LB4, KTN), magneto-optical (TSAG, YIG and LPE-grown Bi:RIG, used as optical-isolator rotator materials), RE:YSO for quantum memory, scintillators for PET (LGSO, GSO and others), and crystals for power semiconductors / Lasers: Frequad CW deep-ultraviolet lasers (213–302 nm), Kalama QCW deep-ultraviolet lasers (266 nm and 193 nm), and PEV vacuum-ultraviolet lasers; Jasper femtosecond fiber lasers (made by Fluence, Poland) and compact YAG lasers (made by Areté, US) are imported and resold / Optical devices: QPM wavelength-conversion devices (PP-Mg:SLT, PP-Mg:LN), THz elements, electro-optic devices, and magneto-optical devices for optical isolators (output of Faraday rotators for optical transceivers is being expanded at its sixth plant) / Optical modules: fiber-coupled wavelength converters, electro-optic modules, and entangled photon-pair sources / Prototyping and services: single-crystal prototype development (DC-CZ, CZ, EFG, TSSG, FZ, VB, flux and micro-pulling-down methods), prototype wavelength converters, and waveguide fabrication by femtosecond laser writing",
       "pos": "More than 30% global share in deep-ultraviolet lasers and more than 95% in wavelength-conversion single crystals, according to company estimates.",
       "def": "Deep-ultraviolet lasers underpin advanced semiconductor inspection and micromachining. The company also handles specialty lasers for aircraft, drones, and satellites, but those products are manufactured by U.S.-based Areté. Defense deliveries of its own deep-ultraviolet lasers have not been verified. / This review of public information identified no direct contract.",
-      "chn": "These DUV products primarily use nonlinear crystals such as BBO. Y exposure cannot be determined until the fundamental light-source BOM is verified.",
-      "bom": "The 266 nm QCW product performs two-stage wavelength conversion on an infrared fiber-amplifier source. Fiber dopants and conversion crystals in current products are not disclosed. CW Frequad explicitly uses ultra-high-purity BBO. No YAG medium was verified. / Use of YAG in the relevant DUV oscillator has not been verified.",
-      "gap": "Distinguish in-house products from imported products sold by the company, and verify defense and space customers, fundamental-source media, and export-control classification.",
-      "note": "Formally included in Stage 04 based on the solid-state laser oscillator DD category 'candidate for inclusion (oscillator).' / The 266 nm QCW product converts an infrared fiber-amplified source in two wavelength-conversion stages, and a fiber amplifier stage and multi-stage conversion are normally fitted with an isolator to block back-reflection. The company is itself a maker of Faraday rotators / Flags indicate relevance to the optical application chain; product-specific Y/Dy/Tb content and component suppliers are undisclosed. They do not establish confirmed material content."
+      "chn": "Wavelength conversion in its deep-ultraviolet lasers relies mainly on crystals without rare earths, such as BBO and CLBO. Rare earths enter through magneto-optical crystals (Tb and Sc in TSAG; Y and others in YIG and Bi:RIG) and through the lasers' fundamental sources and isolators. Raw-material suppliers are not disclosed.",
+      "bom": "Kalama 266 nm converts an infrared fiber-amplified source in two stages, and Frequad converts wavelength with ultra-high-purity BBO. The fundamental-source medium is not disclosed, and use of YAG in its own lasers has not been confirmed (only the imported Areté laser states YAG). TSAG has higher transmittance in the 1 µm band than TGG and a magneto-optical constant about 20% larger, and is an isolator material for high-intensity lasers. Bi:RIG is for 1.3–1.55 µm telecom isolators.",
+      "gap": "Distinguish in-house products from imported products sold by the company, and verify defense and space customers, fundamental-source media, and export-control classification. The scope of its magneto-optical devices (rotators alone or assembled isolators, with or without magnets) and the supplier of Sc for TSAG are also unconfirmed.",
+      "note": "Formally included in Stage 04 based on the solid-state laser oscillator DD category 'candidate for inclusion (oscillator).' / The 266 nm QCW product converts an infrared fiber-amplified source in two wavelength-conversion stages, and a fiber amplifier stage and multi-stage conversion are normally fitted with an isolator to block back-reflection. The company is itself a maker of Faraday rotators / Flags indicate relevance to the optical application chain; product-specific Y/Dy/Tb content and component suppliers are undisclosed. They do not establish confirmed material content. / 2026-11-20: Updated the product field to match the product list (single crystals, lasers, optical devices, optical modules). TGG is not in the current product list, so the magneto-optical crystals were changed to TSAG, YIG and Bi:RIG. Also placed under Faraday rotators & isolators (lasers), based on its magneto-optical devices for optical isolators and TSAG. / 2026-11-20: Checked against the five product categories (crystals, lasers, optical devices, optical modules, prototyping services) and added prototyping and services to the product field."
     },
     "seed-13": {
       "name": "TOCALO",
@@ -1233,14 +1234,14 @@
     },
     "seed-43": {
       "name": "DENSO",
-      "src": "Sc DD ／ https://www.aist.go.jp/aist_j/press_release/pr2008/pr20081121/pr20081121.html",
+      "src": "Sc DD ／ https://www.aist.go.jp/aist_j/press_release/pr2008/pr20081121/pr20081121.html ／ https://www.denso.com/jp/ja/about-us/corporate-info/profile/ ／ https://monoist.itmedia.co.jp/mn/articles/2111/22/news049_2.html ／ https://www.denso.com/jp/ja/-/media/global/business/innovation/review/24/24-doc-13-paper-08.pdf ／ https://www.chunichi.co.jp/article/394595",
       "own": "Tokyo Stock Exchange Prime Market (6902)",
       "rev": "Exceeds JPY 100 billion (exception)",
-      "prod": "Joint research with AIST on high-piezoelectric ScAlN thin films and high-temperature sensors",
-      "pos": "A downstream candidate involved in early Japanese ScAlN device research",
-      "def": "High-temperature vibration and pressure sensors for aircraft, generators, automobiles, and chemical plants",
-      "chn": "Medium; verification required. Check BOMs to confirm adoption of ScAlN in current mass-produced products, target suppliers, and the country of origin of Sc.",
-      "note": "Mass-production use of Sc has not been verified. An R&D and downstream monitoring node."
+      "prod": "Motors and actuators: starters, alternators, small automotive motors for wipers, blowers, power windows and more, electric power steering motors, electric water pumps, and traction motor-generators and inverters for electrified vehicles (e-Axles through BluE Nexus, a joint venture with Aisin) / ScAlN: joint research with AIST on high-piezoelectric ScAlN thin films and high-temperature sensors",
+      "pos": "One of the world's leading auto-parts makers, with a wide range of automotive motors. In 2021 it announced development of a rare-earth-free magnet with a superlattice structure in which iron and nickel are ordered at the atomic level, aiming to commercialise it within 5–10 years. In ScAlN it led early domestic device research",
+      "def": "Automotive motors serve vehicles. ScAlN-based high-temperature vibration and pressure sensors are for aircraft, generators, automobiles and chemical plants",
+      "chn": "Medium to high. High-performance motors such as traction and electric power steering motors usually use neodymium magnets with Dy and Tb added for heat resistance, and its rare-earth-free magnet development aims to replace them. Magnet suppliers are not disclosed. For ScAlN, adoption in mass-produced products, target suppliers and the origin of Sc need verification",
+      "note": "Mass-production use of Sc has not been verified. An R&D and downstream monitoring node. / 2026-11-20: Added a description of automotive motors and actuators and also placed it under Motors & actuators. Element flags reflect the usual make-up of motors using neodymium magnets."
     },
     "seed-44": {
       "name": "JX Advanced Metals",
@@ -1516,14 +1517,14 @@
     },
     "stage05-integrated-1": {
       "name": "Anritsu",
-      "src": "https://www.anritsu.com/ja-jp/test-measurement/solutions/aerospace-lp ／ https://www.anritsu.com/ja-jp/about-anritsu/corporate-information/profile",
+      "src": "https://www.anritsu.com/ja-jp/test-measurement/solutions/aerospace-lp ／ https://www.anritsu.com/ja-jp/about-anritsu/corporate-information/profile ／ https://dl.cdn-anritsu.com/anritsu-sensing-devices/ja-jp/products/sld/as5b320em50m-j-c-3.pdf ／ https://dl.cdn-anritsu.com/anritsu-sensing-devices/ja-jp/products/sld/as3b119gm10m-j-c-2.pdf ／ https://dl.cdn-anritsu.com/anritsu-sensing-devices/ja-jp/products/sld/as6b118gm50m-j-c-2.pdf ／ https://www.sbbit.jp/article/refers/69109",
       "own": "Listed company / securities code 6754",
       "rev": "Approximately JPY 117.5 billion (consolidated results, fiscal year ended March 2026)",
-      "prod": "Microwave, millimeter-wave, optical-communications, and radar test equipment; interference monitoring",
+      "prod": "Microwave, millimeter-wave, optical-communications, and radar test equipment; interference monitoring / Optical devices (made by subsidiary Anritsu Devices in Atsugi): SLD modules (1.31/1.55/1.65 µm bands, butterfly packages, built-in optical isolator), pump LD modules for EDFA and Raman amplifiers, and SOAs",
       "pos": "Market share and position have not been verified in public information.",
-      "def": "Directly connected to satellite, defense, aviation, and maritime communications, radar, and interference evaluation. Shares its technology base with commercial 5G testing.",
-      "chn": "Company-specific rare-earth BOMs and dependence on China have not been verified.",
-      "note": "Consolidation: existing candidate (not subject to parent-company replacement) / Revenue basis: consolidated net sales in the company profile."
+      "def": "Directly connected to satellite, defense, aviation, and maritime communications, radar, and interference evaluation. Shares its technology base with commercial 5G testing. SLDs are light sources for fiber-optic gyroscopes (attitude control), OCT and fiber sensors, and may connect to aviation, space and defense through gyroscopes.",
+      "chn": "In optical devices, it touches Y, Tb and Sm through the optical isolators built into its SLD modules (Bi-substituted garnet rotators and magnets). Isolator suppliers are not disclosed. The rare-earth BOM of its instruments is unconfirmed.",
+      "note": "Consolidation: existing candidate (not subject to parent-company replacement) / Revenue basis: consolidated net sales in the company profile. / 2026-11-20: Also placed under Optical components & devices because its datasheets state that the SLD modules have built-in optical isolators."
     },
     "stage05-integrated-2": {
       "name": "TOYO Corporation",
@@ -1966,7 +1967,7 @@
       "chn": "The Y raw material, crystal supplier, and country of origin for Nd:YAG crystals are not disclosed. Structurally exposed to upstream Y raw materials.",
       "bom": "Nd:YAG is explicitly identified on the official product page. The company manufactures oscillators incorporating pump LDs, resonators, and SHG. The YAG crystal supplier is not disclosed. / Y (Nd:YAG explicitly identified)",
       "gap": "Verify defense customers, YAG crystal suppliers, annual production volume, space and defense certifications, and current high-power models other than the SL18X.",
-      "note": "Formally added to Stage 04 based on its classification as an “adoption candidate (current Nd:YAG oscillator)” in the solid-state laser oscillator due diligence."
+      "note": "Formally added to Stage 04 based on its classification as an “adoption candidate (current Nd:YAG oscillator)” in the solid-state laser oscillator due diligence. / 2026-11-21: Also placed under laser systems & irradiation because it makes laser trimmers, wafer markers and micro-machining and welding systems."
     },
     "laser-dd-optoquest": {
       "name": "Optoquest Co., Ltd.",
@@ -2354,12 +2355,12 @@
       "name": "NEC",
       "own": "Listed (6701)",
       "rev": "Consolidated 3,423.4 billion yen (FY ending March 2025). Optical transmission equipment is not disclosed separately",
-      "prod": "Submarine cable systems (repeaters, terminal equipment, gain equalisers, branching units), SpectralWave WX open optical transport equipment, and optical communication payloads for satellites / LUCAS satellite optical communication terminals",
+      "prod": "Optical devices: optical transceivers sold externally (400G QSFP-DD DCO and CFP2-DCO, 100G QSFP28 DCO, 10G/25G tunable SFP, 25G 80 km BiDi and AOCs, with in-house silicon-photonics tunable light sources) / Submarine cable systems (repeaters, terminal equipment, gain equalisers, branching units), SpectralWave WX open optical transport equipment, and optical communication payloads for satellites / LUCAS satellite optical communication terminals",
       "pos": "The only domestic supplier of optical submarine cable systems, and one of three global leaders. Reported share ranges from 21% to roughly 30% depending on the source",
-      "def": "Developed the satellite optical communication payload for JAXA's LUCAS inter-satellite link, which achieved 1.8 Gbps between satellites and transmission to a ground station in January 2025. Submarine cables also carry seafloor seismic observation",
+      "def": "Developed the satellite optical communication payload for JAXA's LUCAS inter-satellite link, which achieved 1.8 Gbps between satellites and transmission to a ground station in January 2025. Submarine cables also carry seafloor seismic observation All submarine-cable equipment, including repeaters, is made at three domestic sites.",
       "chn": "Medium. The sourcing of optical components built into the equipment is the open question. China is reported to account for much of world shipments of data-centre optical transceivers",
-      "src": "https://jpn.nec.com/submarine/index.html / https://jpn.nec.com/press/202501/20250123_01.html / https://jpn.nec.com/press/202012/20201210_02.html / https://journal.meti.go.jp/p/40663/ / https://www.nec.com/en/press/202501/global_20250123_01.html",
-      "note": "The cable itself is made by its subsidiary OCC in Wakamatsu, Kitakyushu. Submarine repeaters carry an optical isolator every 50 to 100 km, and NEC is named among Kohoku Kogyo's principal customers / Flags indicate relevance to the optical application chain; product-specific Y/Dy/Tb content and component suppliers are undisclosed. They do not establish confirmed material content."
+      "src": "https://jpn.nec.com/submarine/index.html ／ https://jpn.nec.com/press/202501/20250123_01.html ／ https://jpn.nec.com/press/202012/20201210_02.html ／ https://journal.meti.go.jp/p/40663/ / https://www.nec.com/en/press/202501/global_20250123_01.html ／ https://jpn.nec.com/products/fod/index.html ／ https://www.nedo.go.jp/content/800075667.pdf ／ https://toyokeizai.net/articles/-/941884",
+      "note": "The cable itself is made by its subsidiary OCC in Wakamatsu, Kitakyushu. Submarine repeaters carry an optical isolator every 50 to 100 km, and NEC is named among Kohoku Kogyo's principal customers / Flags indicate relevance to the optical application chain; product-specific Y/Dy/Tb content and component suppliers are undisclosed. They do not establish confirmed material content. / 2026-11-20: Also placed under Optical components & devices because it sells optical transceivers as components and makes submarine optical repeaters (optical amplifiers) at NEC Platforms' Otsuki site. Built-in isolators are inferred from the usual configuration."
     },
     "optnet-1finity": {
       "name": "1FINITY",
@@ -2398,12 +2399,12 @@
       "name": "Furukawa Electric",
       "own": "Tokyo Stock Exchange Prime Market (5801)",
       "rev": "JPY 1,307.5 billion consolidated (fiscal year ended March 2026); no separate figure for optical devices",
-      "prod": "ITLA, Micro-ITLA and Nano ITLA tunable laser modules, pump LD modules for Raman amplifiers, DFB laser chips, and optical fiber and cable",
+      "prod": "ITLA, Micro-ITLA and Nano ITLA tunable laser modules, pump LD modules for Raman amplifiers, DFB laser chips, and optical fiber and cable; and, from the former Fujitsu Optical Components (all shares acquired in December 2024), LN modulators, integrated coherent receivers and coherent transceivers (CFP2-ACO, 800G CFP2-DCO) / Industrial high-power fiber lasers (key components made within the group; can also process highly reflective materials such as pure copper). Laser diode modules are also made by FF Laser, a joint venture with FANUC",
       "pos": "One of the few domestic firms producing DFB laser chips. No share figure confirmed.",
       "def": "No defense deliveries confirmed. Applications are digital coherent optical transmission and data centers",
-      "chn": "Medium. The laser chips are built on indium phosphide and use no rare earths, but Y and Tb enter through the optical isolator inside the laser module",
-      "note": "An ITLA is a tunable laser module with its own control board, and the usual configuration places an optical isolator at the semiconductor laser's output to block back-reflection. The Nano ITLA measures 25 × 15.6 × 6.7 mm. Pump LD modules for Raman amplifiers cover 1330–1520 nm in 400, 500 and 600 mW versions. The company is investing about JPY 100 billion to double optical-fiber capacity across four countries including Japan and the United States (announced August 2026)",
-      "src": "https://www.furukawaelectric.com/release/2021/comm_20210607.html ／ https://www.furukawaelectric.com/release/2019/comm_190920.html ／ https://www.furukawaelectric.com/company/outline/"
+      "chn": "Medium. The laser chips are built on indium phosphide and use no rare earths, but Y and Tb enter through the optical isolator inside the laser module Its fiber lasers touch Tb and Sm through output-side optical isolators (TGG or similar rotators and magnets; typical configuration).",
+      "note": "An ITLA is a tunable laser module with its own control board, and the usual configuration places an optical isolator at the semiconductor laser's output to block back-reflection. The Nano ITLA measures 25 × 15.6 × 6.7 mm. Pump LD modules for Raman amplifiers cover 1330–1520 nm in 400, 500 and 600 mW versions. The company is investing about JPY 100 billion to double optical-fiber capacity across four countries including Japan and the United States (announced August 2026) / 2026-11-20: Fujitsu Optical Components (Kawasaki) was merged into this card as part of the Furukawa Electric group's optical devices. / 2026-11-21: Also placed under solid-state laser oscillators because it makes industrial fiber lasers.",
+      "src": "https://www.furukawaelectric.com/release/2021/comm_20210607.html ／ https://www.furukawaelectric.com/release/2019/comm_190920.html ／ https://www.furukawaelectric.com/company/outline/ ／ https://www.nihon-ma.co.jp/news/20241212_5801-9/ ／ https://www.fujitsu.com/jp/group/foc/en/products/coherent-modules/cfp2-aco/indexgig5.html ／ https://www.fujitsu.com/jp/group/foc/en/news/indexgig5.html ／ https://pr.mono.ipros.com/narasaki/product/detail/2000341197/ ／ https://newswitch.jp/p/4258"
     },
     "optics-carlit": {
       "name": "Carlit Co., Ltd.",
@@ -2427,32 +2428,33 @@
     },
     "optics-smmp": {
       "name": "SMM Precision Co., Ltd.",
-      "own": "See source for corporate and business information",
-      "rev": "Revenue of the relevant business is unknown",
-      "prod": "Cylindrical, surface-mount and magnet-free optical isolators for communications, inline isolators for fiber lasers, and SGGG substrates.",
-      "chn": "Flags indicate relevance to the optical application chain; product-specific Y/Dy/Tb content and component suppliers are undisclosed. They do not establish confirmed material content.",
-      "src": "https://www.smm.co.jp/business/material/products/optical_isolator/ / https://www.smmp.co.jp/smmprecision/all/WZE_1_1_AOID%2CID/CLcorporate.htm",
-      "note": "Optical-isolator manufacturing began in 1996; the FR business transferred to Granopt in 2005 and SGGG substrate sales began in 2020. Gd-based SGGG must be distinguished from Y/Dy/Tb content.",
-      "def": "Components support optical-network branching/amplification sections and fiber lasers; specific defense customers are not disclosed in the reviewed sources."
+      "own": "Unlisted. A wholly owned group company of Sumitomo Metal Mining; head office and plant in Noshiro, Akita",
+      "rev": "Not disclosed",
+      "prod": "Optical isolators (cylindrical, surface-mount and magnet-free types for optical communications; in-line types for fiber lasers). Fiber-laser isolators for 1030/1064 nm at the 2 W (CW) class are in volume production as fiber-pigtailed, housed and isolator-core versions, with a 1550 nm version sampled. SGGG (substituted gallium gadolinium garnet) crystals and wafers (3 and 4 inch)",
+      "chn": "Rotators are LPE single-crystal films of Bi-substituted rare-earth iron garnet grown on SGGG substrates (SGGG is Gd-based and is distinguished from Y, Dy and Tb use). The Faraday rotator business was transferred to Granopt in 2005, which also handles rotator enquiries. The rare-earth composition of the garnet and raw-material suppliers are not disclosed.",
+      "src": "https://www.smm.co.jp/business/material/products/optical_isolator/ ／ https://www.smm.co.jp/business/material/products/faraday_rotator/ ／ https://www.smm.co.jp/business/material/products/sggg/ ／ https://www.smmp.co.jp/ ／ https://www.smmp.co.jp/smmprecision/all/WZH_1_1000_AOID,ID/CLentry_flow.htm ／ https://www.smmp.co.jp/s/sm/smmprecision/images/fl_promotion_material20230728.pdf",
+      "note": "Started optical-isolator production in 1996; transferred the FR business to Granopt in 2005 and began selling SGGG substrates in 2020. SGGG is Gd-based and is distinguished from Y, Dy and Tb use. / 2026-11-20: Volume production of 1 µm-band fiber-laser isolators was confirmed from its product page and the public material \"Optical Isolator for Fiber Laser Application\" (July 2023), so it is also placed under Faraday rotators & isolators (lasers). The 1550 nm version uses conventional RIG. Element flags reflect the usual make-up of Bi-substituted rare-earth iron garnet rotators and the magnets combined with them.",
+      "def": "Supplies components for branching and amplification in optical transmission networks and for fiber lasers. The fiber-laser isolators are stated to meet MIL-STD-883 shock and vibration test conditions, but defense customers are not disclosed.",
+      "pos": "Began making optical isolators in 1996. Its fiber-laser isolators use its own rotator material (LLR), with lower insertion loss in the 1 µm band than conventional RIG, and are promoted as low-power isolators much smaller than TGG or TSAG designs. No share figure has been confirmed."
     },
     "optics-santec-aoc": {
       "name": "Santec AOC Corporation",
-      "own": "See source for corporate and business information",
-      "rev": "Revenue of the relevant business is unknown",
-      "prod": "INTP integrates an optical isolator and tap photodetector in a 1.2 × 1.2 × 12 mm package, supporting C/L bands and high-density QSFP-DD/OSFP optical modules.",
-      "chn": "Flags indicate relevance to the optical application chain; product-specific Y/Dy/Tb content and component suppliers are undisclosed. They do not establish confirmed material content.",
-      "src": "https://aoc.santec.com/en/assets/doc/INTP-C-E.pdf",
-      "note": "Flags indicate relevance to the optical application chain; product-specific Y/Dy/Tb content and component suppliers are undisclosed. They do not establish confirmed material content.",
-      "def": "Component combines optical-power monitoring with reverse-light isolation in optical communications modules; the reviewed datasheet identifies no defense or space project."
+      "own": "Unlisted. A santec Holdings group company (Tokyo Stock Exchange, securities code 6777) responsible for optical communication components and optical devices; headquartered in Komaki, Aichi",
+      "rev": "Stand-alone revenue is not disclosed. santec Holdings' consolidated net sales were JPY 24.03 billion (fiscal year ended March 2025)",
+      "prod": "Spatial light modulators (LCOS-SLM: SLM-200, 210, 250, 300, 310 and others), spectral shapers (WSS-2000 LCOS programmable optical filter), optical power monitors (tap photodetectors NTP, UTP, MTP and IPD, the isolator-integrated INTP, and the MPA multichannel optical power monitor), optical attenuators (MEMS-driven COVA-1), optical filters (MTF series MEMS tunable filters), and optical subsystems (custom optical modules)",
+      "chn": "Rare earths are involved only through INTP (a C/L-band tap photodetector with a built-in optical isolator). The rotator and magnet materials of the isolator and their suppliers are not disclosed. No use of rare earths was found in its spatial light modulators, filters, attenuators or power monitors themselves.",
+      "src": "https://aoc.santec.com/jp/ ／ https://aoc.santec.com/jp/products/slm/ ／ https://aoc.santec.com/jp/products/monitor/ ／ https://aoc.santec.com/jp/products/monitor/intp/ ／ https://aoc.santec.com/jp/products/voa/ ／ https://aoc.santec.com/jp/products/filter/ ／ https://aoc.santec.com/en/assets/doc/INTP-C-E.pdf",
+      "note": "It has no stand-alone optical isolator products but makes INTP, a tap photodetector with a built-in isolator (for QSFP-DD optical transceivers, preliminary), so it is placed under Optical components & devices. Element flags reflect the usual make-up of the built-in isolator (Bi:RIG or YIG rotator and SmCo magnet) and do not confirm actual content. / 2026-11-20: Checked against the product lineup (spatial light modulators, spectral shapers, optical power monitors, optical attenuators, optical filters, optical subsystems) and Product Guide 2025, and moved from Faraday rotators & isolators (optical communications).",
+      "def": "Components for optical-power monitoring and blocking reverse light in optical communication modules; the product pages and datasheet reviewed identify no defense or space project."
     },
     "optics-tatsuta": {
       "name": "TATSUTA Electric Wire & Cable Co., Ltd.",
       "own": "See source for corporate and business information",
       "rev": "Revenue of the relevant business is unknown",
-      "prod": "Broadband polarization-independent optical isolators with low wavelength dependence; application-specific prototypes can be discussed from one unit with selectable wavelength, port length and connectors.",
+      "prod": "Broadband, polarisation-independent optical isolators with low wavelength dependence, and broadband optical circulators (optical-fiber components). Application-specific prototypes with specified wavelength, port length and connectors can be discussed from a single unit.",
       "chn": "Flags indicate relevance to the optical application chain; product-specific Y/Dy/Tb content and component suppliers are undisclosed. They do not establish confirmed material content.",
-      "src": "https://www.tatsuta.co.jp/product/sensor_medical/optical/isorator/",
-      "note": "Flags indicate relevance to the optical application chain; product-specific Y/Dy/Tb content and component suppliers are undisclosed. They do not establish confirmed material content.",
+      "src": "https://www.tatsuta.co.jp/product/sensor_medical/optical/isorator/ ／ https://www.tatsuta.co.jp/product/sensor_medical/optical/cirlulator/",
+      "note": "Flags indicate relevance to the optical application chain; product-specific Y/Dy/Tb content and component suppliers are undisclosed. They do not establish confirmed material content. / 2026-11-20: Confirmed from its optical isolator and circulator product pages and placed under Faraday rotators & isolators (optical communications). Whether it makes the rotators in house or buys them is unconfirmed.",
       "def": "Fiber-optic components protect sources from return-light damage and reflection-related problems; reviewed sources do not identify adoption in specific defense or space equipment."
     },
     "optics-space-compass": {
@@ -2536,6 +2538,292 @@
       "chn": "Medium. Sm falls under China's export controls on medium and heavy rare earths. Feedstock sourcing is undisclosed",
       "note": "Powder is produced at the Technical Research & Development Center (Minami-ku, Nagoya) and compounding at the Tsukiji Techno Center (Minato-ku, Nagoya), where a large mixer was installed in December 2025. The company states that Daido Electronics makes and sells the bonded-magnet mouldings. It targets a market of about 200 tonnes a year for SmFeN magnet material by 2030",
       "src": "https://www.daido.co.jp/products/isotropic_SmFeN/ ／ https://www.daido.co.jp/about/release/2026/260511_smfen.html"
+    },
+    "fujikura": {
+      "name": "Fujikura",
+      "own": "Listed company / Fujikura Ltd. (Tokyo Stock Exchange Prime Market, securities code 5803)",
+      "rev": "Consolidated net sales: JPY 1,182.4 billion, including JPY 653.0 billion from Information & Communications (fiscal year ended March 2026)",
+      "prod": "Optical fibers, optical cables and optical connectors; optical fiber devices for fiber lasers (fiber Bragg gratings, pump combiners and couplers); Yb fiber lasers and the isolator rotators built into them (TSAG single crystals, co-developed with NIMS)",
+      "pos": "A major maker of optical fibers and optical components. It patented, jointly with NIMS, the use of TSAG (Tb–Sc garnet) single crystals as rotators in isolators for 1 µm-band lasers, and builds them into its own Yb fiber lasers. Its share in rotators and isolators has not been confirmed.",
+      "def": "Not confirmed. Fiber lasers are mainly for materials processing.",
+      "chn": "Suppliers of the Tb and Sc used as TSAG raw materials are not disclosed. Tb is highly dependent on China.",
+      "src": "https://patents.google.com/patent/US8804240B2/en ／ https://www.nims.go.jp/electr-opt/OPCRY_e.html ／ https://www.optic-product.fujikura.com/wp-content/uploads/2025/06/CPJ70A_71A_79A.pdf ／ https://www2.jpx.co.jp/disc/58030/081220260514532598_tse-acedjpsm-58030-20260514358030-ixbrl.htm",
+      "note": "2026-11-19: Newly added through additional research on Faraday rotators and optical isolators for laser wavelengths. / 2026-11-21: Also placed under solid-state laser oscillators because it makes its own Yb fiber lasers (Sc is included through isolators that use its in-house TSAG rotators)."
+    },
+    "compound-kisankinzoku": {
+      "name": "Kisan Kinzoku",
+      "own": "Unlisted. Head office in Nishiyodogawa-ku, Osaka, with a Tokyo sales office in Chiyoda-ku; founded in 1959",
+      "rev": "Not disclosed. It has set a target of JPY 10 billion in sales",
+      "prod": "Compounds of rare metals (oxides, chlorides and others of Ga, In, W, Mo, Bi, Sb, Te, Li, Cs and more), deposition and thin-film materials (Ta₂O₅, SnO₂, MgF₂, ITO and others), contract manufacture of inorganic chemicals, and recovery of valuable metals and spent catalysts. Its handled elements include Nd, Dy and Tb",
+      "pos": "A specialist maker of rare-metal compounds and thin-film materials, building a new plant in Katagami, Akita (target start-up autumn 2026). Rare-earth volumes and share are unconfirmed",
+      "def": "Not confirmed. Thin-film materials and compounds mainly serve electronic components and semiconductors",
+      "chn": "Dy and Tb are listed only among handled elements; items, volumes and suppliers are not disclosed",
+      "src": "https://www.kisankinzoku.co.jp/product ／ https://www.kisankinzoku.co.jp/page1",
+      "note": "2026-11-20: Newly added as a Japanese rare-earth materials maker. No rare-earth items appear in its product list, and the Dy/Tb flag rests on weak evidence from its list of handled elements, so it is rated C."
+    },
+    "motor-mabuchi": {
+      "name": "Mabuchi Motor",
+      "own": "Listed company / Mabuchi Motor Co., Ltd. (Tokyo Stock Exchange Prime Market, securities code 6592); head office in Matsudo, Chiba",
+      "rev": "Consolidated net sales: JPY 200.4 billion (fiscal year ended December 2025)",
+      "prod": "Small DC motors (brushed and brushless) and compact, lightweight high-torque motors, for automotive electrical equipment (mirrors, door locks, grille shutters and more), robots and mobility, precision and office equipment, home appliances and tools, and medical use",
+      "pos": "A leading specialist in small DC motors. Since 2012 it has worked to cut rare-earth use in its motors and make them smaller and lighter. The breakdown by magnet type and its share are unconfirmed",
+      "def": "Not confirmed. Uses are mainly automotive electrical equipment, consumer products and medical devices",
+      "chn": "High-performance products such as brushless motors usually use neodymium magnets with Dy and Tb added for heat resistance. Magnet suppliers are not disclosed",
+      "src": "https://www.mabuchi-motor.co.jp/ ／ https://www.mabuchi-motor.co.jp/product/knowledge/classification/customized.html ／ https://www.mabuchi-motor.co.jp/csr/pdf/env2012.pdf ／ https://www2.jpx.co.jp/disc/65920/081220251211517737_tse-acedjpsm-65920-20251211517737-ixbrl.htm",
+      "note": "2026-11-20: Newly added on the demand side for rare-earth magnets (motors). Element flags reflect the usual make-up of motors using neodymium magnets."
+    },
+    "motor-mitsuba": {
+      "name": "Mitsuba",
+      "own": "Listed company / Mitsuba Corporation (Tokyo Stock Exchange Prime Market, securities code 7280); head office in Kiryu, Gunma",
+      "rev": "Consolidated net sales: JPY 348.6 billion (fiscal year ended March 2026)",
+      "prod": "Automotive electrical products (wiper and washer systems, motors for power windows, power seats, power sliding doors and power tailgates, starters, fans, electric oil pumps, electronic throttles, and brushless motors for electric power steering), motorcycle electrical products, and micro-mobility products",
+      "pos": "Body-system electrical motors such as wiper and power-window motors are its core, and about half of sales go to the Honda group. It offers wiper control motors that were the world's first to go brushless and rare-earth-free. From 2012 it switched to structures that limit internal heat to reduce Dy in high-performance magnets, and from 2013 it also introduced SR motors that use no permanent magnets",
+      "def": "Not confirmed. Uses are automobiles, motorcycles and micro-mobility",
+      "chn": "In motors using neodymium magnets, it reduces the Dy and Tb used for heat resistance through structural design. Magnet suppliers are not disclosed",
+      "src": "https://www.mitsuba.co.jp/jp/products/index.html ／ https://www.mitsuba.co.jp/jp/products/autoelectricalsystems.html ／ https://www.nikkei.com/article/DGXNASFB21043_R20C12A2L60000/ ／ https://www2.jpx.co.jp/disc/72800/081220260514532041_tse-acedjpsm-72800-20260515372800-ixbrl.htm",
+      "note": "2026-11-20: Newly added on the demand side for rare-earth magnets (motors). Element flags reflect the usual make-up of motors using neodymium magnets."
+    },
+    "motor-yaskawa": {
+      "name": "Yaskawa Electric",
+      "own": "Listed company / Yaskawa Electric Corporation (Tokyo Stock Exchange Prime Market, securities code 6506); head office in Kitakyushu",
+      "rev": "Consolidated revenue: JPY 542.1 billion, including JPY 236.1 billion from Motion Control and JPY 247.0 billion from Robotics (fiscal year ended February 2026)",
+      "prod": "AC servo motors and servo drives (Σ series), inverters, industrial robots (MOTOMAN), and system engineering (electrical systems)",
+      "pos": "A leading maker of servo motors, inverters and industrial robots. In 2013 it developed an EV drive motor with a ferrite-magnet IPM structure that uses no neodymium magnets. The magnet type in its servo motors and its share are unconfirmed",
+      "def": "Not confirmed. Uses include machine tools, electronic-component and semiconductor manufacturing equipment, logistics and automotive manufacturing",
+      "chn": "High-response servo motors usually use neodymium magnets with Dy and Tb added for heat resistance. Magnet type and suppliers are not disclosed",
+      "src": "https://www.yaskawa.co.jp/product/servomotor ／ https://www.yaskawa.co.jp/newsrelease/product/6079 ／ https://www.e-mechatronics.com/ ／ https://www.yaskawa.co.jp/wp-content/uploads/2026/07/20260710.pdf",
+      "note": "2026-11-20: Newly added on the demand side for rare-earth magnets (motors). Element flags reflect the usual make-up of servo motors using neodymium magnets."
+    },
+    "photonics-fiberlabs": {
+      "name": "FiberLabs",
+      "own": "Unlisted. Founded in 2000 as an in-house venture of KDDI R&D Laboratories; head office and development/production base in Fujimino, Saitama (inside KDDI Research)",
+      "rev": "Not disclosed",
+      "prod": "Optical fiber amplifiers (C-band EDFAs, S-band TDFAs and O-band PDFAs using fluoride fiber, in benchtop form) and fiber laser sources. It also handles other makers' passive optical components (optical isolators and others)",
+      "pos": "One of the few Japanese makers of O- and S-band optical amplifiers using fluoride fiber. Share is unconfirmed",
+      "def": "Not confirmed. Uses are R&D and evaluation in optical communications, and sensing",
+      "chn": "Its specification tables state that every amplifier model has built-in input and output optical isolators, through whose rotators (Bi-substituted garnet) and magnets it touches Y, Tb and Sm. Isolator suppliers are not disclosed. The Er-, Tm- and Pr-doped amplifying fibers are outside this dataset's element scope",
+      "src": "https://www.fiberlabs.co.jp/ ／ https://www.city.fujimino.saitama.jp/material/files/group/20/faibarabo202601.pdf ／ https://www.lambdaphoto.co.uk/fiberlabs-c-band-amplifier-edfa-bench-top.html",
+      "note": "2026-11-20: Newly added through additional research on optical components and devices. Its 1064 nm optical isolators are other makers' products, so it is not placed in the isolator category."
+    },
+    "laser-melco-fa": {
+      "name": "Mitsubishi Electric (FA, laser processing machines)",
+      "own": "Listed on the TSE Prime Market. Laser processing machines belong to its factory automation systems business",
+      "rev": "Not confirmed (sales of processing machines alone are not disclosed)",
+      "prod": "MF-series fiber laser oscillators, CO₂ laser oscillators, 2D and 3D laser processing machines (including models with in-house 12 kW-class oscillators), and GTW5-UVF20-series PCB laser drilling machines with 355 nm UV laser oscillators",
+      "pos": "A major Japanese maker that develops machine bodies, oscillators and controllers in house. Share is unconfirmed",
+      "def": "Not confirmed. Uses are processing of sheet metal, automotive and electronic parts",
+      "chn": "Its fiber oscillators touch Tb and Sm through output-side optical isolators (TGG or similar rotators and magnets; typical configuration). Its UV laser oscillators are third harmonics of solid-state lasers and touch Y through YAG/YVO₄ media (medium type not disclosed). CO₂ lasers do not use the target elements.",
+      "note": "2026-11-21: Newly added through research on industrial lasers. Kept separate from the Mitsubishi Electric card for optical devices and defense because the businesses differ.",
+      "src": "https://www.mitsubishielectric.co.jp/fa/products/mecha/laser/ ／ https://www.mitsubishielectric.co.jp/fa/products/mecha/fiber-oscillator/pmerit/fiber/mf/index.html ／ https://www.mitsubishielectric.co.jp/fa/products/mecha/laser/pmerit/drilling/gtw5-uvf20/index.html ／ https://www.mitsubishielectric.co.jp/news/2020/0128-b.html"
+    },
+    "laser-amada": {
+      "name": "Amada (laser processing machines and welders)",
+      "own": "Listed on the TSE Prime Market. Welders are made by subsidiary Amada Weld Tech (formerly Miyachi Technos / Amada Miyachi)",
+      "rev": "Not confirmed (laser sales alone are not disclosed)",
+      "prod": "Fiber laser processing machines (sheet-metal cutting), fiber laser welders (such as the MF-C2000A for welding aluminium and copper in automotive batteries) and YAG laser welders (since the Amada Miyachi era)",
+      "pos": "A major Japanese maker of sheet-metal machines. The former Miyachi is a long-established maker of YAG lasers for precision welding. Share is unconfirmed",
+      "def": "Not confirmed. Uses are processing of sheet metal, automobiles, batteries and electronic parts",
+      "chn": "YAG welders touch Y through Nd:YAG media (the current model mix needs checking). Fiber lasers touch Tb and Sm through output-side optical isolators (TGG or similar rotators and magnets; typical configuration). Whether it makes fiber oscillators in house is unconfirmed.",
+      "note": "2026-11-21: Newly added through research on industrial lasers. Amada Weld Tech, which makes the same product group, is merged into this card. Subsidiary Via Mechanics, which makes PCB drilling machines, has a separate card because its products differ.",
+      "src": "https://www.marklines.com/ja/product/14376 ／ https://www.nikkan.co.jp/articles/view/00380251"
+    },
+    "laser-keyence": {
+      "name": "Keyence",
+      "own": "Listed on the TSE Prime Market. Head office in Osaka. Maker of sensors, measuring instruments and machine-vision equipment",
+      "rev": "Not confirmed (marker sales alone are not disclosed)",
+      "prod": "MD-X series 3-axis hybrid laser markers (in-house S-MOPA oscillator that amplifies a YVO₄ master oscillator with fiber, 25 W-class average output), and fiber, CO₂ and UV laser markers",
+      "pos": "A major Japanese maker of laser markers. Share is unconfirmed",
+      "def": "Not confirmed. Uses are marking codes and characters on parts and products, and micro-machining",
+      "chn": "The MD-X oscillates in a YVO₄ crystal (Nd:YVO₄), so it touches Y. It touches Tb and Sm through the fiber amplifier stage and output-side optical isolators (TGG or similar rotators and magnets; typical configuration).",
+      "note": "2026-11-21: Newly added through research on industrial lasers. Its equipment is placed under RF, piezoelectric sensors & measurement because it is a maker of measuring instruments and sensors.",
+      "src": "https://www.keyence.com/products/marker/fiber-yvo4-yag-laser/md-x1000_1500/ ／ https://www.keyence.com/landing/marker/lp_md-x_modal01.jsp"
+    },
+    "laser-spectronix": {
+      "name": "Spectronix",
+      "own": "Unlisted. Head office in Osaka Prefecture",
+      "rev": "Not confirmed",
+      "prod": "Solid-state laser oscillators for industry and research: green (532 nm) picosecond lasers and the deep-UV (266 nm) picosecond pulse laser LDH-X0810 (co-developed with NEDO, 8 W output)",
+      "pos": "A Japanese maker of short-pulse solid-state laser oscillators. Share is unconfirmed",
+      "def": "Not confirmed. Uses are micro-machining and R&D",
+      "chn": "Its green and deep-UV oscillators use wavelength conversion of solid-state lasers and likely touch Y through YAG/YVO₄ media (medium type unconfirmed; the deep-UV models combine a DFB semiconductor laser with fiber and bulk amplifiers). It touches Tb and Sm through optical isolators (typical configuration).",
+      "note": "2026-11-21: Newly added through research on industrial lasers. The gain crystal is unconfirmed.",
+      "src": "https://monoist.itmedia.co.jp/mn/articles/2004/20/news026.html ／ https://www.nikkan.co.jp/articles/view/00368176"
+    },
+    "laser-fanuc": {
+      "name": "FANUC",
+      "own": "Listed on the TSE Prime Market. Head office in Oshino, Yamanashi. Laser diode modules are made by FF Laser (Yamanakako, Yamanashi), a 50:50 joint venture with Furukawa Electric",
+      "rev": "Not confirmed (laser sales alone are not disclosed)",
+      "prod": "Fiber laser oscillators (entered in 2015; up to 6 kW-class models such as the FF6000i-model A) and CO₂ laser oscillators, supplied to machine builders together with CNCs and robots",
+      "pos": "A major global maker of CNCs for machine tools. Laser oscillator share is unconfirmed",
+      "def": "Not confirmed. Uses are oscillators for machine builders",
+      "chn": "The gain medium of fiber lasers (Yb-doped fiber) is outside this dataset's element scope. It touches Tb and Sm through the optical isolator on the output side (TGG or similar rotators and magnets; typical configuration). CO₂ lasers do not use the target elements.",
+      "note": "2026-11-21: Newly added through research on industrial lasers. Reports date from 2015–2017; the current model mix needs checking.",
+      "src": "https://newswitch.jp/p/7761 ／ https://newswitch.jp/p/4258"
+    },
+    "laser-mhi-defense": {
+      "name": "Mitsubishi Heavy Industries (defense & space: high-power lasers)",
+      "own": "Listed on the TSE Prime Market. Defense & space segment",
+      "rev": "Not confirmed (laser sales alone are not disclosed)",
+      "prod": "Vehicle-mounted high-power laser demonstrator (10 kW-class, against small drones; ATLA research prototype built in FY2021–2024 and completed in October 2024), and technology to transmit kW-class single-mode laser light over tens of metres through photonic crystal fiber (jointly with NTT)",
+      "pos": "One of the two companies carrying out Japan's research prototypes of high-power laser weapons",
+      "def": "ATLA research prototype. Said to be able to target drones about 1.2 km away",
+      "chn": "The light-source type and suppliers are not disclosed. If kW-class fiber lasers are the source, it touches Tb and Sm through output-side optical isolators (TGG or similar rotators and magnets; typical configuration). Drive motors of the beam director (NdFeB magnets) may also involve Dy and Tb.",
+      "note": "2026-11-21: Newly added through research on laser systems. Kept separate from the MHI cards for energy and aero engines because the businesses differ.",
+      "src": "https://www.mod.go.jp/atla/research/ats2024/pdf_oral_matl/1113_1330_ss17.pdf ／ https://www.mod.go.jp/atla/research/ats2024/pdf_exhi_pos/p-24.pdf ／ https://www.mhi.com/jp/news/18042503.html"
+    },
+    "laser-khi-defense": {
+      "name": "Kawasaki Heavy Industries (defense: high-power lasers)",
+      "own": "Listed on the TSE Prime Market. Defense business of the Aerospace Systems Company",
+      "rev": "Not confirmed (laser sales alone are not disclosed)",
+      "prod": "Electrically driven high-power laser system (100 kW-class, against small drones and mortar rounds; ATLA research prototype delivered in February 2023, housed in two 40-foot containers). Reported to combine the beams of ten domestically built 10 kW-class fiber lasers; installation on the test ship JS Asuka was reported at the end of 2025",
+      "pos": "One of the two companies carrying out Japan's research prototypes of high-power laser weapons",
+      "def": "ATLA research prototype, at the stage of shipboard testing",
+      "chn": "It touches Tb and Sm through the output-side optical isolators of its fiber lasers (TGG, TSAG or similar rotators and magnets; typical configuration). The supplier of the domestic fiber lasers is not disclosed.",
+      "note": "2026-11-21: Newly added through research on laser systems. Kept separate from the KHI jet-engine card because the businesses differ. The shipboard installation comes from overseas reports; no official announcement was confirmed.",
+      "src": "https://www.mod.go.jp/atla/research/ats2024/pdf_oral_matl/1113_1330_ss17.pdf ／ https://armyrecognition.com/news/navy-news/2025/exclusive-japan-installs-100kw-laser-weapon-on-japanese-navy-js-asuka-warship-ahead-of-sea-trials"
+    },
+    "space-orbital-lasers": {
+      "name": "Orbital Lasers",
+      "own": "Unlisted. Established in January 2024 as an in-house startup of SKY Perfect JSAT",
+      "rev": "Not confirmed",
+      "prod": "Satellite-mounted lasers: payloads that stop debris from tumbling (DTB) and debris removal (ADR, planned from FY2029), using laser ablation with a solid-state pulse laser co-developed with RIKEN; and Earth observation with satellite-borne lidar",
+      "pos": "Apparently the only Japanese company commercialising laser-based debris handling. Share does not apply",
+      "def": "Won a laser-ranging contract (November 2025, about ¥2.05 billion) in the Ministry of Defense research on monitoring and protecting Japanese satellites in orbit",
+      "chn": "The medium of the solid-state pulse laser is not disclosed. If it is the usual Nd:YAG, it touches Y, and it touches Tb and Sm through the rotators and magnets of optical isolators (typical configuration).",
+      "note": "2026-11-21: Newly added through research on laser systems. Placed under satellites & spacecraft because the lasers are carried on satellites.",
+      "src": "https://www.mod.go.jp/j/press/news/2026/03/06c.html ／ https://news.mynavi.jp/techplus/article/20240131-2873557/ ／ https://www.watch.impress.co.jp/docs/news/1565176.html"
+    },
+    "laser-vtec": {
+      "name": "V Technology",
+      "own": "Listed on the TSE Prime Market. Head office in Yokohama",
+      "rev": "Not confirmed (laser equipment sales alone are not disclosed)",
+      "prod": "Laser annealing systems for FPD manufacturing (configured with Nd:YAG long-pulse 1064 nm and short-pulse second-harmonic 532 nm), and FPD inspection and repair systems",
+      "pos": "A Japanese maker of FPD manufacturing equipment. Share is unconfirmed",
+      "def": "Not confirmed. Uses are FPD and semiconductor manufacturing",
+      "chn": "It touches Y through Nd:YAG media, and Tb and Sm through the rotators and magnets of optical isolators (typical configuration). Whether it makes the oscillators in house is unconfirmed.",
+      "note": "2026-11-21: Newly added through research on industrial lasers.",
+      "src": "https://www.yz.yamagata-u.ac.jp/AnalysisCenter/pdf/FROM/LAS-3747.pdf ／ https://www.jst.go.jp/pr/info/info1361/index.html"
+    },
+    "laser-viamechanics": {
+      "name": "Via Mechanics",
+      "own": "Amada acquired all shares in 2025 (for ¥51 billion). Head office in Kanagawa Prefecture",
+      "rev": "Not confirmed",
+      "prod": "PCB drilling machines: the LU-2QS252 UV laser processing machine (for FPCs and package substrates, with selectable nanosecond or picosecond oscillators, 15 µm holes), CO₂ laser processing machines and mechanical drilling machines",
+      "pos": "A major maker of PCB drilling machines. Share is unconfirmed",
+      "def": "Not confirmed. Use is electronic substrate manufacturing",
+      "chn": "UV lasers use wavelength conversion of solid-state lasers and likely touch Y through YAG/YVO₄ media (medium type and oscillator suppliers not disclosed). It touches Tb and Sm through the rotators and magnets of optical isolators (typical configuration). CO₂ lasers do not use the target elements.",
+      "note": "2026-11-21: Newly added through research on industrial lasers. Kept separate from its parent Amada because the products differ.",
+      "src": "https://eetimes.itmedia.co.jp/ee/articles/2406/25/news118.html ／ https://monoist.itmedia.co.jp/mn/spv/2504/21/news057.html"
+    },
+    "laser-shibuya": {
+      "name": "Shibuya Corporation",
+      "own": "Listed on the TSE Prime Market. Head office in Kanazawa. Laser processing machines are products of its mechatronics division",
+      "rev": "Not confirmed (laser equipment sales alone are not disclosed)",
+      "prod": "Ultrashort-pulse laser processing machines (with green and UV oscillators, processing metals, resins, ceramics and FPCs) and the SPF3907A ultra-precision fiber laser processing machine",
+      "pos": "Mainly a maker of bottling systems that also makes laser processing machines. Share is unconfirmed",
+      "def": "Not confirmed. Uses are micro-machining of electronic parts and medical devices",
+      "chn": "Green and UV ultrashort-pulse oscillators use wavelength conversion of solid-state lasers and likely touch Y through YAG/YVO₄ media (medium type and oscillator suppliers not disclosed). It touches Tb and Sm through the rotators and magnets of optical isolators (typical configuration).",
+      "note": "2026-11-21: Newly added through research on industrial lasers.",
+      "src": "https://pr.mono.ipros.com/en/shibuya/product/detail/2000451611 ／ https://pr.mono.ipros.com/en/shibuya/product/detail/2000450495"
+    },
+    "laser-shi": {
+      "name": "Sumitomo Heavy Industries (laser equipment)",
+      "own": "Listed on the TSE Prime Market. Laser annealing systems are made by Sumitomo Heavy Industries Material Solutions, fiber laser systems by Sumitomo Heavy Industries Mechatronics",
+      "rev": "Not confirmed (laser equipment sales alone are not disclosed)",
+      "prod": "Laser annealing systems for power semiconductors (IGBT, SiC) and fiber laser systems (welding, remote welding, cutting, brazing)",
+      "pos": "Its laser annealing systems for power semiconductors are said to be in high demand. Share is unconfirmed",
+      "def": "Not confirmed. Uses are power-semiconductor manufacturing, welding and cutting",
+      "chn": "Oscillators are sourced externally. It touches Tb and Sm through the output-side isolators (TGG or similar rotators and magnets) of the oscillators it builds in (typical configuration). Oscillator suppliers are not disclosed. The light-source type of the annealing systems is unconfirmed.",
+      "note": "2026-11-21: Newly added through research on industrial lasers. The two group companies with laser equipment businesses are merged into this card.",
+      "src": "https://newswitch.jp/p/43912 ／ https://hrmos.co/pages/shi-sms/jobs/26tech4"
+    },
+    "laser-accretech": {
+      "name": "Tokyo Seimitsu (ACCRETECH)",
+      "own": "Listed on the TSE Prime Market. Head office in Hachioji, Tokyo. Maker of measuring instruments and semiconductor manufacturing equipment",
+      "rev": "Not confirmed (dicing equipment sales alone are not disclosed)",
+      "prod": "Stealth dicing equipment (ML3200 laser dicer for 300 mm wafers, forming modified layers inside silicon with an IR laser; technology from Hamamatsu Photonics), and coordinate measuring machines and surface roughness testers",
+      "pos": "A major Japanese maker of measuring instruments and semiconductor manufacturing equipment. Share is unconfirmed",
+      "def": "Not confirmed. Uses are semiconductor manufacturing and precision measurement",
+      "chn": "The IR laser source is not disclosed. If it is a solid-state laser for stealth dicing, it touches Y through YAG/YVO₄ media, and Tb and Sm through the rotators and magnets of optical isolators (typical configuration).",
+      "note": "2026-11-21: Newly added through research on industrial lasers. Placed under RF, piezoelectric sensors & measurement because it is a measuring-instrument maker.",
+      "src": "https://www.accretech.com/en/product/semicon/semi/dicer_semi/ml3200.html ／ https://www.hamamatsu.com/jp/ja/product/lasers/laser-related-products/stealth-dicing-technology.html"
+    },
+    "laser-disco": {
+      "name": "DISCO",
+      "own": "Listed on the TSE Prime Market. Head office in Ota, Tokyo",
+      "rev": "Not confirmed (laser equipment sales alone are not disclosed)",
+      "prod": "Wafer laser dicing equipment (laser saws, including stealth dicing), blade dicing equipment and grinders",
+      "pos": "A major global maker of dicing equipment. Share is unconfirmed",
+      "def": "Not confirmed. Use is semiconductor manufacturing",
+      "chn": "The laser-saw light source is not disclosed. If it is a solid-state laser, it touches Y through YAG/YVO₄ media, and Tb and Sm through the rotators and magnets of optical isolators (typical configuration).",
+      "note": "2026-11-21: Newly added through research on industrial lasers. The light-source type is unconfirmed.",
+      "src": "https://monoist.itmedia.co.jp/mn/spv/1311/27/news034.html ／ https://www.hamamatsu.com/jp/ja/product/lasers/laser-related-products/stealth-dicing-technology.html"
+    },
+    "laser-mazak": {
+      "name": "Yamazaki Mazak",
+      "own": "Unlisted. Head office in Oguchi, Aichi",
+      "rev": "Not confirmed",
+      "prod": "OPTIPLEX series fiber laser processing machines (the 3015 NEO with a 15 kW oscillator, the 3015 HP and 4220 HP for thick plate, and others) and automation systems",
+      "pos": "A major Japanese machine-tool maker. Share is unconfirmed",
+      "def": "Not confirmed. Use is sheet-metal cutting",
+      "chn": "Oscillators are sourced externally. It touches Tb and Sm through the output-side isolators (TGG or similar rotators and magnets) of the oscillators it builds in (typical configuration). Oscillator suppliers are not disclosed.",
+      "note": "2026-11-21: Newly added through research on industrial lasers.",
+      "src": "https://monoist.itmedia.co.jp/mn/articles/2203/30/news074.html ／ https://monoist.itmedia.co.jp/mn/spv/2508/26/news044.html"
+    },
+    "laser-panasonic-industry": {
+      "name": "Panasonic Industry (laser markers)",
+      "own": "An operating company of Panasonic Holdings. Laser markers are among its control-equipment products",
+      "rev": "Not confirmed (marker sales alone are not disclosed)",
+      "prod": "Laser markers: fiber type (FAYb, 1060 nm) such as the LP-RF and LP-ZV, and CO₂ type (10,600 nm). It does not offer YAG-crystal markers",
+      "pos": "One of the major Japanese makers of laser markers. Share is unconfirmed",
+      "def": "Not confirmed. Use is marking parts and products",
+      "chn": "The gain medium of fiber lasers (Yb-doped fiber) is outside this dataset's element scope. It touches Tb and Sm through the optical isolator on the output side (TGG or similar rotators and magnets; typical configuration). CO₂ markers do not use the target elements.",
+      "note": "2026-11-21: Newly added through research on industrial lasers. Kept separate from Panasonic Connect because the operating companies differ.",
+      "src": "https://industry.panasonic.com/ac/j/fasys/special/tech_lasermarker/faq/index.jsp ／ https://industry.panasonic.com/jp/ja/products/fasys/lasermarker/lasermarker/lp-zv"
+    },
+    "laser-kataoka": {
+      "name": "Kataoka Corporation",
+      "own": "Unlisted. Head office in Minami-ku, Kyoto. Its restructuring was supported by NITTOKU",
+      "rev": "Not confirmed",
+      "prod": "Laser processing systems (laser patterning systems for perovskite solar cells, with plans to raise capacity to 32 units a year by 2029 on a ¥6.9 billion investment), battery-can welding systems and secondary-battery inspection systems",
+      "pos": "A Japanese maker leading in laser patterning systems for perovskite solar cells. Share is unconfirmed",
+      "def": "Not confirmed. Uses are solar-cell and secondary-battery manufacturing",
+      "chn": "The light-source type and suppliers are not disclosed. If solid-state or fiber lasers are used for patterning and welding, it touches Tb and Sm through the rotators and magnets of output-side optical isolators (typical configuration).",
+      "note": "2026-11-21: Newly added through research on industrial lasers. The light-source type is unconfirmed.",
+      "src": "https://newswitch.jp/p/44746"
+    },
+    "laser-muratec": {
+      "name": "Murata Machinery",
+      "own": "Unlisted. Head office in Kyoto",
+      "rev": "Not confirmed",
+      "prod": "Fiber laser processing machines (LS3015GC, rated 2.5–6 kW, for sheet-metal cutting) and the LS3015HL punch-laser combination machine",
+      "pos": "A Japanese maker of sheet-metal machines. Share is unconfirmed",
+      "def": "Not confirmed. Uses are cutting sheet metal and steel",
+      "chn": "Oscillators are sourced externally. It touches Tb and Sm through the output-side isolators (TGG or similar rotators and magnets) of the oscillators it builds in (typical configuration). Oscillator suppliers are not disclosed.",
+      "note": "2026-11-21: Newly added through research on industrial lasers. The current configuration of its fiber laser machines needs checking.",
+      "src": "https://monoist.itmedia.co.jp/mn/articles/1804/27/news011.html"
+    },
+    "laser-komatsu-sanki": {
+      "name": "Komatsu Industries",
+      "own": "A subsidiary of Komatsu. Head office in Kanazawa, Ishikawa",
+      "rev": "Not confirmed",
+      "prod": "Fiber laser processing machines (the TWCL10-1 and TWCL08-1 that cut under water, the 3D TLH510-2 and others), TFPL plasma cutting machines and press machines",
+      "pos": "A major Japanese maker of press machines that also makes laser cutting machines. Share is unconfirmed",
+      "def": "Not confirmed. Uses are cutting sheet metal and steel",
+      "chn": "Oscillators are sourced externally. It touches Tb and Sm through the output-side isolators (TGG or similar rotators and magnets) of the oscillators it builds in (typical configuration). Oscillator suppliers are not disclosed.",
+      "note": "2026-11-21: Newly added through research on industrial lasers. The current configuration of its fiber laser machines needs checking.",
+      "src": "https://monoist.itmedia.co.jp/mn/articles/2303/15/news145.html ／ https://www.komatsu.jp/en/newsroom/2020/20200821"
+    },
+    "laser-koike": {
+      "name": "Koike Sanso Kogyo",
+      "own": "Unlisted. Head office in Sumida, Tokyo",
+      "rev": "Not confirmed",
+      "prod": "Fiber laser cutting machines (FIBERTEX series) and plasma and gas cutting machines",
+      "pos": "A major Japanese maker of cutting machines. Share is unconfirmed",
+      "def": "Not confirmed. Uses are cutting sheet metal and steel",
+      "chn": "Oscillators are sourced externally. It touches Tb and Sm through the output-side isolators (TGG or similar rotators and magnets) of the oscillators it builds in (typical configuration). Oscillator suppliers are not disclosed.",
+      "note": "2026-11-21: Newly added through research on industrial lasers. The current configuration of its fiber laser machines needs checking.",
+      "src": "https://koike-japan.com/site/koike/get/params_E449791033_Dattachment/289468/FIBERTEX-Zero1.pdf"
     }
   },
   "stages": {
@@ -2618,14 +2906,14 @@
     },
     "03_yag_crystal": {
       "label": "Laser optical crystals & transparent ceramics",
-      "description": "YAG and Y₂O₃; TGG and Tb-based glass",
+      "description": "YAG and Y₂O₃; TGG, TSAG and Tb-based glass",
       "srcNotes": {
-        "02_compound": "Use high-purity Y₂O₃ and Tb₄O₇ as feedstock for crystal growth and sintering"
+        "02_compound": "Use high-purity Y₂O₃, Tb₄O₇ and Sc₂O₃ as feedstock for crystal growth and sintering (Sc for TSAG)"
       }
     },
     "03_magneto_garnet": {
       "label": "Magnetic garnets (Bi-substituted films & YIG)",
-      "description": "Bi-substituted rare-earth iron garnet films, YIG single crystals and SGGG substrates",
+      "description": "Bi:RIG films, YIG single crystals and SGGG substrates",
       "srcNotes": {
         "02_compound": "Grow bismuth-substituted magnetic garnet films by LPE on garnet substrates, or grow YIG single crystals, from high-purity Y, Tb, Gd and other oxides"
       }
@@ -2710,17 +2998,19 @@
       }
     },
     "04_faraday_laser": {
-      "label": "Faraday rotators & optical isolators (laser wavelengths)",
-      "description": "532–1064 nm; elements of TGG and Tb-based glass",
+      "label": "Faraday rotators & isolators (lasers)",
+      "description": "532–1064 nm; TGG, TSAG and Tb-based glass",
       "srcNotes": {
-        "03_yag_crystal": "Process TGG crystals, transparent ceramics and Tb-based glass into rotator elements and combine them with magnets and polarisers"
+        "03_yag_crystal": "Process TGG and TSAG crystals, transparent ceramics and Tb-based glass into rotators",
+        "04_mag": "Combine NdFeB (Dy-doped) or SmCo magnets, as the strong field source that saturates TGG and Tb-based glass rotators, into rotator units and optical isolators"
       }
     },
     "04_faraday_tele": {
-      "label": "Faraday rotators & optical isolators (telecom wavelengths)",
-      "description": "1310/1550 nm; elements of Bi-substituted garnet film",
+      "label": "Faraday rotators & isolators (optical communications)",
+      "description": "1310/1550 nm; Bi:RIG and YIG",
       "srcNotes": {
-        "03_magneto_garnet": "Process magnetic garnet films and YIG crystals into rotator elements"
+        "03_magneto_garnet": "Process magnetic garnet films and YIG crystals into rotator chips",
+        "04_mag": "Place SmCo magnets around the rotator chip and combine them with polarisers and birefringent crystals into optical isolators and circulators (SmCo is usual for telecom because of its temperature stability)"
       }
     },
     "04_target": {
@@ -2798,17 +3088,17 @@
     },
     "05_laser_osc": {
       "label": "Solid-state laser oscillators",
-      "description": "Nd:YAG and Yb:YAG",
+      "description": "Nd:YAG, Yb:YAG, Nd:YVO₄ and fiber",
       "srcNotes": {
-        "04_laser_medium": "Integrate gain media into oscillators",
-        "04_faraday_laser": "Block back-reflected light as the isolator inside the oscillator"
+        "04_laser_medium": "Build Nd:YAG, Yb:YAG and Nd:YVO₄ crystals and ceramics into solid-state laser oscillators as the gain medium (fiber lasers do not pass through this link)",
+        "04_faraday_laser": "Build optical isolators into the output side of oscillators to block back-reflected light. Used in both solid-state and fiber lasers; kW-class high-power units combine TGG or TSAG rotators with strong magnets"
       }
     },
     "05_photonics": {
-      "label": "Optical communication components & devices",
-      "description": "Optical isolators and circulators",
+      "label": "Optical components & devices",
+      "description": "TOSAs, EMLs, ITLAs, optical transceivers and optical amplifiers",
       "srcNotes": {
-        "04_faraday_tele": "Combine rotators with polarisers and magnets into components that block light reflected back into semiconductor lasers (1310/1550 nm)"
+        "04_faraday_tele": "Build optical isolators into TOSAs, EMLs, ITLAs, optical transceivers and optical amplifiers to block light reflected back into semiconductor lasers (1310/1550 nm)"
       }
     },
     "05_scaln_film": {
@@ -2880,9 +3170,9 @@
       "description": "Satellites, probes and on-orbit services",
       "srcNotes": {
         "05_motor": "Reaction wheels and drive mechanisms",
-        "05_laser_osc": "Spaceborne LiDAR and laser ranging",
+        "05_laser_osc": "Space lidar and laser ranging, and pulse lasers carried on satellites for debris removal (Tb and Sm through the rotators and magnets of optical isolators)",
         "05_electronics": "Space-grade electronic components",
-        "05_photonics": "High-reliability isolators for space optical communication, at the stage of on-orbit environmental testing"
+        "05_photonics": "Optical transceiver devices for space optical communication, with built-in high-reliability isolators, at the stage of on-orbit environmental testing"
       }
     },
     "06_engine": {
@@ -2916,9 +3206,9 @@
     },
     "06_laser": {
       "label": "Laser systems & irradiation",
-      "description": "Ranging, irradiation and high power",
+      "description": "Ranging, irradiation, high power and industrial processing machines",
       "srcNotes": {
-        "05_laser_osc": "Light sources for ranging, irradiation, and processing",
+        "05_laser_osc": "Light sources for ranging, irradiation and high-power lasers, and for laser processing machines, markers, welders and annealing systems",
         "05_electronics": "Semiconductor lasers and electronic circuits, including laser transceivers for engagement training"
       }
     },
@@ -2939,22 +3229,23 @@
         "05_scaln_film": "RF filters in communications equipment",
         "05_tube": "Transmitter tubes for satellite communications and radio systems",
         "05_electronics": "Electronic circuits and components in communications equipment, including magnetic components",
-        "05_photonics": "Build into optical transmission equipment and submarine cable repeaters as isolators and circulators"
+        "05_photonics": "Build into optical transmission equipment and submarine cable repeaters as optical transceivers and amplifiers"
       }
     },
     "06_optical_net": {
       "label": "Optical network infrastructure",
       "description": "Optical transport, submarine cables and satellite optical links (commercial)",
       "srcNotes": {
-        "05_photonics": "Build optical isolators and circulators into optical transmission equipment and submarine repeaters"
+        "05_photonics": "Build optical transceivers and amplifiers into optical transmission equipment and submarine repeaters"
       }
     },
     "06_rf_sensor": {
       "label": "RF & piezoelectric sensing",
-      "description": "RF measurement, piezo evaluation and sensors",
+      "description": "RF measurement, piezo evaluation, sensors and laser measurement",
       "srcNotes": {
         "05_scaln_film": "Piezoelectric sensors and high-frequency devices",
-        "05_electronics": "Electronic components in instruments and sensors"
+        "05_electronics": "Electronic components in instruments and sensors",
+        "05_laser_osc": "Laser light sources built into inspection and measurement equipment, stealth dicing equipment and laser markers (Tb and Sm through the rotators and magnets of optical isolators)"
       }
     }
   },
