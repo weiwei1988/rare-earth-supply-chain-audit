@@ -10,7 +10,7 @@ function renderFlow(){
   var sidePadding=Math.max(18,Math.min(60,Math.round(18+(W-1200)*.05)));
   var cardWidth=Math.max(176,Math.min(240,Math.round(176+(W-1200)*.082)));
   var columnStep=cardWidth+(W-sidePadding*2-cardWidth*6)/5;
-  var minCardHeight=100,columnGap=8,columnBaseSpan=220,perStageCompany=16.6,perCardScaleCompany=.8,maxColumnSpan=1580;
+  var minCardHeight=100,columnGap=8,columnBaseSpan=220,perStageCompany=16.6,perCardScaleCompany=.8,maxColumnSpan=1580,downstreamStep=40;
   var xByStage={2:sidePadding+columnStep,3:sidePadding+columnStep*2,4:sidePadding+columnStep*3,5:sidePadding+columnStep*4,6:sidePadding+columnStep*5};
   var lane={Y:-6,DyTb:-2,Sm:2,Sc:6};
   var stageMeta={};stages.forEach(function(stage){stageMeta[stage.id]=stage});
@@ -26,18 +26,22 @@ function renderFlow(){
     return (columnOrder[column.stage]||column.items.map(function(item){return item.id})).map(function(id){return byId[id]}).filter(Boolean)
   }
   columns.forEach(function(column){column.nodes=orderNodes(column)});
-  function sizeColumn(column){
+  // 下流の列は、上流の列の高さに「社数の比の平方根」をかけた高さより短くしない。
+  // カード1枚の最低の高さで列の高さが決まる工程（カードが多い工程）でも、社数の増え方が縦の長さに出るようにする。
+  // 正比例にすると装備・システムの列が長くなりすぎるため、平方根で伸ばす。prev は1つ上流の列
+  function sizeColumn(column,prev){
+    var floor=prev?Math.max(prev.span+downstreamStep,prev.span*Math.sqrt(Math.max(1,totalStageCount(stageMeta[column.stage].id))/Math.max(1,totalStageCount(stageMeta[prev.stage].id)))):0;
     var nodes=column.nodes,gapSpan=Math.max(0,nodes.length-1)*columnGap;
     var minimumSpan=nodes.length*minCardHeight+gapSpan;
     var stageCompanyCount=totalStageCount(stageMeta[column.stage].id);
-    var targetSpan=Math.max(minimumSpan+stageCompanyCount*perCardScaleCompany,Math.min(maxColumnSpan,columnBaseSpan+stageCompanyCount*perStageCompany));
+    var targetSpan=Math.max(minimumSpan+stageCompanyCount*perCardScaleCompany,Math.min(maxColumnSpan,columnBaseSpan+stageCompanyCount*perStageCompany),floor);
     var weights=nodes.map(function(item){return Math.max(1,totalSubCount(item.id))});
     var weightTotal=weights.reduce(function(sum,value){return sum+value},0);
     var extraHeight=targetSpan-gapSpan-nodes.length*minCardHeight;
     column.heights=nodes.map(function(item,index){return minCardHeight+extraHeight*weights[index]/weightTotal});
     column.span=column.heights.reduce(function(sum,height){return sum+height},0)+gapSpan
   }
-  columns.forEach(sizeColumn);
+  columns.forEach(function(column,index){sizeColumn(column,index?columns[index-1]:null)});
   var maxSpan=Math.max.apply(null,columns.map(function(column){return column.span}));
   var columnTopClearance=72,H=Math.max(920,Math.ceil(maxSpan+columnTopClearance*2)),CY=H/2;
   var source={id:"stage01",x:sidePadding,w:cardWidth,y:CY,els:["Y","DyTb","Sm","Sc"]};
@@ -71,9 +75,26 @@ function renderFlow(){
   columns.filter(function(column){return column.stage===2}).forEach(function(column){
     column.nodes.forEach(function(item){connect(source,nodeMap[item.id],nodeMap[item.id].els)})
   });
+  // 同じ列の中の組み込み（部材を部材に組む）は、送り手の右脇を通る鉤形の線で受け手へ入れ、矢じりで向きを示す。
+  // 迂回の幹は元素ごとの車線に分け、外側の車線ほど上下の端を外へずらして線どうしが交わらないようにする。
+  function connectAssembly(a,b,allowed,note){
+    if(!a||!b)return;
+    allowed.filter(function(element){return a.els.indexOf(element)>=0&&b.els.indexOf(element)>=0}).forEach(function(element){
+      var edgeKey=a.id+"|"+b.id+"|"+element;
+      if(edgeKeys.has(edgeKey))return;
+      edgeKeys.add(edgeKey);
+      var offset=lane[element],trunkX=a.x+a.w+10+offset,r=5,down=b.y>a.y;
+      var startY=down?a.y+a.h/2-14-offset:a.y-a.h/2+14+offset,endY=down?b.y-b.h/2+14+offset:b.y+b.h/2-14-offset,endX=b.x+b.w+3,sign=down?1:-1;
+      var d="M "+(a.x+a.w)+" "+startY+" H "+(trunkX-r)+" Q "+trunkX+" "+startY+" "+trunkX+" "+(startY+sign*r)+" V "+(endY-sign*r)+" Q "+trunkX+" "+endY+" "+(trunkX-r)+" "+endY+" H "+endX;
+      var title=subText(a.node,"label")+" → "+subText(b.node,"label")+" / "+tagLabel(element)+" — "+tr("routeAssembly")+(note?" — "+note:"");
+      var arrow="M "+(endX+5)+" "+(endY-3.5)+" L "+endX+" "+endY+" L "+(endX+5)+" "+(endY+3.5);
+      svg+=path(d,colors[element],selectedElements.indexOf(element)<0,{from:a.id,to:b.id,element:element,title:title},{className:"re-edge-assembly",extra:'<path class="re-assembly-arrow" stroke="'+colors[element]+'" d="'+arrow+'"></path>'})
+    })
+  }
   var graph=buildSupplyGraph(allSubs,data);
   graph.edges.forEach(function(edge){
-    connect(nodeMap[edge.from],nodeMap[edge.to],edge.elements,routeText(graph.byId.get(edge.to),edge.from))
+    var draw=edge.assembly?connectAssembly:connect;
+    draw(nodeMap[edge.from],nodeMap[edge.to],edge.elements,routeText(graph.byId.get(edge.to),edge.from))
   });
   svg+='</svg>';
 

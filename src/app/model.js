@@ -23,7 +23,7 @@ function criticalityPoints(){
     });
   });
   var max=Math.max.apply(null,[1].concat(points.map(function(p){return p.downstream})));
-  points.forEach(function(p){if(p.onPath)p.score=100*Math.sqrt(p.downstream/max*p.level/4);p.maximum=max});return points;
+  points.forEach(function(p){if(p.onPath)p.score=100*Math.sqrt(p.downstream/max*(p.level+2)/6);p.maximum=max});return points;
 }
 var criticalityCache;
 function criticalityPoint(id,element){if(!criticalityCache)criticalityCache=criticalityPoints();return criticalityCache.find(function(p){return p.node===id&&p.element===element})}
@@ -84,21 +84,21 @@ var flowOrderByElement={
     3:["03_yag_crystal","03_magneto_garnet","03_dielectric_additive","03_magnet_alloy","03_magnet_powder"],
     4:["04_faraday_laser","04_faraday_tele","04_dielectric","04_mag"],
     5:["05_laser_osc","05_photonics","05_electronics","05_motor"],
-    6:["06_laser","06_optical_net","06_comm","06_guidance","06_naval","06_space","06_aircraft","06_unmanned","06_launch","06_radar","06_energy"]
+    6:["06_laser","06_rf_sensor","06_optical_net","06_comm","06_guidance","06_naval","06_space","06_aircraft","06_unmanned","06_launch","06_radar","06_energy"]
   },
   Sm:{
     2:["02_compound","02_metal","02_recycle"],
     3:["03_magnet_powder","03_magnet_alloy"],
-    4:["04_mag"],
-    5:["05_motor","05_tube","05_electronics"],
-    6:["06_aircraft","06_guidance","06_unmanned","06_naval","06_launch","06_space","06_energy","06_radar","06_comm"]
+    4:["04_faraday_laser","04_faraday_tele","04_mag"],
+    5:["05_laser_osc","05_photonics","05_motor","05_tube","05_electronics"],
+    6:["06_laser","06_rf_sensor","06_optical_net","06_guidance","06_naval","06_space","06_aircraft","06_unmanned","06_launch","06_energy","06_radar","06_comm"]
   },
   Sc:{
     2:["02_compound","02_metal"],
-    3:["03_light_alloy","03_ceramic","03_sam_crystal","03_alsc_semi"],
-    4:["04_am_feedstock","04_elec","04_sc_crystal","04_target"],
-    5:["05_am","05_sofc","05_electronics","05_scaln_film","05_tube"],
-    6:["06_launch","06_aircraft","06_energy","06_naval","06_space","06_guidance","06_rf_sensor","06_radar","06_comm"]
+    3:["03_light_alloy","03_ceramic","03_sam_crystal","03_alsc_semi","03_yag_crystal"],
+    4:["04_am_feedstock","04_elec","04_sc_crystal","04_target","04_faraday_laser"],
+    5:["05_am","05_sofc","05_electronics","05_scaln_film","05_tube","05_laser_osc"],
+    6:["06_launch","06_aircraft","06_energy","06_naval","06_space","06_guidance","06_rf_sensor","06_radar","06_comm","06_laser"]
   }
 };
 function flowSortIndex(element,stage,id,fallbackOrder){

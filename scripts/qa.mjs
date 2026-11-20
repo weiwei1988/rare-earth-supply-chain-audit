@@ -24,14 +24,14 @@ report.subcategories = dataset.subcategories.length;
 report.stages = dataset.stages.length;
 
 // --- 構造・公開データ ------------------------------------------------------
-check("6工程・52分類・218社", dataset.stages.length === 6 && dataset.subcategories.length === 52 && dataset.companies.length === 218);
+check("6工程・52分類・244社", dataset.stages.length === 6 && dataset.subcategories.length === 52 && dataset.companies.length === 244);
 check(
   "工程名称を6工程構造へ更新",
   sameJson(dataset.stages.map((stage) => stage.label), ["海外の資源・分離", "素材", "材料", "部材", "モジュール・機器", "装備・システム"]),
 );
 check(
   "工程別の延べ企業数",
-  sameJson(Object.fromEntries([2, 3, 4, 5, 6].map((stage) => [stage, dataset.companies.filter((company) => company.stages.includes(stage)).length])), { 2: 8, 3: 26, 4: 43, 5: 73, 6: 111 }),
+  sameJson(Object.fromEntries([2, 3, 4, 5, 6].map((stage) => [stage, dataset.companies.filter((company) => company.stages.includes(stage)).length])), { 2: 9, 3: 26, 4: 47, 5: 80, 6: 130 }),
 );
 check(
   "列順が全52分類を工程ごとに一度ずつ指定",
@@ -45,7 +45,7 @@ check("希土類対象外企業を収録しない", dataset.companies.every((com
 const routeCount = dataset.subcategories.reduce((sum, sub) => sum + (sub.src?.length ?? 0), 0);
 const routeKeys = dataset.subcategories.flatMap((sub) => (sub.src ?? []).flatMap((source) => (sub.srcEls[source] ?? []).map((element) => source + "|" + sub.id + "|" + element)));
 const skippedRoutes = dataset.subcategories.flatMap((sub) => Object.keys(sub.srcSkip ?? {}).map((source) => source + "|" + sub.id));
-check("86本の監査済みカテゴリー接続", routeCount === 86);
+check("89本の監査済みカテゴリー接続（うち同じ工程の中の組み込み2本）", routeCount === 89);
 check("元素別接続に重複なし", routeKeys.length === new Set(routeKeys).size);
 check(
   "全工程の接続に元素と根拠を定義",
@@ -291,7 +291,7 @@ check(
     !html.includes("shortenedLabel(label,16)") &&
     !html.includes("shortenedLabel(stageText(stage,\"short\"),28)"),
 );
-check("接続線は全工程のsrcElsと多言語srcNotesから描画", html.includes("connect(nodeMap[edge.from],nodeMap[edge.to],edge.elements,routeText(graph.byId.get(edge.to),edge.from))") && html.includes("function routeText(target,source)") && html.includes("curve(a.x+a.w,a.y+lane[element],b.x,b.y+lane[element])") && html.includes("width:'+pos.w+'px") && html.includes("width:'+source.w+'px"));
+check("接続線は全工程のsrcElsと多言語srcNotesから描画", html.includes("draw(nodeMap[edge.from],nodeMap[edge.to],edge.elements,routeText(graph.byId.get(edge.to),edge.from))") && html.includes("function routeText(target,source)") && html.includes("curve(a.x+a.w,a.y+lane[element],b.x,b.y+lane[element])") && html.includes("width:'+pos.w+'px") && html.includes("width:'+source.w+'px"));
 check(
   "企業カードと検索は言語別オーバーレイを参照",
   html.includes("function companyText(company,key)") &&
@@ -306,19 +306,29 @@ check(
     html.includes("traceLinkedEdges(edges,id,edgeReader,selectedElements)") &&
     html.includes("supplyGraphRoutes(graph,id).map(function(edge)"),
 );
-check("工程全体とサブカテゴリーの高さを所属会社数に比例", html.includes("minCardHeight=100,columnGap=8,columnBaseSpan=220,perStageCompany=16.6,perCardScaleCompany=.8,maxColumnSpan=1580") && html.includes("minimumSpan+stageCompanyCount*perCardScaleCompany") && html.includes("columnBaseSpan+stageCompanyCount*perStageCompany") && html.includes("extraHeight*weights[index]/weightTotal") && html.includes(".re-sub-card{width:176px;min-height:100px") && html.includes(".re-card-description{font-size:9.5px") && !html.includes("is-compact .re-card-description{display:none}"));
+check("工程全体とサブカテゴリーの高さを所属会社数に比例", html.includes("minCardHeight=100,columnGap=8,columnBaseSpan=220,perStageCompany=16.6,perCardScaleCompany=.8,maxColumnSpan=1580,downstreamStep=40") && html.includes("minimumSpan+stageCompanyCount*perCardScaleCompany") && html.includes("columnBaseSpan+stageCompanyCount*perStageCompany") && html.includes("extraHeight*weights[index]/weightTotal") && html.includes(".re-sub-card{width:176px;min-height:100px") && html.includes(".re-card-description{font-size:9.5px") && !html.includes("is-compact .re-card-description{display:none}"));
 check(
   "元素フィルターの有無でサブカテゴリーカードの高さを固定",
   html.includes("function totalStageCount(id){return data.filter") &&
     html.includes("var stageCompanyCount=totalStageCount(stageMeta[column.stage].id)") &&
     !html.includes("var stageCompanyCount=countStage(stageMeta[column.stage].id)"),
 );
-const visualStageSpans = [2, 3, 4, 5, 6].map((stage) => {
+// 下流の列は、上流の列の高さに社数の比の平方根をかけた高さ（かつ 40px 以上長い高さ）より短くしない（画面の sizeColumn と同じ規則）
+const visualStageSpans = [];
+const visualStageCounts = [];
+let previousCount = 0;
+for (const stage of [2, 3, 4, 5, 6]) {
   const categoryCount = dataset.columnOrder[stage].length;
   const companyCount = dataset.companies.filter((company) => company.stages.includes(stage)).length;
   const minimumSpan = categoryCount * 100 + Math.max(0, categoryCount - 1) * 8;
-  return Math.max(minimumSpan + companyCount * 0.8, Math.min(1580, 220 + companyCount * 16.6));
-});
+  const previous = visualStageSpans[visualStageSpans.length - 1];
+  const floor = previous ? Math.max(previous + 40, previous * Math.sqrt(Math.max(1, companyCount) / Math.max(1, previousCount))) : 0;
+  visualStageSpans.push(Math.max(minimumSpan + companyCount * 0.8, Math.min(1580, 220 + companyCount * 16.6), floor));
+  previousCount = companyCount;
+  visualStageCounts.push(companyCount);
+}
+// 社数の比の平方根まで伸びていること（カード枚数の下限で列の高さが決まる工程でも、社数の増加が縦の長さに出る）
+check("工程列の総高は社数の増加に応じて伸びる", visualStageSpans.every((span, index) => index === 0 || span >= visualStageSpans[index - 1] * Math.sqrt(visualStageCounts[index] / visualStageCounts[index - 1]) - 0.01), visualStageSpans.map((span) => Math.round(span)).join(" < "));
 check("工程列の総高は社数増加に合わせて下流ほど長い", visualStageSpans.every((span, index) => index === 0 || span > visualStageSpans[index - 1]), visualStageSpans.join(" < "));
 check("元素絞り込みを代表色と分割配色で強調", html.includes(".re-sub-card.is-filter-match") && html.includes("function segmentedGradient(tags,angle,colorValue)") && html.includes("matchedEls.length>1?"));
 check(
@@ -348,7 +358,7 @@ check(
     html.includes('3:["03_ceramic","03_yag_crystal","03_magneto_garnet","03_dielectric_additive","03_yttria_powder"]') &&
     html.includes('4:["04_faraday_laser","04_faraday_tele","04_dielectric","04_mag"]') &&
     html.includes('3:["03_magnet_powder","03_magnet_alloy"]') &&
-    html.includes('5:["05_am","05_sofc","05_electronics","05_scaln_film","05_tube"]') &&
+    html.includes('5:["05_am","05_sofc","05_electronics","05_scaln_film","05_tube","05_laser_osc"]') &&
     html.includes("flowSortIndex(flowElement,stage,a.id,order)-flowSortIndex(flowElement,stage,b.id,order)") &&
     html.includes('root.querySelector("#re-element-flow-frame").addEventListener("click"') &&
     !html.includes('var panel=root.querySelector(view==="element-flow"?"#re-view-element-flow":"#re-view-overview")') &&

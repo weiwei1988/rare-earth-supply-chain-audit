@@ -206,6 +206,34 @@
    }
   },
   {
+   "company": "compound-kisankinzoku",
+   "name": "稀産金属",
+   "node": "02_compound",
+   "els": [
+    "DyTb"
+   ],
+   "product": "希土類（Dy・Tb ほか）の化合物",
+   "level": 1,
+   "share": "公開情報でシェアを確認できていない",
+   "scope": "",
+   "basis": "公開情報",
+   "source": "https://www.kisankinzoku.co.jp/product",
+   "sourceLabel": "稀産金属 製品ページ（2026年11月確認）",
+   "note": "希土類は取扱元素としての記載のみ。",
+   "i18n": {
+    "en": {
+     "product": "Rare-earth compounds (Dy, Tb and others)",
+     "share": "No share could be confirmed from public information",
+     "note": "Rare earths appear only among handled elements."
+    },
+    "zh-CN": {
+     "product": "稀土化合物（Dy、Tb等）",
+     "share": "未能从公开信息中确认份额",
+     "note": "稀土仅作为经营元素记载。"
+    }
+   }
+  },
+  {
    "company": "seed-2",
    "name": "三徳（プロテリアルマグネティクス傘下）",
    "node": "02_metal",
@@ -968,7 +996,7 @@
    "els": [
     "DyTb"
    ],
-   "product": "TGG（Tb₃Ga₅O₁₂）単結晶",
+   "product": "TSAG（Tb₃Sc₂Al₃O₁₂）単結晶（高強度レーザー用アイソレータの磁気光学材料）",
    "level": 1,
    "share": "公開情報でシェアを確認できていない",
    "scope": "",
@@ -978,12 +1006,12 @@
    "note": "TGGはTb系材料だが、同社が公表するシェアは波長変換単結晶と深紫外レーザーのみ。",
    "i18n": {
     "en": {
-     "product": "TGG (Tb₃Ga₅O₁₂) single crystals",
+     "product": "TSAG (Tb₃Sc₂Al₃O₁₂) single crystals (magneto-optical material for isolators in high-intensity lasers)",
      "share": "No share could be confirmed in public sources",
      "note": "TGG is a Tb-based material, but the only shares the company publishes are for wavelength-conversion crystals and deep-UV lasers."
     },
     "zh-CN": {
-     "product": "TGG（Tb₃Ga₅O₁₂）单晶",
+     "product": "TSAG（Tb₃Sc₂Al₃O₁₂）单晶（高强度激光隔离器用磁光材料）",
      "share": "公开信息中无法确认份额",
      "note": "TGG属于Tb系材料，但该公司公布的份额仅限于波长转换单晶和深紫外激光器。"
     }
@@ -1723,7 +1751,7 @@
    "els": [
     "Y"
    ],
-   "product": "ファラデー回転子（光通信 1550／1310nm、2000nm 帯）",
+   "product": "ファラデー回転子、インライン型・ハイブリッド型光アイソレータ、光サーキュレータ、海底ケーブル用光部品（光通信 1550／1310nm、2000nm 帯）",
    "level": 4,
    "share": "光アイソレータ（金額ベース）で世界シェア50%と自社IR資料が明記",
    "scope": "世界",
@@ -1733,12 +1761,12 @@
    "note": "海底光ファイバ通信ケーブル用デバイスを中心とする光アイソレータの金額ベース世界シェア。ファラデー回転子は結晶育成・加工から素子づくり・精密組立まで自社一貫。",
    "i18n": {
     "en": {
-     "product": "Faraday rotators (optical communications 1550/1310 nm, 2000 nm band)",
+     "product": "Faraday rotators, in-line and hybrid optical isolators, optical circulators and optical components for submarine cables (optical communications 1550/1310 nm, 2000 nm band)",
      "share": "Its own IR material states a 50% world share in optical isolators by value",
      "note": "This is the world share by value for optical isolators, centred on devices for submarine optical-fibre cable. Faraday rotators are made in house throughout, from crystal growth and finishing to element fabrication and precision assembly."
     },
     "zh-CN": {
-     "product": "法拉第旋转器（光通信1550/1310nm、2000nm波段）",
+     "product": "法拉第旋转器、在线型与混合型光隔离器、光环行器、海底电缆用光部件（光通信1550/1310nm、2000nm波段）",
      "share": "公司IR资料明确记载光隔离器（金额基准）全球份额50%",
      "note": "这是以海底光纤通信电缆用器件为中心的光隔离器的金额基准全球份额。法拉第旋转器从晶体生长、加工到器件制作与精密组装均为自社一贯。"
     }
@@ -1751,7 +1779,7 @@
    "els": [
     "DyTb"
    ],
-   "product": "ファラデー回転子（光通信 1550／1310nm、2000nm 帯）",
+   "product": "ファラデー回転子、インライン型・ハイブリッド型光アイソレータ、光サーキュレータ、海底ケーブル用光部品（光通信 1550／1310nm、2000nm 帯）",
    "level": 4,
    "share": "光アイソレータ（金額ベース）で世界シェア50%と自社IR資料が明記",
    "scope": "世界",
@@ -1761,14 +1789,42 @@
    "note": "磁気光学膜の組成（Tb置換の有無）は非開示だが、ファラデー回転子用の磁気光学材料を自社で組成設計・育成している点はIR資料に明記されている。",
    "i18n": {
     "en": {
-     "product": "Faraday rotators (optical communications 1550/1310 nm, 2000 nm band)",
+     "product": "Faraday rotators, in-line and hybrid optical isolators, optical circulators and optical components for submarine cables (optical communications 1550/1310 nm, 2000 nm band)",
      "share": "Its own IR material states a 50% world share in optical isolators by value",
      "note": "The composition of the magneto-optical film (whether it uses Tb substitution) is not disclosed, but the IR material does state that the company designs and grows the magneto-optical material for its Faraday rotators in house."
     },
     "zh-CN": {
-     "product": "法拉第旋转器（光通信1550/1310nm、2000nm波段）",
+     "product": "法拉第旋转器、在线型与混合型光隔离器、光环行器、海底电缆用光部件（光通信1550/1310nm、2000nm波段）",
      "share": "公司IR资料明确记载光隔离器（金额基准）全球份额50%",
      "note": "磁光膜的组成（是否含Tb置换）未公开，但IR资料明确载明其自行进行法拉第旋转器用磁光材料的组成设计与生长。"
+    }
+   }
+  },
+  {
+   "company": "faraday-kohoku",
+   "name": "湖北工業",
+   "node": "04_faraday_tele",
+   "els": [
+    "Sm"
+   ],
+   "product": "ファラデー回転子、インライン型・ハイブリッド型光アイソレータ、光サーキュレータ、海底ケーブル用光部品（光通信 1550／1310nm、2000nm 帯）",
+   "level": 4,
+   "share": "光アイソレータ（金額ベース）で世界シェア50%と自社IR資料が明記",
+   "scope": "世界",
+   "basis": "公開情報",
+   "source": "https://www.kohokukogyo.co.jp/assets/doc/ir/20251128_mufg_ir_seminar.pdf",
+   "sourceLabel": "湖北工業 MUFG IRセミナー説明資料 2025年11月28日（2026年11月確認）",
+   "note": "Sm は回転子と組む磁石（SmCo が一般的）として含む。シェアは Y・Dy・Tb と同じ製品の値。",
+   "i18n": {
+    "en": {
+     "product": "Faraday rotators, in-line and hybrid optical isolators, optical circulators and optical components for submarine cables (optical communications 1550/1310 nm, 2000 nm band)",
+     "share": "Its own IR material states a 50% world share in optical isolators by value",
+     "note": "Sm is included as the magnet assembled with the rotator (SmCo is usual). The share is the same product figure as for Y, Dy and Tb."
+    },
+    "zh-CN": {
+     "product": "法拉第旋转器、在线型与混合型光隔离器、光环行器、海底电缆用光部件（光通信1550/1310nm、2000nm波段）",
+     "share": "公司IR资料明确记载光隔离器（金额基准）全球份额50%",
+     "note": "Sm作为与旋转器组装的磁体计入（通常为SmCo）。份额与Y、Dy、Tb为同一产品的数值。"
     }
    }
   },
@@ -1879,6 +1935,34 @@
      "product": "光纤激光器用光隔离器的器件",
      "share": "公开信息中无法确认份额",
      "note": "亦未明示器件材料（TGG、TSAG等），目录中无法确认是否使用Tb系材料。"
+    }
+   }
+  },
+  {
+   "company": "seed-12",
+   "name": "オキサイド",
+   "node": "04_faraday_tele",
+   "els": [
+    "Y"
+   ],
+   "product": "光トランシーバ用光アイソレータ向けのファラデー回転子（第6工場で増産）",
+   "level": 1,
+   "share": "公開情報でシェアを確認できていない",
+   "scope": "",
+   "basis": "公開情報",
+   "source": "https://www.opt-oxide.com/ir/meeting/meeting26_review/",
+   "sourceLabel": "オキサイド IR 決算説明（2026年11月確認）",
+   "note": "2026年10月に第6工場（山梨県北杜市）へ8億4100万円の追加設備投資を公表し、2027年2月期下半期中の稼働を見込む。増産の開示はシェアを示さない。",
+   "i18n": {
+    "en": {
+     "product": "Faraday rotators for optical-transceiver isolators (capacity being expanded at Plant 6)",
+     "share": "No share could be confirmed in public sources",
+     "note": "In October 2026 the company announced an additional ¥841 million capital investment at Plant 6 (Hokuto, Yamanashi), expected to start up in the second half of the fiscal year ending February 2027. A capacity announcement does not indicate share."
+    },
+    "zh-CN": {
+     "product": "面向光收发模块用光隔离器的法拉第旋转器（第6工厂扩产）",
+     "share": "公开信息中无法确认份额",
+     "note": "2026年10月公布对第6工厂（山梨县北杜市）追加8.41亿日元设备投资，预计在2027年2月期下半年投产。扩产的披露并不表示份额。"
     }
    }
   },
@@ -2047,6 +2131,118 @@
      "product": "1064nm高光损伤阈值光隔离器与法拉第旋转器",
      "share": "公开信息中无法确认份额",
      "note": "1064nm用元件的材料未公开。铁石榴石在1μm波段不透明，因此将该波长的元件视为TGG等Tb系材料，并标注Dy・Tb。"
+    }
+   }
+  },
+  {
+   "company": "seed-3",
+   "name": "信越化学工業",
+   "node": "04_faraday_laser",
+   "els": [
+    "DyTb"
+   ],
+   "product": "1μm 帯の高出力ファイバーレーザー用光アイソレータ",
+   "level": 1,
+   "share": "公開情報でシェアを確認できていない",
+   "scope": "",
+   "basis": "公開情報",
+   "source": "https://www.microsi.com/?p=11285",
+   "sourceLabel": "Shin-Etsu MicroSi「1µ High Power Isolators」製品ページ（2026年11月確認）",
+   "note": "通信用の光アイソレータの地位は、レーザー用には当てはめない。",
+   "i18n": {
+    "en": {
+     "product": "Optical isolators for 1 µm-band high-power fiber lasers",
+     "share": "No share could be confirmed from public information",
+     "note": "Its position in telecom optical isolators is not applied to laser use."
+    },
+    "zh-CN": {
+     "product": "1μm波段高功率光纤激光器用光隔离器",
+     "share": "未能从公开信息中确认份额",
+     "note": "通信用光隔离器的地位不适用于激光用途。"
+    }
+   }
+  },
+  {
+   "company": "fujikura",
+   "name": "フジクラ",
+   "node": "04_faraday_laser",
+   "els": [
+    "DyTb"
+   ],
+   "product": "Yb ファイバーレーザー用光アイソレータの回転子（TSAG）",
+   "level": 1,
+   "share": "公開情報でシェアを確認できていない",
+   "scope": "",
+   "basis": "公開情報",
+   "source": "https://www.nims.go.jp/electr-opt/OPCRY_e.html",
+   "sourceLabel": "NIMS 光学単結晶グループ 研究紹介ページ（2026年11月確認）",
+   "note": "自社レーザーへの組み込みは確認できたが、外販の有無と数量は非開示。",
+   "i18n": {
+    "en": {
+     "product": "Optical isolator rotators for Yb fiber lasers (TSAG)",
+     "share": "No share could be confirmed from public information",
+     "note": "Use in its own lasers was confirmed, but whether it sells them externally, and in what volume, is not disclosed."
+    },
+    "zh-CN": {
+     "product": "Yb光纤激光器用光隔离器旋转器（TSAG）",
+     "share": "未能从公开信息中确认份额",
+     "note": "已确认装入自家激光器，但是否对外销售及数量未公开。"
+    }
+   }
+  },
+  {
+   "company": "seed-12",
+   "name": "オキサイド",
+   "node": "04_faraday_laser",
+   "els": [
+    "DyTb"
+   ],
+   "product": "高強度レーザー用光アイソレータの磁気光学デバイス（TSAG）",
+   "level": 1,
+   "share": "公開情報でシェアを確認できていない",
+   "scope": "",
+   "basis": "公開情報",
+   "source": "https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00013",
+   "sourceLabel": "オキサイド TSAG 製品ページ（2026年11月確認）",
+   "note": "磁気光学デバイスは製品分類としての記載で、品目・数量は非開示。",
+   "i18n": {
+    "en": {
+     "product": "Magneto-optical devices for optical isolators in high-intensity lasers (TSAG)",
+     "share": "No share could be confirmed from public information",
+     "note": "Magneto-optical devices are listed only as a product category; items and volumes are not disclosed."
+    },
+    "zh-CN": {
+     "product": "高强度激光光隔离器用磁光器件（TSAG）",
+     "share": "未能从公开信息中确认份额",
+     "note": "磁光器件仅作为产品类别记载，品类与数量未公开。"
+    }
+   }
+  },
+  {
+   "company": "optics-smmp",
+   "name": "SMMプレシジョン",
+   "node": "04_faraday_laser",
+   "els": [
+    "DyTb"
+   ],
+   "product": "ファイバーレーザー用光アイソレータ（1030／1064nm、2W 級、独自の低損失ガーネット回転子）",
+   "level": 1,
+   "share": "公開情報でシェアを確認できていない",
+   "scope": "",
+   "basis": "公開情報",
+   "source": "https://www.smmp.co.jp/s/sm/smmprecision/images/fl_promotion_material20230728.pdf",
+   "sourceLabel": "SMMプレシジョン「Optical Isolator for Fiber Laser Application」2023年7月（2026年11月確認）",
+   "note": "低出力のファイバーレーザー向けで、TGG・TSAG を使う高出力品とは用途が分かれる。",
+   "i18n": {
+    "en": {
+     "product": "Optical isolators for fiber lasers (1030/1064 nm, 2 W class, proprietary low-loss garnet rotator)",
+     "share": "No share could be confirmed from public information",
+     "note": "Aimed at low-power fiber lasers, a different use from high-power products based on TGG or TSAG."
+    },
+    "zh-CN": {
+     "product": "光纤激光器用光隔离器（1030／1064nm、2W级，自有低损耗石榴石旋转器）",
+     "share": "未能从公开信息中确认份额",
+     "note": "面向低功率光纤激光器，与使用TGG、TSAG的高功率产品用途不同。"
     }
    }
   },
@@ -2527,6 +2723,118 @@
    }
   },
   {
+   "company": "motor-mabuchi",
+   "name": "マブチモーター",
+   "node": "05_motor",
+   "els": [
+    "DyTb"
+   ],
+   "product": "ドアミラー・ドアロック用などの自動車電装用小型モータ",
+   "level": 4,
+   "share": "ドアミラー・ドアロック用モータで1970〜80年代から世界シェア1位",
+   "scope": "世界",
+   "basis": "公開情報",
+   "source": "https://gazoo.com/column/daily/18/02/17/",
+   "sourceLabel": "GAZOO「知られざるマブチモーターの世界」2018年2月（2026年11月確認）",
+   "note": "2018年時点の記事で、最新の数値は未確認。ブラシレスなどネオジム磁石を使う製品に限った値ではない。",
+   "i18n": {
+    "en": {
+     "product": "Small automotive motors such as door-mirror and door-lock motors",
+     "share": "World No. 1 in door-mirror and door-lock motors since the 1970s–80s",
+     "note": "From a 2018 article; the latest figure is unconfirmed. The figure is not limited to products using neodymium magnets, such as brushless motors."
+    },
+    "zh-CN": {
+     "product": "后视镜、门锁等汽车电装用小型电机",
+     "share": "后视镜与门锁电机自1970〜80年代起全球份额第一",
+     "note": "为2018年的报道，最新数值未确认。并非仅限无刷电机等使用钕磁体的产品。"
+    }
+   }
+  },
+  {
+   "company": "motor-yaskawa",
+   "name": "安川電機",
+   "node": "05_motor",
+   "els": [
+    "DyTb"
+   ],
+   "product": "AC サーボモータ（Σ シリーズ）",
+   "level": 3,
+   "share": "サーボで世界一、世界シェア20%弱",
+   "scope": "世界",
+   "basis": "公開情報",
+   "source": "https://newswitch.jp/p/7199",
+   "sourceLabel": "ニュースイッチ（日刊工業新聞）2015年（2026年11月確認）",
+   "note": "2015年時点の記事で、最新の数値は未確認。数値が40%未満のため水準3とした。",
+   "i18n": {
+    "en": {
+     "product": "AC servo motors (Σ series)",
+     "share": "World No. 1 in servos, with a world share of just under 20%",
+     "note": "From a 2015 article; the latest figure is unconfirmed. Rated level 3 because the stated figure is below 40%."
+    },
+    "zh-CN": {
+     "product": "AC伺服电机（Σ系列）",
+     "share": "伺服全球第一，全球份额略低于20%",
+     "note": "为2015年的报道，最新数值未确认。因数值低于40%，评为水准3。"
+    }
+   }
+  },
+  {
+   "company": "motor-mitsuba",
+   "name": "ミツバ",
+   "node": "05_motor",
+   "els": [
+    "DyTb"
+   ],
+   "product": "ワイパー・パワーウインドウなどの自動車電装モータ",
+   "level": 1,
+   "share": "公開情報でシェアを確認できていない",
+   "scope": "",
+   "basis": "公開情報",
+   "source": "https://www.mitsuba.co.jp/jp/products/autoelectricalsystems.html",
+   "sourceLabel": "ミツバ 四輪電装製品ページ（2026年11月確認）",
+   "note": "モータ単独のシェアは公表されていない。",
+   "i18n": {
+    "en": {
+     "product": "Automotive electrical motors such as wiper and power-window motors",
+     "share": "No share could be confirmed from public information",
+     "note": "No motor-specific share is published."
+    },
+    "zh-CN": {
+     "product": "雨刮、电动车窗等汽车电装电机",
+     "share": "未能从公开信息中确认份额",
+     "note": "未公布电机单独的份额。"
+    }
+   }
+  },
+  {
+   "company": "seed-43",
+   "name": "デンソー",
+   "node": "05_motor",
+   "els": [
+    "DyTb"
+   ],
+   "product": "スタータ・電動パワーステアリング・駆動用モータジェネレータなどの車載モータ",
+   "level": 1,
+   "share": "公開情報でシェアを確認できていない",
+   "scope": "",
+   "basis": "公開情報",
+   "source": "https://www.marklines.com/ja/top500/denso",
+   "sourceLabel": "MarkLines デンソー企業情報（2026年11月確認）",
+   "note": "モータ単独のシェアは公表されていない。",
+   "i18n": {
+    "en": {
+     "product": "Automotive motors such as starters, electric power steering and traction motor-generators",
+     "share": "No share could be confirmed from public information",
+     "note": "No motor-specific share is published."
+    },
+    "zh-CN": {
+     "product": "起动机、电动助力转向、驱动用电动发电机等车载电机",
+     "share": "未能从公开信息中确认份额",
+     "note": "未公布电机单独的份额。"
+    }
+   }
+  },
+  {
    "company": "atla-7010001045862",
    "name": "日清紡マイクロデバイス株式会社",
    "node": "05_tube",
@@ -2869,7 +3177,7 @@
    "els": [
     "Y"
    ],
-   "product": "266nm・193nm 全固体深紫外レーザー（Nd:YAG 基本波＋波長変換）",
+   "product": "266nm・193nm 全固体深紫外レーザー（赤外の基本波を波長変換）",
    "level": 3,
    "share": "半導体検査装置向け深紫外レーザーで世界シェア30%超（同社調べ）",
    "scope": "世界",
@@ -2879,12 +3187,12 @@
    "note": "数値は同社調べ。独立した第三者調査による裏づけは確認できていない。",
    "i18n": {
     "en": {
-     "product": "266 nm and 193 nm all-solid-state deep-ultraviolet lasers (Nd:YAG fundamental plus wavelength conversion)",
+     "product": "266 nm and 193 nm all-solid-state deep-ultraviolet lasers (wavelength conversion of an infrared fundamental)",
      "share": "Over 30% world share in deep-ultraviolet lasers for semiconductor inspection equipment (company's own survey)",
      "note": "The figure is the company's own survey. No corroboration by an independent third-party study could be confirmed."
     },
     "zh-CN": {
-     "product": "266nm、193nm全固态深紫外激光器（Nd:YAG基频＋波长转换）",
+     "product": "266nm、193nm全固体深紫外激光（对红外基本波进行波长转换）",
      "share": "半导体检测设备用深紫外激光器全球份额超过30%（公司自查）",
      "note": "该数值为公司自查结果，未能确认独立第三方调查的佐证。"
     }
@@ -2919,58 +3227,450 @@
    }
   },
   {
-   "company": "faraday-kohoku",
-   "name": "湖北工業",
-   "node": "05_photonics",
+   "company": "laser-melco-fa",
+   "name": "三菱電機（FA・レーザー加工機）",
+   "node": "05_laser_osc",
    "els": [
     "Y"
    ],
-   "product": "インライン型・ハイブリッド型光アイソレータ、光サーキュレータ、海底ケーブル用光部品",
-   "level": 4,
-   "share": "光アイソレータ（金額ベース）で世界シェア50%",
+   "product": "プリント基板用レーザー穴あけ機（GTW シリーズ）",
+   "level": 2,
+   "share": "世界の主要企業の一角（三菱電機・Via Mechanics・大族数控の上位3社で合計31%超）",
    "scope": "世界",
    "basis": "公開情報",
-   "source": "https://www.kohokukogyo.co.jp/assets/doc/ir/20251128_mufg_ir_seminar.pdf",
-   "sourceLabel": "湖北工業 MUFG IR セミナー資料 2025年11月28日（2026年11月確認）",
-   "note": "同資料は海底光ファイバ通信ケーブル用デバイスでも世界シェア60%としており、ファラデー回転子の結晶育成から素子づくり・精密組立までの一貫生産を競争優位として挙げている。",
+   "source": "https://pdf.marketpublishers.com/globalinfo/global-pcb-laser-drilling-machines-market-2024-by-manufacturers-regions-type-n-application-forecast-to-2030.pdf",
+   "sourceLabel": "Global Info Research「Global PCB Laser Drilling Machines Market 2024」有料レポートの販促ページ（2023年データ、2026年11月確認）",
+   "note": "有料レポートの販促ページの数値で、三菱電機単独の比率は示されていない。ファイバーレーザー発振器と2次元・3次元のレーザー加工機は、シェアの数値も順位も確認できない。",
    "i18n": {
     "en": {
-     "product": "In-line and hybrid optical isolators, optical circulators and optical components for submarine cable",
-     "share": "50% world share in optical isolators by value",
-     "note": "The same material also gives a 60% world share in devices for submarine optical-fibre communications cable, and cites integrated production — from growing the Faraday rotator crystal through element fabrication and precision assembly — as its competitive advantage."
+     "product": "PCB laser drilling machines (GTW series)",
+     "share": "One of the major global players (Mitsubishi Electric, Via Mechanics and Han's CNC together hold over 31%)",
+     "note": "A figure from a paid-report promotional page; Mitsubishi Electric's own share is not shown. No figure or ranking could be confirmed for its fiber laser oscillators or 2D/3D laser processing machines."
     },
     "zh-CN": {
-     "product": "在线型、混合型光隔离器、光环行器、海底电缆用光部件",
-     "share": "光隔离器（金额基准）全球份额50%",
-     "note": "该资料亦称海底光纤通信电缆用器件的全球份额为60%，并将从法拉第旋转器的晶体生长到器件制作与精密组装的一贯生产列为竞争优势。"
+     "product": "印制电路板激光钻孔机（GTW系列）",
+     "share": "全球主要企业之一（三菱电机、Via Mechanics、大族数控前三家合计逾31%）",
+     "note": "为付费报告推广页面的数值，未显示三菱电机单独比例。光纤激光振荡器与二维・三维激光加工机未能确认份额数值或排名。"
     }
    }
   },
   {
-   "company": "faraday-kohoku",
-   "name": "湖北工業",
-   "node": "05_photonics",
+   "company": "laser-melco-fa",
+   "name": "三菱電機（FA・レーザー加工機）",
+   "node": "05_laser_osc",
    "els": [
     "DyTb"
    ],
-   "product": "インライン型・ハイブリッド型光アイソレータ、光サーキュレータ、海底ケーブル用光部品",
-   "level": 4,
-   "share": "光アイソレータ（金額ベース）で世界シェア50%",
+   "product": "プリント基板用レーザー穴あけ機（GTW シリーズ）",
+   "level": 2,
+   "share": "世界の主要企業の一角（三菱電機・Via Mechanics・大族数控の上位3社で合計31%超）",
    "scope": "世界",
    "basis": "公開情報",
-   "source": "https://www.kohokukogyo.co.jp/assets/doc/ir/20251128_mufg_ir_seminar.pdf",
-   "sourceLabel": "湖北工業 MUFG IR セミナー資料 2025年11月28日（2026年11月確認）",
-   "note": "同資料はファラデー回転子を機能材料のコア技術として位置づけ、生産能力拡大による売上増を報告している。Y 系・Tb 系いずれの磁気光学結晶も同じ光アイソレータ製品に関わる。",
+   "source": "https://pdf.marketpublishers.com/globalinfo/global-pcb-laser-drilling-machines-market-2024-by-manufacturers-regions-type-n-application-forecast-to-2030.pdf",
+   "sourceLabel": "Global Info Research「Global PCB Laser Drilling Machines Market 2024」有料レポートの販促ページ（2023年データ、2026年11月確認）",
+   "note": "有料レポートの販促ページの数値で、三菱電機単独の比率は示されていない。ファイバーレーザー発振器と2次元・3次元のレーザー加工機は、シェアの数値も順位も確認できない。",
    "i18n": {
     "en": {
-     "product": "In-line and hybrid optical isolators, optical circulators and optical components for submarine cable",
-     "share": "50% world share in optical isolators by value",
-     "note": "The material positions the Faraday rotator as a core technology among its functional materials and reports sales growth from expanded capacity. Both Y-based and Tb-based magneto-optical crystals relate to the same optical isolator product."
+     "product": "PCB laser drilling machines (GTW series)",
+     "share": "One of the major global players (Mitsubishi Electric, Via Mechanics and Han's CNC together hold over 31%)",
+     "note": "A figure from a paid-report promotional page; Mitsubishi Electric's own share is not shown. No figure or ranking could be confirmed for its fiber laser oscillators or 2D/3D laser processing machines."
     },
     "zh-CN": {
-     "product": "在线型、混合型光隔离器、光环行器、海底电缆用光部件",
-     "share": "光隔离器（金额基准）全球份额50%",
-     "note": "该资料将法拉第旋转器定位为功能材料的核心技术，并报告了因产能扩大带来的销售增长。Y系与Tb系磁光晶体均涉及同一光隔离器产品。"
+     "product": "印制电路板激光钻孔机（GTW系列）",
+     "share": "全球主要企业之一（三菱电机、Via Mechanics、大族数控前三家合计逾31%）",
+     "note": "为付费报告推广页面的数值，未显示三菱电机单独比例。光纤激光振荡器与二维・三维激光加工机未能确认份额数值或排名。"
+    }
+   }
+  },
+  {
+   "company": "laser-melco-fa",
+   "name": "三菱電機（FA・レーザー加工機）",
+   "node": "05_laser_osc",
+   "els": [
+    "Sm"
+   ],
+   "product": "プリント基板用レーザー穴あけ機（GTW シリーズ）",
+   "level": 2,
+   "share": "世界の主要企業の一角（三菱電機・Via Mechanics・大族数控の上位3社で合計31%超）",
+   "scope": "世界",
+   "basis": "公開情報",
+   "source": "https://pdf.marketpublishers.com/globalinfo/global-pcb-laser-drilling-machines-market-2024-by-manufacturers-regions-type-n-application-forecast-to-2030.pdf",
+   "sourceLabel": "Global Info Research「Global PCB Laser Drilling Machines Market 2024」有料レポートの販促ページ（2023年データ、2026年11月確認）",
+   "note": "有料レポートの販促ページの数値で、三菱電機単独の比率は示されていない。ファイバーレーザー発振器と2次元・3次元のレーザー加工機は、シェアの数値も順位も確認できない。",
+   "i18n": {
+    "en": {
+     "product": "PCB laser drilling machines (GTW series)",
+     "share": "One of the major global players (Mitsubishi Electric, Via Mechanics and Han's CNC together hold over 31%)",
+     "note": "A figure from a paid-report promotional page; Mitsubishi Electric's own share is not shown. No figure or ranking could be confirmed for its fiber laser oscillators or 2D/3D laser processing machines."
+    },
+    "zh-CN": {
+     "product": "印制电路板激光钻孔机（GTW系列）",
+     "share": "全球主要企业之一（三菱电机、Via Mechanics、大族数控前三家合计逾31%）",
+     "note": "为付费报告推广页面的数值，未显示三菱电机单独比例。光纤激光振荡器与二维・三维激光加工机未能确认份额数值或排名。"
+    }
+   }
+  },
+  {
+   "company": "laser-amada",
+   "name": "アマダ（レーザー加工機・溶接機）",
+   "node": "05_laser_osc",
+   "els": [
+    "Y"
+   ],
+   "product": "精密加工用のレーザー溶接機（旧ミヤチテクノス）",
+   "level": 2,
+   "share": "レーザー溶接機は国内シェアトップとみられる",
+   "scope": "国内",
+   "basis": "公開情報",
+   "source": "https://www.nikkei.com/article/DGXNASDD120PM_S3A210C1TJ2000/",
+   "sourceLabel": "日本経済新聞「アマダ、ミヤチテクノスにTOB」2013年2月（2026年11月確認）",
+   "note": "2013年の記事で、推定の表現（数値なし）。国内首位でも50%以上と言えないため水準2とした。板金加工機全体では国内首位とされるが、レーザー発振器に限った値ではない。",
+   "i18n": {
+    "en": {
+     "product": "Laser welders for precision processing (former Miyachi Technos)",
+     "share": "Apparently top domestic share in laser welders",
+     "note": "From a 2013 article and stated as an estimate (no figure). Rated level 2 because domestic top does not establish 50% or more. It is said to be top in Japan in sheet-metal machines overall, but that figure is not limited to laser oscillators."
+    },
+    "zh-CN": {
+     "product": "精密加工用激光焊接机（原Miyachi Technos）",
+     "share": "激光焊接机据推测国内份额第一",
+     "note": "为2013年报道，属推测表述（无数值）。国内第一不能说明达50%以上，因此评为水准2。钣金加工机整体据称国内第一，但并非仅限激光振荡器的数值。"
+    }
+   }
+  },
+  {
+   "company": "laser-amada",
+   "name": "アマダ（レーザー加工機・溶接機）",
+   "node": "05_laser_osc",
+   "els": [
+    "DyTb"
+   ],
+   "product": "精密加工用のレーザー溶接機（旧ミヤチテクノス）",
+   "level": 2,
+   "share": "レーザー溶接機は国内シェアトップとみられる",
+   "scope": "国内",
+   "basis": "公開情報",
+   "source": "https://www.nikkei.com/article/DGXNASDD120PM_S3A210C1TJ2000/",
+   "sourceLabel": "日本経済新聞「アマダ、ミヤチテクノスにTOB」2013年2月（2026年11月確認）",
+   "note": "2013年の記事で、推定の表現（数値なし）。国内首位でも50%以上と言えないため水準2とした。板金加工機全体では国内首位とされるが、レーザー発振器に限った値ではない。",
+   "i18n": {
+    "en": {
+     "product": "Laser welders for precision processing (former Miyachi Technos)",
+     "share": "Apparently top domestic share in laser welders",
+     "note": "From a 2013 article and stated as an estimate (no figure). Rated level 2 because domestic top does not establish 50% or more. It is said to be top in Japan in sheet-metal machines overall, but that figure is not limited to laser oscillators."
+    },
+    "zh-CN": {
+     "product": "精密加工用激光焊接机（原Miyachi Technos）",
+     "share": "激光焊接机据推测国内份额第一",
+     "note": "为2013年报道，属推测表述（无数值）。国内第一不能说明达50%以上，因此评为水准2。钣金加工机整体据称国内第一，但并非仅限激光振荡器的数值。"
+    }
+   }
+  },
+  {
+   "company": "laser-amada",
+   "name": "アマダ（レーザー加工機・溶接機）",
+   "node": "05_laser_osc",
+   "els": [
+    "Sm"
+   ],
+   "product": "精密加工用のレーザー溶接機（旧ミヤチテクノス）",
+   "level": 2,
+   "share": "レーザー溶接機は国内シェアトップとみられる",
+   "scope": "国内",
+   "basis": "公開情報",
+   "source": "https://www.nikkei.com/article/DGXNASDD120PM_S3A210C1TJ2000/",
+   "sourceLabel": "日本経済新聞「アマダ、ミヤチテクノスにTOB」2013年2月（2026年11月確認）",
+   "note": "2013年の記事で、推定の表現（数値なし）。国内首位でも50%以上と言えないため水準2とした。板金加工機全体では国内首位とされるが、レーザー発振器に限った値ではない。",
+   "i18n": {
+    "en": {
+     "product": "Laser welders for precision processing (former Miyachi Technos)",
+     "share": "Apparently top domestic share in laser welders",
+     "note": "From a 2013 article and stated as an estimate (no figure). Rated level 2 because domestic top does not establish 50% or more. It is said to be top in Japan in sheet-metal machines overall, but that figure is not limited to laser oscillators."
+    },
+    "zh-CN": {
+     "product": "精密加工用激光焊接机（原Miyachi Technos）",
+     "share": "激光焊接机据推测国内份额第一",
+     "note": "为2013年报道，属推测表述（无数值）。国内第一不能说明达50%以上，因此评为水准2。钣金加工机整体据称国内第一，但并非仅限激光振荡器的数值。"
+    }
+   }
+  },
+  {
+   "company": "laser-keyence",
+   "name": "キーエンス",
+   "node": "05_laser_osc",
+   "els": [
+    "Y"
+   ],
+   "product": "レーザーマーカー（MD-X シリーズほか）",
+   "level": 2,
+   "share": "世界シェア 5.0%で上位5社の一角（首位は Han's Laser の10.5%超）",
+   "scope": "世界",
+   "basis": "公開情報",
+   "source": "https://www.gminsights.com/industry-analysis/laser-marking-machine-market",
+   "sourceLabel": "Global Market Insights「Laser Marking Machine Market」有料レポートの販促ページ（基準年2025年、2026年11月確認）",
+   "note": "有料レポートの販促ページの数値。世界10%未満のため、世界の主要企業として水準2とした。国内シェアの公開資料は見つからない。",
+   "i18n": {
+    "en": {
+     "product": "Laser markers (MD-X series and others)",
+     "share": "World share of 5.0%, among the top five (leader Han's Laser at over 10.5%)",
+     "note": "A figure from a paid-report promotional page. Rated level 2 as a major global player because the world share is below 10%. No public material on domestic share was found."
+    },
+    "zh-CN": {
+     "product": "激光打标机（MD-X系列等）",
+     "share": "全球份额5.0%，位列前五（第一为大族激光，逾10.5%）",
+     "note": "为付费报告推广页面的数值。全球份额不足10%，作为全球主要企业评为水准2。未找到国内份额的公开资料。"
+    }
+   }
+  },
+  {
+   "company": "laser-keyence",
+   "name": "キーエンス",
+   "node": "05_laser_osc",
+   "els": [
+    "DyTb"
+   ],
+   "product": "レーザーマーカー（MD-X シリーズほか）",
+   "level": 2,
+   "share": "世界シェア 5.0%で上位5社の一角（首位は Han's Laser の10.5%超）",
+   "scope": "世界",
+   "basis": "公開情報",
+   "source": "https://www.gminsights.com/industry-analysis/laser-marking-machine-market",
+   "sourceLabel": "Global Market Insights「Laser Marking Machine Market」有料レポートの販促ページ（基準年2025年、2026年11月確認）",
+   "note": "有料レポートの販促ページの数値。世界10%未満のため、世界の主要企業として水準2とした。国内シェアの公開資料は見つからない。",
+   "i18n": {
+    "en": {
+     "product": "Laser markers (MD-X series and others)",
+     "share": "World share of 5.0%, among the top five (leader Han's Laser at over 10.5%)",
+     "note": "A figure from a paid-report promotional page. Rated level 2 as a major global player because the world share is below 10%. No public material on domestic share was found."
+    },
+    "zh-CN": {
+     "product": "激光打标机（MD-X系列等）",
+     "share": "全球份额5.0%，位列前五（第一为大族激光，逾10.5%）",
+     "note": "为付费报告推广页面的数值。全球份额不足10%，作为全球主要企业评为水准2。未找到国内份额的公开资料。"
+    }
+   }
+  },
+  {
+   "company": "laser-keyence",
+   "name": "キーエンス",
+   "node": "05_laser_osc",
+   "els": [
+    "Sm"
+   ],
+   "product": "レーザーマーカー（MD-X シリーズほか）",
+   "level": 2,
+   "share": "世界シェア 5.0%で上位5社の一角（首位は Han's Laser の10.5%超）",
+   "scope": "世界",
+   "basis": "公開情報",
+   "source": "https://www.gminsights.com/industry-analysis/laser-marking-machine-market",
+   "sourceLabel": "Global Market Insights「Laser Marking Machine Market」有料レポートの販促ページ（基準年2025年、2026年11月確認）",
+   "note": "有料レポートの販促ページの数値。世界10%未満のため、世界の主要企業として水準2とした。国内シェアの公開資料は見つからない。",
+   "i18n": {
+    "en": {
+     "product": "Laser markers (MD-X series and others)",
+     "share": "World share of 5.0%, among the top five (leader Han's Laser at over 10.5%)",
+     "note": "A figure from a paid-report promotional page. Rated level 2 as a major global player because the world share is below 10%. No public material on domestic share was found."
+    },
+    "zh-CN": {
+     "product": "激光打标机（MD-X系列等）",
+     "share": "全球份额5.0%，位列前五（第一为大族激光，逾10.5%）",
+     "note": "为付费报告推广页面的数值。全球份额不足10%，作为全球主要企业评为水准2。未找到国内份额的公开资料。"
+    }
+   }
+  },
+  {
+   "company": "laser-fanuc",
+   "name": "ファナック",
+   "node": "05_laser_osc",
+   "els": [
+    "DyTb"
+   ],
+   "product": "加工機用のレーザー発振器（ファイバー・CO₂）",
+   "level": 2,
+   "share": "加工機用レーザー発振器の世界の主要企業（CO₂ 発振器で世界シェア首位級、2016年）",
+   "scope": "世界",
+   "basis": "公開情報",
+   "source": "https://newswitch.jp/p/4258",
+   "sourceLabel": "ニュースイッチ（日刊工業新聞）「ファナック、ファイバーレーザーの新工場に100億円投資」2016年4月（2026年11月確認）",
+   "note": "首位級は CO₂ 発振器の評価で、CO₂ レーザーは対象元素を使わないため水準4には当てず、世界の主要企業として水準2とした。ファイバーレーザー発振器のシェアは確認できない。2016年の記事で、その後の市場はファイバー式へ移っている。",
+   "i18n": {
+    "en": {
+     "product": "Laser oscillators for processing machines (fiber and CO₂)",
+     "share": "A major global maker of laser oscillators for processing machines (near-top world share in CO₂ oscillators, 2016)",
+     "note": "The near-top rating is for CO₂ oscillators; because CO₂ lasers do not use the target elements, level 4 is not applied and it is rated level 2 as a major global player. No share was confirmed for fiber laser oscillators. From a 2016 article; the market has since shifted to fiber."
+    },
+    "zh-CN": {
+     "product": "加工机用激光振荡器（光纤・CO₂）",
+     "share": "加工机用激光振荡器的全球主要企业（CO₂振荡器全球份额居首位级，2016年）",
+     "note": "首位级评价针对CO₂振荡器，CO₂激光不使用对象元素，因此不适用水准4，作为全球主要企业评为水准2。光纤激光振荡器份额未能确认。为2016年报道，此后市场已转向光纤式。"
+    }
+   }
+  },
+  {
+   "company": "laser-fanuc",
+   "name": "ファナック",
+   "node": "05_laser_osc",
+   "els": [
+    "Sm"
+   ],
+   "product": "加工機用のレーザー発振器（ファイバー・CO₂）",
+   "level": 2,
+   "share": "加工機用レーザー発振器の世界の主要企業（CO₂ 発振器で世界シェア首位級、2016年）",
+   "scope": "世界",
+   "basis": "公開情報",
+   "source": "https://newswitch.jp/p/4258",
+   "sourceLabel": "ニュースイッチ（日刊工業新聞）「ファナック、ファイバーレーザーの新工場に100億円投資」2016年4月（2026年11月確認）",
+   "note": "首位級は CO₂ 発振器の評価で、CO₂ レーザーは対象元素を使わないため水準4には当てず、世界の主要企業として水準2とした。ファイバーレーザー発振器のシェアは確認できない。2016年の記事で、その後の市場はファイバー式へ移っている。",
+   "i18n": {
+    "en": {
+     "product": "Laser oscillators for processing machines (fiber and CO₂)",
+     "share": "A major global maker of laser oscillators for processing machines (near-top world share in CO₂ oscillators, 2016)",
+     "note": "The near-top rating is for CO₂ oscillators; because CO₂ lasers do not use the target elements, level 4 is not applied and it is rated level 2 as a major global player. No share was confirmed for fiber laser oscillators. From a 2016 article; the market has since shifted to fiber."
+    },
+    "zh-CN": {
+     "product": "加工机用激光振荡器（光纤・CO₂）",
+     "share": "加工机用激光振荡器的全球主要企业（CO₂振荡器全球份额居首位级，2016年）",
+     "note": "首位级评价针对CO₂振荡器，CO₂激光不使用对象元素，因此不适用水准4，作为全球主要企业评为水准2。光纤激光振荡器份额未能确认。为2016年报道，此后市场已转向光纤式。"
+    }
+   }
+  },
+  {
+   "company": "photonics-furukawa",
+   "name": "古河電気工業",
+   "node": "05_laser_osc",
+   "els": [
+    "DyTb"
+   ],
+   "product": "産業用の高出力ファイバーレーザー",
+   "level": 2,
+   "share": "世界のファイバーレーザー市場の主要企業の一覧に入る（数値・順位なし）",
+   "scope": "世界",
+   "basis": "公開情報",
+   "source": "https://www.kbvresearch.com/fiber-laser-market/amp",
+   "sourceLabel": "KBV Research「Global Fiber Laser Market…2024-2031」有料レポートの販促ページ、2025年2月（2026年11月確認）",
+   "note": "主要企業の一覧に名前があるだけで、シェア上位（IPG・Raycus・Coherent・Maxphotonics・TRUMPF）には入らない。国内シェアの数値も見つからない。",
+   "i18n": {
+    "en": {
+     "product": "Industrial high-power fiber lasers",
+     "share": "Listed among key companies in the global fiber laser market (no figure or ranking)",
+     "note": "It is only named in the key-company list and does not appear among the share leaders (IPG, Raycus, Coherent, Maxphotonics, TRUMPF). No domestic share figure was found either."
+    },
+    "zh-CN": {
+     "product": "工业用高功率光纤激光",
+     "share": "列入全球光纤激光市场主要企业名单（无数值・排名）",
+     "note": "仅列名于主要企业名单，未进入份额前列（IPG、锐科、Coherent、创鑫、TRUMPF）。也未找到国内份额数值。"
+    }
+   }
+  },
+  {
+   "company": "photonics-furukawa",
+   "name": "古河電気工業",
+   "node": "05_laser_osc",
+   "els": [
+    "Sm"
+   ],
+   "product": "産業用の高出力ファイバーレーザー",
+   "level": 2,
+   "share": "世界のファイバーレーザー市場の主要企業の一覧に入る（数値・順位なし）",
+   "scope": "世界",
+   "basis": "公開情報",
+   "source": "https://www.kbvresearch.com/fiber-laser-market/amp",
+   "sourceLabel": "KBV Research「Global Fiber Laser Market…2024-2031」有料レポートの販促ページ、2025年2月（2026年11月確認）",
+   "note": "主要企業の一覧に名前があるだけで、シェア上位（IPG・Raycus・Coherent・Maxphotonics・TRUMPF）には入らない。国内シェアの数値も見つからない。",
+   "i18n": {
+    "en": {
+     "product": "Industrial high-power fiber lasers",
+     "share": "Listed among key companies in the global fiber laser market (no figure or ranking)",
+     "note": "It is only named in the key-company list and does not appear among the share leaders (IPG, Raycus, Coherent, Maxphotonics, TRUMPF). No domestic share figure was found either."
+    },
+    "zh-CN": {
+     "product": "工业用高功率光纤激光",
+     "share": "列入全球光纤激光市场主要企业名单（无数值・排名）",
+     "note": "仅列名于主要企业名单，未进入份额前列（IPG、锐科、Coherent、创鑫、TRUMPF）。也未找到国内份额数值。"
+    }
+   }
+  },
+  {
+   "company": "laser-spectronix",
+   "name": "スペクトロニクス",
+   "node": "05_laser_osc",
+   "els": [
+    "Y"
+   ],
+   "product": "ピコ秒レーザー発振器（緑・紫外・深紫外）",
+   "level": 1,
+   "share": "公開情報でシェアを確認できていない",
+   "scope": "",
+   "basis": "公開情報",
+   "source": "https://www.spectronix.co.jp/",
+   "sourceLabel": "スペクトロニクス 公式サイト（2026年11月確認）",
+   "note": "「世界最高出力」など性能の記載だけで、シェア・順位の記載はない。",
+   "i18n": {
+    "en": {
+     "product": "Picosecond laser oscillators (green, UV and deep UV)",
+     "share": "No share could be confirmed from public information",
+     "note": "Only performance claims such as \"world's highest output\"; no share or ranking is stated."
+    },
+    "zh-CN": {
+     "product": "皮秒激光振荡器（绿光・紫外・深紫外）",
+     "share": "未能从公开信息中确认份额",
+     "note": "仅有“世界最高输出”等性能记载，无份额・排名记载。"
+    }
+   }
+  },
+  {
+   "company": "laser-spectronix",
+   "name": "スペクトロニクス",
+   "node": "05_laser_osc",
+   "els": [
+    "DyTb"
+   ],
+   "product": "ピコ秒レーザー発振器（緑・紫外・深紫外）",
+   "level": 1,
+   "share": "公開情報でシェアを確認できていない",
+   "scope": "",
+   "basis": "公開情報",
+   "source": "https://www.spectronix.co.jp/",
+   "sourceLabel": "スペクトロニクス 公式サイト（2026年11月確認）",
+   "note": "「世界最高出力」など性能の記載だけで、シェア・順位の記載はない。",
+   "i18n": {
+    "en": {
+     "product": "Picosecond laser oscillators (green, UV and deep UV)",
+     "share": "No share could be confirmed from public information",
+     "note": "Only performance claims such as \"world's highest output\"; no share or ranking is stated."
+    },
+    "zh-CN": {
+     "product": "皮秒激光振荡器（绿光・紫外・深紫外）",
+     "share": "未能从公开信息中确认份额",
+     "note": "仅有“世界最高输出”等性能记载，无份额・排名记载。"
+    }
+   }
+  },
+  {
+   "company": "laser-spectronix",
+   "name": "スペクトロニクス",
+   "node": "05_laser_osc",
+   "els": [
+    "Sm"
+   ],
+   "product": "ピコ秒レーザー発振器（緑・紫外・深紫外）",
+   "level": 1,
+   "share": "公開情報でシェアを確認できていない",
+   "scope": "",
+   "basis": "公開情報",
+   "source": "https://www.spectronix.co.jp/",
+   "sourceLabel": "スペクトロニクス 公式サイト（2026年11月確認）",
+   "note": "「世界最高出力」など性能の記載だけで、シェア・順位の記載はない。",
+   "i18n": {
+    "en": {
+     "product": "Picosecond laser oscillators (green, UV and deep UV)",
+     "share": "No share could be confirmed from public information",
+     "note": "Only performance claims such as \"world's highest output\"; no share or ranking is stated."
+    },
+    "zh-CN": {
+     "product": "皮秒激光振荡器（绿光・紫外・深紫外）",
+     "share": "未能从公开信息中确认份额",
+     "note": "仅有“世界最高输出”等性能记载，无份额・排名记载。"
     }
    }
   },
@@ -3031,6 +3731,34 @@
    }
   },
   {
+   "company": "photonics-melco-hakouden",
+   "name": "三菱電機（光デバイス・光伝送・宇宙光通信）",
+   "node": "05_photonics",
+   "els": [
+    "Sm"
+   ],
+   "product": "EML チップと TO-CAN 型 EML モジュール（光アイソレータ内蔵）",
+   "level": 4,
+   "share": "データセンター向け EML で世界シェア1位、送信用 EML チップは50%超（当社調べ）",
+   "scope": "世界",
+   "basis": "公開情報",
+   "source": "https://www.mitsubishielectric.co.jp/semiconductors/work-people/spotlights/datacenters.html",
+   "sourceLabel": "三菱電機 半導体・デバイス サイト（2026年11月確認）",
+   "note": "Sm はアイソレータの磁石（SmCo が一般的）として含む。シェアは Y・Dy・Tb と同じ製品の値。",
+   "i18n": {
+    "en": {
+     "product": "EML chips and TO-CAN type EML modules (with built-in optical isolator)",
+     "share": "No. 1 world share in EML for data centres; over 50% for transmitter EML chips (company's own survey)",
+     "note": "Sm is included as the isolator magnet (SmCo is usual). The share is the same product figure as for Y, Dy and Tb."
+    },
+    "zh-CN": {
+     "product": "EML芯片与TO-CAN型EML模块（内置光隔离器）",
+     "share": "面向数据中心的EML全球份额第一，发射用EML芯片超过50%（公司自查）",
+     "note": "Sm作为隔离器的磁体计入（通常为SmCo）。份额与Y、Dy、Tb为同一产品的数值。"
+    }
+   }
+  },
+  {
    "company": "photonics-furukawa",
    "name": "古河電気工業",
    "node": "05_photonics",
@@ -3087,6 +3815,34 @@
    }
   },
   {
+   "company": "photonics-furukawa",
+   "name": "古河電気工業",
+   "node": "05_photonics",
+   "els": [
+    "Sm"
+   ],
+   "product": "波長可変レーザモジュール ITLA、ラマン増幅器用ポンプ LD モジュール（光アイソレータ内蔵）",
+   "level": 3,
+   "share": "波長可変レーザモジュール ITLA で世界首位（2017年の業界紙記事で世界シェア50%以上）",
+   "scope": "世界",
+   "basis": "公開情報",
+   "source": "https://newswitch.jp/p/8630",
+   "sourceLabel": "ニュースイッチ（日刊工業新聞）2017年4月11日（2026年11月確認）",
+   "note": "Sm はアイソレータの磁石（SmCo が一般的）として含む。シェアは Y・Dy・Tb と同じ製品の値。",
+   "i18n": {
+    "en": {
+     "product": "ITLA tunable laser modules and pump LD modules for Raman amplifiers (with built-in optical isolator)",
+     "share": "World leader in ITLA tunable laser modules (a 2017 trade-press article gives a world share of over 50%)",
+     "note": "Sm is included as the isolator magnet (SmCo is usual). The share is the same product figure as for Y, Dy and Tb."
+    },
+    "zh-CN": {
+     "product": "波长可调激光模块ITLA、拉曼放大器用泵浦LD模块（内置光隔离器）",
+     "share": "波长可调激光模块ITLA居全球首位（2017年行业报纸报道称全球份额50%以上）",
+     "note": "Sm作为隔离器的磁体计入（通常为SmCo）。份额与Y、Dy、Tb为同一产品的数值。"
+    }
+   }
+  },
+  {
    "company": "stage05-integrated-40",
    "name": "住友電気工業",
    "node": "05_photonics",
@@ -3139,6 +3895,286 @@
      "product": "面向数据中心的光收发模块与通信用光半导体（内置光隔离器）",
      "share": "被列为全球光收发模块市场的主要企业之一（未公开份额数值）",
      "note": "Y系与Tb系磁光晶体均以光收发模块内光隔离器的形式涉及同一产品，故采用与Y相同的依据与等级。"
+    }
+   }
+  },
+  {
+   "company": "stage05-integrated-40",
+   "name": "住友電気工業",
+   "node": "05_photonics",
+   "els": [
+    "Sm"
+   ],
+   "product": "データセンター向け光トランシーバと通信用光半導体（光アイソレータ内蔵）",
+   "level": 2,
+   "share": "光トランシーバ世界市場の主要企業として社名が挙がる（シェア数値は非公表）",
+   "scope": "世界",
+   "basis": "公開情報",
+   "source": "https://www.gminsights.com/ja/industry-analysis/optical-transceiver-market",
+   "sourceLabel": "Global Market Insights「光トランシーバ市場」（2026年11月確認）",
+   "note": "Sm はアイソレータの磁石（SmCo が一般的）として含む。シェアは Y・Dy・Tb と同じ製品の値。",
+   "i18n": {
+    "en": {
+     "product": "Optical transceivers for data centres and optical semiconductors for communications (with built-in optical isolator)",
+     "share": "Named among the main players in the world optical transceiver market (no share figure published)",
+     "note": "Sm is included as the isolator magnet (SmCo is usual). The share is the same product figure as for Y, Dy and Tb."
+    },
+    "zh-CN": {
+     "product": "面向数据中心的光收发模块与通信用光半导体（内置光隔离器）",
+     "share": "被列为全球光收发模块市场的主要企业之一（未公开份额数值）",
+     "note": "Sm作为隔离器的磁体计入（通常为SmCo）。份额与Y、Dy、Tb为同一产品的数值。"
+    }
+   }
+  },
+  {
+   "company": "optnet-nec",
+   "name": "日本電気（NEC）",
+   "node": "05_photonics",
+   "els": [
+    "Y"
+   ],
+   "product": "光海底ケーブルシステムの海底光中継器（光増幅器）と光トランシーバ",
+   "level": 3,
+   "share": "光海底ケーブルで世界3位、総距離ベースで約2割",
+   "scope": "世界",
+   "basis": "公開情報",
+   "source": "https://toyokeizai.net/articles/-/941884",
+   "sourceLabel": "東洋経済オンライン（2026年11月確認）",
+   "note": "海底ケーブルシステム全体の値で、中継器・トランシーバ単独の値ではない。出典により約2〜3割の幅がある。",
+   "i18n": {
+    "en": {
+     "product": "Submarine optical repeaters (optical amplifiers) for submarine cable systems and optical transceivers",
+     "share": "No. 3 worldwide in submarine optical cable, about 20% by total length",
+     "note": "The figure is for submarine cable systems as a whole, not repeaters or transceivers alone; sources range from about 20% to 30%."
+    },
+    "zh-CN": {
+     "product": "海底光缆系统的海底光中继器（光放大器）与光收发模块",
+     "share": "海底光缆全球第3，按总长度约占两成",
+     "note": "该数值为海底电缆系统整体，并非中继器或收发模块单独数值；不同来源在约两成至三成之间。"
+    }
+   }
+  },
+  {
+   "company": "optnet-nec",
+   "name": "日本電気（NEC）",
+   "node": "05_photonics",
+   "els": [
+    "DyTb"
+   ],
+   "product": "光海底ケーブルシステムの海底光中継器（光増幅器）と光トランシーバ",
+   "level": 3,
+   "share": "光海底ケーブルで世界3位、総距離ベースで約2割",
+   "scope": "世界",
+   "basis": "公開情報",
+   "source": "https://toyokeizai.net/articles/-/941884",
+   "sourceLabel": "東洋経済オンライン（2026年11月確認）",
+   "note": "海底ケーブルシステム全体の値で、中継器・トランシーバ単独の値ではない。出典により約2〜3割の幅がある。",
+   "i18n": {
+    "en": {
+     "product": "Submarine optical repeaters (optical amplifiers) for submarine cable systems and optical transceivers",
+     "share": "No. 3 worldwide in submarine optical cable, about 20% by total length",
+     "note": "The figure is for submarine cable systems as a whole, not repeaters or transceivers alone; sources range from about 20% to 30%."
+    },
+    "zh-CN": {
+     "product": "海底光缆系统的海底光中继器（光放大器）与光收发模块",
+     "share": "海底光缆全球第3，按总长度约占两成",
+     "note": "该数值为海底电缆系统整体，并非中继器或收发模块单独数值；不同来源在约两成至三成之间。"
+    }
+   }
+  },
+  {
+   "company": "optnet-nec",
+   "name": "日本電気（NEC）",
+   "node": "05_photonics",
+   "els": [
+    "Sm"
+   ],
+   "product": "光海底ケーブルシステムの海底光中継器（光増幅器）と光トランシーバ",
+   "level": 3,
+   "share": "光海底ケーブルで世界3位、総距離ベースで約2割",
+   "scope": "世界",
+   "basis": "公開情報",
+   "source": "https://toyokeizai.net/articles/-/941884",
+   "sourceLabel": "東洋経済オンライン（2026年11月確認）",
+   "note": "海底ケーブルシステム全体の値で、中継器・トランシーバ単独の値ではない。出典により約2〜3割の幅がある。",
+   "i18n": {
+    "en": {
+     "product": "Submarine optical repeaters (optical amplifiers) for submarine cable systems and optical transceivers",
+     "share": "No. 3 worldwide in submarine optical cable, about 20% by total length",
+     "note": "The figure is for submarine cable systems as a whole, not repeaters or transceivers alone; sources range from about 20% to 30%."
+    },
+    "zh-CN": {
+     "product": "海底光缆系统的海底光中继器（光放大器）与光收发模块",
+     "share": "海底光缆全球第3，按总长度约占两成",
+     "note": "该数值为海底电缆系统整体，并非中继器或收发模块单独数值；不同来源在约两成至三成之间。"
+    }
+   }
+  },
+  {
+   "company": "stage05-integrated-1",
+   "name": "アンリツ",
+   "node": "05_photonics",
+   "els": [
+    "Y"
+   ],
+   "product": "SLD モジュール（光アイソレータ内蔵）",
+   "level": 1,
+   "share": "公開情報でシェアを確認できていない",
+   "scope": "",
+   "basis": "公開情報",
+   "source": "https://dl.cdn-anritsu.com/anritsu-sensing-devices/ja-jp/products/sld/as5b320em50m-j-c-3.pdf",
+   "sourceLabel": "アンリツ SLD モジュール AS5B320EM50M 仕様書（2026年11月確認）",
+   "note": "SLD 市場のメーカー別シェアは有料調査にしかない。",
+   "i18n": {
+    "en": {
+     "product": "SLD modules (built-in optical isolator)",
+     "share": "No share could be confirmed from public information",
+     "note": "Maker-level SLD market shares are available only in paid research."
+    },
+    "zh-CN": {
+     "product": "SLD模块（内置光隔离器）",
+     "share": "未能从公开信息中确认份额",
+     "note": "SLD市场的厂商份额仅见于付费调研。"
+    }
+   }
+  },
+  {
+   "company": "stage05-integrated-1",
+   "name": "アンリツ",
+   "node": "05_photonics",
+   "els": [
+    "DyTb"
+   ],
+   "product": "SLD モジュール（光アイソレータ内蔵）",
+   "level": 1,
+   "share": "公開情報でシェアを確認できていない",
+   "scope": "",
+   "basis": "公開情報",
+   "source": "https://dl.cdn-anritsu.com/anritsu-sensing-devices/ja-jp/products/sld/as5b320em50m-j-c-3.pdf",
+   "sourceLabel": "アンリツ SLD モジュール AS5B320EM50M 仕様書（2026年11月確認）",
+   "note": "SLD 市場のメーカー別シェアは有料調査にしかない。",
+   "i18n": {
+    "en": {
+     "product": "SLD modules (built-in optical isolator)",
+     "share": "No share could be confirmed from public information",
+     "note": "Maker-level SLD market shares are available only in paid research."
+    },
+    "zh-CN": {
+     "product": "SLD模块（内置光隔离器）",
+     "share": "未能从公开信息中确认份额",
+     "note": "SLD市场的厂商份额仅见于付费调研。"
+    }
+   }
+  },
+  {
+   "company": "stage05-integrated-1",
+   "name": "アンリツ",
+   "node": "05_photonics",
+   "els": [
+    "Sm"
+   ],
+   "product": "SLD モジュール（光アイソレータ内蔵）",
+   "level": 1,
+   "share": "公開情報でシェアを確認できていない",
+   "scope": "",
+   "basis": "公開情報",
+   "source": "https://dl.cdn-anritsu.com/anritsu-sensing-devices/ja-jp/products/sld/as5b320em50m-j-c-3.pdf",
+   "sourceLabel": "アンリツ SLD モジュール AS5B320EM50M 仕様書（2026年11月確認）",
+   "note": "SLD 市場のメーカー別シェアは有料調査にしかない。",
+   "i18n": {
+    "en": {
+     "product": "SLD modules (built-in optical isolator)",
+     "share": "No share could be confirmed from public information",
+     "note": "Maker-level SLD market shares are available only in paid research."
+    },
+    "zh-CN": {
+     "product": "SLD模块（内置光隔离器）",
+     "share": "未能从公开信息中确认份额",
+     "note": "SLD市场的厂商份额仅见于付费调研。"
+    }
+   }
+  },
+  {
+   "company": "photonics-fiberlabs",
+   "name": "ファイバーラボ",
+   "node": "05_photonics",
+   "els": [
+    "Y"
+   ],
+   "product": "光ファイバ増幅器（EDFA・TDFA・PDFA、光アイソレータ内蔵）",
+   "level": 1,
+   "share": "公開情報でシェアを確認できていない",
+   "scope": "",
+   "basis": "公開情報",
+   "source": "https://www.lambdaphoto.co.uk/fiberlabs-c-band-amplifier-edfa-bench-top.html",
+   "sourceLabel": "FiberLabs C-band EDFA 仕様（2026年11月確認）",
+   "note": "研究・評価用のベンチトップ型が中心。",
+   "i18n": {
+    "en": {
+     "product": "Optical fiber amplifiers (EDFA, TDFA, PDFA with built-in optical isolators)",
+     "share": "No share could be confirmed from public information",
+     "note": "Mainly benchtop units for research and evaluation."
+    },
+    "zh-CN": {
+     "product": "光纤放大器（EDFA、TDFA、PDFA，内置光隔离器）",
+     "share": "未能从公开信息中确认份额",
+     "note": "以研究与评估用台式产品为主。"
+    }
+   }
+  },
+  {
+   "company": "photonics-fiberlabs",
+   "name": "ファイバーラボ",
+   "node": "05_photonics",
+   "els": [
+    "DyTb"
+   ],
+   "product": "光ファイバ増幅器（EDFA・TDFA・PDFA、光アイソレータ内蔵）",
+   "level": 1,
+   "share": "公開情報でシェアを確認できていない",
+   "scope": "",
+   "basis": "公開情報",
+   "source": "https://www.lambdaphoto.co.uk/fiberlabs-c-band-amplifier-edfa-bench-top.html",
+   "sourceLabel": "FiberLabs C-band EDFA 仕様（2026年11月確認）",
+   "note": "研究・評価用のベンチトップ型が中心。",
+   "i18n": {
+    "en": {
+     "product": "Optical fiber amplifiers (EDFA, TDFA, PDFA with built-in optical isolators)",
+     "share": "No share could be confirmed from public information",
+     "note": "Mainly benchtop units for research and evaluation."
+    },
+    "zh-CN": {
+     "product": "光纤放大器（EDFA、TDFA、PDFA，内置光隔离器）",
+     "share": "未能从公开信息中确认份额",
+     "note": "以研究与评估用台式产品为主。"
+    }
+   }
+  },
+  {
+   "company": "photonics-fiberlabs",
+   "name": "ファイバーラボ",
+   "node": "05_photonics",
+   "els": [
+    "Sm"
+   ],
+   "product": "光ファイバ増幅器（EDFA・TDFA・PDFA、光アイソレータ内蔵）",
+   "level": 1,
+   "share": "公開情報でシェアを確認できていない",
+   "scope": "",
+   "basis": "公開情報",
+   "source": "https://www.lambdaphoto.co.uk/fiberlabs-c-band-amplifier-edfa-bench-top.html",
+   "sourceLabel": "FiberLabs C-band EDFA 仕様（2026年11月確認）",
+   "note": "研究・評価用のベンチトップ型が中心。",
+   "i18n": {
+    "en": {
+     "product": "Optical fiber amplifiers (EDFA, TDFA, PDFA with built-in optical isolators)",
+     "share": "No share could be confirmed from public information",
+     "note": "Mainly benchtop units for research and evaluation."
+    },
+    "zh-CN": {
+     "product": "光纤放大器（EDFA、TDFA、PDFA，内置光隔离器）",
+     "share": "未能从公开信息中确认份额",
+     "note": "以研究与评估用台式产品为主。"
     }
    }
   },

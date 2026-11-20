@@ -126,8 +126,10 @@ export async function loadDataset() {
     assertUnique(sub.src ?? [], `${sub.id} の src`);
     for (const source of sub.src ?? []) {
       const upstream = subcategories.find((item) => item.id === source);
+      // 同じ工程の中の接続は、部材を部材に組み込むもの（srcAssembly に理由を書いたもの）だけを許す
+      if (upstream.stage === sub.stage && sub.srcAssembly?.[source]) continue;
       if (upstream.stage >= sub.stage) {
-        throw new ValidationError(`${sub.id} の src ${source} は上流工程ではありません。`);
+        throw new ValidationError(`${sub.id} の src ${source} は上流工程ではありません（同じ工程の中の組み込みなら srcAssembly に理由を書く）。`);
       }
       if (upstream.stage < sub.stage - 1 && !sub.srcSkip?.[source]) {
         throw new ValidationError(`${sub.id} の src ${source} は工程を飛ばすため srcSkip に理由が必要です。`);
@@ -172,6 +174,15 @@ export async function loadDataset() {
           throw new ValidationError(`${sub.id} の srcNotes.${source} に接続根拠がありません。`);
         }
       }
+      if (sub.srcAssembly !== undefined) {
+        if (!sub.srcAssembly || typeof sub.srcAssembly !== "object" || Array.isArray(sub.srcAssembly)) throw new ValidationError(`${sub.id} の srcAssembly が不正です。`);
+        for (const [source, reason] of Object.entries(sub.srcAssembly)) {
+          const upstream = subcategories.find((item) => item.id === source);
+          if (!sub.src.includes(source) || !upstream || upstream.stage !== sub.stage || typeof reason !== "string" || !reason.trim()) {
+            throw new ValidationError(`${sub.id} の srcAssembly.${source} が不正です（同じ工程の src にだけ理由を書く）。`);
+          }
+        }
+      }
       if (sub.srcSkip !== undefined) {
         if (!sub.srcSkip || typeof sub.srcSkip !== "object" || Array.isArray(sub.srcSkip)) throw new ValidationError(`${sub.id} の srcSkip が不正です。`);
         for (const [source, reason] of Object.entries(sub.srcSkip)) {
@@ -181,9 +192,22 @@ export async function loadDataset() {
           }
         }
       }
-    } else if (sub.srcEls !== undefined || sub.srcNotes !== undefined || sub.srcSkip !== undefined) {
+    } else if (sub.srcEls !== undefined || sub.srcNotes !== undefined || sub.srcSkip !== undefined || sub.srcAssembly !== undefined) {
       throw new ValidationError(`${sub.id} は工程2のため接続詳細を持てません。`);
     }
+  }
+
+  // 同じ工程の中の組み込みを許すため、接続が循環していないことを確かめる
+  {
+    const mark = new Map();
+    const visit = (id, path) => {
+      if (mark.get(id) === 1) throw new ValidationError(`接続が循環しています: ${[...path, id].join(" → ")}`);
+      if (mark.get(id) === 2) return;
+      mark.set(id, 1);
+      for (const source of subcategories.find((item) => item.id === id).src ?? []) visit(source, [...path, id]);
+      mark.set(id, 2);
+    };
+    for (const sub of subcategories) visit(sub.id, []);
   }
 
   const companyIds = companies.map((company) => company.id);
@@ -215,7 +239,8 @@ export async function loadDataset() {
     if (JSON.stringify([...subElUnion].sort()) !== JSON.stringify([...company.tags].sort())) {
       throw new ValidationError(`${company.name} の tags が subEls の和集合と一致しません（tags: ${company.tags.join(",")} / subEls: ${[...subElUnion].join(",")}）。`);
     }
-    if (!EVALUATION_PATTERN.test(String(company.ev ?? "").trim())) throw new ValidationError(`${company.name} の評価表記 ${company.ev} を解釈できません（A/B/C/X に ± を付けた表記か「参考」）。`);
+    // ev は元の監査表から引き継いだ評価で、画面には出さない。新しく足すカードには付けなくてよい（付ける場合は書式を確かめる。2026-11-21、利用者の判断）
+    if (company.ev !== undefined && !EVALUATION_PATTERN.test(String(company.ev ?? "").trim())) throw new ValidationError(`${company.name} の評価表記 ${company.ev} を解釈できません（A/B/C/X に ± を付けた表記か「参考」）。`);
     const privateAtlaFields = ["row", "sourceUrl", "userReason", "spreadsheetId", "sheetId"].filter((key) => company.atla?.[key] !== undefined);
     if (privateAtlaFields.length) throw new ValidationError(`${company.name} の公開データに内部シート情報があります: ${privateAtlaFields.join(", ")}`);
     if (JSON.stringify(company).includes("docs.google.com/spreadsheets/")) throw new ValidationError(`${company.name} の公開データにGoogle Spreadsheet URLがあります`);

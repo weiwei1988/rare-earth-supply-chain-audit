@@ -6,7 +6,7 @@ const read=name=>JSON.parse(fs.readFileSync(new URL('../src/data/'+name+'.json',
 function load(extra={}){
   const s={elements:['Y','DyTb','Sm','Sc'],data:read('companies'),allSubs:read('subcategories'),companyShares:read('company-shares'),...extra};
   vm.createContext(s);
-  for(const file of ['supply-graph','model','parts','flow'])vm.runInContext(fs.readFileSync(new URL('../src/app/'+file+'.js',import.meta.url),'utf8'),s);
+  for(const file of ['supply-graph','graph','model','parts','flow'])vm.runInContext(fs.readFileSync(new URL('../src/app/'+file+'.js',import.meta.url),'utf8'),s);
   return s;
 }
 const pairs=edges=>Array.from(edges,e=>e.from+'|'+e.to);

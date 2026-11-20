@@ -99,7 +99,7 @@ function renderCriticality(){
 }
 // 選んだマスの内訳。算式・下流の構成・所属企業の根拠に分ける
 function crFactsHtml(point){
-  var score=point.score===null?crText('unavailable'):'100 × √('+point.downstream+'/'+point.maximum+' × '+point.level+'/4)';
+  var score=point.score===null?crText('unavailable'):'100 × √('+point.downstream+'/'+point.maximum+' × ('+point.level+'+2)/6)';
   return'<div class="re-cr-facts">'+
     '<div>'+esc(criticalText('score'))+'<strong>'+crBadge(point.score)+'</strong><small>'+esc(score)+'</small></div>'+
     '<div>'+esc(crText('downstream'))+'<strong>'+point.downstream+'</strong><small>'+esc(tr('companyShort'))+'</small></div>'+

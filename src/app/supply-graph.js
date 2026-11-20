@@ -17,7 +17,8 @@ function buildSupplyGraph(subcategories,companies,element){
     (target.src||[]).forEach(function(from){
       var allowed=(target.srcEls&&target.srcEls[from])||[];
       if(!byId.has(from)||(element&&allowed.indexOf(element)<0))return;
-      var edge={from:from,to:target.id,elements:allowed.slice()};
+      // 同じ工程の中の組み込み（部材を部材に組む）は assembly を付け、描画側で迂回させる
+      var edge={from:from,to:target.id,elements:allowed.slice(),assembly:Boolean(target.srcAssembly&&target.srcAssembly[from])};
       edges.push(edge);incoming.get(target.id).push(edge);outgoing.get(from).push(edge)
     })
   });
