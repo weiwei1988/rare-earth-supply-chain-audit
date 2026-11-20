@@ -9415,13 +9415,20 @@
     "id": "fujikura",
     "name": "フジクラ",
     "stages": [
-      4
+      4,
+      5
     ],
     "subs": [
-      "04_faraday_laser"
+      "04_faraday_laser",
+      "05_laser_osc"
     ],
     "subEls": {
       "04_faraday_laser": [
+        "DyTb",
+        "Sm",
+        "Sc"
+      ],
+      "05_laser_osc": [
         "DyTb",
         "Sm",
         "Sc"
@@ -9441,7 +9448,7 @@
     "ev": "B",
     "exc": 0,
     "src": "https://patents.google.com/patent/US8804240B2/en ／ https://www.nims.go.jp/electr-opt/OPCRY_e.html ／ https://www.optic-product.fujikura.com/wp-content/uploads/2025/06/CPJ70A_71A_79A.pdf ／ https://www2.jpx.co.jp/disc/58030/081220260514532598_tse-acedjpsm-58030-20260514358030-ixbrl.htm",
-    "note": "2026-11-19：レーザー波長のファラデー回転子・光アイソレータの追加調査で新規に収録"
+    "note": "2026-11-19：レーザー波長のファラデー回転子・光アイソレータの追加調査で新規に収録 ／ 2026-11-21：自社の Yb ファイバーレーザーを作るため、「固体レーザー発振器」にも置いた（Sc は自社の TSAG 回転子を組み込むアイソレータとして含む）。"
   },
   {
     "id": "compound-kisankinzoku",

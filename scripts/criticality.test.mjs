@@ -17,6 +17,9 @@ test('production matrix and ranking render in all locales with shared flow score
  vm.createContext(s);for(const file of ['text','supply-graph','model','parts','criticality'])vm.runInContext(fs.readFileSync(new URL('../src/app/'+file+'.js',import.meta.url),'utf8'),s);
  for(const language of ['ja','en','zh-CN']){s.language=language;s.renderCriticality();assert.match(nodes.get('#re-view-criticality').innerHTML,/data-cr-key/);assert.match(nodes.get('#re-cr-selection').innerHTML,/re-cr-facts/);assert.ok(nodes.get('#re-cr-companies').innerHTML.includes('data-cr-company'));}
  for(const sort of ['score','down','share']){const ranked=s.crSorted(sort);const key=sort==='down'?'downstream':sort==='share'?'level':'score';assert.ok(ranked.every((p,i)=>!i||ranked[i-1][key]>=p[key]));}
+ // 工程別の内訳は下流企業数と同じ集合から作る（同じ工程の中の組み込みの先にいる企業も漏らさない）
+ for(const p of s.crPoints().filter(p=>p.onPath)){const ids=new Set(p.downstreamByStage.flatMap(r=>r.companies.map(c=>c.id)));assert.equal(ids.size,p.downstream,p.node+'|'+p.element);}
+ for(const element of ['DyTb','Sm']){const mag=s.criticalityPoint('04_mag',element);assert.ok(mag.downstreamByStage.some(r=>r.stage===4&&r.companies.length>0),'04_mag '+element);}
  assert.equal(s.crPoints().length,69);assert.equal(s.criticalityPoint('02_compound','Y').score,s.crPoints().find(p=>p.node==='02_compound'&&p.element==='Y').score);
 });
 test('シェア根拠は呼び出し元が渡した条件だけで決まる（別画面の選択が混ざらない）',()=>{

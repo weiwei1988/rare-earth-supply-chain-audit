@@ -31,7 +31,7 @@ check(
 );
 check(
   "工程別の延べ企業数",
-  sameJson(Object.fromEntries([2, 3, 4, 5, 6].map((stage) => [stage, dataset.companies.filter((company) => company.stages.includes(stage)).length])), { 2: 9, 3: 26, 4: 47, 5: 80, 6: 130 }),
+  sameJson(Object.fromEntries([2, 3, 4, 5, 6].map((stage) => [stage, dataset.companies.filter((company) => company.stages.includes(stage)).length])), { 2: 9, 3: 26, 4: 47, 5: 81, 6: 130 }),
 );
 check(
   "列順が全52分類を工程ごとに一度ずつ指定",

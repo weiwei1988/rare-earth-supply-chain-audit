@@ -20,6 +20,7 @@ function criticalityPoints(){
       members.forEach(function(c){level=Math.max(level,shareEntry(c.id,s.id,element).level)});
       var representative=members.find(function(c){return shareEntry(c.id,s.id,element).level===level});
       points.push({node:s.id,element:element,downstream:path.has(s.id)?companies.length:0,level:level,score:null,onPath:path.has(s.id),companies:members,downstreamCompanies:path.has(s.id)?companies:[],downstreamNodes:Array.from(down).filter(function(id){return path.has(id)}),representative:representative});
+      var point=points[points.length-1];point.downstreamByStage=downstreamByStage(point);
     });
   });
   var max=Math.max.apply(null,[1].concat(points.map(function(p){return p.downstream})));
@@ -59,6 +60,16 @@ function totalStageCount(id){return data.filter(function(c){return c.stages.inde
 function countSub(id){return data.filter(function(c){return matchesSelectedElement(c,id)}).length}
 function totalSubCount(id){return data.filter(function(c){return c.subs.indexOf(id)>=0}).length}
 // 元素の所属はサブカテゴリーごとに持つ（subEls）。企業の tags はその和集合なので、工程別に数えるときは使わない。
+// 下流企業の工程別内訳。到達した工程の所属ステージから作るため、同じ工程の中の組み込み（永久磁石 → 回転子・アイソレータなど）の先にいる企業も漏れない。
+// 1社が複数の工程にいる場合は、それぞれの工程で数える（合計は下流企業数と一致しないことがある）
+function downstreamByStage(point){
+  var byStage=new Map();
+  point.downstreamNodes.forEach(function(id){var stage=subStage(id);if(!byStage.has(stage))byStage.set(stage,[]);byStage.get(stage).push(id)});
+  return Array.from(byStage.keys()).sort(function(a,b){return a-b}).map(function(stage){
+    var ids=byStage.get(stage);
+    return{stage:stage,companies:point.downstreamCompanies.filter(function(c){return c.subs.some(function(id){return ids.indexOf(id)>=0&&companyHasElement(c,id,point.element)})})}
+  }).filter(function(row){return row.companies.length});
+}
 function companyHasElement(company,id,element){var els=company.subEls&&company.subEls[id];return Array.isArray(els)&&els.indexOf(element)>=0}
 function subElementCount(id,element){return data.filter(function(c){return companyHasElement(c,id,element)}).length}
 function activeEls(item){var forced=item.forceEls||[];return item.els.filter(function(element){return forced.indexOf(element)>=0||subElementCount(item.id,element)>0})}
