@@ -415,7 +415,13 @@ button[aria-pressed="true"]{color:var(--text);border-color:var(--text);backgroun
 .re-eq-node-stat{display:flex;align-items:baseline;gap:6px;margin-top:6px}
 .re-eq-node-stat strong{font-size:17px;font-weight:600;font-variant-numeric:tabular-nums}
 .re-eq-node-stat span{font-size:10.5px;color:var(--faint);line-height:1.35}
-.re-eq-rib{stroke:none;opacity:.24;transition:opacity .15s ease}
+/* 帯はマウスを重ねると説明（接続・帯の太さの企業数）を出す。図全体の SVG は操作を通さないまま、帯だけ受け付ける。
+   上に重なる工程の格子は、カード以外の余白で帯への操作を遮らないようにする（元素別フローの帯と同じ見せ方） */
+.re-eq-rib{stroke:none;opacity:.24;pointer-events:visiblePainted;cursor:help;transition:opacity .15s ease}
+.re-eq-rib:hover{opacity:.5}
+.re-eq-rib.is-focus:hover{opacity:.8}
+.re-eq-path-grid{pointer-events:none}
+.re-eq-path-grid .re-eq-node{pointer-events:auto}
 .re-eq-rib.is-focus{opacity:.62}
 .re-eq-rib.is-dim{opacity:.07}
 .re-eq-rib.is-skip{fill-opacity:.4;stroke-width:1.4;stroke-dasharray:6 4}
