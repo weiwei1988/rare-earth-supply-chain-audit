@@ -864,6 +864,8 @@ button[aria-pressed="true"]{color:var(--text);border-color:var(--text);backgroun
   // クリティカル度の段。境界と表示ラベルはここだけで定義し、元素別フロー・マップ・凡例が共有する。
   var criticalityBands=[{tier:1,min:0,label:'0–29'},{tier:2,min:30,label:'30–49'},{tier:3,min:50,label:'50–69'},{tier:4,min:70,label:'70–100'}];
   function criticalityTier(score){var found=criticalityBands[0];criticalityBands.forEach(function(band){if(score>=band.min)found=band});return found.tier}
+  // 画面に出す点数（整数に丸めた値）で色段階を決める。チップ・マトリックス・段階別の集計はすべてこれを使い、境界（49.75 → 50 など）で表示と集計が食い違わないようにする
+  function scoreTier(score){return criticalityTier(Math.round(score))}
   // 水準の呼び方と判定基準は company-shares.json の levels が正本。日本語は label / rule、
   // 英語・簡体中国語は i18n に持つ（言語ごとの文言を JS 側に二重で持たない）。
   function shareLevel(level){return companyShares.levels.find(function(item){return item.level===level})}
@@ -1394,7 +1396,7 @@ button[aria-pressed="true"]{color:var(--text);border-color:var(--text);backgroun
     var meta=flowElementMeta[language][element];
     return'<span class="re-cr-element re-cr-element-head"><i aria-hidden="true" style="background:'+colors[element]+'"></i>'+esc(meta?meta.symbol:tagLabel(element))+'</span>'+(meta&&meta.name?'<span class="re-cr-el-name">'+esc(meta.name)+'</span>':'')
   }
-  function crBadge(score){return score===null?'—':'<span class="re-criticality re-criticality-'+criticalityTier(Math.round(score))+' re-criticality-legend">'+Math.round(score)+'</span>'}
+  function crBadge(score){return score===null?'—':'<span class="re-criticality re-criticality-'+scoreTier(score)+' re-criticality-legend">'+Math.round(score)+'</span>'}
   function crPoints(){if(!criticalityCache)criticalityCache=criticalityPoints();return criticalityCache}
   function crSelected(){return crPoints().find(function(p){return crKey(p)===criticalState.key})}
   function crSorted(sort){return crPoints().filter(function(p){return p.score!==null}).slice().sort(function(a,b){return(sort==='down'?b.downstream-a.downstream:sort==='share'?b.level-a.level:b.score-a.score)||b.score-a.score||b.downstream-a.downstream||crKey(a).localeCompare(crKey(b))})}
@@ -1443,7 +1445,7 @@ button[aria-pressed="true"]{color:var(--text);border-color:var(--text);backgroun
     return'<button type="button" class="re-cr-rank" data-cr-key="'+esc(crKey(point))+'" aria-pressed="'+(criticalState.key===crKey(point))+'">'+
       '<span>'+(index+1)+'. '+crElement(point.element)+' '+esc(subLabel(point.node))+'</span>'+crBadge(point.score)+
       '<small>'+esc(crText('downstream')+' '+point.downstream+' · '+criticalText('share')+' '+point.level)+'</small>'+
-      '<span class="re-cr-bar re-criticality re-criticality-'+criticalityTier(Math.round(point.score))+'"><i style="width:'+point.score+'%"></i></span></button>'
+      '<span class="re-cr-bar re-criticality re-criticality-'+scoreTier(point.score)+'"><i style="width:'+point.score+'%"></i></span></button>'
   }
   function crRankPaneHtml(ranked){
     var sorts=['score','down','share'].map(function(sort){
@@ -1603,8 +1605,10 @@ button[aria-pressed="true"]{color:var(--text);border-color:var(--text);backgroun
   function eqResolveFocus(P){return eqState.focus&&P.els.indexOf(eqState.focus)>=0?eqState.focus:null}
 
   // ---- 装備・システムのカード ----
+  // 段階ごとのか所数（高い段から）。工程チップと同じく、丸めた点数で段階を決める
+  function eqTierCounts(points){return criticalityBands.slice().reverse().map(function(band){return{band:band,count:points.filter(function(point){return scoreTier(point.score)===band.tier}).length}})}
   function eqTierBreakdown(points){
-    var tiers=criticalityBands.slice().reverse().map(function(band){return{band:band,count:points.filter(function(point){return criticalityTier(point.score)===band.tier}).length}}).filter(function(row){return row.count});
+    var tiers=eqTierCounts(points).filter(function(row){return row.count});
     return'<span class="re-eq-tiers"><span class="re-eq-tier-bar">'+tiers.map(function(row){return'<i class="re-criticality re-criticality-'+row.band.tier+'" style="flex-grow:'+row.count+'"></i>'}).join('')+'</span><span class="re-eq-tier-counts">'+tiers.map(function(row){return'<span class="re-criticality re-criticality-'+row.band.tier+'" title="'+esc(eqText('tierTitle',{label:row.band.label,count:row.count}))+'">'+row.count+'</span>'}).join('')+'</span></span>'
   }
   function eqElementTags(list){return list.map(function(element){return'<span class="re-tag" style="color:'+colors[element]+';border-color:'+colors[element]+'">'+esc(tagLabel(element))+'</span>'}).join('')}
@@ -1632,7 +1636,7 @@ button[aria-pressed="true"]{color:var(--text);border-color:var(--text);backgroun
     }
     var item=entry.item,matchNode=focus&&item.els.has(focus);
     var chips=elements.filter(function(element){return item.els.has(element)}).map(function(element){
-      var point=criticalityPoint(item.id,element),score=point&&point.score!==null?Math.round(point.score):null,tier=score===null?1:criticalityTier(score);
+      var point=criticalityPoint(item.id,element),score=point&&point.score!==null?Math.round(point.score):null,tier=score===null?1:scoreTier(point.score);
       var count=point?point.companies.length:0;
       var title=eqText('chip',{down:point?point.downstream:0,level:point?point.level:'—'})+(point&&point.representative?'（'+companyText(point.representative,'name')+'）':'');
       return'<span class="re-eq-chip re-criticality re-criticality-'+tier+(focus&&element!==focus?' is-muted':'')+'" title="'+esc(title)+'"><i class="re-eq-dot" style="background:'+colors[element]+'"></i>'+esc(tagLabel(element)+' '+companyCount(count)+(score===null?'':' · '+score))+'</span>'

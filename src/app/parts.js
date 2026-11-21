@@ -5,6 +5,8 @@
 // クリティカル度の段。境界と表示ラベルはここだけで定義し、元素別フロー・マップ・凡例が共有する。
 var criticalityBands=[{tier:1,min:0,label:'0–29'},{tier:2,min:30,label:'30–49'},{tier:3,min:50,label:'50–69'},{tier:4,min:70,label:'70–100'}];
 function criticalityTier(score){var found=criticalityBands[0];criticalityBands.forEach(function(band){if(score>=band.min)found=band});return found.tier}
+// 画面に出す点数（整数に丸めた値）で色段階を決める。チップ・マトリックス・段階別の集計はすべてこれを使い、境界（49.75 → 50 など）で表示と集計が食い違わないようにする
+function scoreTier(score){return criticalityTier(Math.round(score))}
 // 水準の呼び方と判定基準は company-shares.json の levels が正本。日本語は label / rule、
 // 英語・簡体中国語は i18n に持つ（言語ごとの文言を JS 側に二重で持たない）。
 function shareLevel(level){return companyShares.levels.find(function(item){return item.level===level})}

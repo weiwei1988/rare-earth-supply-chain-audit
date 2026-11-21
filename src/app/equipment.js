@@ -75,8 +75,10 @@ function eqResolveTarget(P){
 function eqResolveFocus(P){return eqState.focus&&P.els.indexOf(eqState.focus)>=0?eqState.focus:null}
 
 // ---- 装備・システムのカード ----
+// 段階ごとのか所数（高い段から）。工程チップと同じく、丸めた点数で段階を決める
+function eqTierCounts(points){return criticalityBands.slice().reverse().map(function(band){return{band:band,count:points.filter(function(point){return scoreTier(point.score)===band.tier}).length}})}
 function eqTierBreakdown(points){
-  var tiers=criticalityBands.slice().reverse().map(function(band){return{band:band,count:points.filter(function(point){return criticalityTier(point.score)===band.tier}).length}}).filter(function(row){return row.count});
+  var tiers=eqTierCounts(points).filter(function(row){return row.count});
   return'<span class="re-eq-tiers"><span class="re-eq-tier-bar">'+tiers.map(function(row){return'<i class="re-criticality re-criticality-'+row.band.tier+'" style="flex-grow:'+row.count+'"></i>'}).join('')+'</span><span class="re-eq-tier-counts">'+tiers.map(function(row){return'<span class="re-criticality re-criticality-'+row.band.tier+'" title="'+esc(eqText('tierTitle',{label:row.band.label,count:row.count}))+'">'+row.count+'</span>'}).join('')+'</span></span>'
 }
 function eqElementTags(list){return list.map(function(element){return'<span class="re-tag" style="color:'+colors[element]+';border-color:'+colors[element]+'">'+esc(tagLabel(element))+'</span>'}).join('')}
@@ -104,7 +106,7 @@ function eqNodeHtml(entry,focus,targetId){
   }
   var item=entry.item,matchNode=focus&&item.els.has(focus);
   var chips=elements.filter(function(element){return item.els.has(element)}).map(function(element){
-    var point=criticalityPoint(item.id,element),score=point&&point.score!==null?Math.round(point.score):null,tier=score===null?1:criticalityTier(score);
+    var point=criticalityPoint(item.id,element),score=point&&point.score!==null?Math.round(point.score):null,tier=score===null?1:scoreTier(point.score);
     var count=point?point.companies.length:0;
     var title=eqText('chip',{down:point?point.downstream:0,level:point?point.level:'—'})+(point&&point.representative?'（'+companyText(point.representative,'name')+'）':'');
     return'<span class="re-eq-chip re-criticality re-criticality-'+tier+(focus&&element!==focus?' is-muted':'')+'" title="'+esc(title)+'"><i class="re-eq-dot" style="background:'+colors[element]+'"></i>'+esc(tagLabel(element)+' '+companyCount(count)+(score===null?'':' · '+score))+'</span>'

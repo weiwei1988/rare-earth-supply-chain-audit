@@ -62,4 +62,14 @@ test('装備からの逆算は共通モデルの経路と同じ工程・接続�
  }
  // 同じ工程の中の組み込み（永久磁石 → 回転子・アイソレータ）も道筋に入る
  assert.ok(s.eqPathModel('06_laser').links.some(l=>l.assembly&&l.from==='04_mag'&&l.to==='04_faraday_laser'&&l.element==='Sm'));
+ // 装備カードの段階別か所数は、工程チップに出す丸めた点数の段階と一致する（49.75 点は 50 点として 50–69 に入る）
+ assert.equal(s.scoreTier(49.75),s.scoreTier(50));assert.notEqual(s.scoreTier(49.4),s.scoreTier(50));
+ let boundary=0;
+ for(const eq of s.equipmentIds){
+  const points=s.eqPathPoints(eq),shown={};
+  for(const p of points){const tier=s.criticalityTier(Math.round(p.score));shown[tier]=(shown[tier]||0)+1;if(s.criticalityTier(p.score)!==tier)boundary++}
+  for(const row of s.eqTierCounts(points))assert.equal(row.count,shown[row.band.tier]||0,eq+'|'+row.band.label);
+ }
+ // 現行データには丸めで段階が変わる工程があり、この検査が実際に境界を通っている
+ assert.ok(boundary>0);
 });
