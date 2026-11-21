@@ -24,14 +24,14 @@ report.subcategories = dataset.subcategories.length;
 report.stages = dataset.stages.length;
 
 // --- 構造・公開データ ------------------------------------------------------
-check("6工程・52分類・244社", dataset.stages.length === 6 && dataset.subcategories.length === 52 && dataset.companies.length === 244);
+check("6工程・52分類・243社", dataset.stages.length === 6 && dataset.subcategories.length === 52 && dataset.companies.length === 243);
 check(
   "工程名称を6工程構造へ更新",
   sameJson(dataset.stages.map((stage) => stage.label), ["海外の資源・分離", "素材", "材料", "部材", "モジュール・機器", "装備・システム"]),
 );
 check(
   "工程別の延べ企業数",
-  sameJson(Object.fromEntries([2, 3, 4, 5, 6].map((stage) => [stage, dataset.companies.filter((company) => company.stages.includes(stage)).length])), { 2: 9, 3: 26, 4: 47, 5: 81, 6: 130 }),
+  sameJson(Object.fromEntries([2, 3, 4, 5, 6].map((stage) => [stage, dataset.companies.filter((company) => company.stages.includes(stage)).length])), { 2: 9, 3: 26, 4: 47, 5: 81, 6: 129 }),
 );
 check(
   "列順が全52分類を工程ごとに一度ずつ指定",
@@ -68,7 +68,7 @@ check(
 const reviewed = dataset.companies.filter((company) => company.atla?.decision === "対象");
 check("人力確認済みの調達品目対象57社を維持", reviewed.length === 57);
 check("人力判定対象企業に希土類フラグを収録", reviewed.every((company) => company.tags.length && company.atla.rareEarthFlags));
-check("防衛装備庁調達実績フラグ63社", dataset.companies.filter((company) => company.atlaProcurement).length === 63);
+check("防衛装備庁調達実績フラグ66社", dataset.companies.filter((company) => company.atlaProcurement).length === 66);
 const forbiddenPublicProvenance = ["row", "sourceUrl", "userReason", "spreadsheetId", "sheetId"];
 check(
   "公開企業データに内部Spreadsheet識別子がない",

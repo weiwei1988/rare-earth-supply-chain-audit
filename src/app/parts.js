@@ -5,6 +5,8 @@
 // クリティカル度の段。境界と表示ラベルはここだけで定義し、元素別フロー・マップ・凡例が共有する。
 var criticalityBands=[{tier:1,min:0,label:'0–29'},{tier:2,min:30,label:'30–49'},{tier:3,min:50,label:'50–69'},{tier:4,min:70,label:'70–100'}];
 function criticalityTier(score){var found=criticalityBands[0];criticalityBands.forEach(function(band){if(score>=band.min)found=band});return found.tier}
+// 画面に出す点数（整数に丸めた値）で色段階を決める。チップ・マトリックス・段階別の集計はすべてこれを使い、境界（49.75 → 50 など）で表示と集計が食い違わないようにする
+function scoreTier(score){return criticalityTier(Math.round(score))}
 // 水準の呼び方と判定基準は company-shares.json の levels が正本。日本語は label / rule、
 // 英語・簡体中国語は i18n に持つ（言語ごとの文言を JS 側に二重で持たない）。
 function shareLevel(level){return companyShares.levels.find(function(item){return item.level===level})}
@@ -15,6 +17,10 @@ function colon(){return language==='en'?': ':'：'}
 function shareLevelSummary(level){var label=shareLevelText(level,'label');return language==='en'?'Level '+level+' ('+label+')':(language==='zh-CN'?'等级':'水準')+level+'（'+label+'）'}
 function criticalText(key){var labels={ja:{score:'クリティカル度',share:'シェア水準',formula:'クリティカル度＝100 × √［（下流の収録企業・事業単位数 ÷ 全元素・全採点対象の最大値）×（（シェア水準 ＋ 2）÷ 6）］。Stage 02〜05を採点し、同じ元素で起点から最終工程までつながる経路を集計します。下流企業は重複排除し、自カテゴリーを含めません。シェア水準は所属企業の最高値、未確認は水準1。市場シェアの実数や中国依存度・在庫・代替可能性を直接示す指標ではありません。',source:'出典（原文）'},en:{score:'Criticality',share:'Share level',formula:'Criticality = 100 × √[(downstream listed companies/business units ÷ maximum across all elements and scored categories) × ((share level + 2) ÷ 6)]. Stages 02–05 are scored on same-element paths from origin to final systems. Downstream companies are deduplicated; the current category is excluded. The highest member share level is used; unverified = level 1. This relative index does not directly measure actual market share, China dependency, inventories or substitutability.',source:'Source (original language)'},'zh-CN':{score:'关键度',share:'份额等级',formula:'关键度＝100 × √［（下游收录企业及业务单位数 ÷ 全元素全部评分分类的最大值）×（（份额等级 ＋ 2）÷ 6）］。评分范围为Stage 02～05，仅统计同一元素从起点连至最终系统的路径。下游企业去重，不含本分类；采用成员企业最高份额等级，未确认为等级1。本相对指标不直接衡量实际市场份额、中国依赖、库存或可替代性。',source:'来源（原文）'}};return labels[language][key]}
 function criticalDefinition(){return language==='en'?'Criticality: an indicator of how widely a shutdown at a process could affect the downstream supply chain.':language==='zh-CN'?'关键度：衡量某一工序停运后，会对供应链下游产生多大范围影响的指标。':'クリティカル度：その工程が止まるとサプライチェーンの下流にどれだけ広範な影響が出るのか？を表す指標'}
+// クリティカル度の定義・計算方法・色段階の凡例。元素別フローと「装備からの逆算」で共用する
+function criticalityLegendHtml(){
+  return '<p><strong>'+esc(criticalDefinition())+'</strong></p><p>'+esc(criticalText('formula'))+'</p><p>'+esc(criticalText('score'))+esc(colon())+criticalityBands.map(function(band){return'<span class="re-criticality re-criticality-'+band.tier+' re-criticality-legend">'+band.label+'</span>'}).join(' ')+'</p>'
+}
 function shareCriteriaHtml(){
   var title=language==='en'?'Share-level assessment criteria':language==='zh-CN'?'份额等级判定标准':'シェア水準の判定基準';
   var note=language==='en'?'Numerical market shares take precedence; leadership or sole-supplier claims are used only when figures are unavailable. Technical performance alone is not market share. Assessments apply to the specified product, category and element; missing assessments default to level 1. At overlapping boundaries, the higher level takes precedence.':language==='zh-CN'?'优先采用数值份额，仅在缺少数值时使用第一或唯一供应商等表述；技术性能不等于市场份额。判定限定于对应产品、分类及元素，缺失判定按等级1处理。边界重叠时优先采用较高等级。':'数値のシェアを優先し、「首位」「唯一」等の表現は数値がない場合のみ用います。性能・技術面の記載はシェアとみなしません。判定は対象製品・サブカテゴリ・元素に限定し、判定がない場合は水準1とします。境界が重なる場合は上位水準を優先します。';
@@ -27,7 +33,7 @@ var mapReturnPositions={};
 function rememberMapPosition(){mapReturnPositions[activeView]={top:window.scrollY,left:window.scrollX,rankTop:root.querySelector('.re-cr-ranking')?root.querySelector('.re-cr-ranking').scrollTop:0}}
 function mapReturnLabel(){return language==='en'?'Back to overview':language==='zh-CN'?'返回全貌':'全体像に戻る'}
 function mapReturnButton(){return'<button type="button" class="re-return-map" data-return-map>'+esc(mapReturnLabel())+'</button>'}
-function returnToMap(){var position=mapReturnPositions[activeView];if(position){var rank=root.querySelector('.re-cr-ranking');if(rank)rank.scrollTop=position.rankTop;window.scrollTo({top:position.top,left:position.left,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})}else{var target=root.querySelector(activeView==='criticality'?'.re-cr-panes':activeView==='element-flow'?'#re-element-flow-frame':'#re-flow-viewport');if(target)target.scrollIntoView({behavior:'smooth',block:'start'})}}
+function returnToMap(){var position=mapReturnPositions[activeView];if(position){var rank=root.querySelector('.re-cr-ranking');if(rank)rank.scrollTop=position.rankTop;window.scrollTo({top:position.top,left:position.left,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})}else{var target=root.querySelector(activeView==='criticality'?'.re-cr-panes':activeView==='element-flow'?'#re-element-flow-frame':activeView==='equipment'?'#re-eq-path-panel':'#re-flow-viewport');if(target)target.scrollIntoView({behavior:'smooth',block:'start'})}}
 function shareRows(company,scope){
   var node=scope&&scope.node?scope.node:null;
   var els=scope&&scope.elements&&scope.elements.length?scope.elements:allElements;
