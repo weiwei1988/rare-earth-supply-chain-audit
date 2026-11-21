@@ -42,3 +42,24 @@ test('シェア根拠は呼び出し元が渡した条件だけで決まる（�
  assert.deepEqual(s.shareRows(company,{node:'04_faraday_tele',elements:['Y']}).map(r=>r.node+'|'+r.element),['04_faraday_tele|Y']);
  assert.equal(s.shareRows(company,{node:'04_faraday_tele',elements}).length,3);
 });
+test('装備からの逆算は共通モデルの経路と同じ工程・接続をたどり、3言語の文言がそろう',()=>{
+ const read=name=>JSON.parse(fs.readFileSync(new URL('../src/data/'+name+'.json',import.meta.url),'utf8'));
+ const element=()=>({innerHTML:'',textContent:'',insertAdjacentHTML(){},querySelectorAll(){return[]},querySelector(){return null},scrollIntoView(){}});
+ const root={querySelector(){return element()}};
+ const s={root,activeView:'overview',language:'ja',elements:['Y','DyTb','Sm','Sc'],data:read('companies'),allSubs:read('subcategories'),companyShares:read('company-shares'),stages:read('stages'),dependencyRows:read('dependency'),columnOrder:read('column-order'),companyText:(c,k)=>c[k],subText:(s,k)=>s[k],stageText:(s,k)=>s[k],tr:()=>'',colors:{Y:'green',DyTb:'purple',Sm:'orange',Sc:'blue'}};
+ vm.createContext(s);for(const file of ['text','supply-graph','model','parts','equipment'])vm.runInContext(fs.readFileSync(new URL('../src/app/'+file+'.js',import.meta.url),'utf8'),s);
+ // 文言の項目は3言語で同じ
+ const keys=Object.keys(s.eqLabels.ja).sort();for(const lang of ['en','zh-CN'])assert.deepEqual(Object.keys(s.eqLabels[lang]).sort(),keys,lang);
+ // 装備・システムは列順の STAGE 06 をすべて並べる
+ assert.deepEqual(s.equipmentIds,read('column-order')['6']);
+ for(const eq of s.equipmentIds){
+  const P=s.eqPathModel(eq);
+  for(const el of P.els){
+   const path=s.elementPath(el).path;assert.ok(path.has(eq),eq+'|'+el);
+   // 道筋の工程は、その元素の経路上にあり、クリティカル度が付く
+   for(const item of P.nodes.filter(n=>n.els.has(el))){assert.ok(path.has(item.id));assert.notEqual(s.criticalityPoint(item.id,el).score,null,item.id+'|'+el)}
+  }
+ }
+ // 同じ工程の中の組み込み（永久磁石 → 回転子・アイソレータ）も道筋に入る
+ assert.ok(s.eqPathModel('06_laser').links.some(l=>l.assembly&&l.from==='04_mag'&&l.to==='04_faraday_laser'&&l.element==='Sm'));
+});
