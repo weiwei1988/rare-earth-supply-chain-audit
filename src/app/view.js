@@ -12,11 +12,12 @@ function setView(view){
   root.querySelector("#re-view-overview").hidden=view!=="overview";
   root.querySelector("#re-view-element-flow").hidden=view!=="element-flow";
   root.querySelector('#re-view-criticality').hidden=view!=='criticality';
+  root.querySelector('#re-view-equipment').hidden=view!=='equipment';
   // 表示に切り替えた側をここで描き直す。clientWidth の読み出しでレイアウトが確定するため、
   // requestAnimationFrame を待たずに描いてよい。待つと、背面タブなどで rAF が止まっている間
   // 図が空のままになる。
   if(view==="overview"){if(flowLayoutStale)renderFlow()}
-  else refresh(view==='criticality'?'criticality':'flow')
+  else refresh(view==='criticality'?'criticality':view==='equipment'?'equipment':'flow')
 }
 function applyStaticTranslations(){
   root.querySelectorAll('[data-return-map]').forEach(function(button){button.textContent=mapReturnLabel()});
@@ -27,6 +28,7 @@ function applyStaticTranslations(){
   root.querySelector("#re-tab-overview").textContent=tr("overview");
   root.querySelector("#re-tab-element-flow").textContent=tr("elementFlow");
   root.querySelector('#re-tab-criticality').textContent=crText('tab');
+  root.querySelector('#re-tab-equipment').textContent=eqText('tab');
   root.querySelector('[data-element="all"]').textContent=tr("showAll");
   root.querySelector(".re-overview-element-controls").setAttribute("aria-label",tr("elementSelect"));
   root.querySelector(".re-element-flow-controls").setAttribute("aria-label",tr("elementSelectOne"));
@@ -40,7 +42,7 @@ function applyStaticTranslations(){
   root.querySelector("#re-search-help").textContent=tr("searchHelp");
   root.querySelector(".re-element-flow-lead").textContent=tr("flowLead");
   root.querySelector("#re-flow-to-overview").textContent=tr("viewOverview");
-  root.querySelector(".re-element-flow-note > div").innerHTML=esc(tr("flowNote"))+'<p><strong>'+esc(criticalDefinition())+'</strong></p><p>'+esc(criticalText('formula'))+'</p><p>'+esc(criticalText('score'))+esc(colon())+criticalityBands.map(function(band){return'<span class="re-criticality re-criticality-'+band.tier+' re-criticality-legend">'+band.label+'</span>'}).join(' ')+'</p><div class="re-element-flow-stats" id="re-element-flow-stats"></div>';
+  root.querySelector(".re-element-flow-note > div").innerHTML=esc(tr("flowNote"))+criticalityLegendHtml()+'<div class="re-element-flow-stats" id="re-element-flow-stats"></div>';
   root.querySelector("#re-language-switch").setAttribute("aria-label",tr("language"));
   root.querySelector(".re-element-flow-note > div").insertAdjacentHTML('beforeend',shareCriteriaHtml());
   root.querySelectorAll("[data-language]").forEach(function(button){button.setAttribute("aria-pressed",String(button.dataset.language===language))});
@@ -62,6 +64,8 @@ function setLanguage(next){
 //   "all"      … 両タブ
 function refresh(scope){
   if((scope==='criticality'||scope==='all')&&activeView==='criticality')renderCriticality();
+  // 装備からの逆算は、表示中のときだけ描く（非表示のまま描くと帯の位置を採寸できない）
+  if((scope==='equipment'||scope==='all')&&activeView==='equipment')renderEquipment();
   if(scope==="overview"||scope==="all"){
     renderOverviewElementControls();
     root.querySelectorAll("[data-element]").forEach(function(btn){

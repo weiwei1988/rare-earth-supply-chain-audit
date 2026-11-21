@@ -6,14 +6,29 @@
 function shareEntry(companyId,nodeId,element){
   return companyShares.entries.filter(function(e){return e.company===companyId&&e.node===nodeId&&(!element||!e.els||!e.els.length||e.els.indexOf(element)>=0)}).sort(function(a,b){return b.level-a.level})[0]||{company:companyId,node:nodeId,level:1};
 }
+// 元素ごとの経路：素材（STAGE 02）から到達でき、装備・システム（STAGE 06）までつながる工程。
+// クリティカル度と「装備からの逆算」で共用する（データは起動後に変わらないため元素ごとに保持する）
+var elementPathCache={};
+function elementPath(element){
+  if(elementPathCache[element])return elementPathCache[element];
+  var graph=elementSupplyGraph(element),active=graph.nodes;
+  function walk(start,reverse){return supplyGraphReachable(graph,start,reverse)}
+  var reachable=new Set();active.filter(function(s){return s.stage===2}).forEach(function(s){reachable.add(s.id);walk(s.id,false).forEach(function(id){reachable.add(id)})});
+  var finals=new Set(active.filter(function(s){return s.stage===6}).map(function(s){return s.id}));
+  var path=new Set(active.filter(function(s){return reachable.has(s.id)&&(finals.has(s.id)||Array.from(walk(s.id,false)).some(function(id){return finals.has(id)}))}).map(function(s){return s.id}));
+  return elementPathCache[element]={graph:graph,path:path}
+}
+// 装備・システムが経路でつながる元素と、その元素で上流にある経路上の工程
+function equipmentElements(eqId){return elements.filter(function(element){return elementPath(element).path.has(eqId)})}
+function equipmentUpstream(eqId,element){
+  var info=elementPath(element);
+  return new Set(Array.from(supplyGraphReachable(info.graph,eqId,true)).filter(function(id){return info.path.has(id)}))
+}
 function criticalityPoints(){
   var points=[];
   elements.forEach(function(element){
-    var graph=elementSupplyGraph(element),active=graph.nodes;
+    var info=elementPath(element),graph=info.graph,active=graph.nodes,path=info.path;
     function walk(start,reverse){return supplyGraphReachable(graph,start,reverse)}
-    var reachable=new Set();active.filter(function(s){return s.stage===2}).forEach(function(s){reachable.add(s.id);walk(s.id,false).forEach(function(id){reachable.add(id)})});
-    var finals=new Set(active.filter(function(s){return s.stage===6}).map(function(s){return s.id}));
-    var path=new Set(active.filter(function(s){return reachable.has(s.id)&&(finals.has(s.id)||Array.from(walk(s.id,false)).some(function(id){return finals.has(id)}))}).map(function(s){return s.id}));
     active.filter(function(s){return s.stage<6}).forEach(function(s){
       var down=walk(s.id,false),companies=data.filter(function(c){return c.subs.some(function(id){return down.has(id)&&path.has(id)&&companyHasElement(c,id,element)})});
       var members=graph.members.get(s.id),level=1;

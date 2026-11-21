@@ -14,7 +14,7 @@ function crElementHead(element){
   var meta=flowElementMeta[language][element];
   return'<span class="re-cr-element re-cr-element-head"><i aria-hidden="true" style="background:'+colors[element]+'"></i>'+esc(meta?meta.symbol:tagLabel(element))+'</span>'+(meta&&meta.name?'<span class="re-cr-el-name">'+esc(meta.name)+'</span>':'')
 }
-function crBadge(score){return score===null?'—':'<span class="re-criticality re-criticality-'+criticalityTier(Math.round(score))+' re-criticality-legend">'+Math.round(score)+'</span>'}
+function crBadge(score){return score===null?'—':'<span class="re-criticality re-criticality-'+scoreTier(score)+' re-criticality-legend">'+Math.round(score)+'</span>'}
 function crPoints(){if(!criticalityCache)criticalityCache=criticalityPoints();return criticalityCache}
 function crSelected(){return crPoints().find(function(p){return crKey(p)===criticalState.key})}
 function crSorted(sort){return crPoints().filter(function(p){return p.score!==null}).slice().sort(function(a,b){return(sort==='down'?b.downstream-a.downstream:sort==='share'?b.level-a.level:b.score-a.score)||b.score-a.score||b.downstream-a.downstream||crKey(a).localeCompare(crKey(b))})}
@@ -63,7 +63,7 @@ function crRankRowHtml(point,index){
   return'<button type="button" class="re-cr-rank" data-cr-key="'+esc(crKey(point))+'" aria-pressed="'+(criticalState.key===crKey(point))+'">'+
     '<span>'+(index+1)+'. '+crElement(point.element)+' '+esc(subLabel(point.node))+'</span>'+crBadge(point.score)+
     '<small>'+esc(crText('downstream')+' '+point.downstream+' · '+criticalText('share')+' '+point.level)+'</small>'+
-    '<span class="re-cr-bar re-criticality re-criticality-'+criticalityTier(Math.round(point.score))+'"><i style="width:'+point.score+'%"></i></span></button>'
+    '<span class="re-cr-bar re-criticality re-criticality-'+scoreTier(point.score)+'"><i style="width:'+point.score+'%"></i></span></button>'
 }
 function crRankPaneHtml(ranked){
   var sorts=['score','down','share'].map(function(sort){

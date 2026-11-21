@@ -1746,17 +1746,6 @@
       "chn": "Company-specific rare-earth BOM and exposure to China not verified.",
       "note": "Consolidation: existing candidate (not subject to parent-company replacement) / Revenue basis: consolidated revenue published by the company"
     },
-    "stage05-integrated-31": {
-      "name": "Orbital Lasers",
-      "src": "https://www.orbitallasers.com/technology/ ／ https://www.orbitallasers.com/about/",
-      "own": "Privately held / Securities code: none",
-      "rev": "Under JPY 1 billion (estimate, as of 2026).",
-      "prod": "Spaceborne high-power lasers, satellite lidar, laser debris removal / Satellite lidar, laser-based space-debris-removal satellites, dedicated satellite buses",
-      "pos": "Market share and position not verified in public sources.",
-      "def": "Dual-use technology explicitly developed for both satellite lidar, debris control, Earth observation, and national security. / Directly linked to Earth observation, space domain awareness, space-debris control, and national security.",
-      "chn": "Company-specific rare-earth BOM and exposure to China not verified.",
-      "note": "Consolidation: existing candidate (not subject to parent-company replacement) / Revenue basis: estimate for an early-stage unlisted space startup"
-    },
     "stage05-integrated-32": {
       "name": "KYB Corporation",
       "src": "https://www.kyb.co.jp/company/information.html",
@@ -2668,7 +2657,7 @@
       "pos": "One of the two companies carrying out Japan's research prototypes of high-power laser weapons",
       "def": "ATLA research prototype. Said to be able to target drones about 1.2 km away",
       "chn": "The light-source type and suppliers are not disclosed. If kW-class fiber lasers are the source, it touches Tb and Sm through output-side optical isolators (TGG or similar rotators and magnets; typical configuration). Drive motors of the beam director (NdFeB magnets) may also involve Dy and Tb.",
-      "note": "2026-11-21: Newly added through research on laser systems. Kept separate from the MHI cards for energy and aero engines because the businesses differ.",
+      "note": "2026-11-21: Newly added through research on laser systems. Kept separate from the MHI cards for energy and aero engines because the businesses differ. / 2026-11-21: Marked as having ATLA procurement records because the ATLA research-prototype contract (vehicle-mounted high-power laser demonstrator) was confirmed.",
       "src": "https://www.mod.go.jp/atla/research/ats2024/pdf_oral_matl/1113_1330_ss17.pdf ／ https://www.mod.go.jp/atla/research/ats2024/pdf_exhi_pos/p-24.pdf ／ https://www.mhi.com/jp/news/18042503.html"
     },
     "laser-khi-defense": {
@@ -2679,19 +2668,8 @@
       "pos": "One of the two companies carrying out Japan's research prototypes of high-power laser weapons",
       "def": "ATLA research prototype, at the stage of shipboard testing",
       "chn": "It touches Tb and Sm through the output-side optical isolators of its fiber lasers (TGG, TSAG or similar rotators and magnets; typical configuration). The supplier of the domestic fiber lasers is not disclosed.",
-      "note": "2026-11-21: Newly added through research on laser systems. Kept separate from the KHI jet-engine card because the businesses differ. The shipboard installation comes from overseas reports; no official announcement was confirmed.",
+      "note": "2026-11-21: Newly added through research on laser systems. Kept separate from the KHI jet-engine card because the businesses differ. The shipboard installation comes from overseas reports; no official announcement was confirmed. / 2026-11-21: Marked as having ATLA procurement records because the ATLA research-prototype contract (electrically driven high-power laser system) was confirmed.",
       "src": "https://www.mod.go.jp/atla/research/ats2024/pdf_oral_matl/1113_1330_ss17.pdf ／ https://armyrecognition.com/news/navy-news/2025/exclusive-japan-installs-100kw-laser-weapon-on-japanese-navy-js-asuka-warship-ahead-of-sea-trials"
-    },
-    "space-orbital-lasers": {
-      "name": "Orbital Lasers",
-      "own": "Unlisted. Established in January 2024 as an in-house startup of SKY Perfect JSAT",
-      "rev": "Not confirmed",
-      "prod": "Satellite-mounted lasers: payloads that stop debris from tumbling (DTB) and debris removal (ADR, planned from FY2029), using laser ablation with a solid-state pulse laser co-developed with RIKEN; and Earth observation with satellite-borne lidar",
-      "pos": "Apparently the only Japanese company commercialising laser-based debris handling. Share does not apply",
-      "def": "Won a laser-ranging contract (November 2025, about ¥2.05 billion) in the Ministry of Defense research on monitoring and protecting Japanese satellites in orbit",
-      "chn": "The medium of the solid-state pulse laser is not disclosed. If it is the usual Nd:YAG, it touches Y, and it touches Tb and Sm through the rotators and magnets of optical isolators (typical configuration).",
-      "note": "2026-11-21: Newly added through research on laser systems. Placed under satellites & spacecraft because the lasers are carried on satellites.",
-      "src": "https://www.mod.go.jp/j/press/news/2026/03/06c.html ／ https://news.mynavi.jp/techplus/article/20240131-2873557/ ／ https://www.watch.impress.co.jp/docs/news/1565176.html"
     },
     "laser-vtec": {
       "name": "V Technology",
@@ -2824,6 +2802,17 @@
       "chn": "Oscillators are sourced externally. It touches Tb and Sm through the output-side isolators (TGG or similar rotators and magnets) of the oscillators it builds in (typical configuration). Oscillator suppliers are not disclosed.",
       "note": "2026-11-21: Newly added through research on industrial lasers. The current configuration of its fiber laser machines needs checking.",
       "src": "https://koike-japan.com/site/koike/get/params_E449791033_Dattachment/289468/FIBERTEX-Zero1.pdf"
+    },
+    "space-orbital-lasers": {
+      "name": "Orbital Lasers",
+      "own": "Unlisted. Established in January 2024 as an in-house startup of SKY Perfect JSAT",
+      "rev": "Not confirmed",
+      "prod": "Satellite-mounted lasers: payloads that stop debris from tumbling (DTB) and debris removal (ADR, planned from FY2029), using laser ablation with a solid-state pulse laser co-developed with RIKEN; and Earth observation with satellite-borne lidar",
+      "pos": "Apparently the only Japanese company commercialising laser-based debris handling. Share does not apply",
+      "def": "Won a laser-ranging contract (November 2025, about ¥2.05 billion) in the Ministry of Defense research on monitoring and protecting Japanese satellites in orbit",
+      "chn": "The medium of the solid-state pulse laser is not disclosed. If it is the usual Nd:YAG, it touches Y, and it touches Tb and Sm through the rotators and magnets of optical isolators (typical configuration).",
+      "note": "2026-11-21: Newly added through research on laser systems. Placed under satellites & spacecraft because the lasers are carried on satellites. / 2026-11-21: Marked as having ATLA procurement records because the Ministry of Defense research contract (laser ranging, November 2025) was confirmed. The older card for the same company (stage05-integrated-31) was removed in favour of this one.",
+      "src": "https://www.mod.go.jp/j/press/news/2026/03/06c.html ／ https://news.mynavi.jp/techplus/article/20240131-2873557/ ／ https://www.watch.impress.co.jp/docs/news/1565176.html"
     }
   },
   "stages": {

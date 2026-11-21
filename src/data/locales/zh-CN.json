@@ -980,17 +980,6 @@
       "src": "https://www.tamron.com/jp/technology/optics/ ／ https://www.tamron.com/jp/company/company_profile.html",
       "note": "合并处理：原有候选（不属于母公司替换对象） / 营收依据：公司公布的合并营业收入"
     },
-    "stage05-integrated-31": {
-      "name": "Orbital Lasers",
-      "own": "非上市公司 / 证券代码：无",
-      "rev": "不足10亿日元（估算，截至2026年）",
-      "prod": "航天搭载用高功率激光、卫星激光雷达、激光碎片清除 / 卫星激光雷达、激光式航天碎片清除卫星、专用卫星平台",
-      "pos": "未能通过公开信息确认市场份额和行业地位。",
-      "def": "明确面向卫星激光雷达、碎片控制、对地观测和安全保障双方展开的军民两用技术。/ 直接连接到对地观测、空间态势感知、空间碎片控制和安全保障。",
-      "chn": "该公司自身的稀土用量构成（BOM）和对华依赖程度尚未确认。",
-      "src": "https://www.orbitallasers.com/technology/ ／ https://www.orbitallasers.com/about/",
-      "note": "合并处理：原有候选（不属于母公司替换对象） / 营收依据：按创业初期的非上市航天初创企业估算"
-    },
     "stage05-integrated-32": {
       "name": "KYB Corporation（カヤバ（KYB））",
       "own": "上市公司 / 本公司证券代码：7242",
@@ -2668,7 +2657,7 @@
       "pos": "承担日本高功率激光武器研究试制的两家企业之一",
       "def": "防卫装备厅研究试制。据称可瞄准约1.2km外的无人机",
       "chn": "光源种类与采购来源未公开。若以kW级光纤激光为光源，经输出端光隔离器（TGG等旋转器与磁体）涉及Tb、Sm（一般构成）。光束指向装置的驱动电机（NdFeB磁体）也可能涉及Dy、Tb。",
-      "note": "2026-11-21：在激光装备调查中新收录。与能源・航空发动机的三菱重工业务不同，另设卡片。",
+      "note": "2026-11-21：在激光装备调查中新收录。与能源・航空发动机的三菱重工业务不同，另设卡片。 ／ 2026-11-21：已确认防卫装备厅研究试制（车载高功率激光演示装置）合同，因此标注“有防卫装备厅采购实绩”。",
       "src": "https://www.mod.go.jp/atla/research/ats2024/pdf_oral_matl/1113_1330_ss17.pdf ／ https://www.mod.go.jp/atla/research/ats2024/pdf_exhi_pos/p-24.pdf ／ https://www.mhi.com/jp/news/18042503.html"
     },
     "laser-khi-defense": {
@@ -2679,19 +2668,8 @@
       "pos": "承担日本高功率激光武器研究试制的两家企业之一",
       "def": "防卫装备厅研究试制。处于舰载试验阶段",
       "chn": "经光纤激光输出端的光隔离器（TGG・TSAG等旋转器与磁体）涉及Tb、Sm（一般构成）。国产光纤激光的供应方未公开。",
-      "note": "2026-11-21：在激光装备调查中新收录。与喷气发动机的川崎重工业务不同，另设卡片。舰载情况来自海外报道，未确认官方发布。",
+      "note": "2026-11-21：在激光装备调查中新收录。与喷气发动机的川崎重工业务不同，另设卡片。舰载情况来自海外报道，未确认官方发布。 ／ 2026-11-21：已确认防卫装备厅研究试制（电驱动高功率激光系统）合同，因此标注“有防卫装备厅采购实绩”。",
       "src": "https://www.mod.go.jp/atla/research/ats2024/pdf_oral_matl/1113_1330_ss17.pdf ／ https://armyrecognition.com/news/navy-news/2025/exclusive-japan-installs-100kw-laser-weapon-on-japanese-navy-js-asuka-warship-ahead-of-sea-trials"
-    },
-    "space-orbital-lasers": {
-      "name": "Orbital Lasers（オービタルレーザーズ）",
-      "own": "非上市。2024年1月作为SKY Perfect JSAT的内部创业公司成立",
-      "rev": "未能确认",
-      "prod": "卫星搭载激光：使碎片停止旋转的载荷（DTB）与碎片清除（ADR，计划2029财年开始），采用与理研共同开发的固体脉冲激光的激光烧蚀方式；以及卫星搭载激光雷达的地表观测",
-      "pos": "似为日本唯一将激光式碎片处理商业化的企业。份额不适用",
-      "def": "在防卫省“轨道上本国卫星的监视・防护技术研究”中承接激光测距（2025年11月，约20.5亿日元）",
-      "chn": "固体脉冲激光的介质未公开。若为一般的Nd:YAG则涉及Y，并经光隔离器的旋转器与磁体涉及Tb、Sm（一般构成）。",
-      "note": "2026-11-21：在激光装备调查中新收录。因激光搭载于卫星，归入“卫星・航天器”。",
-      "src": "https://www.mod.go.jp/j/press/news/2026/03/06c.html ／ https://news.mynavi.jp/techplus/article/20240131-2873557/ ／ https://www.watch.impress.co.jp/docs/news/1565176.html"
     },
     "laser-vtec": {
       "name": "V Technology（ブイ・テクノロジー）",
@@ -2824,6 +2802,17 @@
       "chn": "振荡器从外部采购。经所装振荡器输出端的隔离器（TGG等旋转器与磁体）涉及Tb、Sm（一般构成）。振荡器采购来源未公开。",
       "note": "2026-11-21：在工业激光调查中新收录。光纤激光机的现行构成需确认。",
       "src": "https://koike-japan.com/site/koike/get/params_E449791033_Dattachment/289468/FIBERTEX-Zero1.pdf"
+    },
+    "space-orbital-lasers": {
+      "name": "Orbital Lasers（オービタルレーザーズ）",
+      "own": "非上市。2024年1月作为SKY Perfect JSAT的内部创业公司成立",
+      "rev": "未能确认",
+      "prod": "卫星搭载激光：使碎片停止旋转的载荷（DTB）与碎片清除（ADR，计划2029财年开始），采用与理研共同开发的固体脉冲激光的激光烧蚀方式；以及卫星搭载激光雷达的地表观测",
+      "pos": "似为日本唯一将激光式碎片处理商业化的企业。份额不适用",
+      "def": "在防卫省“轨道上本国卫星的监视・防护技术研究”中承接激光测距（2025年11月，约20.5亿日元）",
+      "chn": "固体脉冲激光的介质未公开。若为一般的Nd:YAG则涉及Y，并经光隔离器的旋转器与磁体涉及Tb、Sm（一般构成）。",
+      "note": "2026-11-21：在激光装备调查中新收录。因激光搭载于卫星，归入“卫星・航天器”。 ／ 2026-11-21：已确认防卫省研究合同（激光测距，2025年11月），因此标注“有防卫装备厅采购实绩”。同一公司的旧卡片（stage05-integrated-31）已统一为本卡片并删除。",
+      "src": "https://www.mod.go.jp/j/press/news/2026/03/06c.html ／ https://news.mynavi.jp/techplus/article/20240131-2873557/ ／ https://www.watch.impress.co.jp/docs/news/1565176.html"
     }
   },
   "stages": {
