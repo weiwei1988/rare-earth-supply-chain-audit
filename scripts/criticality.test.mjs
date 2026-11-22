@@ -20,7 +20,7 @@ test('production matrix and ranking render in all locales with shared flow score
  // 工程別の内訳は下流企業数と同じ集合から作る（同じ工程の中の組み込みの先にいる企業も漏らさない）
  for(const p of s.crPoints().filter(p=>p.onPath)){const ids=new Set(p.downstreamByStage.flatMap(r=>r.companies.map(c=>c.id)));assert.equal(ids.size,p.downstream,p.node+'|'+p.element);}
  for(const element of ['DyTb','Sm']){const mag=s.criticalityPoint('04_mag',element);assert.ok(mag.downstreamByStage.some(r=>r.stage===4&&r.companies.length>0),'04_mag '+element);}
- assert.equal(s.crPoints().length,69);assert.equal(s.criticalityPoint('02_compound','Y').score,s.crPoints().find(p=>p.node==='02_compound'&&p.element==='Y').score);
+ assert.equal(s.crPoints().length,68);assert.equal(s.criticalityPoint('02_compound','Y').score,s.crPoints().find(p=>p.node==='02_compound'&&p.element==='Y').score);
 });
 test('シェア根拠は呼び出し元が渡した条件だけで決まる（別画面の選択が混ざらない）',()=>{
  const read=name=>JSON.parse(fs.readFileSync(new URL('../src/data/'+name+'.json',import.meta.url),'utf8'));
@@ -64,12 +64,13 @@ test('装備からの逆算は共通モデルの経路と同じ工程・接続�
  assert.ok(s.eqPathModel('06_laser').links.some(l=>l.assembly&&l.from==='04_mag'&&l.to==='04_faraday_laser'&&l.element==='Sm'));
  // 装備カードの段階別か所数は、工程チップに出す丸めた点数の段階と一致する（49.75 点は 50 点として 50–69 に入る）
  assert.equal(s.scoreTier(49.75),s.scoreTier(50));assert.notEqual(s.scoreTier(49.4),s.scoreTier(50));
- let boundary=0;
  for(const eq of s.equipmentIds){
   const points=s.eqPathPoints(eq),shown={};
-  for(const p of points){const tier=s.criticalityTier(Math.round(p.score));shown[tier]=(shown[tier]||0)+1;if(s.criticalityTier(p.score)!==tier)boundary++}
+  for(const p of points){const tier=s.criticalityTier(Math.round(p.score));shown[tier]=(shown[tier]||0)+1}
   for(const row of s.eqTierCounts(points))assert.equal(row.count,shown[row.band.tier]||0,eq+'|'+row.band.label);
  }
- // 現行データには丸めで段階が変わる工程があり、この検査が実際に境界を通っている
- assert.ok(boundary>0);
+ // 境界の点数（丸めると段階が上がるもの）でも、集計は表示と同じ段階に入る。データに左右されないよう、点数を直接与えて確かめる
+ const edge=s.eqTierCounts([{score:49.75},{score:49.4},{score:69.6},{score:29.5}]);
+ const countOf=min=>edge.find(row=>row.band.min===min).count;
+ assert.equal(countOf(70),1);assert.equal(countOf(50),1);assert.equal(countOf(30),2);assert.equal(countOf(0),0);
 });

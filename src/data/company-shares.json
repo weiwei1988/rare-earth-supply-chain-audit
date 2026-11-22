@@ -2562,23 +2562,23 @@
     "DyTb"
    ],
    "product": "波動歯車減速機・減速機一体型 AC サーボアクチュエータ",
-   "level": 4,
-   "share": "小型精密減速機で世界シェア首位とされ、有価証券報告書も「世界市場で高いシェア」と記載",
-   "scope": "世界",
+   "level": 1,
+   "share": "公開情報でシェアを確認できていない",
+   "scope": "",
    "basis": "公開情報",
    "source": "https://toyokeizai.net/articles/-/937653",
    "sourceLabel": "東洋経済オンライン「ハーモニック・ドライブ・システムズ」記事（2026年11月確認）",
-   "note": "補助出典：https://edinetdb.jp/company/E01712/text （有価証券報告書テキスト）。東洋経済の記事本文冒頭と写真キャプションで「小型精密減速機の分野で世界シェア首位」と明記。記事の目次に「世界シェア80～90％を維持」の見出しがあるが本文は有料部分のため数値自体は未確認。有価証券報告書（最新）の「当社グループの強みや特長」にも「世界市場で高いシェアを獲得しています」と記載がある。",
+   "note": "「小型精密減速機で世界シェア首位」（有価証券報告書にも「世界市場で高いシェア」）は減速機のシェアで、磁石を組み込んだモータではないため、この分類のシェアには使わない。アクチュエータ・モータとしてのシェアは公開情報で確認できない。",
    "i18n": {
     "en": {
      "product": "Strain-wave gear reducers and AC servo actuators with integrated reducers",
-     "share": "Said to hold the top world share in compact precision reducers; the annual securities report also states \"a high share of the world market\"",
-     "note": "Supplementary source: https://edinetdb.jp/company/E01712/text (annual securities report text). The Toyo Keizai article states \"the top world share in the field of compact precision reducers\" in its opening text and photo caption. Its table of contents carries the headline \"maintains an 80–90% world share\", but the body is behind a paywall so the figure itself is unverified. The latest annual securities report also states under \"Group strengths and characteristics\" that it \"has gained a high share of the world market\"."
+     "share": "No share could be confirmed from public information",
+     "note": "The claim of the top global share in small precision reducers (the securities report also cites a high global share) concerns speed reducers, not motors with built-in magnets, so it is not used for this category. No share as an actuator or motor could be confirmed from public information."
     },
     "zh-CN": {
      "product": "谐波齿轮减速机、减速机一体型AC伺服执行器",
-     "share": "据称在小型精密减速机领域居全球份额首位；有价证券报告书亦记载\"在全球市场拥有较高份额\"",
-     "note": "补充出处：https://edinetdb.jp/company/E01712/text （有价证券报告书文本）。东洋经济报道的正文开头与图片说明中明确写有\"在小型精密减速机领域居全球份额首位\"。报道目录中有\"维持全球份额80〜90%\"的标题，但正文为付费部分，数值本身未经确认。最新有价证券报告书的\"本集团的优势与特点\"中亦记载\"在全球市场获得了较高份额\"。"
+     "share": "未能从公开信息中确认份额",
+     "note": "“小型精密减速机全球份额第一”（有价证券报告书亦称“在全球市场占有较高份额”）是减速机的份额，并非内置磁体的电机，因此不用于本分类。作为执行器或电机的份额未能从公开信息中确认。"
     }
    }
   },
@@ -2708,17 +2708,17 @@
    "basis": "公開情報",
    "source": "https://precision.nabtesco.com/products/",
    "sourceLabel": "ナブテスコ 精密減速機 製品ページ（2026年11月確認）",
-   "note": "同社が世界シェア約60%（自社推計）を公表しているのは中大型産業用ロボットの関節用途精密減速機で、この分類での製品（航空機フライトコントロール・アクチュエーション）のシェアではない。航空機側のシェアは有価証券報告書・業界資料でも確認できない",
+   "note": "同社が世界シェア約60%（自社推計）を公表しているのは中大型産業用ロボットの関節用途の精密減速機で、磁石を組み込んだモータではないため、この分類のシェアには使わない。航空機のフライトコントロール・アクチュエーションのシェアも公開情報では確認できない。",
    "i18n": {
     "en": {
      "product": "Precision reducers (RV series) and servo actuators",
      "share": "No share could be confirmed in public sources",
-     "note": "The roughly 60% world share the company publishes (its own estimate) is for precision reducers used in the joints of medium and large industrial robots, not for the product in this classification (aircraft flight control and actuation). No share on the aircraft side could be confirmed in the annual securities report or industry materials either."
+     "note": "The roughly 60% global share the company publishes (its own estimate) is for precision reducers used in the joints of medium and large industrial robots. These are not motors with built-in magnets, so the figure is not used for this category. No share in aircraft flight-control actuation could be confirmed from public information either."
     },
     "zh-CN": {
      "product": "精密减速机（RV系列）／伺服执行器",
      "share": "公开信息中无法确认份额",
-     "note": "该公司公布的全球份额约60%（自社推算）针对的是中大型工业机器人关节用精密减速机，并非本分类的产品（飞机飞行控制与作动）。航空侧的份额在有价证券报告书与行业资料中亦无法确认。"
+     "note": "该公司公布的全球份额约60%（自行估算）针对中大型工业机器人关节用精密减速机，并非内置磁体的电机，因此不用于本分类。飞机飞行控制作动系统的份额也未能从公开信息中确认。"
     }
    }
   },
@@ -2786,23 +2786,23 @@
     "DyTb"
    ],
    "product": "ワイパー・パワーウインドウなどの自動車電装モータ",
-   "level": 1,
-   "share": "公開情報でシェアを確認できていない",
-   "scope": "",
+   "level": 3,
+   "share": "自動車のルーフモータで世界首位、2025年度の販売数量約1,400万個・シェア36%（同社調べ）",
+   "scope": "ルーフモータ（自動車電装モータのうちの1品目）",
    "basis": "公開情報",
-   "source": "https://www.mitsuba.co.jp/jp/products/autoelectricalsystems.html",
-   "sourceLabel": "ミツバ 四輪電装製品ページ（2026年11月確認）",
-   "note": "モータ単独のシェアは公表されていない。",
+   "source": "https://newscast.jp/news/1628935",
+   "sourceLabel": "ミツバ プレスリリース「レアアースフリーモーター第2弾 ブラシレスルーフモーター」（2026年11月確認）",
+   "note": "同社の自動車電装モータの1品目での数値（自社調べ）。ワイパーモータ単独のシェアは公表されていない。",
    "i18n": {
     "en": {
      "product": "Automotive electrical motors such as wiper and power-window motors",
-     "share": "No share could be confirmed from public information",
-     "note": "No motor-specific share is published."
+     "share": "World leader in automotive roof motors, with about 14 million units and a 36% share in FY2025 (company research)",
+     "note": "A company-researched figure for one of its automotive electrical motor products. No share for wiper motors alone is published."
     },
     "zh-CN": {
      "product": "雨刮、电动车窗等汽车电装电机",
-     "share": "未能从公开信息中确认份额",
-     "note": "未公布电机单独的份额。"
+     "share": "汽车天窗电机全球第一，2025财年销量约1,400万个、份额36%（公司调查）",
+     "note": "为该公司汽车电装电机中一个品类的数据（公司调查）。未公布雨刮电机单独的份额。"
     }
    }
   },
@@ -4455,6 +4455,174 @@
      "product": "抗辐射、高可靠性IC（以微控制器为中心的半导体）",
      "share": "车载微控制器全球市场份额第二（行业媒体报道）",
      "note": "该份额针对的是车载微控制器这一事业领域，并非本分类产品（抗辐射、高可靠性IC）单独的份额。第三方推算的18%／约30%出处各异，故未采用。"
+    }
+   }
+  },
+  {
+   "company": "seed-33",
+   "name": "ミネベアミツミ",
+   "node": "05_motor",
+   "els": [
+    "DyTb"
+   ],
+   "product": "小型モーター（OA・車載向け）、航空機・防衛用モータ・アクチュエータ",
+   "level": 4,
+   "share": "小型モーター（OA・車載向け）で世界トップシェアと同社が公表（数値なし）",
+   "scope": "小型モーター（OA・車載向け）",
+   "basis": "公開情報",
+   "source": "https://www.minebeamitsumi.com/corp/recruit/about/data/",
+   "sourceLabel": "ミネベアミツミ 採用情報サイト「数字で見るミネベアミツミ」（2026年11月確認）",
+   "note": "「世界トップシェア」の表記で、割合と調査時点の記載はない。同ページの「世界シェアNo.1」製品（ボールベアリングなど）には小型モーターは含まれない。",
+   "i18n": {
+    "en": {
+     "product": "Small motors (for office equipment and vehicles); motors and actuators for aircraft and defense",
+     "share": "The company states it holds the top global share in small motors for office equipment and vehicles (no figure given)",
+     "note": "Stated as “top global share” with no percentage or survey date. Small motors are not among the products the same page lists as No. 1 in global share (such as ball bearings)."
+    },
+    "zh-CN": {
+     "product": "小型电机（办公设备及车载用）、航空及防卫用电机与执行器",
+     "share": "公司称其在小型电机（办公设备及车载用）领域全球份额领先（无具体数值）",
+     "note": "仅标注“全球份额领先”，未注明比例和调查时间。同一页面列出的“全球份额第一”产品（滚珠轴承等）不包括小型电机。"
+    }
+   }
+  },
+  {
+   "company": "seed-33",
+   "name": "ミネベアミツミ",
+   "node": "05_motor",
+   "els": [
+    "Sm"
+   ],
+   "product": "小型モーター（OA・車載向け）、航空機・防衛用モータ・アクチュエータ",
+   "level": 4,
+   "share": "小型モーター（OA・車載向け）で世界トップシェアと同社が公表（数値なし）",
+   "scope": "小型モーター（OA・車載向け）",
+   "basis": "公開情報",
+   "source": "https://www.minebeamitsumi.com/corp/recruit/about/data/",
+   "sourceLabel": "ミネベアミツミ 採用情報サイト「数字で見るミネベアミツミ」（2026年11月確認）",
+   "note": "「世界トップシェア」の表記で、割合と調査時点の記載はない。同ページの「世界シェアNo.1」製品（ボールベアリングなど）には小型モーターは含まれない。",
+   "i18n": {
+    "en": {
+     "product": "Small motors (for office equipment and vehicles); motors and actuators for aircraft and defense",
+     "share": "The company states it holds the top global share in small motors for office equipment and vehicles (no figure given)",
+     "note": "Stated as “top global share” with no percentage or survey date. Small motors are not among the products the same page lists as No. 1 in global share (such as ball bearings)."
+    },
+    "zh-CN": {
+     "product": "小型电机（办公设备及车载用）、航空及防卫用电机与执行器",
+     "share": "公司称其在小型电机（办公设备及车载用）领域全球份额领先（无具体数值）",
+     "note": "仅标注“全球份额领先”，未注明比例和调查时间。同一页面列出的“全球份额第一”产品（滚珠轴承等）不包括小型电机。"
+    }
+   }
+  },
+  {
+   "company": "stage05-integrated-49",
+   "name": "住友精密工業",
+   "node": "05_motor",
+   "els": [
+    "DyTb"
+   ],
+   "product": "電動油圧アクチュエーション（航空機の降着装置システム）",
+   "level": 3,
+   "share": "国内唯一の航空機用降着装置メーカー",
+   "scope": "航空機の降着装置（国内）",
+   "basis": "公開情報",
+   "source": "https://newswitch.jp/p/7572",
+   "sourceLabel": "ニュースイッチ 住友精密工業の降着装置事業の記事（2026年11月確認）",
+   "note": "同社は防衛省保有機の約8割に自社製品が搭載されていると公表している。",
+   "i18n": {
+    "en": {
+     "product": "Electro-hydraulic actuation (aircraft landing gear systems)",
+     "share": "Japan’s only maker of aircraft landing gear",
+     "note": "The company states that about 80% of aircraft owned by the Ministry of Defense carry its products."
+    },
+    "zh-CN": {
+     "product": "电动液压作动系统（飞机起落架系统）",
+     "share": "日本国内唯一的飞机起落架制造商",
+     "note": "该公司称防卫省所属飞机中约80%装有其产品。"
+    }
+   }
+  },
+  {
+   "company": "stage05-integrated-49",
+   "name": "住友精密工業",
+   "node": "05_motor",
+   "els": [
+    "Sm"
+   ],
+   "product": "電動油圧アクチュエーション（航空機の降着装置システム）",
+   "level": 3,
+   "share": "国内唯一の航空機用降着装置メーカー",
+   "scope": "航空機の降着装置（国内）",
+   "basis": "公開情報",
+   "source": "https://newswitch.jp/p/7572",
+   "sourceLabel": "ニュースイッチ 住友精密工業の降着装置事業の記事（2026年11月確認）",
+   "note": "同社は防衛省保有機の約8割に自社製品が搭載されていると公表している。",
+   "i18n": {
+    "en": {
+     "product": "Electro-hydraulic actuation (aircraft landing gear systems)",
+     "share": "Japan’s only maker of aircraft landing gear",
+     "note": "The company states that about 80% of aircraft owned by the Ministry of Defense carry its products."
+    },
+    "zh-CN": {
+     "product": "电动液压作动系统（飞机起落架系统）",
+     "share": "日本国内唯一的飞机起落架制造商",
+     "note": "该公司称防卫省所属飞机中约80%装有其产品。"
+    }
+   }
+  },
+  {
+   "company": "fujikura",
+   "name": "フジクラ",
+   "node": "05_photonics",
+   "els": [
+    "DyTb"
+   ],
+   "product": "光ファイバ・光ケーブル、ファイバーレーザー用の光ファイバデバイス",
+   "level": 2,
+   "share": "光ファイバケーブルの世界市場で Corning・CommScope・Prysmian に次ぐ4位（2023年の金額ベース、約1.3%）",
+   "scope": "光ファイバケーブル",
+   "basis": "公開情報",
+   "source": "https://www.businesswire.com/news/home/20250213025563/en/",
+   "sourceLabel": "ResearchAndMarkets「Fiber Optical Cable Market Opportunities and Strategies to 2033」発表（2025年2月、2026年11月確認）",
+   "note": "調査によって数値の幅が大きい（全市場の金額ベースで約1%、高密度ケーブルなどの分野別では約9%）。いずれも10%未満のため水準2とした。",
+   "i18n": {
+    "en": {
+     "product": "Optical fibers and optical cables; optical fiber devices for fiber lasers",
+     "share": "Fourth in the global fiber-optic cable market after Corning, CommScope and Prysmian (about 1.3% by value, 2023)",
+     "note": "Estimates vary widely between surveys (about 1% of the whole market by value, about 9% in segments such as high-density cables). All are below 10%, so level 2 is used."
+    },
+    "zh-CN": {
+     "product": "光纤与光缆、光纤激光器用光纤器件",
+     "share": "在全球光缆市场排名第四，仅次于Corning、CommScope和Prysmian（2023年按金额约1.3%）",
+     "note": "不同调查的数值差异较大（按全市场金额约1%，高密度光缆等细分领域约9%）。均低于10%，因此定为等级2。"
+    }
+   }
+  },
+  {
+   "company": "fujikura",
+   "name": "フジクラ",
+   "node": "05_photonics",
+   "els": [
+    "Sm"
+   ],
+   "product": "光ファイバ・光ケーブル、ファイバーレーザー用の光ファイバデバイス",
+   "level": 2,
+   "share": "光ファイバケーブルの世界市場で Corning・CommScope・Prysmian に次ぐ4位（2023年の金額ベース、約1.3%）",
+   "scope": "光ファイバケーブル",
+   "basis": "公開情報",
+   "source": "https://www.businesswire.com/news/home/20250213025563/en/",
+   "sourceLabel": "ResearchAndMarkets「Fiber Optical Cable Market Opportunities and Strategies to 2033」発表（2025年2月、2026年11月確認）",
+   "note": "調査によって数値の幅が大きい（全市場の金額ベースで約1%、高密度ケーブルなどの分野別では約9%）。いずれも10%未満のため水準2とした。",
+   "i18n": {
+    "en": {
+     "product": "Optical fibers and optical cables; optical fiber devices for fiber lasers",
+     "share": "Fourth in the global fiber-optic cable market after Corning, CommScope and Prysmian (about 1.3% by value, 2023)",
+     "note": "Estimates vary widely between surveys (about 1% of the whole market by value, about 9% in segments such as high-density cables). All are below 10%, so level 2 is used."
+    },
+    "zh-CN": {
+     "product": "光纤与光缆、光纤激光器用光纤器件",
+     "share": "在全球光缆市场排名第四，仅次于Corning、CommScope和Prysmian（2023年按金额约1.3%）",
+     "note": "不同调查的数值差异较大（按全市场金额约1%，高密度光缆等细分领域约9%）。均低于10%，因此定为等级2。"
     }
    }
   }

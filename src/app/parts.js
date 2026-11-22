@@ -42,13 +42,22 @@ function shareRows(company,scope){
 function shareBadgesHtml(company,scope){var seen=new Set();return shareRows(company,scope).filter(function(row){if(seen.has(row.entry.level))return false;seen.add(row.entry.level);return true}).map(function(row){var e=row.entry;return'<span class="re-tag re-share-level re-share-'+e.level+'">'+esc(criticalText('share')+' '+e.level+colon()+shareLevelText(e.level,'label'))+'</span>'}).join('')}
 function shareEvidenceHtml(company,scope){return shareRows(company,scope).map(function(row){var e=row.entry;return'<div class="re-dossier-row"><dt>'+esc(subLabel(row.node)+' / '+tagLabel(row.element))+'</dt><dd>'+esc(criticalText('share')+' '+e.level+' · '+shareLevelText(e.level,'label'))+(e.product?'<p>'+esc(shareText(e,'product')+colon()+shareText(e,'share'))+'</p>':'')+(e.source?'<a href="'+esc(e.source)+'" target="_blank" rel="noopener noreferrer">'+esc(criticalText('source'))+'</a>':'')+(e.note?'<p>'+esc(shareText(e,'note'))+'</p>':'')+'</dd></div>'}).join('')}
 function companyCardHtml(company,attribute,activeId,scope){
-  var tagHtml=company.tags.map(function(tag){return'<span class="re-tag" style="color:'+colors[tag]+';border-color:'+colors[tag]+'">'+tagLabel(tag)+'</span>'}).join("");
+  var tagHtml=tagsHtml(company.tags);
   if(company.atlaProcurement)tagHtml+='<span class="re-tag re-atla-badge">'+esc(tr("atla"))+'</span>';
   if(attribute!=='data-company')tagHtml+=shareBadgesHtml(company,scope);
   var summary=companySummary(company);
   return'<button type="button" class="re-company" '+attribute+'="'+esc(company.id)+'" aria-pressed="'+(activeId===company.id)+'"><div class="re-company-name">'+esc(companyText(company,"name"))+'</div><div class="re-tags">'+tagHtml+'</div><div class="re-company-pos" title="'+esc(summary.full)+'">'+esc(summary.short)+'</div></button>'
 }
-function tagsHtml(tags){return tags.map(function(t){return'<span style="color:'+colors[t]+'">'+tagLabel(t)+'</span>'}).join("")}
+// 元素タグは全画面で「● 元素記号」（元素の色の丸＋記号）に統一する。bare は地のない小さな形（図のカードの中で使う）
+function elementChipHtml(element,bare){return'<span class="re-el-chip'+(bare?' is-bare':'')+'" data-el="'+esc(element)+'"><i class="re-el-dot" aria-hidden="true" style="background:'+colors[element]+'"></i>'+esc(tagLabel(element))+'</span>'}
+function tagsHtml(tags,bare){return tags.map(function(t){return elementChipHtml(t,bare)}).join("")}
+// 企業カードを選んだあとの送り方。一覧と詳細が横に並ぶ幅（1181px 以上）では、詳細が画面に貼り付いて見えているため画面を動かさない。
+// 一覧の下に詳細を積む幅（1180px 以下、CSS の切り替えと同じ）では、詳細の先頭まで送る
+var DOSSIER_STACK_QUERY="(max-width: 1180px)";
+function revealDossier(dossier){
+  if(!dossier||!dossier.querySelector(".re-dossier-title")||!window.matchMedia(DOSSIER_STACK_QUERY).matches)return;
+  dossier.scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"})
+}
 function renderElementControlCards(selector){
   root.querySelectorAll(selector).forEach(function(button){
     var element=button.dataset.flowElement||button.dataset.element,meta=flowElementMeta[language][element],dep=dependencyRows.find(function(row){return row.tag===element}),china=dep?dep.china:0;
@@ -99,5 +108,5 @@ function routeRows(id,graph){
   })
 }
 function routeRowsHtml(rows){
-  return'<div class="re-route-note-title">'+esc(tr("routeTitle",{count:rows.length}))+'</div>'+rows.map(function(row){return'<div class="re-route-row"><span class="re-route-pair">'+esc(subLabel(row.from))+' → '+esc(subLabel(row.to))+'</span><span class="re-route-elements">'+tagsHtml(row.elements)+'</span><span>'+(row.assembly?'<span class="re-route-chip">'+esc(tr("routeAssembly"))+'</span>':'')+esc(row.note)+'</span></div>'}).join("")
+  return'<div class="re-route-note-title">'+esc(tr("routeTitle",{count:rows.length}))+'</div>'+rows.map(function(row){return'<div class="re-route-row"><span class="re-route-pair">'+esc(subLabel(row.from))+' → '+esc(subLabel(row.to))+'</span><span class="re-route-elements">'+tagsHtml(row.elements,true)+'</span><span>'+(row.assembly?'<span class="re-route-chip">'+esc(tr("routeAssembly"))+'</span>':'')+esc(row.note)+'</span></div>'}).join("")
 }

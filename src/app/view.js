@@ -42,9 +42,10 @@ function applyStaticTranslations(){
   root.querySelector("#re-search-help").textContent=tr("searchHelp");
   root.querySelector(".re-element-flow-lead").textContent=tr("flowLead");
   root.querySelector("#re-flow-to-overview").textContent=tr("viewOverview");
-  root.querySelector(".re-element-flow-note > div").innerHTML=esc(tr("flowNote"))+criticalityLegendHtml()+'<div class="re-element-flow-stats" id="re-element-flow-stats"></div>';
+  // 帯の説明と件数は図の下に、クリティカル度の求め方・凡例とシェア水準の判定基準は企業カードの下に置く
+  root.querySelector(".re-element-flow-note > div").innerHTML=esc(tr("flowNote"))+'<div class="re-element-flow-stats" id="re-element-flow-stats"></div>';
   root.querySelector("#re-language-switch").setAttribute("aria-label",tr("language"));
-  root.querySelector(".re-element-flow-note > div").insertAdjacentHTML('beforeend',shareCriteriaHtml());
+  root.querySelector("#re-flow-cr-note > div").innerHTML=criticalityLegendHtml()+shareCriteriaHtml();
   root.querySelectorAll("[data-language]").forEach(function(button){button.setAttribute("aria-pressed",String(button.dataset.language===language))});
   root.querySelector("#re-status").textContent=tr("prepared",{count:data.length});
 }
@@ -68,10 +69,10 @@ function refresh(scope){
   if((scope==='equipment'||scope==='all')&&activeView==='equipment')renderEquipment();
   if(scope==="overview"||scope==="all"){
     renderOverviewElementControls();
+    // 元素は1つだけ選ぶ（「全元素を表示」は選択なし）
     root.querySelectorAll("[data-element]").forEach(function(btn){
       var key=btn.dataset.element;
-      var pressed=key==="all"?selectedElements.length===allElements.length:selectedElements.indexOf(key)>=0;
-      btn.setAttribute("aria-pressed",String(pressed))
+      btn.setAttribute("aria-pressed",String(key==="all"?!overviewElement:overviewElement===key))
     });
     renderFlow();renderRouteNote()
   }
@@ -82,26 +83,24 @@ function refresh(scope){
 }
 root.querySelector("#re-flow-viewport").addEventListener("click",function(event){
   if(event.target.closest("button,.re-edge,.re-column-label,.re-stamp"))return;
+  // 余白を押すと、選択を一段戻す（サブカテゴリー・STAGE 01 の選択 → 元素の選択 → 全体）
   if(selection.type!=="all"||traceNodeId){
     selection={type:"all",id:"all"};
-  }else if(selectedElements.length!==allElements.length){
-    selectedElements=allElements.slice();
+  }else if(overviewElement){
+    setOverviewElement("");
   }else return;
   traceNodeId=null;selectedId=null;
   refresh("overview")
 });
 root.querySelectorAll("[data-element]").forEach(function(btn){btn.addEventListener("click",function(){
   var key=btn.dataset.element;
+  // 元素は排他的に選ぶ。選んでいる元素をもう一度押すと全元素に戻す
   if(key==="all"){
-    selectedElements=allElements.slice();selection={type:"all",id:"all"}
-  }else if(selectedElements.length===allElements.length){
-    selectedElements=[key]
-  }else if(selectedElements.indexOf(key)>=0){
-    if(selectedElements.length>1)selectedElements=selectedElements.filter(function(e){return e!==key})
+    setOverviewElement("");selection={type:"all",id:"all"};traceNodeId=null
   }else{
-    selectedElements=selectedElements.concat(key)
+    setOverviewElement(overviewElement===key?"":key)
   }
-  traceNodeId=null;selectedId=null;
+  selectedId=null;
   refresh("overview")
 })});
 root.querySelectorAll("[data-view]").forEach(function(button){button.addEventListener("click",function(){setView(button.dataset.view)})});
@@ -110,7 +109,7 @@ root.querySelectorAll("[data-flow-element]").forEach(function(button){button.add
   flowElement=button.dataset.flowElement;flowSelectionId=null;flowSelectedId=null;refresh("flow")
 })});
 root.querySelector("#re-flow-to-overview").addEventListener("click",function(){
-  selectedElements=[flowElement];selection={type:"all",id:"all"};traceNodeId=null;selectedId=null;setView("overview");refresh("overview")
+  selection={type:"all",id:"all"};traceNodeId=null;selectedId=null;setOverviewElement(flowElement);setView("overview");refresh("overview")
 });
 root.querySelector("#re-element-flow-frame").addEventListener("click",function(event){
   var canvas=root.querySelector("#re-element-flow-canvas");

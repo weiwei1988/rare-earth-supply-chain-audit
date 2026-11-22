@@ -24,12 +24,6 @@ function uRibbonMarks(x,y1a,y1b,y2a,y2b,dir,scale){
   }
 }
 function curve(x1,y1,x2,y2){var dx=(x2-x1)*.55;return"M "+x1+" "+y1+" C "+(x1+dx)+" "+y1+", "+(x2-dx)+" "+y2+", "+x2+" "+y2}
-// option.className は線の種類（組み込みの鉤形など）、option.extra は線に添える印（矢じりなど）の SVG
-function path(d,color,dim,meta,option){
-  var attrs=meta?' data-from="'+esc(meta.from)+'" data-to="'+esc(meta.to)+'" data-element="'+esc(meta.element)+'" role="img" aria-label="'+esc(meta.title)+'"':'';
-  var className=option&&option.className?" "+option.className:"";
-  return'<g class="re-edge'+className+'"'+attrs+' opacity="'+(dim?.08:1)+'">'+(meta?'<title>'+esc(meta.title)+'</title>':'')+'<path class="re-path-bg" stroke="'+color+'" d="'+d+'"></path><path class="re-path-fg" stroke="'+color+'" d="'+d+'"></path>'+(option&&option.extra||'')+'</g>'
-}
 // 上流・下流のたどり方は全体像マップと元素別フローで共通。edges の形が違うため
 // from/to/element の取り出し方だけを呼び出し側から渡す。elements が null なら元素で絞らない。
 function traceLinkedEdges(edges,startId,reader,elementList){

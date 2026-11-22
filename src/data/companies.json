@@ -1516,13 +1516,13 @@
     ],
     "subs": [
       "05_motor",
-      "05_scaln_film"
+      "05_electronics"
     ],
     "subEls": {
       "05_motor": [
         "DyTb"
       ],
-      "05_scaln_film": [
+      "05_electronics": [
         "Sc"
       ]
     },
@@ -1539,7 +1539,7 @@
     "ev": "B",
     "exc": 1,
     "src": "Sc DD ／ https://www.aist.go.jp/aist_j/press_release/pr2008/pr20081121/pr20081121.html ／ https://www.denso.com/jp/ja/about-us/corporate-info/profile/ ／ https://monoist.itmedia.co.jp/mn/articles/2111/22/news049_2.html ／ https://www.denso.com/jp/ja/-/media/global/business/innovation/review/24/24-doc-13-paper-08.pdf ／ https://www.chunichi.co.jp/article/394595",
-    "note": "量産Sc採用は未確認。R&D・下流監視ノード ／ 2026-11-20：車載モータ・アクチュエータの記述を追加し、「モータ・アクチュエータ」にも置いた。元素フラグはネオジム磁石を使うモータの一般的な構成による。"
+    "note": "量産Sc採用は未確認。R&D・下流監視ノード ／ 2026-11-20：車載モータ・アクチュエータの記述を追加し、「モータ・アクチュエータ」にも置いた。元素フラグはネオジム磁石を使うモータの一般的な構成による。 ／ 2026-11-22：「ScAlN 圧電薄膜」の工程は国内の担い手が研究段階の当社だけだったため廃止し、ScAlN の共同研究は成膜された膜を使う「電子部品・半導体」に置いた。"
   },
   {
     "id": "seed-44",
@@ -2337,7 +2337,7 @@
     "ev": "B",
     "exc": 0,
     "src": "https://www.anritsu.com/ja-jp/test-measurement/solutions/aerospace-lp ／ https://www.anritsu.com/ja-jp/about-anritsu/corporate-information/profile ／ https://dl.cdn-anritsu.com/anritsu-sensing-devices/ja-jp/products/sld/as5b320em50m-j-c-3.pdf ／ https://dl.cdn-anritsu.com/anritsu-sensing-devices/ja-jp/products/sld/as3b119gm10m-j-c-2.pdf ／ https://dl.cdn-anritsu.com/anritsu-sensing-devices/ja-jp/products/sld/as6b118gm50m-j-c-2.pdf ／ https://www.sbbit.jp/article/refers/69109",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：会社概要の連結売上高 ／ 2026-11-20：SLD モジュールが光アイソレータ内蔵と仕様書に明記されているため、「光部品・光デバイス」にも置いた。"
+    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：会社概要の連結売上高 ／ 2026-11-20：SLD モジュールが光アイソレータ内蔵と仕様書に明記されているため、「光部品・ファイバー・光デバイス」にも置いた。"
   },
   {
     "id": "stage05-integrated-2",
@@ -5450,7 +5450,7 @@
       "Sc"
     ],
     "own": "非上場。株式会社IHI（東証プライム、証券コード7013）の連結子会社。",
-    "pos": "市場シェア・地位は公開情報で未確認",
+    "pos": "固体燃料ロケットの総合メーカー。H3 の固体ロケットブースタとイプシロンを担う",
     "chn": "原料調達国・中国依存は未確認",
     "ev": "B",
     "exc": 0,
@@ -5473,12 +5473,12 @@
       "rareEarthPossibility": "中（一般論）"
     },
     "rev": "666億円（2025年3月期、単体）",
-    "prod": "HTV-Xを活用したHGV探知等に関する宇宙技術実証(その1) ／ 92式地雷原処理用ロケット弾 ／ チャフロケット弾 ／ 24式水際地雷原処理装置用ロケット弾",
+    "prod": "H3 ロケットの固体ロケットブースタ SRB-3 と第2段の姿勢制御用ガスジェット、固体燃料ロケットのイプシロン（2018年度の4号機から製造を一括して請け負う）・イプシロン S。 ／ HTV-Xを活用したHGV探知等に関する宇宙技術実証(その1) ／ 92式地雷原処理用ロケット弾 ／ チャフロケット弾 ／ 24式水際地雷原処理装置用ロケット弾",
     "def": "防衛装備庁納入品（FY2023・FY2024・FY2025）：HTV-Xを活用したHGV探知等に関する宇宙技術実証(その1)；92式地雷原処理用ロケット弾；チャフロケット弾；24式水際地雷原処理装置用ロケット弾",
     "bom": "調達品目「92式地雷原処理用ロケット弾；チャフロケット弾；24式水際地雷原処理装置用ロケット弾」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
-    "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4010601031653 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.ihi.co.jp/all_news/2026/ir/__icsFiles/afieldfile/2026/06/02/notice_260602.pdf ／ https://www.ihi.co.jp/ir/stock/information/",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Sc。中（一般論）",
+    "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4010601031653 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.ihi.co.jp/all_news/2026/ir/__icsFiles/afieldfile/2026/06/02/notice_260602.pdf ／ https://www.ihi.co.jp/ir/stock/information/ ／ https://repository.exst.jaxa.jp/dspace/bitstream/a-is/835997/1/AA1740298001.pdf ／ https://newswitch.jp/p/11503",
+    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Sc。中（一般論） ／ 2026-11-22：ロケット・打上げの調査で、H3 の固体ロケットブースタ・姿勢制御用ガスジェットとイプシロンの製造を製品と地位に加えた。",
     "financial": {
       "fiscalYear": "2025年3月期",
       "revenueValueJpy": 66600000000,
@@ -8832,7 +8832,7 @@
     "ev": "A",
     "exc": 0,
     "src": "https://jpn.nec.com/submarine/index.html ／ https://jpn.nec.com/press/202501/20250123_01.html ／ https://jpn.nec.com/press/202012/20201210_02.html ／ https://journal.meti.go.jp/p/40663/ / https://www.nec.com/en/press/202501/global_20250123_01.html ／ https://jpn.nec.com/products/fod/index.html ／ https://www.nedo.go.jp/content/800075667.pdf ／ https://toyokeizai.net/articles/-/941884",
-    "note": "海底ケーブル本体は子会社オーシーシー（北九州市若松区）が製造。海底光中継器には50〜100km ごとに光アイソレータが入り、湖北工業の主要顧客として名が挙がる / 光学経路上の製品・用途に基づく関連フラグ。個別製品のY・Dy・Tb含有、部材供給元は非開示であり、搭載確認を意味しない。 ／ 2026-11-20：光トランシーバを部品として外販し、海底光中継器（光増幅器）を NECプラットフォームズ大月事業所で製造するため、「光部品・光デバイス」にも置いた。アイソレータ内蔵は一般的な構成からの推定。",
+    "note": "海底ケーブル本体は子会社オーシーシー（北九州市若松区）が製造。海底光中継器には50〜100km ごとに光アイソレータが入り、湖北工業の主要顧客として名が挙がる / 光学経路上の製品・用途に基づく関連フラグ。個別製品のY・Dy・Tb含有、部材供給元は非開示であり、搭載確認を意味しない。 ／ 2026-11-20：光トランシーバを部品として外販し、海底光中継器（光増幅器）を NECプラットフォームズ大月事業所で製造するため、「光部品・ファイバー・光デバイス」にも置いた。アイソレータ内蔵は一般的な構成からの推定。",
     "stages": [
       5,
       6
@@ -8986,7 +8986,7 @@
     "ev": "A",
     "exc": 0,
     "src": "https://www.furukawaelectric.com/release/2021/comm_20210607.html ／ https://www.furukawaelectric.com/release/2019/comm_190920.html ／ https://www.furukawaelectric.com/company/outline/ ／ https://www.nihon-ma.co.jp/news/20241212_5801-9/ ／ https://www.fujitsu.com/jp/group/foc/en/products/coherent-modules/cfp2-aco/indexgig5.html ／ https://www.fujitsu.com/jp/group/foc/en/news/indexgig5.html ／ https://pr.mono.ipros.com/narasaki/product/detail/2000341197/ ／ https://newswitch.jp/p/4258",
-    "note": "ITLA は制御回路基板付きの波長可変レーザモジュールで、半導体レーザーの出力側に光アイソレータを置いて戻り光を遮るのが一般的な構成。Nano ITLA は25×15.6×6.7mm。ラマン増幅器用ポンプ LD モジュールは400／500／600mW 品で1330〜1520nm に対応。光ファイバの増産に約1000億円を投じ、日米など4カ国で生産能力を2倍にする計画（2026年8月発表） ／ 2026-11-20：富士通オプティカルコンポーネンツ（川崎）を古河電工グループの光デバイスとして統合した。 ／ 2026-11-21：産業用ファイバーレーザーを作るため、「固体レーザー発振器」にも置いた。"
+    "note": "ITLA は制御回路基板付きの波長可変レーザモジュールで、半導体レーザーの出力側に光アイソレータを置いて戻り光を遮るのが一般的な構成。Nano ITLA は25×15.6×6.7mm。ラマン増幅器用ポンプ LD モジュールは400／500／600mW 品で1330〜1520nm に対応。光ファイバの増産に約1000億円を投じ、日米など4カ国で生産能力を2倍にする計画（2026年8月発表） ／ 2026-11-20：富士通オプティカルコンポーネンツ（川崎）を古河電工グループの光デバイスとして統合した。 ／ 2026-11-21：産業用ファイバーレーザーを作るため、「固体・ファイバーレーザー発振器」にも置いた。"
   },
   {
     "id": "optics-carlit",
@@ -9107,7 +9107,7 @@
     "ev": "B",
     "exc": 1,
     "src": "https://aoc.santec.com/jp/ ／ https://aoc.santec.com/jp/products/slm/ ／ https://aoc.santec.com/jp/products/monitor/ ／ https://aoc.santec.com/jp/products/monitor/intp/ ／ https://aoc.santec.com/jp/products/voa/ ／ https://aoc.santec.com/jp/products/filter/ ／ https://aoc.santec.com/en/assets/doc/INTP-C-E.pdf",
-    "note": "光アイソレータそのものの製品はなく、アイソレータを組み込んだタップフォトディテクタ INTP（QSFP-DD 光トランシーバ向け、Preliminary）を作るため、「光部品・光デバイス」に置く。元素フラグは INTP 内蔵アイソレータの一般的な構成（Bi:RIG・YIG の回転子と SmCo 磁石）によるもので、搭載確認を意味しない。 ／ 2026-11-20：製品一覧（空間光変調器・スペクトル整形器・光パワーモニタ・光アッテネータ・光フィルタ・光サブシステム）とプロダクトガイド2025で確認し、分類を「ファラデー回転子・アイソレータ（光通信）」から移した。",
+    "note": "光アイソレータそのものの製品はなく、アイソレータを組み込んだタップフォトディテクタ INTP（QSFP-DD 光トランシーバ向け、Preliminary）を作るため、「光部品・ファイバー・光デバイス」に置く。元素フラグは INTP 内蔵アイソレータの一般的な構成（Bi:RIG・YIG の回転子と SmCo 磁石）によるもので、搭載確認を意味しない。 ／ 2026-11-20：製品一覧（空間光変調器・スペクトル整形器・光パワーモニタ・光アッテネータ・光フィルタ・光サブシステム）とプロダクトガイド2025で確認し、分類を「ファラデー回転子・アイソレータ（光通信）」から移した。",
     "def": "光通信モジュール内の光量監視・逆方向光の遮断に関わる部品。確認した製品ページ・仕様書では防衛・宇宙案件は記載されていない。"
   },
   {
@@ -9417,7 +9417,8 @@
     ],
     "subs": [
       "04_faraday_laser",
-      "05_laser_osc"
+      "05_laser_osc",
+      "05_photonics"
     ],
     "subEls": {
       "04_faraday_laser": [
@@ -9429,6 +9430,10 @@
         "DyTb",
         "Sm",
         "Sc"
+      ],
+      "05_photonics": [
+        "DyTb",
+        "Sm"
       ]
     },
     "tags": [
@@ -9445,7 +9450,7 @@
     "ev": "B",
     "exc": 0,
     "src": "https://patents.google.com/patent/US8804240B2/en ／ https://www.nims.go.jp/electr-opt/OPCRY_e.html ／ https://www.optic-product.fujikura.com/wp-content/uploads/2025/06/CPJ70A_71A_79A.pdf ／ https://www2.jpx.co.jp/disc/58030/081220260514532598_tse-acedjpsm-58030-20260514358030-ixbrl.htm",
-    "note": "2026-11-19：レーザー波長のファラデー回転子・光アイソレータの追加調査で新規に収録 ／ 2026-11-21：自社の Yb ファイバーレーザーを作るため、「固体レーザー発振器」にも置いた（Sc は自社の TSAG 回転子を組み込むアイソレータとして含む）。"
+    "note": "2026-11-19：レーザー波長のファラデー回転子・光アイソレータの追加調査で新規に収録 ／ 2026-11-21：自社の Yb ファイバーレーザーを作るため、「固体・ファイバーレーザー発振器」にも置いた（Sc は自社の TSAG 回転子を組み込むアイソレータとして含む）。 ／ 2026-11-22：光ファイバ・光ケーブルとファイバーレーザー用の光ファイバデバイスを作るため、「光部品・ファイバー・光デバイス」にも置いた（光ファイバ自体には対象元素を含まない。Tb と磁石の Sm・Dy は、組み合わせて使う自社の光アイソレータによる）。"
   },
   {
     "id": "compound-kisankinzoku",
@@ -9767,7 +9772,7 @@
   },
   {
     "id": "laser-mhi-defense",
-    "name": "三菱重工業（防衛・宇宙：高出力レーザ）",
+    "name": "三菱重工業 防衛・宇宙セグメント（高出力レーザ）",
     "stages": [
       6
     ],
@@ -9784,16 +9789,49 @@
       "DyTb",
       "Sm"
     ],
-    "own": "東証プライム上場。防衛・宇宙セグメント",
-    "rev": "未確認（レーザー単独の売上は非開示）",
+    "own": "上場企業 ／ 三菱重工業株式会社（東証プライム、証券コード7011）の防衛・宇宙セグメント",
+    "rev": "防衛・宇宙の売上収益 1兆1,445億円（2026年3月期、前期比38%増）。レーザー単独の売上は非開示",
     "prod": "車両搭載の高出力レーザ実証装置（10kW 級、小型ドローン対処。防衛装備庁の研究試作で2021〜2024年度に試作し、2024年10月に完成）。kW 級のシングルモードレーザー光をフォトニック結晶ファイバで数十 m 伝送する技術（NTT と共同）",
     "pos": "国内の高出力レーザ兵器の研究試作を担う2社の一つ",
     "def": "防衛装備庁の研究試作。約1.2km 先の無人機を狙えるとされる",
     "chn": "光源の種類と調達先は非開示。kW 級のファイバーレーザーを光源とする場合、出力側の光アイソレータ（TGG などの回転子と磁石）を通じて Tb・Sm に触れる（一般的な構成）。ビーム指向装置の駆動モータ（NdFeB 磁石）も Dy・Tb に関わり得る。",
     "exc": 0,
     "src": "https://www.mod.go.jp/atla/research/ats2024/pdf_oral_matl/1113_1330_ss17.pdf ／ https://www.mod.go.jp/atla/research/ats2024/pdf_exhi_pos/p-24.pdf ／ https://www.mhi.com/jp/news/18042503.html",
-    "note": "2026-11-21：レーザー装備の調査で新規収録。エネルギー・航空エンジンの三菱重工とは事業が違うため、別のカードにした。 ／ 2026-11-21：防衛装備庁の研究試作（車両搭載高出力レーザ実証装置）の契約を確認したため、「防衛装備庁調達実績あり」を付けた。",
+    "note": "2026-11-21：レーザー装備の調査で新規収録。エネルギー・航空エンジンの三菱重工とは事業が違うため、別のカードにした。 ／ 2026-11-21：防衛装備庁の研究試作（車両搭載高出力レーザ実証装置）の契約を確認したため、「防衛装備庁調達実績あり」を付けた。 ／ 2026-11-22：三菱重工業本体ではなく、事業単位（防衛・宇宙セグメント）のカードとして名称・所有・売上を書き直した。ロケットは同じセグメントの宇宙事業部のカード。",
     "atlaProcurement": true
+  },
+  {
+    "id": "launch-mhi-space",
+    "name": "三菱重工業 防衛・宇宙セグメント 宇宙事業部（H3ロケット）",
+    "stages": [
+      6
+    ],
+    "subs": [
+      "06_launch"
+    ],
+    "subEls": {
+      "06_launch": [
+        "Y",
+        "DyTb",
+        "Sm",
+        "Sc"
+      ]
+    },
+    "tags": [
+      "Y",
+      "DyTb",
+      "Sm",
+      "Sc"
+    ],
+    "own": "上場企業 ／ 三菱重工業株式会社（東証プライム、証券コード7011）の防衛・宇宙セグメント宇宙事業部。名古屋航空宇宙システム製作所の飛島工場（愛知県飛島村）でロケットの機体を組み立て、名古屋誘導推進システム製作所（愛知県小牧市）が航空・宇宙エンジンなどを生産する",
+    "rev": "防衛・宇宙の売上収益 1兆1,445億円（2026年3月期、前期比38%増）。宇宙事業部単独の売上は非開示",
+    "prod": "基幹ロケット H3（JAXA と共同開発。第1段エンジン LE-9）と、2025年6月に運用を終えた H-IIA・H-IIB の製造・打上げ輸送サービス、ロケットエンジン（LE-9、LE-5B など）、射場の発射設備",
+    "pos": "日本の基幹ロケットの製造と打上げを担う唯一の企業。H3 は2025年12月の8号機が失敗したが、2026年6月の6号機と8月の9号機で打上げを再開・成功した",
+    "def": "打上げは主に政府衛星（準天頂衛星みちびき、情報収集衛星、HTV-X など）。防衛・宇宙セグメントとして防衛省向けの事業も持つ",
+    "chn": "推力方向制御などのアクチュエータのモータ（ネオジム磁石・SmCo 磁石）で Dy・Tb・Sm に、電子機器の MLCC などで Y に触れる（一般的な構成）。UACJ・JAXA と Al–Sc 合金の積層造形によるロケット部品を共同開発しており、Sc に触れる。部材の調達先と原料の中国比率は非開示。",
+    "exc": 0,
+    "src": "https://www.mhi.com/jp/news/24092502.html ／ https://www.mhi.com/jp/business/products-services/space-defense/rocket-engines-testing ／ https://www.mhi.com/jp/company/location/nagoyaaerow ／ https://www.mhi.com/jp/business/products-services/space-defense/launch-service/past-missions ／ https://scienceportal.jst.go.jp/stories/20260612_s01/ ／ https://scienceportal.jst.go.jp/newsflash/20260812_n01/ ／ https://www.aviationwire.jp/?p=343464",
+    "note": "2026-11-22：ロケット・打上げの調査で新規収録。三菱重工業本体ではなく、事業単位（防衛・宇宙セグメント宇宙事業部）のカードとした。高出力レーザは同じセグメントの別カード。"
   },
   {
     "id": "laser-khi-defense",

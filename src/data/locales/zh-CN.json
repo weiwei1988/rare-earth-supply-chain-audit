@@ -475,7 +475,7 @@
       "def": "车载电机面向汽车。ScAlN系高温振动、压力传感器面向飞机、发电机、汽车与化工厂",
       "chn": "中～高。驱动用、电动助力转向用等高性能电机通常使用钕磁体，并为耐热添加Dy、Tb，无稀土磁体的开发旨在替代它们。磁体采购来源未公开。ScAlN需确认量产品采用情况、靶材供应商与Sc原产国",
       "src": "Sc DD ／ https://www.aist.go.jp/aist_j/press_release/pr2008/pr20081121/pr20081121.html ／ https://www.denso.com/jp/ja/about-us/corporate-info/profile/ ／ https://monoist.itmedia.co.jp/mn/articles/2111/22/news049_2.html ／ https://www.denso.com/jp/ja/-/media/global/business/innovation/review/24/24-doc-13-paper-08.pdf ／ https://www.chunichi.co.jp/article/394595",
-      "note": "尚未确认量产中采用Sc。属研发与下游观察节点 ／ 2026-11-20：补充车载电机与执行器的记述，并同时归入“电机与执行器”。元素标记依据使用钕磁体的电机的一般构成。"
+      "note": "尚未确认量产中采用Sc。属研发与下游观察节点 ／ 2026-11-20：补充车载电机与执行器的记述，并同时归入“电机与执行器”。元素标记依据使用钕磁体的电机的一般构成。 ／ 2026-11-22：“ScAlN压电薄膜”工序在国内仅有处于研究阶段的本公司，因此予以撤销，ScAlN共同研究改归入使用成膜薄膜的“电子元件与半导体”。"
     },
     "seed-44": {
       "name": "JX金属",
@@ -758,7 +758,7 @@
       "def": "直接连接到卫星、国防、航空、船舶的通信、雷达和干扰波评估。与民用5G测量共享技术基础。 SLD用作光纤陀螺（姿态控制）、OCT与光纤传感器的光源，可经陀螺与航空、航天、国防相连。",
       "chn": "在光器件方面，通过SLD模块内置的光隔离器（Bi取代石榴石旋转器与磁体）涉及Y、Tb、Sm。隔离器采购来源未公开。测量仪器的稀土BOM未确认。",
       "src": "https://www.anritsu.com/ja-jp/test-measurement/solutions/aerospace-lp ／ https://www.anritsu.com/ja-jp/about-anritsu/corporate-information/profile ／ https://dl.cdn-anritsu.com/anritsu-sensing-devices/ja-jp/products/sld/as5b320em50m-j-c-3.pdf ／ https://dl.cdn-anritsu.com/anritsu-sensing-devices/ja-jp/products/sld/as3b119gm10m-j-c-2.pdf ／ https://dl.cdn-anritsu.com/anritsu-sensing-devices/ja-jp/products/sld/as6b118gm50m-j-c-2.pdf ／ https://www.sbbit.jp/article/refers/69109",
-      "note": "合并处理：原有候选（不属于母公司替换对象） / 营收依据：公司简介的合并营业收入 ／ 2026-11-20：规格书明确记载SLD模块内置光隔离器，因此同时归入“光部件与光器件”。"
+      "note": "合并处理：原有候选（不属于母公司替换对象） / 营收依据：公司简介的合并营业收入 ／ 2026-11-20：规格书明确记载SLD模块内置光隔离器，因此同时归入“光部件、光纤与光器件”。"
     },
     "stage05-integrated-2": {
       "name": "TOYO Corporation（東陽テクニカ）",
@@ -1547,14 +1547,14 @@
       "name": "IHI Aerospace Co., Ltd.（株式会社IHIエアロスペース）",
       "own": "非上市。株式会社IHI（东京证券交易所Prime、证券代码7013）的并表子公司。",
       "rev": "666亿日元（2025年3月财年，单体）",
-      "prod": "HTV-X活用了HGV探测等相关航天技术验证(其1) / 92式雷场处理用火箭弹 / 箔条干扰火箭弹 / 24式水际雷场处理设备用火箭弹",
-      "pos": "未能通过公开信息确认市场份额和行业地位。",
+      "prod": "H3火箭的固体火箭助推器SRB-3和二级姿态控制用气体喷流装置，固体燃料火箭“艾普斯龙”（自2018财年4号机起统一承担制造）及艾普斯龙S。 ／ HTV-X活用了HGV探测等相关航天技术验证(其1) / 92式雷场处理用火箭弹 / 箔条干扰火箭弹 / 24式水际雷场处理设备用火箭弹",
+      "pos": "固体燃料火箭的综合制造商，负责H3的固体火箭助推器和艾普斯龙",
       "def": "日本防卫装备厅交付品（FY2023·FY2024·FY2025）：HTV-X活用了HGV探测等相关航天技术验证(其1)；92式雷场处理用火箭弹；箔条干扰火箭弹；24式水际雷场处理设备用火箭弹",
       "chn": "原材料采购国和对华依赖程度尚未确认。",
       "bom": "依据采购项目「92式雷场处理用火箭弹；箔条干扰火箭弹；24式水际雷场处理设备用火箭弹」作出的判断。相关装备的磁体、激光器 / 陶瓷、RF及压电材料等部件可能使用稀土。尚未确认各型号的公开BOM。",
       "gap": "稀土标记是依据采购项目在工作表中作出的判断。各型号的实际含量、原材料采购国和市场份额均未确认。",
-      "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4010601031653 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.ihi.co.jp/all_news/2026/ir/__icsFiles/afieldfile/2026/06/02/notice_260602.pdf ／ https://www.ihi.co.jp/ir/stock/information/",
-      "note": "已人工复核第05阶段的判定：纳入范围。 / 稀土判定：Sc。可信度中等（基于行业通例）"
+      "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4010601031653 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.ihi.co.jp/all_news/2026/ir/__icsFiles/afieldfile/2026/06/02/notice_260602.pdf ／ https://www.ihi.co.jp/ir/stock/information/ ／ https://repository.exst.jaxa.jp/dspace/bitstream/a-is/835997/1/AA1740298001.pdf ／ https://newswitch.jp/p/11503",
+      "note": "已人工复核第05阶段的判定：纳入范围。 / 稀土判定：Sc。可信度中等（基于行业通例） ／ 2026-11-22：根据火箭与发射调查，在产品与地位中加入H3固体火箭助推器、姿态控制用气体喷流装置及艾普斯龙的制造。"
     },
     "atla-8010401096587": {
       "name": "Motorola Solutions Japan Ltd.（モトローラ・ソリューションズ株式会社）",
@@ -2349,7 +2349,7 @@
       "def": "为JAXA的卫星间光通信系统LUCAS开发卫星用光通信装置，2025年1月实现卫星间1.8Gbps光通信并成功传输至地面站。海底电缆亦承载海底地震观测 海底电缆相关设备（含中继器）全部在国内3个基地生产。",
       "chn": "中。装置所用光部件的采购结构是关键问题。数据中心用光收发模块的全球出货量据称大部分来自中国厂商",
       "src": "https://jpn.nec.com/submarine/index.html ／ https://jpn.nec.com/press/202501/20250123_01.html ／ https://jpn.nec.com/press/202012/20201210_02.html ／ https://journal.meti.go.jp/p/40663/ / https://www.nec.com/en/press/202501/global_20250123_01.html ／ https://jpn.nec.com/products/fod/index.html ／ https://www.nedo.go.jp/content/800075667.pdf ／ https://toyokeizai.net/articles/-/941884",
-      "note": "海底电缆本体由子公司OCC（北九州市若松区）制造。海底中继器每50〜100公里装有一个光隔离器，NEC被列为湖北工业的主要客户之一 / 标记表示与光学应用链相关，不代表已确认具体产品含有Y／Dy／Tb；材料成分及部件供应商未公开。 ／ 2026-11-20：作为部件对外销售光收发模块，并在NEC Platforms大月事业所生产海底光中继器（光放大器），因此同时归入“光部件与光器件”。隔离器内置依据一般构成推定。"
+      "note": "海底电缆本体由子公司OCC（北九州市若松区）制造。海底中继器每50〜100公里装有一个光隔离器，NEC被列为湖北工业的主要客户之一 / 标记表示与光学应用链相关，不代表已确认具体产品含有Y／Dy／Tb；材料成分及部件供应商未公开。 ／ 2026-11-20：作为部件对外销售光收发模块，并在NEC Platforms大月事业所生产海底光中继器（光放大器），因此同时归入“光部件、光纤与光器件”。隔离器内置依据一般构成推定。"
     },
     "optnet-1finity": {
       "name": "1FINITY",
@@ -2392,7 +2392,7 @@
       "pos": "国内少数能够生产DFB激光芯片的企业之一。份额数值未确认。",
       "def": "未确认有防务交付。用途为数字相干光传输与数据中心",
       "chn": "中。激光芯片基于磷化铟衬底，本身不用稀土，但Y与Tb经由激光模块内置的光隔离器进入 光纤激光经输出端光隔离器（TGG等旋转器与磁体）涉及Tb、Sm（一般构成）。",
-      "note": "ITLA是带控制电路板的可调谐激光模块，通常在半导体激光器输出侧放置光隔离器以阻断回光。Nano ITLA尺寸为25×15.6×6.7mm。拉曼放大器用泵浦LD模块有400、500、600mW三档，覆盖1330至1520nm。公司投资约1000亿日元，在包括日美在内的四个国家将光纤产能提高一倍（2026年8月公布） ／ 2026-11-20：将富士通光器件（川崎）作为古河电工集团的光器件业务并入本卡片。 ／ 2026-11-21：因生产工业用光纤激光，同时归入“固体激光振荡器”。",
+      "note": "ITLA是带控制电路板的可调谐激光模块，通常在半导体激光器输出侧放置光隔离器以阻断回光。Nano ITLA尺寸为25×15.6×6.7mm。拉曼放大器用泵浦LD模块有400、500、600mW三档，覆盖1330至1520nm。公司投资约1000亿日元，在包括日美在内的四个国家将光纤产能提高一倍（2026年8月公布） ／ 2026-11-20：将富士通光器件（川崎）作为古河电工集团的光器件业务并入本卡片。 ／ 2026-11-21：因生产工业用光纤激光，同时归入“固体与光纤激光振荡器”。",
       "src": "https://www.furukawaelectric.com/release/2021/comm_20210607.html ／ https://www.furukawaelectric.com/release/2019/comm_190920.html ／ https://www.furukawaelectric.com/company/outline/ ／ https://www.nihon-ma.co.jp/news/20241212_5801-9/ ／ https://www.fujitsu.com/jp/group/foc/en/products/coherent-modules/cfp2-aco/indexgig5.html ／ https://www.fujitsu.com/jp/group/foc/en/news/indexgig5.html ／ https://pr.mono.ipros.com/narasaki/product/detail/2000341197/ ／ https://newswitch.jp/p/4258"
     },
     "optics-carlit": {
@@ -2433,7 +2433,7 @@
       "prod": "空间光调制器（LCOS-SLM：SLM-200、210、250、300、310等）、光谱整形器（LCOS型可编程光滤波器WSS-2000）、光功率监测器（带分光功能的光电探测器NTP、UTP、MTP、IPD，内置光隔离器的INTP，多通道光功率监测器MPA）、光衰减器（MEMS驱动的COVA-1）、光滤波器（MEMS可调滤波器MTF系列）、光子系统（定制光模块）",
       "chn": "涉及稀土的只有内置光隔离器的INTP（C／L波段分光光电探测器）。隔离器旋转器与磁体的材料及采购来源未公开。空间光调制器、滤波器、衰减器、功率监测器本体未见使用稀土的构成。",
       "src": "https://aoc.santec.com/jp/ ／ https://aoc.santec.com/jp/products/slm/ ／ https://aoc.santec.com/jp/products/monitor/ ／ https://aoc.santec.com/jp/products/monitor/intp/ ／ https://aoc.santec.com/jp/products/voa/ ／ https://aoc.santec.com/jp/products/filter/ ／ https://aoc.santec.com/en/assets/doc/INTP-C-E.pdf",
-      "note": "没有单独的光隔离器产品，而是生产内置隔离器的分光光电探测器INTP（面向QSFP-DD光收发模块，Preliminary），因此归入“光部件与光器件”。元素标记依据INTP内置隔离器的一般构成（Bi:RIG、YIG旋转器与SmCo磁体），不代表已确认含有。 ／ 2026-11-20：对照产品一览（空间光调制器、光谱整形器、光功率监测器、光衰减器、光滤波器、光子系统）与产品指南2025核实，从“法拉第旋转器与隔离器（光通信）”移出。",
+      "note": "没有单独的光隔离器产品，而是生产内置隔离器的分光光电探测器INTP（面向QSFP-DD光收发模块，Preliminary），因此归入“光部件、光纤与光器件”。元素标记依据INTP内置隔离器的一般构成（Bi:RIG、YIG旋转器与SmCo磁体），不代表已确认含有。 ／ 2026-11-20：对照产品一览（空间光调制器、光谱整形器、光功率监测器、光衰减器、光滤波器、光子系统）与产品指南2025核实，从“法拉第旋转器与隔离器（光通信）”移出。",
       "def": "用于光通信模块内光功率监测与反向光阻断的部件；所查产品页面与规格书未列明国防或航天项目。"
     },
     "optics-tatsuta": {
@@ -2537,7 +2537,7 @@
       "def": "未能确认。光纤激光器主要用于加工用途。",
       "chn": "作为TSAG原料的Tb、Sc的采购来源未公开。Tb对中国依赖度高。",
       "src": "https://patents.google.com/patent/US8804240B2/en ／ https://www.nims.go.jp/electr-opt/OPCRY_e.html ／ https://www.optic-product.fujikura.com/wp-content/uploads/2025/06/CPJ70A_71A_79A.pdf ／ https://www2.jpx.co.jp/disc/58030/081220260514532598_tse-acedjpsm-58030-20260514358030-ixbrl.htm",
-      "note": "2026-11-19：在对激光波长用法拉第旋转器与光隔离器的追加调查中新增收录 ／ 2026-11-21：因生产自有Yb光纤激光器，同时归入“固体激光振荡器”（Sc按装入自有TSAG旋转器的隔离器计入）。"
+      "note": "2026-11-19：在对激光波长用法拉第旋转器与光隔离器的追加调查中新增收录 ／ 2026-11-21：因生产自有Yb光纤激光器，同时归入“固体与光纤激光振荡器”（Sc按装入自有TSAG旋转器的隔离器计入）。 ／ 2026-11-22：因生产光纤、光缆及光纤激光器用光纤器件，同时归入“光部件、光纤与光器件”（光纤本身不含对象元素；Tb及磁体中的Sm、Dy来自配套使用的自有光隔离器）。"
     },
     "compound-kisankinzoku": {
       "name": "稀产金属",
@@ -2592,7 +2592,7 @@
       "def": "未能确认。用途为光通信的研发与评估以及传感",
       "chn": "规格表明确记载所有放大器型号的输入输出端均内置光隔离器，经其旋转器（Bi取代石榴石）与磁体涉及Y、Tb、Sm。隔离器采购来源未公开。放大用掺Er、Tm、Pr光纤不在本数据的对象元素范围内",
       "src": "https://www.fiberlabs.co.jp/ ／ https://www.city.fujimino.saitama.jp/material/files/group/20/faibarabo202601.pdf ／ https://www.lambdaphoto.co.uk/fiberlabs-c-band-amplifier-edfa-bench-top.html",
-      "note": "2026-11-20：在光部件与光器件的追加调查中新收录。1064nm波段光隔离器为其他公司产品的经销，因此不归入隔离器工序。"
+      "note": "2026-11-20：在光部件、光纤与光器件的追加调查中新收录。1064nm波段光隔离器为其他公司产品的经销，因此不归入隔离器工序。"
     },
     "laser-melco-fa": {
       "name": "三菱电机（FA・激光加工机）",
@@ -2650,14 +2650,14 @@
       "src": "https://newswitch.jp/p/7761 ／ https://newswitch.jp/p/4258"
     },
     "laser-mhi-defense": {
-      "name": "三菱重工业（国防・航天：高功率激光）",
-      "own": "东证Prime上市。国防・航天板块",
-      "rev": "未能确认（激光业务单独销售额未公开）",
+      "name": "三菱重工业 防卫与航天板块（高功率激光）",
+      "own": "上市公司 ／ 三菱重工业株式会社（东京证券交易所Prime，证券代码7011）的防卫与航天板块",
+      "rev": "防卫与航天营业收入1兆1,445亿日元（2026年3月财年，同比增长38%）。激光业务单独销售额未披露",
       "prod": "车载高功率激光演示装置（10kW级，应对小型无人机。防卫装备厅研究试制，2021〜2024财年试制，2024年10月完成），以及与NTT共同开发的、用光子晶体光纤传输数十米kW级单模激光的技术",
       "pos": "承担日本高功率激光武器研究试制的两家企业之一",
       "def": "防卫装备厅研究试制。据称可瞄准约1.2km外的无人机",
       "chn": "光源种类与采购来源未公开。若以kW级光纤激光为光源，经输出端光隔离器（TGG等旋转器与磁体）涉及Tb、Sm（一般构成）。光束指向装置的驱动电机（NdFeB磁体）也可能涉及Dy、Tb。",
-      "note": "2026-11-21：在激光装备调查中新收录。与能源・航空发动机的三菱重工业务不同，另设卡片。 ／ 2026-11-21：已确认防卫装备厅研究试制（车载高功率激光演示装置）合同，因此标注“有防卫装备厅采购实绩”。",
+      "note": "2026-11-21：在激光装备调查中新收录。与能源・航空发动机的三菱重工业务不同，另设卡片。 ／ 2026-11-21：已确认防卫装备厅研究试制（车载高功率激光演示装置）合同，因此标注“有防卫装备厅采购实绩”。 ／ 2026-11-22：改为事业单位（防卫与航天板块）的卡片，而非三菱重工业整体，并据此改写名称、所有权与销售额。火箭业务为同一板块航天事业部的另一张卡片。",
       "src": "https://www.mod.go.jp/atla/research/ats2024/pdf_oral_matl/1113_1330_ss17.pdf ／ https://www.mod.go.jp/atla/research/ats2024/pdf_exhi_pos/p-24.pdf ／ https://www.mhi.com/jp/news/18042503.html"
     },
     "laser-khi-defense": {
@@ -2813,6 +2813,17 @@
       "chn": "固体脉冲激光的介质未公开。若为一般的Nd:YAG则涉及Y，并经光隔离器的旋转器与磁体涉及Tb、Sm（一般构成）。",
       "note": "2026-11-21：在激光装备调查中新收录。因激光搭载于卫星，归入“卫星・航天器”。 ／ 2026-11-21：已确认防卫省研究合同（激光测距，2025年11月），因此标注“有防卫装备厅采购实绩”。同一公司的旧卡片（stage05-integrated-31）已统一为本卡片并删除。",
       "src": "https://www.mod.go.jp/j/press/news/2026/03/06c.html ／ https://news.mynavi.jp/techplus/article/20240131-2873557/ ／ https://www.watch.impress.co.jp/docs/news/1565176.html"
+    },
+    "launch-mhi-space": {
+      "name": "三菱重工业 防卫与航天板块 航天事业部（H3火箭）",
+      "own": "上市公司 ／ 三菱重工业株式会社（东京证券交易所Prime，证券代码7011）防卫与航天板块的航天事业部。火箭箭体在名古屋航空宇宙系统制作所飞岛工厂（爱知县飞岛村）总装，名古屋诱导推进系统制作所（爱知县小牧市）负责生产航空及航天发动机等",
+      "rev": "防卫与航天营业收入1兆1,445亿日元（2026年3月财年，同比增长38%）。航天事业部单独销售额未披露",
+      "prod": "主力运载火箭H3（与JAXA共同开发，一级发动机LE-9）及已于2025年6月退役的H-IIA、H-IIB的制造与发射服务，火箭发动机（LE-9、LE-5B等），发射场设施",
+      "pos": "日本唯一负责主力运载火箭制造与发射的企业。H3在2025年12月8号机发射失败后，于2026年6月的6号机和8月的9号机恢复发射并获成功",
+      "def": "主要发射政府卫星（准天顶卫星“引路”、情报收集卫星、HTV-X等）。作为防卫与航天板块，也承接防卫省业务",
+      "chn": "通过推力矢量控制等执行器的电机（钕磁体、钐钴磁体）涉及Dy、Tb、Sm，通过电子设备中的MLCC等涉及Y（一般构成）。与UACJ、JAXA共同开发Al–Sc合金增材制造的火箭部件，涉及Sc。部件采购来源及原料对华依赖比例未披露。",
+      "note": "2026-11-22：在火箭与发射调查中新增收录。作为事业单位（防卫与航天板块航天事业部）的卡片，而非三菱重工业整体。高功率激光为同一板块的另一张卡片。",
+      "src": "https://www.mhi.com/jp/news/24092502.html ／ https://www.mhi.com/jp/business/products-services/space-defense/rocket-engines-testing ／ https://www.mhi.com/jp/company/location/nagoyaaerow ／ https://www.mhi.com/jp/business/products-services/space-defense/launch-service/past-missions ／ https://scienceportal.jst.go.jp/stories/20260612_s01/ ／ https://scienceportal.jst.go.jp/newsflash/20260812_n01/ ／ https://www.aviationwire.jp/?p=343464"
     }
   },
   "stages": {
@@ -2980,7 +2991,7 @@
       }
     },
     "04_laser_medium": {
-      "label": "激光介质",
+      "label": "固体激光介质",
       "description": "棒材、板条与透明陶瓷",
       "srcNotes": {
         "03_yag_crystal": "将YAG、Y₂O₃的晶体与陶瓷切割、研磨成棒材与板条"
@@ -3076,7 +3087,7 @@
       }
     },
     "05_laser_osc": {
-      "label": "固体激光器",
+      "label": "固体与光纤激光振荡器",
       "description": "Nd:YAG・Yb:YAG・Nd:YVO₄・光纤",
       "srcNotes": {
         "04_laser_medium": "将Nd:YAG・Yb:YAG・Nd:YVO₄晶体与陶瓷作为介质装入固体激光振荡器（光纤激光器不经过此连接）",
@@ -3084,17 +3095,10 @@
       }
     },
     "05_photonics": {
-      "label": "光部件与光器件",
-      "description": "TOSA、EML、ITLA、光收发模块与光放大器",
+      "label": "光部件、光纤与光器件",
+      "description": "光纤、光收发模块、ITLA与光放大器",
       "srcNotes": {
         "04_faraday_tele": "将光隔离器装入TOSA、EML、ITLA、光收发模块和光放大器，阻断返回半导体激光器的反射光（1310/1550nm）"
-      }
-    },
-    "05_scaln_film": {
-      "label": "ScAlN压电薄膜",
-      "description": "面向RF滤波器和MEMS的成膜",
-      "srcNotes": {
-        "04_target": "通过溅射沉积 ScAlN 压电薄膜"
       }
     },
     "05_electronics": {
@@ -3121,9 +3125,8 @@
       "label": "制导与惯性导航",
       "description": "制导武器、IMU与陀螺仪",
       "srcNotes": {
-        "05_scaln_film": "用作 MEMS 惯性及压电传感器",
         "05_motor": "用于舵面驱动、导引头驱动和陀螺仪",
-        "05_electronics": "用于惯性测量单元（IMU）和制导控制装置的电子电路及传感器",
+        "05_electronics": "用于惯性测量单元（IMU）和制导控制装置的电子电路及传感器（Sc：采用ScAlN压电薄膜的MEMS惯性及压电传感器）",
         "05_photonics": "装入光纤制导武器弹上与地面侧的光收发器件"
       }
     },
@@ -3205,9 +3208,8 @@
       "label": "雷达",
       "description": "搜索、监视与气象雷达",
       "srcNotes": {
-        "05_scaln_film": "用作 RF 滤波器和谐振器",
         "05_tube": "用作发射管（TWT、磁控管等）",
-        "05_electronics": "用于收发模块的电子电路和元件",
+        "05_electronics": "用于收发模块的电子电路和元件（Sc：采用ScAlN压电薄膜的RF滤波器和谐振器，以及GaN HEMT的衬底）",
         "05_motor": "用于天线驱动和旋转机构的电机"
       }
     },
@@ -3215,9 +3217,8 @@
       "label": "通信与信息",
       "description": "无线电、卫星通信与信息系统",
       "srcNotes": {
-        "05_scaln_film": "用于通信设备的 RF 滤波器",
         "05_tube": "用于卫星通信和无线电设备的发射管",
-        "05_electronics": "用于通信设备的电子电路和元件（包括磁性元件）",
+        "05_electronics": "用于通信设备的电子电路和元件（包括磁性元件。Sc：采用ScAlN压电薄膜的RF滤波器，以及GaN HEMT的衬底）",
         "05_photonics": "作为光收发模块与光放大器装入光传输设备和海底电缆中继器"
       }
     },
@@ -3232,8 +3233,7 @@
       "label": "RF与压电传感、测量",
       "description": "高频测量・压电评估・传感器・激光测量",
       "srcNotes": {
-        "05_scaln_film": "用作压电传感器和高频器件",
-        "05_electronics": "用于测量仪器和传感器的电子元件",
+        "05_electronics": "用于测量仪器和传感器的电子元件（Sc：采用ScAlN压电薄膜的压电传感器和高频器件）",
         "05_laser_osc": "装入检测・测量设备、隐形切割装置与激光打标机的激光光源（Tb・Sm经光隔离器的旋转器与磁体）"
       }
     }
