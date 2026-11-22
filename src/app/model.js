@@ -123,7 +123,7 @@ var flowOrderByElement={
     2:["02_compound","02_metal"],
     3:["03_light_alloy","03_ceramic","03_sam_crystal","03_alsc_semi","03_yag_crystal"],
     4:["04_am_feedstock","04_elec","04_sc_crystal","04_target","04_faraday_laser"],
-    5:["05_am","05_sofc","05_electronics","05_scaln_film","05_tube","05_laser_osc"],
+    5:["05_am","05_sofc","05_electronics","05_tube","05_laser_osc"],
     6:["06_launch","06_aircraft","06_energy","06_naval","06_space","06_guidance","06_rf_sensor","06_radar","06_comm","06_laser"]
   }
 };

@@ -16,16 +16,16 @@
     },
     "atla-4010601031653": {
       "name": "IHI Aerospace Co., Ltd.",
-      "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4010601031653 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.ihi.co.jp/all_news/2026/ir/__icsFiles/afieldfile/2026/06/02/notice_260602.pdf ／ https://www.ihi.co.jp/ir/stock/information/",
+      "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4010601031653 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.ihi.co.jp/all_news/2026/ir/__icsFiles/afieldfile/2026/06/02/notice_260602.pdf ／ https://www.ihi.co.jp/ir/stock/information/ ／ https://repository.exst.jaxa.jp/dspace/bitstream/a-is/835997/1/AA1740298001.pdf ／ https://newswitch.jp/p/11503",
       "own": "Privately held. Consolidated subsidiary of IHI Corporation (Tokyo Stock Exchange Prime Market, securities code 7013).",
       "rev": "JPY 66.6 billion (fiscal year ended March 2025, standalone)",
-      "prod": "Space technology demonstration using HTV-X for HGV detection and related applications (Part 1) / Type 92 minefield-clearing rocket / chaff rocket / Type 24 littoral minefield-clearing system rocket",
-      "pos": "Market share and position not verified in public sources.",
+      "prod": "Solid rocket boosters (SRB-3) and second-stage attitude-control gas jets for the H3 rocket; the Epsilon solid-fuel rocket (sole manufacturer from flight No. 4 in FY2018) and Epsilon S. / Space technology demonstration using HTV-X for HGV detection and related applications (Part 1) / Type 92 minefield-clearing rocket / chaff rocket / Type 24 littoral minefield-clearing system rocket",
+      "pos": "An integrated maker of solid-fuel rockets, responsible for the H3 solid rocket boosters and the Epsilon",
       "def": "ATLA deliveries (FY2023, FY2024, FY2025): space technology demonstration using HTV-X for HGV detection and related applications (Part 1); Type 92 minefield-clearing rocket; chaff rocket; Type 24 littoral minefield-clearing system rocket",
       "chn": "Countries of raw-material procurement and exposure to China not verified.",
       "bom": "Assessment based on procured items: \"Type 92 minefield-clearing rocket; chaff rocket; Type 24 littoral minefield-clearing system rocket\". Rare earths may be used in magnets, lasers/ceramics, RF and piezoelectric materials, and other components of the relevant equipment. No model-specific public BOM has been verified.",
       "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Sc. Medium confidence (general industry basis)."
+      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Sc. Medium confidence (general industry basis). / 2026-11-22: Research on rockets and launch added the manufacture of the H3 solid rocket boosters and attitude-control gas jets and of the Epsilon to its products and position."
     },
     "atla-8010401096587": {
       "name": "Motorola Solutions Japan Ltd.",
@@ -1241,7 +1241,7 @@
       "pos": "One of the world's leading auto-parts makers, with a wide range of automotive motors. In 2021 it announced development of a rare-earth-free magnet with a superlattice structure in which iron and nickel are ordered at the atomic level, aiming to commercialise it within 5–10 years. In ScAlN it led early domestic device research",
       "def": "Automotive motors serve vehicles. ScAlN-based high-temperature vibration and pressure sensors are for aircraft, generators, automobiles and chemical plants",
       "chn": "Medium to high. High-performance motors such as traction and electric power steering motors usually use neodymium magnets with Dy and Tb added for heat resistance, and its rare-earth-free magnet development aims to replace them. Magnet suppliers are not disclosed. For ScAlN, adoption in mass-produced products, target suppliers and the origin of Sc need verification",
-      "note": "Mass-production use of Sc has not been verified. An R&D and downstream monitoring node. / 2026-11-20: Added a description of automotive motors and actuators and also placed it under Motors & actuators. Element flags reflect the usual make-up of motors using neodymium magnets."
+      "note": "Mass-production use of Sc has not been verified. An R&D and downstream monitoring node. / 2026-11-20: Added a description of automotive motors and actuators and also placed it under Motors & actuators. Element flags reflect the usual make-up of motors using neodymium magnets. / 2026-11-22: The ScAlN piezoelectric film stage was retired because its only domestic participant was this company at the research stage. The ScAlN joint research is now placed under Electronic components & semiconductors, which use the deposited films."
     },
     "seed-44": {
       "name": "JX Advanced Metals",
@@ -1524,7 +1524,7 @@
       "pos": "Market share and position have not been verified in public information.",
       "def": "Directly connected to satellite, defense, aviation, and maritime communications, radar, and interference evaluation. Shares its technology base with commercial 5G testing. SLDs are light sources for fiber-optic gyroscopes (attitude control), OCT and fiber sensors, and may connect to aviation, space and defense through gyroscopes.",
       "chn": "In optical devices, it touches Y, Tb and Sm through the optical isolators built into its SLD modules (Bi-substituted garnet rotators and magnets). Isolator suppliers are not disclosed. The rare-earth BOM of its instruments is unconfirmed.",
-      "note": "Consolidation: existing candidate (not subject to parent-company replacement) / Revenue basis: consolidated net sales in the company profile. / 2026-11-20: Also placed under Optical components & devices because its datasheets state that the SLD modules have built-in optical isolators."
+      "note": "Consolidation: existing candidate (not subject to parent-company replacement) / Revenue basis: consolidated net sales in the company profile. / 2026-11-20: Also placed under Optical components, fibers & devices because its datasheets state that the SLD modules have built-in optical isolators."
     },
     "stage05-integrated-2": {
       "name": "TOYO Corporation",
@@ -2349,7 +2349,7 @@
       "def": "Developed the satellite optical communication payload for JAXA's LUCAS inter-satellite link, which achieved 1.8 Gbps between satellites and transmission to a ground station in January 2025. Submarine cables also carry seafloor seismic observation All submarine-cable equipment, including repeaters, is made at three domestic sites.",
       "chn": "Medium. The sourcing of optical components built into the equipment is the open question. China is reported to account for much of world shipments of data-centre optical transceivers",
       "src": "https://jpn.nec.com/submarine/index.html ／ https://jpn.nec.com/press/202501/20250123_01.html ／ https://jpn.nec.com/press/202012/20201210_02.html ／ https://journal.meti.go.jp/p/40663/ / https://www.nec.com/en/press/202501/global_20250123_01.html ／ https://jpn.nec.com/products/fod/index.html ／ https://www.nedo.go.jp/content/800075667.pdf ／ https://toyokeizai.net/articles/-/941884",
-      "note": "The cable itself is made by its subsidiary OCC in Wakamatsu, Kitakyushu. Submarine repeaters carry an optical isolator every 50 to 100 km, and NEC is named among Kohoku Kogyo's principal customers / Flags indicate relevance to the optical application chain; product-specific Y/Dy/Tb content and component suppliers are undisclosed. They do not establish confirmed material content. / 2026-11-20: Also placed under Optical components & devices because it sells optical transceivers as components and makes submarine optical repeaters (optical amplifiers) at NEC Platforms' Otsuki site. Built-in isolators are inferred from the usual configuration."
+      "note": "The cable itself is made by its subsidiary OCC in Wakamatsu, Kitakyushu. Submarine repeaters carry an optical isolator every 50 to 100 km, and NEC is named among Kohoku Kogyo's principal customers / Flags indicate relevance to the optical application chain; product-specific Y/Dy/Tb content and component suppliers are undisclosed. They do not establish confirmed material content. / 2026-11-20: Also placed under Optical components, fibers & devices because it sells optical transceivers as components and makes submarine optical repeaters (optical amplifiers) at NEC Platforms' Otsuki site. Built-in isolators are inferred from the usual configuration."
     },
     "optnet-1finity": {
       "name": "1FINITY",
@@ -2392,7 +2392,7 @@
       "pos": "One of the few domestic firms producing DFB laser chips. No share figure confirmed.",
       "def": "No defense deliveries confirmed. Applications are digital coherent optical transmission and data centers",
       "chn": "Medium. The laser chips are built on indium phosphide and use no rare earths, but Y and Tb enter through the optical isolator inside the laser module Its fiber lasers touch Tb and Sm through output-side optical isolators (TGG or similar rotators and magnets; typical configuration).",
-      "note": "An ITLA is a tunable laser module with its own control board, and the usual configuration places an optical isolator at the semiconductor laser's output to block back-reflection. The Nano ITLA measures 25 × 15.6 × 6.7 mm. Pump LD modules for Raman amplifiers cover 1330–1520 nm in 400, 500 and 600 mW versions. The company is investing about JPY 100 billion to double optical-fiber capacity across four countries including Japan and the United States (announced August 2026) / 2026-11-20: Fujitsu Optical Components (Kawasaki) was merged into this card as part of the Furukawa Electric group's optical devices. / 2026-11-21: Also placed under solid-state laser oscillators because it makes industrial fiber lasers.",
+      "note": "An ITLA is a tunable laser module with its own control board, and the usual configuration places an optical isolator at the semiconductor laser's output to block back-reflection. The Nano ITLA measures 25 × 15.6 × 6.7 mm. Pump LD modules for Raman amplifiers cover 1330–1520 nm in 400, 500 and 600 mW versions. The company is investing about JPY 100 billion to double optical-fiber capacity across four countries including Japan and the United States (announced August 2026) / 2026-11-20: Fujitsu Optical Components (Kawasaki) was merged into this card as part of the Furukawa Electric group's optical devices. / 2026-11-21: Also placed under Solid-state & fiber laser oscillators because it makes industrial fiber lasers.",
       "src": "https://www.furukawaelectric.com/release/2021/comm_20210607.html ／ https://www.furukawaelectric.com/release/2019/comm_190920.html ／ https://www.furukawaelectric.com/company/outline/ ／ https://www.nihon-ma.co.jp/news/20241212_5801-9/ ／ https://www.fujitsu.com/jp/group/foc/en/products/coherent-modules/cfp2-aco/indexgig5.html ／ https://www.fujitsu.com/jp/group/foc/en/news/indexgig5.html ／ https://pr.mono.ipros.com/narasaki/product/detail/2000341197/ ／ https://newswitch.jp/p/4258"
     },
     "optics-carlit": {
@@ -2433,7 +2433,7 @@
       "prod": "Spatial light modulators (LCOS-SLM: SLM-200, 210, 250, 300, 310 and others), spectral shapers (WSS-2000 LCOS programmable optical filter), optical power monitors (tap photodetectors NTP, UTP, MTP and IPD, the isolator-integrated INTP, and the MPA multichannel optical power monitor), optical attenuators (MEMS-driven COVA-1), optical filters (MTF series MEMS tunable filters), and optical subsystems (custom optical modules)",
       "chn": "Rare earths are involved only through INTP (a C/L-band tap photodetector with a built-in optical isolator). The rotator and magnet materials of the isolator and their suppliers are not disclosed. No use of rare earths was found in its spatial light modulators, filters, attenuators or power monitors themselves.",
       "src": "https://aoc.santec.com/jp/ ／ https://aoc.santec.com/jp/products/slm/ ／ https://aoc.santec.com/jp/products/monitor/ ／ https://aoc.santec.com/jp/products/monitor/intp/ ／ https://aoc.santec.com/jp/products/voa/ ／ https://aoc.santec.com/jp/products/filter/ ／ https://aoc.santec.com/en/assets/doc/INTP-C-E.pdf",
-      "note": "It has no stand-alone optical isolator products but makes INTP, a tap photodetector with a built-in isolator (for QSFP-DD optical transceivers, preliminary), so it is placed under Optical components & devices. Element flags reflect the usual make-up of the built-in isolator (Bi:RIG or YIG rotator and SmCo magnet) and do not confirm actual content. / 2026-11-20: Checked against the product lineup (spatial light modulators, spectral shapers, optical power monitors, optical attenuators, optical filters, optical subsystems) and Product Guide 2025, and moved from Faraday rotators & isolators (optical communications).",
+      "note": "It has no stand-alone optical isolator products but makes INTP, a tap photodetector with a built-in isolator (for QSFP-DD optical transceivers, preliminary), so it is placed under Optical components, fibers & devices. Element flags reflect the usual make-up of the built-in isolator (Bi:RIG or YIG rotator and SmCo magnet) and do not confirm actual content. / 2026-11-20: Checked against the product lineup (spatial light modulators, spectral shapers, optical power monitors, optical attenuators, optical filters, optical subsystems) and Product Guide 2025, and moved from Faraday rotators & isolators (optical communications).",
       "def": "Components for optical-power monitoring and blocking reverse light in optical communication modules; the product pages and datasheet reviewed identify no defense or space project."
     },
     "optics-tatsuta": {
@@ -2537,7 +2537,7 @@
       "def": "Not confirmed. Fiber lasers are mainly for materials processing.",
       "chn": "Suppliers of the Tb and Sc used as TSAG raw materials are not disclosed. Tb is highly dependent on China.",
       "src": "https://patents.google.com/patent/US8804240B2/en ／ https://www.nims.go.jp/electr-opt/OPCRY_e.html ／ https://www.optic-product.fujikura.com/wp-content/uploads/2025/06/CPJ70A_71A_79A.pdf ／ https://www2.jpx.co.jp/disc/58030/081220260514532598_tse-acedjpsm-58030-20260514358030-ixbrl.htm",
-      "note": "2026-11-19: Newly added through additional research on Faraday rotators and optical isolators for laser wavelengths. / 2026-11-21: Also placed under solid-state laser oscillators because it makes its own Yb fiber lasers (Sc is included through isolators that use its in-house TSAG rotators)."
+      "note": "2026-11-19: Newly added through additional research on Faraday rotators and optical isolators for laser wavelengths. / 2026-11-21: Also placed under Solid-state & fiber laser oscillators because it makes its own Yb fiber lasers (Sc is included through isolators that use its in-house TSAG rotators). / 2026-11-22: Also placed under Optical components, fibers & devices because it makes optical fibers, optical cables and fiber devices for fiber lasers (the fibers themselves contain none of the covered elements; Tb and the Sm and Dy in magnets come from its own optical isolators used with them)."
     },
     "compound-kisankinzoku": {
       "name": "Kisan Kinzoku",
@@ -2650,14 +2650,14 @@
       "src": "https://newswitch.jp/p/7761 ／ https://newswitch.jp/p/4258"
     },
     "laser-mhi-defense": {
-      "name": "Mitsubishi Heavy Industries (defense & space: high-power lasers)",
-      "own": "Listed on the TSE Prime Market. Defense & space segment",
-      "rev": "Not confirmed (laser sales alone are not disclosed)",
+      "name": "Mitsubishi Heavy Industries, Defense & Space segment (high-power lasers)",
+      "own": "Listed company / Defense & Space segment of Mitsubishi Heavy Industries, Ltd. (Tokyo Stock Exchange Prime Market, securities code 7011)",
+      "rev": "Defense & space revenue: JPY 1,144.5 billion (fiscal year ended March 2026, up 38% year on year). Laser sales alone are not disclosed",
       "prod": "Vehicle-mounted high-power laser demonstrator (10 kW-class, against small drones; ATLA research prototype built in FY2021–2024 and completed in October 2024), and technology to transmit kW-class single-mode laser light over tens of metres through photonic crystal fiber (jointly with NTT)",
       "pos": "One of the two companies carrying out Japan's research prototypes of high-power laser weapons",
       "def": "ATLA research prototype. Said to be able to target drones about 1.2 km away",
       "chn": "The light-source type and suppliers are not disclosed. If kW-class fiber lasers are the source, it touches Tb and Sm through output-side optical isolators (TGG or similar rotators and magnets; typical configuration). Drive motors of the beam director (NdFeB magnets) may also involve Dy and Tb.",
-      "note": "2026-11-21: Newly added through research on laser systems. Kept separate from the MHI cards for energy and aero engines because the businesses differ. / 2026-11-21: Marked as having ATLA procurement records because the ATLA research-prototype contract (vehicle-mounted high-power laser demonstrator) was confirmed.",
+      "note": "2026-11-21: Newly added through research on laser systems. Kept separate from the MHI cards for energy and aero engines because the businesses differ. / 2026-11-21: Marked as having ATLA procurement records because the ATLA research-prototype contract (vehicle-mounted high-power laser demonstrator) was confirmed. / 2026-11-22: Rewritten as a business-unit card (Defense & Space segment) rather than one for Mitsubishi Heavy Industries as a whole, with the name, ownership and revenue updated. Rockets are covered by a separate card for the Space Systems Division in the same segment.",
       "src": "https://www.mod.go.jp/atla/research/ats2024/pdf_oral_matl/1113_1330_ss17.pdf ／ https://www.mod.go.jp/atla/research/ats2024/pdf_exhi_pos/p-24.pdf ／ https://www.mhi.com/jp/news/18042503.html"
     },
     "laser-khi-defense": {
@@ -2813,6 +2813,17 @@
       "chn": "The medium of the solid-state pulse laser is not disclosed. If it is the usual Nd:YAG, it touches Y, and it touches Tb and Sm through the rotators and magnets of optical isolators (typical configuration).",
       "note": "2026-11-21: Newly added through research on laser systems. Placed under satellites & spacecraft because the lasers are carried on satellites. / 2026-11-21: Marked as having ATLA procurement records because the Ministry of Defense research contract (laser ranging, November 2025) was confirmed. The older card for the same company (stage05-integrated-31) was removed in favour of this one.",
       "src": "https://www.mod.go.jp/j/press/news/2026/03/06c.html ／ https://news.mynavi.jp/techplus/article/20240131-2873557/ ／ https://www.watch.impress.co.jp/docs/news/1565176.html"
+    },
+    "launch-mhi-space": {
+      "name": "Mitsubishi Heavy Industries, Defense & Space segment, Space Systems Division (H3 rocket)",
+      "own": "Listed company / Space Systems Division of the Defense & Space segment of Mitsubishi Heavy Industries, Ltd. (Tokyo Stock Exchange Prime Market, securities code 7011). Launch-vehicle airframes are assembled at the Tobishima Plant of Nagoya Aerospace Systems Works (Tobishima, Aichi), and Nagoya Guidance & Propulsion Systems Works (Komaki, Aichi) produces aero and space engines among other products",
+      "rev": "Defense & space revenue: JPY 1,144.5 billion (fiscal year ended March 2026, up 38% year on year). Sales of the Space Systems Division alone are not disclosed",
+      "prod": "Manufacture and launch services for the H3 flagship launch vehicle (co-developed with JAXA; first-stage engine LE-9) and for the H-IIA and H-IIB, which ended operations in June 2025; rocket engines (LE-9, LE-5B and others); launch-site facilities",
+      "pos": "The only company that builds and launches Japan’s flagship launch vehicles. After the H3 No. 8 failure in December 2025, launches resumed successfully with No. 6 in June 2026 and No. 9 in August 2026",
+      "def": "Launches mainly government satellites (Michibiki quasi-zenith satellites, information-gathering satellites, HTV-X and others). As part of the Defense & Space segment, the business also serves the Ministry of Defense",
+      "chn": "Touches Dy, Tb and Sm through actuator motors such as those for thrust vector control (NdFeB and SmCo magnets), and Y through MLCCs and other electronics (typical configuration). Touches Sc through rocket parts made by additive manufacturing of Al–Sc alloy, co-developed with UACJ and JAXA. Component suppliers and China’s share of raw materials are not disclosed.",
+      "note": "2026-11-22: Newly added through research on rockets and launch. Recorded as a business-unit card (Space Systems Division of the Defense & Space segment) rather than for Mitsubishi Heavy Industries as a whole. High-power lasers are covered by a separate card in the same segment.",
+      "src": "https://www.mhi.com/jp/news/24092502.html ／ https://www.mhi.com/jp/business/products-services/space-defense/rocket-engines-testing ／ https://www.mhi.com/jp/company/location/nagoyaaerow ／ https://www.mhi.com/jp/business/products-services/space-defense/launch-service/past-missions ／ https://scienceportal.jst.go.jp/stories/20260612_s01/ ／ https://scienceportal.jst.go.jp/newsflash/20260812_n01/ ／ https://www.aviationwire.jp/?p=343464"
     }
   },
   "stages": {
@@ -2980,7 +2991,7 @@
       }
     },
     "04_laser_medium": {
-      "label": "Laser media",
+      "label": "Solid-state laser media",
       "description": "Rods, slabs and transparent ceramics",
       "srcNotes": {
         "03_yag_crystal": "Cut and polish YAG and Y₂O₃ crystals and ceramics into rods and slabs"
@@ -3076,7 +3087,7 @@
       }
     },
     "05_laser_osc": {
-      "label": "Solid-state laser oscillators",
+      "label": "Solid-state & fiber laser oscillators",
       "description": "Nd:YAG, Yb:YAG, Nd:YVO₄ and fiber",
       "srcNotes": {
         "04_laser_medium": "Build Nd:YAG, Yb:YAG and Nd:YVO₄ crystals and ceramics into solid-state laser oscillators as the gain medium (fiber lasers do not pass through this link)",
@@ -3084,17 +3095,10 @@
       }
     },
     "05_photonics": {
-      "label": "Optical components & devices",
-      "description": "TOSAs, EMLs, ITLAs, optical transceivers and optical amplifiers",
+      "label": "Optical components, fibers & devices",
+      "description": "Optical fibers, optical transceivers, ITLAs and optical amplifiers",
       "srcNotes": {
         "04_faraday_tele": "Build optical isolators into TOSAs, EMLs, ITLAs, optical transceivers and optical amplifiers to block light reflected back into semiconductor lasers (1310/1550 nm)"
-      }
-    },
-    "05_scaln_film": {
-      "label": "ScAlN piezoelectric films",
-      "description": "Deposition for RF filters and MEMS",
-      "srcNotes": {
-        "04_target": "Deposit ScAlN piezoelectric films by sputtering"
       }
     },
     "05_electronics": {
@@ -3121,9 +3125,8 @@
       "label": "Guidance & inertial navigation",
       "description": "Guided weapons, IMUs and gyros",
       "srcNotes": {
-        "05_scaln_film": "MEMS inertial and piezoelectric sensors",
         "05_motor": "Steering, seeker drives and gyros",
-        "05_electronics": "Electronics and sensors in inertial measurement units and guidance controllers",
+        "05_electronics": "Electronics and sensors in inertial measurement units and guidance controllers (Sc: MEMS inertial and piezoelectric sensors made with ScAlN piezoelectric films)",
         "05_photonics": "Build into the airborne and ground-side optical transceivers of fiber-optic guided weapons"
       }
     },
@@ -3205,9 +3208,8 @@
       "label": "Radar",
       "description": "Search, surveillance and weather radar",
       "srcNotes": {
-        "05_scaln_film": "RF filters and resonators",
         "05_tube": "Transmitter tubes, including TWTs and magnetrons",
-        "05_electronics": "Electronic circuits and components in transmit/receive modules",
+        "05_electronics": "Electronic circuits and components in transmit/receive modules (Sc: RF filters and resonators made with ScAlN piezoelectric films, and substrates for GaN HEMTs)",
         "05_motor": "Motors for antenna drives and rotation mechanisms"
       }
     },
@@ -3215,9 +3217,8 @@
       "label": "Communications & information",
       "description": "Radios, satellite communications and information systems",
       "srcNotes": {
-        "05_scaln_film": "RF filters in communications equipment",
         "05_tube": "Transmitter tubes for satellite communications and radio systems",
-        "05_electronics": "Electronic circuits and components in communications equipment, including magnetic components",
+        "05_electronics": "Electronic circuits and components in communications equipment, including magnetic components (Sc: RF filters made with ScAlN piezoelectric films, and substrates for GaN HEMTs)",
         "05_photonics": "Build into optical transmission equipment and submarine cable repeaters as optical transceivers and amplifiers"
       }
     },
@@ -3232,8 +3233,7 @@
       "label": "RF & piezoelectric sensing",
       "description": "RF measurement, piezo evaluation, sensors and laser measurement",
       "srcNotes": {
-        "05_scaln_film": "Piezoelectric sensors and high-frequency devices",
-        "05_electronics": "Electronic components in instruments and sensors",
+        "05_electronics": "Electronic components in instruments and sensors (Sc: piezoelectric sensors and high-frequency devices made with ScAlN piezoelectric films)",
         "05_laser_osc": "Laser light sources built into inspection and measurement equipment, stealth dicing equipment and laser markers (Tb and Sm through the rotators and magnets of optical isolators)"
       }
     }

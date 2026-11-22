@@ -81,13 +81,10 @@ function eqTierBreakdown(points){
   var tiers=eqTierCounts(points).filter(function(row){return row.count});
   return'<span class="re-eq-tiers"><span class="re-eq-tier-bar">'+tiers.map(function(row){return'<i class="re-criticality re-criticality-'+row.band.tier+'" style="flex-grow:'+row.count+'"></i>'}).join('')+'</span><span class="re-eq-tier-counts">'+tiers.map(function(row){return'<span class="re-criticality re-criticality-'+row.band.tier+'" title="'+esc(eqText('tierTitle',{label:row.band.label,count:row.count}))+'">'+row.count+'</span>'}).join('')+'</span></span>'
 }
-function eqElementTags(list){return list.map(function(element){return'<span class="re-tag" style="color:'+colors[element]+';border-color:'+colors[element]+'">'+esc(tagLabel(element))+'</span>'}).join('')}
-// 工程の元素チップと同じ「● 元素記号」の形（海外はクリティカル度を採点しないため、色は付けない）
-function eqElementDots(list){return list.map(function(element){return'<span class="re-eq-chip re-eq-chip-plain"><i class="re-eq-dot" style="background:'+colors[element]+'"></i>'+esc(tagLabel(element))+'</span>'}).join('')}
 function eqCardHtml(id){
   var sub=eqSub(id),els=equipmentElements(id),points=eqPathPoints(id),name=subText(sub,'label');
   var body=points.length?'<span class="re-eq-caption"><span>'+esc(eqText('pathPoints'))+'</span><strong>'+esc(eqText('points',{count:points.length}))+'</strong></span>'+eqTierBreakdown(points):'<span class="re-eq-caption">'+esc(eqText('noPath'))+'</span>';
-  return'<button type="button" class="re-eq-card'+(points.length?'':' is-empty')+'" data-eq="'+esc(id)+'" aria-pressed="'+(eqState.eq===id)+'"><span class="re-eq-head"><span class="re-eq-icon">'+eqIconSvg(id)+'</span><span class="re-eq-name">'+esc(name)+'</span><span class="re-eq-count">'+esc(eqDomestic(id))+'</span></span><span class="re-tags">'+eqElementTags(els)+'</span>'+body+'</button>'
+  return'<button type="button" class="re-eq-card'+(points.length?'':' is-empty')+'" data-eq="'+esc(id)+'" aria-pressed="'+(eqState.eq===id)+'"><span class="re-eq-head"><span class="re-eq-icon">'+eqIconSvg(id)+'</span><span class="re-eq-name">'+esc(name)+'</span><span class="re-eq-count">'+esc(eqDomestic(id))+'</span></span><span class="re-tags">'+tagsHtml(els)+'</span>'+body+'</button>'
 }
 
 // ---- 依存の道筋 ----
@@ -102,7 +99,7 @@ function eqNodeHtml(entry,focus,targetId){
   }
   if(entry.kind==='origin'){
     var match=focus&&focus===entry.element,dep=dependencyRows.find(function(row){return row.tag===entry.element});
-    return'<div class="re-eq-node re-eq-node-origin'+(focus&&!match?' is-dim':'')+(match?' is-target':'')+'" style="--re-eq-el:'+colors[entry.element]+'" data-eq-node="'+esc(entry.id)+'"'+pressed+'><span class="re-eq-node-stage">STAGE 01 '+esc(eqText('overseas'))+'</span><span class="re-eq-node-chips">'+eqElementDots([entry.element])+'</span>'+(dep?'<span class="re-eq-node-stat"><strong>'+dep.china+'%</strong><span>'+esc(dependencyText(dep,'metric'))+'</span></span>':'')+'</div>'
+    return'<div class="re-eq-node re-eq-node-origin'+(focus&&!match?' is-dim':'')+(match?' is-target':'')+'" style="--re-eq-el:'+colors[entry.element]+'" data-eq-node="'+esc(entry.id)+'"'+pressed+'><span class="re-eq-node-stage">STAGE 01 '+esc(eqText('overseas'))+'</span><span class="re-eq-node-chips">'+tagsHtml([entry.element])+'</span>'+(dep?'<span class="re-eq-node-stat"><strong>'+dep.china+'%</strong><span>'+esc(dependencyText(dep,'metric'))+'</span></span>':'')+'</div>'
   }
   var item=entry.item,matchNode=focus&&item.els.has(focus);
   var chips=elements.filter(function(element){return item.els.has(element)}).map(function(element){
@@ -137,7 +134,17 @@ function renderEquipmentPath(){
   // 海外（STAGE 01）は帯の並びより、元素の並び（Y → Dy・Tb → Sm → Sc）を優先して固定する
   columns[5].sort(function(a,b){return elements.indexOf(a.element)-elements.indexOf(b.element)});
   var grid=host.querySelector('#re-eq-path-grid');
-  grid.innerHTML=columns.map(function(items,index){return'<div class="re-eq-col"><div class="re-eq-col-head">'+esc(eqStageTitle(6-index))+'</div><div class="re-eq-stack">'+items.map(function(item){return eqNodeHtml(item,focus,target.id)}).join('')+'</div></div>'}).join('');
+  // 列の見出しには、その列の工程にいる国内企業の数（重複を除く）を出す。元素を強調しているときは、その元素で関わる企業だけを数え、元素の色で示す
+  function columnCount(items){
+    var ids=new Set();
+    items.forEach(function(entry){
+      if(entry.kind==='origin')return;
+      var id=entry.kind==='eq'?entry.id:entry.item.id,els=focus?[focus]:(entry.kind==='eq'?null:elements.filter(function(element){return entry.item.els.has(element)}));
+      data.forEach(function(company){if(company.subs.indexOf(id)>=0&&(!els||els.some(function(element){return companyHasElement(company,id,element)})))ids.add(company.id)})
+    });
+    return ids.size
+  }
+  grid.innerHTML=columns.map(function(items,index){var stage=6-index;return'<div class="re-eq-col"><div class="re-eq-col-head"><span class="re-eq-col-title">'+esc(eqStageTitle(stage))+'</span>'+(stage===1?'':'<span class="re-eq-col-count'+(focus?' is-el':'')+'"'+(focus?' style="--re-eq-el:'+colors[focus]+'"':'')+'>'+esc(companyCount(columnCount(items)))+'</span>')+'</div><div class="re-eq-stack">'+items.map(function(item){return eqNodeHtml(item,focus,target.id)}).join('')+'</div></div>'}).join('');
   host.querySelector('#re-eq-path').classList.toggle('is-empty',!P.els.length);
   grid.querySelectorAll('[data-eq-target]').forEach(function(card){
     card.addEventListener('click',function(event){event.stopPropagation();eqSelectTarget(card.dataset.eqTarget)});
@@ -236,9 +243,7 @@ function renderEquipmentList(){
   dossier.innerHTML=dossierMarkup(items.find(function(company){return company.id===eqState.company}),scope);
   box.querySelectorAll('[data-eq-company]').forEach(function(button){button.addEventListener('click',function(){
     eqState.company=button.dataset.eqCompany;renderEquipmentList();
-    var heading=dossier.querySelector('.re-dossier-title');if(!heading)return;
-    var rect=heading.getBoundingClientRect();
-    if(rect.top<0||rect.bottom>window.innerHeight)dossier.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'})
+    revealDossier(dossier)
   })})
 }
 function eqSelectTarget(id){
@@ -266,9 +271,11 @@ function renderEquipment(){
     host.innerHTML='<div class="re-element-flow-head"><div><h2 class="re-element-flow-title" id="re-eq-title"></h2><p class="re-element-flow-lead" id="re-eq-lead"></p></div></div>'+
       '<div class="re-eq-grid" id="re-eq-grid" role="group"></div><p class="re-eq-note" id="re-eq-cards-note"></p>'+
       '<section class="re-eq-path-panel" id="re-eq-path-panel"><div class="re-eq-path-head"><h3 id="re-eq-path-title"></h3><div class="re-eq-focus" id="re-eq-focus" role="group"></div></div><p class="re-eq-note" id="re-eq-hint"></p>'+
-      '<div class="re-eq-scroll" id="re-eq-frame"><div class="re-eq-path" id="re-eq-path"><svg class="re-eq-path-svg" id="re-eq-path-svg" aria-hidden="true"></svg><div class="re-eq-path-grid" id="re-eq-path-grid"></div></div></div><div class="re-element-flow-note re-eq-cr-note" id="re-eq-cr-note"></div></section>'+
+      '<div class="re-eq-scroll" id="re-eq-frame"><div class="re-eq-path" id="re-eq-path"><svg class="re-eq-path-svg" id="re-eq-path-svg" aria-hidden="true"></svg><div class="re-eq-path-grid" id="re-eq-path-grid"></div></div></div></section>'+
       '<section class="re-element-flow-results" id="re-eq-results"><div class="re-element-flow-results-head"><h2 id="re-eq-list-title"></h2><span id="re-eq-list-count"></span>'+mapReturnButton()+'</div><p class="re-eq-note" id="re-eq-list-note" hidden></p>'+
-      '<main class="re-main"><section class="re-company-grid" id="re-eq-companies" aria-live="polite"></section><aside id="re-eq-dossier"></aside></main></section>';
+      '<main class="re-main"><section class="re-company-grid" id="re-eq-companies" aria-live="polite"></section><aside id="re-eq-dossier"></aside></main></section>'+
+      // クリティカル度の求め方・凡例とシェア水準の判定基準は、企業カードの下に置く（元素別フローと同じ）
+      '<div class="re-element-flow-note re-cr-legend-note" id="re-eq-cr-note"></div>';
     // 図の余白を押すと、強調を一段戻す（選んだカード → 元素の強調 → 全体）
     host.querySelector('#re-eq-frame').addEventListener('click',function(event){
       if(event.target.closest('[data-eq-target]'))return;

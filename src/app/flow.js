@@ -20,10 +20,14 @@ function renderElementFlow(){
   function gapBefore(item){return nodeGap+(labelLinesOf(item).length-1)*lineHeight}
   // 工程見出しの小さい説明も列の幅に収める
   var shortEm=language==="en"?5.2:9.5,shortLimit=Math.max(language==="en"?18:10,Math.floor((step-12)/shortEm));
-  function stageLabelLinesOf(stage){return flowLabelLines(stageText(stage,"label"),language==="en"?22:18)}
+  // 工程見出しは「サプライチェーン全体像」と同じ形：左に STAGE 番号と工程名、右に社数（工程名の1行目の横）。その下に小さい説明を置く。
+  // 工程名は、社数の札を除いた幅で折り返す。STAGE 01 は国内企業がいないため社数を出さない
+  var headWidth=step-20,stageTitleSize=language==="en"?13:14.5,stageTitleLine=language==="en"?16:18;
+  function stageCountLabel(stage){return stage.id===1?"":companyCount(flowStageCount(stage.id,flowElement))}
+  function stageCountWidth(stage){var label=stageCountLabel(stage);return label?18+Array.from(label).length*7.2:0}
+  function stageLabelLinesOf(stage){var room=headWidth-(stageCountWidth(stage)?stageCountWidth(stage)+9:0);return flowLabelLines(stageText(stage,"label"),Math.max(4,Math.floor(room/(language==="en"?stageTitleSize*.56:stageTitleSize*.92))))}
   function stageShortLinesOf(stage){return flowLabelLines(stageText(stage,"short"),shortLimit)}
-  function stageCountY(stage){return 56+(stageLabelLinesOf(stage).length-1)*13}
-  function stageShortY(stage){return stageCountY(stage)+38}
+  function stageShortY(stage){return 42+(stageLabelLinesOf(stage).length-1)*stageTitleLine+17}
   // 図は、見出しの下端と、工程の棒の上に伸びるラベルの高さを足した位置から始める
   var headerBottom=Math.max.apply(null,stages.map(function(stage){return stageShortY(stage)+(stageShortLinesOf(stage).length-1)*11}));
   var topLabelLines=Math.max.apply(null,[1].concat(Object.keys(byStage).map(function(stage){
@@ -113,8 +117,10 @@ function renderElementFlow(){
   root.querySelector(".re-element-flow-swatch").style.setProperty("--flow-color",flowColor);
   var markup='<title>'+esc(tr("flowAria",{element:tagLabel(flowElement)}))+'</title>';
   stages.forEach(function(stage){
-    var x=left+(stage.id-1)*step,stageCount=flowStageCount(stage.id,flowElement),countLabel=companyCount(stageCount),countWidth=26+Array.from(countLabel).length*7.2,labelLines=stageLabelLinesOf(stage),countY=stageCountY(stage),shortY=stageShortY(stage),shortLines=stageShortLinesOf(stage);
-    markup+='<text class="re-ef-stage-code" x="'+x+'" y="28">STAGE '+stage.code+'</text><text class="re-ef-stage-label">'+labelLines.map(function(line,index){return'<tspan x="'+x+'" y="'+(48+index*13)+'">'+esc(line)+'</tspan>'}).join("")+'</text><rect class="re-ef-stage-count-bg" x="'+x+'" y="'+countY+'" width="'+countWidth+'" height="21" rx="10.5" fill="'+flowColor+'" stroke="'+flowColor+'"></rect><text class="re-ef-stage-count" x="'+(x+9)+'" y="'+(countY+14.5)+'">'+countLabel+'</text><text class="re-ef-stage-short">'+shortLines.map(function(line,index){return'<tspan x="'+x+'" y="'+(shortY+index*11)+'">'+esc(line)+'</tspan>'}).join("")+'</text>'
+    var x=left+(stage.id-1)*step,countLabel=stageCountLabel(stage),countWidth=stageCountWidth(stage),countX=x+headWidth-countWidth,labelLines=stageLabelLinesOf(stage),shortY=stageShortY(stage),shortLines=stageShortLinesOf(stage);
+    markup+='<text class="re-ef-stage-code" x="'+x+'" y="22">STAGE '+stage.code+'</text><text class="re-ef-stage-label">'+labelLines.map(function(line,index){return'<tspan x="'+x+'" y="'+(42+index*stageTitleLine)+'">'+esc(line)+'</tspan>'}).join("")+'</text>'+
+      (countLabel?'<rect class="re-ef-stage-count-bg" x="'+countX+'" y="16" width="'+countWidth+'" height="22" rx="11" style="fill:color-mix(in srgb,'+flowColor+' 24%,var(--bg));stroke:'+flowColor+'"></rect><text class="re-ef-stage-count" x="'+(countX+countWidth/2)+'" y="31" text-anchor="middle">'+countLabel+'</text>':'')+
+      '<text class="re-ef-stage-short">'+shortLines.map(function(line,index){return'<tspan x="'+x+'" y="'+(shortY+index*11)+'">'+esc(line)+'</tspan>'}).join("")+'</text>'
   });
   markup+='<g aria-hidden="true">'+edges.map(function(edge){
     var from=edge.from===source.id?stageText(stageMap[1],"label"):subText(edge.a.item,"label"),to=subText(edge.b.item,"label");
@@ -190,10 +196,6 @@ function renderFlowCompanyResults(){
   dossier.innerHTML=dossierMarkup(data.find(function(company){return company.id===flowSelectedId}),flowShareScope());
   box.querySelectorAll("[data-flow-company]").forEach(function(button){button.addEventListener("click",function(){
     flowSelectedId=button.dataset.flowCompany;renderFlowCompanyResults();
-    requestAnimationFrame(function(){
-      var heading=dossier.querySelector(".re-dossier-title");if(!heading)return;
-      var rect=heading.getBoundingClientRect(),inView=rect.top>=0&&rect.bottom<=window.innerHeight&&rect.left>=0&&rect.right<=window.innerWidth;
-      if(!inView)dossier.scrollIntoView({behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"})
-    })
+    requestAnimationFrame(function(){revealDossier(dossier)})
   })})
 }
