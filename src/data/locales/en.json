@@ -3002,7 +3002,7 @@
       "description": "532–1064 nm; TGG, TSAG and Tb-based glass with magnets",
       "srcNotes": {
         "03_yag_crystal": "Faraday elements of TGG and TSAG (TSLAG) crystals, transparent ceramics and Tb-based glass go into rotator units and optical isolators assembled with magnets",
-        "04_mag": "Combine magnets (NdFeB or SmCo) that apply a field to the rotator into rotator units and optical isolators",
+        "04_mag": "Combine magnets (NdFeB or SmCo) that apply a field to the rotator into rotator units and optical isolators (magnet-free rotators that need no magnet also exist)",
         "03_magneto_garnet": "Bi-substituted garnet rotator chips with reduced loss for low-power fiber lasers go into optical isolators assembled with magnets"
       }
     },
@@ -3011,7 +3011,7 @@
       "description": "1310/1550 nm; rotators with magnets and polarisers",
       "srcNotes": {
         "03_magneto_garnet": "Faraday rotator chips (magnetic garnet) go into optical isolators and circulators assembled with magnets and polarisers",
-        "04_mag": "Place SmCo magnets around the rotator chip and combine them with polarisers and birefringent crystals into optical isolators and circulators"
+        "04_mag": "Place SmCo magnets around the rotator chip and combine them with polarisers and birefringent crystals into optical isolators and circulators (magnet-free rotators that need no magnet also exist)"
       }
     },
     "04_target": {

@@ -1,0 +1,72 @@
+<!doctype html>
+<!--
+  X・SNS で共有したときのプレビュー画像（og-image.png、1200×630）の原稿。
+  書き出し：
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --hide-scrollbars \
+      --window-size=1200,630 --screenshot=og-image.png scripts/og-image.html
+  色はサイトのダーク表示の元素色・下地に合わせる。
+-->
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<style>
+:root{--bg:#0f1317;--panel:#171c22;--line:#2a323b;--text:#e9e6dd;--sub:#9aa3ac;--faint:#6b7681;--y:#5fd4c4;--dytb:#9d8cff;--sm:#f2b24e;--sc:#55a8e8}
+*{box-sizing:border-box;margin:0}
+html,body{width:1200px;height:630px;overflow:hidden;background:var(--bg)}
+body{position:relative;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif;color:var(--text)}
+.glow{position:absolute;inset:0;background:radial-gradient(900px 520px at 88% 50%,rgba(85,168,232,.10),transparent 60%),radial-gradient(700px 480px at 10% 0%,rgba(157,140,255,.08),transparent 60%)}
+.flow{position:absolute;left:770px;top:0;width:430px;height:630px}
+.flow path{fill:none;stroke-linecap:round}
+.col{fill:rgba(233,230,221,.05);stroke:rgba(233,230,221,.12)}
+.content{position:absolute;left:72px;top:58px;width:690px}
+.kicker{display:flex;align-items:center;gap:22px;font:600 17px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.24em;color:var(--faint)}
+.mark{width:64px;height:64px;flex:none}
+.mark path{fill:none;stroke-width:4.4;stroke-linecap:round}
+h1{margin-top:36px;font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-weight:600;font-size:58px;white-space:nowrap;line-height:1.22;letter-spacing:.02em}
+.rule{margin-top:26px;width:180px;height:5px;border-radius:3px;background:linear-gradient(90deg,var(--y) 0 25%,var(--dytb) 25% 50%,var(--sm) 50% 75%,var(--sc) 75% 100%)}
+.en{margin-top:24px;font-family:"Hiragino Mincho ProN",serif;font-size:28px;color:var(--sub);letter-spacing:.01em}
+.els{display:flex;gap:26px;margin-top:34px;font:600 24px ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--text)}
+.els span{display:inline-flex;align-items:center;gap:10px}
+.els span::before{content:"";width:14px;height:14px;border-radius:50%;background:var(--c)}
+.foot{position:absolute;left:72px;right:72px;bottom:46px;display:flex;justify-content:space-between;align-items:center;font-size:19px;color:var(--faint);letter-spacing:.04em}
+.foot strong{color:var(--sub);font-weight:600}
+</style>
+</head>
+<body>
+<div class="glow"></div>
+<!-- 右：1点（海外の資源）から4元素の線が6工程の列へ広がるラッパ形 -->
+<svg class="flow" viewBox="0 0 430 630" aria-hidden="true">
+  <rect class="col" x="96" y="262" width="22" height="106" rx="6"/>
+  <rect class="col" x="172" y="222" width="22" height="186" rx="6"/>
+  <rect class="col" x="248" y="172" width="22" height="286" rx="6"/>
+  <rect class="col" x="324" y="112" width="22" height="406" rx="6"/>
+  <rect class="col" x="400" y="52" width="22" height="526" rx="6"/>
+  <path d="M30 315 C 120 315, 170 160, 430 84" stroke="var(--y)" stroke-width="5" opacity=".9"/>
+  <path d="M30 315 C 130 315, 190 250, 430 222" stroke="var(--dytb)" stroke-width="5" opacity=".9"/>
+  <path d="M30 315 C 130 315, 190 380, 430 408" stroke="var(--sm)" stroke-width="5" opacity=".9"/>
+  <path d="M30 315 C 120 315, 170 470, 430 546" stroke="var(--sc)" stroke-width="5" opacity=".9"/>
+  <path d="M30 315 C 140 315, 200 180, 430 152" stroke="var(--y)" stroke-width="2" opacity=".35"/>
+  <path d="M30 315 C 140 315, 200 300, 430 302" stroke="var(--dytb)" stroke-width="2" opacity=".35"/>
+  <path d="M30 315 C 140 315, 200 450, 430 478" stroke="var(--sc)" stroke-width="2" opacity=".35"/>
+  <circle cx="30" cy="315" r="11" fill="var(--text)"/>
+</svg>
+<div class="content">
+  <div class="kicker">
+    <svg class="mark" viewBox="0 0 44 44" aria-hidden="true">
+      <rect x="0.5" y="0.5" width="43" height="43" rx="11" fill="#171c22" stroke="#2a323b"/>
+      <path d="M10 22 C 20 22, 22 11, 34 11" stroke="var(--y)"/>
+      <path d="M10 22 C 20 22, 22 18.5, 34 18.5" stroke="var(--dytb)"/>
+      <path d="M10 22 C 20 22, 22 25.5, 34 25.5" stroke="var(--sm)"/>
+      <path d="M10 22 C 20 22, 22 33, 34 33" stroke="var(--sc)"/>
+      <circle cx="10" cy="22" r="3.4" fill="#e9e6dd"/>
+    </svg>
+    DUAL-USE SUPPLY CHAIN AUDIT
+  </div>
+  <h1>希土類デュアルユース・<br>サプライチェーン監査</h1>
+  <div class="rule"></div>
+  <p class="en">Rare-Earth Dual-Use Supply Chain Audit</p>
+  <div class="els"><span style="--c:var(--y)">Y</span><span style="--c:var(--dytb)">Dy·Tb</span><span style="--c:var(--sm)">Sm</span><span style="--c:var(--sc)">Sc</span></div>
+</div>
+<div class="foot"><span><strong>海外の資源・分離</strong> → 素材 → 材料 → 部材 → モジュール・機器 → <strong>装備・システム</strong></span><span>日本語 / English / 简体中文</span></div>
+</body>
+</html>
