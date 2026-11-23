@@ -31,7 +31,7 @@ check(
 );
 check(
   "工程別の延べ企業数",
-  sameJson(Object.fromEntries([2, 3, 4, 5, 6].map((stage) => [stage, dataset.companies.filter((company) => company.stages.includes(stage)).length])), { 2: 9, 3: 26, 4: 47, 5: 81, 6: 130 }),
+  sameJson(Object.fromEntries([2, 3, 4, 5, 6].map((stage) => [stage, dataset.companies.filter((company) => company.stages.includes(stage)).length])), { 2: 9, 3: 26, 4: 45, 5: 81, 6: 130 }),
 );
 check(
   "列順が全51分類を工程ごとに一度ずつ指定",
@@ -45,7 +45,7 @@ check("希土類対象外企業を収録しない", dataset.companies.every((com
 const routeCount = dataset.subcategories.reduce((sum, sub) => sum + (sub.src?.length ?? 0), 0);
 const routeKeys = dataset.subcategories.flatMap((sub) => (sub.src ?? []).flatMap((source) => (sub.srcEls[source] ?? []).map((element) => source + "|" + sub.id + "|" + element)));
 const skippedRoutes = dataset.subcategories.flatMap((sub) => Object.keys(sub.srcSkip ?? {}).map((source) => source + "|" + sub.id));
-check("84本の監査済みカテゴリー接続（うち同じ工程の中の組み込み2本）", routeCount === 84);
+check("85本の監査済みカテゴリー接続（うち同じ工程の中の組み込み2本）", routeCount === 85);
 check("元素別接続に重複なし", routeKeys.length === new Set(routeKeys).size);
 check(
   "全工程の接続に元素と根拠を定義",

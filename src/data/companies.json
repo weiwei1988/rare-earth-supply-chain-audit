@@ -433,41 +433,31 @@
     "name": "信光社",
     "jsx": "信光社",
     "stages": [
-      3,
       4
     ],
     "subs": [
-      "03_yag_crystal",
-      "04_laser_medium",
       "04_faraday_laser"
     ],
     "subEls": {
-      "03_yag_crystal": [
-        "Y"
-      ],
-      "04_laser_medium": [
-        "Y"
-      ],
       "04_faraday_laser": [
         "DyTb",
         "Sm"
       ]
     },
     "tags": [
-      "Y",
       "DyTb",
       "Sm"
     ],
-    "own": "非上場",
-    "rev": "推定数十億円",
-    "prod": "YAG単結晶ロッド・光学部材",
-    "pos": "国内YAG単結晶の老舗専業",
-    "def": "レーザー測距・加工・研究用光学への波及",
-    "chn": "高と推定。原料調達先の一次確認が必要",
+    "own": "非上場。本社・工場は神奈川県横浜市栄区。1947年に合成宝石メーカーとして創業し、子会社にルビカ工業（富山県魚津市）がある",
+    "rev": "非開示",
+    "prod": "ファイバーレーザー用の光アイソレータ（Yb・Er ファイバーレーザー向け。1064〜1100nm、1178nm、1310〜1620nm、1930〜2060nm の各帯。1μm 帯 5W 級と 2μm 帯 10W・30W 級の新製品あり）、ファラデー効果を使う光ファイバー磁界センサと防災用の光ファイバーセンサ、サファイア単結晶とその加工品（腕時計用サファイアクリスタルなど）、ルチルプリズム、薄膜成長用の酸化物基板、アルミナ蒸着材",
+    "pos": "合成宝石から始まった結晶メーカーで、腕時計用サファイアクリスタルの国内唯一のメーカーと自社で説明する。光アイソレータのシェアは未確認。現行の製品に YAG 単結晶・レーザー媒質は見当たらない",
+    "def": "ファイバーレーザー用アイソレータは加工・研究用途。防衛向けの納入実績は未確認",
+    "chn": "アイソレータの回転子（ファラデー素子）の材料と磁石の種類は非開示。1μm 帯は TGG など Tb 系の常磁性ガーネット、1.3〜2μm 帯は鉄ガーネット系を回転子に使い、SmCo・NdFeB の磁石と組むのが一般的な構成。サファイア・ルチル・アルミナは希土類を含まない。",
     "ev": "C",
     "exc": 0,
-    "src": "JSX",
-    "note": "一次資料未確認。確度△ ／ Stage 04『固体レーザー発振器（YAG）』から除外し、YAG結晶・セラミックス材料側のStage 03に限定"
+    "src": "https://www.shinkosha.com/product/ ／ https://www.shinkosha.com/product/isolator/ ／ https://www.shinkosha.com/product/sensor/ ／ https://www.shinkosha.com/company/history/",
+    "note": "一次資料未確認。確度△ ／ Stage 04『固体レーザー発振器（YAG）』から除外し、YAG結晶・セラミックス材料側のStage 03に限定 ／ 2026-11-23：公式サイトの製品一覧で、現行製品はサファイア・ルチル・酸化物基板、ファイバーレーザー用光アイソレータ、光ファイバーセンサーであり、YAG 単結晶・レーザー媒質は扱っていないことを確認した。「レーザー用光学結晶・透明セラミックス」「固体レーザー媒質」から外し、「回転子ユニット・光アイソレータ（レーザー）」だけに置いた。"
   },
   {
     "id": "seed-12",
@@ -475,14 +465,11 @@
     "jsx": "固体レーザー発振器DD正式採用",
     "stages": [
       3,
-      4,
       5
     ],
     "subs": [
       "03_yag_crystal",
       "03_magneto_garnet",
-      "04_faraday_tele",
-      "04_faraday_laser",
       "05_laser_osc"
     ],
     "subEls": {
@@ -493,14 +480,6 @@
       "03_magneto_garnet": [
         "Y",
         "DyTb"
-      ],
-      "04_faraday_tele": [
-        "Y",
-        "DyTb"
-      ],
-      "04_faraday_laser": [
-        "DyTb",
-        "Sc"
       ],
       "05_laser_osc": [
         "Y",
@@ -528,7 +507,7 @@
     "formal": true,
     "formalSource": "固体レーザー発振器DD：採用候補",
     "src": "https://www.opt-oxide.com/products/ ／ https://www.opt-oxide.com/products/optical-device/ ／ https://www.opt-oxide.com/products/optical-module/ ／ https://www.opt-oxide.com/products-list/laser/ ／ https://www.opt-oxide.com/products-list/laser/cw-laser/item_LA00003 ／ https://www.opt-oxide.com/products-list/laser/qcw-laser/item_LA00008 ／ https://www.opt-oxide.com/products-list/laser/femto-laser/item_LA00012_1 ／ https://www.opt-oxide.com/products-list/laser/special/item_LA00016 ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00006 ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00013 ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00014 ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00015 ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00017 ／ https://www.opt-oxide.com/products-list/single-crystal/scintillator ／ https://www.opt-oxide.com/products-list/optical-device/qpm ／ https://www.opt-oxide.com/v2019/wp-content/uploads/2013/03/266Laser_r12-1.pdf ／ https://www.opt-oxide.com/ir/meeting/meeting26_review/ ／ https://www.opt-oxide.com/products/single-crystal/ ／ https://www.opt-oxide.com/products/laser/ ／ https://www.opt-oxide.com/products/prototype-service/",
-    "note": "固体レーザー発振器DDの「採用候補（発振器）」に基づきStage 04へ正式採用。 ／ 266nm QCW は赤外ファイバー増幅光源を2段波長変換する構成で、ファイバ増幅段と多段変換には戻り光を遮るアイソレータを置くのが一般的。同社自身がファラデー回転子のメーカーでもある / 光学経路上の製品・用途に基づく関連フラグ。個別製品のY・Dy・Tb含有、部材供給元は非開示であり、搭載確認を意味しない。 ／ 2026-11-20：製品一覧（単結晶・レーザー・光デバイス・光モジュール）に合わせて製品欄を更新。TGG は現行の製品一覧になく、磁気光学結晶を TSAG・YIG・Bi:RIG に改めた。光アイソレータ用の磁気光学デバイスと TSAG から、レーザー用のファラデー回転子・アイソレータにも置いた。 ／ 2026-11-20：製品一覧の5分類（結晶・レーザー・光デバイス・光モジュール・試作サービス）と照合し、試作・サービスを製品欄に追加。"
+    "note": "固体レーザー発振器DDの「採用候補（発振器）」に基づきStage 04へ正式採用。 ／ 266nm QCW は赤外ファイバー増幅光源を2段波長変換する構成で、ファイバ増幅段と多段変換には戻り光を遮るアイソレータを置くのが一般的。同社自身がファラデー回転子のメーカーでもある / 光学経路上の製品・用途に基づく関連フラグ。個別製品のY・Dy・Tb含有、部材供給元は非開示であり、搭載確認を意味しない。 ／ 2026-11-20：製品一覧（単結晶・レーザー・光デバイス・光モジュール）に合わせて製品欄を更新。TGG は現行の製品一覧になく、磁気光学結晶を TSAG・YIG・Bi:RIG に改めた。光アイソレータ用の磁気光学デバイスと TSAG から、レーザー用のファラデー回転子・アイソレータにも置いた。 ／ 2026-11-20：製品一覧の5分類（結晶・レーザー・光デバイス・光モジュール・試作サービス）と照合し、試作・サービスを製品欄に追加。 ／ 2026-11-23：ファラデー回転子の定義を素子（磁石を含まない）に合わせて工程の境目を引き直し、回転子・素子だけを作る当社はアイソレータの段から外して「磁性ガーネット・ファラデー回転子」と「レーザー用光学結晶・透明セラミックス」に置いた。"
   },
   {
     "id": "seed-13",
@@ -8642,15 +8621,10 @@
     "name": "グラノプト",
     "jsx": "グラノプト",
     "subs": [
-      "03_magneto_garnet",
-      "04_faraday_tele"
+      "03_magneto_garnet"
     ],
     "subEls": {
       "03_magneto_garnet": [
-        "Y",
-        "DyTb"
-      ],
-      "04_faraday_tele": [
         "Y",
         "DyTb"
       ]
@@ -8661,17 +8635,16 @@
     ],
     "own": "非上場。住友金属鉱山51%・三菱ガス化学49%の合弁（2005年4月設立）",
     "rev": "非開示（資本金1.5億円、従業員183名・2025年7月時点）",
-    "prod": "Bi置換希土類鉄ガーネットの単結晶膜（液相エピタキシャル成長、厚さ0.1〜0.5mm）によるファラデー回転子。GTD・GLB・GSF・GMF・ETD の各品種、波長1310〜1590nm、標準11mm角",
+    "prod": "Bi置換希土類鉄ガーネットの単結晶膜（液相エピタキシャル成長、厚さ0.1〜0.5mm）によるファラデー回転子。GTD・GLB・GSF・ETD（外部磁石と組む品種）と GMF（磁化を自分で保つ磁石フリー品種）、波長1310〜1590nm、標準11mm角",
     "pos": "光通信用ファラデー回転子で世界トップシェア。経済産業省「グローバルニッチトップ企業100選」2020年版の選定資料は、この材料の供給者がほぼ2社に限られると記す",
     "def": "確認できず。用途は基地局・データセンター・海底ケーブル",
     "chn": "高。膜組成のY・Tb・Gd・Hoは中国の中重希土類輸出管理の対象元素。深圳に販売子会社。完成品の光アイソレータは世界の9割以上が中国で組み立てられる",
     "ev": "A",
     "exc": 0,
     "src": "https://www.granopt.jp/company.html ／ https://www.granopt.jp/en/images/gnt100_01.pdf ／ https://www.smm.co.jp/news/release/2026/06/002134.html ／ https://www.mgc.co.jp/corporate/news/2026/260622.html",
-    "note": "秋田県能代市に本社・第1工場、第2工場は2024年度完工。2027年度中にファラデーローテータの生産能力を2025年度比3倍へ。液相エピタキシャル成長の種結晶となるSGGG基板は住友金属鉱山グループが供給",
+    "note": "秋田県能代市に本社・第1工場、第2工場は2024年度完工。2027年度中にファラデーローテータの生産能力を2025年度比3倍へ。液相エピタキシャル成長の種結晶となるSGGG基板は住友金属鉱山グループが供給 ／ 2026-11-23：ファラデー回転子の定義を素子（磁石を含まない）に合わせて工程の境目を引き直した。回転子チップだけを作り、磁石と組んだアイソレータは作らないため、「磁性ガーネット・ファラデー回転子」だけに置いた。",
     "stages": [
-      3,
-      4
+      3
     ]
   },
   {
@@ -8680,8 +8653,7 @@
     "jsx": "湖北工業",
     "subs": [
       "03_magneto_garnet",
-      "04_faraday_tele",
-      "04_faraday_laser"
+      "04_faraday_tele"
     ],
     "subEls": {
       "03_magneto_garnet": [
@@ -8690,10 +8662,6 @@
       ],
       "04_faraday_tele": [
         "Y",
-        "DyTb",
-        "Sm"
-      ],
-      "04_faraday_laser": [
         "DyTb",
         "Sm"
       ]
@@ -8712,7 +8680,7 @@
     "ev": "A",
     "exc": 0,
     "src": "https://www.kohokukogyo.co.jp/product/optical-communication-part-and-device/ ／ https://www.kohokukogyo.co.jp/assets/doc/ir/20251128_mufg_ir_seminar.pdf ／ https://www.nikkan.co.jp/articles/view/00740858",
-    "note": "本社工場は滋賀県長浜市高月町。膜の育成から完成した光部品までを1社で担うため、工程03・04・05にまたがる。アルミ電解コンデンサ用リード端子でも世界シェア6割超",
+    "note": "本社工場は滋賀県長浜市高月町。膜の育成から完成した光部品までを1社で担うため、工程03・04・05にまたがる。アルミ電解コンデンサ用リード端子でも世界シェア6割超 ／ 2026-11-23：ファラデー回転子の定義を素子（磁石を含まない）に合わせて工程の境目を引き直した。レーザー用は回転子チップのため「磁性ガーネット・ファラデー回転子」に含め、アイソレータの段は光通信用の組立品だけにした。",
     "stages": [
       3,
       4
@@ -9070,14 +9038,14 @@
     ],
     "own": "非上場。住友金属鉱山の100%出資のグループ会社。本社・工場は秋田県能代市",
     "rev": "非開示",
-    "prod": "光アイソレータ（光通信用の円筒タイプ・表面実装タイプ・磁石フリータイプ、ファイバーレーザー用インラインタイプ）。ファイバーレーザー用は 1030／1064nm の 2W（CW）級で、ファイバ付き・筐体付き・アイソレータコアの形で量産し、1550nm 品も試作する。SGGG（置換型ガリウムガドリニウムガーネット）の結晶・ウエハ（3・4インチ）",
-    "chn": "回転子は Bi 置換希土類鉄ガーネットの LPE 単結晶膜で、SGGG 基板の上に育成する（SGGG は Gd 系で、Y・Dy・Tb とは区別する）。ファラデー回転子の事業は2005年にグラノプトへ移し、問い合わせ先もグラノプト。ガーネットの希土類内訳と原料の調達先は非開示。",
+    "prod": "光アイソレータ（光通信用の円筒タイプ・表面実装タイプ・磁石フリータイプ、ファイバーレーザー用インラインタイプ）。ファイバーレーザー用は 1030／1064nm の 2W（CW）級で、ファイバ付き・筐体付き・アイソレータコアの形で量産し、1550nm 品も試作する。ほかに SGGG（置換型ガリウムガドリニウムガーネット）の結晶・ウエハ（3・4インチ）",
+    "chn": "組み込む回転子は Bi 置換希土類鉄ガーネットの LPE 単結晶膜（SGGG は Gd 系で、Y・Dy・Tb とは区別する）。回転子の事業は2005年にグラノプトへ移し、回転子の問い合わせ先もグラノプト。ガーネットの希土類内訳と原料の調達先は非開示。",
     "ev": "B",
     "exc": 1,
     "src": "https://www.smm.co.jp/business/material/products/optical_isolator/ ／ https://www.smm.co.jp/business/material/products/faraday_rotator/ ／ https://www.smm.co.jp/business/material/products/sggg/ ／ https://www.smmp.co.jp/ ／ https://www.smmp.co.jp/smmprecision/all/WZH_1_1000_AOID,ID/CLentry_flow.htm ／ https://www.smmp.co.jp/s/sm/smmprecision/images/fl_promotion_material20230728.pdf",
-    "note": "1996年に光アイソレータ製造開始。2005年にFR事業をグラノプトへ移管、2020年にSGGG基板販売開始。SGGGはGd系でありY・Dy・Tb使用とは区別する。 ／ 2026-11-20：同社の製品ページと公開資料「Optical Isolator for Fiber Laser Application」（2023年7月）で、1μm 帯のファイバーレーザー用アイソレータの量産を確認し、「ファラデー回転子・アイソレータ（レーザー）」にも置いた。1550nm 品は従来の RIG を使う。元素フラグは Bi 置換希土類鉄ガーネットの回転子と、組み合わせる磁石の一般的な構成による。",
+    "note": "1996年に光アイソレータ製造開始。2005年にFR事業をグラノプトへ移管、2020年にSGGG基板販売開始。SGGGはGd系でありY・Dy・Tb使用とは区別する。 ／ 2026-11-20：同社の製品ページと公開資料「Optical Isolator for Fiber Laser Application」（2023年7月）で、1μm 帯のファイバーレーザー用アイソレータの量産を確認し、「回転子ユニット・光アイソレータ（レーザー）」にも置いた。1550nm 品は従来の RIG を使う。元素フラグは Bi 置換希土類鉄ガーネットの回転子と、組み合わせる磁石の一般的な構成による。 ／ 2026-11-23：回転子の事業をグラノプトへ移管済みで、現在はほぼ光アイソレータ専業であることをカードに明記した。",
     "def": "光伝送網の分岐・増幅部やファイバーレーザーを支える部材供給。ファイバーレーザー用は MIL-STD-883 の衝撃・振動試験条件を満たすと記載するが、防衛向けの納入先は非開示。",
-    "pos": "1996年に光アイソレータの製造を始めた。ファイバーレーザー用は、1μm 帯で従来の RIG より挿入損失が小さい独自の回転子材料（LLR）を使い、TGG・TSAG より大幅に小型な低出力向けアイソレータとして訴求する。シェアの数値は未確認。"
+    "pos": "ファラデー回転子の事業は2005年にグラノプトへ移管しており、現在は回転子を作らず、回転子と磁石・偏光子を組んだ光アイソレータの製造がほぼ専業（ほかに SGGG 基板）。1996年に光アイソレータの製造を始めた。ファイバーレーザー用は、1μm 帯で従来の RIG より挿入損失が小さい回転子材料（LLR）を使い、TGG・TSAG より大幅に小型な低出力向けアイソレータとして訴求する。シェアの数値は未確認。"
   },
   {
     "id": "optics-santec-aoc",
@@ -9107,7 +9075,7 @@
     "ev": "B",
     "exc": 1,
     "src": "https://aoc.santec.com/jp/ ／ https://aoc.santec.com/jp/products/slm/ ／ https://aoc.santec.com/jp/products/monitor/ ／ https://aoc.santec.com/jp/products/monitor/intp/ ／ https://aoc.santec.com/jp/products/voa/ ／ https://aoc.santec.com/jp/products/filter/ ／ https://aoc.santec.com/en/assets/doc/INTP-C-E.pdf",
-    "note": "光アイソレータそのものの製品はなく、アイソレータを組み込んだタップフォトディテクタ INTP（QSFP-DD 光トランシーバ向け、Preliminary）を作るため、「光部品・ファイバー・光デバイス」に置く。元素フラグは INTP 内蔵アイソレータの一般的な構成（Bi:RIG・YIG の回転子と SmCo 磁石）によるもので、搭載確認を意味しない。 ／ 2026-11-20：製品一覧（空間光変調器・スペクトル整形器・光パワーモニタ・光アッテネータ・光フィルタ・光サブシステム）とプロダクトガイド2025で確認し、分類を「ファラデー回転子・アイソレータ（光通信）」から移した。",
+    "note": "光アイソレータそのものの製品はなく、アイソレータを組み込んだタップフォトディテクタ INTP（QSFP-DD 光トランシーバ向け、Preliminary）を作るため、「光部品・ファイバー・光デバイス」に置く。元素フラグは INTP 内蔵アイソレータの一般的な構成（Bi:RIG・YIG の回転子と SmCo 磁石）によるもので、搭載確認を意味しない。 ／ 2026-11-20：製品一覧（空間光変調器・スペクトル整形器・光パワーモニタ・光アッテネータ・光フィルタ・光サブシステム）とプロダクトガイド2025で確認し、分類を「光アイソレータ・サーキュレータ（光通信）」から移した。",
     "def": "光通信モジュール内の光量監視・逆方向光の遮断に関わる部品。確認した製品ページ・仕様書では防衛・宇宙案件は記載されていない。"
   },
   {
@@ -9138,7 +9106,7 @@
     "ev": "B",
     "exc": 1,
     "src": "https://www.tatsuta.co.jp/product/sensor_medical/optical/isorator/ ／ https://www.tatsuta.co.jp/product/sensor_medical/optical/cirlulator/",
-    "note": "光学経路上の製品・用途に基づく関連フラグ。個別製品のY・Dy・Tb含有、部材供給元は非開示であり、搭載確認を意味しない。 ／ 2026-11-20：光アイソレータ・光サーキュレータの製品ページで確認し、「ファラデー回転子・アイソレータ（光通信）」に置く。回転子を自社で作るか調達するかは未確認。",
+    "note": "光学経路上の製品・用途に基づく関連フラグ。個別製品のY・Dy・Tb含有、部材供給元は非開示であり、搭載確認を意味しない。 ／ 2026-11-20：光アイソレータ・光サーキュレータの製品ページで確認し、「光アイソレータ・サーキュレータ（光通信）」に置く。回転子を自社で作るか調達するかは未確認。",
     "def": "光源の戻り光損傷や反射に起因する誤動作を抑える光ファイバ部品。個別の防衛・宇宙装備への採用は確認した資料に記載なし。"
   },
   {
@@ -9412,15 +9380,21 @@
     "id": "fujikura",
     "name": "フジクラ",
     "stages": [
+      3,
       4,
       5
     ],
     "subs": [
+      "03_yag_crystal",
       "04_faraday_laser",
       "05_laser_osc",
       "05_photonics"
     ],
     "subEls": {
+      "03_yag_crystal": [
+        "DyTb",
+        "Sc"
+      ],
       "04_faraday_laser": [
         "DyTb",
         "Sm",
@@ -9443,14 +9417,14 @@
     ],
     "own": "上場企業 ／ 株式会社フジクラ（東証プライム、証券コード5803）",
     "rev": "連結売上高 1兆1,824億円、うち情報通信 6,530億円（2026年3月期）",
-    "prod": "光ファイバ・光ケーブル・光コネクタ、ファイバーレーザー用の光ファイバデバイス（ファイバブラッググレーティング、励起光のコンバイナ・カプラ）、Yb ファイバーレーザーと、それに組み込む光アイソレータの回転子（TSAG 単結晶、NIMS と共同開発）",
-    "pos": "光ファイバ・光部品の大手。TSAG（Tb・Sc 系ガーネット）単結晶を 1μm 帯レーザー用アイソレータの回転子に使う技術を NIMS と共同で特許化し、自社の Yb ファイバーレーザーに組み込んでいる。回転子・アイソレータのシェアは未確認",
+    "prod": "光ファイバ・光ケーブル・光コネクタ、ファイバーレーザー用の光ファイバデバイス（ファイバブラッググレーティング、励起光のコンバイナ・カプラ）、Yb ファイバーレーザーと、それに組み込む光アイソレータ（TSLAG 単結晶の回転子と NdFeB 磁石。TSLAG は NIMS と共同開発し、直径2インチの単結晶を育成）",
+    "pos": "光ファイバ・光部品の大手。TSLAG（Tb・Sc・Lu 系ガーネット）単結晶を 1μm 帯レーザー用アイソレータの回転子に使う技術を NIMS と共同で特許化し、自社の Yb ファイバーレーザーに組み込んでいる。回転子・アイソレータのシェアは未確認",
     "def": "確認できず。ファイバーレーザーは加工用途が中心",
     "chn": "TSAG の原料となる Tb・Sc の調達先は非開示。Tb は中国依存が高い",
     "ev": "B",
     "exc": 0,
     "src": "https://patents.google.com/patent/US8804240B2/en ／ https://www.nims.go.jp/electr-opt/OPCRY_e.html ／ https://www.optic-product.fujikura.com/wp-content/uploads/2025/06/CPJ70A_71A_79A.pdf ／ https://www2.jpx.co.jp/disc/58030/081220260514532598_tse-acedjpsm-58030-20260514358030-ixbrl.htm",
-    "note": "2026-11-19：レーザー波長のファラデー回転子・光アイソレータの追加調査で新規に収録 ／ 2026-11-21：自社の Yb ファイバーレーザーを作るため、「固体・ファイバーレーザー発振器」にも置いた（Sc は自社の TSAG 回転子を組み込むアイソレータとして含む）。 ／ 2026-11-22：光ファイバ・光ケーブルとファイバーレーザー用の光ファイバデバイスを作るため、「光部品・ファイバー・光デバイス」にも置いた（光ファイバ自体には対象元素を含まない。Tb と磁石の Sm・Dy は、組み合わせて使う自社の光アイソレータによる）。"
+    "note": "2026-11-19：レーザー波長のファラデー回転子・光アイソレータの追加調査で新規に収録 ／ 2026-11-21：自社の Yb ファイバーレーザーを作るため、「固体・ファイバーレーザー発振器」にも置いた（Sc は自社の TSAG 回転子を組み込むアイソレータとして含む）。 ／ 2026-11-22：光ファイバ・光ケーブルとファイバーレーザー用の光ファイバデバイスを作るため、「光部品・ファイバー・光デバイス」にも置いた（光ファイバ自体には対象元素を含まない。Tb と磁石の Sm・Dy は、組み合わせて使う自社の光アイソレータによる）。 ／ 2026-11-23：回転子の材料が TSLAG（Tb₃(Sc,Lu)₂Al₃O₁₂）であること、アイソレータに NdFeB 磁石を組むことを確認して記述を直し、単結晶の育成を「レーザー用光学結晶・透明セラミックス」にも置いた。"
   },
   {
     "id": "compound-kisankinzoku",

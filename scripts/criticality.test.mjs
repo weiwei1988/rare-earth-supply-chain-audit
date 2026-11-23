@@ -69,6 +69,17 @@ test('装備からの逆算は共通モデルの経路と同じ工程・接続�
   for(const p of points){const tier=s.criticalityTier(Math.round(p.score));shown[tier]=(shown[tier]||0)+1}
   for(const row of s.eqTierCounts(points))assert.equal(row.count,shown[row.band.tier]||0,eq+'|'+row.band.label);
  }
+ // 列見出しの社数は、強調した元素で道筋に入る工程だけを数える（ほかの元素でだけ道筋に入る工程の企業を混ぜない）
+ for(const eq of s.equipmentIds){
+  const P=s.eqPathModel(eq);
+  for(const focus of P.els)for(const stage of [2,3,4,5]){
+   const items=P.nodes.filter(n=>n.sub.stage===stage).map(item=>({kind:'node',id:item.id,item}));
+   const expected=new Set();
+   items.filter(e=>e.item.els.has(focus)).forEach(e=>s.data.forEach(c=>{if(c.subs.includes(e.item.id)&&s.companyHasElement(c,e.item.id,focus))expected.add(c.id)}));
+   assert.equal(s.eqColumnCount(items,focus),expected.size,eq+'|'+focus+'|'+stage);
+  }
+ }
+ {const P=s.eqPathModel('06_aircraft');const items=P.nodes.filter(n=>n.sub.stage===5).map(item=>({kind:'node',id:item.id,item}));assert.equal(s.eqColumnCount(items,'Sm'),13)}
  // 境界の点数（丸めると段階が上がるもの）でも、集計は表示と同じ段階に入る。データに左右されないよう、点数を直接与えて確かめる
  const edge=s.eqTierCounts([{score:49.75},{score:49.4},{score:69.6},{score:29.5}]);
  const countOf=min=>edge.find(row=>row.band.min===min).count;
