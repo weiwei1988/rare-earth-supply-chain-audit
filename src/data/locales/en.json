@@ -3225,7 +3225,7 @@
     },
     "06_optical_net": {
       "label": "Optical network infrastructure",
-      "description": "Optical transport, submarine cables and satellite optical links (commercial)",
+      "description": "Optical transport, submarine cables, satellite links (civil)",
       "srcNotes": {
         "05_photonics": "Build optical transceivers and amplifiers into optical transmission equipment and submarine repeaters"
       }
