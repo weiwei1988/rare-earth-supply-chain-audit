@@ -3097,7 +3097,7 @@
     },
     "05_photonics": {
       "label": "Optical components, fibers & devices",
-      "description": "Optical fibers, optical transceivers, ITLAs and optical amplifiers",
+      "description": "Optical fibers, transceivers, ITLAs and amplifiers",
       "srcNotes": {
         "04_faraday_tele": "Build optical isolators into TOSAs, EMLs, ITLAs, optical transceivers and optical amplifiers to block light reflected back into semiconductor lasers (1310/1550 nm)"
       }
@@ -3199,7 +3199,7 @@
     },
     "06_laser": {
       "label": "Laser systems & irradiation",
-      "description": "Ranging, irradiation, high power and industrial processing machines",
+      "description": "Ranging, irradiation, high-power and processing lasers",
       "srcNotes": {
         "05_laser_osc": "Light sources for ranging, irradiation and high-power lasers, and for laser processing machines, markers, welders and annealing systems",
         "05_electronics": "Semiconductor lasers and electronic circuits, including laser transceivers for engagement training"
@@ -3232,7 +3232,7 @@
     },
     "06_rf_sensor": {
       "label": "RF & piezoelectric sensing",
-      "description": "RF measurement, piezo evaluation, sensors and laser measurement",
+      "description": "RF measurement, piezo testing, sensors, laser metrology",
       "srcNotes": {
         "05_electronics": "Electronic components in instruments and sensors (Sc: piezoelectric sensors and high-frequency devices made with ScAlN piezoelectric films)",
         "05_laser_osc": "Laser light sources built into inspection and measurement equipment, stealth dicing equipment and laser markers (Tb and Sm through the rotators and magnets of optical isolators)"

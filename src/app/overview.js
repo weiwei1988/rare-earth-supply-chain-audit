@@ -22,20 +22,24 @@ function ovText(key){return(ovLabels[language]||ovLabels.ja)[key]}
 
 // 配置（列の幅・カードの高さ・線の形）は画面の幅と言語で決まり、元素や工程を選んでも変えない。
 // 選択の変化は updateFlowState でクラスだけを付け替え、強調の切り替えをなめらかに見せる
-var flowBuiltKey="";
+var flowBuiltKey="",flowBuiltWidth=0;
+// 図の最小の幅。11インチ iPad の横向き（画面幅 1180px 前後、図の枠は約 1115px）でも横スクロールせずに収まる幅にする。
+// これより狭い画面では横スクロールにする
+var FLOW_MIN_WIDTH=1100;
 function renderFlow(){
   // 非表示のパネルは clientWidth が 0 になり、最小幅で固定されたまま残るため描画を保留する。
   if(activeView!=="overview"){flowLayoutStale=true;return}
   flowLayoutStale=false;
-  var viewport=root.querySelector("#re-flow-viewport"),W=Math.max(1200,Math.floor(viewport.clientWidth));
+  var viewport=root.querySelector("#re-flow-viewport"),W=Math.max(FLOW_MIN_WIDTH,Math.floor(viewport.clientWidth));
   var canvas=root.querySelector("#re-flow-canvas"),key=W+"|"+language;
-  if(key!==flowBuiltKey||!canvas.firstChild){buildFlow(W);flowBuiltKey=key}
+  if(key!==flowBuiltKey||!canvas.firstChild){buildFlow(W);flowBuiltKey=key;flowBuiltWidth=W}
   updateFlowState()
 }
 
 function buildFlow(W){
   var sidePadding=Math.max(18,Math.min(60,Math.round(18+(W-1200)*.05)));
-  var cardWidth=Math.max(176,Math.min(240,Math.round(176+(W-1200)*.082)));
+  // カードの幅は、図の幅 1200px で 176px。広い画面では 240px まで広げ、1200px より狭い画面では 162px まで縮めて列の間隔を保つ
+  var cardWidth=W>=1200?Math.max(176,Math.min(240,Math.round(176+(W-1200)*.082))):Math.max(162,Math.round(176-(1200-W)*.16));
   var columnStep=cardWidth+(W-sidePadding*2-cardWidth*6)/5;
   var minCardHeight=100,columnGap=8,columnBaseSpan=220,perStageCompany=16.6,perCardScaleCompany=.8,maxColumnSpan=1580,downstreamStep=40;
   var xByStage={2:sidePadding+columnStep,3:sidePadding+columnStep*2,4:sidePadding+columnStep*3,5:sidePadding+columnStep*4,6:sidePadding+columnStep*5};
@@ -261,16 +265,13 @@ function updateFlowState(){
 }
 
 function initResponsiveMap(){
-  var viewport=root.querySelector("#re-flow-viewport"),lastWidth=Math.max(1200,Math.floor(viewport.clientWidth)),reflowTimer=null;
+  // 比べる相手は、実際に描いた図の幅（flowBuiltWidth）。最初の描画のあとに縦スクロールバーが出て枠が狭くなった場合も描き直す
+  var viewport=root.querySelector("#re-flow-viewport"),reflowTimer=null;
+  function widthNow(){return Math.max(FLOW_MIN_WIDTH,Math.floor(viewport.clientWidth))}
   function handleViewportResize(){
-    if(activeView!=="overview")return;
-    var nextWidth=Math.max(1200,Math.floor(viewport.clientWidth));
-    if(nextWidth===lastWidth)return;
+    if(activeView!=="overview"||widthNow()===flowBuiltWidth)return;
     clearTimeout(reflowTimer);
-    reflowTimer=setTimeout(function(){
-      var currentWidth=Math.max(1200,Math.floor(viewport.clientWidth));
-      if(currentWidth!==lastWidth){lastWidth=currentWidth;refresh("overview")}
-    },80)
+    reflowTimer=setTimeout(function(){if(widthNow()!==flowBuiltWidth)refresh("overview")},80)
   }
   if(window.ResizeObserver)new ResizeObserver(handleViewportResize).observe(viewport);
   else window.addEventListener("resize",handleViewportResize)
