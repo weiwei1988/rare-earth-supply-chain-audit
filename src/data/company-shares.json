@@ -738,34 +738,6 @@
    }
   },
   {
-   "company": "seed-11",
-   "name": "信光社",
-   "node": "03_yag_crystal",
-   "els": [
-    "Y"
-   ],
-   "product": "YAG 単結晶の育成",
-   "level": 1,
-   "share": "公開情報でシェアを確認できていない",
-   "scope": "",
-   "basis": "公開情報",
-   "source": "https://www.shinkosha.com/",
-   "sourceLabel": "信光社 公式サイト（2026年11月確認）",
-   "note": "公式サイトの主力はサファイア・ルチル・SrTiO₃で、YAG単結晶の製品掲載は確認できなかった。",
-   "i18n": {
-    "en": {
-     "product": "YAG single-crystal growth",
-     "share": "No share could be confirmed in public sources",
-     "note": "The main products on the official site are sapphire, rutile and SrTiO₃; no YAG single-crystal product listing could be found."
-    },
-    "zh-CN": {
-     "product": "YAG单晶生长",
-     "share": "公开信息中无法确认份额",
-     "note": "官网主力产品为蓝宝石、金红石与SrTiO₃，未能确认YAG单晶的产品刊载。"
-    }
-   }
-  },
-  {
    "company": "seed-44",
    "name": "JX金属",
    "node": "03_yag_crystal",
@@ -1024,24 +996,24 @@
    "els": [
     "Y"
    ],
-   "product": "ファラデー回転子用の磁気光学膜（結晶育成・加工から自社一貫）",
-   "level": 1,
-   "share": "公開情報でシェアを確認できていない",
-   "scope": "",
+   "product": "ファラデー回転子（磁性ガーネットの回転子チップ。光通信 1550／1310nm、2000nm 帯、産業用レーザー 1064／1030nm）",
+   "level": 3,
+   "share": "ファラデー回転子の世界市場の主要企業の一つで、2025年の同社の回転子売上 920万ドルは市場規模 5,700万〜6,129万ドルの約15〜16%（調査会社推計）",
+   "scope": "ファラデー回転子（世界）",
    "basis": "公開情報",
-   "source": "https://www.kohokukogyo.co.jp/assets/doc/ir/20251128_mufg_ir_seminar.pdf",
-   "sourceLabel": "湖北工業 MUFG IRセミナー説明資料 2025年11月28日（2026年11月確認）",
-   "note": "同社の公表シェアは素子・部品である光アイソレータ（金額ベース世界50%）に対するもので、材料である磁気光学膜は自社の光アイソレータ向け内製材料。外販市場でのシェアは確認できない。",
+   "source": "https://www.reportprime.com/faraday-rotator-r3882",
+   "sourceLabel": "Reportprime「Faraday Rotator Market」（2026年11月確認）",
+   "note": "調査会社の推計で、同じページ内でも市場規模の数値が食い違う（5,700万ドルと6,129万ドル）。どちらで割っても10〜40% に入るため水準3とした。回転子は結晶育成から自社一貫で作り、光アイソレータ（金額ベースで世界シェア50%と自社IR資料が明記）に組み込む。アイソレータのシェアは次段「光アイソレータ・サーキュレータ（光通信）」の判定に使う。",
    "i18n": {
     "en": {
-     "product": "Magneto-optical films for Faraday rotators (in-house from crystal growth through finishing)",
-     "share": "No share could be confirmed in public sources",
-     "note": "The share the company publishes is for optical isolators, a finished device (50% worldwide by value); the magneto-optical film is a material made in house for its own isolators. No share in the merchant market could be confirmed."
+     "product": "Faraday rotators (magnetic-garnet rotator chips for optical communications at 1550/1310 nm and the 2000 nm band, and for industrial lasers at 1064/1030 nm)",
+     "share": "One of the main companies in the global Faraday-rotator market; its 2025 rotator sales of USD 9.2 million are about 15–16% of a market of USD 57.0–61.3 million (research-firm estimate)",
+     "note": "A research-firm estimate whose market-size figures are inconsistent within the same page (USD 57.0 million and USD 61.3 million). Either way the share falls within 10–40%, so level 3 is used. The company makes rotators in-house from crystal growth onwards and builds them into optical isolators (a 50% global share by value, as stated in its IR materials); the isolator share is used for the next stage, Optical isolators & circulators (optical communications)."
     },
     "zh-CN": {
-     "product": "法拉第旋转器用磁光膜（从晶体生长到加工自社一贯）",
-     "share": "公开信息中无法确认份额",
-     "note": "该公司公布的份额针对的是器件、部件层面的光隔离器（金额基准全球50%），而磁光膜是供自社光隔离器使用的内制材料。外销市场的份额无法确认。"
+     "product": "法拉第旋转器（磁性石榴石旋转器芯片，用于光通信1550／1310nm及2000nm波段，以及工业激光1064／1030nm）",
+     "share": "全球法拉第旋转器市场的主要企业之一，其2025年旋转器销售额920万美元约占5,700万〜6,129万美元市场的15〜16%（调查机构估算）",
+     "note": "为调查机构估算，同一页面中的市场规模数值不一致（5,700万美元与6,129万美元）。无论按哪个数值计算均在10〜40%之间，因此定为等级3。该公司从晶体生长起一贯自制旋转器，并装入光隔离器（其IR资料明确按金额计全球份额50%）；隔离器份额用于下一阶段“光隔离器与光环行器（光通信）”的判定。"
     }
    }
   },
@@ -1052,24 +1024,24 @@
    "els": [
     "DyTb"
    ],
-   "product": "ファラデー回転子用の磁気光学膜（結晶育成・加工から自社一貫）",
-   "level": 1,
-   "share": "公開情報でシェアを確認できていない",
-   "scope": "",
+   "product": "ファラデー回転子（磁性ガーネットの回転子チップ。光通信 1550／1310nm、2000nm 帯、産業用レーザー 1064／1030nm）",
+   "level": 3,
+   "share": "ファラデー回転子の世界市場の主要企業の一つで、2025年の同社の回転子売上 920万ドルは市場規模 5,700万〜6,129万ドルの約15〜16%（調査会社推計）",
+   "scope": "ファラデー回転子（世界）",
    "basis": "公開情報",
-   "source": "https://www.kohokukogyo.co.jp/assets/doc/ir/20251128_mufg_ir_seminar.pdf",
-   "sourceLabel": "湖北工業 MUFG IRセミナー説明資料 2025年11月28日（2026年11月確認）",
-   "note": "膜の組成（Tb置換の有無・比率）は非開示。公表シェアは素子である光アイソレータに対するもの。",
+   "source": "https://www.reportprime.com/faraday-rotator-r3882",
+   "sourceLabel": "Reportprime「Faraday Rotator Market」（2026年11月確認）",
+   "note": "調査会社の推計で、同じページ内でも市場規模の数値が食い違う（5,700万ドルと6,129万ドル）。どちらで割っても10〜40% に入るため水準3とした。回転子は結晶育成から自社一貫で作り、光アイソレータ（金額ベースで世界シェア50%と自社IR資料が明記）に組み込む。アイソレータのシェアは次段「光アイソレータ・サーキュレータ（光通信）」の判定に使う。",
    "i18n": {
     "en": {
-     "product": "Magneto-optical films for Faraday rotators (in-house from crystal growth through finishing)",
-     "share": "No share could be confirmed in public sources",
-     "note": "The film composition (whether and how much Tb substitution it uses) is not disclosed. The published share is for the optical isolator as a device."
+     "product": "Faraday rotators (magnetic-garnet rotator chips for optical communications at 1550/1310 nm and the 2000 nm band, and for industrial lasers at 1064/1030 nm)",
+     "share": "One of the main companies in the global Faraday-rotator market; its 2025 rotator sales of USD 9.2 million are about 15–16% of a market of USD 57.0–61.3 million (research-firm estimate)",
+     "note": "A research-firm estimate whose market-size figures are inconsistent within the same page (USD 57.0 million and USD 61.3 million). Either way the share falls within 10–40%, so level 3 is used. The company makes rotators in-house from crystal growth onwards and builds them into optical isolators (a 50% global share by value, as stated in its IR materials); the isolator share is used for the next stage, Optical isolators & circulators (optical communications)."
     },
     "zh-CN": {
-     "product": "法拉第旋转器用磁光膜（从晶体生长到加工自社一贯）",
-     "share": "公开信息中无法确认份额",
-     "note": "膜的组成（是否含Tb置换及比例）未公开。所公布的份额针对的是作为器件的光隔离器。"
+     "product": "法拉第旋转器（磁性石榴石旋转器芯片，用于光通信1550／1310nm及2000nm波段，以及工业激光1064／1030nm）",
+     "share": "全球法拉第旋转器市场的主要企业之一，其2025年旋转器销售额920万美元约占5,700万〜6,129万美元市场的15〜16%（调查机构估算）",
+     "note": "为调查机构估算，同一页面中的市场规模数值不一致（5,700万美元与6,129万美元）。无论按哪个数值计算均在10〜40%之间，因此定为等级3。该公司从晶体生长起一贯自制旋转器，并装入光隔离器（其IR资料明确按金额计全球份额50%）；隔离器份额用于下一阶段“光隔离器与光环行器（光通信）”的判定。"
     }
    }
   },
@@ -1633,34 +1605,6 @@
    }
   },
   {
-   "company": "seed-11",
-   "name": "信光社",
-   "node": "04_laser_medium",
-   "els": [
-    "Y"
-   ],
-   "product": "YAG 単結晶ロッド・光学部材",
-   "level": 1,
-   "share": "公開情報でシェアを確認できていない",
-   "scope": "",
-   "basis": "公開情報",
-   "source": "https://www.shinkosha.com/",
-   "sourceLabel": "信光社 公式サイト（2026年11月確認）",
-   "note": "公式サイトの主力はサファイア・ルチル・SrTiO₃で、YAG単結晶ロッドの製品掲載は確認できなかった。",
-   "i18n": {
-    "en": {
-     "product": "YAG single-crystal rods and optical components",
-     "share": "No share could be confirmed in public sources",
-     "note": "The main products on the official site are sapphire, rutile and SrTiO₃; no YAG single-crystal rod product listing could be found."
-    },
-    "zh-CN": {
-     "product": "YAG单晶棒与光学部件",
-     "share": "公开信息中无法确认份额",
-     "note": "官网主力产品为蓝宝石、金红石与SrTiO₃，未能确认YAG单晶棒的产品刊载。"
-    }
-   }
-  },
-  {
    "company": "seed-44",
    "name": "JX金属",
    "node": "04_laser_medium",
@@ -1685,62 +1629,6 @@
      "product": "Nd:YAG、Yb:YAG透明陶瓷激光介质",
      "share": "公开信息中无法确认份额",
      "note": "以开发中产品刊载，负责事业部与生产基地均未公开。"
-    }
-   }
-  },
-  {
-   "company": "faraday-granopt",
-   "name": "グラノプト",
-   "node": "04_faraday_tele",
-   "els": [
-    "Y"
-   ],
-   "product": "GTD・GLB・GSF・GMF・ETD 各品種のファラデー回転子（1310〜1590nm）",
-   "level": 4,
-   "share": "光通信用ファラデーローテータで世界トップシェア。供給者はほぼ2社に限られると経産省資料が記す",
-   "scope": "世界",
-   "basis": "公開情報",
-   "source": "https://www.mgc.co.jp/corporate/news/files/230731.pdf",
-   "sourceLabel": "三菱ガス化学 ニュースリリース「株式会社グラノプト新工場竣工のお知らせ」2023年7月31日（2026年11月確認）",
-   "note": "住友金属鉱山51%・三菱ガス化学49%の合弁会社のシェアで、出典は親会社（三菱ガス化学）の開示。経産省「新グローバルニッチトップ企業100選」選定資料（https://www.granopt.jp/en/images/gnt100_01.pdf）でも「世界トップシェアを確保するに至りました」「FR供給者がほぼ2社に限られる特殊な材料」を確認。",
-   "i18n": {
-    "en": {
-     "product": "Faraday rotators in the GTD, GLB, GSF, GMF and ETD grades (1310–1590 nm)",
-     "share": "Top world share in Faraday rotators for optical communications; METI materials state that suppliers are essentially limited to two companies",
-     "note": "This is the share of a joint venture owned 51% by Sumitomo Metal Mining and 49% by Mitsubishi Gas Chemical; the source is the parent company's (MGC's) disclosure. METI's Global Niche Top 100 selection material (https://www.granopt.jp/en/images/gnt100_01.pdf) likewise confirms \"came to secure the top world share\" and \"a special material with essentially only two FR suppliers\"."
-    },
-    "zh-CN": {
-     "product": "GTD、GLB、GSF、GMF、ETD各型号的法拉第旋转器（1310〜1590nm）",
-     "share": "光通信用法拉第旋转器居全球份额首位；经产省资料称供应商基本仅限两家",
-     "note": "这是住友金属矿山51%、三菱瓦斯化学49%合资公司的份额，出处为母公司（三菱瓦斯化学）的披露。经产省\"新全球利基龙头企业100选\"的选定资料（https://www.granopt.jp/en/images/gnt100_01.pdf）亦确认\"得以确保全球首位份额\"\"FR供应商基本仅限两家的特殊材料\"。"
-    }
-   }
-  },
-  {
-   "company": "faraday-granopt",
-   "name": "グラノプト",
-   "node": "04_faraday_tele",
-   "els": [
-    "DyTb"
-   ],
-   "product": "GTD・GLB・GSF・GMF・ETD 各品種のファラデー回転子（1310〜1590nm）",
-   "level": 4,
-   "share": "光通信用ファラデーローテータで世界トップシェア。供給者はほぼ2社に限られると経産省資料が記す",
-   "scope": "世界",
-   "basis": "公開情報",
-   "source": "https://www.mgc.co.jp/corporate/news/files/230731.pdf",
-   "sourceLabel": "三菱ガス化学 ニュースリリース「株式会社グラノプト新工場竣工のお知らせ」2023年7月31日（2026年11月確認）",
-   "note": "住友金属鉱山51%・三菱ガス化学49%の合弁会社のシェア。材料は「ビスマス置換希土類鉄ガーネット」と記されるのみで、Tb等の個別元素の内訳は非開示。",
-   "i18n": {
-    "en": {
-     "product": "Faraday rotators in the GTD, GLB, GSF, GMF and ETD grades (1310–1590 nm)",
-     "share": "Top world share in Faraday rotators for optical communications; METI materials state that suppliers are essentially limited to two companies",
-     "note": "This is the share of a joint venture owned 51% by Sumitomo Metal Mining and 49% by Mitsubishi Gas Chemical. The material is described only as \"bismuth-substituted rare-earth iron garnet\"; no breakdown by individual element such as Tb is disclosed."
-    },
-    "zh-CN": {
-     "product": "GTD、GLB、GSF、GMF、ETD各型号的法拉第旋转器（1310〜1590nm）",
-     "share": "光通信用法拉第旋转器居全球份额首位；经产省资料称供应商基本仅限两家",
-     "note": "这是住友金属矿山51%、三菱瓦斯化学49%合资公司的份额。材料仅记为\"铋置换稀土铁石榴石\"，未公开Tb等个别元素的构成。"
     }
    }
   },
@@ -1829,34 +1717,6 @@
    }
   },
   {
-   "company": "faraday-kohoku",
-   "name": "湖北工業",
-   "node": "04_faraday_laser",
-   "els": [
-    "DyTb"
-   ],
-   "product": "産業用レーザー向けファラデー回転子（1064／1030nm）",
-   "level": 1,
-   "share": "公開情報でシェアを確認できていない",
-   "scope": "",
-   "basis": "公開情報",
-   "source": "https://www.kohokukogyo.co.jp/assets/doc/ir/20251128_mufg_ir_seminar.pdf",
-   "sourceLabel": "湖北工業 MUFG IRセミナー説明資料 2025年11月28日（2026年11月確認）",
-   "note": "自社 IR の「光アイソレータ世界シェア50%」は通信用を主とする全体の数値で、レーザー用に限った値は開示がない。",
-   "i18n": {
-    "en": {
-     "product": "Faraday rotators for industrial lasers (1064/1030 nm)",
-     "share": "No share could be confirmed in public sources",
-     "note": "The 50% world share in optical isolators in its IR material covers the whole business, mainly communications; no figure is disclosed for laser isolators alone."
-    },
-    "zh-CN": {
-     "product": "工业激光用法拉第旋转器（1064/1030nm）",
-     "share": "公开信息中无法确认份额",
-     "note": "公司IR资料中的\"光隔离器全球份额50%\"是以通信用为主的整体数值，未公开仅限激光用途的数值。"
-    }
-   }
-  },
-  {
    "company": "seed-3",
    "name": "信越化学工業",
    "node": "04_faraday_tele",
@@ -1935,62 +1795,6 @@
      "product": "光纤激光器用光隔离器的器件",
      "share": "公开信息中无法确认份额",
      "note": "亦未明示器件材料（TGG、TSAG等），目录中无法确认是否使用Tb系材料。"
-    }
-   }
-  },
-  {
-   "company": "seed-12",
-   "name": "オキサイド",
-   "node": "04_faraday_tele",
-   "els": [
-    "Y"
-   ],
-   "product": "光トランシーバ用光アイソレータ向けのファラデー回転子（第6工場で増産）",
-   "level": 1,
-   "share": "公開情報でシェアを確認できていない",
-   "scope": "",
-   "basis": "公開情報",
-   "source": "https://www.opt-oxide.com/ir/meeting/meeting26_review/",
-   "sourceLabel": "オキサイド IR 決算説明（2026年11月確認）",
-   "note": "2026年10月に第6工場（山梨県北杜市）へ8億4100万円の追加設備投資を公表し、2027年2月期下半期中の稼働を見込む。増産の開示はシェアを示さない。",
-   "i18n": {
-    "en": {
-     "product": "Faraday rotators for optical-transceiver isolators (capacity being expanded at Plant 6)",
-     "share": "No share could be confirmed in public sources",
-     "note": "In October 2026 the company announced an additional ¥841 million capital investment at Plant 6 (Hokuto, Yamanashi), expected to start up in the second half of the fiscal year ending February 2027. A capacity announcement does not indicate share."
-    },
-    "zh-CN": {
-     "product": "面向光收发模块用光隔离器的法拉第旋转器（第6工厂扩产）",
-     "share": "公开信息中无法确认份额",
-     "note": "2026年10月公布对第6工厂（山梨县北杜市）追加8.41亿日元设备投资，预计在2027年2月期下半年投产。扩产的披露并不表示份额。"
-    }
-   }
-  },
-  {
-   "company": "seed-12",
-   "name": "オキサイド",
-   "node": "04_faraday_tele",
-   "els": [
-    "DyTb"
-   ],
-   "product": "光トランシーバ用光アイソレータ向けのファラデー回転子（第6工場で増産）",
-   "level": 1,
-   "share": "公開情報でシェアを確認できていない",
-   "scope": "",
-   "basis": "公開情報",
-   "source": "https://www.opt-oxide.com/ir/meeting/meeting26_review/",
-   "sourceLabel": "オキサイド IR 決算説明（2026年11月確認）",
-   "note": "2026年10月に第6工場（山梨県北杜市）へ8億4100万円の追加設備投資を公表し、2027年2月期下半期中の稼働を見込む。増産の開示はシェアを示さない。",
-   "i18n": {
-    "en": {
-     "product": "Faraday rotators for optical-transceiver isolators (capacity being expanded at Plant 6)",
-     "share": "No share could be confirmed in public sources",
-     "note": "In October 2026 the company announced an additional ¥841 million capital investment at Plant 6 (Hokuto, Yamanashi), expected to start up in the second half of the fiscal year ending February 2027. A capacity announcement does not indicate share."
-    },
-    "zh-CN": {
-     "product": "面向光收发模块用光隔离器的法拉第旋转器（第6工厂扩产）",
-     "share": "公开信息中无法确认份额",
-     "note": "2026年10月公布对第6工厂（山梨县北杜市）追加8.41亿日元设备投资，预计在2027年2月期下半年投产。扩产的披露并不表示份额。"
     }
    }
   },
@@ -2187,34 +1991,6 @@
      "product": "Yb光纤激光器用光隔离器旋转器（TSAG）",
      "share": "未能从公开信息中确认份额",
      "note": "已确认装入自家激光器，但是否对外销售及数量未公开。"
-    }
-   }
-  },
-  {
-   "company": "seed-12",
-   "name": "オキサイド",
-   "node": "04_faraday_laser",
-   "els": [
-    "DyTb"
-   ],
-   "product": "高強度レーザー用光アイソレータの磁気光学デバイス（TSAG）",
-   "level": 1,
-   "share": "公開情報でシェアを確認できていない",
-   "scope": "",
-   "basis": "公開情報",
-   "source": "https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00013",
-   "sourceLabel": "オキサイド TSAG 製品ページ（2026年11月確認）",
-   "note": "磁気光学デバイスは製品分類としての記載で、品目・数量は非開示。",
-   "i18n": {
-    "en": {
-     "product": "Magneto-optical devices for optical isolators in high-intensity lasers (TSAG)",
-     "share": "No share could be confirmed from public information",
-     "note": "Magneto-optical devices are listed only as a product category; items and volumes are not disclosed."
-    },
-    "zh-CN": {
-     "product": "高强度激光光隔离器用磁光器件（TSAG）",
-     "share": "未能从公开信息中确认份额",
-     "note": "磁光器件仅作为产品类别记载，品类与数量未公开。"
     }
    }
   },
@@ -4576,34 +4352,6 @@
    "node": "05_photonics",
    "els": [
     "DyTb"
-   ],
-   "product": "光ファイバ・光ケーブル、ファイバーレーザー用の光ファイバデバイス",
-   "level": 2,
-   "share": "光ファイバケーブルの世界市場で Corning・CommScope・Prysmian に次ぐ4位（2023年の金額ベース、約1.3%）",
-   "scope": "光ファイバケーブル",
-   "basis": "公開情報",
-   "source": "https://www.businesswire.com/news/home/20250213025563/en/",
-   "sourceLabel": "ResearchAndMarkets「Fiber Optical Cable Market Opportunities and Strategies to 2033」発表（2025年2月、2026年11月確認）",
-   "note": "調査によって数値の幅が大きい（全市場の金額ベースで約1%、高密度ケーブルなどの分野別では約9%）。いずれも10%未満のため水準2とした。",
-   "i18n": {
-    "en": {
-     "product": "Optical fibers and optical cables; optical fiber devices for fiber lasers",
-     "share": "Fourth in the global fiber-optic cable market after Corning, CommScope and Prysmian (about 1.3% by value, 2023)",
-     "note": "Estimates vary widely between surveys (about 1% of the whole market by value, about 9% in segments such as high-density cables). All are below 10%, so level 2 is used."
-    },
-    "zh-CN": {
-     "product": "光纤与光缆、光纤激光器用光纤器件",
-     "share": "在全球光缆市场排名第四，仅次于Corning、CommScope和Prysmian（2023年按金额约1.3%）",
-     "note": "不同调查的数值差异较大（按全市场金额约1%，高密度光缆等细分领域约9%）。均低于10%，因此定为等级2。"
-    }
-   }
-  },
-  {
-   "company": "fujikura",
-   "name": "フジクラ",
-   "node": "05_photonics",
-   "els": [
-    "Sm"
    ],
    "product": "光ファイバ・光ケーブル、ファイバーレーザー用の光ファイバデバイス",
    "level": 2,

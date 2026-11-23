@@ -113,14 +113,14 @@
     },
     "seed-11": {
       "name": "信光社",
-      "own": "非上市公司",
-      "rev": "推测数十亿日元",
-      "prod": "YAG单晶棒材、光学部件",
-      "pos": "日本国内YAG单晶的老牌专业厂商",
-      "def": "延伸到激光测距、加工和研究用光学",
-      "chn": "推测为高。需要直接核实原料供应商。",
-      "src": "JSX",
-      "note": "尚未确认一手资料，可信度△ / 不计入Stage 04“固体激光振荡器（YAG）”，仅限YAG晶体与陶瓷材料侧的Stage 03"
+      "own": "非上市。总部与工厂位于神奈川县横滨市荣区。1947年作为合成宝石厂商创立，子公司有ルビカ工業（富山县鱼津市）",
+      "rev": "未公开",
+      "prod": "光纤激光器用光隔离器（面向Yb、Er光纤激光器；1064〜1100nm、1178nm、1310〜1620nm、1930〜2060nm各波段；有1μm波段5W级与2μm波段10W・30W级新产品）、利用法拉第效应的光纤磁场传感器及防灾用光纤传感器、蓝宝石单晶及其加工品（手表用蓝宝石晶体等）、金红石棱镜、薄膜生长用氧化物基板、氧化铝蒸镀材料",
+      "pos": "以合成宝石起家的晶体厂商，自称是日本唯一的手表用蓝宝石晶体制造商。光隔离器的份额未经确认。现行产品中未见YAG单晶与激光介质",
+      "def": "光纤激光器用隔离器用于加工与研究。防卫领域的交付实绩未经确认",
+      "chn": "隔离器旋转器（法拉第元件）的材料与磁体种类未公开。一般构成为：1μm波段使用TGG等Tb系顺磁性石榴石，1.3〜2μm波段使用铁石榴石系旋转器，并与SmCo、NdFeB磁体组合。蓝宝石、金红石、氧化铝不含稀土。",
+      "src": "https://www.shinkosha.com/product/ ／ https://www.shinkosha.com/product/isolator/ ／ https://www.shinkosha.com/product/sensor/ ／ https://www.shinkosha.com/company/history/",
+      "note": "尚未确认一手资料，可信度△ / 不计入Stage 04“固体激光振荡器（YAG）”，仅限YAG晶体与陶瓷材料侧的Stage 03 ／ 2026-11-23：通过官方网站产品一览确认，现行产品为蓝宝石・金红石・氧化物基板、光纤激光器用光隔离器与光纤传感器，不经营YAG单晶与激光介质。从“激光用光学晶体与透明陶瓷”“固体激光介质”中移出，只归入“旋转器单元与光隔离器（激光）”。"
     },
     "seed-12": {
       "name": "Oxide Corporation（オキサイド）",
@@ -133,7 +133,7 @@
       "bom": "Kalama 266nm将红外光纤放大光源经两级波长转换，Frequad以超高纯度BBO进行波长转换。基本波源介质未公开，未能确认自产激光使用YAG（明确记载YAG的仅为进口销售的Areté产品）。TSAG在1μm波段的透过率高于TGG，磁光常数约大两成，是高强度激光隔离器材料。Bi:RIG用于1.3〜1.55μm通信隔离器。",
       "gap": "需确认本公司制与进口销售区分、国防、航天客户、基本波源的介质、出口管理是否适用出口管制。磁光器件的品类（单独旋转器还是隔离器组装品、是否含磁体）以及TSAG所用Sc原料的采购来源也尚未确认。",
       "src": "https://www.opt-oxide.com/products/ ／ https://www.opt-oxide.com/products/optical-device/ ／ https://www.opt-oxide.com/products/optical-module/ ／ https://www.opt-oxide.com/products-list/laser/ ／ https://www.opt-oxide.com/products-list/laser/cw-laser/item_LA00003 ／ https://www.opt-oxide.com/products-list/laser/qcw-laser/item_LA00008 ／ https://www.opt-oxide.com/products-list/laser/femto-laser/item_LA00012_1 ／ https://www.opt-oxide.com/products-list/laser/special/item_LA00016 ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00006 ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00013 ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00014 ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00015 ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00017 ／ https://www.opt-oxide.com/products-list/single-crystal/scintillator ／ https://www.opt-oxide.com/products-list/optical-device/qpm ／ https://www.opt-oxide.com/v2019/wp-content/uploads/2013/03/266Laser_r12-1.pdf ／ https://www.opt-oxide.com/ir/meeting/meeting26_review/ ／ https://www.opt-oxide.com/products/single-crystal/ ／ https://www.opt-oxide.com/products/laser/ ／ https://www.opt-oxide.com/products/prototype-service/",
-      "note": "整合处理：根据固体激光振荡器尽职调查中的“采用候选（振荡器）”正式纳入Stage 04。 ／ 266nm QCW产品将红外光纤放大光源经两级波长转换，而光纤放大级与多级转换通常会配置隔离器以阻断回光。该公司本身也是法拉第旋转器的制造商 / 标记表示与光学应用链相关，不代表已确认具体产品含有Y／Dy／Tb；材料成分及部件供应商未公开。 ／ 2026-11-20：按产品一览（单晶、激光、光器件、光模块）更新产品栏。TGG不在现行产品一览中，磁光晶体改为TSAG、YIG、Bi:RIG。根据光隔离器用磁光器件与TSAG，同时归入法拉第旋转器与隔离器（激光）。 ／ 2026-11-20：对照产品一览的5个类别（晶体、激光、光器件、光模块、试制服务），在产品栏中补充试制与服务。"
+      "note": "整合处理：根据固体激光振荡器尽职调查中的“采用候选（振荡器）”正式纳入Stage 04。 ／ 266nm QCW产品将红外光纤放大光源经两级波长转换，而光纤放大级与多级转换通常会配置隔离器以阻断回光。该公司本身也是法拉第旋转器的制造商 / 标记表示与光学应用链相关，不代表已确认具体产品含有Y／Dy／Tb；材料成分及部件供应商未公开。 ／ 2026-11-20：按产品一览（单晶、激光、光器件、光模块）更新产品栏。TGG不在现行产品一览中，磁光晶体改为TSAG、YIG、Bi:RIG。根据光隔离器用磁光器件与TSAG，同时归入旋转器单元与光隔离器（激光）。 ／ 2026-11-20：对照产品一览的5个类别（晶体、激光、光器件、光模块、试制服务），在产品栏中补充试制与服务。 ／ 2026-11-23：按“法拉第旋转器指元件本身（不含磁体）”的定义重新划分工序边界。该公司仅生产旋转器与元件，因此从隔离器工序移出，归入“磁性石榴石与法拉第旋转器”和“激光用光学晶体与透明陶瓷”。"
     },
     "seed-13": {
       "name": "TOCALO（トーカロ）",
@@ -2300,12 +2300,12 @@
       "name": "格兰诺普特（GRANOPT）",
       "own": "非上市。住友金属矿山51%与三菱瓦斯化学49%的合资公司，2005年4月成立",
       "rev": "未披露（注册资本1.5亿日元，员工183人，2025年7月时点）",
-      "prod": "以液相外延法生长的铋置换稀土铁石榴石单晶膜（厚0.1〜0.5毫米）制造的法拉第旋转器。GTD、GLB、GSF、GMF、ETD各型号，波长1310〜1590纳米，标准尺寸11毫米见方",
+      "prod": "以液相外延法生长的铋置换稀土铁石榴石单晶膜（厚0.1〜0.5毫米）制造的法拉第旋转器。GTD、GLB、GSF、ETD（与外部磁体组合使用的型号）及GMF（自身保持磁化的无磁体型号），波长1310〜1590纳米，标准尺寸11毫米见方",
       "pos": "光通信用法拉第旋转器的全球份额领先。经济产业省2020年版《全球细分领域冠军企业100选》的材料指出，该材料的供应商基本上仅限两家",
       "def": "未确认。用途为基站、数据中心和海底电缆",
       "chn": "高。薄膜组成中的Y、Tb、Gd、Ho属于中国中重稀土出口管制对象。在深圳设有销售子公司。成品光隔离器九成以上在中国组装",
       "src": "https://www.granopt.jp/company.html ／ https://www.granopt.jp/en/images/gnt100_01.pdf ／ https://www.smm.co.jp/news/release/2026/06/002134.html ／ https://www.mgc.co.jp/corporate/news/2026/260622.html",
-      "note": "总部与第一工厂位于秋田县能代市，第二工厂于2024年度竣工。计划到2027年度将法拉第旋转器产能提升至2025年度的3倍。外延生长所需的SGGG衬底由住友金属矿山集团供应"
+      "note": "总部与第一工厂位于秋田县能代市，第二工厂于2024年度竣工。计划到2027年度将法拉第旋转器产能提升至2025年度的3倍。外延生长所需的SGGG衬底由住友金属矿山集团供应 ／ 2026-11-23：按“法拉第旋转器指元件本身（不含磁体）”的定义重新划分工序边界。该公司仅生产旋转器芯片，不生产与磁体组装的隔离器，因此只归入“磁性石榴石与法拉第旋转器”。"
     },
     "faraday-kohoku": {
       "name": "湖北工业",
@@ -2316,7 +2316,7 @@
       "def": "正在开发面向航天的高功率光隔离器。2025年9月起在国际空间站开展环境试验。海底电缆用部件连接海底通信基础设施",
       "chn": "高。公司投资者资料明确提出，为应对稀土供需紧张而确保材料库存并推进采购渠道多元化。其中国两处基地从事引线端子业务",
       "src": "https://www.kohokukogyo.co.jp/product/optical-communication-part-and-device/ ／ https://www.kohokukogyo.co.jp/assets/doc/ir/20251128_mufg_ir_seminar.pdf ／ https://www.nikkan.co.jp/articles/view/00740858",
-      "note": "主力工厂位于滋贺县长浜市高月町。由于从薄膜生长一直做到成品光部件，因此横跨第03、04、05阶段。该公司在铝电解电容器引线端子领域亦占全球六成以上份额"
+      "note": "主力工厂位于滋贺县长浜市高月町。由于从薄膜生长一直做到成品光部件，因此横跨第03、04、05阶段。该公司在铝电解电容器引线端子领域亦占全球六成以上份额 ／ 2026-11-23：按“法拉第旋转器指元件本身（不含磁体）”的定义重新划分工序边界。激光用产品为旋转器芯片，归入“磁性石榴石与法拉第旋转器”，隔离器工序只保留光通信用组装品。"
     },
     "faraday-neg": {
       "name": "日本电气硝子",
@@ -2420,11 +2420,11 @@
       "own": "非上市。住友金属矿山100%出资的集团公司；总部与工厂位于秋田县能代市",
       "rev": "未公开",
       "prod": "光隔离器（光通信用圆筒型、表面贴装型、无磁体型；光纤激光器用在线型）。光纤激光器用产品为1030／1064nm、2W（CW）级，以带光纤、带外壳和隔离器芯三种形式量产，1550nm产品处于试制。SGGG（置换型钆镓石榴石）晶体与晶圆（3、4英寸）",
-      "chn": "旋转器为在SGGG衬底上以LPE法生长的Bi取代稀土铁石榴石单晶膜（SGGG为Gd系，与Y、Dy、Tb的使用区分）。法拉第旋转器业务已于2005年转移至Granopt，相关咨询也由Granopt受理。石榴石的稀土组成与原料采购来源未公开。",
+      "chn": "其装入的旋转器为Bi取代稀土铁石榴石的LPE单晶膜（SGGG为Gd系，与Y、Dy、Tb的使用区分）。旋转器业务已于2005年转移至Granopt，旋转器相关咨询也由Granopt受理。石榴石的稀土组成与原料采购来源未公开。",
       "src": "https://www.smm.co.jp/business/material/products/optical_isolator/ ／ https://www.smm.co.jp/business/material/products/faraday_rotator/ ／ https://www.smm.co.jp/business/material/products/sggg/ ／ https://www.smmp.co.jp/ ／ https://www.smmp.co.jp/smmprecision/all/WZH_1_1000_AOID,ID/CLentry_flow.htm ／ https://www.smmp.co.jp/s/sm/smmprecision/images/fl_promotion_material20230728.pdf",
-      "note": "1996年开始生产光隔离器；2005年将FR业务转移至Granopt，2020年开始销售SGGG衬底。SGGG为Gd系，与Y、Dy、Tb的使用区分。 ／ 2026-11-20：根据产品页面与公开资料《Optical Isolator for Fiber Laser Application》（2023年7月）确认1μm波段光纤激光器用隔离器已量产，因此同时归入“法拉第旋转器与隔离器（激光）”。1550nm产品使用传统RIG。元素标记依据Bi取代稀土铁石榴石旋转器及配套磁体的一般构成。",
+      "note": "1996年开始生产光隔离器；2005年将FR业务转移至Granopt，2020年开始销售SGGG衬底。SGGG为Gd系，与Y、Dy、Tb的使用区分。 ／ 2026-11-20：根据产品页面与公开资料《Optical Isolator for Fiber Laser Application》（2023年7月）确认1μm波段光纤激光器用隔离器已量产，因此同时归入“旋转器单元与光隔离器（激光）”。1550nm产品使用传统RIG。元素标记依据Bi取代稀土铁石榴石旋转器及配套磁体的一般构成。 ／ 2026-11-23：在卡片中写明旋转器业务已转移至Granopt，目前几乎专营光隔离器。",
       "def": "为光传输网的分支、放大部位及光纤激光器供应部件。光纤激光器用产品称满足MIL-STD-883的冲击与振动试验条件，但国防客户未公开。",
-      "pos": "1996年开始生产光隔离器。光纤激光器用产品采用在1μm波段插入损耗低于传统RIG的自有旋转器材料（LLR），作为比TGG、TSAG方案小得多的低功率隔离器推广。份额数值未确认。"
+      "pos": "2005年已将法拉第旋转器业务转移至Granopt，现不生产旋转器，几乎专营将旋转器与磁体、偏振片组装而成的光隔离器（另有SGGG基板）。1996年开始生产光隔离器。光纤激光器用产品采用在1μm波段插入损耗低于传统RIG的旋转器材料（LLR），作为比TGG、TSAG方案小得多的低功率隔离器推广。份额数值未确认。"
     },
     "optics-santec-aoc": {
       "name": "Santec AOC",
@@ -2433,7 +2433,7 @@
       "prod": "空间光调制器（LCOS-SLM：SLM-200、210、250、300、310等）、光谱整形器（LCOS型可编程光滤波器WSS-2000）、光功率监测器（带分光功能的光电探测器NTP、UTP、MTP、IPD，内置光隔离器的INTP，多通道光功率监测器MPA）、光衰减器（MEMS驱动的COVA-1）、光滤波器（MEMS可调滤波器MTF系列）、光子系统（定制光模块）",
       "chn": "涉及稀土的只有内置光隔离器的INTP（C／L波段分光光电探测器）。隔离器旋转器与磁体的材料及采购来源未公开。空间光调制器、滤波器、衰减器、功率监测器本体未见使用稀土的构成。",
       "src": "https://aoc.santec.com/jp/ ／ https://aoc.santec.com/jp/products/slm/ ／ https://aoc.santec.com/jp/products/monitor/ ／ https://aoc.santec.com/jp/products/monitor/intp/ ／ https://aoc.santec.com/jp/products/voa/ ／ https://aoc.santec.com/jp/products/filter/ ／ https://aoc.santec.com/en/assets/doc/INTP-C-E.pdf",
-      "note": "没有单独的光隔离器产品，而是生产内置隔离器的分光光电探测器INTP（面向QSFP-DD光收发模块，Preliminary），因此归入“光部件、光纤与光器件”。元素标记依据INTP内置隔离器的一般构成（Bi:RIG、YIG旋转器与SmCo磁体），不代表已确认含有。 ／ 2026-11-20：对照产品一览（空间光调制器、光谱整形器、光功率监测器、光衰减器、光滤波器、光子系统）与产品指南2025核实，从“法拉第旋转器与隔离器（光通信）”移出。",
+      "note": "没有单独的光隔离器产品，而是生产内置隔离器的分光光电探测器INTP（面向QSFP-DD光收发模块，Preliminary），因此归入“光部件、光纤与光器件”。元素标记依据INTP内置隔离器的一般构成（Bi:RIG、YIG旋转器与SmCo磁体），不代表已确认含有。 ／ 2026-11-20：对照产品一览（空间光调制器、光谱整形器、光功率监测器、光衰减器、光滤波器、光子系统）与产品指南2025核实，从“光隔离器与光环行器（光通信）”移出。",
       "def": "用于光通信模块内光功率监测与反向光阻断的部件；所查产品页面与规格书未列明国防或航天项目。"
     },
     "optics-tatsuta": {
@@ -2443,7 +2443,7 @@
       "prod": "波长依赖性小的宽带、偏振无关型光隔离器，以及宽带光环行器（光纤部件）。可就指定波长、端口长度和连接器的定制试制进行咨询，最少1个起。",
       "chn": "标记表示与光学应用链相关，不代表已确认具体产品含有Y／Dy／Tb；材料成分及部件供应商未公开。",
       "src": "https://www.tatsuta.co.jp/product/sensor_medical/optical/isorator/ ／ https://www.tatsuta.co.jp/product/sensor_medical/optical/cirlulator/",
-      "note": "标记表示与光学应用链相关，不代表已确认具体产品含有Y／Dy／Tb；材料成分及部件供应商未公开。 ／ 2026-11-20：根据光隔离器与光环行器的产品页面确认，归入“法拉第旋转器与隔离器（光通信）”。旋转器是自制还是外购尚未确认。",
+      "note": "标记表示与光学应用链相关，不代表已确认具体产品含有Y／Dy／Tb；材料成分及部件供应商未公开。 ／ 2026-11-20：根据光隔离器与光环行器的产品页面确认，归入“光隔离器与光环行器（光通信）”。旋转器是自制还是外购尚未确认。",
       "def": "光纤部件用于抑制回光损伤光源及反射引发的问题；所查资料未列明具体国防或航天装备采用情况。"
     },
     "optics-space-compass": {
@@ -2532,12 +2532,12 @@
       "name": "藤仓",
       "own": "上市公司 / 株式会社藤仓（东证Prime市场，证券代码5803）",
       "rev": "合并营收1兆1,824亿日元，其中信息通信6,530亿日元（2026年3月期）",
-      "prod": "光纤、光缆、光连接器；光纤激光器用光纤器件（光纤布拉格光栅、泵浦光合束器与耦合器）；Yb光纤激光器及其内置的光隔离器旋转器（TSAG单晶，与NIMS共同开发）",
-      "pos": "光纤与光部件的大型企业。与NIMS共同就将TSAG（Tb·Sc系石榴石）单晶用作1μm波段激光隔离器旋转器的技术取得专利，并将其装入自家的Yb光纤激光器。旋转器与隔离器的份额未经确认。",
+      "prod": "光纤、光缆、光连接器；光纤激光器用光纤器件（光纤布拉格光栅、泵浦光合束器与耦合器）；Yb光纤激光器及其内置的光隔离器（TSLAG单晶旋转器与NdFeB磁体；TSLAG与NIMS共同开发，并生长直径2英寸的单晶）",
+      "pos": "光纤与光部件的大型企业。与NIMS共同就将TSLAG（Tb·Sc·Lu系石榴石）单晶用作1μm波段激光隔离器旋转器的技术取得专利，并将其装入自家的Yb光纤激光器。旋转器与隔离器的份额未经确认。",
       "def": "未能确认。光纤激光器主要用于加工用途。",
-      "chn": "作为TSAG原料的Tb、Sc的采购来源未公开。Tb对中国依赖度高。",
+      "chn": "作为TSLAG原料的Tb、Sc的采购来源未公开。隔离器中的NdFeB磁体可能含Dy。Tb、Dy对中国依赖度高。",
       "src": "https://patents.google.com/patent/US8804240B2/en ／ https://www.nims.go.jp/electr-opt/OPCRY_e.html ／ https://www.optic-product.fujikura.com/wp-content/uploads/2025/06/CPJ70A_71A_79A.pdf ／ https://www2.jpx.co.jp/disc/58030/081220260514532598_tse-acedjpsm-58030-20260514358030-ixbrl.htm",
-      "note": "2026-11-19：在对激光波长用法拉第旋转器与光隔离器的追加调查中新增收录 ／ 2026-11-21：因生产自有Yb光纤激光器，同时归入“固体与光纤激光振荡器”（Sc按装入自有TSAG旋转器的隔离器计入）。 ／ 2026-11-22：因生产光纤、光缆及光纤激光器用光纤器件，同时归入“光部件、光纤与光器件”（光纤本身不含对象元素；Tb及磁体中的Sm、Dy来自配套使用的自有光隔离器）。"
+      "note": "2026-11-19：在对激光波长用法拉第旋转器与光隔离器的追加调查中新增收录 ／ 2026-11-21：因生产自有Yb光纤激光器，同时归入“固体与光纤激光振荡器”（Sc按装入自有TSAG旋转器的隔离器计入）。 ／ 2026-11-22：因生产光纤、光缆及光纤激光器用光纤器件，同时归入“光部件、光纤与光器件”（光纤本身不含对象元素；Tb及磁体中的Dy来自配套使用的自有光隔离器）。 ／ 2026-11-23：确认旋转器材料为TSLAG（Tb₃(Sc,Lu)₂Al₃O₁₂）且隔离器组装NdFeB磁体，据此修改记述，并将单晶生长同时归入“激光用光学晶体与透明陶瓷”。 ／ 2026-11-23：已确认隔离器磁体为NdFeB，因此从所属元素中移除Sm（“旋转器单元与光隔离器（激光）”“固体与光纤激光振荡器”“光部件、光纤与光器件”）。"
     },
     "compound-kisankinzoku": {
       "name": "稀产金属",
@@ -2912,8 +2912,8 @@
       }
     },
     "03_magneto_garnet": {
-      "label": "磁性石榴石（铋取代薄膜与YIG）",
-      "description": "Bi:RIG膜・YIG单晶・SGGG基板",
+      "label": "磁性石榴石与法拉第旋转器（光通信）",
+      "description": "Bi:RIG膜・YIG单晶・旋转器芯片",
       "srcNotes": {
         "02_compound": "由高纯Y、Tb、Gd等氧化物，在石榴石衬底上以LPE法生长铋取代磁性石榴石薄膜，或生长YIG单晶"
       }
@@ -2998,19 +2998,20 @@
       }
     },
     "04_faraday_laser": {
-      "label": "法拉第旋转器与隔离器（激光）",
-      "description": "532〜1064nm，TGG・TSAG・Tb系玻璃",
+      "label": "旋转器单元与光隔离器（激光）",
+      "description": "532〜1064nm，TGG・TSAG・Tb系玻璃＋磁体",
       "srcNotes": {
-        "03_yag_crystal": "将TGG、TSAG晶体、透明陶瓷或Tb系玻璃加工为旋转器",
-        "04_mag": "组装NdFeB（添加Dy）或SmCo磁体，作为使TGG、Tb系玻璃旋转器饱和的强磁场源，制成旋转器单元与光隔离器"
+        "03_yag_crystal": "将TGG、TSAG（TSLAG）晶体、透明陶瓷、Tb系玻璃的法拉第元件用于与磁体组装的旋转器单元与光隔离器",
+        "04_mag": "组装对旋转器施加磁场的磁体（NdFeB或SmCo），制成旋转器单元与光隔离器",
+        "03_magneto_garnet": "将面向低功率光纤激光器、降低损耗的Bi取代石榴石旋转器芯片，用于与磁体组装的光隔离器"
       }
     },
     "04_faraday_tele": {
-      "label": "法拉第旋转器与隔离器（光通信）",
-      "description": "1310/1550nm，Bi:RIG・YIG",
+      "label": "光隔离器与光环行器（光通信）",
+      "description": "1310/1550nm，旋转器＋磁体・偏振片",
       "srcNotes": {
-        "03_magneto_garnet": "将磁性石榴石薄膜、YIG晶体加工为旋转器芯片",
-        "04_mag": "将SmCo磁体置于旋转器芯片周围，并与偏振片、双折射晶体组合成光隔离器与光环行器（通信用途因温度特性通常采用SmCo）"
+        "03_magneto_garnet": "将法拉第旋转器芯片（磁性石榴石）用于与磁体、偏振片组装的光隔离器与光环行器",
+        "04_mag": "将SmCo磁体置于旋转器芯片周围，并与偏振片、双折射晶体组合成光隔离器与光环行器"
       }
     },
     "04_target": {

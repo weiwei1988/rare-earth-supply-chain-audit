@@ -31,7 +31,7 @@ check(
 );
 check(
   "工程別の延べ企業数",
-  sameJson(Object.fromEntries([2, 3, 4, 5, 6].map((stage) => [stage, dataset.companies.filter((company) => company.stages.includes(stage)).length])), { 2: 9, 3: 26, 4: 47, 5: 81, 6: 130 }),
+  sameJson(Object.fromEntries([2, 3, 4, 5, 6].map((stage) => [stage, dataset.companies.filter((company) => company.stages.includes(stage)).length])), { 2: 9, 3: 26, 4: 45, 5: 81, 6: 130 }),
 );
 check(
   "列順が全51分類を工程ごとに一度ずつ指定",
@@ -45,7 +45,7 @@ check("希土類対象外企業を収録しない", dataset.companies.every((com
 const routeCount = dataset.subcategories.reduce((sum, sub) => sum + (sub.src?.length ?? 0), 0);
 const routeKeys = dataset.subcategories.flatMap((sub) => (sub.src ?? []).flatMap((source) => (sub.srcEls[source] ?? []).map((element) => source + "|" + sub.id + "|" + element)));
 const skippedRoutes = dataset.subcategories.flatMap((sub) => Object.keys(sub.srcSkip ?? {}).map((source) => source + "|" + sub.id));
-check("84本の監査済みカテゴリー接続（うち同じ工程の中の組み込み2本）", routeCount === 84);
+check("85本の監査済みカテゴリー接続（うち同じ工程の中の組み込み2本）", routeCount === 85);
 check("元素別接続に重複なし", routeKeys.length === new Set(routeKeys).size);
 check(
   "全工程の接続に元素と根拠を定義",
@@ -251,7 +251,7 @@ check(
 
 // --- 公開画面の構造 -------------------------------------------------------
 check("index.html に iframe がない", !/<iframe/i.test(html));
-check("全工程を画面幅に合わせて表示", html.includes(".re-flow-canvas{position:relative;isolation:isolate;width:1200px") && html.includes("W=Math.max(1200,Math.floor(viewport.clientWidth))") && html.includes("var cardWidth=Math.max(176,Math.min(240") && html.includes("var xByStage={2:sidePadding+columnStep") && html.includes("stage:6,items:systems") && html.includes("canvas.style.width=W+\"px\"") && html.includes(".re-flow-wrap{position:relative;max-width:100%;overflow-x:auto;overflow-y:hidden;height:auto"));
+check("全工程を画面幅に合わせて表示", html.includes(".re-flow-canvas{position:relative;isolation:isolate;width:1200px") && html.includes("W=Math.max(FLOW_MIN_WIDTH,Math.floor(viewport.clientWidth))") && html.includes("var FLOW_MIN_WIDTH=1100;") && html.includes("var cardWidth=W>=1200?Math.max(176,Math.min(240") && html.includes("var xByStage={2:sidePadding+columnStep") && html.includes("stage:6,items:systems") && html.includes("canvas.style.width=W+\"px\"") && html.includes(".re-flow-wrap{position:relative;max-width:100%;overflow-x:auto;overflow-y:hidden;height:auto"));
 check("海外の資源・分離を起点カードとして表示", html.includes("海外の資源・分離") && !html.includes("STAGE 01 — 中国原料"));
 check(
   "Stage見出しを拡大し、元素フィルター連動の企業数を表示",

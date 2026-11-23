@@ -879,14 +879,14 @@
     },
     "seed-11": {
       "name": "Shinkosha",
-      "src": "JSX",
-      "own": "Privately held",
-      "rev": "Estimated at several billion yen",
-      "prod": "YAG single-crystal rods and optical components",
-      "pos": "A long-established Japanese specialist in YAG single crystals",
-      "def": "Spillover to optics for laser ranging, processing, and research",
-      "chn": "Estimated to be high. Primary-source verification of feedstock suppliers is required.",
-      "note": "Primary sources not verified; confidence: low. / Removed from Stage 04 'solid-state laser oscillators (YAG)' and limited to the YAG crystal and ceramic-material side in Stage 03."
+      "src": "https://www.shinkosha.com/product/ ／ https://www.shinkosha.com/product/isolator/ ／ https://www.shinkosha.com/product/sensor/ ／ https://www.shinkosha.com/company/history/",
+      "own": "Privately held. Head office and plant in Sakae Ward, Yokohama, Kanagawa. Founded in 1947 as a synthetic-gemstone maker; its subsidiaries include Rubica Industries (Uozu, Toyama)",
+      "rev": "Not disclosed",
+      "prod": "Optical isolators for fiber lasers (for Yb and Er fiber lasers; 1064–1100 nm, 1178 nm, 1310–1620 nm and 1930–2060 nm bands; new 5 W-class 1 µm and 10 W/30 W-class 2 µm models), fiber-optic magnetic-field sensors using the Faraday effect and fiber-optic sensors for disaster prevention, sapphire single crystals and processed products (including sapphire crystals for wristwatches), rutile prisms, oxide substrates for thin-film growth, and alumina evaporation materials",
+      "pos": "A crystal maker that began with synthetic gemstones; it describes itself as Japan’s only maker of sapphire crystals for wristwatches. Its share in optical isolators has not been confirmed. YAG single crystals and laser media do not appear among its current products",
+      "def": "Fiber-laser isolators are for processing and research. No defense deliveries have been confirmed",
+      "chn": "The rotator (Faraday element) material and magnet type of its isolators are not disclosed. A typical configuration uses Tb-based paramagnetic garnets such as TGG in the 1 µm band and iron-garnet rotators in the 1.3–2 µm bands, combined with SmCo or NdFeB magnets. Sapphire, rutile and alumina contain no rare earths.",
+      "note": "Primary sources not verified; confidence: low. / Removed from Stage 04 'solid-state laser oscillators (YAG)' and limited to the YAG crystal and ceramic-material side in Stage 03. / 2026-11-23: The official product list confirms that current products are sapphire, rutile and oxide substrates, optical isolators for fiber lasers and fiber-optic sensors, and that the company does not handle YAG single crystals or laser media. Removed from Optical crystals & transparent ceramics for lasers and Solid-state laser media, and placed only under Rotator units & optical isolators (lasers)."
     },
     "seed-12": {
       "name": "Oxide Corporation",
@@ -899,7 +899,7 @@
       "chn": "Wavelength conversion in its deep-ultraviolet lasers relies mainly on crystals without rare earths, such as BBO and CLBO. Rare earths enter through magneto-optical crystals (Tb and Sc in TSAG; Y and others in YIG and Bi:RIG) and through the lasers' fundamental sources and isolators. Raw-material suppliers are not disclosed.",
       "bom": "Kalama 266 nm converts an infrared fiber-amplified source in two stages, and Frequad converts wavelength with ultra-high-purity BBO. The fundamental-source medium is not disclosed, and use of YAG in its own lasers has not been confirmed (only the imported Areté laser states YAG). TSAG has higher transmittance in the 1 µm band than TGG and a magneto-optical constant about 20% larger, and is an isolator material for high-intensity lasers. Bi:RIG is for 1.3–1.55 µm telecom isolators.",
       "gap": "Distinguish in-house products from imported products sold by the company, and verify defense and space customers, fundamental-source media, and export-control classification. The scope of its magneto-optical devices (rotators alone or assembled isolators, with or without magnets) and the supplier of Sc for TSAG are also unconfirmed.",
-      "note": "Formally included in Stage 04 based on the solid-state laser oscillator DD category 'candidate for inclusion (oscillator).' / The 266 nm QCW product converts an infrared fiber-amplified source in two wavelength-conversion stages, and a fiber amplifier stage and multi-stage conversion are normally fitted with an isolator to block back-reflection. The company is itself a maker of Faraday rotators / Flags indicate relevance to the optical application chain; product-specific Y/Dy/Tb content and component suppliers are undisclosed. They do not establish confirmed material content. / 2026-11-20: Updated the product field to match the product list (single crystals, lasers, optical devices, optical modules). TGG is not in the current product list, so the magneto-optical crystals were changed to TSAG, YIG and Bi:RIG. Also placed under Faraday rotators & isolators (lasers), based on its magneto-optical devices for optical isolators and TSAG. / 2026-11-20: Checked against the five product categories (crystals, lasers, optical devices, optical modules, prototyping services) and added prototyping and services to the product field."
+      "note": "Formally included in Stage 04 based on the solid-state laser oscillator DD category 'candidate for inclusion (oscillator).' / The 266 nm QCW product converts an infrared fiber-amplified source in two wavelength-conversion stages, and a fiber amplifier stage and multi-stage conversion are normally fitted with an isolator to block back-reflection. The company is itself a maker of Faraday rotators / Flags indicate relevance to the optical application chain; product-specific Y/Dy/Tb content and component suppliers are undisclosed. They do not establish confirmed material content. / 2026-11-20: Updated the product field to match the product list (single crystals, lasers, optical devices, optical modules). TGG is not in the current product list, so the magneto-optical crystals were changed to TSAG, YIG and Bi:RIG. Also placed under Rotator units & optical isolators (lasers), based on its magneto-optical devices for optical isolators and TSAG. / 2026-11-20: Checked against the five product categories (crystals, lasers, optical devices, optical modules, prototyping services) and added prototyping and services to the product field. / 2026-11-23: Stage boundaries were redrawn to treat a Faraday rotator as the element itself (without magnets). Because the company makes only rotators and elements, it was removed from the isolator stages and placed under Magnetic garnets & Faraday rotators and Optical crystals & transparent ceramics for lasers."
     },
     "seed-13": {
       "name": "TOCALO",
@@ -2300,12 +2300,12 @@
       "name": "Granopt",
       "own": "Privately held; joint venture of Sumitomo Metal Mining (51%) and Mitsubishi Gas Chemical (49%), founded April 2005",
       "rev": "Not disclosed (capital 150 million yen; 183 employees as of July 2025)",
-      "prod": "Faraday rotators made from bismuth-substituted rare-earth iron garnet single-crystal film grown by liquid phase epitaxy (0.1–0.5 mm thick). GTD, GLB, GSF, GMF and ETD grades; 1310–1590 nm; 11 mm square standard",
+      "prod": "Faraday rotators made from bismuth-substituted rare-earth iron garnet single-crystal film grown by liquid phase epitaxy (0.1–0.5 mm thick). GTD, GLB, GSF and ETD grades (used with external magnets) and GMF (a magnet-free grade that holds its own magnetisation); 1310–1590 nm; 11 mm square standard",
       "pos": "World-leading share in Faraday rotators for optical communication. METI's 2020 Global Niche Top 100 citation notes that suppliers of this material are limited to roughly two companies",
       "def": "Not confirmed. Applications are base stations, data centres and submarine cables",
       "chn": "High. The Y, Tb, Gd and Ho in the film are covered by China's export controls on medium and heavy rare earths. Sales subsidiary in Shenzhen. More than 90% of finished optical isolators are assembled in China",
       "src": "https://www.granopt.jp/company.html / https://www.granopt.jp/en/images/gnt100_01.pdf / https://www.smm.co.jp/news/release/2026/06/002134.html / https://www.mgc.co.jp/corporate/news/2026/260622.html",
-      "note": "Head office and first plant in Noshiro, Akita; second plant completed in FY2024. Faraday rotator capacity to triple by FY2027 against FY2025. The SGGG substrate that seeds the epitaxial growth is supplied by the Sumitomo Metal Mining group"
+      "note": "Head office and first plant in Noshiro, Akita; second plant completed in FY2024. Faraday rotator capacity to triple by FY2027 against FY2025. The SGGG substrate that seeds the epitaxial growth is supplied by the Sumitomo Metal Mining group / 2026-11-23: Stage boundaries were redrawn to treat a Faraday rotator as the element itself (without magnets). Because the company makes rotator chips but not isolators assembled with magnets, it is placed only under Magnetic garnets & Faraday rotators."
     },
     "faraday-kohoku": {
       "name": "Kohoku Kogyo",
@@ -2316,7 +2316,7 @@
       "def": "Developing high-power optical isolators for space. Environmental testing aboard the International Space Station began in September 2025. Submarine cable components feed undersea communications infrastructure",
       "chn": "High. The company's own investor materials state that it is securing material inventory and diversifying procurement routes in response to tight rare-earth supply. Its two Chinese sites serve the lead terminal business",
       "src": "https://www.kohokukogyo.co.jp/product/optical-communication-part-and-device/ / https://www.kohokukogyo.co.jp/assets/doc/ir/20251128_mufg_ir_seminar.pdf / https://www.nikkan.co.jp/articles/view/00740858",
-      "note": "Main plant in Takatsuki, Nagahama, Shiga. Because it covers everything from film growth to finished optical components, it appears in stages 03, 04 and 05. It also holds over 60% of the world market in lead terminals for aluminium electrolytic capacitors"
+      "note": "Main plant in Takatsuki, Nagahama, Shiga. Because it covers everything from film growth to finished optical components, it appears in stages 03, 04 and 05. It also holds over 60% of the world market in lead terminals for aluminium electrolytic capacitors / 2026-11-23: Stage boundaries were redrawn to treat a Faraday rotator as the element itself (without magnets). Its laser products are rotator chips and are now included under Magnetic garnets & Faraday rotators; the isolator stage covers only its assembled products for optical communications."
     },
     "faraday-neg": {
       "name": "Nippon Electric Glass",
@@ -2420,11 +2420,11 @@
       "own": "Unlisted. A wholly owned group company of Sumitomo Metal Mining; head office and plant in Noshiro, Akita",
       "rev": "Not disclosed",
       "prod": "Optical isolators (cylindrical, surface-mount and magnet-free types for optical communications; in-line types for fiber lasers). Fiber-laser isolators for 1030/1064 nm at the 2 W (CW) class are in volume production as fiber-pigtailed, housed and isolator-core versions, with a 1550 nm version sampled. SGGG (substituted gallium gadolinium garnet) crystals and wafers (3 and 4 inch)",
-      "chn": "Rotators are LPE single-crystal films of Bi-substituted rare-earth iron garnet grown on SGGG substrates (SGGG is Gd-based and is distinguished from Y, Dy and Tb use). The Faraday rotator business was transferred to Granopt in 2005, which also handles rotator enquiries. The rare-earth composition of the garnet and raw-material suppliers are not disclosed.",
+      "chn": "The rotators it builds in are LPE single-crystal films of Bi-substituted rare-earth iron garnet (SGGG is Gd-based and is distinguished from Y, Dy and Tb use). The rotator business was transferred to Granopt in 2005, which also handles rotator enquiries. The rare-earth composition of the garnet and raw-material suppliers are not disclosed.",
       "src": "https://www.smm.co.jp/business/material/products/optical_isolator/ ／ https://www.smm.co.jp/business/material/products/faraday_rotator/ ／ https://www.smm.co.jp/business/material/products/sggg/ ／ https://www.smmp.co.jp/ ／ https://www.smmp.co.jp/smmprecision/all/WZH_1_1000_AOID,ID/CLentry_flow.htm ／ https://www.smmp.co.jp/s/sm/smmprecision/images/fl_promotion_material20230728.pdf",
-      "note": "Started optical-isolator production in 1996; transferred the FR business to Granopt in 2005 and began selling SGGG substrates in 2020. SGGG is Gd-based and is distinguished from Y, Dy and Tb use. / 2026-11-20: Volume production of 1 µm-band fiber-laser isolators was confirmed from its product page and the public material \"Optical Isolator for Fiber Laser Application\" (July 2023), so it is also placed under Faraday rotators & isolators (lasers). The 1550 nm version uses conventional RIG. Element flags reflect the usual make-up of Bi-substituted rare-earth iron garnet rotators and the magnets combined with them.",
+      "note": "Started optical-isolator production in 1996; transferred the FR business to Granopt in 2005 and began selling SGGG substrates in 2020. SGGG is Gd-based and is distinguished from Y, Dy and Tb use. / 2026-11-20: Volume production of 1 µm-band fiber-laser isolators was confirmed from its product page and the public material \"Optical Isolator for Fiber Laser Application\" (July 2023), so it is also placed under Rotator units & optical isolators (lasers). The 1550 nm version uses conventional RIG. Element flags reflect the usual make-up of Bi-substituted rare-earth iron garnet rotators and the magnets combined with them. / 2026-11-23: Stated on the card that the rotator business has been transferred to Granopt and that the company now works almost exclusively on optical isolators.",
       "def": "Supplies components for branching and amplification in optical transmission networks and for fiber lasers. The fiber-laser isolators are stated to meet MIL-STD-883 shock and vibration test conditions, but defense customers are not disclosed.",
-      "pos": "Began making optical isolators in 1996. Its fiber-laser isolators use its own rotator material (LLR), with lower insertion loss in the 1 µm band than conventional RIG, and are promoted as low-power isolators much smaller than TGG or TSAG designs. No share figure has been confirmed."
+      "pos": "Transferred its Faraday rotator business to Granopt in 2005 and no longer makes rotators; it now works almost exclusively on optical isolators that combine rotators with magnets and polarisers (plus SGGG substrates). Began making optical isolators in 1996. Its fiber-laser isolators use a rotator material (LLR) with lower insertion loss in the 1 µm band than conventional RIG, and are promoted as low-power isolators much smaller than TGG or TSAG designs. No share figure has been confirmed."
     },
     "optics-santec-aoc": {
       "name": "Santec AOC Corporation",
@@ -2433,7 +2433,7 @@
       "prod": "Spatial light modulators (LCOS-SLM: SLM-200, 210, 250, 300, 310 and others), spectral shapers (WSS-2000 LCOS programmable optical filter), optical power monitors (tap photodetectors NTP, UTP, MTP and IPD, the isolator-integrated INTP, and the MPA multichannel optical power monitor), optical attenuators (MEMS-driven COVA-1), optical filters (MTF series MEMS tunable filters), and optical subsystems (custom optical modules)",
       "chn": "Rare earths are involved only through INTP (a C/L-band tap photodetector with a built-in optical isolator). The rotator and magnet materials of the isolator and their suppliers are not disclosed. No use of rare earths was found in its spatial light modulators, filters, attenuators or power monitors themselves.",
       "src": "https://aoc.santec.com/jp/ ／ https://aoc.santec.com/jp/products/slm/ ／ https://aoc.santec.com/jp/products/monitor/ ／ https://aoc.santec.com/jp/products/monitor/intp/ ／ https://aoc.santec.com/jp/products/voa/ ／ https://aoc.santec.com/jp/products/filter/ ／ https://aoc.santec.com/en/assets/doc/INTP-C-E.pdf",
-      "note": "It has no stand-alone optical isolator products but makes INTP, a tap photodetector with a built-in isolator (for QSFP-DD optical transceivers, preliminary), so it is placed under Optical components, fibers & devices. Element flags reflect the usual make-up of the built-in isolator (Bi:RIG or YIG rotator and SmCo magnet) and do not confirm actual content. / 2026-11-20: Checked against the product lineup (spatial light modulators, spectral shapers, optical power monitors, optical attenuators, optical filters, optical subsystems) and Product Guide 2025, and moved from Faraday rotators & isolators (optical communications).",
+      "note": "It has no stand-alone optical isolator products but makes INTP, a tap photodetector with a built-in isolator (for QSFP-DD optical transceivers, preliminary), so it is placed under Optical components, fibers & devices. Element flags reflect the usual make-up of the built-in isolator (Bi:RIG or YIG rotator and SmCo magnet) and do not confirm actual content. / 2026-11-20: Checked against the product lineup (spatial light modulators, spectral shapers, optical power monitors, optical attenuators, optical filters, optical subsystems) and Product Guide 2025, and moved from Optical isolators & circulators (optical communications).",
       "def": "Components for optical-power monitoring and blocking reverse light in optical communication modules; the product pages and datasheet reviewed identify no defense or space project."
     },
     "optics-tatsuta": {
@@ -2443,7 +2443,7 @@
       "prod": "Broadband, polarisation-independent optical isolators with low wavelength dependence, and broadband optical circulators (optical-fiber components). Application-specific prototypes with specified wavelength, port length and connectors can be discussed from a single unit.",
       "chn": "Flags indicate relevance to the optical application chain; product-specific Y/Dy/Tb content and component suppliers are undisclosed. They do not establish confirmed material content.",
       "src": "https://www.tatsuta.co.jp/product/sensor_medical/optical/isorator/ ／ https://www.tatsuta.co.jp/product/sensor_medical/optical/cirlulator/",
-      "note": "Flags indicate relevance to the optical application chain; product-specific Y/Dy/Tb content and component suppliers are undisclosed. They do not establish confirmed material content. / 2026-11-20: Confirmed from its optical isolator and circulator product pages and placed under Faraday rotators & isolators (optical communications). Whether it makes the rotators in house or buys them is unconfirmed.",
+      "note": "Flags indicate relevance to the optical application chain; product-specific Y/Dy/Tb content and component suppliers are undisclosed. They do not establish confirmed material content. / 2026-11-20: Confirmed from its optical isolator and circulator product pages and placed under Optical isolators & circulators (optical communications). Whether it makes the rotators in house or buys them is unconfirmed.",
       "def": "Fiber-optic components protect sources from return-light damage and reflection-related problems; reviewed sources do not identify adoption in specific defense or space equipment."
     },
     "optics-space-compass": {
@@ -2532,12 +2532,12 @@
       "name": "Fujikura",
       "own": "Listed company / Fujikura Ltd. (Tokyo Stock Exchange Prime Market, securities code 5803)",
       "rev": "Consolidated net sales: JPY 1,182.4 billion, including JPY 653.0 billion from Information & Communications (fiscal year ended March 2026)",
-      "prod": "Optical fibers, optical cables and optical connectors; optical fiber devices for fiber lasers (fiber Bragg gratings, pump combiners and couplers); Yb fiber lasers and the isolator rotators built into them (TSAG single crystals, co-developed with NIMS)",
-      "pos": "A major maker of optical fibers and optical components. It patented, jointly with NIMS, the use of TSAG (Tb–Sc garnet) single crystals as rotators in isolators for 1 µm-band lasers, and builds them into its own Yb fiber lasers. Its share in rotators and isolators has not been confirmed.",
+      "prod": "Optical fibers, optical cables and optical connectors; optical fiber devices for fiber lasers (fiber Bragg gratings, pump combiners and couplers); Yb fiber lasers and the optical isolators built into them (TSLAG single-crystal rotators with NdFeB magnets; TSLAG was co-developed with NIMS, and the company grows 2-inch single crystals)",
+      "pos": "A major maker of optical fibers and optical components. It patented, jointly with NIMS, the use of TSLAG (Tb–Sc–Lu garnet) single crystals as rotators in isolators for 1 µm-band lasers, and builds them into its own Yb fiber lasers. Its share in rotators and isolators has not been confirmed.",
       "def": "Not confirmed. Fiber lasers are mainly for materials processing.",
-      "chn": "Suppliers of the Tb and Sc used as TSAG raw materials are not disclosed. Tb is highly dependent on China.",
+      "chn": "Suppliers of the Tb and Sc used as TSLAG raw materials are not disclosed. The NdFeB magnets in its isolators may contain Dy. Tb and Dy are highly dependent on China.",
       "src": "https://patents.google.com/patent/US8804240B2/en ／ https://www.nims.go.jp/electr-opt/OPCRY_e.html ／ https://www.optic-product.fujikura.com/wp-content/uploads/2025/06/CPJ70A_71A_79A.pdf ／ https://www2.jpx.co.jp/disc/58030/081220260514532598_tse-acedjpsm-58030-20260514358030-ixbrl.htm",
-      "note": "2026-11-19: Newly added through additional research on Faraday rotators and optical isolators for laser wavelengths. / 2026-11-21: Also placed under Solid-state & fiber laser oscillators because it makes its own Yb fiber lasers (Sc is included through isolators that use its in-house TSAG rotators). / 2026-11-22: Also placed under Optical components, fibers & devices because it makes optical fibers, optical cables and fiber devices for fiber lasers (the fibers themselves contain none of the covered elements; Tb and the Sm and Dy in magnets come from its own optical isolators used with them)."
+      "note": "2026-11-19: Newly added through additional research on Faraday rotators and optical isolators for laser wavelengths. / 2026-11-21: Also placed under Solid-state & fiber laser oscillators because it makes its own Yb fiber lasers (Sc is included through isolators that use its in-house TSAG rotators). / 2026-11-22: Also placed under Optical components, fibers & devices because it makes optical fibers, optical cables and fiber devices for fiber lasers (the fibers themselves contain none of the covered elements; Tb and the Dy in magnets come from its own optical isolators used with them). / 2026-11-23: Confirmed that the rotator material is TSLAG (Tb₃(Sc,Lu)₂Al₃O₁₂) and that NdFeB magnets are built into the isolators; corrected the description and also placed the single-crystal growth under Optical crystals & transparent ceramics for lasers. / 2026-11-23: Removed Sm from its element flags (Rotator units & optical isolators (lasers), Solid-state & fiber laser oscillators, and Optical components, fibers & devices) because the isolator magnets were confirmed to be NdFeB."
     },
     "compound-kisankinzoku": {
       "name": "Kisan Kinzoku",
@@ -2912,8 +2912,8 @@
       }
     },
     "03_magneto_garnet": {
-      "label": "Magnetic garnets (Bi-substituted films & YIG)",
-      "description": "Bi:RIG films, YIG single crystals and SGGG substrates",
+      "label": "Magnetic garnets & Faraday rotators (telecom)",
+      "description": "Bi:RIG films, YIG crystals and rotator chips",
       "srcNotes": {
         "02_compound": "Grow bismuth-substituted magnetic garnet films by LPE on garnet substrates, or grow YIG single crystals, from high-purity Y, Tb, Gd and other oxides"
       }
@@ -2998,19 +2998,20 @@
       }
     },
     "04_faraday_laser": {
-      "label": "Faraday rotators & isolators (lasers)",
-      "description": "532–1064 nm; TGG, TSAG and Tb-based glass",
+      "label": "Rotator units & optical isolators (lasers)",
+      "description": "532–1064 nm; TGG, TSAG and Tb-based glass with magnets",
       "srcNotes": {
-        "03_yag_crystal": "Process TGG and TSAG crystals, transparent ceramics and Tb-based glass into rotators",
-        "04_mag": "Combine NdFeB (Dy-doped) or SmCo magnets, as the strong field source that saturates TGG and Tb-based glass rotators, into rotator units and optical isolators"
+        "03_yag_crystal": "Faraday elements of TGG and TSAG (TSLAG) crystals, transparent ceramics and Tb-based glass go into rotator units and optical isolators assembled with magnets",
+        "04_mag": "Combine magnets (NdFeB or SmCo) that apply a field to the rotator into rotator units and optical isolators",
+        "03_magneto_garnet": "Bi-substituted garnet rotator chips with reduced loss for low-power fiber lasers go into optical isolators assembled with magnets"
       }
     },
     "04_faraday_tele": {
-      "label": "Faraday rotators & isolators (optical communications)",
-      "description": "1310/1550 nm; Bi:RIG and YIG",
+      "label": "Optical isolators & circulators (optical communications)",
+      "description": "1310/1550 nm; rotators with magnets and polarisers",
       "srcNotes": {
-        "03_magneto_garnet": "Process magnetic garnet films and YIG crystals into rotator chips",
-        "04_mag": "Place SmCo magnets around the rotator chip and combine them with polarisers and birefringent crystals into optical isolators and circulators (SmCo is usual for telecom because of its temperature stability)"
+        "03_magneto_garnet": "Faraday rotator chips (magnetic garnet) go into optical isolators and circulators assembled with magnets and polarisers",
+        "04_mag": "Place SmCo magnets around the rotator chip and combine them with polarisers and birefringent crystals into optical isolators and circulators"
       }
     },
     "04_target": {
@@ -3096,7 +3097,7 @@
     },
     "05_photonics": {
       "label": "Optical components, fibers & devices",
-      "description": "Optical fibers, optical transceivers, ITLAs and optical amplifiers",
+      "description": "Optical fibers, transceivers, ITLAs and amplifiers",
       "srcNotes": {
         "04_faraday_tele": "Build optical isolators into TOSAs, EMLs, ITLAs, optical transceivers and optical amplifiers to block light reflected back into semiconductor lasers (1310/1550 nm)"
       }
@@ -3198,7 +3199,7 @@
     },
     "06_laser": {
       "label": "Laser systems & irradiation",
-      "description": "Ranging, irradiation, high power and industrial processing machines",
+      "description": "Ranging, irradiation, high-power and processing lasers",
       "srcNotes": {
         "05_laser_osc": "Light sources for ranging, irradiation and high-power lasers, and for laser processing machines, markers, welders and annealing systems",
         "05_electronics": "Semiconductor lasers and electronic circuits, including laser transceivers for engagement training"
@@ -3224,14 +3225,14 @@
     },
     "06_optical_net": {
       "label": "Optical network infrastructure",
-      "description": "Optical transport, submarine cables and satellite optical links (commercial)",
+      "description": "Optical transport, submarine cables, satellite links (civil)",
       "srcNotes": {
         "05_photonics": "Build optical transceivers and amplifiers into optical transmission equipment and submarine repeaters"
       }
     },
     "06_rf_sensor": {
       "label": "RF & piezoelectric sensing",
-      "description": "RF measurement, piezo evaluation, sensors and laser measurement",
+      "description": "RF measurement, piezo testing, sensors, laser metrology",
       "srcNotes": {
         "05_electronics": "Electronic components in instruments and sensors (Sc: piezoelectric sensors and high-frequency devices made with ScAlN piezoelectric films)",
         "05_laser_osc": "Laser light sources built into inspection and measurement equipment, stealth dicing equipment and laser markers (Tb and Sm through the rotators and magnets of optical isolators)"

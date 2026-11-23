@@ -110,6 +110,19 @@ function eqNodeHtml(entry,focus,targetId){
   }).join('');
   return'<div class="re-eq-node'+(focus&&!matchNode?' is-dim':'')+(matchNode?' is-target':'')+'"'+(matchNode?' style="--re-eq-el:'+colors[focus]+'"':'')+' data-eq-node="'+esc(entry.id)+'"'+pressed+'><span class="re-eq-node-stage" title="'+esc(subText(item.sub,'description'))+'">'+esc(subText(item.sub,'description'))+'</span><span class="re-eq-node-label">'+esc(subText(item.sub,'label'))+'</span><span class="re-eq-node-chips">'+chips+'</span></div>'
 }
+// 列の見出しに出す、その列の工程にいる国内企業の数（重複を除く）。
+// 工程の元素（item.els）は、その工程がこの装備の道筋に入る元素だけを持つ。元素を強調しているときは、その元素で道筋に入る工程だけを、
+// その元素で関わる企業に限って数える（ほかの元素でだけ道筋に入る工程の企業を混ぜない）
+function eqColumnCount(items,focus){
+  var ids=new Set();
+  items.forEach(function(entry){
+    if(entry.kind==='origin')return;
+    if(entry.kind==='node'&&focus&&!entry.item.els.has(focus))return;
+    var id=entry.kind==='eq'?entry.id:entry.item.id,els=focus?[focus]:(entry.kind==='eq'?null:elements.filter(function(element){return entry.item.els.has(element)}));
+    data.forEach(function(company){if(company.subs.indexOf(id)>=0&&(!els||els.some(function(element){return companyHasElement(company,id,element)})))ids.add(company.id)})
+  });
+  return ids.size
+}
 function renderEquipmentPath(){
   var host=root.querySelector('#re-view-equipment'),P=eqPathModel(eqState.eq),focus=eqResolveFocus(P),target=eqResolveTarget(P);
   eqPath=P;
@@ -134,17 +147,7 @@ function renderEquipmentPath(){
   // 海外（STAGE 01）は帯の並びより、元素の並び（Y → Dy・Tb → Sm → Sc）を優先して固定する
   columns[5].sort(function(a,b){return elements.indexOf(a.element)-elements.indexOf(b.element)});
   var grid=host.querySelector('#re-eq-path-grid');
-  // 列の見出しには、その列の工程にいる国内企業の数（重複を除く）を出す。元素を強調しているときは、その元素で関わる企業だけを数え、元素の色で示す
-  function columnCount(items){
-    var ids=new Set();
-    items.forEach(function(entry){
-      if(entry.kind==='origin')return;
-      var id=entry.kind==='eq'?entry.id:entry.item.id,els=focus?[focus]:(entry.kind==='eq'?null:elements.filter(function(element){return entry.item.els.has(element)}));
-      data.forEach(function(company){if(company.subs.indexOf(id)>=0&&(!els||els.some(function(element){return companyHasElement(company,id,element)})))ids.add(company.id)})
-    });
-    return ids.size
-  }
-  grid.innerHTML=columns.map(function(items,index){var stage=6-index;return'<div class="re-eq-col"><div class="re-eq-col-head"><span class="re-eq-col-title">'+esc(eqStageTitle(stage))+'</span>'+(stage===1?'':'<span class="re-eq-col-count'+(focus?' is-el':'')+'"'+(focus?' style="--re-eq-el:'+colors[focus]+'"':'')+'>'+esc(companyCount(columnCount(items)))+'</span>')+'</div><div class="re-eq-stack">'+items.map(function(item){return eqNodeHtml(item,focus,target.id)}).join('')+'</div></div>'}).join('');
+  grid.innerHTML=columns.map(function(items,index){var stage=6-index;return'<div class="re-eq-col"><div class="re-eq-col-head"><span class="re-eq-col-title">'+esc(eqStageTitle(stage))+'</span>'+(stage===1?'':'<span class="re-eq-col-count'+(focus?' is-el':'')+'"'+(focus?' style="--re-eq-el:'+colors[focus]+'"':'')+'>'+esc(companyCount(eqColumnCount(items,focus)))+'</span>')+'</div><div class="re-eq-stack">'+items.map(function(item){return eqNodeHtml(item,focus,target.id)}).join('')+'</div></div>'}).join('');
   host.querySelector('#re-eq-path').classList.toggle('is-empty',!P.els.length);
   grid.querySelectorAll('[data-eq-target]').forEach(function(card){
     card.addEventListener('click',function(event){event.stopPropagation();eqSelectTarget(card.dataset.eqTarget)});
