@@ -4373,34 +4373,6 @@
      "note": "不同调查的数值差异较大（按全市场金额约1%，高密度光缆等细分领域约9%）。均低于10%，因此定为等级2。"
     }
    }
-  },
-  {
-   "company": "fujikura",
-   "name": "フジクラ",
-   "node": "05_photonics",
-   "els": [
-    "Sm"
-   ],
-   "product": "光ファイバ・光ケーブル、ファイバーレーザー用の光ファイバデバイス",
-   "level": 2,
-   "share": "光ファイバケーブルの世界市場で Corning・CommScope・Prysmian に次ぐ4位（2023年の金額ベース、約1.3%）",
-   "scope": "光ファイバケーブル",
-   "basis": "公開情報",
-   "source": "https://www.businesswire.com/news/home/20250213025563/en/",
-   "sourceLabel": "ResearchAndMarkets「Fiber Optical Cable Market Opportunities and Strategies to 2033」発表（2025年2月、2026年11月確認）",
-   "note": "調査によって数値の幅が大きい（全市場の金額ベースで約1%、高密度ケーブルなどの分野別では約9%）。いずれも10%未満のため水準2とした。",
-   "i18n": {
-    "en": {
-     "product": "Optical fibers and optical cables; optical fiber devices for fiber lasers",
-     "share": "Fourth in the global fiber-optic cable market after Corning, CommScope and Prysmian (about 1.3% by value, 2023)",
-     "note": "Estimates vary widely between surveys (about 1% of the whole market by value, about 9% in segments such as high-density cables). All are below 10%, so level 2 is used."
-    },
-    "zh-CN": {
-     "product": "光纤与光缆、光纤激光器用光纤器件",
-     "share": "在全球光缆市场排名第四，仅次于Corning、CommScope和Prysmian（2023年按金额约1.3%）",
-     "note": "不同调查的数值差异较大（按全市场金额约1%，高密度光缆等细分领域约9%）。均低于10%，因此定为等级2。"
-    }
-   }
   }
  ]
 }
