@@ -26,7 +26,7 @@ var guideLabels={
     flowLead:'元素を1つ選び、その元素が海外からどの工程へ分かれ、どの装備・システムへ届くかを帯の流れで追う画面です。',
     flowSteps:[
       ['元素を選ぶ','上の元素カードで、追いかける元素を1つ選びます。'],
-      ['帯の太さを読む','帯の太さは、その工程にその元素で関わる国内企業（事業単位）の数です。物量・金額・商流の比率ではありません。'],
+      ['棒と帯を読む','工程の棒の長さは、その工程にその元素で関わる国内企業（事業単位）の数です。帯は工程どうしのつながりを示すものです。'],
       ['工程を選ぶ','工程の棒を押すと、つながる経路だけが残り、関わる国内企業のカードと詳細が下に出ます。'],
       ['クリティカル度を見る','STAGE 02〜05 の工程の横の色付きの数字がクリティカル度です。色が濃い（赤に近い）ほど、下流への影響が広い工程です。']
     ],
@@ -50,7 +50,7 @@ var guideLabels={
     crTip:'クリティカル度は、下流の広さとシェアの高さを掛け合わせた相対指標です。在庫や代替可能性、中国依存度そのものを測るものではありません。',
     sorts:['点数','下流','シェア'],
     notesTitle:'読むときの注意',
-    notes:['収録しているのは公開情報で確認できた国内企業（事業単位）です。「0社」は、データ上で確認できていないという意味で、存在しないことの証明ではありません。','帯や棒の太さは企業数で、物量・金額・市場規模・実際の商流の比率を示すものではありません。','元素のフラグは、製品の構成や製造工程から使うと考えられるものも含めています。個別製品の含有を確認したものとは限りません。']
+    notes:['収録しているのは公開情報で確認できた国内企業（事業単位）です。「0社」は、データ上で確認できていないという意味で、存在しないことの証明ではありません。','棒の長さは企業数、帯は工程どうしのつながりを示すものです。どちらも物量・金額・市場規模・実際の商流の比率を示すものではありません。','元素のフラグは、製品の構成や製造工程から使うと考えられるものも含めています。個別製品の含有を確認したものとは限りません。']
   },
   en:{
     tab:'How to Use',eyebrow:'How to use',title:'Getting started: reading and using the four views',
@@ -73,7 +73,7 @@ var guideLabels={
     flowLead:'Choose one element and follow, as ribbons, where it branches from overseas and which systems it reaches.',
     flowSteps:[
       ['Choose an element','Use the element cards to pick the element to follow.'],
-      ['Read ribbon width','Ribbon width is the number of domestic companies (business units) involved with that element at the stage — not volume, value or trade share.'],
+      ['Read bars and ribbons','A stage bar’s length is the number of domestic companies (business units) involved with that element. Ribbons show how stages connect.'],
       ['Choose a stage','Press a stage bar to keep only the connected paths and list the domestic companies and their details below.'],
       ['Check criticality','The coloured numbers beside STAGE 02–05 categories are criticality scores. The darker (closer to red), the wider the downstream impact.']
     ],
@@ -97,7 +97,7 @@ var guideLabels={
     crTip:'Criticality multiplies downstream reach by share level. It does not measure stockpiles, substitutability or China dependence itself.',
     sorts:['Score','Down','Share'],
     notesTitle:'Points to keep in mind',
-    notes:['Only domestic companies (business units) confirmed in public information are included. “0 companies” means none are confirmed in the data — not proof that none exist.','Ribbon and bar widths are company counts; they do not show volume, value, market size or actual trade shares.','Element flags include elements that a product’s composition or manufacturing process is expected to use; they are not always confirmed for individual products.']
+    notes:['Only domestic companies (business units) confirmed in public information are included. “0 companies” means none are confirmed in the data — not proof that none exist.','Bar length is a company count, and ribbons show how stages connect; neither represents volume, value, market size or actual trade shares.','Element flags include elements that a product’s composition or manufacturing process is expected to use; they are not always confirmed for individual products.']
   },
   'zh-CN':{
     tab:'使用指南',eyebrow:'使用指南',title:'初次使用：四个画面的看法与用法',
@@ -120,7 +120,7 @@ var guideLabels={
     flowLead:'选择一种元素，以流带追踪该元素从海外分流到哪些工序、最终到达哪些装备与系统。',
     flowSteps:[
       ['选择元素','用上方元素卡片选择要追踪的元素。'],
-      ['阅读带宽','带宽表示在该工序涉及该元素的国内企业（业务单位）数量，并非实物数量、金额或贸易比例。'],
+      ['阅读竖条与流带','工序竖条的长度表示在该工序涉及该元素的国内企业（业务单位）数量。流带表示工序之间的连接。'],
       ['选择工序','点击工序的竖条，只保留相连的路径，相关国内企业卡片与详情会显示在下方。'],
       ['查看关键度','STAGE 02〜05 各工序旁带颜色的数字即关键度。颜色越深（越接近红色），对下游的影响越广。']
     ],
@@ -144,7 +144,7 @@ var guideLabels={
     crTip:'关键度是下游广度与份额高低相乘得到的相对指标，并不衡量库存、可替代性或对华依赖度本身。',
     sorts:['分数','下游','份额'],
     notesTitle:'阅读时的注意事项',
-    notes:['收录的是通过公开信息能够确认的国内企业（业务单位）。“0家”表示数据中未能确认，并不证明不存在。','流带和竖条的粗细表示企业数量，不代表实物数量、金额、市场规模或实际贸易比例。','元素标记也包括根据产品构成或制造工序推断会使用的元素，不一定已确认个别产品的含量。']
+    notes:['收录的是通过公开信息能够确认的国内企业（业务单位）。“0家”表示数据中未能确认，并不证明不存在。','竖条长度表示企业数量，流带表示工序之间的连接；两者都不代表实物数量、金额、市场规模或实际贸易比例。','元素标记也包括根据产品构成或制造工序推断会使用的元素，不一定已确认个别产品的含量。']
   }
 };
 function guideText(key,values){
