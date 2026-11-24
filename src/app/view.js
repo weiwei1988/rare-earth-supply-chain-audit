@@ -24,6 +24,8 @@ function applyStaticTranslations(){
   document.documentElement.lang=language;
   document.title=tr("pageTitle");
   root.querySelector("#re-page-title").textContent=tr("pageTitle");
+  root.querySelector("#re-home").setAttribute("aria-label",tr("homeLabel"));
+  root.querySelector("#re-home").setAttribute("title",tr("homeLabel"));
   root.querySelector(".re-view-tabs").setAttribute("aria-label",tr("viewMode"));
   root.querySelector("#re-tab-overview").textContent=tr("overview");
   root.querySelector("#re-tab-element-flow").textContent=tr("elementFlow");
@@ -104,6 +106,13 @@ root.querySelectorAll("[data-element]").forEach(function(btn){btn.addEventListen
   refresh("overview")
 })});
 root.querySelectorAll("[data-view]").forEach(function(button){button.addEventListener("click",function(){setView(button.dataset.view)})});
+// 左上の印：最初の画面（サプライチェーン全体像・全元素・工程の選択なし・検索語なし）に戻し、ページの先頭へ送る
+root.querySelector("#re-home").addEventListener("click",function(){
+  root.querySelector("#re-company-search").value="";
+  setOverviewElement("");selection={type:"all",id:"all"};traceNodeId=null;selectedId=null;
+  setView("overview");refresh("overview");
+  window.scrollTo({top:0,behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"})
+});
 root.querySelectorAll("[data-language]").forEach(function(button){button.addEventListener("click",function(){setLanguage(button.dataset.language)})});
 root.querySelectorAll("[data-flow-element]").forEach(function(button){button.addEventListener("click",function(){
   flowElement=button.dataset.flowElement;flowSelectionId=null;flowSelectedId=null;refresh("flow")

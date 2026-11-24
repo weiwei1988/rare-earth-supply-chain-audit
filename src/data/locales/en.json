@@ -11,8 +11,7 @@
       "def": "ATLA deliveries (FY2023, FY2024, FY2025): ORC-15E-1 radio; ORC-15F radio",
       "chn": "Countries of raw-material procurement and exposure to China not verified.",
       "bom": "Assessment based on procured items: \"ORC-15E-1 radio; ORC-15F radio; ORC-15F radio (initial cost)\". Rare earths may be used in magnets, lasers/ceramics, RF and piezoelectric materials, and other components of the relevant equipment. No model-specific public BOM has been verified.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Y, Sc. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-4010601031653": {
       "name": "IHI Aerospace Co., Ltd.",
@@ -25,7 +24,7 @@
       "chn": "Countries of raw-material procurement and exposure to China not verified.",
       "bom": "Assessment based on procured items: \"Type 92 minefield-clearing rocket; chaff rocket; Type 24 littoral minefield-clearing system rocket\". Rare earths may be used in magnets, lasers/ceramics, RF and piezoelectric materials, and other components of the relevant equipment. No model-specific public BOM has been verified.",
       "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Sc. Medium confidence (general industry basis). / 2026-11-22: Research on rockets and launch added the manufacture of the H3 solid rocket boosters and attitude-control gas jets and of the Epsilon to its products and position."
+      "note": "2026-11-22: Research on rockets and launch added the manufacture of the H3 solid rocket boosters and attitude-control gas jets and of the Epsilon to its products and position."
     },
     "atla-8010401096587": {
       "name": "Motorola Solutions Japan Ltd.",
@@ -37,8 +36,7 @@
       "def": "ATLA deliveries (FY2023, FY2024, FY2025): GRT-( ) radio; GRT-20-D airfield control radio",
       "chn": "Countries of raw-material procurement and exposure to China not verified.",
       "bom": "Assessment based on procured items: \"GRT-( ) radio; GRT-20-D airfield control radio; GRT-36 radio\". Rare earths may be used in magnets, lasers/ceramics, RF and piezoelectric materials, and other components of the relevant equipment. No model-specific public BOM has been verified.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Y, Sc. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-1020001006613": {
       "name": "NIPPI Corporation",
@@ -50,8 +48,7 @@
       "def": "ATLA deliveries (FY2023, FY2024, FY2025): YS-11 scheduled airframe overhaul; P-3C scheduled special airframe overhaul",
       "chn": "Countries of raw-material procurement and exposure to China not verified.",
       "bom": "Assessment based on procured items: \"surface target for guided-missile live-fire/bombing training; surface target for guided-missile live-fire/bombing training (GNSS added) (monitoring/test use) (initial cost); same target without initial-cost item\". Rare earths may be used in magnets, lasers/ceramics, RF and piezoelectric materials, and other components of the relevant equipment. No model-specific public BOM has been verified.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Dy, Tb, Sm. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-4010401057023": {
       "name": "Thales Japan K.K.",
@@ -63,8 +60,7 @@
       "def": "ATLA deliveries (FY2023, FY2024, FY2025): OM-100D search radar; electron tube 91553968; search radar (OM-100D, for US-2); search radar (OM-100D)",
       "chn": "Countries of raw-material procurement and exposure to China not verified.",
       "bom": "Assessment based on procured items: \"electron tube 91553968; OM-100D search radar; search radar (OM-100D, for US-2)\". Rare earths may be used in magnets, lasers/ceramics, RF and piezoelectric materials, and other components of the relevant equipment. No model-specific public BOM has been verified.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Y, Sc. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-7010701022780": {
       "name": "Restar Corporation",
@@ -76,8 +72,7 @@
       "def": "ATLA deliveries (FY2024, FY2025): drone for counter-small-UAS equipment; GDXS-13-B UAV (Disaster-Response Type II); GDXS-13-B UAV (Disaster-Response Type II); small unmanned aircraft (drone)",
       "chn": "Countries of raw-material procurement and exposure to China not verified.",
       "bom": "Assessment based on procured items: \"drone for counter-small-UAS equipment; small unmanned aircraft (drone)\". Rare earths may be used in magnets, lasers/ceramics, RF and piezoelectric materials, and other components of the relevant equipment. No model-specific public BOM has been verified.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Dy, Tb, Sm. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-8011001039795": {
       "name": "NOVITEC Inc.",
@@ -89,8 +84,7 @@
       "def": "ATLA deliveries (FY2023, FY2024, FY2025): ballistic radar (offshore test support); muzzle-velocity radar; ballistic-tracking radar system",
       "chn": "Countries of raw-material procurement and exposure to China not verified.",
       "bom": "Assessment based on procured items: \"laser illumination for visualization; laser-curtain velocimetry system; ballistic radar (offshore test support)\". Rare earths may be used in magnets, lasers/ceramics, RF and piezoelectric materials, and other components of the relevant equipment. No model-specific public BOM has been verified.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Y, Sc. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-7013301019486": {
       "name": "KEYCOM Corporation",
@@ -102,8 +96,7 @@
       "def": "ATLA deliveries (FY2023, FY2024, FY2025): 3D millimeter-wave radar",
       "chn": "Countries of raw-material procurement and exposure to China not verified.",
       "bom": "Assessment based on procured items: \"3D millimeter-wave radar\". Rare earths may be used in magnets, lasers/ceramics, RF and piezoelectric materials, and other components of the relevant equipment. No model-specific public BOM has been verified.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Sc. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-9011101031552": {
       "name": "KDDI CORPORATION",
@@ -115,8 +108,7 @@
       "def": "ATLA deliveries (FY2023, FY2024, FY2025): JPRC-B1 portable station for trunk satellite communications system; GMBY-B2 vehicle-mounted satellite communications system; lease of dedicated-telephone communications equipment (05 retrofit)",
       "chn": "Countries of raw-material procurement and exposure to China not verified.",
       "bom": "Assessment based on procured items: \"GMBY-B2 vehicle-mounted satellite communications system; low-Earth-orbit satellite communications system; GPBY-B2 portable satellite communications system\". Rare earths may be used in magnets, lasers/ceramics, RF and piezoelectric materials, and other components of the relevant equipment. No model-specific public BOM has been verified.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Y, Sc. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-7010001225687": {
       "name": "Mikuni Aerospace Co., Ltd.",
@@ -128,8 +120,7 @@
       "def": "ATLA deliveries (FY2023, FY2024, FY2025): GDXS-15 UAV (for force-on-force opposing unit); night aiming aid (visible green laser)",
       "chn": "Countries of raw-material procurement and exposure to China not verified.",
       "bom": "Assessment based on procured items: \"night aiming aid (visible green laser)\". Rare earths may be used in magnets, lasers/ceramics, RF and piezoelectric materials, and other components of the relevant equipment. No model-specific public BOM has been verified.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Y. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-7010001063732": {
       "name": "Japan Digital Communications Ltd.",
@@ -141,8 +132,7 @@
       "def": "ATLA deliveries (FY2023, FY2024, FY2025): Type I man-portable satellite communications system; onboard satellite communications set (for verification)",
       "chn": "Countries of raw-material procurement and exposure to China not verified.",
       "bom": "Assessment based on procured items: \"Type I man-portable satellite communications system; NORC-4E maritime satellite communications system\". Rare earths may be used in magnets, lasers/ceramics, RF and piezoelectric materials, and other components of the relevant equipment. No model-specific public BOM has been verified.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Y, Sc. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-6180001075605": {
       "name": "MHI Logitec Co., Ltd.",
@@ -154,8 +144,7 @@
       "def": "ATLA deliveries (FY2023, FY2024, FY2025): Type 88 surface-to-ship missile parts (components); pyrotechnic items and related products for Type 90 ship-to-ship missile",
       "chn": "Countries of raw-material procurement and exposure to China not verified.",
       "bom": "Assessment based on procured items: \"Type 88 surface-to-ship missile parts (components); pyrotechnic items and related products for Type 90 ship-to-ship missile; domestically produced parts for Type 93 air-to-ship missile\". Rare earths may be used in magnets, lasers/ceramics, RF and piezoelectric materials, and other components of the relevant equipment. No model-specific public BOM has been verified.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Dy, Tb, Sm. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-8020001003257": {
       "name": "Fuji Imvac Inc.",
@@ -167,8 +156,7 @@
       "def": "ATLA deliveries (FY2023, FY2024): UAV simulated target aircraft (for multifunction surveillance-radar testing)",
       "chn": "Countries of raw-material procurement and exposure to China not verified.",
       "bom": "Assessment based on procured items: \"UAV simulated target aircraft (for multifunction surveillance-radar testing)\". Rare earths may be used in magnets, lasers/ceramics, RF and piezoelectric materials, and other components of the relevant equipment. No model-specific public BOM has been verified.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Sc. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-6010901021583": {
       "name": "S.T. Device Inc.",
@@ -180,8 +168,7 @@
       "def": "ATLA deliveries (FY2023, FY2024, FY2025): electron tube 09M033P43; electron tube MA2876-4H",
       "chn": "Countries of raw-material procurement and exposure to China not verified.",
       "bom": "Assessment based on procured items: \"electron tube 09M033P43; electron tube MA2876-4H; electron tube for auxiliary-display indicator\". Rare earths may be used in magnets, lasers/ceramics, RF and piezoelectric materials, and other components of the relevant equipment. No model-specific public BOM has been verified.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Y, Sc. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-8010001032091": {
       "name": "Richardson Electronics Japan Co., Ltd.",
@@ -193,8 +180,7 @@
       "def": "ATLA deliveries (FY2023, FY2024, FY2025): electron tube for search-radar transceiver module; electron tube 7665A/HY60",
       "chn": "Countries of raw-material procurement and exposure to China not verified.",
       "bom": "Assessment based on procured items: \"electron tube 7665A/HY60; electron tube for search-radar transceiver module\". Rare earths may be used in magnets, lasers/ceramics, RF and piezoelectric materials, and other components of the relevant equipment. No model-specific public BOM has been verified.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Y, Sc. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-1120003008110": {
       "name": "amuse oneself Inc.",
@@ -206,8 +192,7 @@
       "def": "ATLA deliveries (FY2023): 3D-data-collection drone analysis system; 3D-data-collection drone; laser-survey drone",
       "chn": "Countries of raw-material procurement and exposure to China not verified.",
       "bom": "Assessment based on procured items: \"laser-survey drone\". Rare earths may be used in magnets, lasers/ceramics, RF and piezoelectric materials, and other components of the relevant equipment. No model-specific public BOM has been verified.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Y. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-2010001022478": {
       "name": "Tanaka Denki Co., Ltd.",
@@ -219,8 +204,7 @@
       "def": "ATLA deliveries (FY2023, FY2024): Drone (1); portable digital IP radio; vehicle-mounted digital IP radio",
       "chn": "Countries of raw-material procurement and exposure to China not verified.",
       "bom": "Assessment based on procured items: \"portable digital IP radio; vehicle-mounted digital IP radio\". Rare earths may be used in magnets, lasers/ceramics, RF and piezoelectric materials, and other components of the relevant equipment. No model-specific public BOM has been verified.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Y, Sc. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-5030001041556": {
       "name": "Abyssal Co., Ltd.",
@@ -232,8 +216,7 @@
       "def": "ATLA deliveries (FY2023, FY2024): RRC-17E radio",
       "chn": "Countries of raw-material procurement and exposure to China not verified.",
       "bom": "Assessment based on procured items: \"RRC-17E radio\". Rare earths may be used in magnets, lasers/ceramics, RF and piezoelectric materials, and other components of the relevant equipment. No model-specific public BOM has been verified.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Y, Sc. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-1010001058548": {
       "name": "Midoriya Electric Co., Ltd.",
@@ -245,8 +228,7 @@
       "def": "ATLA deliveries (FY2025): electron tube for search-radar transceiver module; SATURN-compatible radio for F-2",
       "chn": "Countries of raw-material procurement and exposure to China not verified.",
       "bom": "Assessment based on procured items: \"electron tube for search-radar transceiver module; SATURN-compatible radio for F-2\". Rare earths may be used in magnets, lasers/ceramics, RF and piezoelectric materials, and other components of the relevant equipment. No model-specific public BOM has been verified.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Y, Sc. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-3010403011350": {
       "name": "Keysight Technologies Japan K.K.",
@@ -258,8 +240,7 @@
       "def": "ATLA deliveries (FY2023, FY2024, FY2025): lease of power-sensor calibration system; microwave network analyzer",
       "chn": "Countries of raw-material procurement and exposure to China not verified.",
       "bom": "Assessment based on procured items: \"microwave network analyzer\". Rare earths may be used in magnets, lasers/ceramics, RF and piezoelectric materials, and other components of the relevant equipment. No model-specific public BOM has been verified.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Y, Sc. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-7010001036564": {
       "name": "Akira Co., Ltd.",
@@ -271,8 +252,7 @@
       "def": "ATLA deliveries (FY2023, FY2024, FY2025): Type C portable radio",
       "chn": "Countries of raw-material procurement and exposure to China not verified.",
       "bom": "Assessment based on procured items: \"Type C portable radio\". Rare earths may be used in magnets, lasers/ceramics, RF and piezoelectric materials, and other components of the relevant equipment. No model-specific public BOM has been verified.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Y, Sc. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-2020001012577": {
       "name": "Eda Shoji Co., Ltd.",
@@ -284,8 +264,7 @@
       "def": "ATLA deliveries (FY2023, FY2024, FY2025): robot",
       "chn": "Countries of raw-material procurement and exposure to China not verified.",
       "bom": "Assessment based on procured items: \"robot\". Rare earths may be used in magnets, lasers/ceramics, RF and piezoelectric materials, and other components of the relevant equipment. No model-specific public BOM has been verified.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Dy, Tb, Sm. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-4020001010554": {
       "name": "Hodaka Electronics Co., Ltd.",
@@ -297,8 +276,7 @@
       "def": "ATLA deliveries (FY2023, FY2024, FY2025): high-frequency characteristics evaluation system; high-frequency dielectric-constant measurement system",
       "chn": "Countries of raw-material procurement and exposure to China not verified.",
       "bom": "Assessment based on procured items: \"high-frequency characteristics evaluation system; high-frequency dielectric-constant measurement system\". Rare earths may be used in magnets, lasers/ceramics, RF and piezoelectric materials, and other components of the relevant equipment. No model-specific public BOM has been verified.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Sc. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-5010001006123": {
       "name": "Nikkyo Technos Co., Ltd.",
@@ -310,8 +288,7 @@
       "def": "ATLA deliveries (FY2023, FY2024, FY2025): 2,450 MHz microwave oscillator; microwave power meter",
       "chn": "Countries of raw-material procurement and exposure to China not verified.",
       "bom": "Assessment based on procured items: \"2,450 MHz microwave oscillator; microwave power meter\". Rare earths may be used in magnets, lasers/ceramics, RF and piezoelectric materials, and other components of the relevant equipment. No model-specific public BOM has been verified.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Sc. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-5013201004111": {
       "name": "Toyo Electronics Corporation",
@@ -323,8 +300,7 @@
       "def": "ATLA deliveries (FY2023, FY2024, FY2025): integrated voice communications terminal equipment; integrated shipboard voice communications terminal equipment",
       "chn": "Countries of raw-material procurement and exposure to China not verified.",
       "bom": "Assessment based on procured items: \"integrated voice communications terminal equipment; integrated shipboard voice communications terminal equipment\". Rare earths may be used in magnets, lasers/ceramics, RF and piezoelectric materials, and other components of the relevant equipment. No model-specific public BOM has been verified.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Y, Sc. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-9010401139568": {
       "name": "GTAj Co., Ltd.",
@@ -336,8 +312,7 @@
       "def": "ATLA deliveries (FY2023, FY2024, FY2025): JGVG-W1 laser irradiation system",
       "chn": "Countries of raw-material procurement and exposure to China not verified.",
       "bom": "Assessment based on procured items: \"JGVG-W1 laser irradiation system\". Rare earths may be used in magnets, lasers/ceramics, RF and piezoelectric materials, and other components of the relevant equipment. No model-specific public BOM has been verified.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Y. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-1010601026053": {
       "name": "Foresight Techno Co., Ltd.",
@@ -349,8 +324,7 @@
       "def": "ATLA deliveries (FY2023): laser oscillator",
       "chn": "Countries of raw-material procurement and exposure to China not verified.",
       "bom": "Assessment based on procured items: \"laser oscillator\". Rare earths may be used in magnets, lasers/ceramics, RF and piezoelectric materials, and other components of the relevant equipment. No model-specific public BOM has been verified.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Y. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-7010001045862": {
       "name": "Nisshinbo Micro Devices Inc.",
@@ -362,8 +336,7 @@
       "def": "ATLA deliveries (FY2023, FY2024, FY2025): electron tube TL399; electron tube M1628",
       "chn": "Countries of raw-material procurement and exposure to China not verified.",
       "bom": "Assessment based on procured items: \"electron tube TL399; electron tube M1628; electron tube W435\". Rare earths may be used in magnets, lasers/ceramics, RF and piezoelectric materials, and other components of the relevant equipment. No model-specific public BOM has been verified.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Y, Sc. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-1060001013523": {
       "name": "Canon Electron Tubes & Devices Co., Ltd.",
@@ -375,8 +348,7 @@
       "def": "ATLA deliveries (FY2023, FY2024, FY2025): electron tube E3109; electron tube E37150-9100MHZ",
       "chn": "Countries of raw-material procurement and exposure to China not verified.",
       "bom": "Assessment based on procured items: \"electron tube E3109; electron tube E37150-9100MHZ; electron tube K261E\". Rare earths may be used in magnets, lasers/ceramics, RF and piezoelectric materials, and other components of the relevant equipment. No model-specific public BOM has been verified.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Y, Sc. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-4010901000754": {
       "name": "AMTEX Corporation",
@@ -388,8 +360,7 @@
       "def": "ATLA deliveries (FY2024, FY2025): high-frequency oscillator",
       "chn": "Countries of raw-material procurement and exposure to China not verified.",
       "bom": "Assessment based on procured items: \"high-frequency oscillator\". Rare earths may be used in magnets, lasers/ceramics, RF and piezoelectric materials, and other components of the relevant equipment. No model-specific public BOM has been verified.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Sc. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-6010001005025": {
       "name": "T.P.T. Co., Ltd.",
@@ -401,8 +372,7 @@
       "def": "ATLA deliveries (FY2023, FY2024): synchro/resolver angle indicator",
       "chn": "Countries of raw-material procurement and exposure to China not verified.",
       "bom": "Assessment based on procured items: \"synchro/resolver angle indicator\". Rare earths may be used in magnets, lasers/ceramics, RF and piezoelectric materials, and other components of the relevant equipment. No model-specific public BOM has been verified.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Dy, Tb, Sm. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-8050001016181": {
       "name": "YATRO Electronics Co., Ltd.",
@@ -414,8 +384,7 @@
       "def": "ATLA deliveries (FY2025): ride-on mobility-assistance robot",
       "chn": "Countries of raw-material procurement and exposure to China not verified.",
       "bom": "Assessment based on procured items: \"ride-on mobility-assistance robot\". Rare earths may be used in magnets, lasers/ceramics, RF and piezoelectric materials, and other components of the relevant equipment. No model-specific public BOM has been verified.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Dy, Tb, Sm. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-7010501032617": {
       "name": "Shimadzu Science East Japan Ltd.",
@@ -427,8 +396,7 @@
       "def": "ATLA deliveries (FY2023, FY2024): high-frequency piezoelectric-element fabrication system and high-quality control system",
       "chn": "Countries of raw-material procurement and exposure to China not verified.",
       "bom": "Assessment based on procured items: \"high-frequency piezoelectric-element fabrication system and high-quality control system\". Rare earths may be used in magnets, lasers/ceramics, RF and piezoelectric materials, and other components of the relevant equipment. No model-specific public BOM has been verified.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Sc. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-2011101072297": {
       "name": "Tokyo Robotics Inc.",
@@ -440,8 +408,7 @@
       "def": "ATLA deliveries (FY2024): robot",
       "chn": "Countries of raw-material procurement and exposure to China not verified.",
       "bom": "Assessment based on procured items: \"robot\". Rare earths may be used in magnets, lasers/ceramics, RF and piezoelectric materials, and other components of the relevant equipment. No model-specific public BOM has been verified.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Dy, Tb, Sm. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-9040001015415": {
       "name": "Mobile Robot Research Co., Ltd.",
@@ -453,8 +420,7 @@
       "def": "ATLA deliveries (FY2025): crawler-type mobile robot",
       "chn": "Countries of raw-material procurement and exposure to China not verified.",
       "bom": "Assessment based on procured items: \"crawler-type mobile robot\". Rare earths may be used in magnets, lasers/ceramics, RF and piezoelectric materials, and other components of the relevant equipment. No model-specific public BOM has been verified.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Dy, Tb, Sm. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-8010001007944": {
       "name": "Yazawa Science Co., Ltd.",
@@ -466,8 +432,7 @@
       "def": "ATLA deliveries (FY2025): piezoelectric-constant measurement system",
       "chn": "Countries of raw-material procurement and exposure to China not verified.",
       "bom": "Assessment based on procured items: \"piezoelectric-constant measurement system\". Rare earths may be used in magnets, lasers/ceramics, RF and piezoelectric materials, and other components of the relevant equipment. No model-specific public BOM has been verified.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Sc. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-3310001006466": {
       "name": "West Japan Fluid Engineering Laboratory Co., Ltd.",
@@ -479,8 +444,7 @@
       "def": "ATLA deliveries (FY2023): scanning robotic arm",
       "chn": "Countries of raw-material procurement and exposure to China not verified.",
       "bom": "Assessment based on procured items: \"scanning robotic arm\". Rare earths may be used in magnets, lasers/ceramics, RF and piezoelectric materials, and other components of the relevant equipment. No model-specific public BOM has been verified.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Dy, Tb, Sm. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "engine-ihi-aero": {
       "name": "IHI (Aero Engine, Space & Defense Business Area)",
@@ -769,18 +733,16 @@
     },
     "seed-0": {
       "name": "NeoMag",
-      "src": "JSX ／ DyTb DD ／ Sm DD",
       "own": "Privately held; magnet processing and sales / import-trading segment",
       "rev": "Small scale; estimated to fall within the screening threshold",
       "prod": "Processing and sale of permanent magnets including NdFeB and SmCo; prototype and small-lot supply",
       "pos": "A distribution node through which Chinese-made magnets enter Japan's small and medium-sized motor and sensor industries",
       "def": "Could connect to R&D and low-volume defense and space components",
-      "chn": "High. Verify import sources, certificates of origin, and whether re-export controls apply.",
-      "note": "A reference distribution node with ctx=1 in JSX; included in the integrated table as a company name."
+      "chn": "High. Verify import sources, certificates of origin, and whether re-export controls apply."
     },
     "seed-1": {
       "name": "Mitsui Mining & Smelting (Rare Materials Division)",
-      "src": "JSX ／ Y DD ／ DyTb DD ／ Sm DD ／ https://em.mitsui-kinzoku.com/products/applications/electronics/mlcc/ ／ https://em.mitsui-kinzoku.com/rare-material/products/oxide-rare-earth-compounds/ ／ https://www.recycle-ken.or.jp/activite/rareearth.html",
+      "src": "https://em.mitsui-kinzoku.com/products/applications/electronics/mlcc/ ／ https://em.mitsui-kinzoku.com/rare-material/products/oxide-rare-earth-compounds/ ／ https://www.recycle-ken.or.jp/activite/rareearth.html",
       "own": "A division of Mitsui Mining & Smelting. Former Japan Yttrium was absorbed in an April 2025 merger.",
       "rev": "Division revenue not disclosed / parent company approximately JPY 700 billion",
       "prod": "High-purity Y₂O₃, YF₃, and YOF; Y₂O₃ and YOF granules for sintering and thermal spraying, including plasma-resistant components for semiconductor manufacturing equipment; Y compounds for YSZ; SmCo magnetic-alloy powder; Tb-Gd alloy; rare-earth salts and processed products for MLCC applications, including nitrate solutions and acetates; and resource recovery from recycled feedstock",
@@ -791,7 +753,7 @@
     },
     "seed-2": {
       "name": "Santoku (a Proterial Magnetics subsidiary)",
-      "src": "JSX ／ DyTb DD ／ Sm DD ／ https://www.santoku-corp.co.jp/news/20260701_1.html ／ https://www.santoku-corp.co.jp/company/about.html ／ https://www.santoku-corp.co.jp/business/jisyaku.html ／ https://www.dbj.jp/topics/branch_news/2016/files/0000024934_file1.pdf",
+      "src": "https://www.santoku-corp.co.jp/news/20260701_1.html ／ https://www.santoku-corp.co.jp/company/about.html ／ https://www.santoku-corp.co.jp/business/jisyaku.html ／ https://www.dbj.jp/topics/branch_news/2016/files/0000024934_file1.pdf",
       "own": "Privately held subsidiary of Proterial Magnetics (transferred on July 1, 2026)",
       "rev": "Approximately JPY 23.9 billion (fiscal year ended March 2018)",
       "prod": "Nd magnet alloys, Sm magnet alloys, high-purity rare-earth metals, and magnet recycling, samarium magnet powders and bonded-magnet compounds",
@@ -802,18 +764,18 @@
     },
     "seed-3": {
       "name": "Shin-Etsu Chemical",
-      "src": "JSX ／ Y DD ／ DyTb DD ／ Sm DD ／ https://www.rare-earth.jp/product.html ／ https://www.shinetsu.co.jp/sec/takefu/ ／ https://www.shinetsu-rare-earth-magnet.jp/ ／ https://www.shinetsu.co.jp/en/news/news-release/shin-etsu-chemical-to-set-up-a-base-in-china-to-manufacture-magnet-alloys-for-rare-earth-magnets/ ／ https://www.shinetsu.co.jp/en/news/news-release/shin-etsu-chemical-to-double-its-production-capacity-of-rare-earth-magnets-in-vietnam/ ／ https://www.shinetsu.co.jp/wp-content/uploads/2025/07/20260428_con_J.pdf ／ https://www.jiji.com/jc/article?k=2026061100578&g=eco ／ https://www.fukuishimbun.co.jp/articles/-/2623075 ／ https://xtech.nikkei.com/atcl/nxt/mag/nmc/18/00012/00279/ ／ https://www.shinetsu.co.jp/en/sustainability/esg_environment/resource_saving/ ／ https://patents.google.com/patent/JP5276640B2/ja ／ https://www.microsi.com/?p=11285",
+      "src": "https://www.rare-earth.jp/product.html ／ https://www.shinetsu.co.jp/sec/takefu/ ／ https://www.shinetsu-rare-earth-magnet.jp/ ／ https://www.shinetsu.co.jp/en/news/news-release/shin-etsu-chemical-to-set-up-a-base-in-china-to-manufacture-magnet-alloys-for-rare-earth-magnets/ ／ https://www.shinetsu.co.jp/en/news/news-release/shin-etsu-chemical-to-double-its-production-capacity-of-rare-earth-magnets-in-vietnam/ ／ https://www.shinetsu.co.jp/wp-content/uploads/2025/07/20260428_con_J.pdf ／ https://www.jiji.com/jc/article?k=2026061100578&g=eco ／ https://www.fukuishimbun.co.jp/articles/-/2623075 ／ https://xtech.nikkei.com/atcl/nxt/mag/nmc/18/00012/00279/ ／ https://www.shinetsu.co.jp/en/sustainability/esg_environment/resource_saving/ ／ https://patents.google.com/patent/JP5276640B2/ja ／ https://www.microsi.com/?p=11285",
       "own": "Listed company / Shin-Etsu Chemical Co., Ltd. (Tokyo Stock Exchange Prime Market, securities code 4063). Rare-earth separation and refining and magnet production are handled at the Takefu Plant in Echizen, Fukui; magnet alloys at Shin-Etsu (Changting) Technology in Fujian, China, with annual capacity of 3,000 tonnes; and separation and refining and sintered magnets at Shin-Etsu Magnetic Materials Vietnam in Haiphong, with annual magnet capacity of 2,200 tonnes.",
       "rev": "Consolidated net sales: JPY 2,573.9 billion, including JPY 1,015.7 billion from Electronic Materials (fiscal year ended March 2026). Rare-earth magnets are included in the Electronic Materials business.",
       "prod": "Rare-earth separation and refining: oxides at 3N to 6N purity, from fine powders measuring several tens of nanometers to large-particle QU and PQ grades for thermal spraying, as well as hydroxides, fluorides, and composite oxides; Y₂O₃ and YOF spray materials for plasma-resistant coatings; N Series neodymium magnets, including high-coercivity grades that reduce Dy and Tb through grain-boundary diffusion; R Series samarium magnets (Sm₂Co₁₇); magnet alloys; and recycling of magnet grinding swarf and end-of-life HDDs and motors; Faraday rotators and optical isolators (for telecom wavelengths and for 1 µm-band high-power fiber lasers)",
       "pos": "One of the few Japanese companies integrated from rare-earth separation and refining through alloys and magnets, with magnet production capacity among Japan's largest. It mass-produced Sm₂Co₁₇ magnets ahead of competitors; they are used in high-temperature and space applications. In June 2026, it announced its first new separation and refining plant in 18 years, to be built in Fukui Prefecture with an investment of approximately JPY 35 billion, including JPY 17.5 billion in government subsidies, to strengthen domestic smelting capacity. In Vietnam, it integrates separation and refining with sintered-magnet production.",
       "def": "Heat-resistant Sm magnets are used in aerospace applications; Y₂O₃ spray materials are used for plasma-resistant coatings in semiconductor manufacturing equipment; and magnets connect to motors, actuators, and defense-electronics components. Direct deliveries to defense customers are not disclosed.",
       "chn": "Some magnet alloys are manufactured in Fujian, China. Dependence on China is high for heavy rare earths such as Dy and Tb. The company is advancing recovery from grinding swarf, which accounts for approximately 20% of magnet processing, and from end-of-life HDDs and motors, while securing non-Chinese feedstock. Company-specific consumption volumes and suppliers are not disclosed.",
-      "note": "Merged two overlapping JSX nodes. Stages 2 and 3 represent Shin-Etsu Chemical Group's integrated production scope, including overseas subsidiaries and plants. / 2026-09-23: Added Electronic Materials segment sales, product grades, production sites and capacity, the new Fukui plant, and recycling. / 2026-11-19: Added optical isolators for 1 µm-band high-power fiber lasers (rotators made of Tb-based oxide)."
+      "note": "Stages 2 and 3 represent Shin-Etsu Chemical Group's integrated production scope, including overseas subsidiaries and plants. / 2026-09-23: Added Electronic Materials segment sales, product grades, production sites and capacity, the new Fukui plant, and recycling. / 2026-11-19: Added optical isolators for 1 µm-band high-power fiber lasers (rotators made of Tb-based oxide)."
     },
     "seed-4": {
       "name": "Kojundo Chemical Laboratory",
-      "src": "JSX ／ Y DD ／ Sc DD ／ https://www.kojundo.co.jp/dcms_media/other/SCO01PAG.pdf ／ https://www.kojundo.co.jp/material/thin_film_material/sputtering_targets.html",
+      "src": "https://www.kojundo.co.jp/dcms_media/other/SCO01PAG.pdf ／ https://www.kojundo.co.jp/material/thin_film_material/sputtering_targets.html",
       "own": "Privately held",
       "rev": "Estimated to be small scale",
       "prod": "High-purity Y-series oxides, Sc₂O₃, ceramic and metal targets, and research-grade inorganic compounds",
@@ -824,7 +786,7 @@
     },
     "seed-5": {
       "name": "Tosoh",
-      "src": "JSX ／ Y DD ／ https://www.tosoh.co.jp/product/functionality/zirconia_powder_tz.html ／ https://www.tosoh.co.jp/product/functionality/zirconia_powder_dental.html ／ https://www.tosoh.co.jp/product/functionality/zirconia_crushing_steel_ball.html ／ https://www.tosoh.co.jp/news/assets/newsrelease20180516.pdf ／ https://www.tosoh.co.jp/ir/library/financial_statements/ ／ https://orbray.com/magazine/archives/12094",
+      "src": "https://www.tosoh.co.jp/product/functionality/zirconia_powder_tz.html ／ https://www.tosoh.co.jp/product/functionality/zirconia_powder_dental.html ／ https://www.tosoh.co.jp/product/functionality/zirconia_crushing_steel_ball.html ／ https://www.tosoh.co.jp/news/assets/newsrelease20180516.pdf ／ https://www.tosoh.co.jp/ir/library/financial_statements/ ／ https://orbray.com/magazine/archives/12094",
       "own": "Listed company / Tosoh Corporation (Tokyo Stock Exchange Prime Market, securities code 4042)",
       "rev": "Consolidated net sales: JPY 1,019.9 billion, including JPY 272.9 billion from Specialty Products (fiscal year ended March 2026)",
       "prod": "TZ Series yttria-stabilized zirconia (YSZ) powders, from 3Y to 10Y, including 4Y, 6Y, 8Y, and 10Y for solid electrolytes; translucent dental grades Zpex, Zpex Smile, and Zpex 4 and colored grades; and zirconia grinding balls and microbeads. Manufactured by hydrolysis. In 1983, Tosoh established the world's first commercial plant for fine-ceramic zirconia at its Nanyo Complex in Shunan, Yamaguchi, and expanded production to the Yokkaichi Complex in Yokkaichi, Mie, in 2009. In October 2019, it expanded Nanyo capacity by 30%, investing approximately JPY 5 billion.",
@@ -835,7 +797,7 @@
     },
     "seed-6": {
       "name": "Daiichi Kigenso Kagaku Kogyo",
-      "src": "JSX ／ Y DD ／ Sc DD ／ https://www.dkkk.co.jp/products/functions.html ／ https://www.dkkk.co.jp/products/pro03-1.html ／ https://www.dkkk.co.jp/products/pro03-2.html ／ https://www.dkkk.co.jp/company/profile.html ／ https://www.dkkk.co.jp/ir/library/ ／ https://www.jetro.go.jp/biz/areareports/special/2025/1001/5852b0a17e2c4483.html ／ https://prtimes.jp/main/html/rd/p/000000003.000171462.html",
+      "src": "https://www.dkkk.co.jp/products/functions.html ／ https://www.dkkk.co.jp/products/pro03-1.html ／ https://www.dkkk.co.jp/products/pro03-2.html ／ https://www.dkkk.co.jp/company/profile.html ／ https://www.dkkk.co.jp/ir/library/ ／ https://www.jetro.go.jp/biz/areareports/special/2025/1001/5852b0a17e2c4483.html ／ https://prtimes.jp/main/html/rd/p/000000003.000171462.html",
       "own": "Listed company / Daiichi Kigenso Kagaku Kogyo Co., Ltd. (Tokyo Stock Exchange Prime Market, securities code 4082). Founded in 1956 and headquartered in Chuo-ku, Osaka; 709 consolidated employees as of the end of March 2026. The Fukui Plant in Fukui, opened in 2006, produces 80-90% of all products. Vietnamese subsidiary VREC, operating since 2023 in the Phu My 3 Specialized Industrial Park in Ho Chi Minh City, handles the zirconium oxychloride (ZOC) intermediate.",
       "rev": "Consolidated net sales: JPY 35.7 billion; operating profit: JPY 3.5 billion (fiscal year ended March 2026). By field: JPY 22.4 billion from automotive exhaust-gas purification catalysts and JPY 5.5 billion from strategic fields, including JPY 1.7 billion from energy.",
       "prod": "Zirconium compounds and stabilized-zirconia powders. Fine-ceramic products include yttria-stabilized HSY-3F Series, ceria-stabilized CEZ-12, magnesia-stabilized MSZ-8, and calcia-stabilized HSY-0480. Fuel-cell products for SOFC solid electrolytes include scandia-stabilized DSZ-95, scandia-ceria co-stabilized 10Sc1CeSZ-R2, and yttria-stabilized HSY-8. Other products include ceria-zirconia composite oxides for automotive exhaust-gas purification catalysts.",
@@ -846,7 +808,6 @@
     },
     "seed-7": {
       "name": "Fujimi Incorporated",
-      "src": "JSX ／ Y DD",
       "own": "Tokyo Stock Exchange Prime Market (5384)",
       "rev": "JPY 77.0 billion (plan for fiscal year ending March 2026)",
       "prod": "Y₂O₃, YF₃, YSZ, and YAG thermal-spray powders",
@@ -857,7 +818,7 @@
     },
     "seed-8": {
       "name": "Sumitomo Metal Mining / Sumiko Kunitomi Denshi",
-      "src": "JSX ／ Sm DD ／ Sc DD ／ https://www.smm.co.jp/business/refining/products/scandium/",
+      "src": "https://www.smm.co.jp/business/refining/products/scandium/",
       "own": "Sumitomo Metal Mining and its wholly owned subsidiary Sumiko Kunitomi Denshi",
       "rev": "Parent company exceeds JPY 100 billion / subsidiary revenue not disclosed",
       "prod": "High-purity Sc₂O₃ from Philippine intermediate feedstock, Wellmax SmFeN magnetic powder, and compounds for bonded magnets",
@@ -875,7 +836,7 @@
       "def": "High-power lasers, space-debris capture and laser fusion. Letters of appreciation from JAXA in 2016 and 2024, and the 17th Laser Society of Japan Industry Award (Excellence) in 2025",
       "chn": "High. Tb is a framework element of TGG, and Y of YAG and Y₂O₃; both fall under China's export controls on medium and heavy rare earths. The countries of origin of high-purity feedstock and dopants need checking",
       "note": "The company says that suppressing light-scattering sources let it produce the world's first large-format transparent ceramics, and it treats scale beyond what single crystals allow as its strength. It puts TGG at a Verdet constant of 36 rad/T·m and a thermal conductivity of 5.0 W/m·K, against 20 and 0.7 for Tb-based glass. Because TGG has a small Verdet constant in the visible range and relies on costly Ga, the company is developing Ga-free TAG (Tb₃Al₅O₁₂) ceramics; TAG single crystals can only be grown small and have not reached practical use. About φ50 mm is cited as the practical ceiling for large-aperture TGG ceramics. Removed from Stage 04 'solid-state laser oscillators (YAG)' and confined to the materials side in Stage 03",
-      "src": "JSX ／ Y DD ／ https://www.konoshima.co.jp/ceramics/tgg.html ／ https://www.konoshima.co.jp/ceramics/index.html ／ https://www.konoshima.co.jp/ceramics/about.html ／ https://www.konoshima.co.jp/ceramics/resdev2.html"
+      "src": "https://www.konoshima.co.jp/ceramics/tgg.html ／ https://www.konoshima.co.jp/ceramics/index.html ／ https://www.konoshima.co.jp/ceramics/about.html ／ https://www.konoshima.co.jp/ceramics/resdev2.html"
     },
     "seed-11": {
       "name": "Shinkosha",
@@ -899,11 +860,10 @@
       "chn": "Wavelength conversion in its deep-ultraviolet lasers relies mainly on crystals without rare earths, such as BBO and CLBO. Rare earths enter through magneto-optical crystals (Tb and Sc in TSAG; Y and others in YIG and Bi:RIG) and through the lasers' fundamental sources and isolators. Raw-material suppliers are not disclosed.",
       "bom": "Kalama 266 nm converts an infrared fiber-amplified source in two stages, and Frequad converts wavelength with ultra-high-purity BBO. The fundamental-source medium is not disclosed, and use of YAG in its own lasers has not been confirmed (only the imported Areté laser states YAG). TSAG has higher transmittance in the 1 µm band than TGG and a magneto-optical constant about 20% larger, and is an isolator material for high-intensity lasers. Bi:RIG is for 1.3–1.55 µm telecom isolators.",
       "gap": "Distinguish in-house products from imported products sold by the company, and verify defense and space customers, fundamental-source media, and export-control classification. The scope of its magneto-optical devices (rotators alone or assembled isolators, with or without magnets) and the supplier of Sc for TSAG are also unconfirmed.",
-      "note": "Formally included in Stage 04 based on the solid-state laser oscillator DD category 'candidate for inclusion (oscillator).' / The 266 nm QCW product converts an infrared fiber-amplified source in two wavelength-conversion stages, and a fiber amplifier stage and multi-stage conversion are normally fitted with an isolator to block back-reflection. The company is itself a maker of Faraday rotators / Flags indicate relevance to the optical application chain; product-specific Y/Dy/Tb content and component suppliers are undisclosed. They do not establish confirmed material content. / 2026-11-20: Updated the product field to match the product list (single crystals, lasers, optical devices, optical modules). TGG is not in the current product list, so the magneto-optical crystals were changed to TSAG, YIG and Bi:RIG. Also placed under Rotator units & optical isolators (lasers), based on its magneto-optical devices for optical isolators and TSAG. / 2026-11-20: Checked against the five product categories (crystals, lasers, optical devices, optical modules, prototyping services) and added prototyping and services to the product field. / 2026-11-23: Stage boundaries were redrawn to treat a Faraday rotator as the element itself (without magnets). Because the company makes only rotators and elements, it was removed from the isolator stages and placed under Magnetic garnets & Faraday rotators and Optical crystals & transparent ceramics for lasers."
+      "note": "The 266 nm QCW product converts an infrared fiber-amplified source in two wavelength-conversion stages, and a fiber amplifier stage and multi-stage conversion are normally fitted with an isolator to block back-reflection. The company is itself a maker of Faraday rotators / Flags indicate relevance to the optical application chain; product-specific Y/Dy/Tb content and component suppliers are undisclosed. They do not establish confirmed material content. / 2026-11-20: Updated the product field to match the product list (single crystals, lasers, optical devices, optical modules). TGG is not in the current product list, so the magneto-optical crystals were changed to TSAG, YIG and Bi:RIG. Also placed under Rotator units & optical isolators (lasers), based on its magneto-optical devices for optical isolators and TSAG. / 2026-11-20: Checked against the five product categories (crystals, lasers, optical devices, optical modules, prototyping services) and added prototyping and services to the product field. / 2026-11-23: Stage boundaries were redrawn to treat a Faraday rotator as the element itself (without magnets). Because the company makes only rotators and elements, it was removed from the isolator stages and placed under Magnetic garnets & Faraday rotators and Optical crystals & transparent ceramics for lasers."
     },
     "seed-13": {
       "name": "TOCALO",
-      "src": "JSX ／ Y DD",
       "own": "Tokyo Stock Exchange Prime Market (3433)",
       "rev": "JPY 57.0 billion (forecast for fiscal year ending March 2026)",
       "prod": "Y₂O₃, YF₃, and YSZ thermal spraying; TBCs; and semiconductor chamber components",
@@ -914,7 +874,7 @@
     },
     "seed-14": {
       "name": "AGC / AGC Seimi Chemical",
-      "src": "JSX ／ Y DD ／ Sc DD ／ https://www.seimichemical.co.jp/product/fuel/",
+      "src": "https://www.seimichemical.co.jp/product/fuel/",
       "own": "AGC and its wholly owned subsidiary AGC Seimi Chemical",
       "rev": "Parent company exceeds JPY 100 billion",
       "prod": "Y₂O₃ and Y₅O₄F₇ plasma-resistant coatings, composite oxides for SOFCs, and ScSZ-related technology",
@@ -925,7 +885,7 @@
     },
     "seed-15": {
       "name": "Kyocera",
-      "src": "JSX ／ Y DD ／ https://newswitch.jp/p/33403",
+      "src": "https://newswitch.jp/p/33403",
       "own": "Tokyo Stock Exchange Prime Market (6971)",
       "rev": "Approximately JPY 2 trillion",
       "prod": "Growth and processing of YAG single crystals, Y₂O₃ fine ceramics, plasma-resistant process components, and multilayer ceramic capacitors (MLCCs)",
@@ -936,7 +896,6 @@
     },
     "seed-16": {
       "name": "Japan Fine Ceramics",
-      "src": "JSX ／ Y DD",
       "own": "Privately held",
       "rev": "JPY 13.674 billion (fiscal year ended March 2026)",
       "prod": "8YSZ substrates, solid electrolytes, and oxygen-sensor substrates",
@@ -947,7 +906,6 @@
     },
     "seed-17": {
       "name": "Nikkato",
-      "src": "JSX ／ Y DD",
       "own": "Tokyo Stock Exchange Standard Market (5367)",
       "rev": "Within the screening threshold (less than several tens of billions of yen)",
       "prod": "YTZ and YTZ-S zirconia balls and grinding and dispersion media",
@@ -958,7 +916,6 @@
     },
     "seed-18": {
       "name": "Proterial",
-      "src": "JSX ／ DyTb DD",
       "own": "Privately held; formerly Hitachi Metals",
       "rev": "Approximately JPY 768.6 billion (fiscal 2025)",
       "prod": "NEOMAX sintered NdFeB magnets and reduced-Dy magnets",
@@ -969,7 +926,7 @@
     },
     "seed-19": {
       "name": "TDK",
-      "src": "JSX ／ DyTb DD ／ Sm DD ／ https://www.tdk.com/system/files/2026042800_0mqf56xw_ja.pdf ／ https://www.tdk.com/en/about_tdk_china/tdk_ganzhou/index.html ／ https://www.tdk.com/en/news_center/press/20181127_01.html ／ https://www.tdk.com/ja/products/ ／ https://product.tdk.com/info/ja/products/capacitor/ceramic/mlcc/catalog.html ／ https://monoist.itmedia.co.jp/mn/articles/2604/06/news021.html ／ https://newswitch.jp/p/4458 ／ https://www.nikkei.com/article/DGXNASFS1800U_Y2A210C1EE8000/ ／ https://eetimes.itmedia.co.jp/ee/articles/2205/10/news095.html ／ https://www.tdk.com/ja/careers/graduates/office/akita/",
+      "src": "https://www.tdk.com/system/files/2026042800_0mqf56xw_ja.pdf ／ https://www.tdk.com/en/about_tdk_china/tdk_ganzhou/index.html ／ https://www.tdk.com/en/news_center/press/20181127_01.html ／ https://www.tdk.com/ja/products/ ／ https://product.tdk.com/info/ja/products/capacitor/ceramic/mlcc/catalog.html ／ https://monoist.itmedia.co.jp/mn/articles/2604/06/news021.html ／ https://newswitch.jp/p/4458 ／ https://www.nikkei.com/article/DGXNASFS1800U_Y2A210C1EE8000/ ／ https://eetimes.itmedia.co.jp/ee/articles/2205/10/news095.html ／ https://www.tdk.com/ja/careers/graduates/office/akita/",
       "own": "Listed company / TDK Corporation (Tokyo Stock Exchange Prime Market, securities code 6762)",
       "rev": "Consolidated net sales: JPY 2,504.8 billion under IFRS (fiscal year ended March 2026), including JPY 593.2 billion from Passive Components and JPY 262.9 billion from Magnetic Application Products",
       "prod": "Rare-earth magnets, including NdFeB and SmCo, with Dy-reduced and Dy-free grades made using the HAL process; magnet alloys; passive components such as multilayer ceramic capacitors (MLCCs) and inductors; magnetic sensors; and rechargeable batteries. Principal sites include the Narita Plant in Narita, Chiba, for automotive motor magnets and prototype development; plants in China and Thailand for magnets; TDK Ganzhou in Ganzhou, Jiangxi, China, for magnet alloys; and the Kitakami Plant in Kitakami, Iwate, including a new building completed in 2024, and sites in Nikaho and Yurihonjo, Akita, for MLCCs.",
@@ -980,7 +937,6 @@
     },
     "seed-20": {
       "name": "Toshiba Materials",
-      "src": "JSX ／ Sm DD",
       "own": "Privately held subsidiary of Toshiba",
       "rev": "Not disclosed",
       "prod": "SmCo magnets rated for high-temperature operation at approximately 300°C",
@@ -991,18 +947,15 @@
     },
     "seed-21": {
       "name": "TOKIN",
-      "src": "JSX ／ Sm DD",
       "own": "Part of Taiwan-based Yageo",
       "rev": "Not disclosed",
       "prod": "SmCo magnets",
       "pos": "Reportedly one of Japan's three SmCo producers",
       "def": "High-temperature sensors, motors, and actuators",
-      "chn": "High. Verify Sm feedstock and the foreign-ownership structure.",
-      "note": "Ownership and governance are also due-diligence subjects."
+      "chn": "High. Verify Sm feedstock and the foreign-ownership structure."
     },
     "seed-22": {
       "name": "Citizen Finedevice",
-      "src": "JSX ／ Sm DD",
       "own": "Privately held, wholly owned subsidiary of Citizen Watch",
       "rev": "Not disclosed",
       "prod": "Sintered SmCo magnets and high-precision processing",
@@ -1013,7 +966,6 @@
     },
     "seed-23": {
       "name": "Seiko Instruments",
-      "src": "JSX ／ Sm DD",
       "own": "Privately held, wholly owned by Seiko Group",
       "rev": "Not disclosed",
       "prod": "DIANET SmCo magnets and miniature rotor magnets",
@@ -1024,7 +976,6 @@
     },
     "seed-24": {
       "name": "Daido Electronics (Daido Steel Group)",
-      "src": "JSX ／ DyTb DD ／ Sm DD",
       "own": "Privately held member of the Daido Steel Group",
       "rev": "Approximately JPY 11.3 billion (fiscal 2024)",
       "prod": "Hot-deformed NdFeB magnets (NEOQUENCH-D) and compression- and injection-moulded NdFeB and SmFeN bonded magnets",
@@ -1035,7 +986,7 @@
     },
     "seed-25": {
       "name": "Aichi Steel",
-      "src": "JSX ／ DyTb DD ／ https://www.aichi-steel.co.jp/products/smart_company/magfine/lineup/ ／ https://www.aichi-steel.co.jp/news_item/20180227_News2.pdf",
+      "src": "https://www.aichi-steel.co.jp/products/smart_company/magfine/lineup/ ／ https://www.aichi-steel.co.jp/news_item/20180227_News2.pdf",
       "own": "Tokyo Stock Exchange Prime Market (5482); Toyota Group",
       "rev": "Exceeds JPY 100 billion",
       "prod": "MAGFINE anisotropic NdFeB bonded-magnet powders (MF15P and MF18P, d-HDDR process, free of Dy, Tb and Co), injection-moulding pellets, and compression-moulded magnets",
@@ -1046,7 +997,7 @@
     },
     "seed-26": {
       "name": "Tamagawa Seiki",
-      "src": "JSX ／ DyTb DD ／ Sm DD / https://www.tamagawa-seiki.co.jp/products/gyro/",
+      "src": "https://www.tamagawa-seiki.co.jp/products/gyro/",
       "own": "Privately held",
       "rev": "Approximately JPY 48.1 billion standalone / JPY 82.2 billion consolidated",
       "prod": "Resolvers, gyroscopes, servos, reaction wheels, and aircraft electromechanical actuators (EMAs) / FOG and satellite IRU; magneto-optic garnet content is unverified",
@@ -1057,7 +1008,6 @@
     },
     "seed-27": {
       "name": "Tokyo Keiki",
-      "src": "JSX ／ Sm DD",
       "own": "Tokyo Stock Exchange Prime Market (7721)",
       "rev": "Approximately JPY 50–60 billion",
       "prod": "Gyroscopes, inertial systems, and defense electronics",
@@ -1068,7 +1018,6 @@
     },
     "seed-28": {
       "name": "Mitsubishi Precision",
-      "src": "JSX ／ DyTb DD ／ Sm DD",
       "own": "Mitsubishi Group",
       "rev": "Approximately JPY 27.8 billion (2025)",
       "prod": "Reaction wheels, inertial navigation, and guidance and control systems",
@@ -1079,7 +1028,6 @@
     },
     "seed-29": {
       "name": "Shinano Kenshi (ASPINA)",
-      "src": "JSX ／ DyTb DD",
       "own": "Privately held",
       "rev": "Approximately JPY 43.5 billion standalone / JPY 47.0 billion consolidated",
       "prod": "BLDC motors and reaction wheels for small satellites",
@@ -1090,7 +1038,6 @@
     },
     "seed-30": {
       "name": "Harmonic Drive Systems",
-      "src": "JSX ／ DyTb DD",
       "own": "Tokyo Stock Exchange Standard Market (6324)",
       "rev": "Approximately JPY 60 billion",
       "prod": "Precision strain-wave gear reducers and actuators",
@@ -1101,7 +1048,6 @@
     },
     "seed-31": {
       "name": "Nabtesco",
-      "src": "JSX ／ DyTb DD",
       "own": "Tokyo Stock Exchange Prime Market (6268)",
       "rev": "Approximately JPY 340 billion",
       "prod": "Aircraft flight-control and actuation systems",
@@ -1112,7 +1058,6 @@
     },
     "seed-32": {
       "name": "Sinfonia Technology",
-      "src": "JSX ／ DyTb DD ／ Sm DD",
       "own": "Tokyo Stock Exchange Prime Market (6507)",
       "rev": "Approximately JPY 119.2 billion (fiscal 2024)",
       "prod": "Aircraft generators and power systems, rocket thrust-vector control (TVC), servos, and propulsion motors",
@@ -1123,7 +1068,6 @@
     },
     "seed-33": {
       "name": "MinebeaMitsumi",
-      "src": "JSX ／ DyTb DD ／ Sm DD",
       "own": "Tokyo Stock Exchange Prime Market (6479)",
       "rev": "Approximately JPY 1.5 trillion",
       "prod": "Motors and actuators for aircraft and defense applications, precision bearings, and in-house magnet technology",
@@ -1134,7 +1078,7 @@
     },
     "seed-34": {
       "name": "Iwatani Corporation",
-      "src": "Sc DD ／ https://www.iwatani.co.jp/jpn/business/material/resources-advanced/products/re/",
+      "src": "https://www.iwatani.co.jp/jpn/business/material/resources-advanced/products/re/",
       "own": "Tokyo Stock Exchange Prime Market (8088)",
       "rev": "Exceeds JPY 100 billion (exception)",
       "prod": "Procurement of rare-earth compounds including Sc₂O₃, with domestic grinding and quality assurance",
@@ -1145,7 +1089,7 @@
     },
     "seed-35": {
       "name": "O.S. Tech",
-      "src": "Sc DD ／ https://www.ostech.co.jp/products/special_raremetal/scandium/",
+      "src": "https://www.ostech.co.jp/products/special_raremetal/scandium/",
       "own": "Privately held",
       "rev": "Small scale; estimated to fall within the screening threshold",
       "prod": "Supply of specialty rare metals for Sc metal, scandium oxide, and Al-Sc applications",
@@ -1156,7 +1100,7 @@
     },
     "seed-36": {
       "name": "Furuya Metal",
-      "src": "Sc DD ／ https://www.furuyametals.co.jp/stories/future03/ ／ https://www.furuyametals.co.jp/ir/message/",
+      "src": "https://www.furuyametals.co.jp/stories/future03/ ／ https://www.furuyametals.co.jp/ir/message/",
       "own": "Tokyo Stock Exchange Prime Market (7826)",
       "rev": "JPY 57.379 billion (fiscal year ended June 2025)",
       "prod": "Al-Sc sputtering targets and technology for reducing scandium oxide and smelting Al-Sc master alloys",
@@ -1167,7 +1111,7 @@
     },
     "seed-37": {
       "name": "Toyo Aluminium",
-      "src": "Sc DD ／ https://www.toyal.co.jp/products/pw_pt/product/powdalloy.html ／ https://www.toyal.co.jp/abouttoyal/",
+      "src": "https://www.toyal.co.jp/products/pw_pt/product/powdalloy.html ／ https://www.toyal.co.jp/abouttoyal/",
       "own": "Wholly owned subsidiary of Nippon Light Metal Holdings",
       "rev": "JPY 113.359 billion (fiscal year ended March 2026; slightly above the threshold)",
       "prod": "Scalmalloy® / SPHERALLOY spherical powder of AlMg4.5Sc0.7Zr0.3 for additive manufacturing",
@@ -1178,7 +1122,7 @@
     },
     "seed-38": {
       "name": "UACJ",
-      "src": "Sc DD ／ https://www.uacj.co.jp/release/20250303.html ／ https://www.uacj.co.jp/release/20210826.html",
+      "src": "https://www.uacj.co.jp/release/20250303.html ／ https://www.uacj.co.jp/release/20210826.html",
       "own": "Tokyo Stock Exchange Prime Market (5741)",
       "rev": "Exceeds JPY 100 billion (exception)",
       "prod": "High-strength Sc-containing aluminum-alloy wire for wire-arc additive manufacturing (WAAM) and Al-Sc alloys for transportation equipment",
@@ -1189,7 +1133,7 @@
     },
     "seed-39": {
       "name": "Toyama Sumitomo Electric",
-      "src": "Sc DD ／ https://www.kenkai.jaxa.jp/project/kakushinyusou/results/pdf/01_06.pdf ／ https://www.uacj.co.jp/release/20250303.html",
+      "src": "https://www.kenkai.jaxa.jp/project/kakushinyusou/results/pdf/01_06.pdf ／ https://www.uacj.co.jp/release/20250303.html",
       "own": "Privately held, wholly owned subsidiary of Sumitomo Electric Industries",
       "rev": "Not disclosed",
       "prod": "Prototype production and mass-production process development for high-strength Sc-containing aluminum-alloy wire used in WAAM",
@@ -1200,7 +1144,7 @@
     },
     "seed-40": {
       "name": "Nippon Shokubai",
-      "src": "Sc DD ／ https://www.shokubai.co.jp/ja/products/detail/sofc/",
+      "src": "https://www.shokubai.co.jp/ja/products/detail/sofc/",
       "own": "Tokyo Stock Exchange Prime Market (4114)",
       "rev": "Approximately JPY 400 billion (fiscal year ended March 2026; exception)",
       "prod": "3YSZ and 8YSZ zirconia electrolyte sheets and 6ScSZ and 10Sc1CeSZ zirconia electrolyte sheets for SOFCs",
@@ -1212,7 +1156,7 @@
     },
     "seed-41": {
       "name": "Fukuda Crystal Laboratory",
-      "src": "Sc DD ／ https://fxtal2002.com/technology/crystal1",
+      "src": "https://fxtal2002.com/technology/crystal1",
       "own": "Privately held",
       "rev": "Small scale; estimated to fall within the screening threshold",
       "prod": "ScAlMgO₄ (SAM) single crystals and wafers",
@@ -1223,7 +1167,7 @@
     },
     "seed-42": {
       "name": "NTT DATA XAM Technologies",
-      "src": "Sc DD ／ https://www.toyal.co.jp/whatsnews/2023/10/2023100501.html",
+      "src": "https://www.toyal.co.jp/whatsnews/2023/10/2023100501.html",
       "own": "Privately held member of the NTT DATA Group",
       "rev": "Not disclosed",
       "prod": "Metal additive manufacturing with aluminum-alloy powders and powder recycling with Toyo Aluminium and Nikkei MC Aluminium",
@@ -1234,7 +1178,7 @@
     },
     "seed-43": {
       "name": "DENSO",
-      "src": "Sc DD ／ https://www.aist.go.jp/aist_j/press_release/pr2008/pr20081121/pr20081121.html ／ https://www.denso.com/jp/ja/about-us/corporate-info/profile/ ／ https://monoist.itmedia.co.jp/mn/articles/2111/22/news049_2.html ／ https://www.denso.com/jp/ja/-/media/global/business/innovation/review/24/24-doc-13-paper-08.pdf ／ https://www.chunichi.co.jp/article/394595",
+      "src": "https://www.aist.go.jp/aist_j/press_release/pr2008/pr20081121/pr20081121.html ／ https://www.denso.com/jp/ja/about-us/corporate-info/profile/ ／ https://monoist.itmedia.co.jp/mn/articles/2111/22/news049_2.html ／ https://www.denso.com/jp/ja/-/media/global/business/innovation/review/24/24-doc-13-paper-08.pdf ／ https://www.chunichi.co.jp/article/394595",
       "own": "Tokyo Stock Exchange Prime Market (6902)",
       "rev": "Exceeds JPY 100 billion (exception)",
       "prod": "Motors and actuators: starters, alternators, small automotive motors for wipers, blowers, power windows and more, electric power steering motors, electric water pumps, and traction motor-generators and inverters for electrified vehicles (e-Axles through BluE Nexus, a joint venture with Aisin) / ScAlN: joint research with AIST on high-piezoelectric ScAlN thin films and high-temperature sensors",
@@ -1260,7 +1204,7 @@
       "name": "Linde AMT Japan",
       "src": "https://www.linde-amt.com/resource-library/articles/thermal-barrier-coatings ／ https://www.linde-amt.com/resource-library/articles/aerospace-coating ／ https://www.linde-amt.com/about-us/locations",
       "own": "Japanese subsidiary of a foreign company",
-      "rev": "Revenue screen waived; not assessed in this supplemental due diligence",
+      "rev": "Not confirmed",
       "prod": "YSZ-based TBC materials; APS, EBPVD, SPS, and other coatings; and special processes for aircraft components",
       "pos": "Vertically integrates materials, equipment, and coating services. Its Japanese operations hold JIS Q 9100 and Nadcap Coatings certifications.",
       "def": "Directly connected to TBCs for aircraft-engine blades and vanes",
@@ -1273,7 +1217,7 @@
       "name": "SHM Co., Ltd.",
       "src": "https://j-shm.co.jp/ ／ https://www.meti.go.jp/policy/economy/economic_security/magnet/magnet_hoshin_260331.pdf ／ https://english.mofcom.gov.cn/Policies/AnnouncementsOrders/art/2025/art_0dd87cbee7b045bf93fabe6ab2faceee.html",
       "own": "Japanese company / distribution node",
-      "rev": "Revenue screen waived; not assessed in this supplemental due diligence",
+      "rev": "Not confirmed",
       "prod": "Procurement, processing, and sale of NdFeB, SmCo, and other magnets",
       "pos": "Has a Chinese supply network, but its Japanese and global market shares have not been verified.",
       "def": "Promotes aerospace and communications applications, but defense customers and product numbers have not been verified.",
@@ -1286,7 +1230,7 @@
       "name": "ICS Co., Ltd.",
       "src": "https://www.ics-21.com/download/AerospaceTechnology_Jp.pdf ／ https://www.ics-21.com/wp/wp-content/uploads/2026/06/ICS_Company_Profile_2024.3_Latest.pdf ／ https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-yttrium.pdf",
       "own": "Japanese company",
-      "rev": "Revenue screen waived; not assessed in this supplemental due diligence",
+      "rev": "Not confirmed",
       "prod": "Thermal spraying of YSZ, nickel alloys, and other materials for aerospace-engine components, plus heat treatment, coatings, and other special processes",
       "pos": "Approximately 50 years of aerospace special-process experience, with JIS Q 9100 and Nadcap certifications. A niche Japanese integrated processor; quantitative market share is not disclosed.",
       "def": "Official materials explicitly identify aerospace-engine components, combustor components, and YSZ thermal spraying.",
@@ -1299,7 +1243,7 @@
       "name": "Oerlikon Japan / Oerlikon Metco",
       "src": "https://www.oerlikon.com/metco/en/products-services/materials/understanding-tbcs-thermal-barrier-coatings/ ／ https://www.oerlikon.com/metco/ja/%E5%B8%82%E5%A0%B4/%E8%88%AA%E7%A9%BA%E5%AE%87%E5%AE%99/ ／ https://www.oerlikon.com/metco/en/about-us/locations/oerlikon-tokyo/",
       "own": "Foreign-owned Japanese subsidiary / operating site",
-      "rev": "Revenue screen waived; not assessed in this supplemental due diligence",
+      "rev": "Not confirmed",
       "prod": "8YSZ and MCrAlY powders, thermal-spray equipment, and coating services",
       "pos": "A global leader in thermal-spray technology, providing materials, equipment, and coating services as an integrated offering and holding a strong position in aircraft-engine TBCs",
       "def": "Targets jet engines, afterburners, landing gear, pumps, and actuators",
@@ -1312,7 +1256,7 @@
       "name": "Sigma Koki / OptoSigma",
       "src": "https://www.optosigma.com/us_en/optics/yb-yag-laser-crystal-a-slab.html ／ https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-yttrium.pdf ／ https://english.mofcom.gov.cn/Policies/AnnouncementsOrders/art/2025/art_0dd87cbee7b045bf93fabe6ab2faceee.html",
       "own": "Japanese company",
-      "rev": "Revenue screen waived; not assessed in this supplemental due diligence",
+      "rev": "Not confirmed",
       "prod": "Sales of Yb:YAG laser-crystal slabs and YAG optical components",
       "pos": "Offers a broad range of optical components, but its share of the relevant product market has not been verified.",
       "def": "Can supply high-power laser research and processing. Defense and space customers have not been verified.",
@@ -1325,7 +1269,7 @@
       "name": "Kurashiki Boring Kiko",
       "src": "https://www.kbknet.co.jp/thermal-spraying/thermal-spraying-list/ ／ https://www.kbknet.co.jp/semiconductor-spaceindustry/ ／ https://www.kbknet.co.jp/quality/",
       "own": "Japanese company",
-      "rev": "Revenue screen waived; not assessed in this supplemental due diligence",
+      "rev": "Not confirmed",
       "prod": "Thermal spraying of YSZ, Y₂O₃, and MCrAlY, including TBC application to aircraft-engine combustor liners and turbine blades",
       "pos": "A niche Japanese coating contractor holding JIS Q 9100, Nadcap Coatings, and other special-process certifications. Quantitative market share is not disclosed.",
       "def": "Official materials list TBCs, combustor liners, turbine blades, and landing-gear applications for aircraft engines.",
@@ -1338,7 +1282,7 @@
       "name": "Sagami Chemical Metal",
       "src": "https://www.sagami-magnet.co.jp/glossary/%E3%82%B5%E3%83%9E%E3%82%B3%E3%83%90%E7%A3%81%E7%9F%B3 ／ https://www.sagami-magnet.co.jp/wp-content/uploads/2025/04/China_Rare_Earth_Items_7Types-Impact_of_Export_Control4_0522.pdf ／ https://www.meti.go.jp/policy/economy/economic_security/magnet/magnet_hoshin_260331.pdf",
       "own": "Japanese company / distribution node",
-      "rev": "Revenue screen waived; not assessed in this supplemental due diligence",
+      "rev": "Not confirmed",
       "prod": "Import sales and processing of SmCo and NdFeB magnets, plus provision of export-control information",
       "pos": "A specialized rare-earth-magnet distribution node, although its share of the relevant application markets has not been verified.",
       "def": "Specialty magnets are potentially applicable to aerospace and defense. Direct customers are not disclosed.",
@@ -1351,7 +1295,7 @@
       "name": "Hoden Seimitsu Kako Kenkyusho",
       "src": "https://www.hsk.co.jp/ja/introduction/aerospace.html ／ https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-yttrium.pdf ／ https://english.mofcom.gov.cn/Policies/AnnouncementsOrders/art/2025/art_0dd87cbee7b045bf93fabe6ab2faceee.html",
       "own": "Japanese company",
-      "rev": "Revenue screen waived; not assessed in this supplemental due diligence",
+      "rev": "Not confirmed",
       "prod": "Surface treatment and thermal spraying of aircraft-engine components",
       "pos": "A Japanese company performing special processes for aerospace applications. Its share of Y-based materials has not been verified.",
       "def": "Directly connected to aircraft-engine components",
@@ -1364,7 +1308,7 @@
       "name": "EX-Fusion",
       "src": "https://ex-fusion.com/news/%E4%B8%96%E7%95%8C%E5%88%9D%E3%80%811%E7%A7%92%E9%96%93%E3%81%AB10%E5%9B%9E%E3%80%81%E6%A8%A1%E6%93%AC%E7%87%83%E6%96%99%E3%81%AB%E5%AF%BE%E3%81%99%E3%82%8B%E3%83%AC%E3%83%BC%E3%82%B6%E3%83%BC ／ https://ex-fusion.com/component ／ https://www.jx-nmm.com/newsrelease/2025/20251014_01.html",
       "own": "Japanese company",
-      "rev": "Revenue screen waived; not assessed in this supplemental due diligence",
+      "rev": "Not confirmed",
       "prod": "High-power lasers, optical control, and target tracking and irradiation for laser fusion",
       "pos": "Achieved what it describes as the world's first demonstration of continuous irradiation of a simulated fuel target ten times per second. Describes itself as Japan's only private laser-fusion company.",
       "def": "Tracking rapidly moving targets, precision irradiation, and high-power optical control have substantial dual-use potential, but defense customers are not disclosed.",
@@ -1377,7 +1321,7 @@
       "name": "maxon Japan / maxon group",
       "src": "https://www.maxongroup.com/en/knowledge-and-support/blog/maxon-drives-on-the-red-planet-18150 ／ https://www.maxongroup.com/en-us/market-solutions/industrial-automation/oil-and-gas-industry ／ https://www.meti.go.jp/policy/economy/economic_security/magnet/magnet_hoshin_260331.pdf",
       "own": "Japanese subsidiary of a foreign company",
-      "rev": "Revenue screen waived; not assessed in this supplemental due diligence",
+      "rev": "Not confirmed",
       "prod": "Precision motors for space and robotics applications. A separate product line explicitly uses SmCo magnets.",
       "pos": "More than 25 years of deployment experience on NASA Mars rovers",
       "def": "Mars rovers, satellites, the ISS, spacecraft, rocket-engine valves, and other applications",
@@ -1390,7 +1334,7 @@
       "name": "NPM High Technologies",
       "src": "https://npm-ht.co.jp/features/aerospace-defense ／ https://www.kollmorgen.com/en-us/products/motors/direct-drive/kbm-series-frameless ／ https://www.meti.go.jp/policy/economy/economic_security/magnet/magnet_hoshin_260331.pdf",
       "own": "Japanese company / domestic distribution of foreign products",
-      "rev": "Revenue screen waived; not assessed in this supplemental due diligence",
+      "rev": "Not confirmed",
       "prod": "Selection and technical support for high-performance motors from Kollmorgen and other suppliers; actuators for seekers, radar, and space applications",
       "pos": "Discloses a long supply record in aviation, space, and defense applications. NPM's own application-specific market shares have not been verified.",
       "def": "Missiles, infrared-camera gimbals, radar, unmanned systems, and satellites",
@@ -1403,7 +1347,7 @@
       "name": "Canon Electronics",
       "src": "https://www.canon-elec.co.jp/space/ ／ https://www.canon-elec.co.jp/products/motor/dc/ ／ https://www.meti.go.jp/policy/economy/economic_security/magnet/magnet_hoshin_260331.pdf",
       "own": "Japanese company",
-      "rev": "Revenue screen waived; not assessed in this supplemental due diligence",
+      "rev": "Not confirmed",
       "prod": "Small satellites, reaction wheels, magnetic torquers, and various sensors and actuators",
       "pos": "Manufactures and sells its own satellites and key components. Market shares for rare-earth-related products have not been verified.",
       "def": "Connects to CE-SAT, H3 payloads, and small-launch-vehicle flight control",
@@ -1416,7 +1360,7 @@
       "name": "TRUMPF Japan",
       "src": "https://www.trumpf.com/ja_JP/%E8%A3%BD%E5%93%81/%E3%83%AC%E3%83%BC%E3%82%B6/%E3%83%AC%E3%83%BC%E3%82%B6%E8%A3%85%E7%BD%AE/cw%E3%83%AC%E3%83%BC%E3%82%B6/trudisk/ ／ https://www.trumpf.com/ja_JP/%E3%82%BD%E3%83%AA%E3%83%A5%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/%E6%A5%AD%E7%95%8C/%E8%88%AA%E7%A9%BA%E5%AE%87%E5%AE%99%E7%94%A3%E6%A5%AD/ ／ https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-yttrium.pdf",
       "own": "Japanese subsidiary of a foreign company",
-      "rev": "Revenue screen waived; not assessed in this supplemental due diligence",
+      "rev": "Not confirmed",
       "prod": "TruDisk high-power solid-state lasers centered on Yb:YAG disks, plus laser-processing systems",
       "pos": "Describes itself as the global market leader in industrial lasers and holds an established position in high-power disk lasers.",
       "def": "Used to manufacture and repair aerospace turbine and compressor blades, blisks, rockets, and space components",
@@ -1429,7 +1373,7 @@
       "name": "Nidec / Nidec Aerospace",
       "src": "https://www.nidec.com/jp/technology/motor/academic/020/ ／ https://moen.nidec.com/aerospace/ ／ https://www.meti.go.jp/policy/economy/economic_security/magnet/magnet_hoshin_260331.pdf",
       "own": "Japanese company / overseas joint venture",
-      "rev": "Revenue screen waived; not assessed in this supplemental due diligence",
+      "rev": "Not confirmed",
       "prod": "Electric propulsion units for eVTOL aircraft and 234 kW-class lift motors",
       "pos": "Holds a global position in precision miniature brushless motors and has established an aviation-propulsion joint venture. Its aviation-product market share is not yet established.",
       "def": "Electric propulsion for crewed and uncrewed aircraft, eVTOL aircraft, and drones",
@@ -1442,7 +1386,7 @@
       "name": "Kanto Aircraft Instrument",
       "src": "https://www.kaiweb.jp/index.html ／ https://www.kaiweb.jp/gimbal.html ／ https://www.meti.go.jp/policy/economy/economic_security/magnet/magnet_hoshin_260331.pdf",
       "own": "Japanese company",
-      "rev": "Revenue screen waived; not assessed in this supplemental due diligence",
+      "rev": "Not confirmed",
       "prod": "Motor-driven gimbals, spatial-stabilization equipment, navigation systems, and autopilot systems for defense applications",
       "pos": "Reports the No. 1 share of Japan's flight-data-recorder market. Its magnet-related share in gimbals has not been verified.",
       "def": "For Japan's Ministry of Defense, fighter aircraft, flight vehicles, and naval vessels",
@@ -1480,7 +1424,7 @@
       "name": "Moog Japan",
       "src": "https://www.moog.co.jp/content/dam/moog/literature/products/motors-servomotors/Moog-Power-and-Data-Motor-and-Resolver-Catalog.pdf ／ https://www.moog.co.jp/products/actuators-servoactuators/defense.html ／ https://www.moog.co.jp/products/actuators-servoactuators/aircraft.html",
       "own": "Japanese subsidiary of a foreign company",
-      "rev": "Revenue screen waived; not assessed in this supplemental due diligence",
+      "rev": "Not confirmed",
       "prod": "DC torque motors available with SmCo magnets, plus actuators and motion-control systems for aerospace and defense",
       "pos": "Moog is a global leader in aerospace and defense motion control. Its Japanese subsidiary provides domestic supply and technical support.",
       "def": "Explicitly targets radar, missiles, seekers, fire control, military actuators, and aircraft and spacecraft actuation systems.",
@@ -1493,7 +1437,7 @@
       "name": "Japan Aviation Electronics Industry",
       "src": "https://www.jae.com/owned/h3/ ／ https://www.jae.com/Motion_Sensor_Control/ ／ https://www.meti.go.jp/policy/economy/economic_security/magnet/magnet_hoshin_260331.pdf",
       "own": "Japanese company",
-      "rev": "Revenue screen waived; not assessed in this supplemental due diligence",
+      "rev": "Not confirmed",
       "prod": "IMUs for H3, inertial navigation, and guidance; permanent-magnet linear motors in a separate business",
       "pos": "Strong technical capabilities, including IMUs for H3",
       "def": "Directly connected to rockets, aircraft, and inertial guidance",
@@ -1506,7 +1450,7 @@
       "name": "Hamamatsu Photonics",
       "src": "https://www.hamamatsu.com/content/dam/hamamatsu-photonics/sites/documents/01_HQ/01_news/01_news_2025/2025_08_28_ja.pdf ／ https://www.hamamatsu.com/content/dam/hamamatsu-photonics/sites/documents/01_HQ/01_news/01_news_2025/2025_07_31_ja.pdf ／ https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-yttrium.pdf",
       "own": "Japanese company",
-      "rev": "Revenue screen waived; not assessed in this supplemental due diligence",
+      "rev": "Not confirmed",
       "prod": "Yb:YAG-based, laser-diode-pumped high-power solid-state lasers and laser-irradiation facilities",
       "pos": "Announced a world-record output for a laser-diode-pumped solid-state laser of 200 J × 10 Hz, averaging 2 kW. Owns equipment, measurement capabilities, and irradiation facilities.",
       "def": "Identifies laser fusion, space-debris removal, and semiconductor lithography as nationally important technologies for economic security.",
@@ -1524,7 +1468,7 @@
       "pos": "Market share and position have not been verified in public information.",
       "def": "Directly connected to satellite, defense, aviation, and maritime communications, radar, and interference evaluation. Shares its technology base with commercial 5G testing. SLDs are light sources for fiber-optic gyroscopes (attitude control), OCT and fiber sensors, and may connect to aviation, space and defense through gyroscopes.",
       "chn": "In optical devices, it touches Y, Tb and Sm through the optical isolators built into its SLD modules (Bi-substituted garnet rotators and magnets). Isolator suppliers are not disclosed. The rare-earth BOM of its instruments is unconfirmed.",
-      "note": "Consolidation: existing candidate (not subject to parent-company replacement) / Revenue basis: consolidated net sales in the company profile. / 2026-11-20: Also placed under Optical components, fibers & devices because its datasheets state that the SLD modules have built-in optical isolators."
+      "note": "Revenue basis: consolidated net sales in the company profile. / 2026-11-20: Also placed under Optical components, fibers & devices because its datasheets state that the SLD modules have built-in optical isolators."
     },
     "stage05-integrated-2": {
       "name": "TOYO Corporation",
@@ -1535,7 +1479,7 @@
       "pos": "Market share and position not verified in public sources.",
       "def": "Directly linked to defense equipment, underwater acoustics, radar and ground-station antennas, and JAXA satellite laser ranging.",
       "chn": "Company-specific rare-earth BOM and exposure to China not verified.",
-      "note": "Consolidation: existing candidate (not subject to parent-company replacement) / Revenue basis: rounded range based on recent consolidated revenue scale"
+      "note": "Revenue basis: rounded range based on recent consolidated revenue scale"
     },
     "stage05-integrated-3": {
       "name": "NIHON DEMPA KOGYO CO., LTD. (NDK)",
@@ -1546,7 +1490,7 @@
       "pos": "Market share and position not verified in public sources.",
       "def": "High-stability frequency sources shared by satellites and rockets, government and defense communications, civilian communications, and automotive applications.",
       "chn": "Company-specific rare-earth BOM and exposure to China not verified.",
-      "note": "Consolidation: existing candidate (not subject to parent-company replacement) / Revenue basis: FY2025 consolidated revenue in the company profile"
+      "note": "Revenue basis: FY2025 consolidated revenue in the company profile"
     },
     "stage05-integrated-4": {
       "name": "Japan Radio Co., Ltd. (JRC)",
@@ -1557,7 +1501,7 @@
       "pos": "Market share and position not verified in public sources.",
       "def": "Explicitly identifies radio application equipment and systems for the Ministry of Defense. Shares technology with merchant-shipping, disaster-prevention, and meteorological applications.",
       "chn": "Company-specific rare-earth BOM and exposure to China not verified.",
-      "note": "Consolidation: existing candidate (not subject to parent-company replacement) / Revenue basis: estimated from the parent company's segment and workforce scale"
+      "note": "Revenue basis: estimated from the parent company's segment and workforce scale"
     },
     "stage05-integrated-5": {
       "name": "GITAI",
@@ -1568,7 +1512,7 @@
       "pos": "Market share and position not verified in public sources.",
       "def": "Directly linked to on-orbit servicing, satellite repair and life extension, and lunar construction. Applicable to both commercial and government missions.",
       "chn": "Company-specific rare-earth BOM and exposure to China not verified.",
-      "note": "Consolidation: existing candidate (not subject to parent-company replacement) / Revenue basis: unlisted startup; range estimated from workforce, funding, and development stage"
+      "note": "Revenue basis: unlisted startup; range estimated from workforce, funding, and development stage"
     },
     "stage05-integrated-6": {
       "name": "THK",
@@ -1579,7 +1523,7 @@
       "pos": "Market share and position not verified in public sources.",
       "def": "Used in a large XY stage for JAXA's on-orbit servicing technology demonstration and in a robot supporting extravehicular activity on the ISS. Shares technology with civilian robots and machine tools.",
       "chn": "Company-specific rare-earth BOM and exposure to China not verified.",
-      "note": "Consolidation: existing candidate (not subject to parent-company replacement) / Revenue basis: consolidated revenue from continuing operations"
+      "note": "Revenue basis: consolidated revenue from continuing operations"
     },
     "stage05-integrated-8": {
       "name": "ispace",
@@ -1590,7 +1534,7 @@
       "pos": "Market share and position not verified in public sources.",
       "def": "Directly linked to lunar transportation, exploration, and resource utilization; deep-space navigation, communications, and landing technologies are also adaptable to national-security applications.",
       "chn": "Company-specific rare-earth BOM and exposure to China not verified.",
-      "note": "Consolidation: existing candidate (not subject to parent-company replacement) / Revenue basis: full-year results published by the company"
+      "note": "Revenue basis: full-year results published by the company"
     },
     "stage05-integrated-9": {
       "name": "Pale Blue",
@@ -1601,7 +1545,7 @@
       "pos": "Market share and position not verified in public sources.",
       "def": "Directly linked to orbit insertion, station-keeping, collision avoidance, and deorbiting for small satellites. Also adaptable to national-security satellites.",
       "chn": "Company-specific rare-earth BOM and exposure to China not verified.",
-      "note": "Consolidation: existing candidate (not subject to parent-company replacement) / Revenue basis: estimate for an unlisted space startup at the production-ramp-up stage"
+      "note": "Revenue basis: estimate for an unlisted space startup at the production-ramp-up stage"
     },
     "stage05-integrated-11": {
       "name": "Synspective",
@@ -1612,7 +1556,7 @@
       "pos": "Market share and position not verified in public sources.",
       "def": "Won a Ministry of Defense contract to develop and operate a satellite constellation. Explicitly identifies national-security and intelligence applications.",
       "chn": "Company-specific rare-earth BOM and exposure to China not verified.",
-      "note": "Consolidation: existing candidate (not subject to parent-company replacement) / Revenue basis: range based on the scale of the listed company's satellite and data businesses"
+      "note": "Revenue basis: range based on the scale of the listed company's satellite and data businesses"
     },
     "stage05-integrated-12": {
       "name": "ArkEdge Space Inc.",
@@ -1623,7 +1567,7 @@
       "pos": "Market share and position not verified in public sources.",
       "def": "Directly linked to Earth observation, satellite communications, positioning and geolocation, lunar infrastructure, and deep-space exploration.",
       "chn": "Company-specific rare-earth BOM and exposure to China not verified.",
-      "note": "Consolidation: existing candidate (not subject to parent-company replacement) / Revenue basis: unlisted space startup; estimated from project and workforce scale"
+      "note": "Revenue basis: unlisted space startup; estimated from project and workforce scale"
     },
     "stage05-integrated-13": {
       "name": "Axelspace Corporation",
@@ -1634,7 +1578,7 @@
       "pos": "Market share and position not verified in public sources.",
       "def": "Awarded work to acquire optical satellite imagery for the Ministry of Defense's satellite-constellation program.",
       "chn": "Company-specific rare-earth BOM and exposure to China not verified.",
-      "note": "Consolidation: existing candidate (not subject to parent-company replacement) / Revenue basis: unlisted space company preparing for an IPO; estimated from project and workforce scale"
+      "note": "Revenue basis: unlisted space company preparing for an IPO; estimated from project and workforce scale"
     },
     "stage05-integrated-14": {
       "name": "Interstellar Technologies Inc.",
@@ -1645,7 +1589,7 @@
       "pos": "Market share and position not verified in public sources.",
       "def": "Directly linked to rocket development, manufacturing, and launch, as well as satellite development and operation. Adaptable to secure communications and responsive launch.",
       "chn": "Company-specific rare-earth BOM and exposure to China not verified.",
-      "note": "Consolidation: existing candidate (not subject to parent-company replacement) / Revenue basis: unlisted launch-vehicle company; estimated from workforce and development projects"
+      "note": "Revenue basis: unlisted launch-vehicle company; estimated from workforce and development projects"
     },
     "stage05-integrated-15": {
       "name": "SPACE ONE CO., LTD.",
@@ -1656,7 +1600,7 @@
       "pos": "Market share and position not verified in public sources.",
       "def": "Directly linked to small-satellite launches and launch-site operations, and adaptable to responsive launch of national-security satellites.",
       "chn": "Company-specific rare-earth BOM and exposure to China not verified.",
-      "note": "Consolidation: existing candidate (not subject to parent-company replacement) / Revenue basis: estimate for an unlisted company at the launch-demonstration stage"
+      "note": "Revenue basis: estimate for an unlisted company at the launch-demonstration stage"
     },
     "stage05-integrated-16": {
       "name": "Meisei Electric Co., Ltd.",
@@ -1667,7 +1611,7 @@
       "pos": "Market share and position not verified in public sources.",
       "def": "In addition to satellite-, rocket-, and ISS-mounted equipment, identified in Ministry of Defense notices as a supplier of components for meteorological and measurement equipment.",
       "chn": "Company-specific rare-earth BOM and exposure to China not verified.",
-      "note": "Consolidation: existing candidate (not subject to parent-company replacement) / Revenue basis: estimated from the scale of the IHI Group's space and meteorological equipment businesses"
+      "note": "Revenue basis: estimated from the scale of the IHI Group's space and meteorological equipment businesses"
     },
     "stage05-integrated-17": {
       "name": "Astroscale Holdings Inc.",
@@ -1678,7 +1622,7 @@
       "pos": "Market share and position not verified in public sources.",
       "def": "Awarded a Ministry of Defense contract for a demonstration satellite for a responsive space system. Shared by civilian satellite life-extension and debris-removal applications and defense SDA. / Common to civilian satellite life extension and debris removal, and defense SDA and responsive space systems.",
       "chn": "Company-specific rare-earth BOM and exposure to China not verified.",
-      "note": "Consolidation: existing candidate (not subject to parent-company replacement) / Revenue basis: range reflecting the listed company's contract revenue and development stage"
+      "note": "Revenue basis: range reflecting the listed company's contract revenue and development stage"
     },
     "stage05-integrated-18": {
       "name": "Nuclear Fuel Industries, Ltd.",
@@ -1689,7 +1633,7 @@
       "pos": "Market share and position not verified in public sources.",
       "def": "A security-critical node directly linked to nuclear-fuel manufacturing and special nuclear material control for commercial, research, and test reactors.",
       "chn": "Company-specific rare-earth BOM and exposure to China not verified.",
-      "note": "Consolidation: existing candidate (not subject to parent-company replacement) / Revenue basis: estimated from two domestic plants, fuel-production capacity, and workforce scale"
+      "note": "Revenue basis: estimated from two domestic plants, fuel-production capacity, and workforce scale"
     },
     "stage05-integrated-19": {
       "name": "Mitsubishi Nuclear Fuel Co., Ltd.",
@@ -1700,7 +1644,7 @@
       "pos": "Market share and position not verified in public sources.",
       "def": "A critical node for nuclear security and nonproliferation controls, directly linked to reactor cores and the nuclear fuel cycle.",
       "chn": "Company-specific rare-earth BOM and exposure to China not verified.",
-      "note": "Consolidation: existing candidate (not subject to parent-company replacement) / Revenue basis: estimated from PWR fuel-manufacturing facilities and workforce scale"
+      "note": "Revenue basis: estimated from PWR fuel-manufacturing facilities and workforce scale"
     },
     "stage05-integrated-20": {
       "name": "Nippon Nuclear Fuel Development Co., Ltd.",
@@ -1711,7 +1655,7 @@
       "pos": "Market share and position not verified in public sources.",
       "def": "A nuclear-security R&D node directly linked to improved fuel reliability and accident tolerance, and to cladding and reactor-material evaluation.",
       "chn": "Company-specific rare-earth BOM and exposure to China not verified.",
-      "note": "Consolidation: existing candidate (not subject to parent-company replacement) / Revenue basis: estimated from the workforce and facilities of a specialized testing and research company"
+      "note": "Revenue basis: estimated from the workforce and facilities of a specialized testing and research company"
     },
     "stage05-integrated-21": {
       "name": "AeroEdge",
@@ -1722,7 +1666,7 @@
       "pos": "Market share and position not verified in public sources.",
       "def": "Directly linked to best-selling commercial aircraft engines for the A320neo, 737 MAX, and C919. Its machining and quality-assurance technologies are adaptable to defense engines.",
       "chn": "Company-specific rare-earth BOM and exposure to China not verified.",
-      "note": "Consolidation: existing candidate (not subject to parent-company replacement) / Revenue basis: full-year company forecast"
+      "note": "Revenue basis: full-year company forecast"
     },
     "stage05-integrated-25": {
       "name": "SUBARU Aerospace Company",
@@ -1733,7 +1677,7 @@
       "pos": "Market share and position not verified in public sources.",
       "def": "Directly linked to Japan Self-Defense Forces training aircraft, the UH-2, unmanned aircraft, and the next-generation fighter.",
       "chn": "Company-specific rare-earth BOM and exposure to China not verified.",
-      "note": "Consolidation: in-house company replacement / Replaces: SUBARU / Revenue basis: parent company's Aerospace segment revenue"
+      "note": "Revenue basis: parent company's Aerospace segment revenue"
     },
     "stage05-integrated-30": {
       "name": "Tamron Co., Ltd.",
@@ -1744,7 +1688,7 @@
       "pos": "Market share and position not verified in public sources.",
       "def": "Directly linked to satellite-borne optical systems and free-space optical communications. High-power laser optics are adaptable to space and defense sensing.",
       "chn": "Company-specific rare-earth BOM and exposure to China not verified.",
-      "note": "Consolidation: existing candidate (not subject to parent-company replacement) / Revenue basis: consolidated revenue published by the company"
+      "note": "Revenue basis: consolidated revenue published by the company"
     },
     "stage05-integrated-32": {
       "name": "KYB Corporation",
@@ -1755,7 +1699,7 @@
       "pos": "Market share and position not verified in public sources.",
       "def": "Discloses contract performance for equipment and replacement parts for aircraft operated by the Ministry of Defense and Self-Defense Forces. Shares technology with commercial aircraft and industrial hydraulics.",
       "chn": "Company-specific rare-earth BOM and exposure to China not verified.",
-      "note": "Consolidation: existing candidate (not subject to parent-company replacement) / Revenue basis: FY2025 consolidated actual in the company profile"
+      "note": "Revenue basis: FY2025 consolidated actual in the company profile"
     },
     "stage05-integrated-33": {
       "name": "ShinMaywa Industries, Ltd.",
@@ -1766,7 +1710,7 @@
       "pos": "Market share and position not verified in public sources.",
       "def": "Directly linked to Japan Maritime Self-Defense Force search-and-rescue amphibious aircraft and commercial-aircraft structural components and maintenance.",
       "chn": "Company-specific rare-earth BOM and exposure to China not verified.",
-      "note": "Consolidation: existing candidate (not subject to parent-company replacement) / Revenue basis: consolidated revenue rounded to the nearest JPY 10 billion"
+      "note": "Revenue basis: consolidated revenue rounded to the nearest JPY 10 billion"
     },
     "stage05-integrated-34": {
       "name": "Shimadzu",
@@ -1776,7 +1720,7 @@
       "pos": "Market share and standing not confirmed in public sources",
       "def": "Supplies flight controls for defense aircraft such as the P-1 and C-2 and for commercial aircraft such as the B747-8. / The underwater optical wireless communication units are dual-use technology developed with support from ATLA's Innovative Science and Technology Initiative for Security. In 2024 the company demonstrated a hybrid optical-acoustic underwater communication unit under ATLA's advanced-technology bridging research",
       "chn": "The company's own rare-earth BOM and China exposure are unconfirmed.",
-      "note": "Integration note: existing candidate (not subject to parent substitution) / Revenue basis: consolidated revenue from the company profile / The MC100 carries 95 Mb/s or more over 10 m or more and withstands 3,500 m depth (launched 2020); the MC500 reaches up to 80 m using laser light (launched 2022). Y and Tb enter through the optical isolator inside the transceiver section",
+      "note": "Revenue basis: consolidated revenue from the company profile / The MC100 carries 95 Mb/s or more over 10 m or more and withstands 3,500 m depth (launched 2020); the MC500 reaches up to 80 m using laser light (launched 2022). Y and Tb enter through the optical isolator inside the transceiver section",
       "src": "https://www.shimadzu.co.jp/sites/shimadzu.co.jp/files/ir/6dog/srnepvp1yzsd995a.pdf ／ https://www.shimadzu.co.jp/aboutus/company/profile.html ／ https://www.shimadzu.co.jp/industry/products/underwater/mc500.html ／ https://www.shimadzu.co.jp/products/enviro/technical-overview04.html"
     },
     "stage05-integrated-35": {
@@ -1788,7 +1732,7 @@
       "pos": "Market share and position not verified in public sources.",
       "def": "Discloses artillery-shell, guided-missile, and aircraft components for the Ministry of Defense.",
       "chn": "Company-specific rare-earth BOM and exposure to China not verified.",
-      "note": "Consolidation: business-unit replacement / Replaces: Daikin Industries / Revenue basis: estimated from the parent company's disclosures for its defense systems and other businesses and from the product scope"
+      "note": "Revenue basis: estimated from the parent company's disclosures for its defense systems and other businesses and from the product scope"
     },
     "stage05-integrated-36": {
       "name": "OKI Circuit Technology Co., Ltd.",
@@ -1799,7 +1743,7 @@
       "pos": "Market share and position not verified in public sources.",
       "def": "JAXA-certified PCBs are used in launch vehicles and satellites. Certified by the Ministry of Defense and accredited to JIS Q 9100.",
       "chn": "Company-specific rare-earth BOM and exposure to China not verified.",
-      "note": "Consolidation: subsidiary replacement / Replaces: Oki Electric Industry (OKI) / Revenue basis: estimated from a revenue-per-employee range for high-value-added PCB manufacturing and a workforce of 707"
+      "note": "Revenue basis: estimated from a revenue-per-employee range for high-value-added PCB manufacturing and a workforce of 707"
     },
     "stage05-integrated-37": {
       "name": "Renesas Electronics Corporation",
@@ -1810,7 +1754,7 @@
       "pos": "Market share and position not verified in public sources.",
       "def": "Supplies radiation-tolerant semiconductors directly incorporated into satellites, spacecraft, and aerospace and defense electronics.",
       "chn": "Company-specific rare-earth BOM and exposure to China not verified.",
-      "note": "Consolidation: existing candidate (not subject to parent-company replacement) / Revenue basis: IFRS consolidated revenue"
+      "note": "Revenue basis: IFRS consolidated revenue"
     },
     "stage05-integrated-40": {
       "name": "Sumitomo Electric Industries",
@@ -1820,7 +1764,7 @@
       "pos": "Active in both optical semiconductors and RF devices. Holds the top global share in GaN HEMTs for base stations, with a reported sales share of about 70% in 5G.",
       "def": "Directly tied to air-traffic control, marine and weather radar and satellite communications, and transferable to defense radar and communications.",
       "chn": "The company's own rare-earth BOM and China exposure are unconfirmed.",
-      "note": "Integration note: existing candidate (not subject to parent substitution) / Revenue basis: consolidated revenue rounded to the nearest JPY 0.1 trillion / The company plans to double capacity for communication laser semiconductors in FY2026 against the prior year and to double it again by FY2029 against FY2026, with JPY 18 billion also going into indium phosphide substrates. Its 2028 medium-term plan allocates JPY 200 billion of a three-year JPY 1 trillion capital-expenditure total to data-center work. Y and Tb enter through the optical isolator inside the transceiver",
+      "note": "Revenue basis: consolidated revenue rounded to the nearest JPY 0.1 trillion / The company plans to double capacity for communication laser semiconductors in FY2026 against the prior year and to double it again by FY2029 against FY2026, with JPY 18 billion also going into indium phosphide substrates. Its 2028 medium-term plan allocates JPY 200 billion of a three-year JPY 1 trillion capital-expenditure total to data-center work. Y and Tb enter through the optical isolator inside the transceiver",
       "src": "https://sumitomoelectric.com/jp/products/optical-devices ／ https://sumitomoelectric.com/jp/ir/financial ／ https://sei.co.jp/id/2020/06/project/id04.html ／ https://newswitch.jp/p/22352 ／ https://www.yolegroup.com/strategy-insights/the-rise-and-rise-of-rf-gan/ ／ https://dempa-digital.com/article/711782 ／ https://www.nikkan.co.jp/articles/view/00781043"
     },
     "stage05-integrated-41": {
@@ -1842,7 +1786,7 @@
       "prod": "Defense ICT, sensors, AI and cybersecurity, 24/7 maintenance support",
       "pos": "Specialist company that develops and maintains information and communications systems for the Ministry of Defense and Self-Defense Forces.",
       "chn": "Company-specific rare-earth BOM and exposure to China not verified.",
-      "note": "Consolidation: subsidiary replacement / Replaces: Fujitsu / Revenue basis: specialist-company revenue scale based on the company profile and recruitment materials"
+      "note": "Revenue basis: specialist-company revenue scale based on the company profile and recruitment materials"
     },
     "stage05-integrated-43": {
       "name": "Fujitsu Special Components Limited",
@@ -1853,7 +1797,7 @@
       "pos": "Market share and position not verified in public sources.",
       "def": "Its JIS Q 9100 certification scope explicitly includes units for defense equipment installed on aircraft.",
       "chn": "Company-specific rare-earth BOM and exposure to China not verified.",
-      "note": "Consolidation: subsidiary added / Replaces: Fujitsu / Revenue basis: estimated from workforce scale and a revenue-per-employee range for precision manufacturing for defense aircraft"
+      "note": "Revenue basis: estimated from workforce scale and a revenue-per-employee range for precision manufacturing for defense aircraft"
     },
     "stage05-integrated-44": {
       "name": "OKI Engineering Co., Ltd.",
@@ -1864,7 +1808,7 @@
       "pos": "Market share and position not verified in public sources.",
       "def": "Provides testing of space-grade electronic components under MIL-STD-883 and JAXA-QTS-2010.",
       "chn": "Company-specific rare-earth BOM and exposure to China not verified.",
-      "note": "Consolidation: subsidiary replacement / Replaces: Oki Electric Industry (OKI) / Revenue basis: estimated for a specialized testing and evaluation company with 174 employees"
+      "note": "Revenue basis: estimated for a specialized testing and evaluation company with 174 employees"
     },
     "stage05-integrated-45": {
       "name": "YDK Technologies Co., Ltd.",
@@ -1875,7 +1819,7 @@
       "pos": "Market share and position not verified in public sources.",
       "def": "Directly linked to defense products for the ground, maritime, and air domains, particularly navigation, attitude, and speed measurement for Japan Maritime Self-Defense Force vessels.",
       "chn": "Company-specific rare-earth BOM and exposure to China not verified.",
-      "note": "Consolidation: existing candidate (not subject to parent-company replacement) / Revenue basis: estimated from workforce, product mix, and parent-company disclosures"
+      "note": "Revenue basis: estimated from workforce, product mix, and parent-company disclosures"
     },
     "stage05-integrated-46": {
       "name": "Seiko Epson Sensing Systems Business",
@@ -1886,7 +1830,7 @@
       "pos": "Market share and position not verified in public sources.",
       "def": "The M-G370-series IMU was selected for Int-Ball2 in the ISS Japanese Experiment Module “Kibo.”",
       "chn": "Company-specific rare-earth BOM and exposure to China not verified.",
-      "note": "Consolidation: business-unit replacement / Replaces: Seiko Epson / Revenue basis: estimated from the IMU and sensing product portfolio and target-market scale"
+      "note": "Revenue basis: estimated from the IMU and sensing product portfolio and target-market scale"
     },
     "stage05-integrated-47": {
       "name": "Miyazaki Epson Corporation",
@@ -1897,7 +1841,7 @@
       "pos": "Market share and position not verified in public sources.",
       "def": "The parent company's IMUs have a track record of use in space. Finished products and warranties are provided under the parent company's name.",
       "chn": "Company-specific rare-earth BOM and exposure to China not verified.",
-      "note": "Consolidation: subsidiary added (monitoring) / Replaces: Seiko Epson / Revenue basis: estimated from the workforce and facility scale of the crystal-device manufacturing site"
+      "note": "Revenue basis: estimated from the workforce and facility scale of the crystal-device manufacturing site"
     },
     "stage05-integrated-48": {
       "name": "Furuno Electric Co., Ltd.",
@@ -1908,7 +1852,7 @@
       "pos": "Market share and position not verified in public sources.",
       "def": "Explicitly identifies underwater acoustic equipment, GNSS-related equipment, and digital-map equipment for the Ministry of Defense. Shares its technology base with products for merchant and fishing vessels. / Explicitly identifies underwater acoustic and GNSS-related equipment for the Ministry of Defense. Highly dual-use with radar for merchant and fishing vessels.",
       "chn": "Company-specific rare-earth BOM and exposure to China not verified.",
-      "note": "Consolidation: existing candidate (not subject to parent-company replacement) / Revenue basis: range based on rounded full-year results"
+      "note": "Revenue basis: range based on rounded full-year results"
     },
     "stage05-integrated-49": {
       "name": "Sumitomo Precision Products Co., Ltd.",
@@ -1919,7 +1863,7 @@
       "pos": "Houses both inertial-sensing capabilities for aerospace and marine applications and landing-gear systems installed on approximately 80% of aircraft operated by Japan's Ministry of Defense. Holds a 90% share in deep-silicon etching equipment for MEMS manufacturing.",
       "def": "Directly linked to landing gear, thermal management, and electrification for defense and commercial aircraft.",
       "chn": "Company-specific rare-earth BOM and dependence on China not confirmed. Y₂O₃-based plasma-resistant materials are commonly used in chamber components for semiconductor etching and plasma CVD equipment; material suppliers are not disclosed.",
-      "note": "Consolidation: existing candidate (not subject to parent-company replacement) / Revenue basis: estimated from consolidated revenue before privatization and the current business portfolio / 2026-09-19: Added semiconductor manufacturing equipment (wholly owned subsidiary SPP Technologies; absorption into Sumitomo Precision Products under consideration for around October 1, 2026)."
+      "note": "Revenue basis: estimated from consolidated revenue before privatization and the current business portfolio / 2026-09-19: Added semiconductor manufacturing equipment (wholly owned subsidiary SPP Technologies; absorption into Sumitomo Precision Products under consideration for around October 1, 2026)."
     },
     "company-115": {
       "name": "Hoko (Hoko Chemical)",
@@ -1942,8 +1886,7 @@
       "def": "The company highlights a track record in high-reliability optical products for space applications. Publicly listed products are mainly used for analysis, measurement, and biotechnology; deliveries of oscillators for defense applications were not confirmed. / This review of public information did not identify a direct contract.",
       "chn": "Countries of procurement for the Y raw material and Nd dopant in Nd:YAG are not disclosed. The company states that crystals are sourced worldwide.",
       "bom": "The 594 nm product uses Nd:YAG and Nd:YVO4 as laser media and performs sum-frequency generation with an intracavity nonlinear crystal. / Y (Nd:YAG explicitly identified)",
-      "gap": "Verify the countries of origin of YAG crystals, space and defense models, MIL/JAXA certifications, and revenue by customer.",
-      "note": "Formally added to Stage 04 based on its classification as an “adoption candidate (compact solid-state oscillator)” in the solid-state laser oscillator due diligence."
+      "gap": "Verify the countries of origin of YAG crystals, space and defense models, MIL/JAXA certifications, and revenue by customer."
     },
     "laser-dd-towa": {
       "name": "TOWA Laserfront Corporation",
@@ -1956,7 +1899,7 @@
       "chn": "The Y raw material, crystal supplier, and country of origin for Nd:YAG crystals are not disclosed. Structurally exposed to upstream Y raw materials.",
       "bom": "Nd:YAG is explicitly identified on the official product page. The company manufactures oscillators incorporating pump LDs, resonators, and SHG. The YAG crystal supplier is not disclosed. / Y (Nd:YAG explicitly identified)",
       "gap": "Verify defense customers, YAG crystal suppliers, annual production volume, space and defense certifications, and current high-power models other than the SL18X.",
-      "note": "Formally added to Stage 04 based on its classification as an “adoption candidate (current Nd:YAG oscillator)” in the solid-state laser oscillator due diligence. / 2026-11-21: Also placed under laser systems & irradiation because it makes laser trimmers, wafer markers and micro-machining and welding systems."
+      "note": "2026-11-21: Also placed under laser systems & irradiation because it makes laser trimmers, wafer markers and micro-machining and welding systems."
     },
     "laser-dd-optoquest": {
       "name": "Optoquest Co., Ltd.",
@@ -1969,7 +1912,7 @@
       "chn": "Countries of origin for the Nd:YAG crystal and Q-switch material are not disclosed. Structurally exposed to Y raw materials.",
       "bom": "Nd:YAG is explicitly identified on the official page. Passively Q-switched microchip laser. The Q-switch material and crystal supplier are not disclosed. / Y (Nd:YAG explicitly identified)",
       "gap": "Verify the contractual relationship with the Acquisition, Technology & Logistics Agency, aerospace customers, the crystal and Q-switch-material BOM, market share, and annual production volume.",
-      "note": "Formally added to Stage 04 based on its classification as an “adoption candidate (microchip Nd:YAG)” in the solid-state laser oscillator due diligence. / Sub-nanosecond, megawatt-class peak power is vulnerable to back-reflection, so an isolator is normally fitted for protection. The company is itself a maker of optical isolators for multicore fiber"
+      "note": "Sub-nanosecond, megawatt-class peak power is vulnerable to back-reflection, so an isolator is normally fitted for protection. The company is itself a maker of optical isolators for multicore fiber"
     },
     "laser-dd-sct": {
       "name": "SCT Co., Ltd. (SCT)",
@@ -2020,8 +1963,7 @@
       "def": "Adaptable to distributed and emergency power, long-duration hydrogen storage, and base resilience. However, defense contracts and installations in defense equipment were not confirmed in public information.",
       "chn": "Structurally exposed to rare-earth raw materials if the zirconia stabilizer is Y or Sc. The current BOM and countries of origin require verification.",
       "bom": "Current descriptions explicitly identify a zirconia electrolyte. The type and content of the Y/Sc stabilizer and raw-material suppliers are not disclosed.",
-      "gap": "Verify the rSOC commercialization timetable, annual capacity, intragroup IP and manufacturing responsibilities, defense BCP applications, zirconia stabilizer, and Y/Sc raw-material procurement.",
-      "note": "Updated the former “Niterra (NGK Spark Plug)” monitoring card through additional due diligence. Formally added to Stage 5 “SOFC/SOEC.”."
+      "gap": "Verify the rSOC commercialization timetable, annual capacity, intragroup IP and manufacturing responsibilities, defense BCP applications, zirconia stabilizer, and Y/Sc raw-material procurement."
     },
     "sofc-dd-morimura": {
       "name": "Morimura SOFC Technology Co., Ltd.",
@@ -2046,8 +1988,7 @@
       "prod": "Type III laser receiver for projectile body / Laser transmitter for anti-tank/anti-aircraft weapons / Navigation aid JMRN-A3-C / Radar tester line tester YPM-25 / Maritime wireless router ORQ-2B-2-Y / Anti-air radio GMU-4 (100 W)",
       "def": "Products delivered to the Acquisition, Technology & Logistics Agency (FY2023, FY2024, and FY2025): Type III laser receiver for projectile body; laser transmitter for anti-tank/anti-aircraft weapons; navigation aid JMRN-A3-C; radar tester line tester YPM-25; maritime wireless router ORQ-2B-2-Y; anti-air radio GMU-4 (100 W)",
       "bom": "Assessment based on the procured items “anti-air radio GMU-4 (100 W); radio J/GRC-303A; HF radio HRC-122B.” This equipment may use rare earths in magnets, lasers/ceramics, RF and piezoelectric materials, and other components. No model-specific public BOM was confirmed.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Y, Dy, Tb, Sm, Sc. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-2011101014084": {
       "name": "Toshiba Infrastructure Systems & Solutions Corporation",
@@ -2059,8 +2000,7 @@
       "prod": "Research prototype of a cooperative guidance system / Satellite-communications interference-source geolocation system / Satellite-communications interference-source geolocation system (Part 2) / UAV search radar (for verification) / Tactical information-processing display HYQ-2B / Search radar HPS-106 / Search radar HPS-106B / Search radar (HPS-106B for P-1) / Search radar (HPS-106B for P-1) (initial cost) / Multipurpose surveillance radar (for testing) (Part 1) / Instrumentation radar / Multipurpose surveillance radar (for testing) (Part 2) / Identification-friend-or-foe system J/UPX-111() for air-surveillance and control radar / Search radar (HPS-106B for P-1 (BL2)) (initial cost) / Search radar (HPS-106B for P-1 (BL2)) / Fixed air-surveillance and control radar system J/FPS-4() / Fixed air-surveillance and control radar system J/FPS-4() (initial cost) / Search radar HPS-106B for electronic-warfare aircraft (prototype) / Search radar HPS-106B",
       "def": "Products delivered to the Acquisition, Technology & Logistics Agency (FY2023 and FY2024): research prototype of a cooperative guidance system; satellite-communications interference-source geolocation system; satellite-communications interference-source geolocation system (Part 2); UAV search radar (for verification); tactical information-processing display HYQ-2B; search radar HPS-106; search radar HPS-106B; search radar (HPS-106B for P-1); search radar (HPS-106B for P-1) (initial cost); multipurpose surveillance radar (for testing) (Part 1); instrumentation radar; multipurpose surveillance radar (for testing) (Part 2); identification-friend-or-foe system J/UPX-111() for air-surveillance and control radar; search radar (HPS-106B for P-1 (BL2)) (initial cost); search radar (HPS-106B for P-1 (BL2)); fixed air-surveillance and control radar system J/FPS-4(); fixed air-surveillance and control radar system J/FPS-4() (initial cost); search radar HPS-106B for electronic-warfare aircraft (prototype); search radar HPS-106B",
       "bom": "Assessment based on the procured items “research prototype of a cooperative guidance system; Type 91 portable surface-to-air guided missile (B) training equipment; Type 93 short-range surface-to-air guided missile.” This equipment may use rare earths in magnets, lasers/ceramics, RF and piezoelectric materials, and other components. No model-specific public BOM was confirmed.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Dy, Tb, Sm, Sc. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-9010501010505": {
       "name": "Nihon Denkei Co., Ltd.",
@@ -2072,8 +2012,7 @@
       "prod": "Microwave counter / High-frequency signal receiver (portable Type IV)",
       "def": "Products delivered to the Acquisition, Technology & Logistics Agency (FY2023, FY2024, and FY2025): microwave counter; high-frequency signal receiver (portable Type IV)",
       "bom": "Assessment based on the procured items “radio test set N-TS-503D; microwave counter; high-frequency signal receiver (portable Type IV).” This equipment may use rare earths in magnets, lasers/ceramics, RF and piezoelectric materials, and other components. No model-specific public BOM was confirmed.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Y, Sc. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-7010401006126": {
       "name": "Oki Electric Industry Co., Ltd.",
@@ -2085,8 +2024,7 @@
       "prod": "Shipboard underwater-acoustic measurement system LQM-1A / F-15 aircraft sustainment parts (domestically produced, Part 15)",
       "def": "Products delivered to the Acquisition, Technology & Logistics Agency (FY2023, FY2024, FY2025, and FY2026): shipboard underwater-acoustic measurement system LQM-1A; F-15 aircraft sustainment parts (domestically produced, Part 15)",
       "bom": "Assessment based on the procured item “shipboard underwater-acoustic measurement system LQM-1A.” This equipment may use rare earths in magnets, lasers/ceramics, RF and piezoelectric materials, and other components. No model-specific public BOM was confirmed.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Dy, Tb. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-9010801024873": {
       "name": "Koden Electronics Co., Ltd.",
@@ -2098,8 +2036,7 @@
       "prod": "Maritime surveillance radar system JTPS-P4",
       "def": "Product delivered to the Acquisition, Technology & Logistics Agency (FY2023, FY2024, and FY2025): maritime surveillance radar system JTPS-P4",
       "bom": "Assessment based on the procured item “maritime surveillance radar system JTPS-P4.” This equipment may use rare earths in magnets, lasers/ceramics, RF and piezoelectric materials, and other components. No model-specific public BOM was confirmed.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Sc. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-1020001006043": {
       "name": "Kaiyo Denshi Co., Ltd.",
@@ -2111,8 +2048,7 @@
       "prod": "Communications rack equipment OTQ-4-A / Communications rack equipment OTQ-5-A",
       "def": "Products delivered to the Acquisition, Technology & Logistics Agency (FY2023, FY2024, and FY2025): communications rack equipment OTQ-4-A; communications rack equipment OTQ-5-A",
       "bom": "Assessment based on the procured items “air-support radio; radio RRC-39; radio RRC-39B.” This equipment may use rare earths in magnets, lasers/ceramics, RF and piezoelectric materials, and other components. No model-specific public BOM was confirmed.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Y, Sc. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-7010701017021": {
       "name": "Mitsubishi Electric Defense & Space Technologies Corporation",
@@ -2124,8 +2060,7 @@
       "prod": "Local weather radar system GFMQ-1-B / Survival radio (RRC-40 for P-1) / Survival radio RRC-22D",
       "def": "Products delivered to the Acquisition, Technology & Logistics Agency (FY2023, FY2024, and FY2025): local weather radar system GFMQ-1-B; survival radio (RRC-40 for P-1); survival radio RRC-22D",
       "bom": "Assessment based on the procured items “survival radio (RRC-40 for P-1); survival radio RRC-22D; survival radio RRC-22D (initial cost).” This equipment may use rare earths in magnets, lasers/ceramics, RF and piezoelectric materials, and other components. No model-specific public BOM was confirmed.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Y, Sc. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-1010401098920": {
       "name": "Cornes Technologies Limited",
@@ -2137,8 +2072,7 @@
       "prod": "Radio-frequency power amplifier / Survival radio for CH-47J / Explosive-ordnance-disposal UGV (modified)",
       "def": "Products delivered to the Acquisition, Technology & Logistics Agency (FY2023, FY2024, and FY2025): radio-frequency power amplifier; survival radio for CH-47J; explosive-ordnance-disposal UGV (modified)",
       "bom": "Assessment based on the procured items “survival radio for CH-47J; radio-frequency power amplifier.” This equipment may use rare earths in magnets, lasers/ceramics, RF and piezoelectric materials, and other components. No model-specific public BOM was confirmed.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Y, Sc. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-4010701009640": {
       "name": "MEIDENSHA CORPORATION",
@@ -2150,8 +2084,7 @@
       "prod": "Power-supply unit for a space-domain-awareness laser-ranging system / 75 kW engine generator (power supply for a monitoring system)",
       "def": "Products delivered to the Acquisition, Technology & Logistics Agency (FY2023, FY2024, and FY2025): power-supply unit for a space-domain-awareness laser-ranging system; 75 kW engine generator (power supply for a monitoring system)",
       "bom": "Assessment based on the procured items “power-supply unit for a space-domain-awareness laser-ranging system; 75 kW engine generator (power supply for a monitoring system); 75 kW engine generator (power supply for a monitoring system) (initial cost).” This equipment may use rare earths in magnets, lasers/ceramics, RF and piezoelectric materials, and other components. No model-specific public BOM was confirmed.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Y, Dy, Tb, Sm. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-1010001110829": {
       "name": "RICOH JAPAN Corporation",
@@ -2163,8 +2096,7 @@
       "prod": "Operational-management information-processing system (Japan-U.S. information-sharing terminal and ground playback terminal for T-4)",
       "def": "Product delivered to the Acquisition, Technology & Logistics Agency (FY2023, FY2024, FY2025, and FY2026): operational-management information-processing system (Japan-U.S. information-sharing terminal and ground playback terminal for T-4)",
       "bom": "Assessment based on the procured item “magneto telephone GTP-602.” This equipment may use rare earths in magnets, lasers/ceramics, RF and piezoelectric materials, and other components. No model-specific public BOM was confirmed.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Dy, Tb, Sm. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-5011101016202": {
       "name": "Nippon Aircraft Supply Co., Ltd.",
@@ -2176,8 +2108,7 @@
       "prod": "Concept-demonstration contract for Small Attack UAV Type III (fixed-wing type) / Concept-demonstration contract for attack UAV (Part 1)",
       "def": "Products and services delivered to the Acquisition, Technology & Logistics Agency (FY2023, FY2024, and FY2025): concept-demonstration contract for Small Attack UAV Type III (fixed-wing type); concept-demonstration contract for attack UAV (Part 1)",
       "bom": "Assessment based on the procured item “multispectral electromagnetic camouflage-net set (for guided-weapon equipment).” This equipment may use rare earths in magnets, lasers/ceramics, RF and piezoelectric materials, and other components. No model-specific public BOM was confirmed.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Dy, Tb, Sm. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-7012401000240": {
       "name": "NEC Network and Sensor Systems, Ltd.",
@@ -2189,8 +2120,7 @@
       "prod": "Code converter GPS-C18 / Code converter GPS-C22 / Aircraft-mounted satellite-communications code-conversion unit J/AYQ-3( ) / Components for aircraft-mounted satellite-communications code-conversion unit J/AYQ-3( ) / Electron tube SPA-V-44986 / Electron tube LD4576",
       "def": "Products delivered to the Acquisition, Technology & Logistics Agency (FY2023, FY2024, FY2025, and FY2026): code converter GPS-C18; code converter GPS-C22; aircraft-mounted satellite-communications code-conversion unit J/AYQ-3( ); components for aircraft-mounted satellite-communications code-conversion unit J/AYQ-3( ); electron tube SPA-V-44986; electron tube LD4576",
       "bom": "Assessment based on the procured items “electron tube SPA-V-44986; electron tube LD4576; electron tube LD4516.” This equipment may use rare earths in magnets, lasers/ceramics, RF and piezoelectric materials, and other components. No model-specific public BOM was confirmed.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Y, Sc. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-2020001020489": {
       "name": "JRC Tokki Co., Ltd.",
@@ -2202,8 +2132,7 @@
       "prod": "Acoustic-intensity measurement equipment for shipboard underwater-acoustic measurement system LQM-1A",
       "def": "Product delivered to the Acquisition, Technology & Logistics Agency (FY2023, FY2024, and FY2025): acoustic-intensity measurement equipment for shipboard underwater-acoustic measurement system LQM-1A",
       "bom": "Assessment based on the procured item “acoustic-intensity measurement equipment for shipboard underwater-acoustic measurement system LQM-1A.” This equipment may use rare earths in magnets, lasers/ceramics, RF and piezoelectric materials, and other components. No model-specific public BOM was confirmed.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Dy, Tb. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-1020001081053": {
       "name": "Toshiba Radio Products Co., Ltd.",
@@ -2215,8 +2144,7 @@
       "prod": "Personnel laser receiver / Small-arms laser transmitter / Electron tube E10034359P1 / Anti-air radio GMV-23",
       "def": "Products delivered to the Acquisition, Technology & Logistics Agency (FY2023, FY2024, and FY2025): personnel laser receiver; small-arms laser transmitter; electron tube E10034359P1; anti-air radio GMV-23",
       "bom": "Assessment based on the procured items “electron tube E10034359P1; anti-air radio GMV-23; anti-air radio GMV-22.” This equipment may use rare earths in magnets, lasers/ceramics, RF and piezoelectric materials, and other components. No model-specific public BOM was confirmed.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Y, Dy, Tb, Sm, Sc. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-4010001052390": {
       "name": "AeroPartners Corporation",
@@ -2228,8 +2156,7 @@
       "prod": "Laser-surveying drone / Three-dimensional information-collection drone",
       "def": "Products delivered to the Acquisition, Technology & Logistics Agency (FY2023, FY2024, FY2025, and FY2026): laser-surveying drone; three-dimensional information-collection drone",
       "bom": "Assessment based on the procured item “laser-surveying drone.” This equipment may use rare earths in magnets, lasers/ceramics, RF and piezoelectric materials, and other components. No model-specific public BOM was confirmed.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Y. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-8010001057337": {
       "name": "MARUBUN CORPORATION",
@@ -2241,8 +2168,7 @@
       "prod": "Electron tube (for search-radar transceiver) / Electron tube VDX-1372 / Electron tube VMX1198/L-4791 / Electron tube for search-radar transceiver",
       "def": "Products delivered to the Acquisition, Technology & Logistics Agency (FY2023, FY2024, and FY2025): electron tube (for search-radar transceiver); electron tube VDX-1372; electron tube VMX1198/L-4791; electron tube for search-radar transceiver",
       "bom": "Assessment based on the procured items “electron tube VDX-1372; electron tube VMX1198/L-4791; electron tube DOD-042.” This equipment may use rare earths in magnets, lasers/ceramics, RF and piezoelectric materials, and other components. No model-specific public BOM was confirmed.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Y, Sc. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-3010001033004": {
       "name": "Nippon Kaiyo Co., Ltd.",
@@ -2254,8 +2180,7 @@
       "prod": "Limpet-mine countermeasure robot / Mine-countermeasure unmanned underwater vehicle RXX-2 / Radio for small UGV (walking type) (STREAMCASTER)",
       "def": "Products delivered to the Acquisition, Technology & Logistics Agency (FY2023, FY2024, and FY2025): limpet-mine countermeasure robot; mine-countermeasure unmanned underwater vehicle RXX-2; radio for small UGV (walking type) (STREAMCASTER)",
       "bom": "Assessment based on the procured items “radio for small UGV (walking type) (STREAMCASTER); limpet-mine countermeasure robot; mine-countermeasure unmanned underwater vehicle RXX-2.” This equipment may use rare earths in magnets, lasers/ceramics, RF and piezoelectric materials, and other components. No model-specific public BOM was confirmed.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Y, Dy, Tb, Sm, Sc. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-4130001044153": {
       "name": "JMU Defense Systems Co., Ltd.",
@@ -2267,8 +2192,7 @@
       "prod": "Concept-demonstration contract for Small Multipurpose USV Type II",
       "def": "Product and service delivered to the Acquisition, Technology & Logistics Agency (FY2023, FY2024, and FY2025): concept-demonstration contract for Small Multipurpose USV Type II",
       "bom": "Assessment based on the procured item “offshore target system for surface-to-ship guided missiles.” This equipment may use rare earths in magnets, lasers/ceramics, RF and piezoelectric materials, and other components. No model-specific public BOM was confirmed.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Dy, Tb, Sm. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-1120001019349": {
       "name": "Icom Inc.",
@@ -2280,8 +2204,7 @@
       "prod": "Radio RRC-45 / Radio RRC―45",
       "def": "Products delivered to the Acquisition, Technology & Logistics Agency (FY2023, FY2024, and FY2025): radio RRC-45; radio RRC―45",
       "bom": "Assessment based on the procured items “radio RRC-45; radio RRC―45; digital UHF radio (handheld).” This equipment may use rare earths in magnets, lasers/ceramics, RF and piezoelectric materials, and other components. No model-specific public BOM was confirmed.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Y, Sc. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "atla-3020001018037": {
       "name": "Tsurumi-Seiki Co., Ltd.",
@@ -2293,8 +2216,7 @@
       "prod": "Microwave wave-height meter, Modification 1",
       "def": "Product delivered to the Acquisition, Technology & Logistics Agency (FY2023, FY2024, and FY2025): microwave wave-height meter, Modification 1",
       "bom": "Assessment based on the procured item “microwave wave-height meter, Modification 1.” This equipment may use rare earths in magnets, lasers/ceramics, RF and piezoelectric materials, and other components. No model-specific public BOM was confirmed.",
-      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified.",
-      "note": "Stage 5 scope confirmed by manual review. / Rare-earth assessment: Sc. Medium confidence (general industry basis)."
+      "gap": "The rare-earth flag is a worksheet assessment based on procured items. Model-specific content, countries of raw-material procurement, and market share are not verified."
     },
     "faraday-granopt": {
       "name": "Granopt",

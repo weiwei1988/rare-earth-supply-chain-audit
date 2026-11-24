@@ -26,9 +26,7 @@
     "def": "研究開発・少量の防衛／宇宙部材に接続し得る",
     "chn": "高。輸入元、原産国証明、再輸出規制該否を確認",
     "ev": "A",
-    "exc": 0,
-    "src": "JSX ／ DyTb DD ／ Sm DD",
-    "note": "JSXではctx=1の商流参考ノード。企業名として統合表に収録"
+    "exc": 0
   },
   {
     "id": "seed-1",
@@ -84,7 +82,7 @@
     "chn": "中～高。原料の中国原産比率、非中国・リサイクル原料、在庫月数を確認",
     "ev": "A",
     "exc": 1,
-    "src": "JSX ／ Y DD ／ DyTb DD ／ Sm DD ／ https://em.mitsui-kinzoku.com/products/applications/electronics/mlcc/ ／ https://em.mitsui-kinzoku.com/rare-material/products/oxide-rare-earth-compounds/ ／ https://www.recycle-ken.or.jp/activite/rareearth.html",
+    "src": "https://em.mitsui-kinzoku.com/products/applications/electronics/mlcc/ ／ https://em.mitsui-kinzoku.com/rare-material/products/oxide-rare-earth-compounds/ ／ https://www.recycle-ken.or.jp/activite/rareearth.html",
     "note": "法人ではなく事業部単位。売上条件は例外 ／ 2026-11-20：使用済み蛍光管の蛍光体からレアアースを溶解・抽出・精製する福岡県の共同事業（旧日本イットリウムと参加）で、回収対象の緑色蛍光体に Tb が含まれるため、再資源化に Dy・Tb を加えた。Tb の回収量は非開示。"
   },
   {
@@ -130,7 +128,7 @@
     "chn": "高。Dy/Tb/Sm原料と中国JV経路、輸出許可を確認",
     "ev": "A",
     "exc": 0,
-    "src": "JSX ／ DyTb DD ／ Sm DD ／ https://www.santoku-corp.co.jp/news/20260701_1.html ／ https://www.santoku-corp.co.jp/company/about.html ／ https://www.santoku-corp.co.jp/business/jisyaku.html ／ https://www.dbj.jp/topics/branch_news/2016/files/0000024934_file1.pdf",
+    "src": "https://www.santoku-corp.co.jp/news/20260701_1.html ／ https://www.santoku-corp.co.jp/company/about.html ／ https://www.santoku-corp.co.jp/business/jisyaku.html ／ https://www.dbj.jp/topics/branch_news/2016/files/0000024934_file1.pdf",
     "note": "正式商号は株式会社三徳。2026年7月1日のグループ内再編で株式会社プロテリアルから株式会社プロテリアルマグネティクスの子会社へ移行。プロテリアル本体とは別法人として収録 ／ サマリウム磁石は焼結用とボンド磁石用の両方を製造し、ボンド磁石用は合金から製品まで一貫生産すると自社が明記 ／ DBJの2016年12月8日付融資リリースは、希土類金属・合金の製造に関する多数の特許、国内外の合金メーカーへのライセンス供与、独自開発のマグネシウム・リチウム合金「サンマリア」を紹介"
   },
   {
@@ -212,8 +210,8 @@
     "chn": "磁石合金の一部は中国（福建省）で製造する。Dy・Tb など重希土類は中国依存が高く、研削粉（磁石加工で約2割出る）や使用済み HDD・モータからの回収と、中国以外の原料確保を進めている。企業固有の使用量と調達先は非開示",
     "ev": "A",
     "exc": 1,
-    "src": "JSX ／ Y DD ／ DyTb DD ／ Sm DD ／ https://www.rare-earth.jp/product.html ／ https://www.shinetsu.co.jp/sec/takefu/ ／ https://www.shinetsu-rare-earth-magnet.jp/ ／ https://www.shinetsu.co.jp/en/news/news-release/shin-etsu-chemical-to-set-up-a-base-in-china-to-manufacture-magnet-alloys-for-rare-earth-magnets/ ／ https://www.shinetsu.co.jp/en/news/news-release/shin-etsu-chemical-to-double-its-production-capacity-of-rare-earth-magnets-in-vietnam/ ／ https://www.shinetsu.co.jp/wp-content/uploads/2025/07/20260428_con_J.pdf ／ https://www.jiji.com/jc/article?k=2026061100578&g=eco ／ https://www.fukuishimbun.co.jp/articles/-/2623075 ／ https://xtech.nikkei.com/atcl/nxt/mag/nmc/18/00012/00279/ ／ https://www.shinetsu.co.jp/en/sustainability/esg_environment/resource_saving/ ／ https://patents.google.com/patent/JP5276640B2/ja ／ https://www.microsi.com/?p=11285",
-    "note": "JSXの2ノードを重複統合。工程2・3は海外子会社・海外工場を含む信越化学グループとしての一貫生産範囲 ／ 2026-09-23：電子材料セグメントの売上、製品グレード、生産拠点と能力、福井の新工場、リサイクルを追記 ／ 2026-11-19：1μm 帯の高出力ファイバーレーザー用光アイソレータ（Tb 系酸化物の回転子）を追記"
+    "src": "https://www.rare-earth.jp/product.html ／ https://www.shinetsu.co.jp/sec/takefu/ ／ https://www.shinetsu-rare-earth-magnet.jp/ ／ https://www.shinetsu.co.jp/en/news/news-release/shin-etsu-chemical-to-set-up-a-base-in-china-to-manufacture-magnet-alloys-for-rare-earth-magnets/ ／ https://www.shinetsu.co.jp/en/news/news-release/shin-etsu-chemical-to-double-its-production-capacity-of-rare-earth-magnets-in-vietnam/ ／ https://www.shinetsu.co.jp/wp-content/uploads/2025/07/20260428_con_J.pdf ／ https://www.jiji.com/jc/article?k=2026061100578&g=eco ／ https://www.fukuishimbun.co.jp/articles/-/2623075 ／ https://xtech.nikkei.com/atcl/nxt/mag/nmc/18/00012/00279/ ／ https://www.shinetsu.co.jp/en/sustainability/esg_environment/resource_saving/ ／ https://patents.google.com/patent/JP5276640B2/ja ／ https://www.microsi.com/?p=11285",
+    "note": "工程2・3は海外子会社・海外工場を含む信越化学グループとしての一貫生産範囲 ／ 2026-09-23：電子材料セグメントの売上、製品グレード、生産拠点と能力、福井の新工場、リサイクルを追記 ／ 2026-11-19：1μm 帯の高出力ファイバーレーザー用光アイソレータ（Tb 系酸化物の回転子）を追記"
   },
   {
     "id": "seed-4",
@@ -248,7 +246,7 @@
     "chn": "高。Sc₂O₃を含む原料原産国証明、ロット量、中国輸出許可を確認",
     "ev": "B",
     "exc": 0,
-    "src": "JSX ／ Y DD ／ Sc DD ／ https://www.kojundo.co.jp/dcms_media/other/SCO01PAG.pdf ／ https://www.kojundo.co.jp/material/thin_film_material/sputtering_targets.html",
+    "src": "https://www.kojundo.co.jp/dcms_media/other/SCO01PAG.pdf ／ https://www.kojundo.co.jp/material/thin_film_material/sputtering_targets.html",
     "note": "量産よりR&D・試作ノード",
     "atlaProcurement": true,
     "atla": {
@@ -290,7 +288,7 @@
     "chn": "安定化剤として Y₂O₃ を使う。Y とジルコニア原料の調達国、非中国品の比率、顧客への優先供給の方針は非開示",
     "ev": "A",
     "exc": 1,
-    "src": "JSX ／ Y DD ／ https://www.tosoh.co.jp/product/functionality/zirconia_powder_tz.html ／ https://www.tosoh.co.jp/product/functionality/zirconia_powder_dental.html ／ https://www.tosoh.co.jp/product/functionality/zirconia_crushing_steel_ball.html ／ https://www.tosoh.co.jp/news/assets/newsrelease20180516.pdf ／ https://www.tosoh.co.jp/ir/library/financial_statements/ ／ https://orbray.com/magazine/archives/12094",
+    "src": "https://www.tosoh.co.jp/product/functionality/zirconia_powder_tz.html ／ https://www.tosoh.co.jp/product/functionality/zirconia_powder_dental.html ／ https://www.tosoh.co.jp/product/functionality/zirconia_crushing_steel_ball.html ／ https://www.tosoh.co.jp/news/assets/newsrelease20180516.pdf ／ https://www.tosoh.co.jp/ir/library/financial_statements/ ／ https://orbray.com/magazine/archives/12094",
     "note": "売上条件は例外 ／ 2026-09-23：機能商品セグメントの売上、製品グレード、製造拠点、用途、リサイクルの取り組みを追記。粉砕・分散メディア（YTZ ボール・微小ビーズ）の工程にも配置した"
   },
   {
@@ -321,7 +319,7 @@
     "chn": "安定化剤の Y₂O₃・Sc₂O₃ の調達国は非開示。原料のジルコンサンドは2010年の中国の輸出規制を機に分散を進め、グループで使う ZOC の約5割をベトナムで生産する計画。レアアースを使わない安定化ジルコニアも実用化した",
     "ev": "A",
     "exc": 0,
-    "src": "JSX ／ Y DD ／ Sc DD ／ https://www.dkkk.co.jp/products/functions.html ／ https://www.dkkk.co.jp/products/pro03-1.html ／ https://www.dkkk.co.jp/products/pro03-2.html ／ https://www.dkkk.co.jp/company/profile.html ／ https://www.dkkk.co.jp/ir/library/ ／ https://www.jetro.go.jp/biz/areareports/special/2025/1001/5852b0a17e2c4483.html ／ https://prtimes.jp/main/html/rd/p/000000003.000171462.html",
+    "src": "https://www.dkkk.co.jp/products/functions.html ／ https://www.dkkk.co.jp/products/pro03-1.html ／ https://www.dkkk.co.jp/products/pro03-2.html ／ https://www.dkkk.co.jp/company/profile.html ／ https://www.dkkk.co.jp/ir/library/ ／ https://www.jetro.go.jp/biz/areareports/special/2025/1001/5852b0a17e2c4483.html ／ https://prtimes.jp/main/html/rd/p/000000003.000171462.html",
     "note": "条件内のYSZ・ScSZ粉末中核 ／ 2026-09-23：売上の分野別内訳、製品グレード、生産拠点（福井・ベトナム）、レアアースフリー品を追記"
   },
   {
@@ -354,7 +352,6 @@
     "chn": "高。高純度Y原料ソース、粉末拠点、顧客別優先供給を確認",
     "ev": "B",
     "exc": 0,
-    "src": "JSX ／ Y DD",
     "note": "条件内の溶射粉末中核"
   },
   {
@@ -389,7 +386,7 @@
     "chn": "Scは低～中（フィリピン→日本の代替供給側）。Smは高。HPAL稼働率、精製拠点集中、Sm原料を確認",
     "ev": "A",
     "exc": 1,
-    "src": "JSX ／ Sm DD ／ Sc DD ／ https://www.smm.co.jp/business/refining/products/scandium/",
+    "src": "https://www.smm.co.jp/business/refining/products/scandium/",
     "note": "親会社のSc事業と実製造子会社のSm事業を1行に統合"
   },
   {
@@ -425,7 +422,7 @@
     "chn": "高。TGG は Tb、YAG・Y₂O₃ は Y が骨格元素で、いずれも中国の中重希土類輸出管理の対象。高純度原料とドーパントの原産国確認が必要",
     "ev": "A",
     "exc": 0,
-    "src": "JSX ／ Y DD ／ https://www.konoshima.co.jp/ceramics/tgg.html ／ https://www.konoshima.co.jp/ceramics/index.html ／ https://www.konoshima.co.jp/ceramics/about.html ／ https://www.konoshima.co.jp/ceramics/resdev2.html",
+    "src": "https://www.konoshima.co.jp/ceramics/tgg.html ／ https://www.konoshima.co.jp/ceramics/index.html ／ https://www.konoshima.co.jp/ceramics/about.html ／ https://www.konoshima.co.jp/ceramics/resdev2.html",
     "note": "光散乱源を抑えることで世界で初めて大型透明セラミックスを実現したと自社公表し、単結晶では作れない大型化を強みとする。TGG はベルデ定数36 rad/T·m・熱伝導率5.0 W/mK で Tb 系ガラス（20・0.7）を上回るとする。TGG は可視域のベルデ定数が小さく高価な Ga を使うため、Ga を使わない TAG（Tb₃Al₅O₁₂）セラミックスを開発中。TAG は単結晶では小さいサイズしか作れず実用化に至っていない。TGG セラミックスは φ50mm 程度が大口径化の目安とされる。Stage 04『固体レーザー発振器（YAG）』からは除外し、材料側の Stage 03 に限定"
   },
   {
@@ -507,7 +504,7 @@
     "formal": true,
     "formalSource": "固体レーザー発振器DD：採用候補",
     "src": "https://www.opt-oxide.com/products/ ／ https://www.opt-oxide.com/products/optical-device/ ／ https://www.opt-oxide.com/products/optical-module/ ／ https://www.opt-oxide.com/products-list/laser/ ／ https://www.opt-oxide.com/products-list/laser/cw-laser/item_LA00003 ／ https://www.opt-oxide.com/products-list/laser/qcw-laser/item_LA00008 ／ https://www.opt-oxide.com/products-list/laser/femto-laser/item_LA00012_1 ／ https://www.opt-oxide.com/products-list/laser/special/item_LA00016 ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00006 ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00013 ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00014 ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00015 ／ https://www.opt-oxide.com/products-list/single-crystal/optics-for-laser-application/item_SC00017 ／ https://www.opt-oxide.com/products-list/single-crystal/scintillator ／ https://www.opt-oxide.com/products-list/optical-device/qpm ／ https://www.opt-oxide.com/v2019/wp-content/uploads/2013/03/266Laser_r12-1.pdf ／ https://www.opt-oxide.com/ir/meeting/meeting26_review/ ／ https://www.opt-oxide.com/products/single-crystal/ ／ https://www.opt-oxide.com/products/laser/ ／ https://www.opt-oxide.com/products/prototype-service/",
-    "note": "固体レーザー発振器DDの「採用候補（発振器）」に基づきStage 04へ正式採用。 ／ 266nm QCW は赤外ファイバー増幅光源を2段波長変換する構成で、ファイバ増幅段と多段変換には戻り光を遮るアイソレータを置くのが一般的。同社自身がファラデー回転子のメーカーでもある / 光学経路上の製品・用途に基づく関連フラグ。個別製品のY・Dy・Tb含有、部材供給元は非開示であり、搭載確認を意味しない。 ／ 2026-11-20：製品一覧（単結晶・レーザー・光デバイス・光モジュール）に合わせて製品欄を更新。TGG は現行の製品一覧になく、磁気光学結晶を TSAG・YIG・Bi:RIG に改めた。光アイソレータ用の磁気光学デバイスと TSAG から、レーザー用のファラデー回転子・アイソレータにも置いた。 ／ 2026-11-20：製品一覧の5分類（結晶・レーザー・光デバイス・光モジュール・試作サービス）と照合し、試作・サービスを製品欄に追加。 ／ 2026-11-23：ファラデー回転子の定義を素子（磁石を含まない）に合わせて工程の境目を引き直し、回転子・素子だけを作る当社はアイソレータの段から外して「磁性ガーネット・ファラデー回転子」と「レーザー用光学結晶・透明セラミックス」に置いた。"
+    "note": "266nm QCW は赤外ファイバー増幅光源を2段波長変換する構成で、ファイバ増幅段と多段変換には戻り光を遮るアイソレータを置くのが一般的。同社自身がファラデー回転子のメーカーでもある / 光学経路上の製品・用途に基づく関連フラグ。個別製品のY・Dy・Tb含有、部材供給元は非開示であり、搭載確認を意味しない。 ／ 2026-11-20：製品一覧（単結晶・レーザー・光デバイス・光モジュール）に合わせて製品欄を更新。TGG は現行の製品一覧になく、磁気光学結晶を TSAG・YIG・Bi:RIG に改めた。光アイソレータ用の磁気光学デバイスと TSAG から、レーザー用のファラデー回転子・アイソレータにも置いた。 ／ 2026-11-20：製品一覧の5分類（結晶・レーザー・光デバイス・光モジュール・試作サービス）と照合し、試作・サービスを製品欄に追加。 ／ 2026-11-23：ファラデー回転子の定義を素子（磁石を含まない）に合わせて工程の境目を引き直し、回転子・素子だけを作る当社はアイソレータの段から外して「磁性ガーネット・ファラデー回転子」と「レーザー用光学結晶・透明セラミックス」に置いた。"
   },
   {
     "id": "seed-13",
@@ -539,7 +536,6 @@
     "chn": "高。認証済み粉末の供給元、切替時再認証、広州拠点を確認",
     "ev": "A",
     "exc": 0,
-    "src": "JSX ／ Y DD",
     "note": "加工ノード。急所は粉末・原料側"
   },
   {
@@ -575,7 +571,7 @@
     "chn": "中～高。Y／Sc原料、現行商用品のScSZ比率、成膜・粉末供給経路を確認",
     "ev": "A",
     "exc": 1,
-    "src": "JSX ／ Y DD ／ Sc DD ／ https://www.seimichemical.co.jp/product/fuel/",
+    "src": "https://www.seimichemical.co.jp/product/fuel/",
     "note": "ScSZの現行商用比率は未確認。親会社・子会社を統合"
   },
   {
@@ -615,7 +611,7 @@
     "chn": "中～高。高純度Y₂O₃調達を確認",
     "ev": "B",
     "exc": 1,
-    "src": "JSX ／ Y DD ／ https://newswitch.jp/p/33403",
+    "src": "https://newswitch.jp/p/33403",
     "note": "売上条件は例外"
   },
   {
@@ -644,7 +640,6 @@
     "chn": "中～高。YSZ粉末供給元と東ソー／第一稀元素依存を確認",
     "ev": "A",
     "exc": 0,
-    "src": "JSX ／ Y DD",
     "note": "条件内の電解質部材中核"
   },
   {
@@ -673,7 +668,6 @@
     "chn": "東ソー依存が高いと開示。Y₂O₃→YSZ→工程材の間接リスク",
     "ev": "B",
     "exc": 0,
-    "src": "JSX ／ Y DD",
     "note": "単一供給依存が定量開示された例"
   },
   {
@@ -702,7 +696,6 @@
     "chn": "高。Dy/Tb拡散材、Nd/Pr、リサイクル材の原産地を確認",
     "ev": "A",
     "exc": 1,
-    "src": "JSX ／ DyTb DD",
     "note": "売上条件は例外"
   },
   {
@@ -747,7 +740,7 @@
     "chn": "Dy・Tb・Sm は磁石合金（TDK Ganzhou を含む）と焼結磁石で使い、中国依存が高い。MLCC の誘電体には Dy・Ho・Y などを添加するのが一般的。企業固有の使用量と原料の調達国は非開示。",
     "ev": "A",
     "exc": 1,
-    "src": "JSX ／ DyTb DD ／ Sm DD ／ https://www.tdk.com/system/files/2026042800_0mqf56xw_ja.pdf ／ https://www.tdk.com/en/about_tdk_china/tdk_ganzhou/index.html ／ https://www.tdk.com/en/news_center/press/20181127_01.html ／ https://www.tdk.com/ja/products/ ／ https://product.tdk.com/info/ja/products/capacitor/ceramic/mlcc/catalog.html ／ https://monoist.itmedia.co.jp/mn/articles/2604/06/news021.html ／ https://newswitch.jp/p/4458 ／ https://www.nikkei.com/article/DGXNASFS1800U_Y2A210C1EE8000/ ／ https://eetimes.itmedia.co.jp/ee/articles/2205/10/news095.html ／ https://www.tdk.com/ja/careers/graduates/office/akita/",
+    "src": "https://www.tdk.com/system/files/2026042800_0mqf56xw_ja.pdf ／ https://www.tdk.com/en/about_tdk_china/tdk_ganzhou/index.html ／ https://www.tdk.com/en/news_center/press/20181127_01.html ／ https://www.tdk.com/ja/products/ ／ https://product.tdk.com/info/ja/products/capacitor/ceramic/mlcc/catalog.html ／ https://monoist.itmedia.co.jp/mn/articles/2604/06/news021.html ／ https://newswitch.jp/p/4458 ／ https://www.nikkei.com/article/DGXNASFS1800U_Y2A210C1EE8000/ ／ https://eetimes.itmedia.co.jp/ee/articles/2205/10/news095.html ／ https://www.tdk.com/ja/careers/graduates/office/akita/",
     "note": "売上条件は例外。工程3は中国のTDK Ganzhouを含むグループ範囲。希土類の分離・精製・一次金属化は公開根拠未確認のため工程2対象外。SmフラグはTDKのSmCo磁石に基づく既存評価 ／ 2026-09-22：村田製作所と同じ形に、事業ごとの製品・拠点・地位をカードにまとめた。"
   },
   {
@@ -776,7 +769,6 @@
     "chn": "高。Sm原料、能力維持投資、補助金採択状況を確認",
     "ev": "A",
     "exc": 0,
-    "src": "JSX ／ Sm DD",
     "note": "高温磁石の代替困難性が高い ／ SmCo磁石材料の開発・製造ノードとしてStage 04『磁石（焼結・ボンド）』に配置"
   },
   {
@@ -804,9 +796,7 @@
     "def": "高温センサ・モータ・アクチュエータ",
     "chn": "高。Sm原料と外資所有構造を確認",
     "ev": "A",
-    "exc": 0,
-    "src": "JSX ／ Sm DD",
-    "note": "所有・ガバナンスもDD対象"
+    "exc": 0
   },
   {
     "id": "seed-22",
@@ -834,7 +824,6 @@
     "chn": "高。Sm原料と焼結内製／加工特化の内製深度を確認",
     "ev": "B",
     "exc": 0,
-    "src": "JSX ／ Sm DD",
     "note": "防衛実績は非開示"
   },
   {
@@ -863,7 +852,6 @@
     "chn": "高。Sm原料、用途別顧客、原産国を確認",
     "ev": "B",
     "exc": 0,
-    "src": "JSX ／ Sm DD",
     "note": "防衛・宇宙実績は要確認"
   },
   {
@@ -894,7 +882,6 @@
     "chn": "中～高。Nd/Pr/Sm、Magnequench系磁粉、製品別BOMを確認",
     "ev": "A",
     "exc": 0,
-    "src": "JSX ／ DyTb DD ／ Sm DD",
     "note": "Dy/Tb回避側とSm規制曝露側を併有 ／ 磁粉とコンパウンドの製造販売は親会社の大同特殊鋼が担い、同社は成形体を担当すると大同特殊鋼が明記"
   },
   {
@@ -928,7 +915,7 @@
     "chn": "中。Dy/Tb依存は低減するがNd/Pr中国依存は残存",
     "ev": "A",
     "exc": 1,
-    "src": "JSX ／ DyTb DD ／ https://www.aichi-steel.co.jp/products/smart_company/magfine/lineup/ ／ https://www.aichi-steel.co.jp/news_item/20180227_News2.pdf",
+    "src": "https://www.aichi-steel.co.jp/products/smart_company/magfine/lineup/ ／ https://www.aichi-steel.co.jp/news_item/20180227_News2.pdf",
     "note": "供給途絶時の代替技術候補 ／ 磁粉は関工場（岐阜県関市）で製造し、ペレットでも納入すると自社が明記。コンパウンド混練の国内拠点は公開情報で確認できず、中国の連結子会社・浙江愛智機電へ磁粉を供給して現地で成形する流れが報じられている"
   },
   {
@@ -970,7 +957,7 @@
     "chn": "中。NdFeB/SmCo材質、磁石メーカー、原産国、海外拠点を確認",
     "ev": "A",
     "exc": 0,
-    "src": "JSX ／ DyTb DD ／ Sm DD / https://www.tamagawa-seiki.co.jp/products/gyro/",
+    "src": "https://www.tamagawa-seiki.co.jp/products/gyro/",
     "note": "磁石だけでなく技能継承も論点 / 光学経路上の製品・用途に基づく関連フラグ。個別製品のY・Dy・Tb含有、部材供給元は非開示であり、搭載確認を意味しない。"
   },
   {
@@ -1003,7 +990,6 @@
     "chn": "中。モータ・センサ磁石経由の間接依存",
     "ev": "A",
     "exc": 0,
-    "src": "JSX ／ Sm DD",
     "note": "磁石材質・BOMは要確認"
   },
   {
@@ -1042,7 +1028,6 @@
     "chn": "中～高。ホイール内モータ・センサ磁石のBOMを確認",
     "ev": "A",
     "exc": 0,
-    "src": "JSX ／ DyTb DD ／ Sm DD",
     "note": "磁石変更時の認証・設計変更期間が重要"
   },
   {
@@ -1073,7 +1058,6 @@
     "chn": "中。NdFeB/SmCo選定、耐放射線仕様、原産国を確認",
     "ev": "B",
     "exc": 0,
-    "src": "JSX ／ DyTb DD",
     "note": "民生部品活用型でBOM次第"
   },
   {
@@ -1104,7 +1088,6 @@
     "chn": "中。NdFeBモータ経由の間接依存",
     "ev": "B",
     "exc": 0,
-    "src": "JSX ／ DyTb DD",
     "note": "磁石は内蔵モータ側の間接曝露"
   },
   {
@@ -1133,7 +1116,6 @@
     "chn": "中。電動化に伴うNdFeB依存増加、磁石BOMを確認",
     "ev": "B",
     "exc": 1,
-    "src": "JSX ／ DyTb DD",
     "note": "売上条件は例外"
   },
   {
@@ -1164,7 +1146,6 @@
     "chn": "中～高。PM/誘導型、SmCo/高保磁力NdFeBの採否を確認",
     "ev": "A",
     "exc": 1,
-    "src": "JSX ／ DyTb DD ／ Sm DD",
     "note": "条件をやや超過する例外"
   },
   {
@@ -1195,7 +1176,6 @@
     "chn": "中～高。内製/外部調達、NdFeB/SmCo、Dy/Tb/Sm調達元を確認",
     "ev": "B",
     "exc": 1,
-    "src": "JSX ／ DyTb DD ／ Sm DD",
     "note": "売上条件は例外"
   },
   {
@@ -1224,7 +1204,7 @@
     "chn": "高。Sc₂O₃の供給国・メーカー、国内加工前原産地、中国輸出許可を確認",
     "ev": "B",
     "exc": 1,
-    "src": "Sc DD ／ https://www.iwatani.co.jp/jpn/business/material/resources-advanced/products/re/",
+    "src": "https://www.iwatani.co.jp/jpn/business/material/resources-advanced/products/re/",
     "note": "会社別Sc調達比率は非開示"
   },
   {
@@ -1257,7 +1237,7 @@
     "chn": "高。製造国、輸入元、原産国証明、在庫、再輸出管理を確認",
     "ev": "B",
     "exc": 0,
-    "src": "Sc DD ／ https://www.ostech.co.jp/products/special_raremetal/scandium/",
+    "src": "https://www.ostech.co.jp/products/special_raremetal/scandium/",
     "note": "量産能力・国内加工深度は要確認"
   },
   {
@@ -1291,7 +1271,7 @@
     "chn": "高～中。現行Sc調達国、中国許可、国内還元・使用済みターゲット回収の量産化を確認",
     "ev": "A",
     "exc": 0,
-    "src": "Sc DD ／ https://www.furuyametals.co.jp/stories/future03/ ／ https://www.furuyametals.co.jp/ir/message/",
+    "src": "https://www.furuyametals.co.jp/stories/future03/ ／ https://www.furuyametals.co.jp/ir/message/",
     "note": "Sc原料の金属化・Al-Scターゲット用合金調製からターゲット製造までを表現し、Stage 02『金属化・還元／一次金属』、Stage 03『Al-Sc母合金（構造材・半導体）』、Stage 04『薄膜・スパッタリングターゲット』に配置"
   },
   {
@@ -1320,7 +1300,7 @@
     "chn": "高～要確認。Sc原料・母合金、APWORKS指定調達、航空認証ロットの代替可否",
     "ev": "A",
     "exc": 1,
-    "src": "Sc DD ／ https://www.toyal.co.jp/products/pw_pt/product/powdalloy.html ／ https://www.toyal.co.jp/abouttoyal/",
+    "src": "https://www.toyal.co.jp/products/pw_pt/product/powdalloy.html ／ https://www.toyal.co.jp/abouttoyal/",
     "note": "売上条件を約134億円超過する例外"
   },
   {
@@ -1359,7 +1339,7 @@
     "chn": "低～中。豪州Sc共同開発ルートと量産時の原料ソース、ロケット認証を確認",
     "ev": "A",
     "exc": 1,
-    "src": "Sc DD ／ https://www.uacj.co.jp/release/20250303.html ／ https://www.uacj.co.jp/release/20210826.html",
+    "src": "https://www.uacj.co.jp/release/20250303.html ／ https://www.uacj.co.jp/release/20210826.html",
     "note": "非中国原料開発側の戦略例外"
   },
   {
@@ -1388,7 +1368,7 @@
     "chn": "中～高・未確定。Sc₂O₃直接購入かAl–Sc中間材受入か、母合金供給元、工程分担を確認",
     "ev": "A",
     "exc": 0,
-    "src": "Sc DD ／ https://www.kenkai.jaxa.jp/project/kakushinyusou/results/pdf/01_06.pdf ／ https://www.uacj.co.jp/release/20250303.html",
+    "src": "https://www.kenkai.jaxa.jp/project/kakushinyusou/results/pdf/01_06.pdf ／ https://www.uacj.co.jp/release/20250303.html",
     "note": "『国内3社のみ』『ミサイル用途』『中国100%依存』は根拠不足のため不採用 ／ Stage 03『Al-Sc母合金（構造材・半導体）』『金属AM・結合用原料』を横断"
   },
   {
@@ -1420,7 +1400,7 @@
     "bom": "公式製品表で3YSZ（Y2O3 3mol%）、8YSZ（Y2O3 8mol%）、6ScSZ、10Sc1CeSZを確認。",
     "ev": "A",
     "exc": 1,
-    "src": "Sc DD ／ https://www.shokubai.co.jp/ja/products/detail/sofc/",
+    "src": "https://www.shokubai.co.jp/ja/products/detail/sofc/",
     "note": "YSZ・ScSZ系SOFC電解質シートの国内商業生産ノード"
   },
   {
@@ -1454,7 +1434,7 @@
     "chn": "高～要確認。Sc₂O₃調達元、結晶歩留まり、坩堝・育成炉能力、代替基板を確認",
     "ev": "A",
     "exc": 0,
-    "src": "Sc DD ／ https://fxtal2002.com/technology/crystal1",
+    "src": "https://fxtal2002.com/technology/crystal1",
     "note": "Sc含有単結晶・半導体基板の国内最重要候補"
   },
   {
@@ -1483,7 +1463,7 @@
     "chn": "中～要確認。Scalmalloy実使用比率、粉末銘柄、航空顧客、認証、Sc回収率を確認",
     "ev": "C",
     "exc": 0,
-    "src": "Sc DD ／ https://www.toyal.co.jp/whatsnews/2023/10/2023100501.html",
+    "src": "https://www.toyal.co.jp/whatsnews/2023/10/2023100501.html",
     "note": "Scalmalloyの直接採用は未確認のため監視ノード"
   },
   {
@@ -1517,7 +1497,7 @@
     "chn": "中～高。電動車の駆動用・電動パワーステアリング用などの高性能モータはネオジム磁石を使い、耐熱性のために Dy・Tb を添加する構成が一般的で、レアアースフリー磁石の開発はその置き換えを狙う。磁石の調達先は非開示。ScAlN は量産品の採用、ターゲット供給元、Sc 原産国を要確認",
     "ev": "B",
     "exc": 1,
-    "src": "Sc DD ／ https://www.aist.go.jp/aist_j/press_release/pr2008/pr20081121/pr20081121.html ／ https://www.denso.com/jp/ja/about-us/corporate-info/profile/ ／ https://monoist.itmedia.co.jp/mn/articles/2111/22/news049_2.html ／ https://www.denso.com/jp/ja/-/media/global/business/innovation/review/24/24-doc-13-paper-08.pdf ／ https://www.chunichi.co.jp/article/394595",
+    "src": "https://www.aist.go.jp/aist_j/press_release/pr2008/pr20081121/pr20081121.html ／ https://www.denso.com/jp/ja/about-us/corporate-info/profile/ ／ https://monoist.itmedia.co.jp/mn/articles/2111/22/news049_2.html ／ https://www.denso.com/jp/ja/-/media/global/business/innovation/review/24/24-doc-13-paper-08.pdf ／ https://www.chunichi.co.jp/article/394595",
     "note": "量産Sc採用は未確認。R&D・下流監視ノード ／ 2026-11-20：車載モータ・アクチュエータの記述を追加し、「モータ・アクチュエータ」にも置いた。元素フラグはネオジム磁石を使うモータの一般的な構成による。 ／ 2026-11-22：「ScAlN 圧電薄膜」の工程は国内の担い手が研究段階の当社だけだったため廃止し、ScAlN の共同研究は成膜された膜を使う「電子部品・半導体」に置いた。"
   },
   {
@@ -1591,7 +1571,7 @@
       "Y"
     ],
     "own": "外資・日本法人",
-    "rev": "売上条件解除（本追加DDでは未評価）",
+    "rev": "未確認",
     "prod": "YSZ系TBC材料、APS／EBPVD／SPS等のコーティング、航空部品向け特殊工程。",
     "pos": "材料・装置・施工を垂直統合。日本拠点はJIS Q 9100・Nadcap Coatings認証。",
     "def": "航空エンジンのブレード・ベーン向けTBCに直接接続。",
@@ -1626,7 +1606,7 @@
       "Sm"
     ],
     "own": "日本企業／商流",
-    "rev": "売上条件解除（本追加DDでは未評価）",
+    "rev": "未確認",
     "prod": "NdFeB・SmCo等の磁石調達・加工・販売。",
     "pos": "中国系供給ネットワークを持つが、国内外シェアは未確認。",
     "def": "航空・通信用途を訴求するが、防衛顧客・型番は未確認。",
@@ -1659,7 +1639,7 @@
       "Y"
     ],
     "own": "日本企業",
-    "rev": "売上条件解除（本追加DDでは未評価）",
+    "rev": "未確認",
     "prod": "航空宇宙エンジン部品向けYSZ・Ni合金等の溶射、熱処理・コーティング特殊工程。",
     "pos": "航空宇宙特殊工程を約50年、JIS Q 9100・Nadcap認証。一貫加工の国内ニッチ。定量シェアは非開示。",
     "def": "航空宇宙エンジン部品・燃焼器部品・YSZ溶射を公式資料に明示。",
@@ -1697,7 +1677,7 @@
       "Y"
     ],
     "own": "外資・日本法人／拠点",
-    "rev": "売上条件解除（本追加DDでは未評価）",
+    "rev": "未確認",
     "prod": "8YSZ・MCrAlY粉末、溶射装置、コーティングサービス。",
     "pos": "世界的な溶射技術リーダー。材料・装置・施工を一括提供し、航空エンジンTBCで強い地位。",
     "def": "ジェットエンジン、アフターバーナー、着陸装置、ポンプ、アクチュエータを対象。",
@@ -1730,7 +1710,7 @@
       "Y"
     ],
     "own": "日本企業",
-    "rev": "売上条件解除（本追加DDでは未評価）",
+    "rev": "未確認",
     "prod": "Yb:YAGレーザー結晶スラブ、YAG系光学部品の販売。",
     "pos": "光学部品の幅広い品揃えを持つが、対象製品シェアは未確認。",
     "def": "高出力レーザー研究・加工へ供給可能。防衛・宇宙顧客は未確認。",
@@ -1763,7 +1743,7 @@
       "Y"
     ],
     "own": "日本企業",
-    "rev": "売上条件解除（本追加DDでは未評価）",
+    "rev": "未確認",
     "prod": "YSZ、Y₂O₃、MCrAlYの溶射。航空エンジン燃焼筒・タービンブレードのTBC施工。",
     "pos": "JIS Q 9100・Nadcap Coatings等の特殊工程認証を持つ国内ニッチ施工企業。定量シェアは非開示。",
     "def": "航空機エンジンのTBC、燃焼筒、タービンブレード、ランディングギア用途を公式掲載。",
@@ -1798,7 +1778,7 @@
       "Sm"
     ],
     "own": "日本企業／商流",
-    "rev": "売上条件解除（本追加DDでは未評価）",
+    "rev": "未確認",
     "prod": "SmCo・NdFeB磁石の輸入販売・加工、輸出管理情報提供。",
     "pos": "希土類磁石の専門商流だが、対象用途シェアは未確認。",
     "def": "特殊磁石は航空宇宙・防衛に転用可能。直接顧客は非開示。",
@@ -1831,7 +1811,7 @@
       "Y"
     ],
     "own": "日本企業",
-    "rev": "売上条件解除（本追加DDでは未評価）",
+    "rev": "未確認",
     "prod": "航空エンジン部品の表面処理・溶射。",
     "pos": "航空宇宙の特殊工程を担う国内企業。Y系材料でのシェアは未確認。",
     "def": "航空エンジン部品へ直接接続。",
@@ -1870,7 +1850,7 @@
       "Sc"
     ],
     "own": "日本企業",
-    "rev": "売上条件解除（本追加DDでは未評価）",
+    "rev": "未確認",
     "prod": "レーザー核融合向け高出力レーザー、光制御、ターゲット追尾・照射。",
     "pos": "模擬燃料への毎秒10回連続照射を世界初実証。国内唯一の民間レーザー核融合企業を標榜。",
     "def": "高速移動ターゲット追尾・精密照射・高出力光制御はデュアルユース性が高いが防衛顧客は非開示。",
@@ -1903,7 +1883,7 @@
       "Sm"
     ],
     "own": "外資・日本法人",
-    "rev": "売上条件解除（本追加DDでは未評価）",
+    "rev": "未確認",
     "prod": "宇宙・ロボティクス用精密モーター。別製品系列でSmCo磁石を明示。",
     "pos": "NASA火星ローバーで25年以上の採用実績。",
     "def": "火星ローバー、衛星、ISS、宇宙船、ロケットエンジンバルブ等。",
@@ -1936,7 +1916,7 @@
       "DyTb"
     ],
     "own": "日本企業／外資製品の国内商流",
-    "rev": "売上条件解除（本追加DDでは未評価）",
+    "rev": "未確認",
     "prod": "Kollmorgen等の高性能モーターの選定・技術支援。シーカー、レーダー、宇宙用アクチュエータ。",
     "pos": "航空・宇宙・防衛用途の長期供給実績を公表。NPM自身の用途別シェアは未確認。",
     "def": "ミサイル、IRカメラジンバル、レーダー、無人システム、衛星向け。",
@@ -1979,7 +1959,7 @@
       "Sm"
     ],
     "own": "日本企業",
-    "rev": "売上条件解除（本追加DDでは未評価）",
+    "rev": "未確認",
     "prod": "小型衛星、リアクションホイール、磁気トルカ、各種センサー・アクチュエータ。",
     "pos": "自社衛星と主要コンポーネントを内製・販売。希土類関連製品のシェアは未確認。",
     "def": "CE-SAT、H3搭載、小型ロケット飛行制御へ接続。",
@@ -2012,7 +1992,7 @@
       "Y"
     ],
     "own": "外資・日本法人",
-    "rev": "売上条件解除（本追加DDでは未評価）",
+    "rev": "未確認",
     "prod": "Yb:YAGディスクを中核とするTruDisk高出力固体レーザー、レーザー加工システム。",
     "pos": "産業用レーザーの世界市場リーダーを標榜。高出力ディスクレーザーで確立した地位。",
     "def": "航空宇宙用タービン／コンプレッサーブレード、ブリスク、ロケット・宇宙部品の製造・修理に利用。",
@@ -2045,7 +2025,7 @@
       "DyTb"
     ],
     "own": "日本企業／海外JV",
-    "rev": "売上条件解除（本追加DDでは未評価）",
+    "rev": "未確認",
     "prod": "eVTOL用電動推進ユニット、234 kW級リフトモーター。",
     "pos": "精密小型ブラシレスモーターで世界的地位。航空推進JVを設立。航空製品シェアは未確立。",
     "def": "有人・無人航空機、eVTOL、ドローン用電動推進。",
@@ -2080,7 +2060,7 @@
       "Sm"
     ],
     "own": "日本企業",
-    "rev": "売上条件解除（本追加DDでは未評価）",
+    "rev": "未確認",
     "prod": "防衛向けモーター駆動ジンバル、空間安定装置、航法・自動操縦装置。",
     "pos": "FDR国内シェアNo.1を自社公表。ジンバルの磁石関連シェアは未確認。",
     "def": "防衛省、戦闘機、飛翔体、艦艇向け。",
@@ -2188,7 +2168,7 @@
       "Sm"
     ],
     "own": "外資・日本法人",
-    "rev": "売上条件解除（本追加DDでは未評価）",
+    "rev": "未確認",
     "prod": "SmCo選択可能なDCトルクモーター、航空・防衛用アクチュエータ／モーション制御。",
     "pos": "Moogは航空宇宙・防衛モーション制御の世界的リーダー。日本法人が国内供給・技術支援。",
     "def": "レーダー、ミサイル、シーカー、火器管制、軍用アクチュエータ、航空機・宇宙作動系を明示。",
@@ -2225,7 +2205,7 @@
       "Sm"
     ],
     "own": "日本企業",
-    "rev": "売上条件解除（本追加DDでは未評価）",
+    "rev": "未確認",
     "prod": "H3向けIMU、慣性航法・誘導。別事業で永久磁石リニアモーター。",
     "pos": "H3向けIMU等で高い技術力。",
     "def": "ロケット、航空機、慣性誘導へ直接接続。",
@@ -2264,7 +2244,7 @@
       "Sc"
     ],
     "own": "日本企業",
-    "rev": "売上条件解除（本追加DDでは未評価）",
+    "rev": "未確認",
     "prod": "Yb:YAG系LD励起大出力固体レーザー／レーザー照射設備。",
     "pos": "200 J×10 Hz（平均2 kW）のLD励起固体レーザーで世界最高出力を公表。装置・計測・照射施設まで保有。",
     "def": "レーザー核融合、宇宙デブリ除去、半導体露光を経済安全保障上の国家的重要技術として明記。",
@@ -2316,7 +2296,7 @@
     "ev": "B",
     "exc": 0,
     "src": "https://www.anritsu.com/ja-jp/test-measurement/solutions/aerospace-lp ／ https://www.anritsu.com/ja-jp/about-anritsu/corporate-information/profile ／ https://dl.cdn-anritsu.com/anritsu-sensing-devices/ja-jp/products/sld/as5b320em50m-j-c-3.pdf ／ https://dl.cdn-anritsu.com/anritsu-sensing-devices/ja-jp/products/sld/as3b119gm10m-j-c-2.pdf ／ https://dl.cdn-anritsu.com/anritsu-sensing-devices/ja-jp/products/sld/as6b118gm50m-j-c-2.pdf ／ https://www.sbbit.jp/article/refers/69109",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：会社概要の連結売上高 ／ 2026-11-20：SLD モジュールが光アイソレータ内蔵と仕様書に明記されているため、「光部品・ファイバー・光デバイス」にも置いた。"
+    "note": "売上根拠：会社概要の連結売上高 ／ 2026-11-20：SLD モジュールが光アイソレータ内蔵と仕様書に明記されているため、「光部品・ファイバー・光デバイス」にも置いた。"
   },
   {
     "id": "stage05-integrated-2",
@@ -2347,7 +2327,7 @@
     "ev": "A",
     "exc": 0,
     "src": "https://www.toyo.co.jp/kaiyo/index.html ／ https://www.toyo.co.jp/company/outline/",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：直近の連結売上規模を丸めたレンジ"
+    "note": "売上根拠：直近の連結売上規模を丸めたレンジ"
   },
   {
     "id": "stage05-integrated-3",
@@ -2376,7 +2356,7 @@
     "ev": "B",
     "exc": 0,
     "src": "https://www.ndk.com/jp/company/business/ ／ https://www.ndk.com/jp/company/profile/",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：会社概要の2025年度連結売上高"
+    "note": "売上根拠：会社概要の2025年度連結売上高"
   },
   {
     "id": "stage05-integrated-4",
@@ -2407,7 +2387,7 @@
     "ev": "B",
     "exc": 0,
     "src": "https://www.jrc.co.jp/about",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：親会社セグメント・人員規模から推計"
+    "note": "売上根拠：親会社セグメント・人員規模から推計"
   },
   {
     "id": "stage05-integrated-5",
@@ -2438,7 +2418,7 @@
     "ev": "B",
     "exc": 0,
     "src": "https://gitai.tech/2024/03/19/gitai-completes-fully-successful-technology-demonstration-outside-the-iss/ ／ https://gitai.tech/about/",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：非上場スタートアップ。人員・資金調達・開発段階からのレンジ推計"
+    "note": "売上根拠：非上場スタートアップ。人員・資金調達・開発段階からのレンジ推計"
   },
   {
     "id": "stage05-integrated-6",
@@ -2469,7 +2449,7 @@
     "ev": "B",
     "exc": 0,
     "src": "https://www.thk.com/jp/ja/contents/pages/recruit/about/company/ ／ https://www.thk.com/jp/ja/ir/finance/highlights/",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：継続事業ベースの連結売上収益"
+    "note": "売上根拠：継続事業ベースの連結売上収益"
   },
   {
     "id": "stage05-integrated-8",
@@ -2504,7 +2484,7 @@
     "ev": "B",
     "exc": 0,
     "src": "https://ispace-inc.com/jpn/news/?p=7035 ／ https://ispace-inc.com/jpn/ir",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：会社公表の通期実績"
+    "note": "売上根拠：会社公表の通期実績"
   },
   {
     "id": "stage05-integrated-9",
@@ -2539,7 +2519,7 @@
     "ev": "B",
     "exc": 0,
     "src": "https://pale-blue.co.jp/jpn/",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：非上場宇宙スタートアップ。量産立上げ段階としての概算"
+    "note": "売上根拠：非上場宇宙スタートアップ。量産立上げ段階としての概算"
   },
   {
     "id": "stage05-integrated-11",
@@ -2574,7 +2554,7 @@
     "ev": "B",
     "exc": 0,
     "src": "https://synspective.com/jp/company/ ／ https://synspective.com/jp/ir/results/",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：上場会社の衛星・データ事業規模からレンジ表示"
+    "note": "売上根拠：上場会社の衛星・データ事業規模からレンジ表示"
   },
   {
     "id": "stage05-integrated-12",
@@ -2609,7 +2589,7 @@
     "ev": "B",
     "exc": 0,
     "src": "https://arkedgespace.com/products-services ／ https://arkedgespace.com/about-us",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：非上場宇宙スタートアップ。案件・人員規模から推計"
+    "note": "売上根拠：非上場宇宙スタートアップ。案件・人員規模から推計"
   },
   {
     "id": "stage05-integrated-13",
@@ -2644,7 +2624,7 @@
     "ev": "B",
     "exc": 0,
     "src": "https://www.axelspace.com/ja/news/satellite_constellation_project/ ／ https://www.axelspace.com/ja/company/",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：上場準備中の非上場宇宙企業。案件・人員規模から推計"
+    "note": "売上根拠：上場準備中の非上場宇宙企業。案件・人員規模から推計"
   },
   {
     "id": "stage05-integrated-14",
@@ -2679,7 +2659,7 @@
     "ev": "B",
     "exc": 0,
     "src": "https://www.istellartech.com/about",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：非上場ロケット企業。人員・開発案件から推計"
+    "note": "売上根拠：非上場ロケット企業。人員・開発案件から推計"
   },
   {
     "id": "stage05-integrated-15",
@@ -2714,7 +2694,7 @@
     "ev": "B",
     "exc": 0,
     "src": "https://www.space-one.co.jp/about/",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：打上げ実証段階の非上場企業としての概算"
+    "note": "売上根拠：打上げ実証段階の非上場企業としての概算"
   },
   {
     "id": "stage05-integrated-16",
@@ -2749,7 +2729,7 @@
     "ev": "B",
     "exc": 0,
     "src": "https://www.meisei.co.jp/products/products_category/space ／ https://www.meisei.co.jp/company/profile",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：IHIグループ内の宇宙・気象機器事業規模から推計"
+    "note": "売上根拠：IHIグループ内の宇宙・気象機器事業規模から推計"
   },
   {
     "id": "stage05-integrated-17",
@@ -2784,7 +2764,7 @@
     "ev": "B",
     "exc": 0,
     "src": "https://www.astroscale.com/ja/missions/responsive-space-system-demonstration-satellite-prototype ／ https://www.astroscale.com/ja/investors/",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：上場会社の契約収益・開発段階を踏まえたレンジ表示"
+    "note": "売上根拠：上場会社の契約収益・開発段階を踏まえたレンジ表示"
   },
   {
     "id": "stage05-integrated-18",
@@ -2813,7 +2793,7 @@
     "ev": "B",
     "exc": 0,
     "src": "https://www.nfi.co.jp/product ／ https://www.nfi.co.jp/company/outline",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：国内2工場・燃料製造能力と人員規模から推計"
+    "note": "売上根拠：国内2工場・燃料製造能力と人員規模から推計"
   },
   {
     "id": "stage05-integrated-19",
@@ -2842,7 +2822,7 @@
     "ev": "B",
     "exc": 0,
     "src": "https://www.mhi.com/jp/group/mnf/business",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：PWR燃料製造拠点・人員規模から推計"
+    "note": "売上根拠：PWR燃料製造拠点・人員規模から推計"
   },
   {
     "id": "stage05-integrated-20",
@@ -2876,7 +2856,7 @@
     "ev": "B",
     "exc": 0,
     "src": "https://www.nfd.jp/business/business.html ／ https://www.nfd.jp/ ／ https://www.jstage.jst.go.jp/article/jaesjb/66/9/66_453/_pdf",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：専門試験研究会社の人員・設備規模から推計"
+    "note": "売上根拠：専門試験研究会社の人員・設備規模から推計"
   },
   {
     "id": "stage05-integrated-21",
@@ -2905,7 +2885,7 @@
     "ev": "B",
     "exc": 0,
     "src": "https://aeroedge.co.jp/ir/individual/",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：通期会社予想"
+    "note": "売上根拠：通期会社予想"
   },
   {
     "id": "stage05-integrated-25",
@@ -2940,7 +2920,7 @@
     "ev": "B",
     "exc": 0,
     "src": "https://www.subaru.co.jp/outline/about/aerospace/ ／ https://www.subaru.co.jp/ir/finance/segment.html",
-    "note": "統合処理：カンパニー置換 ／ 置換元：SUBARU ／ 売上根拠：親会社の航空宇宙セグメント売上収益"
+    "note": "売上根拠：親会社の航空宇宙セグメント売上収益"
   },
   {
     "id": "stage05-integrated-30",
@@ -2969,7 +2949,7 @@
     "ev": "B",
     "exc": 0,
     "src": "https://www.tamron.com/jp/technology/optics/ ／ https://www.tamron.com/jp/company/company_profile.html",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：会社公表の連結売上高"
+    "note": "売上根拠：会社公表の連結売上高"
   },
   {
     "id": "space-orbital-lasers",
@@ -3032,7 +3012,7 @@
     "ev": "B",
     "exc": 0,
     "src": "https://www.kyb.co.jp/company/information.html",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：会社概要の2025年度連結実績"
+    "note": "売上根拠：会社概要の2025年度連結実績"
   },
   {
     "id": "stage05-integrated-33",
@@ -3065,7 +3045,7 @@
     "ev": "A",
     "exc": 0,
     "src": "https://www.shinmaywa.co.jp/products/aircraft/pdf/AircraftDivisionGuide.pdf ／ https://www.shinmaywa.co.jp/ir/factsheet.html",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：連結売上高を100億円単位で丸めて表示"
+    "note": "売上根拠：連結売上高を100億円単位で丸めて表示"
   },
   {
     "id": "stage05-integrated-34",
@@ -3104,7 +3084,7 @@
     "ev": "A",
     "exc": 0,
     "src": "https://www.shimadzu.co.jp/sites/shimadzu.co.jp/files/ir/6dog/srnepvp1yzsd995a.pdf ／ https://www.shimadzu.co.jp/aboutus/company/profile.html ／ https://www.shimadzu.co.jp/industry/products/underwater/mc500.html ／ https://www.shimadzu.co.jp/products/enviro/technical-overview04.html",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：会社概要の連結売上高 ／ MC100 は10m以上で95Mb/s以上・水深3500m耐圧（2020年発売）、MC500 はレーザー光で最大80m（2022年発売）。送受信部に内蔵する光アイソレータ経由で Y・Tb に触れる"
+    "note": "売上根拠：会社概要の連結売上高 ／ MC100 は10m以上で95Mb/s以上・水深3500m耐圧（2020年発売）、MC500 はレーザー光で最大80m（2022年発売）。送受信部に内蔵する光アイソレータ経由で Y・Tb に触れる"
   },
   {
     "id": "stage05-integrated-35",
@@ -3135,7 +3115,7 @@
     "ev": "B",
     "exc": 0,
     "src": "https://www.daikin.co.jp/corporate/overview/business/defense",
-    "note": "統合処理：事業部置換 ／ 置換元：ダイキン工業 ／ 売上根拠：親会社の特機・その他事業開示と製品範囲から推計"
+    "note": "売上根拠：親会社の特機・その他事業開示と製品範囲から推計"
   },
   {
     "id": "stage05-integrated-36",
@@ -3164,7 +3144,7 @@
     "ev": "A",
     "exc": 0,
     "src": "https://www.oki-otc.jp/company/outline.html",
-    "note": "統合処理：子会社置換 ／ 置換元：沖電気工業（OKI） ／ 売上根拠：従業員707名と高付加価値PCB製造の売上/人員レンジから推計"
+    "note": "売上根拠：従業員707名と高付加価値PCB製造の売上/人員レンジから推計"
   },
   {
     "id": "stage05-integrated-37",
@@ -3193,7 +3173,7 @@
     "ev": "B",
     "exc": 0,
     "src": "https://www.renesas.com/en/products/space-harsh-environment/hi-rel-digital ／ https://www.renesas.com/ja/about/newsroom/renesas-reports-financial-results-year-ended-december-31-2025",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：IFRS連結売上収益"
+    "note": "売上根拠：IFRS連結売上収益"
   },
   {
     "id": "stage05-integrated-40",
@@ -3239,7 +3219,7 @@
     "ev": "B",
     "exc": 0,
     "src": "https://sumitomoelectric.com/jp/products/optical-devices ／ https://sumitomoelectric.com/jp/ir/financial ／ https://sei.co.jp/id/2020/06/project/id04.html ／ https://newswitch.jp/p/22352 ／ https://www.yolegroup.com/strategy-insights/the-rise-and-rise-of-rf-gan/ ／ https://dempa-digital.com/article/711782 ／ https://www.nikkan.co.jp/articles/view/00781043",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：連結売上高を0.1兆円単位で丸めて表示 ／ 通信用レーザーの光半導体は2026年度に生産能力を前年比2倍、2029年度までに2026年度比でさらに2倍の計画。インジウムリン基板にも180億円を投資。中期経営計画2028では3年累計1兆円の設備投資のうちデータセンター関連に2000億円。光トランシーバに内蔵する光アイソレータ経由で Y・Tb に触れる"
+    "note": "売上根拠：連結売上高を0.1兆円単位で丸めて表示 ／ 通信用レーザーの光半導体は2026年度に生産能力を前年比2倍、2029年度までに2026年度比でさらに2倍の計画。インジウムリン基板にも180億円を投資。中期経営計画2028では3年累計1兆円の設備投資のうちデータセンター関連に2000億円。光トランシーバに内蔵する光アイソレータ経由で Y・Tb に触れる"
   },
   {
     "id": "stage05-integrated-41",
@@ -3301,7 +3281,7 @@
     "ev": "B",
     "exc": 0,
     "src": "https://global.fujitsu/ja-jp/subsidiaries/fdns/about",
-    "note": "統合処理：子会社置換 ／ 置換元：富士通 ／ 売上根拠：会社概要・採用資料に基づく専業会社売上規模"
+    "note": "売上根拠：会社概要・採用資料に基づく専業会社売上規模"
   },
   {
     "id": "stage05-integrated-43",
@@ -3330,7 +3310,7 @@
     "ev": "B",
     "exc": 0,
     "src": "https://global.fujitsu/ja-jp/subsidiaries/fdns/tcl/about",
-    "note": "統合処理：子会社追加 ／ 置換元：富士通 ／ 売上根拠：従業員規模と防衛航空機向け精密製造の売上/人員レンジから推計"
+    "note": "売上根拠：従業員規模と防衛航空機向け精密製造の売上/人員レンジから推計"
   },
   {
     "id": "stage05-integrated-44",
@@ -3359,7 +3339,7 @@
     "ev": "B",
     "exc": 0,
     "src": "https://www.oeg.co.jp/company/prof.html",
-    "note": "統合処理：子会社置換 ／ 置換元：沖電気工業（OKI） ／ 売上根拠：従業員174名の試験・評価専業会社として推計"
+    "note": "売上根拠：従業員174名の試験・評価専業会社として推計"
   },
   {
     "id": "stage05-integrated-45",
@@ -3392,7 +3372,7 @@
     "ev": "B",
     "exc": 0,
     "src": "https://www.ydktechs.co.jp/jp/corporation/index.html",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：人員・製品構成と親会社開示から推計"
+    "note": "売上根拠：人員・製品構成と親会社開示から推計"
   },
   {
     "id": "stage05-integrated-46",
@@ -3421,7 +3401,7 @@
     "ev": "B",
     "exc": 0,
     "src": "https://corporate.epson/ja/news/2024/240311.html",
-    "note": "統合処理：事業部置換 ／ 置換元：セイコーエプソン ／ 売上根拠：IMU・センシング製品群と対象市場規模から推計"
+    "note": "売上根拠：IMU・センシング製品群と対象市場規模から推計"
   },
   {
     "id": "stage05-integrated-47",
@@ -3450,7 +3430,7 @@
     "ev": "B",
     "exc": 0,
     "src": "https://corporate.epson/ja/about/network/domestic/miyazakiepson/company/history.html",
-    "note": "統合処理：子会社追加（監視） ／ 置換元：セイコーエプソン ／ 売上根拠：水晶デバイス製造拠点の人員・設備規模から推計"
+    "note": "売上根拠：水晶デバイス製造拠点の人員・設備規模から推計"
   },
   {
     "id": "stage05-integrated-48",
@@ -3485,7 +3465,7 @@
     "ev": "B",
     "exc": 0,
     "src": "https://www.furuno.co.jp/corporate/business/marine.html ／ https://www.furuno.co.jp/ir/library/bs.html",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：通期決算規模を丸めたレンジ"
+    "note": "売上根拠：通期決算規模を丸めたレンジ"
   },
   {
     "id": "stage05-integrated-49",
@@ -3528,7 +3508,7 @@
     "ev": "A",
     "exc": 0,
     "src": "https://www.spp.co.jp/business/sensor/ ／ https://www.spp.co.jp/company/profile/ ／ https://www.spp.co.jp/business/microtech/ ／ https://www.sptcorp.com/ja/media-center/merger-into-sumitomo-precision-products/",
-    "note": "統合処理：既存候補（親会社置換対象外） ／ 売上根拠：非上場化前の連結売上規模と現事業構成から推計 ／ 2026-09-19：半導体製造装置（100%子会社 SPPテクノロジーズ。住友精密工業による吸収合併を2026年10月1日目途で検討中）を追加。"
+    "note": "売上根拠：非上場化前の連結売上規模と現事業構成から推計 ／ 2026-09-19：半導体製造装置（100%子会社 SPPテクノロジーズ。住友精密工業による吸収合併を2026年10月1日目途で検討中）を追加。"
   },
   {
     "id": "company-115",
@@ -3589,8 +3569,7 @@
     "exc": 0,
     "formal": true,
     "formalSource": "固体レーザー発振器DD：採用候補",
-    "src": "https://www.ksoc.co.jp/kaisha/kaisha/ ／ https://www.ksoc.co.jp/technical/lasers.html ／ https://www.ksoc.co.jp/seihin/lasers/j594.html ／ https://www.ksoc.co.jp/seihin/lasers/juno_compact.html ／ https://www.ksoc.co.jp/seihin/optical-element/crystal.html",
-    "note": "固体レーザー発振器DDの「採用候補（小型固体発振器）」に基づきStage 04へ正式採用。"
+    "src": "https://www.ksoc.co.jp/kaisha/kaisha/ ／ https://www.ksoc.co.jp/technical/lasers.html ／ https://www.ksoc.co.jp/seihin/lasers/j594.html ／ https://www.ksoc.co.jp/seihin/lasers/juno_compact.html ／ https://www.ksoc.co.jp/seihin/optical-element/crystal.html"
   },
   {
     "id": "laser-dd-towa",
@@ -3628,7 +3607,7 @@
     "formal": true,
     "formalSource": "固体レーザー発振器DD：採用候補",
     "src": "https://www.laserfront.jp/company-data/ ／ https://www.laserfront.jp/product-10/ ／ https://www.towajapan.co.jp/jp/wp-content/uploads/sites/2/2026/05/2025FY_annual.pdf ／ https://www.laserfront.jp/topics/%E5%9B%BD%E7%AB%8B%E5%A4%A7%E5%AD%A6%E6%B3%95%E4%BA%BA%E5%A4%A7%E9%98%AA%E5%A4%A7%E5%AD%A6%E3%81%A8%E6%A0%B8%E8%9E%8D%E5%90%88%E7%87%83%E7%84%BC%E6%A8%A1%E6%93%AC%E8%A9%A6%E9%A8%93%E8%A3%85%E7%BD%AE/ ／ https://www.laserfront.jp/",
-    "note": "固体レーザー発振器DDの「採用候補（現行Nd:YAG発振器）」に基づきStage 04へ正式採用。 ／ 2026-11-21：レーザートリマー・ウェハーマーカー・微細加工・溶接装置を作るため、「レーザー装備・照射」にも置いた。"
+    "note": "2026-11-21：レーザートリマー・ウェハーマーカー・微細加工・溶接装置を作るため、「レーザー装備・照射」にも置いた。"
   },
   {
     "id": "laser-dd-optoquest",
@@ -3674,7 +3653,7 @@
     "formal": true,
     "formalSource": "固体レーザー発振器DD：採用候補",
     "src": "https://www.optoquest.co.jp/products/325/ ／ https://www.optoquest.co.jp/company/ ／ https://www.optoquest.co.jp/about/ ／ https://www.mod.go.jp/atla/funding/hyouka/r07_seika/R7seika_04riken.pdf",
-    "note": "固体レーザー発振器DDの「採用候補（マイクロチップNd:YAG）」に基づきStage 04へ正式採用。 ／ サブナノ秒・MW級の尖頭出力は戻り光に弱く、保護のためアイソレータを置くのが一般的。同社自身がマルチコアファイバ用光アイソレータのメーカーでもある"
+    "note": "サブナノ秒・MW級の尖頭出力は戻り光に弱く、保護のためアイソレータを置くのが一般的。同社自身がマルチコアファイバ用光アイソレータのメーカーでもある"
   },
   {
     "id": "laser-dd-sct",
@@ -3817,8 +3796,7 @@
     "exc": 0,
     "formal": true,
     "formalSource": "SOFC/SOEC追加DD：正式採用",
-    "src": "https://www.niterragroup.com/english/business/innovation/new_business/rsoc/ ／ https://www.niterragroup.com/english/business/innovation/sofc/ ／ https://www.niterragroup.com/english/corporate/networks/ ／ https://www.niterragroup.com/ir/",
-    "note": "旧『Niterra（日本特殊陶業）』監視カードを追加DDで更新。工程5『SOFC／SOEC』へ正式採用。"
+    "src": "https://www.niterragroup.com/english/business/innovation/new_business/rsoc/ ／ https://www.niterragroup.com/english/business/innovation/sofc/ ／ https://www.niterragroup.com/english/corporate/networks/ ／ https://www.niterragroup.com/ir/"
   },
   {
     "id": "sofc-dd-morimura",
@@ -3931,7 +3909,6 @@
     "bom": "調達品目「対空無線機 GMU-4(100W)；無線機 J/GRC-303A；HF無線機 HRC-122B」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2010001098064 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.kokusaidenki.co.jp/corporate/corporate.html ／ https://www.kokusaidenki.co.jp/corporate/history.html ／ https://www2.jpx.co.jp/disc/31050/140120230531589487.pdf",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Dy, Tb, Sm, Sc。中（一般論）",
     "financial": {
       "fiscalYear": "2025年12月期",
       "revenueValueJpy": 78320000000,
@@ -4050,7 +4027,6 @@
     "bom": "調達品目「協調型誘導システムの研究試作；91式携帯地対空誘導弾(B)訓練器材；93式近距離地対空誘導弾」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2011101014084 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.global.toshiba/jp/news/corporate/2024/11/news-20241114-01.html ／ https://www.global.toshiba/jp/ir/corporate/stock/epub/infrastructure.html",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Dy, Tb, Sm, Sc。中（一般論）",
     "financial": {
       "fiscalYear": "2023年度",
       "revenueValueJpy": 383200000000,
@@ -4113,7 +4089,6 @@
     "bom": "調達品目「無線機用試験器 N-TS-503D；マイクロ波カウンタ；高周波信号受信器(可搬IV型)」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9010501010505 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.n-denkei.co.jp/ir/individual/result/ ／ https://www.n-denkei.co.jp/ir/ir-faq/ ／ https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20260513/20260512525815.pdf",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
     "financial": {
       "fiscalYear": "2026年3月期",
       "revenueValueJpy": 133148547000,
@@ -4186,7 +4161,6 @@
     "bom": "調達品目「艦艇水中音響計測装置LQM-1A」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7010401006126 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.oki.com/global/ja/ir/finance/summary/ ／ https://www.oki.com/global/ja/ir/assets_c/uploads/260513_all.pdf ／ https://www.oki.com/global/ir/corporate/glance/",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Dy, Tb。中（一般論）",
     "financial": {
       "fiscalYear": "2026年3月期",
       "revenueValueJpy": 421635000000,
@@ -4256,7 +4230,6 @@
     "bom": "調達品目「海上監視レーダ装置 JTPS-P4」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9010801024873 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.koden-electronics.co.jp/corporate/about/",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Sc。中（一般論）",
     "financial": {
       "fiscalYear": "2026年3月期",
       "revenueValueJpy": 5616870000,
@@ -4318,7 +4291,6 @@
     "bom": "調達品目「航空支援用無線機；無線機 RRC-39；無線機RRC-39B」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1020001006043 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.kaiyo-denshi.co.jp/about/ ／ https://www.r-agent.com/viewjob/jk48eb5fa65c1c80c5/",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
     "financial": {
       "fiscalYear": "2025年3月期",
       "revenueValueJpy": 17300000000,
@@ -4399,7 +4371,6 @@
     "bom": "調達品目「救命無線機(RRC-40・P-1用)；救命無線機RRC-22D；救命無線機RRC-22D(初度費)」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7010701017021 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.medstec.co.jp/company/profile.html ／ https://www.mitsubishielectric.co.jp/ir/data/business_report/pdf/153/5.pdf",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
     "financial": {
       "fiscalYear": "2026年3月期",
       "revenueValueJpy": 41100000000,
@@ -4479,7 +4450,6 @@
     "bom": "調達品目「CH-47J用救命無線機；高周波電力増幅器」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1010401098920 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://cornestech.co.jp/company ／ https://www.cornes.co.jp/company/group/ ／ https://catr.jp/companies/efe05/19692",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
     "financial": {
       "fiscalYear": "2026年3月期",
       "revenueValueJpy": 30579000000,
@@ -4553,7 +4523,6 @@
     "bom": "調達品目「宇宙状況把握レーザー測距装置用電源装置；発動発電機75kW(監視装置用電源装置)；発動発電機75kW(監視装置用電源装置)(初度費)」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4010701009640 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.meidensha.co.jp/corporate/ ／ https://www2.jpx.co.jp/disc/65080/140120260513530264.pdf ／ https://www.meidensha.co.jp/ir/ir_12/",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Dy, Tb, Sm。中（一般論）",
     "financial": {
       "fiscalYear": "2026年3月期",
       "revenueValueJpy": 326194000000,
@@ -4618,7 +4587,6 @@
     "bom": "調達品目「磁石式電話機GTP-602」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1010001110829 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://jp.ricoh.com/companies/ricoh-japan/our-workstyle ／ https://jp.ricoh.com/companies/ricoh-japan/outline ／ https://www2.jpx.co.jp/disc/42640/140120260309578318.pdf",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Dy, Tb, Sm。中（一般論）",
     "financial": {
       "fiscalYear": "2026年3月期",
       "revenueValueJpy": 803246000000,
@@ -4683,7 +4651,6 @@
     "bom": "調達品目「多重電磁波偽装網セット(誘導武器器材用)」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5011101016202 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.nasco.co.jp/company/j_profile",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Dy, Tb, Sm。中（一般論）",
     "financial": {
       "fiscalYear": "2025年度",
       "revenueValueJpy": 9041000000,
@@ -4766,7 +4733,6 @@
     "bom": "調達品目「電子管 SPA-V-44986；電子管 LD4576；電子管LD4516」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7012401000240 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.necnets.co.jp/company/profile.html ／ https://catr.jp/companies/f3fab/12763",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
     "financial": {
       "fiscalYear": "2025年度",
       "revenueValueJpy": 54300000000,
@@ -4826,7 +4792,6 @@
     "bom": "調達品目「艦艇水中音響計測装置LQM-1A用音響インテンシティ計測器材」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2020001020489 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.jrctokki.co.jp/company/ ／ https://www.jrc.co.jp/company/group ／ https://job.mynavi.jp/28/pc/search/corp89366/outline.html",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Dy, Tb。中（一般論）",
     "financial": {
       "fiscalYear": "2025年度",
       "revenueValueJpy": 7955000000,
@@ -4910,7 +4875,6 @@
     "bom": "調達品目「電子管 E10034359P1；対空無線機 GMV-23；対空無線機 GMV-22」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1020001081053 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.toshiba.co.jp/tept/company/profile.htm ／ https://www.toshiba.co.jp/tept/company/ceo.htm",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Dy, Tb, Sm, Sc。中（一般論）",
     "financial": {
       "fiscalYear": "2025年度",
       "revenueValueJpy": 24200000000,
@@ -4981,7 +4945,6 @@
     "bom": "調達品目「レーザ計測ドローン」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4010001052390 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.rikei.co.jp/wp/wp-content/uploads/for_investor/68syousyutuuti20250627.pdf ／ https://edinetdb.jp/company/E02699/text?fy=2025 ／ https://www.aeropartners.co.jp/company_history",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y。中（一般論）",
     "financial": {
       "fiscalYear": "2025年3月期",
       "revenueValueJpy": 12077749000,
@@ -5059,7 +5022,6 @@
     "bom": "調達品目「電子管VDX-1372；電子管 VMX1198/L-4791；電子管DOD-042」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8010001057337 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.marubun.co.jp/corporate/profile/",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
     "financial": {
       "fiscalYear": "2026年3月期",
       "revenueValueJpy": 213425000000,
@@ -5142,7 +5104,6 @@
     "bom": "調達品目「小型UGV(歩行型)用無線機(STREAMCASTER)；リムペットマイン対処作業ロボット；機雷対処用水中無人機RXX-2」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=3010001033004 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://nipponkaiyo.fastechs.jp/company/ ／ https://catr.jp/companies/903fe/21305",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Dy, Tb, Sm, Sc。中（一般論）",
     "financial": {
       "fiscalYear": "2023年3月期",
       "revenueValueJpy": 1571000000,
@@ -5205,7 +5166,6 @@
     "bom": "調達品目「地対艦誘導弾用洋上標的装置」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4130001044153 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.jmuc.co.jp/jmuds/company/index.html ／ https://job.mynavi.jp/27/pc/search/corp108911/outline.html ／ https://catr.jp/companies/e0cab/6361",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Dy, Tb, Sm。中（一般論）",
     "financial": {
       "fiscalYear": "2025年3月期",
       "revenueValueJpy": 7608000000,
@@ -5269,7 +5229,6 @@
     "bom": "調達品目「無線機RRC-45；無線機 RRC―45；デジタルUHF無線機(携帯用)」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1120001019349 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www2.jpx.co.jp/disc/68200/140120260515536144.pdf ／ https://www.icom.co.jp/ir/paperwork/ ／ https://www.icom.co.jp/corporate/overview/",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
     "financial": {
       "fiscalYear": "2026年3月期",
       "revenueValueJpy": 36959000000,
@@ -5332,7 +5291,6 @@
     "bom": "調達品目「マイクロ波式波高計改1」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=3020001018037 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://tsurumi-seiki.co.jp/company/",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Sc。中（一般論）",
     "financial": {
       "fiscalYear": null,
       "revenueValueJpy": null,
@@ -5394,7 +5352,6 @@
     "bom": "調達品目「無線機ORC-15E-1；無線機ORC-15F；無線機ORC-15F(初度費)」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8100001002473 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.njrc.jp/achievement/meeting.html ／ https://www.njrc.jp/achievement/zaimu.html ／ https://catr.jp/companies/40a19/11189",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
     "financial": {
       "fiscalYear": "2024年12月期",
       "revenueValueJpy": 22977000000,
@@ -5457,7 +5414,7 @@
     "bom": "調達品目「92式地雷原処理用ロケット弾；チャフロケット弾；24式水際地雷原処理装置用ロケット弾」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4010601031653 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.ihi.co.jp/all_news/2026/ir/__icsFiles/afieldfile/2026/06/02/notice_260602.pdf ／ https://www.ihi.co.jp/ir/stock/information/ ／ https://repository.exst.jaxa.jp/dspace/bitstream/a-is/835997/1/AA1740298001.pdf ／ https://newswitch.jp/p/11503",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Sc。中（一般論） ／ 2026-11-22：ロケット・打上げの調査で、H3 の固体ロケットブースタ・姿勢制御用ガスジェットとイプシロンの製造を製品と地位に加えた。",
+    "note": "2026-11-22：ロケット・打上げの調査で、H3 の固体ロケットブースタ・姿勢制御用ガスジェットとイプシロンの製造を製品と地位に加えた。",
     "financial": {
       "fiscalYear": "2025年3月期",
       "revenueValueJpy": 66600000000,
@@ -5520,7 +5477,6 @@
     "bom": "調達品目「無線機 GRT-( )；飛行場統制用無線機 GRT-20-D；無線機 GRT-36」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8010401096587 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.motorolasolutions.com/en_us/about/company-overview/office-locations.html..html ／ https://catr.jp/companies/ecb38/150803/settlements/db453/324540 ／ https://www.sec.gov/Archives/edgar/data/68505/000006850526000010/msi-20251231.htm",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
     "financial": {
       "fiscalYear": "2022年12月期",
       "revenueValueJpy": 1551000000,
@@ -5586,7 +5542,6 @@
     "bom": "調達品目「誘導弾射爆撃訓練用水上標的；誘導弾射爆撃訓練用水上標的(GNSS付加)(モニタリング・テスト用)(初度費)；誘導弾射爆撃訓練用水上標的(GNSS付加)(モニタリング・テスト用)」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1020001006613 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.nippi.co.jp/jp/company_overview.html ／ https://catr.jp/companies/c3549/20802 ／ https://www.nippi.co.jp/jp/reseach_development.html",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Dy, Tb, Sm。中（一般論）",
     "financial": {
       "fiscalYear": "2025年3月期",
       "revenueValueJpy": 33185000000,
@@ -5665,7 +5620,6 @@
     "bom": "調達品目「電子管 91553968；捜索レーダ OM-100D；捜索レーダ(OM-100D・US-2用)」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4010401057023 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.thalesgroup.com/en/countries/asia-pacific/thales-japan ／ https://live.euronext.com/fr/products/equities/company-news/2026-03-03-thales-publie-ses-resultats-annuels-2025-communique ／ https://catr.jp/companies/382bb/157093",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
     "financial": {
       "fiscalYear": null,
       "revenueValueJpy": null,
@@ -5739,7 +5693,6 @@
     "bom": "調達品目「小型無人機対処器材用ドローン；小型無人機(ドローン)」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7010701022780 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www2.jpx.co.jp/disc/31560/140120260513528426.pdf ／ https://www.restargp.com/company/outline/",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Dy, Tb, Sm。中（一般論）",
     "financial": {
       "fiscalYear": "2026年3月期",
       "revenueValueJpy": 630905000000,
@@ -5811,7 +5764,6 @@
     "bom": "調達品目「可視化用レーザー照明；レーザーカーテン速度計システム；弾道レーダ(洋上試験対応)」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8011001039795 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.nobby-tech.co.jp/company/",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
     "financial": {
       "fiscalYear": null,
       "revenueValueJpy": null,
@@ -5879,7 +5831,6 @@
     "bom": "調達品目「3次元ミリ波レーダー」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7013301019486 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://keycom.co.jp/j/japanese/kaisyaannnai.html",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Sc。中（一般論）",
     "financial": {
       "fiscalYear": "基準年非記載（3年平均）",
       "revenueValueJpy": 1600000000,
@@ -5948,7 +5899,6 @@
     "bom": "調達品目「車載型衛星通信装置 GMBY-B2；低軌道衛星通信装置；携帯衛星通信装置 GPBY-B2」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9011101031552 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://newsroom.kddi.com/ir-news/assets/2026/kddi_ir-1148_4471/kddi_2026_4qc_PsXBu3.pdf ／ https://newsroom.kddi.com/ir-news/detail/kddi_ir-1148_4471.html",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
     "financial": {
       "fiscalYear": "2026年3月期",
       "revenueValueJpy": 6071915000000,
@@ -6020,7 +5970,6 @@
     "bom": "調達品目「夜間照準補助具(可視レーザー(緑))」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7010001225687 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://mikuni-aero.jp/about/ ／ https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20250603/20250530575552.pdf",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y。中（一般論）",
     "financial": {
       "fiscalYear": null,
       "revenueValueJpy": null,
@@ -6090,7 +6039,6 @@
     "bom": "調達品目「携行型衛星通信装置I型；海事衛星通信装置NORC-4E」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7010001063732 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.jdc.ne.jp/about/ ／ https://catr.jp/companies/af577/3919",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
     "financial": {
       "fiscalYear": "2026年1月期",
       "revenueValueJpy": null,
@@ -6154,7 +6102,6 @@
     "bom": "調達品目「88式地対艦誘導弾用部品(構成品)；90式艦対艦誘導弾用火工品等；93式空対艦誘導弾用部品(国産)」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6180001075605 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.mhi.com/jp/group/mlt/company",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Dy, Tb, Sm。中（一般論）",
     "financial": {
       "fiscalYear": "2025年度",
       "revenueValueJpy": 11250000000,
@@ -6214,7 +6161,6 @@
     "bom": "調達品目「UAV模擬標的機(多目的監視レーダ試験用)」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8020001003257 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://fuji-imvac.jp/company/",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Sc。中（一般論）",
     "financial": {
       "fiscalYear": null,
       "revenueValueJpy": null,
@@ -6276,7 +6222,6 @@
     "bom": "調達品目「電子管 09M033P43；電子管MA2876-4H；電子管 補助表示装置表示器用」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6010901021583 ／ https://journal.jogmec.go.jp/content/300601616.pdf",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
     "financial": {
       "fiscalYear": null,
       "revenueValueJpy": null,
@@ -6351,7 +6296,6 @@
     "bom": "調達品目「電子管 7665A/HY60；電子管 捜索レーダ送受信機モジュール」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8010001032091 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.rell.co.jp/about/index.html",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
     "financial": {
       "fiscalYear": null,
       "revenueValueJpy": null,
@@ -6422,7 +6366,6 @@
     "bom": "調達品目「レーザ計測ドローン」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1120003008110 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://amuse-oneself.com/topics/1459.html ／ https://www.toyota-tsusho.com/press/detail/250530_006593.html ／ https://prtimes.jp/main/html/rd/p/000000010.000112742.html",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y。中（一般論）",
     "financial": {
       "fiscalYear": null,
       "revenueValueJpy": null,
@@ -6504,7 +6447,6 @@
     "bom": "調達品目「デジタルIP無線機(携帯用)；デジタルIP無線機(車載用)」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2010001022478 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.tanaka-denki.co.jp/about-us/profile/ ／ https://syukatsu-kaigi.jp/companies/123752 ／ https://jobcatalog.yahoo.co.jp/company/1500129583/information/",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
     "financial": {
       "fiscalYear": "2024年1月期",
       "revenueValueJpy": 7897440000,
@@ -6567,7 +6509,6 @@
     "bom": "調達品目「無線機 RRC-17E」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5030001041556 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.t-abyss.jp/company/ ／ https://catr.jp/companies/348e3/14558",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
     "financial": {
       "fiscalYear": "2026年3月期",
       "revenueValueJpy": null,
@@ -6650,7 +6591,6 @@
     "bom": "調達品目「電子管 捜索レーダ送受信機モジュール用；F-2用SATURN対応無線機」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1010001058548 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.midoriya.co.jp/company/about/",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
     "financial": {
       "fiscalYear": "2025",
       "revenueValueJpy": 144000000000,
@@ -6712,7 +6652,6 @@
     "bom": "調達品目「マイクロ波ネットワークアナライザ」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=3010403011350 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.keysight.com/jp/ja/home.html ／ https://job.mynavi.jp/27/pc/search/corp203395/outline.html?func=corpinfo ／ https://catr.jp/companies/38151/259430",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
     "financial": {
       "fiscalYear": "FY2025",
       "revenueValueJpy": null,
@@ -6775,7 +6714,6 @@
     "bom": "調達品目「携帯無線機C型」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7010001036564 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.akira.agns.co.jp/index.html ／ https://job.mynavi.jp/27/pc/search/corp78196/outline.html?func=corpinfo",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
     "financial": {
       "fiscalYear": "2025年9月期",
       "revenueValueJpy": 41000000000,
@@ -6837,7 +6775,6 @@
     "bom": "調達品目「ロボット」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2020001012577 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.eda.co.jp/company/ ／ https://job.mynavi.jp/27/pc/search/corp80495/outline.html",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Dy, Tb, Sm。中（一般論）",
     "financial": {
       "fiscalYear": "2024年3月期",
       "revenueValueJpy": 4688820000,
@@ -6900,7 +6837,6 @@
     "bom": "調達品目「高周波特性評価装置；高周波誘電率測定システム」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4020001010554 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.hodaka.co.jp/company ／ https://kigyo.city.kyoto.lg.jp/kyomachi/company/single/1021.php",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Sc。中（一般論）",
     "financial": {
       "fiscalYear": null,
       "revenueValueJpy": null,
@@ -6963,7 +6899,6 @@
     "bom": "調達品目「2450MHzマイクロ波発振装置；マイクロ波パワーメーター」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5010001006123 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.nikkyo-tec.co.jp/about.html ／ https://baseconnect.in/branch_offices/6ec7abd2-8e71-42d8-ad47-5aad479f828b",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Sc。中（一般論）",
     "financial": {
       "fiscalYear": null,
       "revenueValueJpy": null,
@@ -7027,7 +6962,6 @@
     "bom": "調達品目「統合音声通信装置端末機器；統合艦内音声通信装置端末機器」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=5013201004111 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.sd.toyonics.co.jp/00_c_info/kaisya_gaiyou.html ／ https://catr.jp/companies/7d319/208761",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
     "financial": {
       "fiscalYear": null,
       "revenueValueJpy": null,
@@ -7087,7 +7021,6 @@
     "bom": "調達品目「レーザ照射装置JGVG-W1」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9010401139568 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://gtaerospace.jp/about/ ／ https://knoock.jp/seishain/company/187413",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y。中（一般論）",
     "financial": {
       "fiscalYear": null,
       "revenueValueJpy": null,
@@ -7147,7 +7080,6 @@
     "bom": "調達品目「レーザー発振装置」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1010601026053 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.foresight-t.co.jp/company/ ／ https://www.marubun.co.jp/wp-content/uploads/2025/07/CorporateProfile2025.pdf ／ https://catr.jp/companies/b79f8/17977",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y。中（一般論）",
     "financial": {
       "fiscalYear": "2025年3月期",
       "revenueValueJpy": null,
@@ -7211,7 +7143,6 @@
     "bom": "調達品目「電子管 TL399；電子管 M1628；電子管 W435」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7010001045862 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.nisshinbo-microdevices.co.jp/ja/about/profile/ ／ https://www.nisshinbo.co.jp/ir/library/securities_report.html ／ https://kitaishihon.s3.isk01.sakurastorage.jp/IrLibrary/3105_securities_2022_mufu.pdf",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
     "financial": {
       "fiscalYear": "2022年12月期",
       "revenueValueJpy": 81211000000,
@@ -7275,7 +7206,6 @@
     "bom": "調達品目「電子管 E3109；電子管 E37150-9100MHZ；電子管K261E」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=1060001013523 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://etd.canon/ja/company/index.html ／ https://catr.jp/companies/e279f/32501",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Y, Sc。中（一般論）",
     "financial": {
       "fiscalYear": "2025年12月期",
       "revenueValueJpy": null,
@@ -7337,7 +7267,6 @@
     "bom": "調達品目「高周波発振器」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4010901000754 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.amtechs.co.jp/office/",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Sc。中（一般論）",
     "financial": {
       "fiscalYear": null,
       "revenueValueJpy": null,
@@ -7398,7 +7327,6 @@
     "bom": "調達品目「シンクロ・レゾルバ角度表示器」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=6010001005025 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.tptech.co.jp/%E4%BC%9A%E7%A4%BE%E6%A6%82%E8%A6%81/ ／ https://www.geekly.co.jp/companys/data/4232/",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Dy, Tb, Sm。中（一般論）",
     "financial": {
       "fiscalYear": null,
       "revenueValueJpy": null,
@@ -7460,7 +7388,6 @@
     "bom": "調達品目「搭乗型移動支援ロボット」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8050001016181 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.yatoro.co.jp/service/ ／ https://jobcatalog.yahoo.co.jp/company/2003243339/qa/",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Dy, Tb, Sm。中（一般論）",
     "financial": {
       "fiscalYear": null,
       "revenueValueJpy": null,
@@ -7523,7 +7450,6 @@
     "bom": "調達品目「高周波圧電素子作製装置及び高品質制御システム」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=7010501032617 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.ssc.shimadzu.co.jp/news/2025/250401.html ／ https://www.ssc.shimadzu.co.jp/company/outline.html ／ https://www.shimadzu.co.jp/sites/shimadzu.co.jp/files/ir/7328/65utlc4g3n3zt023.pdf",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Sc。中（一般論）",
     "financial": {
       "fiscalYear": "2024年度",
       "revenueValueJpy": null,
@@ -7586,7 +7512,6 @@
     "bom": "調達品目「ロボット」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2011101072297 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://robotics.tokyo/ja/about-us/ ／ https://robotics.tokyo/data/ir/bs_202109.pdf",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Dy, Tb, Sm。中（一般論）",
     "financial": {
       "fiscalYear": null,
       "revenueValueJpy": null,
@@ -7648,7 +7573,6 @@
     "bom": "調達品目「クローラー型移動ロボット」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=9040001015415 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://www.irobo.co.jp/%E4%BC%81%E6%A5%AD%E6%A6%82%E8%A6%81 ／ https://www.fsi.co.jp/company/about.html ／ https://www.jpx.co.jp/news/1023/20250425-11.html",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Dy, Tb, Sm。中（一般論）",
     "financial": {
       "fiscalYear": null,
       "revenueValueJpy": null,
@@ -7711,7 +7635,6 @@
     "bom": "調達品目「圧電定数測定装置」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=8010001007944 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://yazawakagaku.co.jp/company/ ／ https://houjin.goo.to/corporations/8010001007944",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Sc。中（一般論）",
     "financial": {
       "fiscalYear": null,
       "revenueValueJpy": null,
@@ -7774,7 +7697,6 @@
     "bom": "調達品目「スキャニングロボットアーム」を基準に判定。該当装置の磁石、レーザー／セラミックス、RF・圧電材料等に希土類が使われる可能性がある。型式固有の公開BOMは未確認。",
     "gap": "希土類フラグは調達品目を基準としたシート判定。型式固有の含有量・原料調達国・市場シェアは未確認。",
     "src": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=3310001006466 ／ https://journal.jogmec.go.jp/content/300601616.pdf ／ https://fel.ne.jp/information/overview/ ／ https://www.industry-sasebo.jp/corporation/%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%80%80%E8%A5%BF%E6%97%A5%E6%9C%AC%E6%B5%81%E4%BD%93%E6%8A%80%E7%A0%94 ／ https://www.r-agent.com/viewjob/jk904e7fa4ba8328f9/",
-    "note": "人力確認済み工程5判定：対象。 ／ 希土類判定：Dy, Tb, Sm。中（一般論）",
     "financial": {
       "fiscalYear": "2023年1月期",
       "revenueValueJpy": 525000000,

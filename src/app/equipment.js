@@ -37,6 +37,11 @@ function eqOriginKey(element){return'origin:'+element}
 function eqSub(id){return allSubs.find(function(sub){return sub.id===id})}
 function eqStageTitle(stageId){var stage=stages.find(function(item){return item.id===stageId});return'STAGE '+stage.code+' '+stageText(stage,'label')}
 function eqDomestic(id){return eqText('domestic',{count:totalSubCount(id)})}
+// 工程チップの文字：日中は「Y 12社 · 70」、英語は区切りを英文の記号にして「Y: 12 co.; 70」
+function eqChipText(element,count,score){
+  if(language==='en')return tagLabel(element)+': '+companyCount(count)+(score===null?'':'; '+score);
+  return tagLabel(element)+' '+companyCount(count)+(score===null?'':' · '+score)
+}
 function eqElementList(list){return list.map(tagLabel).join(language==='en'?', ':'・')}
 
 // この装備の経路上にある工程×元素（クリティカル度の高い順。値はその工程の下流全体で数えたもの）
@@ -106,7 +111,7 @@ function eqNodeHtml(entry,focus,targetId){
     var point=criticalityPoint(item.id,element),score=point&&point.score!==null?Math.round(point.score):null,tier=score===null?1:scoreTier(point.score);
     var count=point?point.companies.length:0;
     var title=eqText('chip',{down:point?point.downstream:0,level:point?point.level:'—'})+(point&&point.representative?'（'+companyText(point.representative,'name')+'）':'');
-    return'<span class="re-eq-chip re-criticality re-criticality-'+tier+(focus&&element!==focus?' is-muted':'')+'" title="'+esc(title)+'"><i class="re-eq-dot" style="background:'+colors[element]+'"></i>'+esc(tagLabel(element)+' '+companyCount(count)+(score===null?'':' · '+score))+'</span>'
+    return'<span class="re-eq-chip re-criticality re-criticality-'+tier+(focus&&element!==focus?' is-muted':'')+'" title="'+esc(title)+'"><i class="re-eq-dot" style="background:'+colors[element]+'"></i>'+esc(eqChipText(element,count,score))+'</span>'
   }).join('');
   return'<div class="re-eq-node'+(focus&&!matchNode?' is-dim':'')+(matchNode?' is-target':'')+'"'+(matchNode?' style="--re-eq-el:'+colors[focus]+'"':'')+' data-eq-node="'+esc(entry.id)+'"'+pressed+'><span class="re-eq-node-stage" title="'+esc(subText(item.sub,'description'))+'">'+esc(subText(item.sub,'description'))+'</span><span class="re-eq-node-label">'+esc(subText(item.sub,'label'))+'</span><span class="re-eq-node-chips">'+chips+'</span></div>'
 }

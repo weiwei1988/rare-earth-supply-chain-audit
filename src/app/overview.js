@@ -298,6 +298,15 @@ function renderList(){
     root.querySelector("#re-companies").innerHTML=dependencyDashboardHtml();
     return
   }
+  // サブカテゴリーも検索語もないときは、企業カードを並べず案内だけを出す（選ぶか検索したときに該当企業を表示する）
+  var prompt=selection.type==="all"&&!root.querySelector("#re-company-search").value.trim();
+  root.querySelector(".re-main").classList.toggle("is-prompt",prompt);
+  if(prompt){
+    root.querySelector("#re-list-title").textContent=selectionLabel();
+    root.querySelector("#re-list-count").textContent="";
+    root.querySelector("#re-companies").innerHTML='<div class="re-empty re-list-prompt">'+esc(tr("listPrompt"))+'</div>';
+    return
+  }
   var items=list();
   root.querySelector("#re-list-title").textContent=selectionLabel();
   root.querySelector("#re-list-count").textContent=companyUnitCount(items.length)+(root.querySelector("#re-company-search").value.trim()?" ("+tr("searchResult")+")":"");
