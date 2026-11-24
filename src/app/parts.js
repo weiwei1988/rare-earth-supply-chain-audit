@@ -73,7 +73,7 @@ function dossierMarkup(company,scope){
   var fields=tr("fields"),subLabels=company.subs.map(function(id){var sub=allSubs.find(function(item){return item.id===id});return sub?subText(sub,"label"):id}).join(" / ");
   var rows=[
     [fields[0],companyText(company,"own")],[fields[1],companyText(company,"rev")],[fields[2],companyText(company,"prod")],[fields[3],marketPosition(companyText(company,"pos"))],
-    [fields[4],companyText(company,"def")],[fields[5],company.atlaProcurement?tr("atla"):""],[fields[6],company.atla?atlaDecisionText(company.atla.decision):""],[fields[7],company.atla?company.atla.rareEarthFlags:""],[fields[8],companyText(company,"chn")],[fields[9],companyText(company,"bom")],[fields[10],companyText(company,"gap")],[fields[11],company.stages.map(function(stage){return"Stage 0"+stage}).join(" / ")],
+    [fields[4],companyText(company,"def")],[fields[5],company.atlaProcurement?tr("atla"):""],[fields[8],companyText(company,"chn")],[fields[9],companyText(company,"bom")],[fields[11],company.stages.map(function(stage){return"Stage 0"+stage}).join(" / ")],
     [fields[12],subLabels],[fields[13],companyText(company,"src")],[fields[14],companyText(company,"note")]
   ].filter(function(row){return row[1]});
   return'<div class="re-dossier"><div class="re-dossier-title"><strong>'+esc(companyText(company,"name"))+'</strong></div><dl>'+rows.map(function(row){

@@ -15,40 +15,47 @@
 html,body{width:1200px;height:630px;overflow:hidden;background:var(--bg)}
 body{position:relative;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans",sans-serif;color:var(--text)}
 .glow{position:absolute;inset:0;background:radial-gradient(900px 520px at 88% 50%,rgba(85,168,232,.10),transparent 60%),radial-gradient(700px 480px at 10% 0%,rgba(157,140,255,.08),transparent 60%)}
-.flow{position:absolute;left:770px;top:0;width:430px;height:630px}
+.flow{position:absolute;left:880px;top:0;width:320px;height:630px}
 .flow path{fill:none;stroke-linecap:round}
 .col{fill:rgba(233,230,221,.05);stroke:rgba(233,230,221,.12)}
-.content{position:absolute;left:72px;top:58px;width:690px}
+.content{position:absolute;left:72px;top:58px;width:800px}
 .kicker{display:flex;align-items:center;gap:22px;font:600 17px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.24em;color:var(--faint)}
 .mark{width:64px;height:64px;flex:none}
 .mark path{fill:none;stroke-width:4.4;stroke-linecap:round}
-h1{margin-top:36px;font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-weight:600;font-size:58px;white-space:nowrap;line-height:1.22;letter-spacing:.02em}
-.rule{margin-top:26px;width:180px;height:5px;border-radius:3px;background:linear-gradient(90deg,var(--y) 0 25%,var(--dytb) 25% 50%,var(--sm) 50% 75%,var(--sc) 75% 100%)}
-.en{margin-top:24px;font-family:"Hiragino Mincho ProN",serif;font-size:28px;color:var(--sub);letter-spacing:.01em}
-.els{display:flex;gap:26px;margin-top:34px;font:600 24px ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--text)}
+/* 3言語のタイトルを同じ大きさ・同じ扱いで3行に並べる。左に言語の札、左端に4元素の色の縦帯 */
+.titles{position:relative;margin-top:62px;padding-left:24px;display:grid;gap:22px}
+.titles::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:5px;border-radius:3px;background:linear-gradient(180deg,var(--y) 0 25%,var(--dytb) 25% 50%,var(--sm) 50% 75%,var(--sc) 75% 100%)}
+.t{display:flex;align-items:center;gap:18px;white-space:nowrap;font-weight:600;font-size:37px;line-height:1.25;letter-spacing:.01em;color:var(--text)}
+.t.ja{font-family:"Hiragino Mincho ProN","Yu Mincho",serif}
+.t.en{font-family:"Hiragino Mincho ProN","Times New Roman",serif;letter-spacing:0}
+.t.zh{font-family:"Songti SC","STSong",serif}
+.lang{flex:none;width:40px;font:600 13px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.08em;color:var(--faint);border:1px solid var(--line);border-radius:5px;padding:3px 0;text-align:center}
+.els{display:flex;gap:26px;margin-top:56px;font:600 24px ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--text)}
 .els span{display:inline-flex;align-items:center;gap:10px}
 .els span::before{content:"";width:14px;height:14px;border-radius:50%;background:var(--c)}
-.foot{position:absolute;left:72px;right:72px;bottom:46px;display:flex;justify-content:space-between;align-items:center;font-size:19px;color:var(--faint);letter-spacing:.04em}
+.foot{position:absolute;left:72px;right:72px;bottom:46px;display:flex;align-items:center;gap:16px;white-space:nowrap;font-size:18px;color:var(--faint);letter-spacing:.03em}
+.foot .sep{color:var(--line)}
+.foot .zhf{font-family:"PingFang SC","Hiragino Sans GB",sans-serif}
 .foot strong{color:var(--sub);font-weight:600}
 </style>
 </head>
 <body>
 <div class="glow"></div>
 <!-- 右：1点（海外の資源）から4元素の線が6工程の列へ広がるラッパ形 -->
-<svg class="flow" viewBox="0 0 430 630" aria-hidden="true">
-  <rect class="col" x="96" y="262" width="22" height="106" rx="6"/>
-  <rect class="col" x="172" y="222" width="22" height="186" rx="6"/>
-  <rect class="col" x="248" y="172" width="22" height="286" rx="6"/>
-  <rect class="col" x="324" y="112" width="22" height="406" rx="6"/>
-  <rect class="col" x="400" y="52" width="22" height="526" rx="6"/>
-  <path d="M30 315 C 120 315, 170 160, 430 84" stroke="var(--y)" stroke-width="5" opacity=".9"/>
-  <path d="M30 315 C 130 315, 190 250, 430 222" stroke="var(--dytb)" stroke-width="5" opacity=".9"/>
-  <path d="M30 315 C 130 315, 190 380, 430 408" stroke="var(--sm)" stroke-width="5" opacity=".9"/>
-  <path d="M30 315 C 120 315, 170 470, 430 546" stroke="var(--sc)" stroke-width="5" opacity=".9"/>
-  <path d="M30 315 C 140 315, 200 180, 430 152" stroke="var(--y)" stroke-width="2" opacity=".35"/>
-  <path d="M30 315 C 140 315, 200 300, 430 302" stroke="var(--dytb)" stroke-width="2" opacity=".35"/>
-  <path d="M30 315 C 140 315, 200 450, 430 478" stroke="var(--sc)" stroke-width="2" opacity=".35"/>
-  <circle cx="30" cy="315" r="11" fill="var(--text)"/>
+<svg class="flow" viewBox="0 0 320 630" aria-hidden="true">
+  <rect class="col" x="78" y="262" width="18" height="106" rx="5"/>
+  <rect class="col" x="134" y="222" width="18" height="186" rx="5"/>
+  <rect class="col" x="190" y="172" width="18" height="286" rx="5"/>
+  <rect class="col" x="246" y="112" width="18" height="406" rx="5"/>
+  <rect class="col" x="302" y="52" width="18" height="526" rx="5"/>
+  <path d="M24 315 C 90 315, 130 160, 320 84" stroke="var(--y)" stroke-width="4.5" opacity=".9"/>
+  <path d="M24 315 C 100 315, 145 250, 320 222" stroke="var(--dytb)" stroke-width="4.5" opacity=".9"/>
+  <path d="M24 315 C 100 315, 145 380, 320 408" stroke="var(--sm)" stroke-width="4.5" opacity=".9"/>
+  <path d="M24 315 C 90 315, 130 470, 320 546" stroke="var(--sc)" stroke-width="4.5" opacity=".9"/>
+  <path d="M24 315 C 105 315, 150 180, 320 152" stroke="var(--y)" stroke-width="2" opacity=".35"/>
+  <path d="M24 315 C 105 315, 150 300, 320 302" stroke="var(--dytb)" stroke-width="2" opacity=".35"/>
+  <path d="M24 315 C 105 315, 150 450, 320 478" stroke="var(--sc)" stroke-width="2" opacity=".35"/>
+  <circle cx="24" cy="315" r="10" fill="var(--text)"/>
 </svg>
 <div class="content">
   <div class="kicker">
@@ -62,11 +69,13 @@ h1{margin-top:36px;font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-wei
     </svg>
     DUAL-USE SUPPLY CHAIN AUDIT
   </div>
-  <h1>希土類デュアルユース・<br>サプライチェーン監査</h1>
-  <div class="rule"></div>
-  <p class="en">Rare-Earth Dual-Use Supply Chain Audit</p>
+  <h1 class="titles">
+    <span class="t ja"><span class="lang">JA</span>希土類デュアルユース・サプライチェーン監査</span>
+    <span class="t en"><span class="lang">EN</span>Rare-Earth Dual-Use Supply Chain Audit</span>
+    <span class="t zh"><span class="lang">ZH</span>稀土两用供应链审计</span>
+  </h1>
   <div class="els"><span style="--c:var(--y)">Y</span><span style="--c:var(--dytb)">Dy·Tb</span><span style="--c:var(--sm)">Sm</span><span style="--c:var(--sc)">Sc</span></div>
 </div>
-<div class="foot"><span><strong>海外の資源・分離</strong> → 素材 → 材料 → 部材 → モジュール・機器 → <strong>装備・システム</strong></span><span>日本語 / English / 简体中文</span></div>
+<div class="foot"><span><strong>海外の資源・分離 → 装備・システム</strong></span><span class="sep">／</span><span>Overseas resources → Systems</span><span class="sep">／</span><span class="zhf">海外资源 → 装备与系统</span></div>
 </body>
 </html>
