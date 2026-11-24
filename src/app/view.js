@@ -13,10 +13,12 @@ function setView(view){
   root.querySelector("#re-view-element-flow").hidden=view!=="element-flow";
   root.querySelector('#re-view-criticality').hidden=view!=='criticality';
   root.querySelector('#re-view-equipment').hidden=view!=='equipment';
+  root.querySelector('#re-view-guide').hidden=view!=='guide';
   // 表示に切り替えた側をここで描き直す。clientWidth の読み出しでレイアウトが確定するため、
   // requestAnimationFrame を待たずに描いてよい。待つと、背面タブなどで rAF が止まっている間
   // 図が空のままになる。
   if(view==="overview"){if(flowLayoutStale)renderFlow()}
+  else if(view==='guide')renderGuide();
   else refresh(view==='criticality'?'criticality':view==='equipment'?'equipment':'flow')
 }
 function applyStaticTranslations(){
@@ -31,6 +33,7 @@ function applyStaticTranslations(){
   root.querySelector("#re-tab-element-flow").textContent=tr("elementFlow");
   root.querySelector('#re-tab-criticality').textContent=crText('tab');
   root.querySelector('#re-tab-equipment').textContent=eqText('tab');
+  root.querySelector('#re-tab-guide').textContent=guideText('tab');
   root.querySelector('[data-element="all"]').textContent=tr("showAll");
   root.querySelector(".re-overview-element-controls").setAttribute("aria-label",tr("elementSelect"));
   root.querySelector(".re-element-flow-controls").setAttribute("aria-label",tr("elementSelectOne"));
@@ -64,8 +67,9 @@ function setLanguage(next){
 //   "list"     … 企業一覧とドシエだけ
 //   "flow"     … 元素別フロータブ（表示中のときだけ）
 //   "flowList" … 元素別フローの企業一覧とドシエだけ
-//   "all"      … 両タブ
+//   "all"      … すべてのタブ（使い方ガイドは表示中のときだけ描き直す）
 function refresh(scope){
+  if(scope==='all'&&activeView==='guide')renderGuide();
   if((scope==='criticality'||scope==='all')&&activeView==='criticality')renderCriticality();
   // 装備からの逆算は、表示中のときだけ描く（非表示のまま描くと帯の位置を採寸できない）
   if((scope==='equipment'||scope==='all')&&activeView==='equipment')renderEquipment();
@@ -142,4 +146,5 @@ searchInput.addEventListener("compositionend",updateSearch);
 root.querySelector("#re-search-clear").addEventListener("click",function(){searchInput.value="";updateSearch();searchInput.focus()});
 root.addEventListener('click',function(event){if(event.target.closest('[data-return-map]'))returnToMap()});
 ['.re-detail-head','.re-element-flow-results-head'].forEach(function(selector){var heading=root.querySelector(selector);if(heading)heading.insertAdjacentHTML('beforeend',mapReturnButton())});
-applyStaticTranslations();refresh("overview");initResponsiveMap()
+// 全体像は表示した状態で一度描いて採寸を済ませ、そのあと最初の画面として使い方ガイドを開く
+applyStaticTranslations();refresh("overview");initResponsiveMap();setView("guide")
