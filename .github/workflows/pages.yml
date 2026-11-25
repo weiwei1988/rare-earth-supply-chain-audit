@@ -16,10 +16,11 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  # 公開用データ（artifact）を作るジョブと、公開するジョブを分ける。
+  # 1つのジョブでアップロード直後に公開すると、GitHub 側の一覧への反映が間に合わず
+  # 「No artifacts named "github-pages"」で失敗することがある。分けておけば、
+  # 失敗しても公開するジョブだけを再実行でき、同じ名前のデータが重複しない。
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -38,6 +39,13 @@ jobs:
         with:
           path: _site
 
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
